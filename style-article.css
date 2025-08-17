@@ -1,0 +1,549 @@
+@import url('htps://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.phone-page{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px ){
+    .pc-page{
+        display: none;
+    }
+
+    .phone-page{
+        display: block;
+    }
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 239, 234);
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pc-page .home-button form button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #fff;
+    border-radius: 60px;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.pc-page .page{
+    width: 850px;
+    background: #fff;
+    box-shadow: 4px, 4px 30px rgb(0, 0, 0.06);
+    padding: 20px;
+    overflow-y:unset;
+    padding-top: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.pc-page .page::-webkit-scrollbar{
+    display: none;
+}
+
+.pc-page .page .page-text h1{
+    padding-top: 30px;
+    padding-left: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.pc-page .page .page-text p{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pc-page .page .page-text .long-bar{
+    border: none;
+    height: 1px;
+    width: 760px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: -10px;
+}
+
+.pc-page .page .page-text .hr1 hr{
+    border: none;
+    margin-top: 11px;
+    height: 1px;
+    width: 760px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pc-page .page .page-text .sub-title{
+    font-size: 10px;
+
+}
+
+.pc-page .page .page-text .body-text p{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pc-page .page .page-text .body-text{
+    width: 550px;
+    margin-top: 10px;
+
+}
+
+.pc-page .page .page-text .page-content{
+    display: flex;
+    gap: 0px;
+
+}
+
+.pc-page .page .page-text .body-text h1{
+    font-style: normal;
+    font-weight: normal;
+}
+
+.pc-page .page .page-text .body-text .small-bar{
+    width: 500px;
+}
+
+.pc-page .page .page-text .body-text .long-bar{
+    width: 760px;
+}
+
+.pc-page .page .page-text .species-box{
+    width: 240px;
+    height: 520px;
+    background-color:rgb(241, 241, 241);
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.pc-page .page .page-text .species-box .species-name{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.pc-page .page .page-text .species-box .species-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box{
+    display: flex;
+    gap: 0px;
+}
+
+
+.pc-page .page .page-text .species-box .scientific-classification .order-box{
+    width: 120px;
+    height: 160px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .phylo-box{
+    width: 120px;
+    height: 160px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    background-color: beige;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .kingdom{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .phylum{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .class{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .order{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .family{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .genus{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .species{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .binomial-name{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 15px;
+    background-color: beige;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .species-id{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .kingdom-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .phylum-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .class-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .order-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .family-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .genus-name{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .species-name{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.phone-page .page{
+    width: 100%;
+    background: #fff;
+    box-shadow: 4px, 4px 30px rgb(0, 0, 0.06);
+    padding: 20px;
+    padding-top: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow-x: hidden;
+}
+
+.phone-page .page::-webkit-scrollbar{
+    display: none;
+}
+
+.phone-page .page form button{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    border: none;
+    background: rgb(240, 239, 234);
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.phone-page .page .page-text h1{
+    padding-top: 30px;
+    padding-left: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.phone-page .page .page-text p{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.phone-page .page .page-text .long-bar{
+    border: none;
+    height: 1px;
+    width: 95%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: -10px;
+}
+
+.phone-page .page .page-text .hr1 hr{
+    border: none;
+    margin-top: 11px;
+    height: 1px;
+    width: 95%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.phone-page .page .page-text .sub-title{
+    font-size: 10px;
+
+}
+
+.phone-page .page .page-text .body-text p{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.phone-page .page .page-text .body-text{
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.phone-page .page .page-text .page-content .species-box-parent{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-page .page .page-text .page-content{
+    display: grid;
+    gap: 0px;
+
+}
+
+.phone-page .page .page-text .body-text h1{
+    font-style: normal;
+    font-weight: normal;
+}
+
+.phone-page .page .page-text .body-text .small-bar{
+    width: 75%;
+}
+
+.phone-page .page .page-text .body-text .long-bar{
+    width: 75%;
+}
+
+.phone-page .page .page-text .species-box{
+    width: 310px;
+    height: 520px;
+    background-color:rgb(241, 241, 241);
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.phone-page .page .page-text .species-box .species-name{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.phone-page .page .page-text .species-box .species-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box{
+    display: flex;
+    gap: 0px;
+    margin-left: 40px;
+}
+
+
+.phone-page .page .page-text .species-box .scientific-classification .order-box{
+    width: 120px;
+    height: 160px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .phylo-box{
+    width: 120px;
+    height: 160px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    background-color: beige;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .kingdom{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .phylum{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .class{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .order{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .family{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .genus{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .species{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .binomial-name{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 15px;
+    background-color: beige;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .species-id{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .kingdom-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .phylum-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .class-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .order-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .family-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .genus-name{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .species-name{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+}
