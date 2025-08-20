@@ -65,7 +65,7 @@ body{
     top: 20px;
     left: 20px;
     border: none;
-    background: rgb(240, 239, 234);
+    background: #fff;
     border-radius: 60px;
     cursor: pointer;
 }
@@ -80,6 +80,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 
 
 
