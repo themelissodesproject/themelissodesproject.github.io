@@ -1,0 +1,86 @@
+@import url('htps://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.phone-container{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px ){
+    .pc-container{
+        display: none;
+    }
+
+    .phone-container{
+        display: block;
+    }
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 239, 234);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pc-container .home-button form button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #fff;
+    border-radius: 60px;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.pc-container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: url(img/Under-Construction.png);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.phone-container .home-button form button{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    border: none;
+    background: rgb(240, 239, 234);
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.phone-container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: url(img/Under-Construction-phone.png);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
