@@ -547,3 +547,50 @@ body{
     font-weight: bold;
     margin-top: 5px;
 }
+
+@media print {
+  .species-box,
+  .small-bar,
+  .long-bar {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .home-button {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  body,
+  .page,
+  .title,
+  .binomial-name,
+  .page-text,
+  .page-content {
+    background: none !important;
+  }
+
+  .species-box {
+    background-color: rgb(241, 241, 241) !important;
+  }
+
+  .long-bar,
+  .small-bar {
+    background-color: black !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin:0px;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color: initial !important;
+  }
+
+  header, nav, .sticky, .fixed {
+    position: static !important;
+  }
+}
