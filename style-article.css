@@ -551,7 +551,9 @@ body{
 @media print {
   .species-box,
   .small-bar,
-  .long-bar {
+  .long-bar
+  .binomial-name
+  .title {
     display: block !important;
     visibility: visible !important;
   }
@@ -563,8 +565,6 @@ body{
 
   body,
   .page,
-  .title,
-  .binomial-name,
   .page-text,
   .page-content {
     background: none !important;
@@ -573,6 +573,15 @@ body{
   .species-box {
     background-color: rgb(241, 241, 241) !important;
   }
+
+  .binomial-name{
+    background-color: beige;
+  }
+
+  .title{
+    background-color: beige;
+  }
+
 
   .long-bar,
   .small-bar {
