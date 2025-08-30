@@ -135,6 +135,17 @@ body{
     width: 760px;
 }
 
+.pc-page .page .page-content .body-text .figure-1{
+    width: 700px;
+    margin-left: 50px;
+}
+
+
+.pc-page .page .page-content .body-text .figure-caption{
+    font-size: 13px;
+    text-align: center;
+}
+
 .pc-page .page .page-text .page-content .species-box{
     float: right;
     margin-left: 20px;
@@ -397,6 +408,15 @@ body{
 
 .phone-page .page .page-text .body-text .long-bar{
     width: 75%;
+}
+
+.phone-page .page .page-content .body-text .figure-1{
+    width: 100%;
+}
+
+.phone-page .page .page-content .body-text .figure-caption{
+    font-size: 13px;
+    text-align: center;
 }
 
 .phone-page .page .page-text .species-box{
