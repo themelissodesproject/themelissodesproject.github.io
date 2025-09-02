@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@media only screen and (max-width: 1000px ){
+    header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header h1 {
+    text-align: center;
+    width: 100%;             /* prevent floating in the middle */
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(251, 251, 250);
+      color: #222;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .heading {
+    margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px 0 0px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+     .heading header{
+      padding: 20px;
+      background-color: white;
+      border-style: solid;
+      border-color: #F3F4F5;
+      border-width: 1.5px;
+    }
+
+    header h1 {
+      font-size: 1.63rem;
+      margin: 0;
+      flex: 1 1 auto;
+    }
+
+    nav {
+      flex: 0 0 auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap; /* allows wrapping on small screens */
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 0.95rem;
+    }
+
+    .search-bar input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* ✅ prevents overflow */
+    }
+
+    /* ===== FILTERS ===== */
+    .filter-content{
+        background-color:white;
+        border-style: solid;
+         border-color: #F3F4F5;
+         border-width: 1.5px;
+         margin: 20px auto;
+         padding: 20px;
+    }
+    
+    .filters {
+      margin: 20px auto;
+      padding: 12px 16px;
+      background: rgb(251, 251, 250);
+      border-style: solid;
+      border-color: #F3F4F5;
+      border-width: 1.5px;
+      font-size: 0.95rem;
+    }
+
+    .filters label {
+    gap: 6px; 
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    display: grid;                 /* switch to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 10px 15px;                /* vertical 10px, horizontal 15px */
+  }
+}
+
+    /* ===== SPECIES GRID ===== */
+    .species-grid {
+      max-width: 850px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .species-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .species-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .species-card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+    text-decoration: none;
+    color: inherit;
+    font-style: normal;
+}
+
+    .species-card p {
+      font-size: 0.85rem;
+      color: #555;
+    }

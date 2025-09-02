@@ -12,20 +12,21 @@
 </head>
 <body>
     <div class="pc-container">
-        <section class="home-button">
-        <form action="index.html" method="get">
-            <button type="submit"><img src="icons/home icon.svg"></button>
-        </form>
+        <section class="back-button">
+            <button onclick="goBack()"><b>Go Back</b></button>
     </section>
     </div>
 
 
     <div class="phone-container">
-        <section class="home-button">
-        <form action="index.html" method="get">
-            <button type="submit"><img src="icons/home icon.svg"></button>
-        </form>
+        <section class="back-button">
+            <button onclick="goBack()"><b>Go Back</b></button>
     </section>
     </div>
+    <script>
+function goBack() {
+  window.history.back();
+}
+</script>
 </body>
 </html>

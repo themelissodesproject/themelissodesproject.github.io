@@ -24,7 +24,7 @@
 body{
     width: 100%;
     height: 100%;
-    background-color: rgb(240, 239, 234);
+    background-color: rgb(251, 251, 250);
     margin: auto;
     display: flex;
     align-items: center;
@@ -32,16 +32,17 @@ body{
 }
 
 
-.pc-container .home-button form button{
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: #fff;
-    border-radius: 60px;
+.pc-container .back-button button{
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px) saturate(180%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
     position: fixed;
     top: 20px;
     right: 30px;
-    cursor: pointer;
 }
 
 .pc-container{
@@ -58,15 +59,17 @@ body{
 
 
 
-.phone-container .home-button form button{
-    width: 40px;
-    height: 40px;
+.phone-container .back-button button{
     position: relative;
-    top: 20px;
-    left: 20px;
-    border: none;
-    background: #fff;
-    border-radius: 60px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); /* corrected */
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px) saturate(180%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -80,7 +83,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 
 
 

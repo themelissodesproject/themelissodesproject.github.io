@@ -1,20 +1,26 @@
-const search = () =>{
-    const searchbox = document.getElementById("search-item").value.toUpperCase();
-    const pagesites = document.getElementById("page-list")
-    const page = document.querySelectorAll(".page")
-    const pname = pagesites.getElementsByTagName("h2")
+const search = () => {
+    const input = document.getElementById("search-item").value.trim().toUpperCase();
+    const pages = document.querySelectorAll("#page-list .page:not(#no-results)");
+    const container = document.getElementById("results-container");
+    const noResults = document.getElementById("no-results");
 
-    for (var i=0; i < pname.length; i++) {
-        let match = page[i].getElementsByTagName('h2')[0];
+    let matchFound = false;
 
-        if (match) {
-           let textvalue = match.textContent || match.innerHTML
-
-           if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
-                page[i].style.display = "";
-            } else{
-                page[i].style.display = "none";
-           }
+    pages.forEach(page => {
+        const title = page.querySelector("h2").textContent.toUpperCase();
+        if (title.includes(input)) {
+            page.style.display = "";
+            matchFound = true;
+        } else {
+            page.style.display = "none";
         }
+    });
+
+    if (input.length > 0) {
+        container.style.display = "block";
+        noResults.style.display = matchFound ? "none" : "flex";
+    } else {
+        container.style.display = "none";
+        noResults.style.display = "none";
     }
-}
+};

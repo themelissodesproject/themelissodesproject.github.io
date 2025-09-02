@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Melissodes Species Index - The Melissodes Project</title>
+
+
+  <meta name="description" content="Index of every single species of Melissodes">
+
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://themelissodesproject.wildref.org/species-index.html">
+
+  <meta name="application-name" content="The Melissodes Project">
+  <meta property="og:site_name" content="The Melissodes Project">
+  <meta property="og:title" content="The Melissodes Project">
+  <meta property="og:description" content="An online resource dedicated to Melissodes bees.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themelissodesproject.wildref.org/species-index.html">
+  <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Melissodes Project">
+  <meta name="twitter:description" content="An online resource dedicated to Melissodes bees.">
+  <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://themelissodesproject.wildref.org/species-index.html",
+    "name": "The Melissodes Project",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Melissodes Project",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://themelissodesproject.wildref.org/favicon.png"
+      }
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="species-index.css">
+</head>
+<body>
+    <div class="container">
+    <div class="heading">
+    <header>
+      <h1>The Melissodes Project</h1>
+      <nav>
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Temp-page.html">Species Index</a></li>
+          <li><a href="Temp-page.html">About</a></li>
+          <li><a href="Temp-page.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    </div>
+
+<div class="filter-content">
+  <!-- Search bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search species...">
+  </div>
+
+  <div class="filters">
+    <strong>Filter by Subgenus:</strong><br>
+    <label><input type="checkbox" value="Apomelissodes"> Apomelissodes</label>
+    <label><input type="checkbox" value="Callimelissodes"> Callimelissodes</label>
+    <label><input type="checkbox" value="Ecplectica"> Ecplectica</label>
+    <label><input type="checkbox" value="Eumelissodes"> Eumelissodes</label>
+    <label><input type="checkbox" value="Melissodes"> Melissodes</label>
+  </div>
+
+  <div class="species-grid" id="speciesGrid">
+    
+     <a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
+      <h3>Melissodes ablusus</h3>
+      <p>Subgenus: Callimelissodes</p>
+    </div></a>
+
+    <a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
+      <h3>Melissodes agilis</h3>
+      <p>Subgenus: Eumelissodes</p>
+    </div></a>
+
+    <a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
+      <h3>Melissodes apicatus</h3>
+      <p>Subgenus: Apomelissodes</p>
+    </div></a>
+
+    <a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
+      <h3>Melissodes appressus</h3>
+      <p>Subgenus: Eumelissodes</p>
+    </div></a>
+
+    <a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
+      <h3>Melissodes baileyi</h3>
+      <p>Subgenus: Apomelissodes</p>
+    </div></a>
+
+  </div>
+</div>
+</div>
+<script>
+const checkboxes = document.querySelectorAll('.filters input[type="checkbox"]');
+const searchInput = document.getElementById('searchInput');
+const grid = document.getElementById("speciesGrid");
+const speciesLinks = Array.from(grid.querySelectorAll('a')); // select the <a> wrappers
+
+function filterCards() {
+  const activeFilters = Array.from(checkboxes)
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
+  const searchValue = searchInput.value.toLowerCase();
+
+  speciesLinks.forEach(link => {
+    const card = link.querySelector('.species-card');
+    const subgenus = card.getAttribute('data-subgenus');
+    const name = card.querySelector('h3').textContent.toLowerCase();
+
+    const matchesFilter = activeFilters.length === 0 || activeFilters.includes(subgenus);
+    const matchesSearch = name.includes(searchValue);
+
+    if (matchesFilter && matchesSearch) {
+      link.style.display = "";
+      grid.appendChild(link); // reorders to the top
+    } else {
+      link.style.display = "none";
+    }
+  });
+}
+
+// Event listeners
+checkboxes.forEach(cb => cb.addEventListener('change', filterCards));
+searchInput.addEventListener('input', filterCards);
+</script>
+</body>
+</html>
