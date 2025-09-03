@@ -22,15 +22,21 @@ body {
       padding: 0 20px;
     }
 
-    header {
+    .heading {
+    margin: 0 auto;
+    }
+
+    .bar-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 40px 0 20px;
+      margin-bottom: 10px;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .container .heading header{
+     .heading header{
       padding: 20px;
       background-color: white;
       border-style: solid;
@@ -38,7 +44,7 @@ body {
       border-width: 1.5px;
     }
 
-    header h1 {
+    .heading header h1 {
       font-size: 1.63rem;
       margin: 0;
       flex: 1 1 auto;

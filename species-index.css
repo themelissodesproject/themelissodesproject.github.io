@@ -1,36 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-@media only screen and (max-width: 1000px ){
-    header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  header h1 {
-    text-align: center;
-    width: 100%;             /* prevent floating in the middle */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-* {
+body {
+      font-family: Georgia, serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: rgb(251, 251, 250);
+      line-height: 1.6;
       color: #222;
-      line-height: 1.5;
+      background-color: rgb(251, 251, 250);
     }
 
     .container {
@@ -47,10 +30,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 40px 0 0px;
-      margin-bottom: 10px;
+      margin: 40px 0 10px;
       flex-wrap: wrap;
-      gap: 10px;
     }
 
      .heading header{
@@ -101,12 +82,11 @@
         border-style: solid;
          border-color: #F3F4F5;
          border-width: 1.5px;
-         margin: 20px auto;
          padding: 20px;
     }
     
     .filters {
-      margin: 20px auto;
+      margin: 10px auto;
       padding: 12px 16px;
       background: rgb(251, 251, 250);
       border-style: solid;
@@ -118,7 +98,7 @@
     .filters label {
     gap: 6px; 
     cursor: pointer;
-    margin-left: 15px;
+    padding-left: 6px;
 }
 
 @media (max-width: 600px) {
@@ -169,3 +149,21 @@
       font-size: 0.85rem;
       color: #555;
     }
+@media only screen and (max-width: 1000px ){
+    header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header h1 {
+    text-align: center;
+    width: 100%;             /* prevent floating in the middle */
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+}
