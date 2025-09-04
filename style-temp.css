@@ -35,7 +35,7 @@ body{
 .pc-container .back-button button{
     display: inline-block;
       text-decoration: none;
-      background: #333;
+      background: #222;
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
@@ -46,6 +46,11 @@ body{
     top: 20px;
     right: 30px;
 }
+
+.pc-container .back-button button:hover {
+  background: #444;
+}
+
 
 .pc-container{
     width: 100%;
@@ -68,13 +73,17 @@ body{
     transform: translateX(-50%); /* corrected */
     display: inline-block;
       text-decoration: none;
-      background: #333;
+      background: #222;
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
       border:none;
       transition: background 0.2s;
     cursor: pointer;
+}
+
+.phone-container .back-button button:hover {
+  background: #444;
 }
 
 .phone-container{

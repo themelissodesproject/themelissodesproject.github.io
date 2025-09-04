@@ -105,8 +105,15 @@ body {
   .filters {
     display: grid;                 /* switch to grid layout */
     grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-    gap: 10px 15px;                /* vertical 10px, horizontal 15px */
+    gap: 6px 15px;                /* vertical 10px, horizontal 15px */
   }
+
+    .filters label {
+    gap: 6px; 
+    cursor: pointer;
+    margin-left: -10px;
+    font-size: 13px;
+}
 }
 
     /* ===== SPECIES GRID ===== */

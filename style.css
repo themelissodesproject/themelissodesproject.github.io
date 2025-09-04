@@ -69,6 +69,62 @@ body {
       font-size: 0.95rem;
     }
 
+    .hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: white;
+      border-style: solid;
+      border-color: #F3F4F5;
+      border-width: 1.5px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background: #444;
+}
+
+/* ---------- QUICK STATS ---------- */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+      border-style: solid;
+      border-color: #F3F4F5;
+      border-width: 1.5px;
+  margin-bottom: 2rem;
+}
+.stats div {
+  text-align: center;
+  font-size: 1rem;
+}
+.stats b {
+  font-size: 1.4rem;
+  display: block;
+}
+
+
     .page-bg{
       background-color: white;
       padding: 20px;
