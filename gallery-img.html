@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
   <title>Species gallery - The Melissodes Project</title>
-
-
   <meta name="description" content="Image gallery of Melissodes species">
 
-
   <link rel="icon" type="image/png" href="favicon.png">
-
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="canonical" href="https://themelissodesproject.wildref.org/gallery-img.html">
 
@@ -34,100 +27,84 @@
 
   <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://themelissodesproject.wildref.org/gallery-img.html",
-    "name": "Species gallery - The Melissodes Project",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Species gallery - The Melissodes Project",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://themelissodesproject.wildref.org/favicon.png"
-      }
-    }
-  }
-  </script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+  }
+
+  body {
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #222;
+        background-color: rgb(251, 251, 250);
+      }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .heading {
+    margin: 0 auto;
+  }
+
+  .bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .heading header{
+    padding: 20px;
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
+
+  .heading header h1 {
+    font-size: 1.63rem;
+    margin: 0;
+    flex: 1 1 auto;
+  }
+
+  nav {
+    flex: 0 0 auto;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-}
+  }
 
-body {
-      font-family: Georgia, serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #222;
-      background-color: rgb(251, 251, 250);
-    }
+  nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.95rem;
+  }
 
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .heading {
-    margin: 0 auto;
-    }
-
-    .bar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 40px 0 20px;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-     .heading header{
-      padding: 20px;
-      background-color: white;
-      border-style: solid;
-      border-color: #F3F4F5;
-      border-width: 1.5px;
-    }
-
-    .heading header h1 {
-      font-size: 1.63rem;
-      margin: 0;
-      flex: 1 1 auto;
-    }
-
-    nav {
-      flex: 0 0 auto;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap; /* allows wrapping on small screens */
-      gap: 16px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #000;
-      font-size: 0.95rem;
-    }
-
-    .page{
-      background-color: white;
-      border-style: solid;
-      border-color: #F3F4F5;
-      border-width: 1.5px;
-    }
+  .page{
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
 
   .page-header {
     padding: 1rem;
@@ -136,7 +113,7 @@ body {
 
   .search-filter {
     display: flex;
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
     align-items: center;
     gap: 0.75rem;
     margin: 1rem;
@@ -173,7 +150,7 @@ body {
 
   .gallery-card {
     width: 220px;
-    aspect-ratio: 1 / 1;   /* ✅ Keeps square shape */
+    aspect-ratio: 1 / 1;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -192,13 +169,13 @@ body {
 
   .gallery-card img {
     width: 100%;
-    height: 65%;   /* Image takes top portion */
+    height: 65%;
     object-fit: cover;
     display: block;
   }
 
   .gallery-card .caption {
-    flex: 1;   /* Caption fills remaining space */
+    flex: 1;
     padding: 0.75rem;
     text-align: center;
     font-size: 0.95rem;
@@ -234,6 +211,7 @@ body {
     max-height: 400px;
     object-fit: contain;
     margin-bottom: 1rem;
+    border-radius: 5px;
   }
 
   .close-btn {
@@ -246,89 +224,95 @@ body {
     margin-top: 1rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     .gallery-card {
-      width: 45%;   /* 2 per row on phones */
+      width: 45%;
       max-width: 220px;
+    }
+    .gallery-card .caption {
+      font-size: 13px;
     }
   }
 
-    @media only screen and (max-width: 1000px ){
+  @media only screen and (max-width: 1000px ){
     .bar-header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-header header h1 {
+      text-align: center;
+      width: 100%;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
-
-  .bar-header header h1 {
-    text-align: center;
-    width: 100%;             /* prevent floating in the middle */
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-}
-</style>
+  </style>
 </head>
 <body>
   <div class="container">
-  <div class="heading">
-    <header class="bar-header">
-      <h1>The Melissodes Project</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="species-index.html">Species Index</a></li>
-          <li><a href="gallery-menu.html">Gallery</a></li>
-          <li><a href="Temp-page.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="heading">
+      <header class="bar-header">
+        <h1>The Melissodes Project</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="species-index.html">Species Index</a></li>
+            <li><a href="gallery-menu.html">Gallery</a></li>
+            <li><a href="Temp-page.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
     </div>
     <div class="page">
-  <header class="page-header">
-    <h1>Species Gallery</h1>
-    <div class="search-filter">
-      <input type="text" id="search" placeholder="Search species gallery..." />
+      <header class="page-header">
+        <h1>Species Gallery</h1>
+        <div class="search-filter">
+          <input type="text" id="search" placeholder="Search species gallery..." />
+          <div class="checkbox-group">
+            <label><input type="checkbox" class="subgenus-checkbox" value="Melissodes"> Melissodes</label>
+            <label><input type="checkbox" class="subgenus-checkbox" value="Ecplectica"> Ecplectica</label>
+            <label><input type="checkbox" class="subgenus-checkbox" value="Apomelissodes"> Apomelissodes</label>
+            <label><input type="checkbox" class="subgenus-checkbox" value="Callimelissodes"> Callimelissodes</label>
+            <label><input type="checkbox" class="subgenus-checkbox" value="Eumelissodes"> Eumelissodes</label>
+          </div>
+        </div>
+      </header>
 
-      <div class="checkbox-group">
-        <label><input type="checkbox" class="subgenus-checkbox" value="Melissodes"> Melissodes</label>
-        <label><input type="checkbox" class="subgenus-checkbox" value="Ecplectica"> Ecplectica</label>
-        <label><input type="checkbox" class="subgenus-checkbox" value="Apomelissodes"> Apomelissodes</label>
-        <label><input type="checkbox" class="subgenus-checkbox" value="Callimelissodes"> Callimelissodes</label>
-        <label><input type="checkbox" class="subgenus-checkbox" value="Eumelissodes"> Eumelissodes</label>
+      <main>
+        <div class="gallery-grid" id="gallery">
+
+          <div class="gallery-card" 
+              data-caption="Melissodes agilis" 
+              data-overlay="Frank Hogland - Aurora, Oregon Melissodes agilis, F" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-Agilis.png" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis</div>
+          </div>
+
+          <div class="gallery-card" 
+              data-caption="Melissodes scotti" 
+              data-overlay="Sue Meiman - Los Angeles County, California Melissodes scotti, F" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-Scotti.jpg" alt="Melissodes scotti"/>
+            <div class="caption">Melissodes scotti</div>
+          </div>
+
+        </div>
+      </main>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <img id="overlay-img" src="" alt=""/>
+          <p id="overlay-caption"></p>
+          <button class="close-btn" onclick="closeOverlay()">Close</button>
+        </div>
       </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="gallery-grid" id="gallery">
-
-      <div class="gallery-card" 
-           data-caption="Melissodes agilis" 
-           data-overlay="Frank Hogland - Aurora, Oregon Melissodes agilis, F" 
-           data-subgenus="Eumelissodes">
-        <img src="img/Melissodes-Agilis.png" alt="Melissodes agilis"/>
-        <div class="caption">Melissodes agilis</div>
-      </div>
-
-    </div>
-  </main>
-
-  <div class="overlay" id="overlay">
-    <div class="overlay-content">
-      <img id="overlay-img" src="" alt=""/>
-      <p id="overlay-caption"></p>
-      <button class="close-btn" onclick="closeOverlay()">Close</button>
     </div>
   </div>
 
-
-  </div>
-</div>
   <script>
     const searchInput = document.getElementById('search');
     const checkboxes = document.querySelectorAll('.subgenus-checkbox');
@@ -337,6 +321,19 @@ body {
     const overlayImg = document.getElementById('overlay-img');
     const overlayCaption = document.getElementById('overlay-caption');
     const gallery = document.getElementById('gallery');
+
+    // ✅ Sorting function
+    function sortGallery() {
+      const cardsArray = Array.from(cards);
+
+      cardsArray.sort((a, b) => {
+        const nameA = a.dataset.caption.toLowerCase();
+        const nameB = b.dataset.caption.toLowerCase();
+        return nameA.localeCompare(nameB);
+      });
+
+      cardsArray.forEach(card => gallery.appendChild(card));
+    }
 
     function filterGallery() {
       const query = searchInput.value.toLowerCase();
@@ -352,11 +349,13 @@ body {
 
         if (matchesSearch && matchesSubgenus) {
           card.style.display = 'flex';
-          gallery.prepend(card); // bring matches forward
         } else {
           card.style.display = 'none';
         }
       });
+
+      // ✅ Keep alphabetical order after filtering
+      sortGallery();
     }
 
     searchInput.addEventListener('input', filterGallery);
@@ -378,6 +377,9 @@ body {
     overlay.addEventListener('click', e => {
       if(e.target === overlay) closeOverlay();
     });
+
+    // ✅ Sort once on page load
+    sortGallery();
   </script>
 </body>
 </html>
