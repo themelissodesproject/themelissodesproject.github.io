@@ -109,6 +109,10 @@ body{
       font-size: 0.95rem;
     }
 
+    .sub-heading{
+        line-height: 0px;
+    }
+
 
 .pc-page .page{
     width: 850px;
@@ -203,6 +207,7 @@ body{
 .pc-page .page .page-content .body-text .figure-1{
     width: 700px;
     margin-left: 50px;
+    margin-top: 20px;
 }
 
 
@@ -468,6 +473,7 @@ body{
 
 .phone-page .page .page-content .body-text .figure-1{
     width: 100%;
+    margin-top: 10px;
 }
 
 .phone-page .page .page-content .body-text .figure-caption{
@@ -688,6 +694,8 @@ body{
     display: none !important;
     visibility: hidden !important;
   }
+
+
 
   body,
   .page,
