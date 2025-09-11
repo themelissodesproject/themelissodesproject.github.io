@@ -221,7 +221,7 @@ body{
     margin-left: 20px;
     margin-bottom: 20px;
     width: 240px;
-    height: 520px;
+    height: auto;
     background-color: rgb(251, 251, 250);
     border-style: solid;
     border-color: #F3F4F5;
@@ -253,12 +253,12 @@ body{
 
 .pc-page .page .page-text .species-box .scientific-classification .order-box{
     width: 120px;
-    height: 160px;
+    height: 210px;
 }
 
 .pc-page .page .page-text .species-box .scientific-classification .phylo-box{
     width: 120px;
-    height: 160px;
+    height: 210px;
 }
 
 .pc-page .page .page-text .species-box .scientific-classification .title{
@@ -300,7 +300,19 @@ body{
     margin-top: 5px;
 }
 
+.pc-page .page .page-text .species-box .scientific-classification .tribe{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
 .pc-page .page .page-text .species-box .scientific-classification .genus{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .subgenus{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
@@ -317,7 +329,7 @@ body{
     font-size: 15px;
     font-style: normal;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: rgb(238, 238, 237);
     border-radius: 5px;
     padding: 4px;
@@ -360,7 +372,20 @@ body{
     margin-top: 5px;
 }
 
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .tribe-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
 .pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .genus-name{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.pc-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .subgenus-name{
     font-size: 15px;
     font-style: italic;
     font-weight: normal;
@@ -483,7 +508,7 @@ body{
 
 .phone-page .page .page-text .species-box{
     width: 310px;
-    height: 520px;
+    height: auto;
     background-color: rgb(251, 251, 250);
     border-style: solid;
     border-color: #F3F4F5;
@@ -515,12 +540,12 @@ body{
 
 .phone-page .page .page-text .species-box .scientific-classification .order-box{
     width: 120px;
-    height: 160px;
+    height: 210px;
 }
 
 .phone-page .page .page-text .species-box .scientific-classification .phylo-box{
     width: 120px;
-    height: 160px;
+    height: 210px;
 }
 
 .phone-page .page .page-text .species-box .scientific-classification .title{
@@ -562,7 +587,19 @@ body{
     margin-top: 5px;
 }
 
+.phone-page .page .page-text .species-box .scientific-classification .tribe{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
 .phone-page .page .page-text .species-box .scientific-classification .genus{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .subgenus{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
@@ -622,7 +659,20 @@ body{
     margin-top: 5px;
 }
 
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .tribe-name{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
 .phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .genus-name{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.phone-page .page .page-text .species-box .scientific-classification .tax-box .phylo-box .subgenus-name{
     font-size: 15px;
     font-style: italic;
     font-weight: normal;
