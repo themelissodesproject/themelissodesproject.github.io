@@ -209,6 +209,48 @@
     </section>
 </section>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Words and their tooltip text
+  const glossary = {
+    scopal: "Elongated specialized hairs, often found on the hind legs, used for the distribution of pollen.",
+    pygidial: "A structure on the last segment of a bee’s metasoma forming a point.",
+    "New World": "North, South, and Central America.",
+    spatuloplumose: "Branched, feather-like hair with a spatula-shaped tip.",
+    tergum: "The upper (dorsal) portion of an arthropod segment.",
+    tegular: "A sclerite covering the base of the forewing.",
+    denticle: "A small tooth-like projection.",
+    gradulus: "An abdominal line formed by a groove or change in height between regions."
+  };
+
+  const body = document.body;
+
+  // Build a regex to find all words/phrases, case-insensitive
+  const pattern = new RegExp(
+    "\\b(" + Object.keys(glossary).join("|") + ")\\b", "gi"
+  );
+
+  // Walk through all text nodes and replace matches
+  function walk(node) {
+    if (node.nodeType === 3) { // text node
+      const html = node.nodeValue.replace(pattern, function(match) {
+        const key = Object.keys(glossary).find(k => k.toLowerCase() === match.toLowerCase());
+        const tip = glossary[key];
+        return `<span class="tooltip">${match}<span class="tooltip-text">${tip}</span></span>`;
+      });
+      if (html !== node.nodeValue) {
+        const span = document.createElement("span");
+        span.innerHTML = html;
+        node.parentNode.replaceChild(span, node);
+      }
+    } else if (node.nodeType === 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+      node.childNodes.forEach(walk);
+    }
+  }
+
+  walk(body);
+});
+</script>
 </body>
 
 </html>
