@@ -1,4 +1,5 @@
-@import url('htps://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 *{
     margin: 0;
@@ -46,31 +47,30 @@
 }
 
 
+body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      background-color: rgb(251, 251, 250);
+    }
 
-
-body{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(251, 251, 250);
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
+    .container {
       max-width: 920px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    header {
+    .heading {
+    margin: 0 auto;
+    line-height: 1.6;
+    }
+
+    .bar-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 20px 0 0px;
+      margin: 40px 0 20px;
       margin-bottom: 10px;
       flex-wrap: wrap;
       gap: 10px;
@@ -84,7 +84,7 @@ body{
       border-width: 1.5px;
     }
 
-    header h1 {
+    .heading header h1 {
       font-size: 1.63rem;
       margin: 0;
       flex: 1 1 auto;
@@ -108,14 +108,13 @@ body{
       color: #000;
       font-size: 0.95rem;
     }
-
     .sub-heading{
         line-height: 0px;
     }
 
 
 .pc-page .page{
-    width: 850px;
+    width: 880px;
     background: #fff;
     padding: 20px;
     overflow-y:unset;
@@ -416,6 +415,10 @@ body{
     display: none;
 }
 
+.phone-page .page .page-content{
+    justify-content: center;
+}
+
 
 .phone-page .page .page-text h1{
     padding-top: 30px;
@@ -507,7 +510,7 @@ body{
 }
 
 .phone-page .page .page-text .species-box{
-    width: 310px;
+    width: auto;
     height: auto;
     background-color: rgb(251, 251, 250);
     border-style: solid;
