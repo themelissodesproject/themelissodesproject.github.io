@@ -33,7 +33,7 @@
 
   nav ul {
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center
   }
 
 }
