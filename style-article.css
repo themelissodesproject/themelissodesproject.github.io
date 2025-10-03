@@ -849,3 +849,13 @@ body {
   cursor: pointer;
   margin-top: 1rem;
 }
+
+#overlayCaption a {
+  color: #000;           /* black text */
+  font-weight: 700;      /* make *all* text bold, including the arrow */
+  text-decoration: none; /* remove underline */
+}
+
+#overlayCaption a:hover {
+  opacity: 0.7;          /* subtle hover effect */
+}

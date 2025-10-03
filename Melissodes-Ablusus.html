@@ -96,10 +96,13 @@
                     <h3 class="species-name" style="text-align: center;">Melissodes ablusus</h3>
                     <div class="species-img">
                         <img 
-                          src="img/Melissodes_ablusus_M.webp" 
-                           alt="Melissodes agilis"
-                           style="cursor:pointer"
-                           onclick="openOverlay('img/Melissodes_ablusus_M.webp', 'Melissodes ablusus - male lateral view')">
+                         src="img/Melissodes_ablusus_M.webp" 
+                         alt="Melissodes ablusus"
+                          style="cursor:pointer"
+                        onclick="openOverlay(
+                       'img/Melissodes_ablusus_M.webp', 
+                         'Melissodes ablusus <br><a href=\'gallery-img.html#ablusus\'>Gallery ➜</a>'
+                         )">
                     <div class="scientific-classification">
                         <h3 class="title" style="text-align: center;">Scientific Classification</h3>
                         <div class="tax-box">
@@ -362,10 +365,13 @@
                     <h3 class="species-name" style="text-align: center;">Melissodes ablusus</h3>
                     <div class="species-img">
                         <img 
-                          src="img/Melissodes_ablusus_M.webp" 
-                           alt="Melissodes agilis"
-                           style="cursor:pointer"
-                           onclick="openOverlay('img/Melissodes_ablusus_M.webp', 'Melissodes ablusus - male lateral view')">
+                         src="img/Melissodes_ablusus_M.webp" 
+                         alt="Melissodes ablusus"
+                          style="cursor:pointer"
+                        onclick="openOverlay(
+                       'img/Melissodes_ablusus_M.webp', 
+                         'Melissodes ablusus <br><a href=\'gallery-img.html#ablusus\'>Gallery ➜</a>'
+                         )">
                     <div class="scientific-classification">
                         <h3 class="title" style="text-align: center;">Scientific Classification</h3>
                         <div class="tax-box">
@@ -737,19 +743,18 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 <script>
-  // Open overlay
-  function openOverlay(imgSrc, caption) {
+  // Open overlay (allows HTML in caption)
+  function openOverlay(imgSrc, captionHTML) {
     document.getElementById("overlayImg").src = imgSrc;
-    document.getElementById("overlayCaption").innerText = caption;
+    document.getElementById("overlayCaption").innerHTML = captionHTML;
     document.getElementById("imgOverlay").style.display = "flex";
   }
 
-  // Close overlay
   function closeOverlay() {
     document.getElementById("imgOverlay").style.display = "none";
   }
 
-  // Close overlay if user clicks outside content
+  // Close overlay if user clicks background
   document.getElementById("imgOverlay").addEventListener("click", function() {
     closeOverlay();
   });
