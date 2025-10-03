@@ -95,7 +95,11 @@
                     <div class="species-box">
                     <h3 class="species-name" style="text-align: center;">Melissodes ablusus</h3>
                     <div class="species-img">
-                        <img src="img/Melissodes_ablusus_M.webp" alt="Melissodes ablusus">
+                        <img 
+                          src="img/Melissodes_ablusus_M.webp" 
+                           alt="Melissodes agilis"
+                           style="cursor:pointer"
+                           onclick="openOverlay('img/Melissodes_ablusus_M.webp', 'Melissodes ablusus - male lateral view')">
                     <div class="scientific-classification">
                         <h3 class="title" style="text-align: center;">Scientific Classification</h3>
                         <div class="tax-box">
@@ -357,7 +361,11 @@
                     <div class="species-box">
                     <h3 class="species-name" style="text-align: center;">Melissodes ablusus</h3>
                     <div class="species-img">
-                        <img src="img/Melissodes_ablusus_M.webp" alt="Melissodes ablusus">
+                        <img 
+                          src="img/Melissodes_ablusus_M.webp" 
+                           alt="Melissodes agilis"
+                           style="cursor:pointer"
+                           onclick="openOverlay('img/Melissodes_ablusus_M.webp', 'Melissodes ablusus - male lateral view')">
                     <div class="scientific-classification">
                         <h3 class="title" style="text-align: center;">Scientific Classification</h3>
                         <div class="tax-box">
@@ -720,6 +728,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 </div>
+<div class="overlay" id="imgOverlay">
+  <div class="overlay-content" onclick="event.stopPropagation()">
+    <img id="overlayImg" src="" alt="Overlay image">
+    <p id="overlayCaption"></p>
+    <button class="close-btn" onclick="closeOverlay()">Close</button>
+  </div>
+</div>
+
+<script>
+  // Open overlay
+  function openOverlay(imgSrc, caption) {
+    document.getElementById("overlayImg").src = imgSrc;
+    document.getElementById("overlayCaption").innerText = caption;
+    document.getElementById("imgOverlay").style.display = "flex";
+  }
+
+  // Close overlay
+  function closeOverlay() {
+    document.getElementById("imgOverlay").style.display = "none";
+  }
+
+  // Close overlay if user clicks outside content
+  document.getElementById("imgOverlay").addEventListener("click", function() {
+    closeOverlay();
+  });
+</script>
 </body>
 
 </html>
