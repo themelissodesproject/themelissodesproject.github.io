@@ -15,6 +15,24 @@ const melissodesData = {
   ]
 };
 
+function isVisible(el) {
+  return el && !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+}
+
+// Find the visible placeholder
+const allPlaceholders = document.querySelectorAll(".map-placeholder");
+let target = null;
+allPlaceholders.forEach(el => {
+  if (isVisible(el)) target = el;
+});
+
+// If we found one, insert the #map into it
+const mapEl = document.getElementById("map");
+if (target && mapEl) {
+  target.appendChild(mapEl);
+  console.log("🗺️ Moved map into:", target.parentElement.className);
+}
+
 // 🌍 Embedded North America land polygon
 const landMask = { /* paste the full GeoJSON here from ne_110m_land.geojson */ };
 
@@ -106,3 +124,27 @@ window.addEventListener('resize', () => {
 setTimeout(() => {
   map.invalidateSize();
 }, 700);
+
+// 🧭 When the layout switches (resize), move the map to the visible placeholder again
+window.addEventListener("resize", () => {
+  setTimeout(() => {
+    const allPlaceholders = document.querySelectorAll(".map-placeholder");
+    const mapEl = document.getElementById("map");
+    let target = null;
+
+    // find the visible placeholder
+    allPlaceholders.forEach(el => {
+      if (el.offsetParent !== null) target = el;
+    });
+
+    // move the map if needed
+    if (target && mapEl && target !== mapEl.parentElement) {
+      target.appendChild(mapEl);
+      console.log("🔄 Moved map to:", target.parentElement.className);
+      // force Leaflet to recalc dimensions
+      if (typeof map !== "undefined" && map.invalidateSize) {
+        map.invalidateSize();
+      }
+    }
+  }, 600); // wait a bit for CSS media query to apply
+});
