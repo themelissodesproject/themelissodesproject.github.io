@@ -1,15 +1,15 @@
-"Data compiled from GBIF, Wilson, J.S. et al. (2025), and DeBano, S.J. et al, (2024).",,,,,,,,
-Species name,Latitude,Longitude,Recorded By,Date Found,Determined By,Life Stage,Sex,Notes
-Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-22,,,,
-Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-23,,,,
-Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-24,,,,
-Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-25,,,,
-Melissodes ablusus,37.4283,-121.9056,P. F. Torchio,1955-06-22,,,Female,
-Melissodes ablusus,37.426,-121.9752,P.F. Torchio,1955-06-21,,,,
-Melissodes ablusus,37.426,-121.9752,P.F. Torchio,1955-06-22,,,,
-Melissodes ablusus,36.0714,-121.3028,P.F. Torchio,1955-06-22,"LaBerge, Walley",Adult,,
-Melissodes ablusus,37.5986,-122.3861,Edwin C. Van Dyke,1912-09-01,"LaBerge, Walley",Adult,,"Inferred date, possibly 1912-09-02"
-Melissodes ablusus,,,Edwin C. Van Dyke,1912-09-01,,Adult,Female,"holotype. Coordinates missing, but locality given (Millbrae, California)"
-Melissodes ablusus,37.59861,-122.38611,Edwin C. Van Dyke,1912-09-02,,Adult,,
-Melissodes ablusus,38.1804,-111.1815,T.H. Ogden et al.,2014-08-21,T. Griswold,Adult,,
-Melissodes ablusus,,,,,,,,"Coordinates missing, but locality given (Zumwalt, Oregon)"
+"Data compiled from GBIF, Wilson, J.S. et al. (2025), and DeBano, S.J. et al, (2024).",,,,,,,,,,,,
+speciesname,latitude,longitude,recordedby,datefound,determinedby,lifestage,sex,notes,rights,rightsholder,sourcelink,locality
+Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-22,,,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-23,,,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-24,,,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,36.07,-121.3,P.F. Torchio,1955-06-25,,,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,37.4283,-121.9056,P. F. Torchio,1955-06-22,,,Female,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,37.426,-121.9752,P.F. Torchio,1955-06-21,,,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,37.426,-121.9752,P.F. Torchio,1955-06-22,,,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,36.0714,-121.3028,P.F. Torchio,1955-06-22,"LaBerge, Walley",Adult,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,37.5986,-122.3861,Edwin C. Van Dyke,1912-09-01,"LaBerge, Walley",Adult,,"Inferred date, possibly 1912-09-02",,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,37.59855,-122.38719,Edwin C. Van Dyke,1912-09-01,,Adult,Female,"holotype. Precise coordinates missing, but locality given",,,https://www.gbif.org/species/5040748,"Millbrae, California"
+Melissodes ablusus,37.59861,-122.38611,Edwin C. Van Dyke,1912-09-02,,Adult,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,38.1804,-111.1815,T.H. Ogden et al.,2014-08-21,T. Griswold,Adult,,,,,https://www.gbif.org/species/5040748,
+Melissodes ablusus,45.63111,-116.97,"DeBano, S.J. et al.",,,,,"Precise coordinates missing, but locality given",,,"DeBano, S.J. et al, (2024).","Zumwalt, Oregon"

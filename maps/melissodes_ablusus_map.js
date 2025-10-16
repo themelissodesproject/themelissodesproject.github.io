@@ -1,79 +1,142 @@
-const newLocal = { "type": "Feature", "properties": { "name": "Melissodes ablusus", "foundBy": "Edwin C. Van Dyke", "dateFound": "1912-09-02", "determinedBy": "", "lifeStage": "Adult", "sex": "", "notes": "" }, "geometry": { "type": "Point", "coordinates": [-122.38611, 37.59861] } };
-// 🐝 Species data
-const melissodesData = {
-  "type": "FeatureCollection",
-  "features": [
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","latitude": 38.18038,"longitude": -111.18147,"foundBy": "T.H. Ogden et al.","dateFound": "2014-08-21", "determinedBy": "T. Griswold", "lifeStage": "Adult", "sex": "", "notes": ""}, "geometry": { "type": "Point", "coordinates": [-111.18147, 38.18038] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","latitude": 36.0714,"longitude": -121.3028,"foundBy": "P.F. Torchio","dateFound": "1955-06-22", "determinedBy": "LaBerge, Walley", "lifeStage": "Adult", "sex": "", "notes": ""}, "geometry": { "type": "Point", "coordinates": [-121.3028, 36.0714] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","latitude": 37.42605,"longitude": -121.97523,"foundBy": "P.F. Torchio","dateFound": "1955-06-22", "determinedBy": "", "lifeStage": "", "sex": "", "notes": "2 specimens"}, "geometry": { "type": "Point", "coordinates": [-121.97523, 37.42605] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","latitude": 36.07,"longitude": -121.3,"foundBy": "P.F. Torchio","dateFound": "1955-06-22", "determinedBy": "", "lifeStage": "", "sex": "", "notes": "4 specimens"}, "geometry": { "type": "Point", "coordinates": [-121.3, 36.07] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","latitude": 37.42833,"longitude": -121.90556,"foundBy": "P.F. Torchio","dateFound": "1955-06-22", "determinedBy": "", "lifeStage": "", "sex": "", "notes": "2 specimens"}, "geometry": { "type": "Point", "coordinates": [-121.90556, 37.42833] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","latitude": 37.5986,"longitude":	-122.3861,"foundBy": "Edwin C. Van Dyke","dateFound": "1912-09-01", "determinedBy": "LaBerge, Walley", "lifeStage": "Adult", "sex": "", "notes": "Inferred date, possibly 1912-09-02. 2 specimens"}, "geometry": { "type": "Point", "coordinates": [-122.3861, 37.5986] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","foundBy": "Edwin C. Van Dyke","dateFound": "1912-09-01", "determinedBy": "", "lifeStage": "Adult", "sex": "Female", "notes": "holotype. Coordinates missing, but locality given"}, "geometry": { "type": "Point", "coordinates": [-122.38719, 37.59855] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","latitude": 37.428333,"longitude":	-121.905556,"foundBy": "P. F. Torchio","dateFound": "1955-06-22", "determinedBy": "", "lifeStage": "", "sex": "Female", "notes": ""}, "geometry": { "type": "Point", "coordinates": [-121.905556, 37.428333] }},
-    {"type": "Feature","properties": {"name": "Melissodes ablusus","foundBy": "","dateFound": "", "determinedBy": "", "lifeStage": "", "sex": "", "notes": "Coordinates missing, but locality given"}, "geometry": { "type": "Point", "coordinates": [-116.97882066736636, 45.54762068206883] }},
-  ]
-};
+// === Melissodes agilis map (offline TSV version) ===
 
+// 🐝 Embedded TSV data (works with file://)
+const tsvText = `
+speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink
+Melissodes ablusus	36.07	-121.3	P.F. Torchio	1955-06-22							https://www.gbif.org/species/5040748
+Melissodes ablusus	36.07	-121.3	P.F. Torchio	1955-06-23							https://www.gbif.org/species/5040748
+Melissodes ablusus	36.07	-121.3	P.F. Torchio	1955-06-24							https://www.gbif.org/species/5040748
+Melissodes ablusus	36.07	-121.3	P.F. Torchio	1955-06-25							https://www.gbif.org/species/5040748
+Melissodes ablusus	37.4283	-121.9056	P. F. Torchio	1955-06-22			Female				https://www.gbif.org/species/5040748
+Melissodes ablusus	37.426	-121.9752	P.F. Torchio	1955-06-21							https://www.gbif.org/species/5040748
+Melissodes ablusus	37.426	-121.9752	P.F. Torchio	1955-06-22							https://www.gbif.org/species/5040748
+Melissodes ablusus	36.0714	-121.3028	P.F. Torchio	1955-06-22	LaBerge, Walley	Adult					https://www.gbif.org/species/5040748
+Melissodes ablusus	37.5986	-122.3861	Edwin C. Van Dyke	1912-09-01	LaBerge, Walley	Adult		Inferred date, possibly 1912-09-02			https://www.gbif.org/species/5040748
+Melissodes ablusus	37.59855	-122.38719	Edwin C. Van Dyke	1912-09-01		Adult	Female	holotype. Precise coordinates missing, but locality given			https://www.gbif.org/species/5040748
+Melissodes ablusus	37.59861	-122.38611	Edwin C. Van Dyke	1912-09-02		Adult					https://www.gbif.org/species/5040748
+Melissodes ablusus	38.1804	-111.1815	T.H. Ogden et al.	2014-08-21	T. Griswold	Adult					https://www.gbif.org/species/5040748
+Melissodes ablusus	45.63111	-116.97	DeBano, S.J. et al.					Precise coordinates missing, but locality given			DeBano, S.J. et al, (2024).
+`; // <-- paste your tab-separated data here
+
+// === Convert TSV to GeoJSON ===
+function tsvToGeoJSON(tsv) {
+  const lines = tsv.trim().split(/\r?\n/);
+  const headers = lines[0].split("\t").map(h => h.trim());
+  const features = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    if (!lines[i].trim()) continue; // skip empty lines
+    const cols = lines[i].split("\t");
+    if (cols.length < headers.length) continue;
+
+    const obj = {};
+    headers.forEach((h, j) => {
+      obj[h] = cols[j] ? cols[j].trim() : "";
+    });
+
+    const lat = parseFloat(obj["latitude"]);
+    const lon = parseFloat(obj["longitude"]);
+    if (isNaN(lat) || isNaN(lon)) continue;
+
+    features.push({
+      type: "Feature",
+      properties: {
+        name: obj["speciesname"] || "",
+        latitude: lat,
+        longitude: lon,
+        foundBy: obj["recordedby"] || "",
+        dateFound: obj["datefound"] || "",
+        determinedBy: obj["determinedby"] || "",
+        lifeStage: obj["lifestage"] || "",
+        sex: obj["sex"] || "",
+        notes: obj["notes"] || "",
+        rights: obj["rights"] || "",
+        rightsHolder: obj["rightsholder"] || "",
+        sourceLink: obj["sourcelink"] || "",
+      },
+      geometry: { type: "Point", coordinates: [lon, lat] },
+    });
+  }
+
+  return { type: "FeatureCollection", features };
+}
+
+const melissodesData = tsvToGeoJSON(tsvText);
+
+// === Map setup ===
 function isVisible(el) {
   return el && !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
 }
 
-// Find the visible placeholder
 const allPlaceholders = document.querySelectorAll(".map-placeholder");
 let target = null;
-allPlaceholders.forEach(el => {
+allPlaceholders.forEach((el) => {
   if (isVisible(el)) target = el;
 });
 
-// If we found one, insert the #map into it
 const mapEl = document.getElementById("map");
 if (target && mapEl) {
   target.appendChild(mapEl);
   console.log("🗺️ Moved map into:", target.parentElement.className);
 }
 
-// 🌍 Embedded North America land polygon
-const landMask = { /* paste the full GeoJSON here from ne_110m_land.geojson */ };
+// 🌍 Land mask placeholder (optional)
+const landMask = { /* paste land GeoJSON if desired */ };
 
-// 🗺️ Initialize map
-const map = L.map('map').setView([39, -98], 4);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+// 🗺️ Initialize Leaflet map
+const map = L.map("map").setView([39, -98], 4);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 14,
-  attribution: '&copy; OpenStreetMap contributors'
+  attribution: "&copy; OpenStreetMap contributors",
 }).addTo(map);
 
-// 🧭 Add the points with extended interactive popups
+// 🧭 Add markers + popups
 const pointLayer = L.geoJSON(melissodesData, {
   pointToLayer: (feature, latlng) => {
     const marker = L.circleMarker(latlng, {
       radius: 5,
       color: "#ff6600",
       fillColor: "#ff6600",
-      fillOpacity: 0.9
+      fillOpacity: 0.9,
     });
 
-    // Bind popup with extended species info
-    const props = feature.properties;
-    const popupContent = `
-      <b>${props.name}</b><br>
-      <b>Coordinates:</b> ${props.latitude?.toFixed(4)}, ${props.longitude?.toFixed(4)}<br>
-      <b>Recorded By:</b> ${props.foundBy || "Unknown"}<br>
-      <b>Date Found:</b> ${props.dateFound || "Unknown"}<br>
-      <b>Determined By:</b> ${props.determinedBy || "Unknown"}<br>
-      <b>Life Stage:</b> ${props.lifeStage || "Unknown"}<br>
-      <b>Sex:</b> ${props.sex || "Unknown"}<br>
-      <b>Notes:</b> ${props.notes || "None"}
-    `;
+    const p = feature.properties;
+    const popupParts = [
+      `<b>${p.name}</b>`,
+      `<b>Coordinates:</b> ${p.latitude.toFixed(4)}, ${p.longitude.toFixed(4)}`,
+      `<b>Recorded By:</b> ${p.foundBy || "Unknown"}`,
+      `<b>Date Found:</b> ${p.dateFound || "Unknown"}`,
+      `<b>Determined By:</b> ${p.determinedBy || "Unknown"}`,
+      `<b>Life Stage:</b> ${p.lifeStage || "Unknown"}`,
+      `<b>Sex:</b> ${p.sex || "Unknown"}`,
+      `<b>Notes:</b> ${p.notes || "None"}`
+    ];
+
+    // Only show Rights and Rights Holder if they exist
+    if (p.rights) popupParts.push(`<b>Rights:</b> ${p.rights}`);
+    if (p.rightsHolder) popupParts.push(`<b>Rights Holder:</b> ${p.rightsHolder}`);
+
+    // Add a clickable Source link if available
+    if (p.sourceLink) {
+      popupParts.push(
+        `<b>Source:</b> <a href="${p.sourceLink}" target="_blank" rel="noopener noreferrer">View Record</a>`
+      );
+    }
+
+    const popupContent = popupParts.join("<br>");
     marker.bindPopup(popupContent);
-
     return marker;
-  }
+  },
 }).addTo(map);
-map.fitBounds(pointLayer.getBounds());
 
-// 🧮 Create hull and buffer
-let hull = turf.convex(melissodesData, { maxEdge: 5});
+if (melissodesData.features.length > 0) {
+  map.fitBounds(pointLayer.getBounds());
+} else {
+  console.warn("⚠️ No valid points found in TSV data.");
+}
+
+// === Range polygon generation (convex hull + buffer) ===
+let hull = turf.convex(melissodesData, { maxEdge: 5 });
 if (!hull) hull = turf.convex(melissodesData);
 
 let buffered = null;
@@ -83,7 +146,6 @@ try {
   buffered = hull;
 }
 
-// 🧮 Clip to land
 let clipped = null;
 try {
   clipped = turf.intersect(buffered, landMask);
@@ -91,7 +153,6 @@ try {
   clipped = buffered;
 }
 
-// 🧮 Simplify and smooth
 let smoothed = null;
 try {
   smoothed = turf.simplify(clipped || buffered, { tolerance: 0.1, highQuality: true });
@@ -99,52 +160,38 @@ try {
   smoothed = clipped || buffered;
 }
 
-// 🧩 Draw final polygon
 if (smoothed) {
   L.geoJSON(smoothed, {
     style: {
       color: "#3366ff",
       weight: 2,
       fillColor: "#6699ff",
-      fillOpacity: 0.25
+      fillOpacity: 0.25,
     },
-    interactive: false
+    interactive: false,
   }).addTo(map);
 } else {
   console.warn("No valid range polygon generated.");
 }
 
-window.addEventListener('resize', () => {
-  setTimeout(() => {
-    map.invalidateSize();
-  }, 500);
+// === Resize handling ===
+window.addEventListener("resize", () => {
+  setTimeout(() => map.invalidateSize(), 500);
 });
+setTimeout(() => map.invalidateSize(), 700);
 
-// Also trigger once after page load for mobile layout
-setTimeout(() => {
-  map.invalidateSize();
-}, 700);
-
-// 🧭 When the layout switches (resize), move the map to the visible placeholder again
 window.addEventListener("resize", () => {
   setTimeout(() => {
     const allPlaceholders = document.querySelectorAll(".map-placeholder");
     const mapEl = document.getElementById("map");
     let target = null;
-
-    // find the visible placeholder
-    allPlaceholders.forEach(el => {
+    allPlaceholders.forEach((el) => {
       if (el.offsetParent !== null) target = el;
     });
-
-    // move the map if needed
     if (target && mapEl && target !== mapEl.parentElement) {
       target.appendChild(mapEl);
       console.log("🔄 Moved map to:", target.parentElement.className);
-      // force Leaflet to recalc dimensions
-      if (typeof map !== "undefined" && map.invalidateSize) {
-        map.invalidateSize();
-      }
+      if (typeof map !== "undefined" && map.invalidateSize) map.invalidateSize();
     }
-  }, 600); // wait a bit for CSS media query to apply
+  }, 600);
 });
