@@ -319,7 +319,7 @@
           <div class="gallery-card" 
           id="scotti"
               data-caption="Melissodes scotti" 
-              data-overlay="Sue Meiman - Los Angeles County, California Melissodes scotti, F" 
+              data-overlay="Sue Meiman - Los Angeles County, California Melissodes scotti, F (note: nomen dubium)" 
               data-subgenus="Eumelissodes">
             <img src="img/Melissodes-Scotti.webp" alt="Melissodes scotti"/>
             <div class="caption">Melissodes scotti</div>
@@ -993,5 +993,8 @@
       filterGallery(); // apply initial filter immediately
     });
   </script>
+  <script>
+  document.querySelectorAll('img').forEach(img => img.loading = 'lazy');
+</script>
 </body>
 </html>
