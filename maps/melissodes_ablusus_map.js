@@ -1,6 +1,4 @@
-// === Melissodes agilis map (offline TSV version) ===
 
-// 🐝 Embedded TSV data (works with file://)
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink
 Melissodes ablusus	36.07	-121.3	P.F. Torchio	1955-06-22							https://www.gbif.org/species/5040748
@@ -16,16 +14,14 @@ Melissodes ablusus	37.59855	-122.38719	Edwin C. Van Dyke	1912-09-01		Adult	Femal
 Melissodes ablusus	37.59861	-122.38611	Edwin C. Van Dyke	1912-09-02		Adult					https://www.gbif.org/species/5040748
 Melissodes ablusus	38.1804	-111.1815	T.H. Ogden et al.	2014-08-21	T. Griswold	Adult					https://www.gbif.org/species/5040748
 Melissodes ablusus	45.63111	-116.97	DeBano, S.J. et al.					Precise coordinates missing, but locality given			DeBano, S.J. et al, (2024).
-`; // <-- paste your tab-separated data here
-
-// === Convert TSV to GeoJSON ===
+`;
 function tsvToGeoJSON(tsv) {
   const lines = tsv.trim().split(/\r?\n/);
   const headers = lines[0].split("\t").map(h => h.trim());
   const features = [];
 
   for (let i = 1; i < lines.length; i++) {
-    if (!lines[i].trim()) continue; // skip empty lines
+    if (!lines[i].trim()) continue;
     const cols = lines[i].split("\t");
     if (cols.length < headers.length) continue;
 
@@ -63,7 +59,6 @@ function tsvToGeoJSON(tsv) {
 
 const melissodesData = tsvToGeoJSON(tsvText);
 
-// === Map setup ===
 function isVisible(el) {
   return el && !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
 }
@@ -80,17 +75,14 @@ if (target && mapEl) {
   console.log("🗺️ Moved map into:", target.parentElement.className);
 }
 
-// 🌍 Land mask placeholder (optional)
-const landMask = { /* paste land GeoJSON if desired */ };
+const landMask = { /* paste here */ };
 
-// 🗺️ Initialize Leaflet map
 const map = L.map("map").setView([39, -98], 4);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 14,
   attribution: "&copy; OpenStreetMap contributors",
 }).addTo(map);
 
-// 🧭 Add markers + popups
 const pointLayer = L.geoJSON(melissodesData, {
   pointToLayer: (feature, latlng) => {
     const marker = L.circleMarker(latlng, {
@@ -112,11 +104,9 @@ const pointLayer = L.geoJSON(melissodesData, {
       `<b>Notes:</b> ${p.notes || "None"}`
     ];
 
-    // Only show Rights and Rights Holder if they exist
     if (p.rights) popupParts.push(`<b>Rights:</b> ${p.rights}`);
     if (p.rightsHolder) popupParts.push(`<b>Rights Holder:</b> ${p.rightsHolder}`);
 
-    // Add a clickable Source link if available
     if (p.sourceLink) {
       popupParts.push(
         `<b>Source:</b> <a href="${p.sourceLink}" target="_blank" rel="noopener noreferrer">View Record</a>`
@@ -135,7 +125,6 @@ if (melissodesData.features.length > 0) {
   console.warn("⚠️ No valid points found in TSV data.");
 }
 
-// === Range polygon generation (convex hull + buffer) ===
 let hull = turf.convex(melissodesData, { maxEdge: 5 });
 if (!hull) hull = turf.convex(melissodesData);
 
@@ -174,7 +163,6 @@ if (smoothed) {
   console.warn("No valid range polygon generated.");
 }
 
-// === Resize handling ===
 window.addEventListener("resize", () => {
   setTimeout(() => map.invalidateSize(), 500);
 });

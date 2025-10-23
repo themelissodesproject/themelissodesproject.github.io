@@ -823,7 +823,7 @@
 <div id="map" style="height: 500px; width: 100%; margin-top: 1em;"></div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Words and their tooltip text
+  // tooltip
   const glossary = {
     scopal: "Elongated specialized hairs, often found on the hind legs, used for the distribution of pollen.",
     pygidial: "A structure on the last segment of a bee’s metasoma forming a point.",
@@ -864,12 +864,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const body = document.body;
 
-  // Build a regex to find all words/phrases, case-insensitive
   const pattern = new RegExp(
     "\\b(" + Object.keys(glossary).join("|") + ")\\b", "gi"
   );
 
-  // Walk through all text nodes and replace matches
   function walk(node) {
     if (node.nodeType === 3) { // text node
       const html = node.nodeValue.replace(pattern, function(match) {
@@ -949,7 +947,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 <script>
-  // Open overlay (allows HTML in caption)
   function openOverlay(imgSrc, captionHTML) {
     document.getElementById("overlayImg").src = imgSrc;
     document.getElementById("overlayCaption").innerHTML = captionHTML;
@@ -960,7 +957,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("imgOverlay").style.display = "none";
   }
 
-   // Close overlay if user clicks background
   document.getElementById("imgOverlay").addEventListener("click", function() {
     closeOverlay();
   });
