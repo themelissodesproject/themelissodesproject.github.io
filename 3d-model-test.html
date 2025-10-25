@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <title>3D Bee Nest Viewer</title>
   <style>
-    body { margin: 0; overflow: hidden; font-family: sans-serif; }
-    #container { width: 100vw; height: 100vh; }
+    body { margin: 0; font-family: sans-serif; }
+    #container {
+      width: 850px;
+      height: 500px;
+      position: relative;
+      margin: 20px auto; /* center horizontally */
+      border: 1px solid #ccc; /* optional border */
+    }
 
     /* Reset Button */
     #resetButton {
@@ -39,9 +45,9 @@ const container = document.getElementById('container');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0);
 
-const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(60, 850/500, 0.1, 1000); // aspect = width/height
 const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(850, 500);
 container.appendChild(renderer.domElement);
 
 const ambientLight = new THREE.AmbientLight(0x404040, 1.5);
@@ -54,18 +60,15 @@ const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 
-// Will be set after model loads
 const initialCameraPosition = new THREE.Vector3();
 const initialControlsTarget = new THREE.Vector3();
 
-// Reset button
 document.getElementById('resetButton').addEventListener('click', () => {
     camera.position.copy(initialCameraPosition);
     controls.target.copy(initialControlsTarget);
     controls.update();
 });
 
-// Load STL
 const loader = new THREE.STLLoader();
 loader.load('bee_nest.stl', function(geometry) {
     const material = new THREE.MeshPhongMaterial({ color: 0xffcc00, specular: 0x111111, shininess: 200 });
@@ -86,19 +89,13 @@ loader.load('bee_nest.stl', function(geometry) {
     controls.target.set(0, 0, 0);
     controls.update();
 
-    // Save as initial view
     initialCameraPosition.copy(camera.position);
     initialControlsTarget.copy(controls.target);
 }, undefined, function(error){
     console.error('STL loading error:', error);
 });
 
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth/window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-});
-
+// No resize needed since fixed size
 function animate() {
     requestAnimationFrame(animate);
     controls.update();
