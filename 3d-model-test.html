@@ -4,37 +4,38 @@
   <meta charset="UTF-8">
   <title>3D Bee Nest Viewer</title>
   <style>
-    body { margin: 0; font-family: sans-serif; }
+    body { margin: 0; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    
     #container {
       width: 850px;
       height: 500px;
       position: relative;
-      margin: 20px auto; /* center horizontally */
-      border: 1px solid #ccc; /* optional border */
+      border: 1px solid #ccc;
     }
 
-    /* Reset Button */
+    /* Reset Button inside container */
     #resetButton {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 10;
-      padding: 8px 12px;
+      top: 5%;       /* scales relative to container height */
+      left: 5%;      /* scales relative to container width */
+      padding: 0.8% 1.5%; /* relative padding */
       background-color: rgba(0,0,0,0.6);
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 0.5em;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 1.2em;  /* scales with container by adjusting with % if needed */
       transition: background 0.2s;
+      z-index: 10;
     }
     #resetButton:hover { background-color: rgba(0,0,0,0.8); }
     #resetButton:active { background-color: rgba(0,0,0,1); }
   </style>
 </head>
 <body>
-<div id="container"></div>
-<button id="resetButton">Reset View</button>
+<div id="container">
+  <button id="resetButton">Reset View</button>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/examples/js/loaders/STLLoader.js"></script>
@@ -45,7 +46,7 @@ const container = document.getElementById('container');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0);
 
-const camera = new THREE.PerspectiveCamera(60, 850/500, 0.1, 1000); // aspect = width/height
+const camera = new THREE.PerspectiveCamera(60, 850/500, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(850, 500);
 container.appendChild(renderer.domElement);
@@ -84,7 +85,6 @@ loader.load('bee_nest.stl', function(geometry) {
 
     scene.add(mesh);
 
-    // Camera positioned relative to model
     camera.position.set(0, 0, maxDim * 1.5);
     controls.target.set(0, 0, 0);
     controls.update();
@@ -95,7 +95,6 @@ loader.load('bee_nest.stl', function(geometry) {
     console.error('STL loading error:', error);
 });
 
-// No resize needed since fixed size
 function animate() {
     requestAnimationFrame(animate);
     controls.update();
