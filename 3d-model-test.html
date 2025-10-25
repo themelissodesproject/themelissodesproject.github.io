@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <title>Bee Nest 3D Viewer</title>
     <style>
-      body { margin: 0; overflow: hidden; background: #f4f4f4; }
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #f4f4f4;
+        font-family: sans-serif;
+      }
       #resetButton {
         position: absolute;
         top: 20px;
@@ -16,18 +21,20 @@
         border: none;
         border-radius: 8px;
         cursor: pointer;
+        z-index: 10;
       }
     </style>
   </head>
   <body>
     <button id="resetButton">Reset View</button>
 
-    <!-- Three.js ES Module version (works on GitHub Pages) -->
+    <!-- Three.js module-based viewer -->
     <script type="module">
       import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.module.js";
       import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.159.0/examples/jsm/loaders/GLTFLoader.js";
       import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.159.0/examples/jsm/controls/OrbitControls.js";
 
+      // Scene setup
       const scene = new THREE.Scene();
       scene.background = new THREE.Color(0xf4f4f4);
 
@@ -38,6 +45,7 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
+      // Controls
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true;
 
@@ -47,14 +55,14 @@
       dirLight.position.set(5, 10, 7);
       scene.add(dirLight);
 
-      // Placeholder cube (shows if model fails)
+      // Placeholder cube (so you always see something)
       const cube = new THREE.Mesh(
         new THREE.BoxGeometry(1, 1, 1),
         new THREE.MeshStandardMaterial({ color: 0x888888 })
       );
       scene.add(cube);
 
-      // Load the model
+      // Load model
       const loader = new GLTFLoader();
       loader.load(
         "nest.glb",
@@ -64,24 +72,37 @@
           const model = gltf.scene;
           scene.add(model);
 
-          // Auto-center camera
+          // Auto-center + fit camera to model
           const box = new THREE.Box3().setFromObject(model);
+          const size = box.getSize(new THREE.Vector3());
           const center = box.getCenter(new THREE.Vector3());
-          const size = box.getSize(new THREE.Vector3()).length();
           model.position.sub(center);
-          camera.position.set(0, size * 0.5, size * 1.2);
-          camera.near = size / 100;
-          camera.far = size * 10;
+
+          const maxDim = Math.max(size.x, size.y, size.z);
+          const fov = camera.fov * (Math.PI / 180);
+          let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+          cameraZ *= 1.5;
+          camera.position.set(0, 0, cameraZ);
+
+          const minZ = box.min.z;
+          const cameraToFarEdge = (minZ < 0) ? -minZ + cameraZ : cameraZ - minZ;
+          camera.far = cameraToFarEdge * 3;
           camera.updateProjectionMatrix();
+
           controls.target.set(0, 0, 0);
           controls.update();
         },
-        undefined,
-        (err) => console.error("❌ Model load failed:", err)
+        (xhr) => console.log(`Loading ${(xhr.loaded / xhr.total * 100).toFixed(1)}%`),
+        (err) => {
+          console.error("❌ Model load failed:", err);
+          cube.material.color.set(0xff0000); // red cube = load failed
+        }
       );
 
+      // Reset view
       document.getElementById("resetButton").addEventListener("click", () => controls.reset());
 
+      // Animation loop
       function animate() {
         requestAnimationFrame(animate);
         controls.update();
@@ -89,6 +110,7 @@
       }
       animate();
 
+      // Handle window resize
       window.addEventListener("resize", () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
