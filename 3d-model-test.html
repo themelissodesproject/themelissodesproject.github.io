@@ -71,7 +71,7 @@ document.getElementById('resetButton').addEventListener('click', () => {
 });
 
 const loader = new THREE.STLLoader();
-loader.load('bee_nest.stl', function(geometry) {
+loader.load('agilis_nest.stl', function(geometry) {
     const material = new THREE.MeshPhongMaterial({ color: 0xffcc00, specular: 0x111111, shininess: 200 });
     const mesh = new THREE.Mesh(geometry, material);
 
@@ -104,3 +104,4 @@ animate();
 </script>
 </body>
 </html>
+
