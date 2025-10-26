@@ -900,3 +900,9 @@ body {
   will-change: transform;
   min-height: 400px;
 }
+
+footer {
+      margin: 40px 0;
+      font-size: 0.85rem;
+      color: #555;
+    }
