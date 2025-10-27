@@ -58,6 +58,32 @@
     justify-content: center!important;
 }
 
+.page .page-text h1,
+.page .page-text #top,
+.page .page-text .sub-title,
+.page .page-text .long-bar,
+.page .page-text .long-bar2,
+.page .page-text .synonyms-box {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+/* Ensure bars fit perfectly centered within screen */
+.page .page-text .long-bar,
+.page .page-text .long-bar2 {
+  width: 90% !important;
+}
+
+/* Synonym box specifically — keep centered with padding */
+.page .page-text .synonyms-box {
+  width: 95% !important;
+  margin: 15px auto !important;
+  padding: 12px !important;
+  text-align: left !important; /* text inside still reads normally */
+}
+
 
  .page .page-text h1{
     padding-top: 30px!important;
