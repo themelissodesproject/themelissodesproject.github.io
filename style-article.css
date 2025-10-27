@@ -58,32 +58,6 @@
     justify-content: center!important;
 }
 
-.page .page-text h1,
-.page .page-text #top,
-.page .page-text .sub-title,
-.page .page-text .long-bar,
-.page .page-text .long-bar2,
-.page .page-text .synonyms-box {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-  display: block !important;
-}
-
-/* Ensure bars fit perfectly centered within screen */
-.page .page-text .long-bar,
-.page .page-text .long-bar2 {
-  width: 90% !important;
-}
-
-/* Synonym box specifically — keep centered with padding */
-.page .page-text .synonyms-box {
-  width: 95% !important;
-  margin: 15px auto !important;
-  padding: 12px !important;
-  text-align: left !important; /* text inside still reads normally */
-}
-
 
  .page .page-text h1{
     padding-top: 30px!important;
@@ -157,6 +131,8 @@
     padding-top: 20px!important;
     padding-left: 20px!important;
     padding-right: 20px!important;
+    overflow-wrap: anywhere !important; /* allows more aggressive line breaking */
+  word-break: break-word !important;
 }
 
  .page .page-text .body-text{
@@ -463,6 +439,39 @@
       border-style: solid;
       border-color: #333 transparent transparent transparent;
     }
+
+    /* 🌿 Responsive margin adjustment — never wrap, just shrink margins */
+.page {
+  width: min(100%, 880px) !important;
+  margin: 0 auto !important;
+  padding-left: clamp(8px, 3vw, 25px) !important;
+  padding-right: clamp(8px, 3vw, 25px) !important;
+  box-sizing: border-box !important;
+}
+
+.page .page-text .page-content {
+  display: grid !important;
+  justify-content: center !important;
+  align-items: start !important;
+  gap: 0 !important;
+}
+
+.page .page-text .page-content .species-box-parent {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: clamp(5px, 2vw, 20px) !important; /* dynamically shrink gap */
+  flex-wrap: nowrap !important; /* ✅ prevents stacking */
+  overflow-x: hidden !important; /* allows scrolling if screen gets too narrow */
+}
+
+.page .page-text .species-box {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
 
 }
 
@@ -839,6 +848,7 @@ body {
 }
 
 
+
 @media print {
    .page .page-text .page-content .species-box,
   .small-bar,
@@ -869,7 +879,7 @@ body {
   }
 
 
-  .p-page .page .page-text .page-content .species-box {
+ .page .page-text .page-content .species-box {
     background-color: rgb(251, 251, 250);
     border-style: solid;
     border-color: #F3F4F5;
