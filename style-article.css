@@ -34,7 +34,7 @@
   }
 
     .tooltip .tooltip-text {
-    width: auto !important;    /* force override of 200px */
+    width: 14vh !important;
     max-width: 90vw !important;/* shrink only on small screens */
   }
 
@@ -472,6 +472,27 @@
   box-sizing: border-box !important;
 }
 
+.page .page-text #top,
+.page .page-text h1,
+.page .page-text .long-bar,
+.page .page-text .long-bar2,
+.page .page-text .synonyms-box {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+/* keep synonym box width balanced with rest of layout */
+.page .page-text .synonyms-box {
+  width: 92% !important;
+  max-width: 92% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(5px, 2vw, 15px) !important;
+  padding-right: clamp(5px, 2vw, 15px) !important;
+}
+
 
 }
 
@@ -846,6 +867,49 @@ body {
     font-weight: bold;
     margin-top: 5px;
 }
+
+.tooltip {
+      position: relative;
+      border-bottom: 1px dashed #333;
+      cursor: default;
+    }
+
+    .tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;             /* keep fixed width for desktop */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  white-space: normal;      /* allow wrapping if needed */
+  word-wrap: break-word;
+}
+
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
 
 
 
