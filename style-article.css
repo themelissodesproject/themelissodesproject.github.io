@@ -79,6 +79,8 @@
     padding-top: 20px!important;
     padding-left: 20px!important;
     padding-right: 20px!important;
+    overflow-wrap: anywhere !important; /* allows more aggressive line breaking */
+  word-break: break-word !important;
 }
 
  .page .page-text .long-bar{
@@ -90,6 +92,7 @@
     justify-content: center!important;
     margin-left: 10px!important;
     margin-right: 10px!important;
+    
 }
 
  .page .page-text .long-bar2{
