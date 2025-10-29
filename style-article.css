@@ -973,17 +973,12 @@ footer {
       color: #555;
     }
 
-    @media print {
 
-  .heading{
-    display: none;
-}
 
-.tooltip{
-  border-bottom: none
-}
 
-    }
+
+
+
 
 @page {
   size: auto;
@@ -997,16 +992,14 @@ footer {
     color: black !important;
     background: white !important;
   }
+  
 
-
-  /* --- Container defines the content column (keeps things centered) --- */
-  .container {
-    /* match previous visual margins: left 0.9in, right 0.85in */
-    padding-left: 0.9in !important;
-    padding-right: 0.85in !important;
+  
+.container {
+    margin: 0 auto !important;
+    padding: 0 !important;   /* IMPORTANT: remove the left/right padding that was shrinking column */
+    width: 100% !important;  /* take full width inside the printable margins */
     box-sizing: border-box !important;
-    margin: 0 auto !important; /* center inside printable area */
-    width: auto !important;
   }
 
   /* --- Layout reset --- */
@@ -1037,7 +1030,7 @@ footer {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
     overflow: hidden !important;
-    border: 1px solid #000 !important;
+    border: 1px solid #F3F4F5 !important;
     padding: 0.5em !important;
     margin-bottom: 1em !important;
   }
@@ -1091,7 +1084,7 @@ footer {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
     width: 100% !important;
-    height: auto !important;
+    height: 500px !important;
     margin: 1em 0 !important;
   }
 
@@ -1105,7 +1098,38 @@ footer {
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
+  .heading{
+    display: none;
+  }
+
+  .tooltip{
+    border-bottom: none
+  }
+
+  html, body {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important; /* Firefox/modern browsers */
+  color-adjust: exact !important;       /* fallback for older engines */
 }
 
+  .synonyms-box {
+  background-color: rgb(251, 251, 250) !important;
+  border: 1px solid #F3F4F5 !important;
+}
+
+.page{
+border: 0px solid #F3F4F5 !important;
+}
+
+  a, a:visited, a:active, a:hover {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  #download-data{
+    display: none
+  }
+}
 
 
