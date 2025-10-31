@@ -1060,7 +1060,7 @@ footer {
     margin-top: 0.75em !important;
     margin-bottom: 0.75em !important;
     margin-left: 1.3em !important;     /* align with text start */
-    width: 96% !important;             /* runs nearly across the text area */
+    width: 95% !important;             /* runs nearly across the text area */
     page-break-after: avoid !important;
   }
 
