@@ -982,7 +982,7 @@ footer {
 
 @page {
   size: auto;
-  margin: 1in; /* printer margins */
+  margin: 0.5in; /* printer margins */
 }
 
 @media print {
@@ -1130,6 +1130,7 @@ border: 0px solid #F3F4F5 !important;
   #download-data{
     display: none
   }
+
 }
 
 
