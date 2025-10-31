@@ -704,6 +704,12 @@ body {
     font-weight: normal;
 }
 
+.page .page-text .species-box .photo-credit{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: normal;
+}
+
  .page .page-text .species-box .species-img img{
     width: 200px;
     height: 200px;
