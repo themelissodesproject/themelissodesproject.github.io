@@ -358,15 +358,56 @@
                         America’s bees. Princeton, NJ: Princeton University Press. </p>
                 </div>
             </div>
-        </div>
+        <div class="citation-line" id="citation-line">
+  <span style="font-weight:600;">How to cite this article: </span>
+  <span id="citation-text">
+    Hogland, F. E. (2025). <i>Melissodes ablusus.</i> <em>The Melissodes Project.</em> 
+    Latest version available at https://themelissodesproject.wildref.org/Melissodes-Ablusus.html.
+  </span>
+  <div class="citation-overlay" id="citation-overlay">Copy citation</div>
+</div>
+
         <footer style="text-align: center; font-style: normal;">
           © 2025 Frank Hogland. Published on The Melissodes Project.<br>
           © 2025 The Melissodes Project. All Rights Reserved.
         </footer>
     </section>
-  </section>
-</div>
+   </div>
 <div id="map" style="height: 500px; width: 100%; margin-top: 1em;"></div>
+
+<script>
+document.getElementById("citation-line").addEventListener("click", function() {
+    const citationText = document.getElementById("citation-text").innerText.replace(/\n/g, ' ').trim();
+    navigator.clipboard.writeText(citationText).then(() => {
+        const overlay = document.getElementById("citation-overlay");
+        overlay.innerText = "Copied!";
+        setTimeout(() => overlay.innerText = "Copy citation", 1500);
+    });
+});
+</script>
+
+<script>
+const citationLine = document.getElementById('citation-line');
+const overlay = document.getElementById('citation-overlay');
+citationLine.addEventListener('click', () => {
+  const temp = document.createElement('div');
+  temp.innerHTML = document.getElementById('citation-text').innerHTML;
+  const textToCopy = temp.innerText.replace(/\s+/g, ' ').trim();
+
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    overlay.textContent = "Copied!";
+    citationLine.classList.add("copied");
+    setTimeout(() => {
+      overlay.textContent = "Copy citation";
+      citationLine.classList.remove("copied");
+    }, 1200);
+  }).catch(err => {
+    console.error("Copy failed:", err);
+    overlay.textContent = "Error copying";
+    setTimeout(() => overlay.textContent = "Copy citation", 1500);
+  });
+});
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   // tooltip
