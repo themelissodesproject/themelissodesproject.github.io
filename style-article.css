@@ -344,17 +344,17 @@
 }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .subgenus-name{
-    font-size: 15px;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 5px;
+    font-size: 15px!important;
+    font-style: italic!important;
+    font-weight: normal!important;
+    margin-top: 5px!important;
 }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .species-name{
-    font-size: 15px;
-    font-style: italic;
-    font-weight: bold;
-    margin-top: 5px;
+    font-size: 15px!important;
+    font-style: italic!important;
+    font-weight: bold !important;
+    margin-top: 5px !important;
 }
 
 /* ✅ NEW — prevent cutoff & force wrapping down to 320px */
@@ -495,7 +495,11 @@
 
 }
 
-
+@media only screen and (max-width: 300px ){
+  .order-box{
+    display: none;
+  }
+}
 
 
 body {
