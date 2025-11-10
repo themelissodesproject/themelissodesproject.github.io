@@ -492,6 +492,10 @@
   padding-right: clamp(5px, 2vw, 15px) !important;
 }
 
+    .overlay-content {
+    max-width: 90% !important;
+    }
+
 
 }
 
