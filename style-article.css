@@ -494,6 +494,8 @@
 
     .overlay-content {
     max-width: 90% !important;
+      max-height: 95% !important;
+      overflow: auto;
     }
 
 
