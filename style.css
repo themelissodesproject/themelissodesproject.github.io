@@ -272,4 +272,69 @@ body {
 
 }
 
+/* Fix long species names on small screens */
+@media (max-width: 380px) {
+
+  #results-container{
+    max-height: 70px !important;
+  }
+
+  #results-container .page {
+    padding: 10px;
+    gap: 10px;
+      max-height: 110px;    /* fits exactly 1 result card + padding */
+  overflow: hidden;  
+  }
+
+  /* Shrink the card image */
+  #results-container .page img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  /* Shrink name font size and prevent dramatic wrapping */
+  #results-container .page .p-details h2 {
+    font-size: 0.9rem !important;
+    line-height: 1.1rem;
+    word-break: break-word;   /* prevents overflow */
+  }
+
+  /* Shrink subtitle text */
+  #results-container .page .p-details h3 {
+    font-size: 0.65rem !important;
+  }
+
+  /* Reduce left padding so things stay centered */
+  #results-container .page .p-details {
+    padding-left: 8px;
+  }
+}
+
+/* Responsive STATS section for small screens */
+@media (max-width: 480px) {
+
+  .stats {
+    flex-direction: column;   /* stack vertically */
+    gap: 1rem;                /* space between items */
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stats div {
+    font-size: 0.85rem;       /* shrink text */
+    line-height: 1.2rem;
+  }
+
+  .stats b {
+    font-size: 1.1rem;        /* shrink main number */
+  }
+
+  .stats small {
+    font-size: 0.75rem;       /* shrink subtitle */
+    display: block;
+    margin-top: 2px;
+  }
+}
+
+
     
