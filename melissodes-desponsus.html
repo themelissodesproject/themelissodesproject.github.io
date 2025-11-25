@@ -852,7 +852,97 @@ document.addEventListener("DOMContentLoaded", function () {
   map.invalidateSize();
 }, 600);
   </script>
-  
+
+<script>
+// Auto-link CC license attributions like (CC-BY-NC 4.0)
+// Works in article text, captions, and overlay text.
+// Always opens in a new tab with rel="noopener noreferrer"
+
+(function() {
+
+    const ccBase = "https://creativecommons.org/licenses/";
+    const regex = /\((CC-[A-Z\-]+)\s+([0-9\.]+)\)/g;
+
+    function ccUrl(code, version) {
+        return (
+            ccBase +
+            code.replace("CC-", "").toLowerCase() +
+            "/" +
+            version +
+            "/deed.en"
+        );
+    }
+
+    function processNode(node) {
+        if (node.nodeType !== Node.TEXT_NODE) return;
+
+        const text = node.textContent;
+        if (!regex.test(text)) return;
+
+        const span = document.createElement("span");
+        let lastIndex = 0;
+
+        text.replace(regex, (match, code, version, offset) => {
+            // Add text before the license
+            span.appendChild(
+                document.createTextNode(text.slice(lastIndex, offset))
+            );
+
+            // Build the link
+            const a = document.createElement("a");
+            a.href = ccUrl(code, version);
+            a.textContent = match;
+
+            // REQUIRED: security + styling + behavior
+            a.target = "_blank"; // always new tab
+            a.rel = "noopener noreferrer"; // security
+            a.style.color = "black";
+            a.style.fontWeight = "bold";
+            a.style.textDecoration = "none";
+
+            span.appendChild(a);
+
+            lastIndex = offset + match.length;
+        });
+
+        // Add remaining text
+        span.appendChild(
+            document.createTextNode(text.slice(lastIndex))
+        );
+
+        node.replaceWith(span);
+    }
+
+    // Walk DOM to find text nodes
+    function walk(node) {
+        if (node.nodeName === "SCRIPT" || node.nodeName === "STYLE") return;
+
+        if (node.nodeType === Node.TEXT_NODE) {
+            processNode(node);
+        } else {
+            node.childNodes.forEach(walk);
+        }
+    }
+
+    // Initial processing
+    walk(document.body);
+
+    // Handle overlay content (patch your existing openOverlay)
+    const originalOpenOverlay = window.openOverlay;
+    window.openOverlay = function(imgSrc, html) {
+        originalOpenOverlay(imgSrc, html);
+
+        // Overlay gets inserted async → delay
+        setTimeout(() => {
+            const overlay = document.querySelector(".overlay-content");
+            if (overlay) walk(overlay);
+        }, 20);
+    };
+
+})();
+</script>
+
+
 </body>
 
 </html>

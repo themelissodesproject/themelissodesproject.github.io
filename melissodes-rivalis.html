@@ -299,12 +299,12 @@
 
                     <img class="figure-1" src="img/rivalis-clypeas-m.webp" alt="Melissodes rivalis"style="cursor:pointer"onclick="openOverlay(
                     'img/rivalis-clypeas-m.webp','<div>Photo credits: Wendy McCrady (right) (CC BY 4.0); Monte L. Bean Life Science Museum (CC BY-NC 4.0)</div><br><a href=\'gallery-figure.html#rivalis-clypeus\'>Figure Gallery ➜</a>')">
-                    <p class="figure-caption">Fig. 5. A labeled diagram showing the ranging irregular clypeal marking of 2 male M. rivalis individuals. Photo credits: (right) Wendy McCrady (CC BY 4.0); (left) Monte L. Bean Life Science Museum (CC BY-NC 4.0).
+                    <p class="figure-caption">Fig. 5. A labeled diagram showing the ranging irregular clypeal marking of 2 male M. rivalis individuals. Photo credits: (right) Wendy McCrady (CC-BY 4.0); (left) Monte L. Bean Life Science Museum (CC-BY-NC 4.0).
                     </p>
 
                     <img class="figure-1" src="img/rivalis-legs-m.webp" alt="Melissodes rivalis"style="cursor:pointer"onclick="openOverlay(
                     'img/rivalis-legs-m.webp','<div>Photo credit: Wendy McCrady (CC BY 4.0).</div><br><a href=\'gallery-figure.html#rivalis-legs\'>Figure Gallery ➜</a>')">
-                    <p class="figure-caption">Fig. 6. A labeled diagram showing the pubescent coloration of the legs of a male M. rivalis. Photo credit: Wendy McCrady (CC BY 4.0).
+                    <p class="figure-caption">Fig. 6. A labeled diagram showing the pubescent coloration of the legs of a male M. rivalis. Photo credit: Wendy McCrady (CC-BY 4.0).
                     </p>
 
 
@@ -584,17 +584,17 @@
 
                     <img class="figure-1" src="img/rivalis-v-desponsus-clypeus.webp" alt="Melissodes rivalis"style="cursor:pointer"onclick="openOverlay(
                     'img/rivalis-v-desponsus-clypeus.webp','<div>Photo credits: (left) Monte L. Bean Life Science Museum (CC BY-NC 4.0); (right) iNaturalist username: hobiecat (CC-BY-NC 4.0)</div><br><a href=\'gallery-figure.html#rivalis-v-desponsus-clypeus-m\'>Figure Gallery ➜</a>')">
-                    <p class="figure-caption">Fig. 15. A comparison of the clypei of male M. rivalis (left) and M. desponsus (right). Photo credits: (left) Monte L. Bean Life Science Museum (CC BY-NC 4.0); (right) iNaturalist username: hobiecat (CC-BY-NC 4.0).
+                    <p class="figure-caption">Fig. 15. A comparison of the clypei of male M. rivalis (left) and M. desponsus (right). Photo credits: (left) Monte L. Bean Life Science Museum (CC-BY-NC 4.0); (right) iNaturalist username: hobiecat (CC-BY-NC 4.0).
                     </p>
 
                     <img class="figure-1" src="img/rivalis-v-desponsus-lightness-m.webp" alt="Melissodes rivalis"style="cursor:pointer"onclick="openOverlay(
                     'img/rivalis-v-desponsus-lightness-m.webp','<div> Photo credits: (left) Wendy McCrady (CC BY 4.0); (right) Richard Baxter (CC-BY-NC 4.0)</div><br><a href=\'gallery-figure.html#rivalis-v-desponsus-light\'>Figure Gallery ➜</a>')">
-                    <p class="figure-caption">Fig. 16. A comparison of the general leg and thoratic periphery coloration of male M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale. Photo credits: (left) Wendy McCrady (CC BY 4.0); (right) Richard Baxter (CC-BY-NC 4.0).
+                    <p class="figure-caption">Fig. 16. A comparison of the general leg and thoratic periphery coloration of male M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale. Photo credits: (left) Wendy McCrady (CC-BY 4.0); (right) Richard Baxter (CC-BY-NC 4.0).
                     </p>
 
                     <img class="figure-1" src="img/rivalis-v-desponsus-bands.webp" alt="Melissodes rivalis"style="cursor:pointer"onclick="openOverlay(
                     'img/rivalis-v-desponsus-bands.webp','<div>Photo credits: (left) Wendy McCrady (CC BY 4.0); (right); Josh Klostermann (All Rights Reserved).</div><br><a href=\'gallery-figure.html#rivalis-v-desponsus-terga\'>Figure Gallery ➜</a>')">
-                    <p class="figure-caption">Fig. 17. A comparison of the bands of the terga of male M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale. Photo credits: (left) Wendy McCrady (CC BY 4.0); (right); Josh Klostermann (All Rights Reserved).
+                    <p class="figure-caption">Fig. 17. A comparison of the bands of the terga of male M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale. Photo credits: (left) Wendy McCrady (CC-BY 4.0); (right); Josh Klostermann (All Rights Reserved).
                     </p>
 
                     <p style="line-height: 1.5;">
@@ -894,6 +894,96 @@ document.addEventListener("DOMContentLoaded", function () {
   map.invalidateSize();
 }, 600);
   </script>
+
+  <script>
+// Auto-link CC license attributions like (CC-BY-NC 4.0)
+// Works in article text, captions, and overlay text.
+// Always opens in a new tab with rel="noopener noreferrer"
+
+(function() {
+
+    const ccBase = "https://creativecommons.org/licenses/";
+    const regex = /\((CC-[A-Z\-]+)\s+([0-9\.]+)\)/g;
+
+    function ccUrl(code, version) {
+        return (
+            ccBase +
+            code.replace("CC-", "").toLowerCase() +
+            "/" +
+            version +
+            "/deed.en"
+        );
+    }
+
+    function processNode(node) {
+        if (node.nodeType !== Node.TEXT_NODE) return;
+
+        const text = node.textContent;
+        if (!regex.test(text)) return;
+
+        const span = document.createElement("span");
+        let lastIndex = 0;
+
+        text.replace(regex, (match, code, version, offset) => {
+            // Add text before the license
+            span.appendChild(
+                document.createTextNode(text.slice(lastIndex, offset))
+            );
+
+            // Build the link
+            const a = document.createElement("a");
+            a.href = ccUrl(code, version);
+            a.textContent = match;
+
+            // REQUIRED: security + styling + behavior
+            a.target = "_blank"; // always new tab
+            a.rel = "noopener noreferrer"; // security
+            a.style.color = "black";
+            a.style.fontWeight = "bold";
+            a.style.textDecoration = "none";
+
+            span.appendChild(a);
+
+            lastIndex = offset + match.length;
+        });
+
+        // Add remaining text
+        span.appendChild(
+            document.createTextNode(text.slice(lastIndex))
+        );
+
+        node.replaceWith(span);
+    }
+
+    // Walk DOM to find text nodes
+    function walk(node) {
+        if (node.nodeName === "SCRIPT" || node.nodeName === "STYLE") return;
+
+        if (node.nodeType === Node.TEXT_NODE) {
+            processNode(node);
+        } else {
+            node.childNodes.forEach(walk);
+        }
+    }
+
+    // Initial processing
+    walk(document.body);
+
+    // Handle overlay content (patch your existing openOverlay)
+    const originalOpenOverlay = window.openOverlay;
+    window.openOverlay = function(imgSrc, html) {
+        originalOpenOverlay(imgSrc, html);
+
+        // Overlay gets inserted async → delay
+        setTimeout(() => {
+            const overlay = document.querySelector(".overlay-content");
+            if (overlay) walk(overlay);
+        }, 20);
+    };
+
+})();
+</script>
+
   
 </body>
 
