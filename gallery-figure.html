@@ -935,5 +935,54 @@ document.addEventListener("DOMContentLoaded", () => {
   <script>
   document.querySelectorAll('img').forEach(img => img.loading = 'lazy');
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Improved regex to capture all CC variants:
+  // CC0
+  // CC-BY, CC-BY-NC, CC-BY-NC-SA, CC BY NC SA, etc.
+  const ccRegex = /\((CC(?:0|(?:[-\s]*[A-Z]{1,5})+))\s+([0-9.]+)\)/gi;
+
+  function buildCCURL(code, version) {
+    // normalize
+    let clean = code
+      .replace(/[()]/g, "")
+      .replace(/^CC[-\s]*/, "")
+      .trim()
+      .replace(/\s+/g, "-")
+      .toLowerCase();
+
+    // CC0 uses different base
+    if (clean === "0") {
+      return `https://creativecommons.org/publicdomain/zero/${version}/`;
+    }
+
+    return `https://creativecommons.org/licenses/${clean}/${version}/`;
+  }
+
+  function convertCC(text) {
+    return text.replace(ccRegex, (match, code, version) => {
+      const url = buildCCURL(code, version);
+
+      return `<a href="${url}"
+                 target="_blank"
+                 style="color:black; font-weight:bold; text-decoration:none;">
+                 (${code.replace(/\s+/g, " ")} ${version})
+              </a>`;
+    });
+  }
+
+  // Apply to gallery cards
+  document.querySelectorAll(".gallery-card").forEach(card => {
+    const raw = card.getAttribute("data-overlay");
+    if (raw) {
+      card.setAttribute("data-overlay", convertCC(raw));
+    }
+  });
+
+});
+</script>
+
 </body>
 </html>
