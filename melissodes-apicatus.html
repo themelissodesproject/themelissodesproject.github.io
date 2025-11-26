@@ -325,7 +325,7 @@
                       this bee in Illinois (Rericha-Anchor, L., 2024) and Michigan (Gibbs, J., 2025), further validating this new found 
                       westward range (Fig. 9). The only phenological activity currently published for M. apicatus states that the species has 
                       been documented to be active during March 21 to July 21, although peak activity seems to occur from April to 
-                      May (1956a). However, newer data does suggest that peak activity may occur during the months of June and July with 
+                      May (Laberge, 1956a). However, newer data does suggest that peak activity may occur during the months of June and July with 
                       over two times the amount of M. apicatus collected in July than in April (Fig. 10) (DiscoverLife Ascher & Pickering, 2025; 
                       GBIF Secretariat, 2023)
                     </p>
@@ -668,6 +668,99 @@ document.addEventListener("DOMContentLoaded", function () {
 }, 600);
   </script>
   
+
+ <script>
+// Auto-convert Creative Commons attributions such as:
+// (CC-BY 4.0), (CC-BY-NC-SA 3.0), (CC0 1.0), (CC 0 1.0)
+// into proper links, including overlay captions.
+
+(function() {
+
+    // Regex to detect:
+    // (CC-BY 4.0)
+    // (CC-BY-NC-SA 3.0)
+    // (CC0 1.0)
+    // (CC 0 1.0)
+    const regex = /\((CC(?:-[A-Z0-9\-]+|0| 0))\s+([0-9\.]+)\)/gi;
+
+    function ccUrl(code, version) {
+        let normalized = code.replace(/^CC-?/, "").trim().toLowerCase();
+
+        // Remove spaces (handles "CC 0")
+        normalized = normalized.replace(/\s+/g, "");
+
+        // Special case: CC0 lives in a different path
+        if (normalized === "0") {
+            return `https://creativecommons.org/publicdomain/zero/${version}/`;
+        }
+
+        // All other licenses are under /licenses/
+        return `https://creativecommons.org/licenses/${normalized}/${version}/`;
+    }
+
+    function processNode(node) {
+        if (node.nodeType !== Node.TEXT_NODE) return;
+
+        const text = node.textContent;
+        if (!regex.test(text)) return;
+
+        const span = document.createElement("span");
+        let lastIndex = 0;
+
+        text.replace(regex, (match, code, version, offset) => {
+            // Insert previous text
+            span.appendChild(document.createTextNode(text.slice(lastIndex, offset)));
+
+            // Create the link
+            const a = document.createElement("a");
+            a.href = ccUrl(code, version);
+            a.textContent = match;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.style.color = "black";
+            a.style.fontWeight = "bold";
+            a.style.textDecoration = "none";
+
+            span.appendChild(a);
+            lastIndex = offset + match.length;
+        });
+
+        // Add the remainder
+        span.appendChild(document.createTextNode(text.slice(lastIndex)));
+
+        node.replaceWith(span);
+    }
+
+    function walk(node) {
+        if (!node || node.nodeName === "SCRIPT" || node.nodeName ==="STYLE") return;
+
+        if (node.nodeType === Node.TEXT_NODE) {
+            processNode(node);
+        } else {
+            node.childNodes.forEach(walk);
+        }
+    }
+
+    // Process entire document
+    walk(document.body);
+
+    // Patch overlay processing so CC links work in popups
+    const originalOpenOverlay = window.openOverlay;
+    window.openOverlay = function(imgSrc, html) {
+        originalOpenOverlay(imgSrc, html);
+
+        // Slight delay to allow DOM insertion
+        setTimeout(() => {
+            const overlay = document.querySelector(".overlay-content");
+            if (overlay) walk(overlay);
+        }, 30);
+    };
+
+})();
+</script>
+
+
+
 </body>
 
 </html>

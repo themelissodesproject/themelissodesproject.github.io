@@ -644,6 +644,9 @@
                     <br>
 12. Lopez, C. (2017) THE BEE FAUNA OF THE HORSE MOUTAIN AND GROUSE MOUNTAIN REGION, HUMBOLDT COUNTY, CALIFORNIA. thesis. Humboldt State University. <br>
                     <br>
+13. Scullen, H. A, (1926). MELLISSODES MYSOPS COCKERELL NESTING IN
+OREGON (ANTHOPHORIDAE, HYM.) Pan-Pacific Entomologist, 4(4), 176.<br>
+                    <br>
 13. Parker, F. D., Tepedino, V. J., & Bohart, G. E. (1981). Notes on the Biology of a Common Sunflower Bee, Melissodes 
                     (Eumelissodes) agilis Cresson. Journal of the New York Entomological Society, 89(1), 43–52. http://www.jstor.org/stable/25009235<br>
                     <br>
@@ -895,24 +898,33 @@ document.addEventListener("DOMContentLoaded", function () {
 }, 600);
   </script>
 
-  <script>
-// Auto-link CC license attributions like (CC-BY-NC 4.0)
-// Works in article text, captions, and overlay text.
-// Always opens in a new tab with rel="noopener noreferrer"
+<script>
+// Auto-convert Creative Commons attributions such as:
+// (CC-BY 4.0), (CC-BY-NC-SA 3.0), (CC0 1.0), (CC 0 1.0)
+// into proper links, including overlay captions.
 
 (function() {
 
-    const ccBase = "https://creativecommons.org/licenses/";
-    const regex = /\((CC-[A-Z\-]+)\s+([0-9\.]+)\)/g;
+    // Regex to detect:
+    // (CC-BY 4.0)
+    // (CC-BY-NC-SA 3.0)
+    // (CC0 1.0)
+    // (CC 0 1.0)
+    const regex = /\((CC(?:-[A-Z0-9\-]+|0| 0))\s+([0-9\.]+)\)/gi;
 
     function ccUrl(code, version) {
-        return (
-            ccBase +
-            code.replace("CC-", "").toLowerCase() +
-            "/" +
-            version +
-            "/deed.en"
-        );
+        let normalized = code.replace(/^CC-?/, "").trim().toLowerCase();
+
+        // Remove spaces (handles "CC 0")
+        normalized = normalized.replace(/\s+/g, "");
+
+        // Special case: CC0 lives in a different path
+        if (normalized === "0") {
+            return `https://creativecommons.org/publicdomain/zero/${version}/`;
+        }
+
+        // All other licenses are under /licenses/
+        return `https://creativecommons.org/licenses/${normalized}/${version}/`;
     }
 
     function processNode(node) {
@@ -925,39 +937,31 @@ document.addEventListener("DOMContentLoaded", function () {
         let lastIndex = 0;
 
         text.replace(regex, (match, code, version, offset) => {
-            // Add text before the license
-            span.appendChild(
-                document.createTextNode(text.slice(lastIndex, offset))
-            );
+            // Insert previous text
+            span.appendChild(document.createTextNode(text.slice(lastIndex, offset)));
 
-            // Build the link
+            // Create the link
             const a = document.createElement("a");
             a.href = ccUrl(code, version);
             a.textContent = match;
-
-            // REQUIRED: security + styling + behavior
-            a.target = "_blank"; // always new tab
-            a.rel = "noopener noreferrer"; // security
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
             a.style.color = "black";
             a.style.fontWeight = "bold";
             a.style.textDecoration = "none";
 
             span.appendChild(a);
-
             lastIndex = offset + match.length;
         });
 
-        // Add remaining text
-        span.appendChild(
-            document.createTextNode(text.slice(lastIndex))
-        );
+        // Add the remainder
+        span.appendChild(document.createTextNode(text.slice(lastIndex)));
 
         node.replaceWith(span);
     }
 
-    // Walk DOM to find text nodes
     function walk(node) {
-        if (node.nodeName === "SCRIPT" || node.nodeName === "STYLE") return;
+        if (!node || node.nodeName === "SCRIPT" || node.nodeName ==="STYLE") return;
 
         if (node.nodeType === Node.TEXT_NODE) {
             processNode(node);
@@ -966,23 +970,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Initial processing
+    // Process entire document
     walk(document.body);
 
-    // Handle overlay content (patch your existing openOverlay)
+    // Patch overlay processing so CC links work in popups
     const originalOpenOverlay = window.openOverlay;
     window.openOverlay = function(imgSrc, html) {
         originalOpenOverlay(imgSrc, html);
 
-        // Overlay gets inserted async → delay
+        // Slight delay to allow DOM insertion
         setTimeout(() => {
             const overlay = document.querySelector(".overlay-content");
             if (overlay) walk(overlay);
-        }, 20);
+        }, 30);
     };
 
 })();
 </script>
+
 
   
 </body>
