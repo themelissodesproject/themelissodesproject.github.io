@@ -498,13 +498,20 @@
       overflow: auto;
     }
 
-
 }
 
 @media only screen and (max-width: 300px ){
   .order-box{
     display: none;
   }
+}
+
+@media only screen and (max-width: 650px ){
+#phenologyChart {
+    width: 100% !important;
+    height: 200px !important;  /* prevents glitchy stretching */
+    display: block;
+}
 }
 
 
@@ -926,7 +933,11 @@ body {
       border-color: #333 transparent transparent transparent;
     }
 
-
+#phenologyChart {
+    width: 100% !important;
+    height: 300px;  /* prevents glitchy stretching */
+    display: block;
+}
 
 .overlay {
   display: none;
