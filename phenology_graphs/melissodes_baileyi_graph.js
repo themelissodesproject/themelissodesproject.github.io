@@ -84,56 +84,68 @@ function buildPhenologyChart(canvas, monthNames, monthCounts) {
         phenologyChart.destroy();
     }
 
+    // Determine scale factor based on canvas parent width
+    const parentWidth = canvas.parentElement.offsetWidth;
+    const scaleFactor = parentWidth < 365 ? parentWidth / 365 : 1;
+
     phenologyChart = new Chart(canvas, {
         type: "line",
         data: {
             labels: monthNames,
             datasets: [{
-    label: "Observations",
-    data: monthCounts,
+                label: "Observations",
+                data: monthCounts,
 
-    // Line matches map stroke
-    borderColor: "rgba(51, 102, 255, 0.9)",   // #3366ff
-    borderWidth: 2,
-    tension: 0,
+                // Line matches map stroke
+                borderColor: "rgba(51, 102, 255, 0.9)",
+                borderWidth: 2 * scaleFactor,      // scale line width
+                tension: 0,
 
-    // Points match map fill
-    pointRadius: 5,
-    pointBackgroundColor: "rgba(102, 153, 255, 0.8)", // #6699ff
-    pointBorderColor: "rgba(51, 102, 255, 0.9)",      // #3366ff
+                // Points match map fill
+                pointRadius: 5 * scaleFactor,      // scale points
+                pointBackgroundColor: "rgba(102, 153, 255, 0.8)",
+                pointBorderColor: "rgba(51, 102, 255, 0.9)",
 
-    // ===== Hover (NO ring, NO bounce) =====
-    pointHoverRadius: 5,                 // stays the same size → no bounce
-    pointHoverBorderWidth: 0,            // <-- removes the dark ring entirely
-    pointHoverBackgroundColor: "rgba(51, 102, 255, 0.9)",
-
-    hitRadius: 0,
-    pointStyle: "circle"
-}]
+                // Hover (NO ring, NO bounce)
+                pointHoverRadius: 5 * scaleFactor,
+                pointHoverBorderWidth: 0,
+                pointHoverBackgroundColor: "rgba(51, 102, 255, 0.9)",
+                hitRadius: 0,
+                pointStyle: "circle"
+            }]
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,  // allow flexible height on phones
+            maintainAspectRatio: false,
             animation: false,
             transitions: {
                 active: { animation: { duration: 0 } },
                 resize: { animation: { duration: 0 } }
             },
-           plugins: {
-    legend: { display: false },
-    tooltip: {
-        displayColors: false,   // no mini color box
-    backgroundColor: "#333", // <-- opaque #333 background
-    titleColor: "#fff",
-    bodyColor: "#fff",
-    callbacks: {
-        label: ctx => `${ctx.raw} observations`
-        }
-    }
-},
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    displayColors: false,
+                    backgroundColor: "#333",
+                    titleColor: "#fff",
+                    bodyColor: "#fff",
+                    callbacks: {
+                        label: ctx => `${ctx.raw} observations`
+                    }
+                }
+            },
             scales: {
+                x: {
+                    ticks: {
+                        autoSkip: false,
+                        font: { size: 12 * scaleFactor }  // scale font
+                    }
+                },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    ticks: {
+                        font: { size: 12 * scaleFactor }  // scale font
+                    }
                 }
             }
         }
