@@ -343,9 +343,8 @@
                           </a>
                         </div>
 
-                    <img src="img/Melissodes-apicatus-phenology.png" alt="Melissodes apicatus phenology" class="figure-1">
-                    <p class="figure-caption">Fig. 10 A conceptually similar figure to that illustrated by Wilson & Carril (2016) showing the phenological activity of M. apicatus, but was independently
-                           redrawn for this study with updated information. The x value is the month, and the y value is the number of documented observations. Data compiled from DiscoverLife (Ascher & Pickering 2025) and GBIF (Secretariat 2023).
+                    <div class="figure-1"><canvas id="phenologyChart"></canvas></div>
+                    <p class="figure-caption">Fig. 10. A figure showing the phenological activity of M. apicatus. The x value is the month, and the y value is the number of documented observations. Data compiled from DiscoverLife (Ascher & Pickering 2025) and GBIF (Secretariat 2023).
                     </p>
 
                     <h1 id="references">Bionomics</h1>
@@ -452,9 +451,7 @@
                     <br>
                     17. Lovell, J. H. and Cockerell, T. D. A., "Notes on the Bees of Southern Maine: Anthophoridae, Halictoididae,
                     Macropidae and Panurgidae" (1906). Ca. Paper 370.
-                    https://digitalcommons.usu.edu/bee_lab_ca/370 <br>
-                    <br>
-                    18. Wilson, J.S. and Messinger Carril, O.J. (2016) The bees in your backyard: A guide to North America’s bees. Princeton, NJ: Princeton University Press. </p>
+                    https://digitalcommons.usu.edu/bee_lab_ca/370 <br></p>
             </div>
         </div>
 <div class="citation-line" id="citation-line">
@@ -667,7 +664,8 @@ document.addEventListener("DOMContentLoaded", function () {
   map.invalidateSize();
 }, 600);
   </script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="phenology_graphs/melissodes_apicatus_graph.js"></script>
 
  <script>
 // Auto-convert Creative Commons attributions such as:

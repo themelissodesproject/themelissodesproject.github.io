@@ -328,9 +328,8 @@
                           </a>
                         </div>
 
-                    <img src="img/Melissodes-desponsus-phenology.png" alt="Melissodes desponsus phenology" class="figure-1">
-                    <p class="figure-caption">Fig. 11. A conceptually similar figure to that illustrated by Wilson & Carril (2016), showing the phenological activity of M. desponsus, but was independently
-                           redrawn for this study with updated information. The x value is the month, and the y value is the number of documented observations. Data compiled from DiscoverLife (Ascher & Pickering 2025) and GBIF (Secretariat 2023).
+                    <div class="figure-1"><canvas id="phenologyChart"></canvas></div>
+                    <p class="figure-caption">Fig. 11. A figure showing the phenological activity of M. desponsus. The x value is the month, and the y value is the number of documented observations. Data compiled from DiscoverLife (Ascher & Pickering 2025) and GBIF (Secretariat 2023).
                     </p>
 
                     <h1 id="references">Bionomics</h1>
@@ -592,23 +591,21 @@
                     <br>
 11. Robertson, C. (1901) ‘Some new or little-known bees’, The Canadian Entomologist, 33(8), pp. 229–231. doi:10.4039/ent33229-8.<br>
                     <br>
-12. Wilson, J.S. and Messinger Carril, O.J. (2016) The bees in your backyard: A guide to North America’s bees. Princeton, NJ: Princeton University Press.<br>
-                    <br>
-13. Portman, Z. M. et al. (2023): A checklist of the bees (Hymenoptera: Apoidea) of 
+12. Portman, Z. M. et al. (2023): A checklist of the bees (Hymenoptera: Apoidea) of 
                     Minnesota. Zootaxa 5304 (1): 1-95, DOI: 10.11646/zootaxa.5304.1.1, URL: 
                     http://dx.doi.org/10.11646/zootaxa.5304.1.1<br>
                     <br>
-14.Droege S, Maffei C (2025a). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2025-11-20. https://www.gbif.org/occurrence/1456541824<br>
+13.Droege S, Maffei C (2025a). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2025-11-20. https://www.gbif.org/occurrence/1456541824<br>
                     <br>
-15. Droege S, Maffei C (2025b). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2025-11-20. https://www.gbif.org/occurrence/1456563142<br>
+14. Droege S, Maffei C (2025b). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2025-11-20. https://www.gbif.org/occurrence/1456563142<br>
                     <br>
-16. Lucas, M. (2018) Melissodes desponsus. iNaturalist observation. https://www.inaturalist.org/observations/15751438<br>
+15. Lucas, M. (2018) Melissodes desponsus. iNaturalist observation. https://www.inaturalist.org/observations/15751438<br>
                     <br>
-17. United States Geological Survey, Sam Droege database. (2017). Melissodes desponsus [Data set]. Determined by S. Droege. Retrieved 15 November 2025, from https://www.discoverlife.org/mp/20l?id=USGS_DRO227666<br>
+16. United States Geological Survey, Sam Droege database. (2017). Melissodes desponsus [Data set]. Determined by S. Droege. Retrieved 15 November 2025, from https://www.discoverlife.org/mp/20l?id=USGS_DRO227666<br>
                     <br>
-18. Mackert, M.M. (2019) Strategies to improve native bee (Hymenoptera: Apoidea) habitat in agroecosystems. thesis. Iowa State University.<br>
+17. Mackert, M.M. (2019) Strategies to improve native bee (Hymenoptera: Apoidea) habitat in agroecosystems. thesis. Iowa State University.<br>
                     <br>
-19. Dötterl, S. (2008) ‘Antennal responses of an oligolectic bee and its cleptoparasite to plant volatiles’, 
+18. Dötterl, S. (2008) ‘Antennal responses of an oligolectic bee and its cleptoparasite to plant volatiles’, 
                     Plant Signaling &amp; Behavior, 3(5), pp. 296–297. doi:10.4161/psb.3.5.5271.<br>
                     <br>
                     20. Seitz, N., vanEngelsdorp, D. and Leonhardt, S.D. (2020) ‘Are native and non‐native pollinator friendly plants equally valuable for native wild bee communities?’, Ecology and Evolution, 10(23), pp. 12838–12850. doi:10.1002/ece3.6826. </p>
@@ -852,7 +849,8 @@ document.addEventListener("DOMContentLoaded", function () {
   map.invalidateSize();
 }, 600);
   </script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="phenology_graphs/melissodes_desponsus_graph.js"></script>
 <script>
 // Auto-convert Creative Commons attributions such as:
 // (CC-BY 4.0), (CC-BY-NC-SA 3.0), (CC0 1.0), (CC 0 1.0)

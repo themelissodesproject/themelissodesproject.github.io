@@ -357,9 +357,8 @@
                           </a>
                         </div>
 
-                    <img src="img/Melissodes-rivalis-phenology.png" alt="Melissodes rivalis phenology" class="figure-1">
-                    <p class="figure-caption">Fig. 9 A conceptually similar figure to that illustrated by Wilson & Carril (2016), showing the phenological activity of M. rivalis, but was independently
-                           redrawn for this study with updated information. The x value is the month, and the y value is the number of documented observations. Data compiled from DiscoverLife (Ascher & Pickering 2025) and GBIF (Secretariat 2023).
+                    <div class="figure-1"><canvas id="phenologyChart"></canvas></div>
+                    <p class="figure-caption">Fig. 9. A showing the phenological activity of M. rivalis. The x value is the month, and the y value is the number of documented observations. Data compiled from DiscoverLife (Ascher & Pickering 2025) and GBIF (Secretariat 2023).
                     </p>
 
                     <h1 id="references">Bionomics</h1>
@@ -652,13 +651,11 @@ OREGON (ANTHOPHORIDAE, HYM.) Pan-Pacific Entomologist, 4(4), 176.<br>
                     <br>
 14. Viereck, Henry. et al. (1906) ‘Synopsis of bees of Oregon, Washington, British Columbia and vancouver—V.’, The Canadian Entomologist, 38(9), pp. 297–304. doi:10.4039/ent38297-9.<br>
                     <br>
-15. Wilson, J.S. and Messinger Carril, O.J. (2016) The bees in your backyard: A guide to North America’s bees. Princeton, NJ: Princeton University Press.<br>
+15. Cockerell, T.D. (1937) "New and Little-Known American Bees." American Museum Novitates, 899, pp. 5.<br>
                     <br>
-16. Cockerell, T.D. (1937) "New and Little-Known American Bees." American Museum Novitates, 899, pp. 5.<br>
+16. Hawse, A.R. (2024) Patterns of Bee Diversity and Plant-Pollinator Interactions in the Palouse Prairie. thesis. University of Idaho.<br>
                     <br>
-17. Hawse, A.R. (2024) Patterns of Bee Diversity and Plant-Pollinator Interactions in the Palouse Prairie. thesis. University of Idaho.<br>
-                    <br>
-18. Portman, Z. M. et al. (2023): A checklist of the bees (Hymenoptera: Apoidea) of 
+17. Portman, Z. M. et al. (2023): A checklist of the bees (Hymenoptera: Apoidea) of 
                     Minnesota. Zootaxa 5304 (1): 1-95, DOI: 10.11646/zootaxa.5304.1.1, URL: 
                     http://dx.doi.org/10.11646/zootaxa.5304.1.1<br>
 
@@ -897,7 +894,8 @@ document.addEventListener("DOMContentLoaded", function () {
   map.invalidateSize();
 }, 600);
   </script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="phenology_graphs/melissodes_rivalis_graph.js"></script>
 <script>
 // Auto-convert Creative Commons attributions such as:
 // (CC-BY 4.0), (CC-BY-NC-SA 3.0), (CC0 1.0), (CC 0 1.0)
