@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Melissodes Subgenera Key</title>
-<link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Male Melissodes Key</title>
+
+
+  <meta name="description" content="A key to males of the genus Melissodes">
+
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://themelissodesproject.wildref.org/key-male.html">
+
+  <meta name="application-name" content="The Melissodes Project">
+  <meta property="og:site_name" content="The Melissodes Project">
+  <meta property="og:title" content="A key to males of the genus Melissodes">
+  <meta property="og:description" content="Image gallery of Melissodes">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themelissodesproject.wildref.org/key-male.html">
+  <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A key to males of the genus Melissodes">
+  <meta name="twitter:description" content="Image gallery of Melissodes">
+  <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
 
 <style>
  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -222,7 +248,9 @@ footer {
         <div class="dropdown" id="clypeus">
           <button class="subsection-btn" data-feature="clypeus" data-sub="structure">Structure</button>
           <button class="subsection-btn" data-feature="clypeus" data-sub="sculpture">Sculpture</button>
+          <button class="subsection-btn" data-feature="clypeus" data-sub="color">Color</button>
           <button class="subsection-btn" data-feature="clypeus" data-sub="hair">Hair</button>
+          <button class="subsection-btn" data-feature="clypeus" data-sub="size">Size</button>
         </div>
 
         <button class="feature-btn" data-target="terga">Metasomal Terga</button>
@@ -255,15 +283,15 @@ footer {
       <!-- SPECIES GRID -->
       <section id="species-grid" class="species-grid">
 
-        <!-- Example species cards — replace/expand as needed -->
-        <div class="species-card" data-clypeus-structure="protruding" data-clypeus-hair="black" data-antennae-length="long" data-terga-banding="narrow" data-link="Melissodes-Ablusus.html">
-          <h3>Melissodes ablusus</h3>
-          <p>Subgenus: Callimelissodes</p>
+        <!-- Example species cards — use numeric references into the TSV -->
+        <div class="species-card" data-clypeus-structure="1" data-clypeus-color="1" data-clypeus-hair="1" data-antennae-length="2" data-terga-banding="1" data-link="Melissodes-Ablusus.html">
+          <h3>Melissodes rivalis</h3>
+          <p>Subgenus: Eumelissodes</p>
         </div>
 
-        <div class="species-card" data-clypeus-structure="convex" data-clypeus-hair="red" data-antennae-length="medium" data-sterna-flap="present" data-link="species-example3.html">
-          <h3>Melissodes placeholdera</h3>
-          <p>Subgenus: Placeholder</p>
+        <div class="species-card" data-clypeus-structure="2,1" data-clypeus-color="2" data-antennae-length="2" data-sterna-flap="1" data-link="species-example3.html">
+          <h3>Melissodes desponsus</h3>
+          <p>Subgenus: Eumelissodes</p>
         </div>
 
       </section>
@@ -277,6 +305,146 @@ footer {
   </div>
 </div>
 
+<!-- ===========================
+     EMBED YOUR TSV HERE (local)
+     - First row MUST be headers (tab-separated)
+     - Column names must match your data- attributes (without "data-")
+     - Example header: clypeus-structure    clypeus-sculpture    clypeus-color
+     - Rows are the trait texts (row 1 => "1", row 2 => "2", etc.)
+   =========================== -->
+<script id="trait-table" type="text/plain">
+clypeus-structure	clypeus-sculpture	clypeus-color	clypeus-hair	clypeus-size
+convex	smooth	paleish yellow (posterior margin angled upward to form an upside down V-shape in the median one-third) with a brownish red apical margin and black laterobasal notches denoting the tentorial depressions	black	1
+prodtruding	puncate	paleish yellow excluding the brownish red apical margin and the black laterobasal notches denoting the tentorial depressions (posterior margin not angled upward)	red	3
+flat	shiny	red	yellow	8
+</script>
+
+<!-- ===========================
+     ADDED: Dynamic TSV init (auto-expand numbers, multi-row, auto-populate SUBSECTION_OPTIONS)
+     - Supports ANY column name.
+     - Uses LAST hyphen as separator: feature = everything before last '-', sub = last segment
+     - BUT only creates options for subsections that already exist in the sidebar (.subsection-btn[data-feature][data-sub])
+   =========================== -->
+<script>
+(function () {
+  // Parse TSV into { headers: [...], rows: [{col:val, ...}, ...] }
+  function parseTSV(text) {
+    if (!text) return { headers: [], rows: [] };
+    const raw = text.replace(/\r/g,'').trim();
+    if (!raw) return { headers: [], rows: [] };
+    const lines = raw.split('\n').map(l => l.trim());
+    const headers = lines[0].split('\t').map(h => h.trim());
+    const rows = lines.slice(1).map((line, idx) => {
+      const cols = line.split('\t');
+      const obj = {};
+      headers.forEach((h, i) => obj[h] = (cols[i] !== undefined ? cols[i].trim() : ""));
+      obj._row = idx + 1;
+      return obj;
+    });
+    return { headers, rows };
+  }
+
+  // Split a header into feature + sub by last hyphen
+  // returns { feature, sub } or null if no hyphen
+  function splitHeaderByLastHyphen(header) {
+    const i = header.lastIndexOf('-');
+    if (i === -1) return null;
+    const feature = header.slice(0, i);
+    const sub = header.slice(i + 1);
+    return { feature, sub };
+  }
+
+  // Expand numeric references in species cards.
+  // Accepts "1", "1,2", "1, 3", etc.
+  function applyTraitRowsToSpeciesCards(tsvObj) {
+    const cards = document.querySelectorAll('.species-card');
+    cards.forEach(card => {
+      for (const attr of Array.from(card.attributes)) {
+        if (!attr.name.startsWith('data-')) continue;
+        const traitKey = attr.name.slice(5); // remove 'data-'
+        const raw = attr.value.trim();
+        if (raw === '') continue;
+
+        // allow mixing of numbers and text; only process if ALL parts are numeric
+        const parts = raw.split(',').map(p => p.trim()).filter(p => p !== '');
+        if (parts.length === 0) continue;
+
+        if (!parts.every(p => /^\d+$/.test(p))) {
+          // not purely numeric references: leave as-is
+          continue;
+        }
+
+        const expanded = parts.map(numStr => {
+          const idx = parseInt(numStr, 10) - 1;
+          const rowObj = tsvObj.rows[idx];
+          return (rowObj && rowObj[traitKey]) ? rowObj[traitKey] : "";
+        }).filter(Boolean);
+
+        if (expanded.length > 0) {
+          // set the actual data- attribute to the expanded, comma-separated string
+          card.setAttribute(attr.name, expanded.join(', '));
+        }
+      }
+    });
+  }
+
+  // Build SUBSECTION_OPTIONS.male from TSV headers/values, but only for subsections that exist in sidebar
+  function buildSubsectionOptionsFromTSV(tsvObj) {
+    const options = {}; // map header -> array of unique values
+
+    tsvObj.headers.forEach(header => {
+      // Only consider columns that exist in the TSV
+      const colValues = new Set();
+      tsvObj.rows.forEach(r => {
+        const v = (r[header] || "").trim();
+        if (v !== "") colValues.add(v);
+      });
+      if (colValues.size > 0) {
+        // check whether the sidebar has a subsection for this header
+        const parts = splitHeaderByLastHyphen(header);
+        if (!parts) return; // skip headers without hyphen
+        const feature = parts.feature;
+        const sub = parts.sub;
+        const subsectionBtn = document.querySelector(`.subsection-btn[data-feature="${feature}"][data-sub="${sub}"]`);
+        if (subsectionBtn) {
+          options[header] = Array.from(colValues);
+        } else {
+          // if there's no matching subsection, we intentionally do NOT add it,
+          // because user wants a fixed sidebar and must control where items go.
+        }
+      }
+    });
+
+    // set or merge into global SUBSECTION_OPTIONS
+    if (!window.SUBSECTION_OPTIONS) window.SUBSECTION_OPTIONS = {};
+    if (!window.SUBSECTION_OPTIONS.male) window.SUBSECTION_OPTIONS.male = {};
+
+    // Overwrite or set keys from TSV-derived options
+    Object.keys(options).forEach(k => {
+      window.SUBSECTION_OPTIONS.male[k] = options[k];
+    });
+  }
+
+  // Run initialization
+  try {
+    const tsvTextEl = document.getElementById('trait-table');
+    const tsvText = tsvTextEl ? tsvTextEl.textContent : '';
+    const tsvObj = parseTSV(tsvText);
+    // 1) expand numbers in species cards -> descriptive text (multi-row supported)
+    applyTraitRowsToSpeciesCards(tsvObj);
+    // 2) build SUBSECTION_OPTIONS.male from TSV for existing subsections only
+    buildSubsectionOptionsFromTSV(tsvObj);
+    // done
+  } catch (err) {
+    console.error('TSV initialization error:', err);
+  }
+})();
+</script>
+
+<!-- ===========================
+     ORIGINAL JS (left intact)
+     NOTE: This script relies on SUBSECTION_OPTIONS to exist; our initialization populates it before this runs.
+   =========================== -->
 <script>
 // ---------------------------
 // Track selections per sex
@@ -333,35 +501,6 @@ document.querySelectorAll('.subsection-btn').forEach(btn => {
     }
   });
 });
-
-// ---------------------------
-// Subsection options per sex
-const SUBSECTION_OPTIONS = {
-  male: {
-    'clypeus-structure': ['protruding','flat','convex'],
-    'clypeus-sculpture': ['smooth','punctate','rugose'],
-    'clypeus-hair': ['black','brown','red'],
-    'terga-banding': ['narrow','wide','interrupted'],
-    'terga-color': ['white','yellow'],
-    'antennae-length': ['short','medium','long'],
-    'antennae-proportion': ['<1/3','~1/3','>=0.4'],
-    'antennae-color': ['dark','light'],
-    'sterna-margin': ['convex','straight','concave'],
-    'sterna-flap': ['present','absent']
-  },
-  female: {
-    'clypeus-female-structure': ['carina present', 'carina absent'],
-    'clypeus-sculpture': ['smooth','punctate'],
-    'clypeus-hair': ['brown','yellowish'],
-    'terga-banding': ['wide','interrupted'],
-    'terga-color': ['yellow','white'],
-    'antennae-length': ['short','medium'],
-    'antennae-proportion': ['<1/3','~1/3'],
-    'antennae-color': ['dark','light'],
-    'sterna-margin': ['straight','concave'],
-    'sterna-flap': ['present','absent']
-  }
-};
 
 // ---------------------------
 // Feature dropdown toggle
