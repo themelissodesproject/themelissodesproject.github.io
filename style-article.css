@@ -22,8 +22,7 @@
     align-items: flex-start; /* left-align title + nav */
     gap: 12px;               /* space between title and nav */
   }
-
-  header .banner {
+.banner {
     text-align: center;
     width: 100%;             /* prevent floating in the middle */
   }
@@ -546,13 +545,13 @@ body {
       border-color: #F3F4F5;
       border-width: 1.5px;
     }
-
-    .heading header .banner {
+.banner {
       font-size: 1.63rem;
       margin: 0;
       flex: 1 1 auto;
       font-weight: bold;
     }
+    
 
     nav {
       flex: 0 0 auto;
