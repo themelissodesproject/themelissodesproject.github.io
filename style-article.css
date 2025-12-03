@@ -23,7 +23,7 @@
     gap: 12px;               /* space between title and nav */
   }
 
-  header h1 {
+  header .banner {
     text-align: center;
     width: 100%;             /* prevent floating in the middle */
   }
@@ -547,10 +547,11 @@ body {
       border-width: 1.5px;
     }
 
-    .heading header h1 {
+    .heading header .banner {
       font-size: 1.63rem;
       margin: 0;
       flex: 1 1 auto;
+      font-weight: bold;
     }
 
     nav {

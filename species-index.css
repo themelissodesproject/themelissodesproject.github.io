@@ -42,10 +42,11 @@ body {
       border-width: 1.5px;
     }
 
-    header h1 {
+    header .banner {
       font-size: 1.63rem;
       margin: 0;
       flex: 1 1 auto;
+      font-weight: bold;
     }
 
     nav {
@@ -163,7 +164,7 @@ body {
     gap: 12px;
   }
 
-  header h1 {
+  header .banner {
     text-align: center;
     width: 100%;             /* prevent floating in the middle */
   }
