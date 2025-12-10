@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Details - Oregon Melissodes Field Guide</title>
+  <meta name="description" content="Field guides of Melissodes species">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://themelissodesproject.wildref.org/oregon-guide-metadata.html">
+
+  <meta name="application-name" content="The Melissodes Project">
+  <meta property="og:site_name" content="The Melissodes Project">
+  <meta property="og:title" content="Details - Oregon Melissodes Field Guide">
+  <meta property="og:description" content="Field guides of Melissodes species">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themelissodesproject.wildref.org/oregon-guide-metadata.html">
+  <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Details - Oregon Melissodes Field Guide">
+  <meta name="twitter:description" content="Field guides of Melissodes species">
+  <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
+  <link rel="stylesheet" href="style.css">
+<style>
+/* Field Guide Layout */
+.field-guide-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.field-guide-left {
+  flex: 1 1 350px;
+  max-width: 350px;
+}
+
+.front-page-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* Keep shadow */
+}
+
+.front-page-wrapper img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Separate overlay layer for darkening image */
+.front-page-wrapper .overlay-dark {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0); /* transparent initially */
+  transition: background-color 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.front-page-wrapper:hover .overlay-dark {
+  background-color: rgba(0,0,0,0.4); /* darken image on hover */
+}
+
+.front-page-wrapper:hover img {
+  filter: blur(2px);
+}
+
+.front-page-wrapper .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff; /* pure white */
+  font-size: 1.3rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  z-index: 2;
+}
+
+.front-page-wrapper:hover .overlay-text {
+  opacity: 1;
+}
+
+.field-guide-right {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.field-guide-right h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.field-guide-right .metadata p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.field-guide-right .buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap; /* Force side by side even on mobile */
+}
+
+.field-guide-right .buttons a {
+  flex: 1 1 0; /* Let them shrink proportionally */
+  text-align: center;
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.field-guide-right .buttons a:hover {
+  background: #444;
+}
+
+/* Mobile responsive */
+@media (max-width: 800px) {
+  .field-guide-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .field-guide-left,
+  .field-guide-right {
+    max-width: 100%;
+  }
+  .field-guide-right {
+    margin-top: 1rem;
+  }
+  footer {
+    padding: 20px;
+  }
+}
+
+footer {
+  margin: 40px 0;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Header and Navbar -->
+  <div class="heading">
+    <header class="bar-header">
+      <p class="banner">The Melissodes Project</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources-menu.html">Resources</a></li>
+          <li><a href="Melissodes.html">Genus</a></li>
+          <li><a href="species-index.html">Species Index</a></li>
+          <li><a href="gallery-menu.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Page Content -->
+  <div class="page-bg">
+    <div class="field-guide-container">
+      <!-- Left: Front Page with overlay -->
+      <div class="field-guide-left">
+        <a href="field-guide-web.html" class="front-page-wrapper">
+          <img src="img/oregon-field-guide.png" alt="Field Guide Front Page">
+          <div class="overlay-dark"></div>
+          <span class="overlay-text">View Guide</span>
+        </a>
+      </div>
+
+      <!-- Right: Metadata + Buttons -->
+      <div class="field-guide-right">
+        <h1>A Field Guide and Key to the Genus Melissodes in Oregon</h1>
+        <div class="metadata">
+          <p><b>Author:</b> Frank E. Hogland</p>
+          <p><b>Type:</b> Field Guide</p>
+          <p><b>Date:</b> 2025</p>
+          <p><b>Subjects:</b> Melissodes, Eucerini, Taxonomy, Apidae</p>
+          <p><b>Publisher:</b> The Melissodes Project</p>
+          <p><b>Language:</b> English</p>
+          <p><b>Citation:</b> Hogland, F. E. (2025) <i>A Field Guide and Key to the Genus Melissodes in Oregon.</i> The Melissodes Project.</p>
+        </div>
+        <div class="buttons">
+          <a href="pdfs/oregon-field-guide.pdf" target="_blank">Download PDF</a>
+          <a href="field-guide-web.html" target="_blank">View Field Guide</a>
+        </div>
+      </div>
+    </div>
+    <footer style="text-align: center;">
+    © 2025 The Melissodes Project. All Rights Reserved.
+    </footer>
+  </div>
+</div>
+</body>
+</html>
