@@ -212,7 +212,6 @@
     width: 200px!important;
     height: 200px!important;
     border-radius: 15px!important;
-    margin-top: 10px!important;
 }
 
  .page .page-text .species-box .scientific-classification .tax-box{
@@ -372,9 +371,7 @@
     
 }
 
-.page .page-text .species-box .photo-credit{
-  margin-top: 5px
-}
+
 
 /* ✅ NEW — prevent cutoff & force wrapping down to 320px */
 .page,
@@ -760,8 +757,10 @@ body {
     font-size: 10px;
     font-style: normal;
     font-weight: normal;
-    padding-left: 10px;
-    padding-right: 10px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 10px;
+padding-right: 10px;
     max-width: 200px;
 }
 
@@ -769,24 +768,33 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 15px;
-    margin-top: 10px;
-    margin-left: 5px;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+
+}
+.species-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:10px
 }
 
  .page .page-text .species-box .scientific-classification .tax-box{
     display: flex;
-    gap: 0px;
+    gap: 40px;
 }
 
 
  .page .page-text .species-box .scientific-classification .order-box{
-    width: 120px;
-    height: 210px;
+    width: auto;
+    height: auto;
 }
 
  .page .page-text .species-box .scientific-classification .phylo-box{
-    width: 120px;
-    height: 210px;
+    width: auto;
+    height: auto;
 }
 
  .page .page-text .species-box .scientific-classification .title{
@@ -926,6 +934,10 @@ body {
     font-style: italic;
     font-weight: bold;
     margin-top: 5px;
+}
+
+.page .page-text .species-box .photo-credit{
+  margin-top: 5px
 }
 
 .tooltip {
