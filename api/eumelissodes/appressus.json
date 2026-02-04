@@ -1,0 +1,3399 @@
+{
+  "binomial_name": "Melissodes appressus",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "appressus"
+  },
+  "flight_period": {
+    "May": {
+      "count": 1,
+      "percentage": 1.1
+    },
+    "July": {
+      "count": 3,
+      "percentage": 3.3
+    },
+    "August": {
+      "count": 14,
+      "percentage": 15.38
+    },
+    "September": {
+      "count": 66,
+      "percentage": 72.53
+    },
+    "October": {
+      "count": 7,
+      "percentage": 7.69
+    }
+  },
+  "distribution": {
+    "California": {
+      "state_total": 61,
+      "counties": {
+        "Sacramento": {
+          "count": 1
+        },
+        "Sanbernardino": {
+          "count": 1
+        },
+        "Riverside": {
+          "count": 16
+        },
+        "Yolo": {
+          "count": 3
+        },
+        "Tehama": {
+          "count": 8
+        },
+        "Stanislaus": {
+          "count": 21
+        },
+        "Contra Costa": {
+          "count": 2
+        },
+        "Los Angeles": {
+          "count": 2
+        },
+        "Merced": {
+          "count": 1
+        },
+        "Sierra": {
+          "count": 1
+        },
+        "Spring Valley": {
+          "count": 2
+        },
+        "Anaz-Borrego": {
+          "count": 1
+        },
+        "Santa Clara": {
+          "count": 2
+        }
+      }
+    },
+    "New Mexico": {
+      "state_total": 30,
+      "counties": {
+        "Socorro": {
+          "count": 4
+        },
+        "Luna": {
+          "count": 19
+        },
+        "Chaves": {
+          "count": 6
+        },
+        "Roosevelt": {
+          "count": 1
+        }
+      }
+    },
+    "Utah": {
+      "state_total": 3,
+      "counties": {
+        "Washington": {
+          "count": 1
+        },
+        "Wayne": {
+          "count": 1
+        },
+        "Juab": {
+          "count": 1
+        }
+      }
+    },
+    "Zacatecas": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Arizona": {
+      "state_total": 1,
+      "counties": {
+        "Cochise": {
+          "count": 1
+        }
+      }
+    },
+    "Nan": {
+      "state_total": 8,
+      "counties": {}
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "658946047",
+      "gbif_link": "https://www.gbif.org/occurrence/658946047",
+      "location": {
+        "state": "California",
+        "county": "Sacramento",
+        "locality": "Sacramento",
+        "coordinates": {
+          "lat": "38.57884",
+          "lon": "-121.49803"
+        }
+      },
+      "temporal": {
+        "date": "1951-09-13",
+        "month": "9.0",
+        "year": "1951.0"
+      },
+      "collector": {
+        "recordedBy": "J.G. Hall",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946046",
+      "gbif_link": "https://www.gbif.org/occurrence/658946046",
+      "location": {
+        "state": "California",
+        "county": "Sanbernardino",
+        "locality": "Argus, 4 mi S",
+        "coordinates": {
+          "lat": "35.6965",
+          "lon": "-117.383"
+        }
+      },
+      "temporal": {
+        "date": "1965-09-22",
+        "month": "9.0",
+        "year": "1965.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946045",
+      "gbif_link": "https://www.gbif.org/occurrence/658946045",
+      "location": {
+        "state": "New Mexico",
+        "county": "Socorro",
+        "locality": "Socorro, 22 mi S",
+        "coordinates": {
+          "lat": "33.7648",
+          "lon": "-106.9126"
+        }
+      },
+      "temporal": {
+        "date": "1965-09-22",
+        "month": "9.0",
+        "year": "1965.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946044",
+      "gbif_link": "https://www.gbif.org/occurrence/658946044",
+      "location": {
+        "state": "New Mexico",
+        "county": "Socorro",
+        "locality": "Socorro, 22 mi S",
+        "coordinates": {
+          "lat": "33.7648",
+          "lon": "-106.9126"
+        }
+      },
+      "temporal": {
+        "date": "1965-09-22",
+        "month": "9.0",
+        "year": "1965.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946043",
+      "gbif_link": "https://www.gbif.org/occurrence/658946043",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": "33.95",
+          "lon": "-117.39"
+        }
+      },
+      "temporal": {
+        "date": "1927-09-06",
+        "month": "9.0",
+        "year": "1927.0"
+      },
+      "collector": {
+        "recordedBy": "P.H. Timberlake",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946042",
+      "gbif_link": "https://www.gbif.org/occurrence/658946042",
+      "location": {
+        "state": "California",
+        "county": "Yolo",
+        "locality": "Davis",
+        "coordinates": {
+          "lat": "38.5446",
+          "lon": "-121.7387"
+        }
+      },
+      "temporal": {
+        "date": "1953-07-16",
+        "month": "7.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "E.I. Schlinger",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946041",
+      "gbif_link": "https://www.gbif.org/occurrence/658946041",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946040",
+      "gbif_link": "https://www.gbif.org/occurrence/658946040",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946039",
+      "gbif_link": "https://www.gbif.org/occurrence/658946039",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946038",
+      "gbif_link": "https://www.gbif.org/occurrence/658946038",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946037",
+      "gbif_link": "https://www.gbif.org/occurrence/658946037",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946036",
+      "gbif_link": "https://www.gbif.org/occurrence/658946036",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946035",
+      "gbif_link": "https://www.gbif.org/occurrence/658946035",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946034",
+      "gbif_link": "https://www.gbif.org/occurrence/658946034",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946033",
+      "gbif_link": "https://www.gbif.org/occurrence/658946033",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946032",
+      "gbif_link": "https://www.gbif.org/occurrence/658946032",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946031",
+      "gbif_link": "https://www.gbif.org/occurrence/658946031",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946030",
+      "gbif_link": "https://www.gbif.org/occurrence/658946030",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946029",
+      "gbif_link": "https://www.gbif.org/occurrence/658946029",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946028",
+      "gbif_link": "https://www.gbif.org/occurrence/658946028",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946027",
+      "gbif_link": "https://www.gbif.org/occurrence/658946027",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946026",
+      "gbif_link": "https://www.gbif.org/occurrence/658946026",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "Deming, 17 mi E",
+        "coordinates": {
+          "lat": "32.2429",
+          "lon": "-107.4752"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G.R. Wood",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946025",
+      "gbif_link": "https://www.gbif.org/occurrence/658946025",
+      "location": {
+        "state": "Utah",
+        "county": "Washington",
+        "locality": "Wiley Creek, mouth",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-09-15",
+        "month": "9.0",
+        "year": "1981.0"
+      },
+      "collector": {
+        "recordedBy": "C.R. Nelson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946024",
+      "gbif_link": "https://www.gbif.org/occurrence/658946024",
+      "location": {
+        "state": "Utah",
+        "county": "Wayne",
+        "locality": "Hanksville, 4 mi SE",
+        "coordinates": {
+          "lat": "38.3224",
+          "lon": "-110.6757"
+        }
+      },
+      "temporal": {
+        "date": "1985-08-28",
+        "month": "8.0",
+        "year": "1985.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658946023",
+      "gbif_link": "https://www.gbif.org/occurrence/658946023",
+      "location": {
+        "state": "Zacatecas",
+        "county": null,
+        "locality": "Zacatecas 5mi N",
+        "coordinates": {
+          "lat": "16.52046",
+          "lon": "-94.36194"
+        }
+      },
+      "temporal": {
+        "date": "1970-09-19",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. & R.M. Bohart",
+        "identifiedBy": "W.E. LaBerge 2002"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658350509",
+      "gbif_link": "https://www.gbif.org/occurrence/658350509",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": "Chico, 18 mi NW",
+        "coordinates": {
+          "lat": "39.9126",
+          "lon": "-122.0763"
+        }
+      },
+      "temporal": {
+        "date": "1959-08-25",
+        "month": "8.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "Ordway, Ellen",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658323679",
+      "gbif_link": "https://www.gbif.org/occurrence/658323679",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658313997",
+      "gbif_link": "https://www.gbif.org/occurrence/658313997",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-10",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658294353",
+      "gbif_link": "https://www.gbif.org/occurrence/658294353",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": "Chico, 18 mi NW",
+        "coordinates": {
+          "lat": "39.9126",
+          "lon": "-122.0763"
+        }
+      },
+      "temporal": {
+        "date": "1959-08-25",
+        "month": "8.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "Ordway, Ellen",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658287001",
+      "gbif_link": "https://www.gbif.org/occurrence/658287001",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": "33.9533",
+          "lon": "-117.3953"
+        }
+      },
+      "temporal": {
+        "date": "1949",
+        "month": null,
+        "year": "1949.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658285545",
+      "gbif_link": "https://www.gbif.org/occurrence/658285545",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Artemisia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Artemisia",
+            "accepted_genus": "Artemisia",
+            "accepted_species": "sp.",
+            "canonical_name": "Artemisia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658273515",
+      "gbif_link": "https://www.gbif.org/occurrence/658273515",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658272515",
+      "gbif_link": "https://www.gbif.org/occurrence/658272515",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658254872",
+      "gbif_link": "https://www.gbif.org/occurrence/658254872",
+      "location": {
+        "state": "California",
+        "county": "Yolo",
+        "locality": "Davis",
+        "coordinates": {
+          "lat": "38.545",
+          "lon": "-121.7394"
+        }
+      },
+      "temporal": {
+        "date": "1950-08-20",
+        "month": "8.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "Bechtel, R",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658229907",
+      "gbif_link": "https://www.gbif.org/occurrence/658229907",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": "33.9533",
+          "lon": "-117.3953"
+        }
+      },
+      "temporal": {
+        "date": "1949",
+        "month": null,
+        "year": "1949.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658225289",
+      "gbif_link": "https://www.gbif.org/occurrence/658225289",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": "33.9533",
+          "lon": "-117.3953"
+        }
+      },
+      "temporal": {
+        "date": "1936-10-10",
+        "month": "10.0",
+        "year": "1936.0"
+      },
+      "collector": {
+        "recordedBy": "McCracken, I",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Senecio",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Senecio",
+            "accepted_genus": "Senecio",
+            "accepted_species": "sp.",
+            "canonical_name": "Senecio"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658201187",
+      "gbif_link": "https://www.gbif.org/occurrence/658201187",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658187545",
+      "gbif_link": "https://www.gbif.org/occurrence/658187545",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": "Chico, 18 mi NW",
+        "coordinates": {
+          "lat": "39.9126",
+          "lon": "-122.0763"
+        }
+      },
+      "temporal": {
+        "date": "1959-08-25",
+        "month": "8.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "Ordway, Ellen",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658184891",
+      "gbif_link": "https://www.gbif.org/occurrence/658184891",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": "33.9533",
+          "lon": "-117.3953"
+        }
+      },
+      "temporal": {
+        "date": "1949",
+        "month": null,
+        "year": "1949.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658174017",
+      "gbif_link": "https://www.gbif.org/occurrence/658174017",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": "33.9533",
+          "lon": "-117.3953"
+        }
+      },
+      "temporal": {
+        "date": "1949",
+        "month": null,
+        "year": "1949.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658167986",
+      "gbif_link": "https://www.gbif.org/occurrence/658167986",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Artemisia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Artemisia",
+            "accepted_genus": "Artemisia",
+            "accepted_species": "sp.",
+            "canonical_name": "Artemisia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658157829",
+      "gbif_link": "https://www.gbif.org/occurrence/658157829",
+      "location": {
+        "state": "California",
+        "county": "Contra Costa",
+        "locality": "Concord",
+        "coordinates": {
+          "lat": "37.9781",
+          "lon": "-122.03"
+        }
+      },
+      "temporal": {
+        "date": "1955-09-10",
+        "month": "9.0",
+        "year": "1955.0"
+      },
+      "collector": {
+        "recordedBy": "Opler, Paul",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658148778",
+      "gbif_link": "https://www.gbif.org/occurrence/658148778",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": "Chico, 18 mi NW",
+        "coordinates": {
+          "lat": "39.9126",
+          "lon": "-122.0763"
+        }
+      },
+      "temporal": {
+        "date": "1959-08-25",
+        "month": "8.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "Ordway, Ellen",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658140511",
+      "gbif_link": "https://www.gbif.org/occurrence/658140511",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-10",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658130873",
+      "gbif_link": "https://www.gbif.org/occurrence/658130873",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658124002",
+      "gbif_link": "https://www.gbif.org/occurrence/658124002",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Artemisia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Artemisia",
+            "accepted_genus": "Artemisia",
+            "accepted_species": "sp.",
+            "canonical_name": "Artemisia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657840237",
+      "gbif_link": "https://www.gbif.org/occurrence/657840237",
+      "location": {
+        "state": "New Mexico",
+        "county": "Chaves",
+        "locality": "Roswell, 14 mi S",
+        "coordinates": {
+          "lat": "33.1918",
+          "lon": "-104.5225"
+        }
+      },
+      "temporal": {
+        "date": "1970-09-16",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Baker, Kamm",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Gutierrezia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gutierrezia",
+            "accepted_genus": "Gutierrezia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gutierrezia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657834048",
+      "gbif_link": "https://www.gbif.org/occurrence/657834048",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Aster",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Aster",
+            "accepted_genus": "Aster",
+            "accepted_species": "sp.",
+            "canonical_name": "Aster"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657828981",
+      "gbif_link": "https://www.gbif.org/occurrence/657828981",
+      "location": {
+        "state": "New Mexico",
+        "county": "Chaves",
+        "locality": "Roswell, 14 mi S",
+        "coordinates": {
+          "lat": "33.1918",
+          "lon": "-104.5225"
+        }
+      },
+      "temporal": {
+        "date": "1970-09-16",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Baker, Kamm",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Gutierrezia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gutierrezia",
+            "accepted_genus": "Gutierrezia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gutierrezia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657817073",
+      "gbif_link": "https://www.gbif.org/occurrence/657817073",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-08-30",
+        "month": "8.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657808556",
+      "gbif_link": "https://www.gbif.org/occurrence/657808556",
+      "location": {
+        "state": "Utah",
+        "county": "Juab",
+        "locality": "Nephi",
+        "coordinates": {
+          "lat": "39.7103",
+          "lon": "-111.8356"
+        }
+      },
+      "temporal": {
+        "date": "1961-07-31",
+        "month": "7.0",
+        "year": "1961.0"
+      },
+      "collector": {
+        "recordedBy": "Knowlton, George",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657783787",
+      "gbif_link": "https://www.gbif.org/occurrence/657783787",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Artemisia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Artemisia",
+            "accepted_genus": "Artemisia",
+            "accepted_species": "sp.",
+            "canonical_name": "Artemisia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657778422",
+      "gbif_link": "https://www.gbif.org/occurrence/657778422",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Heterotheca grandiflora",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Heterotheca grandiflora",
+            "accepted_genus": "Heterotheca",
+            "accepted_species": "grandiflora",
+            "canonical_name": "Heterotheca grandiflora"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657771845",
+      "gbif_link": "https://www.gbif.org/occurrence/657771845",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-08-15",
+        "month": "8.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657760655",
+      "gbif_link": "https://www.gbif.org/occurrence/657760655",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Artemisia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Artemisia",
+            "accepted_genus": "Artemisia",
+            "accepted_species": "sp.",
+            "canonical_name": "Artemisia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657758050",
+      "gbif_link": "https://www.gbif.org/occurrence/657758050",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Portal, 5 mi E",
+        "coordinates": {
+          "lat": "32.0",
+          "lon": "-108.93"
+        }
+      },
+      "temporal": {
+        "date": "1970-08-30",
+        "month": "8.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "Brothers, D",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657753482",
+      "gbif_link": "https://www.gbif.org/occurrence/657753482",
+      "location": {
+        "state": "New Mexico",
+        "county": "Chaves",
+        "locality": "Roswell, 14 mi S",
+        "coordinates": {
+          "lat": "33.1918",
+          "lon": "-104.5225"
+        }
+      },
+      "temporal": {
+        "date": "1970-09-16",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Baker, Kamm",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Gutierrezia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gutierrezia",
+            "accepted_genus": "Gutierrezia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gutierrezia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657751017",
+      "gbif_link": "https://www.gbif.org/occurrence/657751017",
+      "location": {
+        "state": "California",
+        "county": "Merced",
+        "locality": "Dos Palos, 6 mi E",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1948-09-22",
+        "month": "9.0",
+        "year": "1948.0"
+      },
+      "collector": {
+        "recordedBy": "Smith, Ray",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657749298",
+      "gbif_link": "https://www.gbif.org/occurrence/657749298",
+      "location": {
+        "state": "New Mexico",
+        "county": "Chaves",
+        "locality": "Roswell, 14 mi S",
+        "coordinates": {
+          "lat": "33.1918",
+          "lon": "-104.5225"
+        }
+      },
+      "temporal": {
+        "date": "1970-09-16",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Baker, Kamm",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Gutierrezia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gutierrezia",
+            "accepted_genus": "Gutierrezia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gutierrezia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657734540",
+      "gbif_link": "https://www.gbif.org/occurrence/657734540",
+      "location": {
+        "state": "New Mexico",
+        "county": "Chaves",
+        "locality": "Roswell, 14 mi S",
+        "coordinates": {
+          "lat": "33.1918",
+          "lon": "-104.5225"
+        }
+      },
+      "temporal": {
+        "date": "1970-09-16",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Baker, Kamm",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Gutierrezia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gutierrezia",
+            "accepted_genus": "Gutierrezia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gutierrezia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657726374",
+      "gbif_link": "https://www.gbif.org/occurrence/657726374",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657708376",
+      "gbif_link": "https://www.gbif.org/occurrence/657708376",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Artemisia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Artemisia",
+            "accepted_genus": "Artemisia",
+            "accepted_species": "sp.",
+            "canonical_name": "Artemisia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657700279",
+      "gbif_link": "https://www.gbif.org/occurrence/657700279",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Artemisia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Artemisia",
+            "accepted_genus": "Artemisia",
+            "accepted_species": "sp.",
+            "canonical_name": "Artemisia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657680964",
+      "gbif_link": "https://www.gbif.org/occurrence/657680964",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": "Vina",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-09-22",
+        "month": "9.0",
+        "year": "1951.0"
+      },
+      "collector": {
+        "recordedBy": "Schlinger, E",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657673209",
+      "gbif_link": "https://www.gbif.org/occurrence/657673209",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657664568",
+      "gbif_link": "https://www.gbif.org/occurrence/657664568",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-10",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657642688",
+      "gbif_link": "https://www.gbif.org/occurrence/657642688",
+      "location": {
+        "state": "California",
+        "county": "Sierra",
+        "locality": "Sierraville, 7 mi NW",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-09-09",
+        "month": "9.0",
+        "year": "1957.0"
+      },
+      "collector": {
+        "recordedBy": "Linsley, E",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Chrysothamnus",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Chrysothamnus",
+            "accepted_genus": "Chrysothamnus",
+            "accepted_species": "sp.",
+            "canonical_name": "Chrysothamnus"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657635555",
+      "gbif_link": "https://www.gbif.org/occurrence/657635555",
+      "location": {
+        "state": "New Mexico",
+        "county": "Roosevelt",
+        "locality": "Oasis State Park, nr Portales",
+        "coordinates": {
+          "lat": "34.2564",
+          "lon": "-103.3483"
+        }
+      },
+      "temporal": {
+        "date": "1970-09-17",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Baker, Kamm",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657634037",
+      "gbif_link": "https://www.gbif.org/occurrence/657634037",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": "Chico, 18 mi NW",
+        "coordinates": {
+          "lat": "39.9126",
+          "lon": "-122.0763"
+        }
+      },
+      "temporal": {
+        "date": "1959-08-25",
+        "month": "8.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "Ordway, Ellen",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657610339",
+      "gbif_link": "https://www.gbif.org/occurrence/657610339",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657590751",
+      "gbif_link": "https://www.gbif.org/occurrence/657590751",
+      "location": {
+        "state": "California",
+        "county": "Stanislaus",
+        "locality": "Turlock",
+        "coordinates": {
+          "lat": "37.4947",
+          "lon": "-120.8456"
+        }
+      },
+      "temporal": {
+        "date": "1953-09-20",
+        "month": "9.0",
+        "year": "1953.0"
+      },
+      "collector": {
+        "recordedBy": "Snelling, Roy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "5918274093",
+      "gbif_link": "https://www.gbif.org/occurrence/5918274093",
+      "location": {
+        "state": "California",
+        "county": "Spring Valley",
+        "locality": null,
+        "coordinates": {
+          "lat": "32.73921",
+          "lon": "-116.9333"
+        }
+      },
+      "temporal": {
+        "date": "2014-09-26",
+        "month": "9.0",
+        "year": "2014.0"
+      },
+      "collector": {
+        "recordedBy": "KJ Hung",
+        "identifiedBy": "KW Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5918274092",
+      "gbif_link": "https://www.gbif.org/occurrence/5918274092",
+      "location": {
+        "state": "California",
+        "county": "Spring Valley",
+        "locality": null,
+        "coordinates": {
+          "lat": "32.7392",
+          "lon": "-116.9519"
+        }
+      },
+      "temporal": {
+        "date": "2014-09-26",
+        "month": "9.0",
+        "year": "2014.0"
+      },
+      "collector": {
+        "recordedBy": "KJ Hung",
+        "identifiedBy": "KW Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5918274089",
+      "gbif_link": "https://www.gbif.org/occurrence/5918274089",
+      "location": {
+        "state": "California",
+        "county": "Anaz-Borrego",
+        "locality": null,
+        "coordinates": {
+          "lat": "33.1052",
+          "lon": "-116.4519"
+        }
+      },
+      "temporal": {
+        "date": "2014-10-13",
+        "month": "10.0",
+        "year": "2014.0"
+      },
+      "collector": {
+        "recordedBy": "KJ Hung",
+        "identifiedBy": "KW Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5861556379",
+      "gbif_link": "https://www.gbif.org/occurrence/5861556379",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4854160898",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160898",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-04.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160242",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160242",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-04.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159768",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159768",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-04.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159630",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159630",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-04.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "3801942272",
+      "gbif_link": "https://www.gbif.org/occurrence/3801942272",
+      "location": {
+        "state": "New Mexico",
+        "county": "Chaves",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1970-09-16",
+        "month": "9.0",
+        "year": "1970.0"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener, Kamm, Baker",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "New Mexico: Chaves Co.; 14 mi. S. Roswell; 16 September 1970; Baker, Kamm, Michener; on flowers of Gutierrezia  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gutierrezia",
+            "accepted_genus": "Gutierrezia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gutierrezia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801941250",
+      "gbif_link": "https://www.gbif.org/occurrence/3801941250",
+      "location": {
+        "state": "California",
+        "county": "Santa Clara",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.42722",
+          "lon": "-122.16917"
+        }
+      },
+      "temporal": {
+        "date": "1917-08-01/1917-08-31",
+        "month": "8.0",
+        "year": "1917.0"
+      },
+      "collector": {
+        "recordedBy": "L.F. Jr.",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Salt Marshes; Palo Alto Cal; 8 1917; L.F. Jr. U. lot 373 Sub 1; Thom; Thom; Stanford University  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801941249",
+      "gbif_link": "https://www.gbif.org/occurrence/3801941249",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G. Wood, N. Yousef",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "N.M. Lunca Co; 17 mi. E Deming; IX-17-66; R Rust & P. Torchio; G. Wood & N. Yousef; on Dyssodia cocinna  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939276",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939276",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1966-09-17",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "R.W. Rust, P.F. Torchio, G. Wood, N. Yousef",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "N.M. Lunca Co; 17 mi. E Deming; IX-17-66; R Rust & P. Torchio; G. Wood & N. Yousef; on Dyssodia cocinna  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801857299",
+      "gbif_link": "https://www.gbif.org/occurrence/3801857299",
+      "location": {
+        "state": "California",
+        "county": "Contra Costa",
+        "locality": null,
+        "coordinates": {
+          "lat": "38.005",
+          "lon": "-121.80472"
+        }
+      },
+      "temporal": {
+        "date": "1955-10-25",
+        "month": "10.0",
+        "year": "1955.0"
+      },
+      "collector": {
+        "recordedBy": "Don Burdick",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Antioch; Contra Costa Co.; Calif. X-2-55; Don Burdick  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Costa",
+            "accepted_genus": "Galipea",
+            "accepted_species": "sp.",
+            "canonical_name": "Costa"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801853278",
+      "gbif_link": "https://www.gbif.org/occurrence/3801853278",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": null,
+        "coordinates": {
+          "lat": "33.95333",
+          "lon": "-117.39528"
+        }
+      },
+      "temporal": {
+        "date": "1925-09-22",
+        "month": "9.0",
+        "year": "1925.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "cannot read other labels. Riverside, Cal; Sept 22 '25  Melissodes appressa; LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801377263",
+      "gbif_link": "https://www.gbif.org/occurrence/3801377263",
+      "location": {
+        "state": "New Mexico",
+        "county": "Socorro",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1965-09-22",
+        "month": "9.0",
+        "year": "1965.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "New Mexico Soccoro Co.; Soc 22 m S.; 22 Sept 1965; G.E. Bohart; on baileya multi  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801341281",
+      "gbif_link": "https://www.gbif.org/occurrence/3801341281",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": null,
+        "coordinates": {
+          "lat": "39.5634",
+          "lon": "-122.1146"
+        }
+      },
+      "temporal": {
+        "date": "1959-08-25",
+        "month": "8.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "E. Ordway",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "California Tehama Co; 18 mi NW Chico; 25 August 1959; (Ellen Ordway)  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801340270",
+      "gbif_link": "https://www.gbif.org/occurrence/3801340270",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": null,
+        "coordinates": {
+          "lat": "33.95333",
+          "lon": "-117.39528"
+        }
+      },
+      "temporal": {
+        "date": "1927-10-13",
+        "month": "10.0",
+        "year": "1927.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "cannot read other labels. Riverside, Cal; Oct 13 '27  Paratype M; Melissodes appressa; LaBerge 1960",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339286",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339286",
+      "location": {
+        "state": "California",
+        "county": "Tehama",
+        "locality": null,
+        "coordinates": {
+          "lat": "39.5634",
+          "lon": "-122.1146"
+        }
+      },
+      "temporal": {
+        "date": "1959-08-25",
+        "month": "8.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "E. Ordway",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "California Tehama Co; 18 mi NW Chico; 25 August 1959; (Ellen Ordway)  Melissodes appressa LaBerge; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804701188",
+      "gbif_link": "https://www.gbif.org/occurrence/2804701188",
+      "location": {
+        "state": "New Mexico",
+        "county": "Luna",
+        "locality": "17 mi E of Deming",
+        "coordinates": {
+          "lat": "32.268333",
+          "lon": "-107.466389"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "R. W. Rust, P. Torchio, G. Wood & N. Yousef",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804698204",
+      "gbif_link": "https://www.gbif.org/occurrence/2804698204",
+      "location": {
+        "state": "New Mexico",
+        "county": "Socorro",
+        "locality": "22 mi S of Socorro",
+        "coordinates": {
+          "lat": "33.612778",
+          "lon": "-106.948889"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "G. E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2238758982",
+      "gbif_link": "https://www.gbif.org/occurrence/2238758982",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "The allotype is stored in the general collection. Permanent deposit from UCR.",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Grinter C, Diaz-Bastin R, Fong J (2026). CAS Entomology Type (TYPE). Version 1.327. California Academy of Sciences. Occurrence dataset https://doi.org/10.15468/gak5hc accessed via GBIF.org on 2026-02-04.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1899931721",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931721",
+      "location": {
+        "state": "California",
+        "county": "Yolo",
+        "locality": "Davis",
+        "coordinates": {
+          "lat": "38.545",
+          "lon": "-121.7394"
+        }
+      },
+      "temporal": {
+        "date": "1950-08-20",
+        "month": "8.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "Bechtel, R",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899931706",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931706",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": "33.9533",
+          "lon": "-117.3953"
+        }
+      },
+      "temporal": {
+        "date": "1933-10-17",
+        "month": "10.0",
+        "year": "1933.0"
+      },
+      "collector": {
+        "recordedBy": "McKenzie, H",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Gutierrezia sarothrae",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gutierrezia sarothrae",
+            "accepted_genus": "Gutierrezia",
+            "accepted_species": "sarothrae",
+            "canonical_name": "Gutierrezia sarothrae"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1317419356",
+      "gbif_link": "https://www.gbif.org/occurrence/1317419356",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.105. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-02-04.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1092837963",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837963",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1927-10-09",
+        "month": "10.0",
+        "year": "1927.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837952",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837952",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1931-09-20",
+        "month": "9.0",
+        "year": "1931.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837946",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837946",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1927-09-18",
+        "month": "9.0",
+        "year": "1927.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837938",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837938",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1926-10-19",
+        "month": "10.0",
+        "year": "1926.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837934",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837934",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1926-09-14",
+        "month": "9.0",
+        "year": "1926.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837930",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837930",
+      "location": {
+        "state": "California",
+        "county": "Santa Clara",
+        "locality": "Santa Clara",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1925-09-09",
+        "month": "9.0",
+        "year": "1925.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837926",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837926",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1932-09-01",
+        "month": "9.0",
+        "year": "1932.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837916",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837916",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1924-05-15",
+        "month": "5.0",
+        "year": "1924.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837895",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837895",
+      "location": {
+        "state": "California",
+        "county": "Riverside",
+        "locality": "Riverside",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1926-07-29",
+        "month": "7.0",
+        "year": "1926.0"
+      },
+      "collector": {
+        "recordedBy": "Timberlake, P",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 104,
+    "geospatial_fixes": 1,
+    "contributing_datasets": [
+      "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-04. (CC BY 4.0)",
+      "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-02-04. (CC BY-NC 4.0)",
+      "Grinter C, Diaz-Bastin R, Fong J (2026). CAS Entomology Type (TYPE). Version 1.327. California Academy of Sciences. Occurrence dataset https://doi.org/10.15468/gak5hc accessed via GBIF.org on 2026-02-04. (CC0 1.0)",
+      "Gross J, Oboyski P (2026). Essig Museum of Entomology. Version 121.427. Berkeley Natural History Museums. Occurrence dataset https://doi.org/10.15468/0saucj accessed via GBIF.org on 2026-02-04. (CC BY 4.0)",
+      "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-04. (CC BY 4.0)",
+      "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-04. (CC BY 4.0)",
+      "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-04. (CC BY 4.0)",
+      "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-04. (CC BY 4.0)",
+      "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-04. (CC0 1.0)",
+      "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.105. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-02-04. (CC0 1.0)"
+    ]
+  }
+}
