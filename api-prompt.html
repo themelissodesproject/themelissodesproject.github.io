@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melissodes Data Generator</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --border: #bdc3c7;
+            --success: #27ae60;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        /* Left Panel - Controls */
+        .controls {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Right Panel - Output */
+        .output-panel {
+            flex: 1;
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        textarea {
+            width: 100%;
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: inherit;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            resize: none;
+            outline: none;
+        }
+
+        /* UI Elements */
+        select, input[type="number"] {
+            padding: 8px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .btn-group {
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 10px;
+            background: white;
+            overflow: hidden;
+        }
+
+        .main-btn-row {
+            display: flex;
+            background: var(--light);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .main-btn {
+            flex: 1;
+            padding: 10px;
+            background: var(--light);
+            border: none;
+            text-align: left;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .main-btn:hover { background: #dce4e6; }
+        .main-btn.active { background: var(--accent); color: white; }
+
+        .toggle-dropdown {
+            padding: 10px 15px;
+            background: #dcdcdc;
+            border: none;
+            border-left: 1px solid var(--border);
+            cursor: pointer;
+        }
+        .toggle-dropdown:hover { background: #c0c0c0; }
+
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            background: white;
+        }
+        .dropdown-content.show { display: block; }
+
+        /* Nested lists */
+        ul { list-style: none; padding-left: 0; margin: 0; }
+        li { margin-bottom: 5px; }
+        
+        .sub-item {
+            margin-left: 20px;
+            padding: 5px;
+            border-left: 2px solid var(--border);
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .param-box {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .param-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .copy-btn {
+            background: var(--success);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .copy-btn:hover { opacity: 0.9; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Taxonomy Data Builder</h2>
+    <div>
+        <select id="taxonSelect">
+            <option value="apicatus">Melissodes apicatus</option>
+            <option value="agilis">Melissodes agilis</option>
+            <option value="communis">Melissodes communis</option>
+        </select>
+        <button onclick="loadTaxon()">Load Species</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="controls" id="controlsArea">
+        <p><i>Load a species to generate controls...</i></p>
+    </div>
+
+    <div class="output-panel">
+        <button class="copy-btn" onclick="copyToClipboard()">Copy Python Script</button>
+        <textarea id="pythonOutput" readonly># Python script will appear here...</textarea>
+    </div>
+</div>
+
+<script>
+    // --- GLOBAL STATE ---
+    let currentData = null;
+    let selections = {
+        distribution: { all: false, states: {}, counties: {} },
+        flight: { all: false, months: {}, params: { count: {op: '>', val: 0}, pct: {op: '>', val: 0} } },
+        occurrences: { all: false, fields: {} },
+        metadata: false
+    };
+
+    // --- EXAMPLE DATA (Fallback/Initial) ---
+    const exampleData = {
+      "binomial_name": "Melissodes apicatus",
+      "metadata": { "project_name": "The Melissodes Project", "total_records": 192 },
+      "flight_period": {
+        "January": { "count": 1, "percentage": 0.59 },
+        "March": { "count": 7, "percentage": 4.14 },
+        "April": { "count": 35, "percentage": 20.71 },
+        "May": { "count": 9, "percentage": 5.33 },
+        "June": { "count": 34, "percentage": 20.12 },
+        "July": { "count": 73, "percentage": 43.2 },
+        "August": { "count": 4, "percentage": 2.37 },
+        "September": { "count": 1, "percentage": 0.59 },
+        "November": { "count": 5, "percentage": 2.96 }
+      },
+      "distribution": {
+        "Quebec": { "state_total": 1, "counties": { "Outaouais": { "count": 1 } } },
+        "Virginia": { "state_total": 1, "counties": { "Fairfax": { "count": 1 } } },
+        "Illinois": { "state_total": 41, "counties": { "Iroquois": { "count": 40 }, "Lee": { "count": 1 } } },
+        "Florida": { "state_total": 54, "counties": { "Citrus": { "count": 12 }, "Alachua": { "count": 14 } } }
+      },
+      "occurrences": [
+        { "gbifID": "657753982", "location": { "state": "Quebec" }, "temporal": { "year": "2001" }, "ecology": {}, "citation": {} },
+        { "gbifID": "5067252456", "location": { "state": "Virginia" }, "temporal": { "year": "2022" }, "ecology": {}, "citation": {} }
+      ]
+    };
+
+    // --- INITIALIZATION ---
+    window.onload = function() {
+        // Load example data by default for demonstration
+        currentData = exampleData;
+        renderControls();
+        generatePython();
+    };
+
+    async function loadTaxon() {
+        const species = document.getElementById('taxonSelect').value;
+        const url = `https://themelissodesproject.wildref.org/api/eumelissodes/${species}.json`;
+        
+        document.getElementById('controlsArea').innerHTML = "<p>Loading...</p>";
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Network response was not ok");
+            currentData = await response.json();
+            renderControls();
+            generatePython();
+        } catch (error) {
+            console.warn("Fetch failed (likely CORS or file missing), using fallback data for demo.");
+            // In a real scenario, alert the user. For this demo, we reload example data but change name
+            currentData = JSON.parse(JSON.stringify(exampleData)); 
+            currentData.binomial_name = `Melissodes ${species}`;
+            renderControls();
+            generatePython();
+        }
+    }
+
+    // --- RENDER UI ---
+    function renderControls() {
+        const container = document.getElementById('controlsArea');
+        container.innerHTML = `<h3>${currentData.binomial_name}</h3>`;
+
+        // 1. DISTRIBUTION
+        container.appendChild(createSection('Distribution', 'distribution', renderDistributionContent()));
+
+        // 2. FLIGHT PERIOD
+        container.appendChild(createSection('Flight Period', 'flight', renderFlightContent()));
+
+        // 3. OCCURRENCES
+        container.appendChild(createSection('Occurrences', 'occurrences', renderOccurrenceContent()));
+
+        // 4. METADATA
+        const metaDiv = document.createElement('div');
+        metaDiv.className = 'btn-group';
+        metaDiv.innerHTML = `
+            <div class="main-btn-row">
+                <button class="main-btn" id="btn-metadata" onclick="toggleMetadata()">Metadata (Include?)</button>
+            </div>
+        `;
+        container.appendChild(metaDiv);
+    }
+
+    function createSection(title, key, contentHTML) {
+        const div = document.createElement('div');
+        div.className = 'btn-group';
+        div.innerHTML = `
+            <div class="main-btn-row">
+                <button class="main-btn" id="btn-${key}" onclick="toggleMain('${key}')">${title}</button>
+                <button class="toggle-dropdown" onclick="toggleDropdown('${key}-content')">▼</button>
+            </div>
+            <div id="${key}-content" class="dropdown-content">
+                ${contentHTML}
+            </div>
+        `;
+        return div;
+    }
+
+    function renderDistributionContent() {
+        let html = `<ul>`;
+        const dist = currentData.distribution || {};
+        for (const state in dist) {
+            html += `
+                <li>
+                    <label>
+                        <input type="checkbox" onchange="toggleState('${state}', this.checked)" id="chk-state-${state}">
+                        ${state} (Total: ${dist[state].state_total})
+                    </label>
+                    <div class="sub-item" id="counties-${state}">
+                        ${Object.keys(dist[state].counties || {}).map(county => `
+                            <label>
+                                <input type="checkbox" class="county-chk-${state}" onchange="updatePython()" data-county="${county}">
+                                ${county}
+                            </label><br>
+                        `).join('')}
+                    </div>
+                </li>`;
+        }
+        html += `</ul>`;
+        return html;
+    }
+
+    function renderFlightContent() {
+        // Parameter Inputs
+        let html = `
+            <div class="param-box">
+                <strong>Filter Parameters:</strong>
+                <div class="param-row">
+                    <label>Count</label>
+                    <select id="flight-count-op" onchange="updateFlightParams()"><option value=">">></option><option value="<"><</option><option value="=">=</option></select>
+                    <input type="number" id="flight-count-val" value="0" style="width:50px" onchange="updateFlightParams()">
+                </div>
+                <div class="param-row">
+                    <label>Percentage</label>
+                    <select id="flight-pct-op" onchange="updateFlightParams()"><option value=">">></option><option value="<"><</option><option value="=">=</option></select>
+                    <input type="number" id="flight-pct-val" value="0" style="width:50px" onchange="updateFlightParams()">
+                </div>
+            </div>
+            <ul>
+        `;
+        
+        const flight = currentData.flight_period || {};
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        
+        months.forEach(month => {
+            if(flight[month]) {
+                html += `
+                    <li>
+                        <label>
+                            <input type="checkbox" class="flight-month-chk" data-month="${month}" onchange="updatePython()">
+                            ${month} (Count: ${flight[month].count}, ${flight[month].percentage}%)
+                        </label>
+                    </li>
+                `;
+            }
+        });
+        html += `</ul>`;
+        return html;
+    }
+
+    function renderOccurrenceContent() {
+        // Based on the fields requested in prompt
+        const fields = [
+            {key: "gbifID", label: "GBIF ID"},
+            {key: "gbif_link", label: "GBIF Link"},
+            {key: "location", label: "Location (State, County, Coords)"},
+            {key: "temporal", label: "Temporal (Date, Year)"},
+            {key: "collector", label: "Collector Info"},
+            {key: "ecology", label: "Ecology (Notes, Hosts)"},
+            {key: "citation", label: "Citation"}
+        ];
+
+        let html = `<p>Select data fields to include in output:</p><ul>`;
+        fields.forEach(f => {
+            html += `
+                <li>
+                    <label>
+                        <input type="checkbox" class="occ-field-chk" data-key="${f.key}" onchange="updatePython()">
+                        ${f.label}
+                    </label>
+                </li>
+            `;
+        });
+        html += `</ul>`;
+        return html;
+    }
+
+    // --- INTERACTION LOGIC ---
+
+    function toggleDropdown(id) {
+        const el = document.getElementById(id);
+        el.classList.toggle('show');
+    }
+
+    // 1. Distribution Logic
+    function toggleMain(key) {
+        if (key === 'distribution') {
+            selections.distribution.all = !selections.distribution.all;
+            // Update UI to reflect "All"
+            document.getElementById('btn-distribution').classList.toggle('active', selections.distribution.all);
+            // Check/Uncheck all sub boxes visually
+            const checkboxes = document.querySelectorAll('#distribution-content input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = selections.distribution.all);
+        } else if (key === 'flight') {
+            selections.flight.all = !selections.flight.all;
+            document.getElementById('btn-flight').classList.toggle('active', selections.flight.all);
+            document.querySelectorAll('.flight-month-chk').forEach(cb => cb.checked = selections.flight.all);
+        } else if (key === 'occurrences') {
+            selections.occurrences.all = !selections.occurrences.all;
+            document.getElementById('btn-occurrences').classList.toggle('active', selections.occurrences.all);
+            document.querySelectorAll('.occ-field-chk').forEach(cb => cb.checked = selections.occurrences.all);
+        }
+        updatePython();
+    }
+
+    function toggleState(state, isChecked) {
+        // If state button clicked (checkbox), select all counties
+        const countyChks = document.querySelectorAll(`.county-chk-${state}`);
+        countyChks.forEach(cb => cb.checked = isChecked);
+        // If unchecked, main distribution button is definitely not all
+        if(!isChecked) {
+            selections.distribution.all = false;
+            document.getElementById('btn-distribution').classList.remove('active');
+        }
+        updatePython();
+    }
+
+    function toggleMetadata() {
+        selections.metadata = !selections.metadata;
+        document.getElementById('btn-metadata').classList.toggle('active', selections.metadata);
+        updatePython();
+    }
+
+    function updateFlightParams() {
+        selections.flight.params.count.op = document.getElementById('flight-count-op').value;
+        selections.flight.params.count.val = parseFloat(document.getElementById('flight-count-val').value) || 0;
+        selections.flight.params.pct.op = document.getElementById('flight-pct-op').value;
+        selections.flight.params.pct.val = parseFloat(document.getElementById('flight-pct-val').value) || 0;
+        updatePython();
+    }
+
+    // --- GENERATOR LOGIC ---
+
+    function updatePython() {
+        // Re-read DOM state to build selection object
+        const outputObj = {
+            binomial_name: currentData.binomial_name
+        };
+
+        // 1. Metadata
+        if (selections.metadata && currentData.metadata) {
+            outputObj.metadata = currentData.metadata;
+        }
+
+        // 2. Distribution
+        const distInputs = document.querySelectorAll('#distribution-content input[type="checkbox"]');
+        let hasDist = false;
+        let distObj = {};
+
+        if (selections.distribution.all) {
+            distObj = currentData.distribution;
+            hasDist = true;
+        } else {
+            // Check specific states/counties
+            // We iterate the data model to see what matches UI state
+            for (const state in currentData.distribution) {
+                const stateChk = document.getElementById(`chk-state-${state}`);
+                const countyChks = document.querySelectorAll(`.county-chk-${state}:checked`);
+                
+                if (stateChk && stateChk.checked) {
+                    // Include whole state
+                    distObj[state] = currentData.distribution[state];
+                    hasDist = true;
+                } else if (countyChks.length > 0) {
+                    // Partial state (specific counties)
+                    hasDist = true;
+                    distObj[state] = {
+                        state_total: currentData.distribution[state].state_total, // keep total or recalc? Assuming keep.
+                        counties: {}
+                    };
+                    countyChks.forEach(chk => {
+                        const cName = chk.getAttribute('data-county');
+                        distObj[state].counties[cName] = currentData.distribution[state].counties[cName];
+                    });
+                }
+            }
+        }
+        if (hasDist) outputObj.distribution = distObj;
+
+        // 3. Flight Period
+        let hasFlight = false;
+        let flightObj = {};
+        
+        const countOp = selections.flight.params.count.op;
+        const countVal = selections.flight.params.count.val;
+        const pctOp = selections.flight.params.pct.op;
+        const pctVal = selections.flight.params.pct.val;
+
+        const checkVal = (val, op, limit) => {
+            if(op === '>') return val > limit;
+            if(op === '<') return val < limit;
+            if(op === '=') return val === limit;
+            return true;
+        };
+
+        if (selections.flight.all) {
+            // Apply Filters to ALL
+            for(const m in currentData.flight_period) {
+                const item = currentData.flight_period[m];
+                if(checkVal(item.count, countOp, countVal) && checkVal(item.percentage, pctOp, pctVal)) {
+                    flightObj[m] = item;
+                    hasFlight = true;
+                }
+            }
+        } else {
+            // Check specific checked months AND apply filters
+            const checkedMonths = document.querySelectorAll('.flight-month-chk:checked');
+            checkedMonths.forEach(chk => {
+                const m = chk.getAttribute('data-month');
+                const item = currentData.flight_period[m];
+                if(item && checkVal(item.count, countOp, countVal) && checkVal(item.percentage, pctOp, pctVal)) {
+                    flightObj[m] = item;
+                    hasFlight = true;
+                }
+            });
+        }
+        if (hasFlight) outputObj.flight_period = flightObj;
+
+        // 4. Occurrences
+        let hasOcc = false;
+        let occList = [];
+        const occFieldChks = document.querySelectorAll('.occ-field-chk:checked');
+        
+        if (selections.occurrences.all) {
+            occList = currentData.occurrences; // Copy all
+            hasOcc = true;
+        } else if (occFieldChks.length > 0) {
+            // User selected specific fields to keep
+            const fieldsToKeep = Array.from(occFieldChks).map(c => c.getAttribute('data-key'));
+            hasOcc = true;
+            
+            // Map over original occurrences and create new objects with ONLY selected keys
+            occList = (currentData.occurrences || []).map(record => {
+                let newRecord = {};
+                fieldsToKeep.forEach(key => {
+                    if (record[key] !== undefined) {
+                        newRecord[key] = record[key];
+                    }
+                });
+                return newRecord;
+            });
+        }
+        if (hasOcc) outputObj.occurrences = occList;
+
+        // Generate Python String
+        const jsonStr = JSON.stringify(outputObj, null, 4);
+        const pyStr = `# Generated Python Script for ${currentData.binomial_name}
+# Date: ${new Date().toISOString().split('T')[0]}
+
+import json
+
+# Taxonomy Data Dictionary
+data = ${jsonStr} // .replace(/true/g, 'True').replace(/false/g, 'False').replace(/null/g, 'None')
+`;
+        // Fix JSON syntax to Python syntax (true->True, etc)
+        const finalPy = pyStr
+            .replace(/": true/g, '": True')
+            .replace(/": false/g, '": False')
+            .replace(/": null/g, '": None');
+
+        document.getElementById('pythonOutput').value = finalPy;
+    }
+
+    function copyToClipboard() {
+        const copyText = document.getElementById("pythonOutput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); 
+        navigator.clipboard.writeText(copyText.value);
+        
+        const btn = document.querySelector('.copy-btn');
+        const orig = btn.innerText;
+        btn.innerText = "Copied!";
+        setTimeout(() => btn.innerText = orig, 2000);
+    }
+
+</script>
+
+</body>
+</html>
