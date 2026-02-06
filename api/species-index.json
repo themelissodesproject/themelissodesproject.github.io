@@ -1,0 +1,652 @@
+{
+  "project": "The Melissodes Project",
+  "last_updated": "2026-02-06",
+  "base_api_url": "https://themelissodesproject.wildref.org/api/",
+  "endpoints": [
+    {
+      "subgenus": "callimelissodes",
+      "species": "ablusus",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/ablusus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "agilis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/agilis.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "apicatus",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/apicatus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "appressus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/appressus.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "baileyi",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/baileyi.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "bicoloratus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/bicoloratus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "bidentis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/bidentis.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "bimaculatus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/bimaculatus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "bimatris",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/bimatris.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "blandus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/blandus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "boltoniae",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/boltoniae.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "brevipyga",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/brevipyga.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "bruneri",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/bruneri.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "cerussatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/cerussatus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "cestus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/cestus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "clarkiae",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/clarkiae.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "colliciatus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/colliciatus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "coloradensis",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/coloradensis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "comatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/comatus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "communis",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/communis.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "compositus",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/compositus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "comptoides",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/comptoides.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "confusus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/confusus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "coreopsis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/coreopsis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "crocinus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/crocinus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "cubensis",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/cubensis.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "dagosus",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/dagosus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "denticulatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/denticulatus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "dentiventris",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/dentiventris.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "desponsus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/desponsus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "druriellus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/druriellus.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "ecuadorius",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/ecuadorius.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "elegans",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/elegans.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "exilis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/exilis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "expolitus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/expolitus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "fasciatellus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/fasciatellus.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "fimbriatus",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/fimbriatus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "flexus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/flexus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "floris",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/floris.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "foxi",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/foxi.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "fumosus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/fumosus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "gelidus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/gelidus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "gilensis",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/gilensis.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "glenwoodensis",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/glenwoodensis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "grindeliae",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/grindeliae.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "haitiensis",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/haitiensis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "humilior",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/humilior.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "hurdi",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/hurdi.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "hymenoxidis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/hymenoxidis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "illatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/illatus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "interruptus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/interruptus.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "intortus",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/intortus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "labiatarum",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/labiatarum.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "leprieuri",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/leprieuri.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "limbus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/limbus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "lupinus",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/lupinus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "lustrus",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/lustrus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "lutulentus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/lutulentus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "maestus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/maestus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "manipularis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/manipularis.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "martinicensis",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/martinicensis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "melanurus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/melanurus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "menuachus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/menuachus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "metenuus",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/metenuus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "micheneri",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/micheneri.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "microstictus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/microstictus.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "mimicus",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/mimicus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "minusculus",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/minusculus.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "mitchelli",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/mitchelli.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "monoensis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/monoensis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "montanus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/montanus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "moorei",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/moorei.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "morrilli",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/morrilli.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "negligendus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/negligendus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "nigracauda",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/nigracauda.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "nigroaeneus",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/nigroaeneus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "niveus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/niveus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "ochraea",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/ochraea.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "opuntiellus",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/opuntiellus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "pallidisignatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/pallidisignatus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "panamensis",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/panamensis.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "paroselae",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/paroselae.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "paucipuncta",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/paucipuncta.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "paululus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/paululus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "perlusus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/perlusus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "perpolitus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/perpolitus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "persimilis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/persimilis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "personatellus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/personatellus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "pexa",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/pexa.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "pilleatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/pilleatus.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "plumosus",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/plumosus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "pullatellus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/pullatellus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "pullatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/pullatus.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "raphaelis",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/raphaelis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "relucens",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/relucens.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "rivalis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/rivalis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "robustior",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/robustior.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "rufipes",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/rufipes.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "rufodentatus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/rufodentatus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "saponellus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/saponellus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "semilupinus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/semilupinus.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "sexcinctus",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/sexcinctus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "snowii",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/snowii.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "sonorensis",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/sonorensis.json"
+    },
+    {
+      "subgenus": "apomelissodes",
+      "species": "sphaeralceae",
+      "url": "https://themelissodesproject.wildref.org/api/apomelissodes/sphaeralceae.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "stearnsi",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/stearnsi.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "subagilis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/subagilis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "subillatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/subillatus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "submenuacha",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/submenuacha.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "tepaneca",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/tepaneca.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "tepidus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/tepidus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "terminatus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/terminatus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "tescorum",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/tescorum.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "tessellatus",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/tessellatus.json"
+    },
+    {
+      "subgenus": "melissodes",
+      "species": "thelypodii",
+      "url": "https://themelissodesproject.wildref.org/api/melissodes/thelypodii.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "tibialis",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/tibialis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "tinctus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/tinctus.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "tintinnans",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/tintinnans.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "tribas",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/tribas.json"
+    },
+    {
+      "subgenus": "ecplectica",
+      "species": "trifasciatus",
+      "url": "https://themelissodesproject.wildref.org/api/ecplectica/trifasciatus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "trinodis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/trinodis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "tristis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/tristis.json"
+    },
+    {
+      "subgenus": "callimelissodes",
+      "species": "tuckeri",
+      "url": "https://themelissodesproject.wildref.org/api/callimelissodes/tuckeri.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "utahensis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/utahensis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "velutinus",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/velutinus.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "verbesinarum",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/verbesinarum.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "vernalis",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/vernalis.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "vernoniae",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/vernoniae.json"
+    },
+    {
+      "subgenus": "eumelissodes",
+      "species": "wheeleri",
+      "url": "https://themelissodesproject.wildref.org/api/eumelissodes/wheeleri.json"
+    }
+  ]
+}
