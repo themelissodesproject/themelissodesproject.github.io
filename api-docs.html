@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page-specific title -->
+  <title>API documentation</title>
+
+  <!--page description>-->
+  <meta name="description" content="API documention for data access on The Melissodes Project">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://themelissodesproject.wildref.org/api-docs.html">
+  
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Brand metadata (shared across all pages) -->
+  <meta name="application-name" content="The Melissodes Project">
+  <meta property="og:site_name" content="The Melissodes Project">
+
+  <!-- Page-specific Open Graph, Change "og:url", "og:image" and the rest of the descriptions -->
+  <meta property="og:title" content="API documentation">
+  <meta property="og:description" content="API documention for data access on The Melissodes Project">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themelissodesproject.wildref.org/api-docs.html">
+  <meta property="og:image" content="https://themelissodesproject.wildref.org/img/api-thumbnail.webp">
+
+  <!-- Page-specific Twitter Card, Change "twitter:image" and the rest of the descriptions -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="API documentation">
+  <meta name="twitter:description" content="API documention for data access on The Melissodes Project">
+  <meta name="twitter:image" content="https://themelissodesproject.wildref.org/img/api-thumbnail.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "API documentation",
+  "author": {
+    "@type": "Person",
+    "name": "Frank Hogland"
+  },
+  "datePublished": "2025-12-11",
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Melissodes Project",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://themelissodesproject.wildref.org/favicon.png"
+    }
+  },
+  "url": "https://themelissodesproject.wildref.org/api-docs.html",
+  "description": "API documention for data access on The Melissodes Project",
+  "keywords": ["Melissodes", "Oregon", "taxonomy", "phylogeny", "bee species", "Melissodes distribution", "Melissodes identification", "API", "data"],
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "The Melissodes Project",
+    "url": "https://themelissodesproject.wildref.org/"
+  }
+}
+</script>
+
+  <link rel="stylesheet" href="style-article.css">
+<style>
+    /* Global box-sizing fix */
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden; /* Prevent horizontal scroll on the body */
+    }
+
+    .page .page-text .taxa-name {
+      margin-top: 11px;
+      margin-left: 20px;
+    }
+
+    .top-title {
+      font-size: 22px; 
+      font-weight: bold;
+      display: block; /* Ensures it sits above boxes properly */
+    }
+
+    #map {
+      margin-top: 1em;
+    }
+
+    #text {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .chart {
+      width: 100% !important;
+      height: 300px;
+      display: block;
+    }
+
+
+
+    #taxa-top {
+      margin-top: 45px !important;
+    }
+
+    .glossary {
+      display: flex;
+    }
+
+
+
+    .section {
+      position: relative;
+      background: rgb(251, 251, 250);
+      border: 1.5px solid #F3F4F5;
+      padding: 25px;
+      margin-top: 2em;
+      font-size: 0.95em;
+      line-height: 1.5;
+      transition: all 0.25s ease;
+      width: 100%;
+      max-width: 100%;
+      word-wrap: break-word; /* Ensure text doesn't overflow */
+    }
+
+    .outer-box {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .page-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .body-text {
+      width: 100%;
+    }
+
+    .code {
+      background-color: #222;
+      color: white;
+      border-radius: 5px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 15px;
+      width: 100%;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
+    /* CRITICAL FIX: Make pre wrap on mobile instead of going off-screen */
+    .code pre {
+      margin: 0;
+      white-space: pre-wrap;       /* css-3 */
+      white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+      font-family: monospace;
+      font-size: 14px;
+      tab-size: 2;
+      -moz-tab-size: 2;
+    }
+
+    @media only screen and (max-width: 850px) {
+      .page .page-text .taxa-name {
+        font-size: 14px !important;
+        text-align: center !important;
+        margin-left: 0 !important;
+      }
+      
+      .section {
+        padding: 25px; /* Reduce padding on mobile */
+      }
+
+      .top-title {
+        text-align: center;
+      }
+
+      table {
+        width: 100% !important;
+        display: block;
+        overflow-x: auto;
+      }
+
+      #group-name {
+        text-align: center;
+        padding-left: 0px !important;
+      }
+
+      #text {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+      }
+
+      .glossary {
+        display: block;
+      }
+
+          .section {
+      padding: 10px;
+    }
+    }
+
+@media only screen and (max-width: 320px) {
+      .chart {
+        height: 200px !important;
+      }
+      
+      .top-title {
+        font-size: 18px;
+        text-align: center;
+      }
+      
+      .code {
+        padding: 8px; /* Thinner padding on very small screens */
+      }
+
+      .code pre {
+        font-size: 8px; /* Even smaller code font for mobile */
+        line-height: 1;
+      }
+
+          .section {
+      padding: 3px;
+    }
+    }
+
+
+    @media print {
+      #long-bar2 {
+        display: block !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+    }
+  </style>
+</head>
+<body>
+   <div class="container">
+  <div class="heading">
+    <header class="bar-header">
+      <p class="banner">The Melissodes Project</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources-menu.html">Resources</a></li>
+          <li><a href="Melissodes.html">Genus</a></li>
+          <li><a href="species-index.html">Species Index</a></li>
+          <li><a href="gallery-menu.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    </div>
+
+    <section class="page">
+        <div class="page-text">
+            <h1 id="top" style="line-height: 1.5; text-align: center; font-style: normal !important;">The Melissodes Project API Documentation</h1>
+            <hr class="long-bar2">
+                <div class="page-content">
+                <div class="body-text">
+                    <p style="line-height: 1.5;">The Melissodes Project API is an open-source free static database of Melissodes species occurrences. 
+                      The data engine is based on records from GBIF with AI floral-host relationship detections to find un-filtered flower 
+                      records from historic labels and inconsistent entries. Given that this is a static API and was designed to be accessed through GET requests, URL filtering will not be available</p>
+
+                      <div class="outer-box">
+                        <span class="top-title" style="font-size: 22px; font-weight: bold;"><b>Getting started</b></span>
+                      <div class="section">
+                         <span style="line-height: 1.5;">URLs are structured by entering the API directory and appending the subgenus and species.json to the base URL:
+                         </span>
+                         <div class="code">
+                         <code>https://themelissodesproject.wildref.org/api/{subgenus}/{species}.json</code></div>
+                         <span style="line-height: 1.5;">Lists of all URLs, along with subgeneric and species classification can be foud here:
+                          <div class="code">
+                         <code>https://themelissodesproject.wildref.org/api/species-index.json</code></div>
+                         </span>
+                      </div>
+                      </div>
+
+                       <div class="outer-box">
+                        <span class="top-title" style="font-size: 22px; font-weight: bold;"><b>Data structure</b></span>
+                      <div class="section">
+                         <span style="line-height: 1.5;">Each species follows the same Json file structure with five overarching classes:
+                           taxanomic data, flight period,
+                          distribution summary, occurences, and metadata. Examples of these structures are provided below.
+                         </span>
+                         <div>
+                         <span><b><br>Taxanomic data:</b></span>
+                         <div class="code">
+                         <code><pre>
+{
+  "binomial_name": "Melissodes agilis",
+  "common_name": "Agile Long-horned Bee",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "Eumelissodes",
+    "species": "agilis"
+}
+}</pre></code></div></div>
+
+                         <div>
+                         <span><b><br>Flight period:</b></span>
+                         <div class="code">
+                         <code><pre>
+{
+ "flight_period": {
+  "June": {
+     "count": 1161,
+    "percentage": 7.37
+  },
+  "July": {
+    "count": 3513,
+    "percentage": 22.32
+  },
+  "August": {
+  "count": 9654,
+  "percentage": 61.34
+  },
+  "September": {
+    "count": 1480,
+    "percentage": 9.41
+  },
+}
+}</pre></code></div></div>
+                        <span>Overall, this section is an automatic summary of the data in the "observations" class. Two subsections are given per month (months without
+                          any observations are automatically excluded in each species Json), "count" and "percentage". In this example, this species
+                          was only active during four months out of the year, June, July, August, and September. The percentages per month are given as a means of normalization, for example, 
+                          when trying to identify months of peak activity, M. agilis may have ~9,000 records their peak activity month, but less common species (eg. M. bicoloratus)
+                          may not even have a total of 9,000 records. So, instead of calculating peak activity using a numerical value, percentages can be better utilized for such tasks.
+                        </span>
+
+                         <div>
+                         <span><b><br>Distribution summary:</b></span>
+                         <div class="code">
+                         <code><pre>
+"distribution": {
+    "Delaware": {
+      "state_total": 1,
+      "counties": {
+        "Nan": {
+          "count": 1
+        }
+      }
+    },
+    "California": {
+      "state_total": 2441,
+      "counties": {
+        "Stanislaus": {
+          "count": 203
+        },
+        "Riverside": {
+          "count": 34
+        },
+        "Sanbernardino": {
+          "count": 7
+        },
+        "Santaclara": {
+          "count": 1
+        },
+        "Losangeles": {
+          "count": 1
+    },
+  }
+}
+}
+                         </pre></code></div></div>
+                        <span>Similarly to that of the flight period, this section is a summary of what's found in the occurrences. Each 
+                          state is given three fields, state total (state_total), counties (counties), and number of specimens per county (count). 
+                          The distribution summary is less for in-depth record accounts, and more for listing state records.
+
+                             <div>
+                         <span><b><br>Occurences:</b></span>
+                         <div class="code">
+                         <code><pre>
+"occurrences": [
+{
+  "gbifID": "3801851843",
+  "gbif_link": "https://www.gbif.org/occurrence/3801851843",
+  "location": {
+    "state": "Illinois",
+    "county": "Fayette",
+    "locality": null,
+    "coordinates": {
+      "lat": "38.8747",
+      "lon": "-88.7756"
+    }
+  },
+  "temporal": {
+    "date": "1966-07-20",
+    "month": "7.0",
+    "year": "1966.0"
+  },
+  "collector": {
+    "recordedBy": "W.E. LaBerge, W.J. Knee",
+    "identifiedBy": null
+  },
+  "ecology": {
+    "notes": "ILL., 3 mi N of Farina, Fayette Co.; 20-VII-66; Knee, LaBerge; On Silphium laciniatum  Melissodes (Eumelissodes) agilis Cresson; det. W.E. LaBerge",
+    "extracted_floral_hosts": [
+      {
+        "original_query": "Silphium laciniatum",
+        "accepted_genus": "Silphium",
+        "accepted_species": "laciniatum",
+        "canonical_name": "Silphium laciniatum"
+      }
+    ]
+  },
+  "citation": {
+    "text": "McElrath T (2023). Illinois Natural History Survey Insect Collection. Illinois Natural History Survey. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2025-12-19.",
+    "license": "CC BY 4.0"
+  }
+}
+]</pre></code></div></div>
+                        <span>The occurrence section is where the majority of the data (and the json structure) lie; the small example above is a single Melissodes agilis observation. Each observational section can be split into
+                          five subsections, location and occurrence id (gbifID, gbif_link, and location), date (temporal), collection attribution (collector), bionomics (ecology), and the observation attribution (citation). Although the first three and last
+                          sections are somewhat self explanatory, "ecology" is processed slightly differently. As can be observed from the presence of GBIF identifiers, data is aggregated from GBIF, then filtered and parsed using AI floral recognition
+                          to organize previously "hidden records". This is done by parsing through “fieldNotes”,  “verbatimLabel”, “occurrenceRemarks”, and “associatedTaxa” columns from occurrence.txt records in GBIF Darwincore Archives. If a flower 
+                          species is found in any one of these columns, the entire present string is added to the “notes” field in the ecology subsection (in the example above, this would be the case of a “verbatimLabel” having a flower present and 
+                          being added to a general “notes” feild). After which the string of characters in which the AI interprets as a flower is checked against the GBIF API backend to ensure the predicted taxa exists (these are the characters in 
+                          the "original_query" field). Once greenlighted, the genus ("accepted_genus") and species ("accepted_species") are extracted and then reassembled into the final binomial name ("canonical_name"). This safeguard is put in 
+                          place so if a typo of a certain flower taxa occurs, the canonical_name field is combining character strings strictly from GBIF API output and the error becomes isolated. Note, this is still AI interpretation and will 
+                          therefore likely extract incorrect strings of predicted taxa (e.g. a label may read “3 mi W; Sterling, Ida.; Bingham Co.; IX-17-1954 Melissodes; rivalis Cresson; det. W. E. LaBerge A.R.Gittins; Collector,” and the AI 
+                          may detect “Ida” as a flower, given it’s a valid genus, even though this instead is an abbreviation for Idaho). In cases such as these, it’s important to check the context of the label, hence the reason for its presence. </span>
+
+                          <div>
+                          <span><b><br>Metadata:</b></span>
+                         <div class="code">
+                         <code><pre>
+"metadata": {
+  "project_name": "The Melissodes Project",
+  "total_records": 17066,
+  "geospatial_fixes": 1226,
+  "contributing_datasets": [
+    "Gross J, Oboyski P (2025). Essig Museum of Entomology. Version 121.421. Berkeley Natural History Museums. Occurrence dataset https://doi.org/10.15468/0saucj accessed via GBIF.org on 2025-12-19. (CC BY 4.0)",
+    "Gibbs J (2025). J. B. Wallis / R. E. Roughley Museum of Entomology. Version 1.2. University of Manitoba. Occurrence dataset https://doi.org/10.5886/hgagiy accessed via GBIF.org on 2025-12-19. (CC BY 4.0)",
+    "Bentley A, Osborn R (2025). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2025-12-19. (CC BY 4.0)",
+    "McElrath T (2023). Illinois Natural History Survey Insect Collection. Illinois Natural History Survey. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2025-12-19. (CC BY 4.0)",
+    "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2025-12-19. (CC BY 4.0)",
+    "Colorado State University, C.P. Gillette Museum of Arthropod Diversity (2025). C.P. Gillette Museum of Arthropod Diversity. Occurrence dataset https://doi.org/10.15468/k0aett accessed via GBIF.org on 2025-12-19. (CC0 1.0)",
+    "University of Minnesota Insect Collection (2025). University of Minnesota Insect Collection. Occurrence dataset https://doi.org/10.15468/ahwyqb accessed via GBIF.org on 2025-12-19. (CC0 1.0)",
+    "Oram R (2025). Royal Saskatchewan Museum - Entomology. Version 2.1. Royal Saskatchewan Museum. Occurrence dataset https://doi.org/10.5886/osnmhn accessed via GBIF.org on 2025-12-19. (CC BY 4.0)",
+    "Scott V (2025). UCM Entomology Collection. Version 6.6. University of Colorado Museum of Natural History. Occurrence dataset https://doi.org/10.15468/jsgtns accessed via GBIF.org on 2025-12-19. (CC BY-NC 4.0)",
+    "MT James Entomological Collection, Washington State University (2025). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2025-12-19. (CC BY-NC 4.0)"
+  ]
+}</pre></code></div></div>
+                        <span>Metadata is the final section of the Json file structure, consisting mostly of dataset-wide citations and observational counts. Each citation has its corresponding license dynamically appended 
+                          for the specific database used. Along with this, the total number of geospatial fixes are given, which are observations that have coordinates but no state and/or county defined that have been updated 
+                          with these corrected values. </span>
+                        </div>
+                        </div>
+
+                           <div class="outer-box">
+                        <span class="top-title" style="font-size: 22px; font-weight: bold;"><b>Attribution</b></span>
+                      <div class="section">
+                         <span style="line-height: 1.5;">The Melissodes Project API aggregates data from several distributors. When using this API, please cite each dataset used in the extracted data as follows:<br><br>
+                          1. Using the “text” object under “citation” for proper full citations of each record (if using the full, unaltered dataset, this can be done from the "contributing_datasets" object under “metadata” for a full list of all datasets).<br><br>
+                          2. Abide by the "license" object under “citation” of each record.<br><br><br>
+                          The Melissodes Project takes no ownership over any of the data, all credit should go to the individual datasets. 
+                         </span>
+                      </div>
+
+                       
+        <footer style="text-align: center; font-style: normal;">
+          © 2025 Frank Hogland. Published on The Melissodes Project.<br>
+          © 2025 The Melissodes Project. All Rights Reserved.
+        </footer>
+    </section>
+   </div>
+
+
+
+
+<script>
+
+// Auto-convert Creative Commons attributions such as:
+// (CC-BY 4.0), (CC-BY-NC-SA 3.0), (CC0 1.0), (CC 0 1.0)
+// into proper links, including overlay captions.
+
+(function() {
+
+    // Regex to detect:
+    // (CC-BY 4.0)
+    // (CC-BY-NC-SA 3.0)
+    // (CC0 1.0)
+    // (CC 0 1.0)
+    const regex = /\((CC(?:-[A-Z0-9\-]+|0| 0))\s+([0-9\.]+)\)/gi;
+
+    function ccUrl(code, version) {
+        let normalized = code.replace(/^CC-?/, "").trim().toLowerCase();
+
+        // Remove spaces (handles "CC 0")
+        normalized = normalized.replace(/\s+/g, "");
+
+        // Special case: CC0 lives in a different path
+        if (normalized === "0") {
+            return `https://creativecommons.org/publicdomain/zero/${version}/`;
+        }
+
+        // All other licenses are under /licenses/
+        return `https://creativecommons.org/licenses/${normalized}/${version}/`;
+    }
+
+    function processNode(node) {
+        if (node.nodeType !== Node.TEXT_NODE) return;
+
+        const text = node.textContent;
+        if (!regex.test(text)) return;
+
+        const span = document.createElement("span");
+        let lastIndex = 0;
+
+        text.replace(regex, (match, code, version, offset) => {
+            // Insert previous text
+            span.appendChild(document.createTextNode(text.slice(lastIndex, offset)));
+
+            // Create the link
+            const a = document.createElement("a");
+            a.href = ccUrl(code, version);
+            a.textContent = match;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.style.color = "black";
+            a.style.fontWeight = "bold";
+            a.style.textDecoration = "none";
+
+            span.appendChild(a);
+            lastIndex = offset + match.length;
+        });
+
+        // Add the remainder
+        span.appendChild(document.createTextNode(text.slice(lastIndex)));
+
+        node.replaceWith(span);
+    }
+
+    function walk(node) {
+        if (!node || node.nodeName === "SCRIPT" || node.nodeName ==="STYLE") return;
+
+        if (node.nodeType === Node.TEXT_NODE) {
+            processNode(node);
+        } else {
+            node.childNodes.forEach(walk);
+        }
+    }
+
+    // Process entire document
+    walk(document.body);
+
+    // Patch overlay processing so CC links work in popups
+    const originalOpenOverlay = window.openOverlay;
+    window.openOverlay = function(imgSrc, html) {
+        originalOpenOverlay(imgSrc, html);
+
+        // Slight delay to allow DOM insertion
+        setTimeout(() => {
+            const overlay = document.querySelector(".overlay-content");
+            if (overlay) walk(overlay);
+        }, 30);
+    };
+
+})();
+</script>
+
+
+</body>
+
+</html>
+
