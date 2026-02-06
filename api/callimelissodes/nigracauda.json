@@ -1,0 +1,2028 @@
+{
+  "binomial_name": "Melissodes nigracauda",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "nigracauda"
+  },
+  "flight_period": {
+    "June": {
+      "count": 1,
+      "percentage": 2.44
+    },
+    "July": {
+      "count": 1,
+      "percentage": 2.44
+    },
+    "August": {
+      "count": 8,
+      "percentage": 19.51
+    },
+    "September": {
+      "count": 31,
+      "percentage": 75.61
+    }
+  },
+  "distribution": {
+    "California": {
+      "state_total": 38,
+      "counties": {
+        "Losangeles": {
+          "count": 2
+        },
+        "Sanbenito": {
+          "count": 1
+        },
+        "Sandiego": {
+          "count": 1
+        },
+        "Los Angeles": {
+          "count": 33
+        },
+        "Mono": {
+          "count": 1
+        }
+      }
+    },
+    "Texas": {
+      "state_total": 1,
+      "counties": {
+        "Cameron": {
+          "count": 1
+        }
+      }
+    },
+    "Washington": {
+      "state_total": 6,
+      "counties": {
+        "Chelan": {
+          "count": 6
+        }
+      }
+    },
+    "Nan": {
+      "state_total": 12,
+      "counties": {
+        "Contra Costa": {
+          "count": 1
+        }
+      }
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "658944921",
+      "gbif_link": "https://www.gbif.org/occurrence/658944921",
+      "location": {
+        "state": "California",
+        "county": "Losangeles",
+        "locality": "Pasadena",
+        "coordinates": {
+          "lat": "34.11611",
+          "lon": "-118.15034"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": "W.E. LaBerge 1959"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944920",
+      "gbif_link": "https://www.gbif.org/occurrence/658944920",
+      "location": {
+        "state": "California",
+        "county": "Losangeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "34.18972",
+          "lon": "-118.13118"
+        }
+      },
+      "temporal": {
+        "date": "1935-08-19",
+        "month": "8.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": "W.E. LaBerge 1959"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944919",
+      "gbif_link": "https://www.gbif.org/occurrence/658944919",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "1998",
+        "month": null,
+        "year": "1998.0"
+      },
+      "collector": {
+        "recordedBy": "O.J. Messinger",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944918",
+      "gbif_link": "https://www.gbif.org/occurrence/658944918",
+      "location": {
+        "state": "California",
+        "county": "Sandiego",
+        "locality": "Ramona",
+        "coordinates": {
+          "lat": "33.0434",
+          "lon": "-116.8681"
+        }
+      },
+      "temporal": {
+        "date": "1982-07-14",
+        "month": "7.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "J.A. Halstead",
+        "identifiedBy": "J.S. Ascher 2006"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658375760",
+      "gbif_link": "https://www.gbif.org/occurrence/658375760",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658360143",
+      "gbif_link": "https://www.gbif.org/occurrence/658360143",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658327344",
+      "gbif_link": "https://www.gbif.org/occurrence/658327344",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Pasadena",
+        "coordinates": {
+          "lat": "34.1478",
+          "lon": "-118.1436"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-11",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658323216",
+      "gbif_link": "https://www.gbif.org/occurrence/658323216",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658271922",
+      "gbif_link": "https://www.gbif.org/occurrence/658271922",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658249695",
+      "gbif_link": "https://www.gbif.org/occurrence/658249695",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658231462",
+      "gbif_link": "https://www.gbif.org/occurrence/658231462",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658230376",
+      "gbif_link": "https://www.gbif.org/occurrence/658230376",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658218291",
+      "gbif_link": "https://www.gbif.org/occurrence/658218291",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-08-02",
+        "month": "8.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Senecio douglasii",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Senecio douglasii",
+            "accepted_genus": "Senecio",
+            "accepted_species": "flaccidus",
+            "canonical_name": "Senecio flaccidus"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658162002",
+      "gbif_link": "https://www.gbif.org/occurrence/658162002",
+      "location": {
+        "state": "Texas",
+        "county": "Cameron",
+        "locality": "Brownsville",
+        "coordinates": {
+          "lat": "25.9014",
+          "lon": "-97.4972"
+        }
+      },
+      "temporal": {
+        "date": "1905-06-06",
+        "month": "6.0",
+        "year": "1905.0"
+      },
+      "collector": {
+        "recordedBy": "Snow, Francis",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658149152",
+      "gbif_link": "https://www.gbif.org/occurrence/658149152",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658127158",
+      "gbif_link": "https://www.gbif.org/occurrence/658127158",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657849506",
+      "gbif_link": "https://www.gbif.org/occurrence/657849506",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657801007",
+      "gbif_link": "https://www.gbif.org/occurrence/657801007",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Pasadena",
+        "coordinates": {
+          "lat": "34.1478",
+          "lon": "-118.1436"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-11",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657800320",
+      "gbif_link": "https://www.gbif.org/occurrence/657800320",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Pasadena",
+        "coordinates": {
+          "lat": "34.1478",
+          "lon": "-118.1436"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-11",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657774944",
+      "gbif_link": "https://www.gbif.org/occurrence/657774944",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657721738",
+      "gbif_link": "https://www.gbif.org/occurrence/657721738",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-08-28",
+        "month": "8.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657718085",
+      "gbif_link": "https://www.gbif.org/occurrence/657718085",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657711214",
+      "gbif_link": "https://www.gbif.org/occurrence/657711214",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657682378",
+      "gbif_link": "https://www.gbif.org/occurrence/657682378",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657681039",
+      "gbif_link": "https://www.gbif.org/occurrence/657681039",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657664747",
+      "gbif_link": "https://www.gbif.org/occurrence/657664747",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657660309",
+      "gbif_link": "https://www.gbif.org/occurrence/657660309",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657653011",
+      "gbif_link": "https://www.gbif.org/occurrence/657653011",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657645453",
+      "gbif_link": "https://www.gbif.org/occurrence/657645453",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657642463",
+      "gbif_link": "https://www.gbif.org/occurrence/657642463",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657631422",
+      "gbif_link": "https://www.gbif.org/occurrence/657631422",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657599971",
+      "gbif_link": "https://www.gbif.org/occurrence/657599971",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657596558",
+      "gbif_link": "https://www.gbif.org/occurrence/657596558",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-13",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "5931818387",
+      "gbif_link": "https://www.gbif.org/occurrence/5931818387",
+      "location": {
+        "state": "Washington",
+        "county": "Chelan",
+        "locality": "Cougar Creek Fire area | Plot 2",
+        "coordinates": {
+          "lat": "47.772",
+          "lon": "-120.422"
+        }
+      },
+      "temporal": {
+        "date": "2021-08-03",
+        "month": "8.0",
+        "year": "2021.0"
+      },
+      "collector": {
+        "recordedBy": "Autumn Maust",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5931818386",
+      "gbif_link": "https://www.gbif.org/occurrence/5931818386",
+      "location": {
+        "state": "Washington",
+        "county": "Chelan",
+        "locality": "Cougar Creek Fire area | Plot 2",
+        "coordinates": {
+          "lat": "47.772",
+          "lon": "-120.422"
+        }
+      },
+      "temporal": {
+        "date": "2021-08-03",
+        "month": "8.0",
+        "year": "2021.0"
+      },
+      "collector": {
+        "recordedBy": "Autumn Maust",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5931818016",
+      "gbif_link": "https://www.gbif.org/occurrence/5931818016",
+      "location": {
+        "state": "Washington",
+        "county": "Chelan",
+        "locality": null,
+        "coordinates": {
+          "lat": "47.88",
+          "lon": "-120.26"
+        }
+      },
+      "temporal": {
+        "date": "2021-06-08/2021-08-03",
+        "month": null,
+        "year": "2021.0"
+      },
+      "collector": {
+        "recordedBy": "Autumn Maust",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5931818011",
+      "gbif_link": "https://www.gbif.org/occurrence/5931818011",
+      "location": {
+        "state": "Washington",
+        "county": "Chelan",
+        "locality": null,
+        "coordinates": {
+          "lat": "47.88",
+          "lon": "-120.26"
+        }
+      },
+      "temporal": {
+        "date": "2021-06-08/2021-08-03",
+        "month": null,
+        "year": "2021.0"
+      },
+      "collector": {
+        "recordedBy": "Autumn Maust",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5931815910",
+      "gbif_link": "https://www.gbif.org/occurrence/5931815910",
+      "location": {
+        "state": "Washington",
+        "county": "Chelan",
+        "locality": null,
+        "coordinates": {
+          "lat": "47.88",
+          "lon": "-120.26"
+        }
+      },
+      "temporal": {
+        "date": "2022-07-05/2022-08-01",
+        "month": null,
+        "year": "2022.0"
+      },
+      "collector": {
+        "recordedBy": "Autumn Maust",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5931810801",
+      "gbif_link": "https://www.gbif.org/occurrence/5931810801",
+      "location": {
+        "state": "Washington",
+        "county": "Chelan",
+        "locality": "Cougar Creek Fire area | Plot 2",
+        "coordinates": {
+          "lat": "47.772",
+          "lon": "-120.422"
+        }
+      },
+      "temporal": {
+        "date": "2023-08-07/2023-08-09",
+        "month": "8.0",
+        "year": "2023.0"
+      },
+      "collector": {
+        "recordedBy": "Autumn Maust",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5861439085",
+      "gbif_link": "https://www.gbif.org/occurrence/5861439085",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998618772",
+      "gbif_link": "https://www.gbif.org/occurrence/4998618772",
+      "location": {
+        "state": "Nan",
+        "county": "Contra Costa",
+        "locality": "Diablo Range",
+        "coordinates": {
+          "lat": "37.87901",
+          "lon": "-121.9203"
+        }
+      },
+      "temporal": {
+        "date": "1927-08-06",
+        "month": "8.0",
+        "year": "1927.0"
+      },
+      "collector": {
+        "recordedBy": "Cornell University Expedition",
+        "identifiedBy": "W. E. LaBerge"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J (2024). Cornell University Insect Collection (CUIC). Version 1.2. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4854161826",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161826",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161538",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161538",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161128",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161128",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160155",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160155",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160020",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160020",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159919",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159919",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159792",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159792",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159366",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159366",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159330",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159330",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4425179193",
+      "gbif_link": "https://www.gbif.org/occurrence/4425179193",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "2.5 miles SSW Valyermo, Ranch",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "20506"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3801851760",
+      "gbif_link": "https://www.gbif.org/occurrence/3801851760",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": null,
+        "coordinates": {
+          "lat": "34.18972",
+          "lon": "-118.13028"
+        }
+      },
+      "temporal": {
+        "date": "1934-09-30",
+        "month": "9.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Altadena, Calif.; 9-30-34; C.D.Michener Collector; Stephanomeria PARATYPE; Melissodes nigracauda; LaBerge 1959",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801371745",
+      "gbif_link": "https://www.gbif.org/occurrence/3801371745",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": null,
+        "coordinates": {
+          "lat": "34.18972",
+          "lon": "-118.13028"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Altadena, Calif.; 9-28-35; C.D.Michener Collector; Stephanomeria PARATYPE; Melissodes nigracauda; LaBerge 1959",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801337732",
+      "gbif_link": "https://www.gbif.org/occurrence/3801337732",
+      "location": {
+        "state": "California",
+        "county": "Mono",
+        "locality": null,
+        "coordinates": {
+          "lat": "38.35139",
+          "lon": "-119.52056"
+        }
+      },
+      "temporal": {
+        "date": "1960-08-11",
+        "month": "8.0",
+        "year": "1960.0"
+      },
+      "collector": {
+        "recordedBy": "D.Q. Cavagnaro",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Pickel Mdw.; Mono Co., Calif.; VIII-11-60; D.Q.Cavagnaro Collector Melissodes nigracauda LaBerge; det. W. E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1318893021",
+      "gbif_link": "https://www.gbif.org/occurrence/1318893021",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.105. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-02-06.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1024623070",
+      "gbif_link": "https://www.gbif.org/occurrence/1024623070",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1024623032",
+      "gbif_link": "https://www.gbif.org/occurrence/1024623032",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "Altadena",
+        "coordinates": {
+          "lat": "39.2067",
+          "lon": "-120.8103"
+        }
+      },
+      "temporal": {
+        "date": "1935-09-28",
+        "month": "9.0",
+        "year": "1935.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Stephanomeria",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stephanomeria",
+            "accepted_genus": "Stephanomeria",
+            "accepted_species": "sp.",
+            "canonical_name": "Stephanomeria"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 57,
+    "geospatial_fixes": 0,
+    "contributing_datasets": [
+      "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-06. (CC BY 4.0)",
+      "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-06. (CC BY 4.0)",
+      "Dombroskie J (2024). Cornell University Insect Collection (CUIC). Version 1.2. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-02-06. (CC BY-NC 4.0)",
+      "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-06. (CC BY 4.0)",
+      "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-06. (CC BY 4.0)",
+      "Mertz W, Kung G, Xie W (2025). LACM Entomology Collection. Version 5.32. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-06. (CC0 1.0)",
+      "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.105. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-02-06. (CC0 1.0)",
+      "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-02-06. (CC BY-NC 4.0)",
+      "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-06. (CC BY-NC 4.0)"
+    ]
+  }
+}
