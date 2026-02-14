@@ -1,0 +1,2328 @@
+{
+  "binomial_name": "Melissodes plumosus",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "plumosus"
+  },
+  "flight_period": {
+    "May": {
+      "count": 2,
+      "percentage": 8.7
+    },
+    "June": {
+      "count": 11,
+      "percentage": 47.83
+    },
+    "July": {
+      "count": 8,
+      "percentage": 34.78
+    },
+    "September": {
+      "count": 2,
+      "percentage": 8.7
+    }
+  },
+  "distribution": {
+    "California": {
+      "state_total": 36,
+      "counties": {
+        "Sanbenito": {
+          "count": 8
+        },
+        "Monterey": {
+          "count": 2
+        },
+        "Tulare": {
+          "count": 4
+        },
+        "Mono": {
+          "count": 3
+        },
+        "Modoc": {
+          "count": 2
+        },
+        "San Diego": {
+          "count": 6
+        },
+        "Plumas": {
+          "count": 2
+        },
+        "Santa Barbara": {
+          "count": 3
+        },
+        "Ventura": {
+          "count": 1
+        },
+        "Los Angeles": {
+          "count": 5
+        }
+      }
+    },
+    "Oregon": {
+      "state_total": 1,
+      "counties": {
+        "Klamath": {
+          "count": 1
+        }
+      }
+    },
+    "Nan": {
+      "state_total": 33,
+      "counties": {
+        "Lake": {
+          "count": 1
+        }
+      }
+    },
+    "Washington": {
+      "state_total": 2,
+      "counties": {
+        "Yakima": {
+          "count": 2
+        }
+      }
+    },
+    "North Dakota": {
+      "state_total": 1,
+      "counties": {
+        "Slope": {
+          "count": 1
+        }
+      }
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "768705592",
+      "gbif_link": "https://www.gbif.org/occurrence/768705592",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "2011",
+        "month": null,
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "J.M Meiners",
+        "identifiedBy": "T.L. Griswold 2013"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "768705578",
+      "gbif_link": "https://www.gbif.org/occurrence/768705578",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "2011",
+        "month": null,
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "T. Lamperty",
+        "identifiedBy": "T.L. Griswold 2013"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "768705558",
+      "gbif_link": "https://www.gbif.org/occurrence/768705558",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "2011",
+        "month": null,
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "J.M Meiners",
+        "identifiedBy": "T.L. Griswold 2013"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "659145004",
+      "gbif_link": "https://www.gbif.org/occurrence/659145004",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "2011",
+        "month": null,
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "J.M Meiners, T. Lamperty",
+        "identifiedBy": "T.L. Griswold 2013"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "659144997",
+      "gbif_link": "https://www.gbif.org/occurrence/659144997",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "2011",
+        "month": null,
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "J.M Meiners, T. Lamperty",
+        "identifiedBy": "T.L. Griswold 2013"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "659144964",
+      "gbif_link": "https://www.gbif.org/occurrence/659144964",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "2011",
+        "month": null,
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "J.M Meiners, T. Lamperty",
+        "identifiedBy": "T.L. Griswold 2013"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "659144958",
+      "gbif_link": "https://www.gbif.org/occurrence/659144958",
+      "location": {
+        "state": "California",
+        "county": "Monterey",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "2011",
+        "month": null,
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "J.M Meiners, T. Lamperty",
+        "identifiedBy": "T.L. Griswold 2013"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944927",
+      "gbif_link": "https://www.gbif.org/occurrence/658944927",
+      "location": {
+        "state": "California",
+        "county": "Tulare",
+        "locality": "Sequoia National Park, Ash Mountain",
+        "coordinates": {
+          "lat": "36.4919",
+          "lon": "-118.8306"
+        }
+      },
+      "temporal": {
+        "date": "1952-06-09",
+        "month": "6.0",
+        "year": "1952.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944926",
+      "gbif_link": "https://www.gbif.org/occurrence/658944926",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "1997",
+        "month": null,
+        "year": "1997.0"
+      },
+      "collector": {
+        "recordedBy": "O.,S.,&B. Messinger",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944925",
+      "gbif_link": "https://www.gbif.org/occurrence/658944925",
+      "location": {
+        "state": "Oregon",
+        "county": "Klamath",
+        "locality": "Klamath Falls",
+        "coordinates": {
+          "lat": "42.22",
+          "lon": "-121.78"
+        }
+      },
+      "temporal": {
+        "date": "1934-07-07",
+        "month": "7.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "E.C. Van Dyke",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944924",
+      "gbif_link": "https://www.gbif.org/occurrence/658944924",
+      "location": {
+        "state": "California",
+        "county": "Sanbenito",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "36.0",
+          "lon": "-121.0"
+        }
+      },
+      "temporal": {
+        "date": "1997",
+        "month": null,
+        "year": "1997.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944923",
+      "gbif_link": "https://www.gbif.org/occurrence/658944923",
+      "location": {
+        "state": "California",
+        "county": "Mono",
+        "locality": "Mammoth",
+        "coordinates": {
+          "lat": "37.6065",
+          "lon": "-119.0113"
+        }
+      },
+      "temporal": {
+        "date": "1933-07-06",
+        "month": "7.0",
+        "year": "1933.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. & R.M. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658944922",
+      "gbif_link": "https://www.gbif.org/occurrence/658944922",
+      "location": {
+        "state": "California",
+        "county": "Mono",
+        "locality": "Mammoth",
+        "coordinates": {
+          "lat": "37.6065",
+          "lon": "-119.0113"
+        }
+      },
+      "temporal": {
+        "date": "1933-07-08",
+        "month": "7.0",
+        "year": "1933.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. & R.M. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658201091",
+      "gbif_link": "https://www.gbif.org/occurrence/658201091",
+      "location": {
+        "state": "California",
+        "county": "Modoc",
+        "locality": "Davis Creek",
+        "coordinates": {
+          "lat": "41.7782",
+          "lon": "-120.4007"
+        }
+      },
+      "temporal": {
+        "date": "1922-07-16",
+        "month": "7.0",
+        "year": "1922.0"
+      },
+      "collector": {
+        "recordedBy": "Fox, C",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657732014",
+      "gbif_link": "https://www.gbif.org/occurrence/657732014",
+      "location": {
+        "state": "California",
+        "county": "Tulare",
+        "locality": "Sequoia National Park, Ash Mountain",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1952-06-09",
+        "month": "6.0",
+        "year": "1952.0"
+      },
+      "collector": {
+        "recordedBy": "Bechtel, R",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657607235",
+      "gbif_link": "https://www.gbif.org/occurrence/657607235",
+      "location": {
+        "state": "California",
+        "county": "Modoc",
+        "locality": "Back Creek",
+        "coordinates": {
+          "lat": "37.9225",
+          "lon": "-121.9253"
+        }
+      },
+      "temporal": {
+        "date": "1922-07-21",
+        "month": "7.0",
+        "year": "1922.0"
+      },
+      "collector": {
+        "recordedBy": "Fox, C",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "6116925668",
+      "gbif_link": "https://www.gbif.org/occurrence/6116925668",
+      "location": {
+        "state": "Nan",
+        "county": "Lake",
+        "locality": "Summer Lake",
+        "coordinates": {
+          "lat": "43.029",
+          "lon": "-120.789"
+        }
+      },
+      "temporal": {
+        "date": "2020-07-09",
+        "month": "7.0",
+        "year": "2020.0"
+      },
+      "collector": {
+        "recordedBy": "R.Pederson",
+        "identifiedBy": "Briana C Lindh"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "5863633939",
+      "gbif_link": "https://www.gbif.org/occurrence/5863633939",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "5141257215",
+      "gbif_link": "https://www.gbif.org/occurrence/5141257215",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": null,
+        "coordinates": {
+          "lat": "32.821",
+          "lon": "-116.529"
+        }
+      },
+      "temporal": {
+        "date": "1934-06-16",
+        "month": "6.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Maurice Theodore James;Helen B. James",
+        "identifiedBy": "Wallace E. LaBerge"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141247953",
+      "gbif_link": "https://www.gbif.org/occurrence/5141247953",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": null,
+        "coordinates": {
+          "lat": "32.821",
+          "lon": "-116.529"
+        }
+      },
+      "temporal": {
+        "date": "1934-06-16",
+        "month": "6.0",
+        "year": "1934.0"
+      },
+      "collector": {
+        "recordedBy": "Maurice Theodore James;Helen B. James",
+        "identifiedBy": "Wallace E. LaBerge"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141247913",
+      "gbif_link": "https://www.gbif.org/occurrence/5141247913",
+      "location": {
+        "state": "California",
+        "county": "Plumas",
+        "locality": "7 miles north of Loyalton | Dyson Lane",
+        "coordinates": {
+          "lat": "39.762",
+          "lon": "-120.237"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-21",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "William J. Turner",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141247907",
+      "gbif_link": "https://www.gbif.org/occurrence/5141247907",
+      "location": {
+        "state": "California",
+        "county": "Plumas",
+        "locality": "7 miles north of Loyalton | Dyson Lane",
+        "coordinates": {
+          "lat": "39.762",
+          "lon": "-120.237"
+        }
+      },
+      "temporal": {
+        "date": "1966-09-21",
+        "month": "9.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "William J. Turner",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141240695",
+      "gbif_link": "https://www.gbif.org/occurrence/5141240695",
+      "location": {
+        "state": "Washington",
+        "county": "Yakima",
+        "locality": "near Tieton",
+        "coordinates": {
+          "lat": "46.666",
+          "lon": "-120.812"
+        }
+      },
+      "temporal": {
+        "date": "2023-06-16",
+        "month": "6.0",
+        "year": "2023.0"
+      },
+      "collector": {
+        "recordedBy": "Edward Lisowski",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": "\"host\":\"Iliamna rivularis\"",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Iliamna rivularis",
+            "accepted_genus": "Iliamna",
+            "accepted_species": "rivularis",
+            "canonical_name": "Iliamna rivularis"
+          }
+        ]
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141240174",
+      "gbif_link": "https://www.gbif.org/occurrence/5141240174",
+      "location": {
+        "state": "Washington",
+        "county": "Yakima",
+        "locality": "near Tieton",
+        "coordinates": {
+          "lat": "46.666",
+          "lon": "-120.812"
+        }
+      },
+      "temporal": {
+        "date": "2023-06-16",
+        "month": "6.0",
+        "year": "2023.0"
+      },
+      "collector": {
+        "recordedBy": "Edward Lisowski",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": "\"host\":\"Iliamna rivularis\"",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Iliamna rivularis",
+            "accepted_genus": "Iliamna",
+            "accepted_species": "rivularis",
+            "canonical_name": "Iliamna rivularis"
+          }
+        ]
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4854161943",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161943",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161930",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161930",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161796",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161796",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161341",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161341",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161267",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161267",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161264",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161264",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161142",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161142",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160989",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160989",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160744",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160744",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160631",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160631",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160595",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160595",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160497",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160497",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160490",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160490",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160409",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160409",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160379",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160379",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160294",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160294",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160267",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160267",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160189",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160189",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160128",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160128",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160088",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160088",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160062",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160062",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159963",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159963",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159886",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159886",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159846",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159846",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159680",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159680",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159642",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159642",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159447",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159447",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159344",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159344",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4540292470",
+      "gbif_link": "https://www.gbif.org/occurrence/4540292470",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": "#1443 MTLA A25",
+        "coordinates": {
+          "lat": "32.71",
+          "lon": "-117.16"
+        }
+      },
+      "temporal": {
+        "date": "2004-05-17",
+        "month": "5.0",
+        "year": "2004.0"
+      },
+      "collector": {
+        "recordedBy": "DB",
+        "identifiedBy": "Jason Gibbs"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Gibbs J (2025). J. B. Wallis / R. E. Roughley Museum of Entomology. Version 1.2. University of Manitoba. Occurrence dataset https://doi.org/10.5886/hgagiy accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4540286575",
+      "gbif_link": "https://www.gbif.org/occurrence/4540286575",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": "#2113 SWEB C150",
+        "coordinates": {
+          "lat": "32.71",
+          "lon": "-117.16"
+        }
+      },
+      "temporal": {
+        "date": "2004-05-19",
+        "month": "5.0",
+        "year": "2004.0"
+      },
+      "collector": {
+        "recordedBy": "DB",
+        "identifiedBy": "Jason Gibbs"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Gibbs J (2025). J. B. Wallis / R. E. Roughley Museum of Entomology. Version 1.2. University of Manitoba. Occurrence dataset https://doi.org/10.5886/hgagiy accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940761",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940761",
+      "location": {
+        "state": "California",
+        "county": "Tulare",
+        "locality": null,
+        "coordinates": {
+          "lat": "36.489444",
+          "lon": "-118.829167"
+        }
+      },
+      "temporal": {
+        "date": "1952-06-09",
+        "month": "6.0",
+        "year": "1952.0"
+      },
+      "collector": {
+        "recordedBy": "R.M. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Sequoia Nat; Prk Ash Mt; Cal VI-9 1952 Melissodes; plumosa; LaB; det. W. E. LaBerge R.M.Bohart; Collector",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sequoia",
+            "accepted_genus": "Sequoia",
+            "accepted_species": "sp.",
+            "canonical_name": "Sequoia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939761",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939761",
+      "location": {
+        "state": "California",
+        "county": "Santa Barbara",
+        "locality": null,
+        "coordinates": {
+          "lat": "34.53333",
+          "lon": "-120.03333"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-24",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "A.E. Menke",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Santa Ynez; Mts.S.Bar Co; Cal. VI-24-59 Melissodes; plumosa LaBerge; det. W. E. LaBerge A.E.Menke; Collector",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801938789",
+      "gbif_link": "https://www.gbif.org/occurrence/3801938789",
+      "location": {
+        "state": "California",
+        "county": "Monterey",
+        "locality": null,
+        "coordinates": {
+          "lat": "36.60028",
+          "lon": "-121.89361"
+        }
+      },
+      "temporal": {
+        "date": "1944-07-12",
+        "month": "7.0",
+        "year": "1944.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Monterey, Calif.; Hastings Res. Melissodes; plumosa LaBerge; det. W. E. LaBerge C848; Clearing; in Bkbrush; C22b:7/12/44",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801338797",
+      "gbif_link": "https://www.gbif.org/occurrence/3801338797",
+      "location": {
+        "state": "California",
+        "county": "Santa Barbara",
+        "locality": null,
+        "coordinates": {
+          "lat": "34.53333",
+          "lon": "-120.03333"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-24",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "A.E. Menke",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Santa Ynez; Mts.S.Bar Co; Cal. VI-24-59 Melissodes; plumosa LaBegre; det. W. E. LaBerge J.R. Russell; Collector",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801336801",
+      "gbif_link": "https://www.gbif.org/occurrence/3801336801",
+      "location": {
+        "state": "California",
+        "county": "Santa Barbara",
+        "locality": null,
+        "coordinates": {
+          "lat": "34.53333",
+          "lon": "-120.03333"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-24",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "A.E. Menke",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Santa Ynez; Mts.S.Bar Co; Cal. VI-24-59 Melissodes; plumosa LaBegre; det. W. E. LaBerge F.D. Parker; Collector",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3443472308",
+      "gbif_link": "https://www.gbif.org/occurrence/3443472308",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3442415351",
+      "gbif_link": "https://www.gbif.org/occurrence/3442415351",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3442383177",
+      "gbif_link": "https://www.gbif.org/occurrence/3442383177",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804763182",
+      "gbif_link": "https://www.gbif.org/occurrence/2804763182",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": "Dulzura",
+        "coordinates": {
+          "lat": "32.643889",
+          "lon": "-116.781111"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804754266",
+      "gbif_link": "https://www.gbif.org/occurrence/2804754266",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": "San Diego",
+        "coordinates": {
+          "lat": "32.715278",
+          "lon": "-117.156389"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "W. S. Wright",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804748151",
+      "gbif_link": "https://www.gbif.org/occurrence/2804748151",
+      "location": {
+        "state": "California",
+        "county": "Mono",
+        "locality": "Benton Crossing",
+        "coordinates": {
+          "lat": "37.699167",
+          "lon": "-118.763056"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "F. R. Platt",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804610831",
+      "gbif_link": "https://www.gbif.org/occurrence/2804610831",
+      "location": {
+        "state": "North Dakota",
+        "county": "Slope",
+        "locality": "Marmarth",
+        "coordinates": {
+          "lat": "46.325278",
+          "lon": "-103.879722"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "O. A. Stevens",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899931901",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931901",
+      "location": {
+        "state": "California",
+        "county": "Ventura",
+        "locality": "Sespe Canyon",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1959-07-10",
+        "month": "7.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "Spore, R",
+        "identifiedBy": "Wright, Karen"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899931851",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931851",
+      "location": {
+        "state": "California",
+        "county": "Tulare",
+        "locality": "Sequoia National Park, Ash Mountain",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1952-06-09",
+        "month": "6.0",
+        "year": "1952.0"
+      },
+      "collector": {
+        "recordedBy": "Bohart, Richard",
+        "identifiedBy": "Wright, Karen"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-14.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1456742147",
+      "gbif_link": "https://www.gbif.org/occurrence/1456742147",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "SAMO",
+        "coordinates": {
+          "lat": "34.1495",
+          "lon": "-118.9604"
+        }
+      },
+      "temporal": {
+        "date": "2012-06-30T15:35Z/2012-07-02T00:57Z",
+        "month": null,
+        "year": "2012.0"
+      },
+      "collector": {
+        "recordedBy": "Susan Teel",
+        "identifiedBy": "Karen Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Droege S, Maffei C (2025). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1456742123",
+      "gbif_link": "https://www.gbif.org/occurrence/1456742123",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "SAMO",
+        "coordinates": {
+          "lat": "34.1495",
+          "lon": "-118.9604"
+        }
+      },
+      "temporal": {
+        "date": "2012-06-30T15:35Z/2012-07-02T00:57Z",
+        "month": null,
+        "year": "2012.0"
+      },
+      "collector": {
+        "recordedBy": "Susan Teel",
+        "identifiedBy": "Karen Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Droege S, Maffei C (2025). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1456742033",
+      "gbif_link": "https://www.gbif.org/occurrence/1456742033",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "SAMO",
+        "coordinates": {
+          "lat": "34.1495",
+          "lon": "-118.9604"
+        }
+      },
+      "temporal": {
+        "date": "2012-06-30T15:35Z/2012-07-02T00:57Z",
+        "month": null,
+        "year": "2012.0"
+      },
+      "collector": {
+        "recordedBy": "Susan Teel",
+        "identifiedBy": "Karen Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Droege S, Maffei C (2025). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1456741755",
+      "gbif_link": "https://www.gbif.org/occurrence/1456741755",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "SAMO",
+        "coordinates": {
+          "lat": "34.0312",
+          "lon": "-118.8105"
+        }
+      },
+      "temporal": {
+        "date": "2012-06-30T17:29Z/2012-07-01T18:10Z",
+        "month": null,
+        "year": "2012.0"
+      },
+      "collector": {
+        "recordedBy": "Susan Teel",
+        "identifiedBy": "Karen Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Droege S, Maffei C (2025). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1456741688",
+      "gbif_link": "https://www.gbif.org/occurrence/1456741688",
+      "location": {
+        "state": "California",
+        "county": "Los Angeles",
+        "locality": "SAMO",
+        "coordinates": {
+          "lat": "34.0312",
+          "lon": "-118.8105"
+        }
+      },
+      "temporal": {
+        "date": "2012-06-30T17:29Z/2012-07-01T18:10Z",
+        "month": null,
+        "year": "2012.0"
+      },
+      "collector": {
+        "recordedBy": "Susan Teel",
+        "identifiedBy": "Karen Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Droege S, Maffei C (2025). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-02-14.",
+        "license": "CC0.1 0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 73,
+    "geospatial_fixes": 3,
+    "contributing_datasets": [
+      "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-14. (CC BY 4.0)",
+      "Droege S, Maffei C (2025). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.27. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-02-14. (CC0 1.0)",
+      "Gibbs J (2025). J. B. Wallis / R. E. Roughley Museum of Entomology. Version 1.2. University of Manitoba. Occurrence dataset https://doi.org/10.5886/hgagiy accessed via GBIF.org on 2026-02-14. (CC BY 4.0)",
+      "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-14. (CC BY 4.0)",
+      "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-14. (CC BY 4.0)",
+      "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-14. (CC BY 4.0)",
+      "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-02-14. (CC BY 4.0)",
+      "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-14. (CC0 1.0)",
+      "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-14. (CC BY-NC 4.0)"
+    ]
+  }
+}
