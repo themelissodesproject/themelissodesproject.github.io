@@ -1,0 +1,5412 @@
+{
+  "binomial_name": "Melissodes saponellus",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "saponellus"
+  },
+  "flight_period": {
+    "April": {
+      "count": 11,
+      "percentage": 9.17
+    },
+    "May": {
+      "count": 20,
+      "percentage": 16.67
+    },
+    "June": {
+      "count": 70,
+      "percentage": 58.33
+    },
+    "July": {
+      "count": 8,
+      "percentage": 6.67
+    },
+    "August": {
+      "count": 8,
+      "percentage": 6.67
+    },
+    "September": {
+      "count": 3,
+      "percentage": 2.5
+    }
+  },
+  "distribution": {
+    "Utah": {
+      "state_total": 104,
+      "counties": {
+        "Tooele": {
+          "count": 3
+        },
+        "Garfield": {
+          "count": 24
+        },
+        "Kane": {
+          "count": 33
+        },
+        "San Juan": {
+          "count": 1
+        },
+        "Grand": {
+          "count": 5
+        },
+        "Washington": {
+          "count": 3
+        },
+        "Millard": {
+          "count": 16
+        },
+        "Cache": {
+          "count": 1
+        },
+        "Emery": {
+          "count": 10
+        },
+        "Uintah": {
+          "count": 6
+        },
+        "Nan": {
+          "count": 1
+        },
+        "Mesa": {
+          "count": 1
+        }
+      }
+    },
+    "Texas": {
+      "state_total": 5,
+      "counties": {
+        "Brewster": {
+          "count": 2
+        },
+        "Nan": {
+          "count": 3
+        }
+      }
+    },
+    "Arizona": {
+      "state_total": 10,
+      "counties": {
+        "Cochise": {
+          "count": 4
+        },
+        "La Paz": {
+          "count": 2
+        },
+        "Pima": {
+          "count": 2
+        },
+        "Coconino": {
+          "count": 2
+        }
+      }
+    },
+    "Nan": {
+      "state_total": 17,
+      "counties": {
+        "Morrow": {
+          "count": 1
+        },
+        "Harney": {
+          "count": 1
+        },
+        "Malheur": {
+          "count": 1
+        }
+      }
+    },
+    "Washington": {
+      "state_total": 19,
+      "counties": {
+        "Grant": {
+          "count": 5
+        },
+        "Yakima": {
+          "count": 3
+        },
+        "Benton": {
+          "count": 9
+        },
+        "Kittitas": {
+          "count": 1
+        },
+        "Asotin": {
+          "count": 1
+        }
+      }
+    },
+    "California": {
+      "state_total": 7,
+      "counties": {
+        "San Diego": {
+          "count": 3
+        },
+        "San Bernardino": {
+          "count": 1
+        },
+        "Nan": {
+          "count": 1
+        },
+        "Mono": {
+          "count": 1
+        },
+        "Inyo": {
+          "count": 1
+        }
+      }
+    },
+    "Idaho": {
+      "state_total": 3,
+      "counties": {
+        "Nan": {
+          "count": 2
+        },
+        "Canyon": {
+          "count": 1
+        }
+      }
+    },
+    "Nevada": {
+      "state_total": 1,
+      "counties": {
+        "Elko": {
+          "count": 1
+        }
+      }
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "658948536",
+      "gbif_link": "https://www.gbif.org/occurrence/658948536",
+      "location": {
+        "state": "Utah",
+        "county": "Tooele",
+        "locality": "Dugway Proving Grounds, Wig Mtn., 4.5 km NE (site 8)",
+        "coordinates": {
+          "lat": "40.355",
+          "lon": "-113.0484"
+        }
+      },
+      "temporal": {
+        "date": "1997-07-09",
+        "month": "7.0",
+        "year": "1997.0"
+      },
+      "collector": {
+        "recordedBy": "T. Toler",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948535",
+      "gbif_link": "https://www.gbif.org/occurrence/658948535",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "38.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "A. Johansen",
+        "identifiedBy": "H. Ikerd 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948534",
+      "gbif_link": "https://www.gbif.org/occurrence/658948534",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "38.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "A. Johansen",
+        "identifiedBy": "H. Ikerd 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948533",
+      "gbif_link": "https://www.gbif.org/occurrence/658948533",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "39.0",
+          "lon": "-108.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "B. Bradley",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948532",
+      "gbif_link": "https://www.gbif.org/occurrence/658948532",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "39.0",
+          "lon": "-108.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "B. Bradley",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948531",
+      "gbif_link": "https://www.gbif.org/occurrence/658948531",
+      "location": {
+        "state": "Utah",
+        "county": "Tooele",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "40.0",
+          "lon": "-113.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "J.S. Wilson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948530",
+      "gbif_link": "https://www.gbif.org/occurrence/658948530",
+      "location": {
+        "state": "Utah",
+        "county": "Tooele",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "40.0",
+          "lon": "-113.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "J.S. Wilson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948529",
+      "gbif_link": "https://www.gbif.org/occurrence/658948529",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-112.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "E. Mullaney",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948528",
+      "gbif_link": "https://www.gbif.org/occurrence/658948528",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "E. Mullaney",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948527",
+      "gbif_link": "https://www.gbif.org/occurrence/658948527",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-112.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948526",
+      "gbif_link": "https://www.gbif.org/occurrence/658948526",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-112.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948525",
+      "gbif_link": "https://www.gbif.org/occurrence/658948525",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-112.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948524",
+      "gbif_link": "https://www.gbif.org/occurrence/658948524",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948523",
+      "gbif_link": "https://www.gbif.org/occurrence/658948523",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "38.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "B. Morgan",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948522",
+      "gbif_link": "https://www.gbif.org/occurrence/658948522",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "B. Morgan",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948521",
+      "gbif_link": "https://www.gbif.org/occurrence/658948521",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "B. Morgan",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948520",
+      "gbif_link": "https://www.gbif.org/occurrence/658948520",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2000",
+        "month": null,
+        "year": "2000.0"
+      },
+      "collector": {
+        "recordedBy": "M. Somers",
+        "identifiedBy": "T.L. Griswold 2000"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948519",
+      "gbif_link": "https://www.gbif.org/occurrence/658948519",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "39.0",
+          "lon": "-108.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "S.M. Higbee",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948518",
+      "gbif_link": "https://www.gbif.org/occurrence/658948518",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "38.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "H. Ikerd 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948517",
+      "gbif_link": "https://www.gbif.org/occurrence/658948517",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "H. Ikerd 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948516",
+      "gbif_link": "https://www.gbif.org/occurrence/658948516",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "39.0",
+          "lon": "-108.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948515",
+      "gbif_link": "https://www.gbif.org/occurrence/658948515",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "39.0",
+          "lon": "-108.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948514",
+      "gbif_link": "https://www.gbif.org/occurrence/658948514",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "39.0",
+          "lon": "-108.0"
+        }
+      },
+      "temporal": {
+        "date": "2003",
+        "month": null,
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948513",
+      "gbif_link": "https://www.gbif.org/occurrence/658948513",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "38.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948512",
+      "gbif_link": "https://www.gbif.org/occurrence/658948512",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948511",
+      "gbif_link": "https://www.gbif.org/occurrence/658948511",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948510",
+      "gbif_link": "https://www.gbif.org/occurrence/658948510",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948509",
+      "gbif_link": "https://www.gbif.org/occurrence/658948509",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948508",
+      "gbif_link": "https://www.gbif.org/occurrence/658948508",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "38.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "S. Messinger",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948507",
+      "gbif_link": "https://www.gbif.org/occurrence/658948507",
+      "location": {
+        "state": "Utah",
+        "county": "San Juan",
+        "locality": "Moab, 25 mi S",
+        "coordinates": {
+          "lat": "38.38727",
+          "lon": "-109.4559"
+        }
+      },
+      "temporal": {
+        "date": "1963-06-10",
+        "month": "6.0",
+        "year": "1963.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart, R.L. Brumley",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948506",
+      "gbif_link": "https://www.gbif.org/occurrence/658948506",
+      "location": {
+        "state": "Utah",
+        "county": "Grand",
+        "locality": "Moab",
+        "coordinates": {
+          "lat": "38.5725",
+          "lon": "-109.5478"
+        }
+      },
+      "temporal": {
+        "date": "1963-06-09",
+        "month": "6.0",
+        "year": "1963.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart, R.L. Brumley",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948505",
+      "gbif_link": "https://www.gbif.org/occurrence/658948505",
+      "location": {
+        "state": "Utah",
+        "county": "Washington",
+        "locality": "Zion National Park, Zion Canyon",
+        "coordinates": {
+          "lat": "37.249",
+          "lon": "-112.956"
+        }
+      },
+      "temporal": {
+        "date": "1948-05-06",
+        "month": "5.0",
+        "year": "1948.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948504",
+      "gbif_link": "https://www.gbif.org/occurrence/658948504",
+      "location": {
+        "state": "Utah",
+        "county": "Washington",
+        "locality": "Zion National Park, Zion Canyon",
+        "coordinates": {
+          "lat": "37.249",
+          "lon": "-112.956"
+        }
+      },
+      "temporal": {
+        "date": "1948-05-06",
+        "month": "5.0",
+        "year": "1948.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948503",
+      "gbif_link": "https://www.gbif.org/occurrence/658948503",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Oak City",
+        "coordinates": {
+          "lat": "39.37",
+          "lon": "-112.33"
+        }
+      },
+      "temporal": {
+        "date": "1949-06-24",
+        "month": "6.0",
+        "year": "1949.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948502",
+      "gbif_link": "https://www.gbif.org/occurrence/658948502",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Flowell",
+        "coordinates": {
+          "lat": "38.97",
+          "lon": "-112.42"
+        }
+      },
+      "temporal": {
+        "date": "1962-07-08",
+        "month": "7.0",
+        "year": "1962.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948501",
+      "gbif_link": "https://www.gbif.org/occurrence/658948501",
+      "location": {
+        "state": "Utah",
+        "county": "Cache",
+        "locality": "Cornish",
+        "coordinates": {
+          "lat": "41.9756",
+          "lon": "-111.9525"
+        }
+      },
+      "temporal": {
+        "date": "1963-06-29",
+        "month": "6.0",
+        "year": "1963.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948500",
+      "gbif_link": "https://www.gbif.org/occurrence/658948500",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "Temple Mountain, 3 mi SSE",
+        "coordinates": {
+          "lat": "38.6458",
+          "lon": "-110.6936"
+        }
+      },
+      "temporal": {
+        "date": "1982-06-03",
+        "month": "6.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker, T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948499",
+      "gbif_link": "https://www.gbif.org/occurrence/658948499",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "Temple Mountain, 3 mi SSE",
+        "coordinates": {
+          "lat": "38.6458",
+          "lon": "-110.6936"
+        }
+      },
+      "temporal": {
+        "date": "1982-06-03",
+        "month": "6.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker, T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948498",
+      "gbif_link": "https://www.gbif.org/occurrence/658948498",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2000",
+        "month": null,
+        "year": "2000.0"
+      },
+      "collector": {
+        "recordedBy": "O.J. Messinger",
+        "identifiedBy": "T.L. Griswold 2000"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948497",
+      "gbif_link": "https://www.gbif.org/occurrence/658948497",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "withheld",
+        "coordinates": {
+          "lat": "37.0",
+          "lon": "-111.0"
+        }
+      },
+      "temporal": {
+        "date": "2001",
+        "month": null,
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "O.J. Messinger",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948496",
+      "gbif_link": "https://www.gbif.org/occurrence/658948496",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "San Rafael Reef, E edge, 2 mi S I-70",
+        "coordinates": {
+          "lat": "39.28497",
+          "lon": "-110.93263"
+        }
+      },
+      "temporal": {
+        "date": "1992-05-15",
+        "month": "5.0",
+        "year": "1992.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948495",
+      "gbif_link": "https://www.gbif.org/occurrence/658948495",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "San Rafael Desert",
+        "coordinates": {
+          "lat": "38.8555",
+          "lon": "-110.4231"
+        }
+      },
+      "temporal": {
+        "date": "1991-06-19",
+        "month": "6.0",
+        "year": "1991.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948494",
+      "gbif_link": "https://www.gbif.org/occurrence/658948494",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "San Rafael Desert",
+        "coordinates": {
+          "lat": "38.9141",
+          "lon": "-110.3666"
+        }
+      },
+      "temporal": {
+        "date": "1991-06-14",
+        "month": "6.0",
+        "year": "1991.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948493",
+      "gbif_link": "https://www.gbif.org/occurrence/658948493",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "North Temple Wash",
+        "coordinates": {
+          "lat": "38.6607",
+          "lon": "-110.64"
+        }
+      },
+      "temporal": {
+        "date": "1983-06-15",
+        "month": "6.0",
+        "year": "1983.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948492",
+      "gbif_link": "https://www.gbif.org/occurrence/658948492",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "Big Flat Top, NE",
+        "coordinates": {
+          "lat": "38.5197",
+          "lon": "-110.4463"
+        }
+      },
+      "temporal": {
+        "date": "1992-05-25",
+        "month": "5.0",
+        "year": "1992.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948491",
+      "gbif_link": "https://www.gbif.org/occurrence/658948491",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "Big Flat Top, NE",
+        "coordinates": {
+          "lat": "38.5197",
+          "lon": "-110.4463"
+        }
+      },
+      "temporal": {
+        "date": "1992-05-25",
+        "month": "5.0",
+        "year": "1992.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948490",
+      "gbif_link": "https://www.gbif.org/occurrence/658948490",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "Big Flat Top, NE",
+        "coordinates": {
+          "lat": "38.5197",
+          "lon": "-110.4463"
+        }
+      },
+      "temporal": {
+        "date": "1992-05-25",
+        "month": "5.0",
+        "year": "1992.0"
+      },
+      "collector": {
+        "recordedBy": "T.L. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948489",
+      "gbif_link": "https://www.gbif.org/occurrence/658948489",
+      "location": {
+        "state": "Utah",
+        "county": "Grand",
+        "locality": "Arches National Park, Salt Valley, NW",
+        "coordinates": {
+          "lat": "38.7306",
+          "lon": "-109.5244"
+        }
+      },
+      "temporal": {
+        "date": "1982-06-04",
+        "month": "6.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "R. & T. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948488",
+      "gbif_link": "https://www.gbif.org/occurrence/658948488",
+      "location": {
+        "state": "Utah",
+        "county": "Grand",
+        "locality": "Arches National Park, Salt Valley, NW",
+        "coordinates": {
+          "lat": "38.7306",
+          "lon": "-109.5244"
+        }
+      },
+      "temporal": {
+        "date": "1982-06-04",
+        "month": "6.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "R. & T. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948487",
+      "gbif_link": "https://www.gbif.org/occurrence/658948487",
+      "location": {
+        "state": "Utah",
+        "county": "Grand",
+        "locality": "Arches National Park, Salt Valley, NW",
+        "coordinates": {
+          "lat": "38.7306",
+          "lon": "-109.5244"
+        }
+      },
+      "temporal": {
+        "date": "1982-06-04",
+        "month": "6.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "R. & T. Griswold",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948486",
+      "gbif_link": "https://www.gbif.org/occurrence/658948486",
+      "location": {
+        "state": "Utah",
+        "county": "Emery",
+        "locality": "Little Gilson Butte, 3.2 air mi NE",
+        "coordinates": {
+          "lat": "38.6299",
+          "lon": "-110.568"
+        }
+      },
+      "temporal": {
+        "date": "1982-06-03",
+        "month": "6.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "D.R. Frohlich, D.F. Veirs",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948485",
+      "gbif_link": "https://www.gbif.org/occurrence/658948485",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948484",
+      "gbif_link": "https://www.gbif.org/occurrence/658948484",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948483",
+      "gbif_link": "https://www.gbif.org/occurrence/658948483",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948482",
+      "gbif_link": "https://www.gbif.org/occurrence/658948482",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948481",
+      "gbif_link": "https://www.gbif.org/occurrence/658948481",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948480",
+      "gbif_link": "https://www.gbif.org/occurrence/658948480",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948479",
+      "gbif_link": "https://www.gbif.org/occurrence/658948479",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948478",
+      "gbif_link": "https://www.gbif.org/occurrence/658948478",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948477",
+      "gbif_link": "https://www.gbif.org/occurrence/658948477",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948476",
+      "gbif_link": "https://www.gbif.org/occurrence/658948476",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948475",
+      "gbif_link": "https://www.gbif.org/occurrence/658948475",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658948474",
+      "gbif_link": "https://www.gbif.org/occurrence/658948474",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": "38.83638",
+          "lon": "-112.48871"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658234445",
+      "gbif_link": "https://www.gbif.org/occurrence/658234445",
+      "location": {
+        "state": "Utah",
+        "county": "Uintah",
+        "locality": "Vernal, 5 mi N",
+        "coordinates": {
+          "lat": "40.5278",
+          "lon": "-109.5281"
+        }
+      },
+      "temporal": {
+        "date": "1950-06-24",
+        "month": "6.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658223887",
+      "gbif_link": "https://www.gbif.org/occurrence/658223887",
+      "location": {
+        "state": "Texas",
+        "county": "Brewster",
+        "locality": "Big Bend National Park, Dagger Yucca Canyon",
+        "coordinates": {
+          "lat": "29.25",
+          "lon": "-103.25"
+        }
+      },
+      "temporal": {
+        "date": "1963-04-12",
+        "month": "4.0",
+        "year": "1963.0"
+      },
+      "collector": {
+        "recordedBy": "Beer, Robert",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658207398",
+      "gbif_link": "https://www.gbif.org/occurrence/658207398",
+      "location": {
+        "state": "Utah",
+        "county": "Uintah",
+        "locality": "Vernal, 5 mi N",
+        "coordinates": {
+          "lat": "40.5278",
+          "lon": "-109.5281"
+        }
+      },
+      "temporal": {
+        "date": "1950-06-24",
+        "month": "6.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658205211",
+      "gbif_link": "https://www.gbif.org/occurrence/658205211",
+      "location": {
+        "state": "Utah",
+        "county": "Uintah",
+        "locality": "Vernal, 5 mi N",
+        "coordinates": {
+          "lat": "40.5278",
+          "lon": "-109.5281"
+        }
+      },
+      "temporal": {
+        "date": "1950-06-24",
+        "month": "6.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658178802",
+      "gbif_link": "https://www.gbif.org/occurrence/658178802",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Portal, 3.2 km E",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1987-05-22",
+        "month": "5.0",
+        "year": "1987.0"
+      },
+      "collector": {
+        "recordedBy": "Danforth, Bryan",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Baileya",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658147030",
+      "gbif_link": "https://www.gbif.org/occurrence/658147030",
+      "location": {
+        "state": "Utah",
+        "county": "Uintah",
+        "locality": "Vernal, 5 mi N",
+        "coordinates": {
+          "lat": "40.5278",
+          "lon": "-109.5281"
+        }
+      },
+      "temporal": {
+        "date": "1950-06-24",
+        "month": "6.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657818464",
+      "gbif_link": "https://www.gbif.org/occurrence/657818464",
+      "location": {
+        "state": "Utah",
+        "county": "Nan",
+        "locality": "Hatton, 3 mi W",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1959-06-03",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Tetradymia canescens",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Tetradymia canescens",
+            "accepted_genus": "Tetradymia",
+            "accepted_species": "canescens",
+            "canonical_name": "Tetradymia canescens"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657699383",
+      "gbif_link": "https://www.gbif.org/occurrence/657699383",
+      "location": {
+        "state": "Utah",
+        "county": "Uintah",
+        "locality": "Vernal, 5 mi N",
+        "coordinates": {
+          "lat": "40.5278",
+          "lon": "-109.5281"
+        }
+      },
+      "temporal": {
+        "date": "1950-06-24",
+        "month": "6.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657598841",
+      "gbif_link": "https://www.gbif.org/occurrence/657598841",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Portal, 3.2 km E",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1987-05-22",
+        "month": "5.0",
+        "year": "1987.0"
+      },
+      "collector": {
+        "recordedBy": "Danforth, Bryan",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Baileya",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "6117118880",
+      "gbif_link": "https://www.gbif.org/occurrence/6117118880",
+      "location": {
+        "state": "Nan",
+        "county": "Morrow",
+        "locality": "Hermiston",
+        "coordinates": {
+          "lat": "45.864",
+          "lon": "-119.469"
+        }
+      },
+      "temporal": {
+        "date": "2019-04-09",
+        "month": "4.0",
+        "year": "2019.0"
+      },
+      "collector": {
+        "recordedBy": "S. Mayfield",
+        "identifiedBy": "Briana C Lindh"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "6116754731",
+      "gbif_link": "https://www.gbif.org/occurrence/6116754731",
+      "location": {
+        "state": "Nan",
+        "county": "Harney",
+        "locality": "Princeton",
+        "coordinates": {
+          "lat": "42.853",
+          "lon": "-118.395"
+        }
+      },
+      "temporal": {
+        "date": "2020-07-13",
+        "month": "7.0",
+        "year": "2020.0"
+      },
+      "collector": {
+        "recordedBy": "D.O'Loughlin",
+        "identifiedBy": "Briana C Lindh"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "6116652623",
+      "gbif_link": "https://www.gbif.org/occurrence/6116652623",
+      "location": {
+        "state": "Nan",
+        "county": "Malheur",
+        "locality": "Vale",
+        "coordinates": {
+          "lat": "43.91",
+          "lon": "-117.176"
+        }
+      },
+      "temporal": {
+        "date": "2020-07-26",
+        "month": "7.0",
+        "year": "2020.0"
+      },
+      "collector": {
+        "recordedBy": "M.O'Loughlin",
+        "identifiedBy": "Briana C Lindh"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "5931819686",
+      "gbif_link": "https://www.gbif.org/occurrence/5931819686",
+      "location": {
+        "state": "Washington",
+        "county": "Grant",
+        "locality": "near Mattawa",
+        "coordinates": {
+          "lat": "46.69",
+          "lon": "-119.746"
+        }
+      },
+      "temporal": {
+        "date": "2023-06-06/2023-06-07",
+        "month": "6.0",
+        "year": "2023.0"
+      },
+      "collector": {
+        "recordedBy": "Mario N. Luppino",
+        "identifiedBy": "Mario N. Luppino"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5918274859",
+      "gbif_link": "https://www.gbif.org/occurrence/5918274859",
+      "location": {
+        "state": "Arizona",
+        "county": "La Paz",
+        "locality": "Cibola NWR Mesq1",
+        "coordinates": {
+          "lat": "33.2932",
+          "lon": "-114.6974"
+        }
+      },
+      "temporal": {
+        "date": "2013-04-26",
+        "month": "4.0",
+        "year": "2013.0"
+      },
+      "collector": {
+        "recordedBy": "M Miner",
+        "identifiedBy": "KW Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5918274857",
+      "gbif_link": "https://www.gbif.org/occurrence/5918274857",
+      "location": {
+        "state": "Arizona",
+        "county": "La Paz",
+        "locality": "Cibola NWR Mesq1",
+        "coordinates": {
+          "lat": "33.2932",
+          "lon": "-114.6974"
+        }
+      },
+      "temporal": {
+        "date": "2013-04-26",
+        "month": "4.0",
+        "year": "2013.0"
+      },
+      "collector": {
+        "recordedBy": "M Miner",
+        "identifiedBy": "KW Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141283557",
+      "gbif_link": "https://www.gbif.org/occurrence/5141283557",
+      "location": {
+        "state": "Washington",
+        "county": "Yakima",
+        "locality": "circa 5 miles west of Mabton | mint 4",
+        "coordinates": {
+          "lat": "46.2141",
+          "lon": "-120.108"
+        }
+      },
+      "temporal": {
+        "date": "2015-05-29",
+        "month": "5.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "Courtney Grula",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141283533",
+      "gbif_link": "https://www.gbif.org/occurrence/5141283533",
+      "location": {
+        "state": "Washington",
+        "county": "Yakima",
+        "locality": "circa 5 miles west of Mabton | mint 1",
+        "coordinates": {
+          "lat": "46.2112",
+          "lon": "-120.1012"
+        }
+      },
+      "temporal": {
+        "date": "2015-06-12",
+        "month": "6.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "Courtney Grula",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141283474",
+      "gbif_link": "https://www.gbif.org/occurrence/5141283474",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": "circa 10 miles northeast of Prosser | Olsen 4 blueberries unmanaged",
+        "coordinates": {
+          "lat": "46.3051",
+          "lon": "-119.5781"
+        }
+      },
+      "temporal": {
+        "date": "2015-07-12",
+        "month": "7.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "Courtney Grula",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141283369",
+      "gbif_link": "https://www.gbif.org/occurrence/5141283369",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": "Hanford Site | Arid Lands Ecology Reserve | dirt road off of 1200 Foot Road",
+        "coordinates": {
+          "lat": "46.4077",
+          "lon": "-119.5577"
+        }
+      },
+      "temporal": {
+        "date": "1995-06-29",
+        "month": "6.0",
+        "year": "1995.0"
+      },
+      "collector": {
+        "recordedBy": "Rich S. Zack",
+        "identifiedBy": "Joel D. Gardner"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141281280",
+      "gbif_link": "https://www.gbif.org/occurrence/5141281280",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": "circa 3 miles north of Interstate 82 in Prosser | Oasis 6 riparian blueberries",
+        "coordinates": {
+          "lat": "46.274",
+          "lon": "-119.6753"
+        }
+      },
+      "temporal": {
+        "date": "2014-06-10",
+        "month": "6.0",
+        "year": "2014.0"
+      },
+      "collector": {
+        "recordedBy": "Courtney Grula",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141280517",
+      "gbif_link": "https://www.gbif.org/occurrence/5141280517",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": "circa 2.5 miles north of Interstate 82 in Prosser | Olsen 4 riparian blueberries",
+        "coordinates": {
+          "lat": "46.305",
+          "lon": "-119.578"
+        }
+      },
+      "temporal": {
+        "date": "2015-07-02",
+        "month": "7.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "Courtney Grula",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141278502",
+      "gbif_link": "https://www.gbif.org/occurrence/5141278502",
+      "location": {
+        "state": "Washington",
+        "county": "Grant",
+        "locality": "near Quincy",
+        "coordinates": {
+          "lat": "47.23",
+          "lon": "-119.971"
+        }
+      },
+      "temporal": {
+        "date": "2024-06-11/2024-06-12",
+        "month": "6.0",
+        "year": "2024.0"
+      },
+      "collector": {
+        "recordedBy": "Mario Luppino",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141274822",
+      "gbif_link": "https://www.gbif.org/occurrence/5141274822",
+      "location": {
+        "state": "Washington",
+        "county": "Kittitas",
+        "locality": "near Vantage",
+        "coordinates": {
+          "lat": "46.985",
+          "lon": "-120.021"
+        }
+      },
+      "temporal": {
+        "date": "2023-06-24",
+        "month": "6.0",
+        "year": "2023.0"
+      },
+      "collector": {
+        "recordedBy": "Lisa Robinson",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141256798",
+      "gbif_link": "https://www.gbif.org/occurrence/5141256798",
+      "location": {
+        "state": "Washington",
+        "county": "Asotin",
+        "locality": "near Rogersburg",
+        "coordinates": {
+          "lat": "46.07",
+          "lon": "-117.005"
+        }
+      },
+      "temporal": {
+        "date": "2023-06-02",
+        "month": "6.0",
+        "year": "2023.0"
+      },
+      "collector": {
+        "recordedBy": "David Jennings",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": "\"host\":\"Rubus bifrons\"",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Rubus bifrons",
+            "accepted_genus": "Rubus",
+            "accepted_species": "bifrons",
+            "canonical_name": "Rubus bifrons"
+          }
+        ]
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141252476",
+      "gbif_link": "https://www.gbif.org/occurrence/5141252476",
+      "location": {
+        "state": "Washington",
+        "county": "Yakima",
+        "locality": "circa 5 miles west of Mabton | mint 4",
+        "coordinates": {
+          "lat": "46.2141",
+          "lon": "-120.108"
+        }
+      },
+      "temporal": {
+        "date": "2015-05-29",
+        "month": "5.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "Courtney Grula",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141248228",
+      "gbif_link": "https://www.gbif.org/occurrence/5141248228",
+      "location": {
+        "state": "Washington",
+        "county": "Grant",
+        "locality": "near Quincy",
+        "coordinates": {
+          "lat": "47.23",
+          "lon": "-119.971"
+        }
+      },
+      "temporal": {
+        "date": "2024-06-25/2024-06-26",
+        "month": "6.0",
+        "year": "2024.0"
+      },
+      "collector": {
+        "recordedBy": "Mario Luppino",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141248225",
+      "gbif_link": "https://www.gbif.org/occurrence/5141248225",
+      "location": {
+        "state": "Washington",
+        "county": "Grant",
+        "locality": "near Quincy",
+        "coordinates": {
+          "lat": "47.23",
+          "lon": "-119.971"
+        }
+      },
+      "temporal": {
+        "date": "2024-06-25/2024-06-26",
+        "month": "6.0",
+        "year": "2024.0"
+      },
+      "collector": {
+        "recordedBy": "Mario Luppino",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5141246577",
+      "gbif_link": "https://www.gbif.org/occurrence/5141246577",
+      "location": {
+        "state": "Washington",
+        "county": "Grant",
+        "locality": "near Mattawa",
+        "coordinates": {
+          "lat": "46.738",
+          "lon": "-119.903"
+        }
+      },
+      "temporal": {
+        "date": "2024-06-05",
+        "month": "6.0",
+        "year": "2024.0"
+      },
+      "collector": {
+        "recordedBy": "Amy Leonard",
+        "identifiedBy": "Karen W. Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4854162025",
+      "gbif_link": "https://www.gbif.org/occurrence/4854162025",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161839",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161839",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161463",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161463",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161402",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161402",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161085",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161085",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854161077",
+      "gbif_link": "https://www.gbif.org/occurrence/4854161077",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160685",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160685",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160605",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160605",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160268",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160268",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160195",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160195",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854160024",
+      "gbif_link": "https://www.gbif.org/occurrence/4854160024",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159556",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159556",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "4854159552",
+      "gbif_link": "https://www.gbif.org/occurrence/4854159552",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "3801941086",
+      "gbif_link": "https://www.gbif.org/occurrence/3801941086",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": null,
+        "coordinates": {
+          "lat": "33.28333",
+          "lon": "-116.33333"
+        }
+      },
+      "temporal": {
+        "date": "1957-04-18",
+        "month": "4.0",
+        "year": "1957.0"
+      },
+      "collector": {
+        "recordedBy": "H. R. Moffitt",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Borrego Vly.; S.Diego Co.; Cal. dunes; IV-18-1957  Melissodes; saponellus Ckll.; det. W. E. LaBerge  H.R.Moffitt; Collector",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940090",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940090",
+      "location": {
+        "state": "California",
+        "county": "San Bernardino",
+        "locality": null,
+        "coordinates": {
+          "lat": "34.21111",
+          "lon": "-117.40056"
+        }
+      },
+      "temporal": {
+        "date": "1964-07-05",
+        "month": "7.0",
+        "year": "1964.0"
+      },
+      "collector": {
+        "recordedBy": "R.R. Snelling",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Cajon Can., 7.7 mi.; NW Cajon, San; Bernandino Co.; Calif. VII-5-64; R. R. Snelling  Melissodes; saponellus Ckll.; det. W. E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940083",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940083",
+      "location": {
+        "state": "California",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1973-09-12",
+        "month": "9.0",
+        "year": "1973.0"
+      },
+      "collector": {
+        "recordedBy": "D. Graves",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "CALIF., White Mts.; Inyo/Mono Cos.; Pinon-Woodland Site; coll. David Graves; # refs host & date  Melissodes; saponellus Ckll.; det. W. E. LaBerge  50256; Taken on; Haplopappus; croceus; 12-IX-73",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Haplopappus",
+            "accepted_genus": "Haplopappus",
+            "accepted_species": "sp.",
+            "canonical_name": "Haplopappus"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940078",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940078",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": null,
+        "coordinates": {
+          "lat": "31.34444",
+          "lon": "-109.54472"
+        }
+      },
+      "temporal": {
+        "date": "1973-05-12",
+        "month": "5.0",
+        "year": "1973.0"
+      },
+      "collector": {
+        "recordedBy": "J.L. Neff",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARIZ., Cochise Co.; Douglas; coll. J. L. Neff; # refs host & date  Melissodes; saponellus Ckll.; det. W. E. LaBerge  106966",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939114",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939114",
+      "location": {
+        "state": "California",
+        "county": "Mono",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.82861",
+          "lon": "-118.43"
+        }
+      },
+      "temporal": {
+        "date": "1969-08-11",
+        "month": "8.0",
+        "year": "1969.0"
+      },
+      "collector": {
+        "recordedBy": "H.K. Court",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Montgomery; City Cal 3mi E; Benton Mono; Co VIII-11-1969  Melissodes; saponellus Ckll.; det. W. E. LaBerge  H.K.Court; Collector",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939110",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939110",
+      "location": {
+        "state": "Texas",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1966-04-16",
+        "month": "4.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "W.E. LaBerge",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "TEX. 66 mi. S; Alpine 19-IV-1966; W. E. LaBerge  Melissodes; saponellus Ckll.; det. W. E. LaBerge  Taken on; Aster wrightii",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Aster wrightii",
+            "accepted_genus": "Xylorhiza",
+            "accepted_species": "wrightii",
+            "canonical_name": "Xylorhiza wrightii"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939103",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939103",
+      "location": {
+        "state": "California",
+        "county": "Inyo",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.165",
+          "lon": "-118.28861"
+        }
+      },
+      "temporal": {
+        "date": "1965-06-15",
+        "month": "6.0",
+        "year": "1965.0"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Big Pine Crk; Inyo Co Cal.; VI-13-1965  Melissodes; saponellus Ckll.; det. W. E. LaBerge  F.D.Parker; Collector",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801937109",
+      "gbif_link": "https://www.gbif.org/occurrence/3801937109",
+      "location": {
+        "state": "Idaho",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1955-06-16",
+        "month": "6.0",
+        "year": "1955.0"
+      },
+      "collector": {
+        "recordedBy": "W.F. Barr",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Mt.Home,Ida.; 15miles,VI-16-1955; Elev. 3138 ft.  Melissodes; saponellus Ckll.; det. W. E. LaBerge  W. F. Barr; Collector; sphaeralcea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Ida",
+            "accepted_genus": "Ida",
+            "accepted_species": "sp.",
+            "canonical_name": "Ida"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801859114",
+      "gbif_link": "https://www.gbif.org/occurrence/3801859114",
+      "location": {
+        "state": "Texas",
+        "county": "Brewster",
+        "locality": null,
+        "coordinates": {
+          "lat": "29.262",
+          "lon": "-103.777"
+        }
+      },
+      "temporal": {
+        "date": "1966-04-14",
+        "month": "4.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "Wallace E. LaBerge",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "TEX. LaJitas; 14-IV-1966; W. E. LaBerge  Melissodes; saponellus Ckll.; det. W. E. LaBerge  Taken on; Prospois sp.",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801857135",
+      "gbif_link": "https://www.gbif.org/occurrence/3801857135",
+      "location": {
+        "state": "Idaho",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1955-06-16",
+        "month": "6.0",
+        "year": "1955.0"
+      },
+      "collector": {
+        "recordedBy": "W.F. Barr",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Mt.Home,Ida.; 15miles,VI-16-1955; Elev. 3138 ft.  Melissodes; saponellus Ckll.; det. W. E. LaBerge  W. F. Barr; Collector; sphaeralcea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Ida",
+            "accepted_genus": "Ida",
+            "accepted_species": "sp.",
+            "canonical_name": "Ida"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801853111",
+      "gbif_link": "https://www.gbif.org/occurrence/3801853111",
+      "location": {
+        "state": "Texas",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1966-04-16",
+        "month": "4.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "W.E. LaBerge",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "TEX. 66 mi. S; Alpine 19-IV-1966; W. E. LaBerge  Melissodes; saponellus Ckll.; det. W. E. LaBerge  Taken on; Aster wrightii",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Aster wrightii",
+            "accepted_genus": "Xylorhiza",
+            "accepted_species": "wrightii",
+            "canonical_name": "Xylorhiza wrightii"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801853108",
+      "gbif_link": "https://www.gbif.org/occurrence/3801853108",
+      "location": {
+        "state": "Utah",
+        "county": "Grand",
+        "locality": null,
+        "coordinates": {
+          "lat": "38.57333",
+          "lon": "-109.54917"
+        }
+      },
+      "temporal": {
+        "date": "1963-06-09",
+        "month": "6.0",
+        "year": "1963.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart, R.L. Brumley",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "UTAH - Grand Co.; Moab; 9 June 1963; G Bohart & R Brumley  Melissodes; saponellus Ckll.; det. W. E. LaBerge  Poliomintha; incana",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Poliomintha",
+            "accepted_genus": "Poliomintha",
+            "accepted_species": "sp.",
+            "canonical_name": "Poliomintha"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801852152",
+      "gbif_link": "https://www.gbif.org/occurrence/3801852152",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": null,
+        "coordinates": {
+          "lat": "38.8378",
+          "lon": "-112.5121"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "3 m. w. Hatton; Ut. VI-2-1959  (female symbol) M. saponellus; Ckll.  Erigeron; compositus",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Erigeron",
+            "accepted_genus": "Erigeron",
+            "accepted_species": "sp.",
+            "canonical_name": "Erigeron"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801852149",
+      "gbif_link": "https://www.gbif.org/occurrence/3801852149",
+      "location": {
+        "state": "Utah",
+        "county": "Washington",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.23861",
+          "lon": "-113.35833"
+        }
+      },
+      "temporal": {
+        "date": "1961-05-09",
+        "month": "5.0",
+        "year": "1961.0"
+      },
+      "collector": {
+        "recordedBy": "G.E. Bohart",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Leeda Cny; Utah; V 9 1961  Melissodes; saponellus Ckll.; det. W. E. LaBerge  Composite; shrub",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801377098",
+      "gbif_link": "https://www.gbif.org/occurrence/3801377098",
+      "location": {
+        "state": "Utah",
+        "county": "Millard",
+        "locality": null,
+        "coordinates": {
+          "lat": "38.8378",
+          "lon": "-112.5121"
+        }
+      },
+      "temporal": {
+        "date": "1959-06-02",
+        "month": "6.0",
+        "year": "1959.0"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "3 m. w. Hatton; Ut. VI-2-1959  Melissodes; saponellus; Ckll.; det. W. E. LaBerge  Erigeron; compasitus",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Erigeron",
+            "accepted_genus": "Erigeron",
+            "accepted_species": "sp.",
+            "canonical_name": "Erigeron"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801377092",
+      "gbif_link": "https://www.gbif.org/occurrence/3801377092",
+      "location": {
+        "state": "Arizona",
+        "county": "Pima",
+        "locality": null,
+        "coordinates": {
+          "lat": "32.127",
+          "lon": "-112.138"
+        }
+      },
+      "temporal": {
+        "date": "1973-06-06",
+        "month": "6.0",
+        "year": "1973.0"
+      },
+      "collector": {
+        "recordedBy": "J.L. Neff",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARIZ. Pima Co.; W. of Quijoloa; coll. J. L. Neff; # refs host & date  Melissodes; saponellus Ckll.; det. W. E. LaBerge  105893; Taken on; Encelia; farinose; 6-VI-73",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Encelia",
+            "accepted_genus": "Encelia",
+            "accepted_species": "sp.",
+            "canonical_name": "Encelia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801375159",
+      "gbif_link": "https://www.gbif.org/occurrence/3801375159",
+      "location": {
+        "state": "Arizona",
+        "county": "Pima",
+        "locality": null,
+        "coordinates": {
+          "lat": "31.79",
+          "lon": "-110.589"
+        }
+      },
+      "temporal": {
+        "date": "1973-05-12",
+        "month": "5.0",
+        "year": "1973.0"
+      },
+      "collector": {
+        "recordedBy": "J.L. Neff",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARIZ. Pima Co.; Gardner Canyon SIte; coll. J. L. Neff; # refs host & date  Melissodes; saponellus Ckll.; det. W. E. LaBerge  106371; Taken on; Malacothrix; fendleri; 12-V-73",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Malacothrix",
+            "accepted_genus": "Malacothrix",
+            "accepted_species": "sp.",
+            "canonical_name": "Malacothrix"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801340101",
+      "gbif_link": "https://www.gbif.org/occurrence/3801340101",
+      "location": {
+        "state": "Texas",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1966-04-16",
+        "month": "4.0",
+        "year": "1966.0"
+      },
+      "collector": {
+        "recordedBy": "W.E. LaBerge",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "TEX. 66 mi. S; Alpine 19-IV-1966; W. E. LaBerge  Melissodes; saponellus Ckll.; det. W. E. LaBerge  Taken on; Aster wrightii",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Aster wrightii",
+            "accepted_genus": "Xylorhiza",
+            "accepted_species": "wrightii",
+            "canonical_name": "Xylorhiza wrightii"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339119",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339119",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": null,
+        "coordinates": {
+          "lat": "33.28333",
+          "lon": "-116.33333"
+        }
+      },
+      "temporal": {
+        "date": "1957-04-20",
+        "month": "4.0",
+        "year": "1957.0"
+      },
+      "collector": {
+        "recordedBy": "R.C. Bechtel",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Borrego Vly.; S.Diego Co.; Cal. dunes; IV-20-1957  Melissodes; saponellus Ckll.; det. W. E. LaBerge  R.C.Bechtel; Collector",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339114",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339114",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": null,
+        "coordinates": {
+          "lat": "31.34444",
+          "lon": "-109.54472"
+        }
+      },
+      "temporal": {
+        "date": "1973-05-12",
+        "month": "5.0",
+        "year": "1973.0"
+      },
+      "collector": {
+        "recordedBy": "J.L. Neff",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARIZ., Cochise Co.; Douglas; coll. J. L. Neff; # refs host & date  Melissodes; saponellus Ckll.; det. W. E. LaBerge  106965; Taken on; Gaillaridia; pulchell; 9-VI-73",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801338105",
+      "gbif_link": "https://www.gbif.org/occurrence/3801338105",
+      "location": {
+        "state": "Utah",
+        "county": "Uintah",
+        "locality": null,
+        "coordinates": {
+          "lat": "40.5324",
+          "lon": "-109.5277"
+        }
+      },
+      "temporal": {
+        "date": "1950-06-24",
+        "month": "6.0",
+        "year": "1950.0"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "5 mi.N.Vernal; Uta VI 24-1950; C.D. Michener  Homotype III-1954 (female symbol); Malissodes; saponallus Ckll.; det. W.E. LaBerge; Melissodes; saponellus; Ckll.; det. W. E. LaBerge  Taken on; Bahia; oblongifolia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Bahia",
+            "accepted_genus": "Bahia",
+            "accepted_species": "sp.",
+            "canonical_name": "Bahia"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3442388131",
+      "gbif_link": "https://www.gbif.org/occurrence/3442388131",
+      "location": {
+        "state": "Nan",
+        "county": "Nan",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3421543690",
+      "gbif_link": "https://www.gbif.org/occurrence/3421543690",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": null,
+        "coordinates": {
+          "lat": "46.4175",
+          "lon": "-119.5359"
+        }
+      },
+      "temporal": {
+        "date": "2014-06-02",
+        "month": "6.0",
+        "year": "2014.0"
+      },
+      "collector": {
+        "recordedBy": "A. Hall-Mullen",
+        "identifiedBy": "S.J. Burrows 2016"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3421541744",
+      "gbif_link": "https://www.gbif.org/occurrence/3421541744",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": null,
+        "coordinates": {
+          "lat": "46.4175",
+          "lon": "-119.5359"
+        }
+      },
+      "temporal": {
+        "date": "2015-06-08",
+        "month": "6.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "A. Hall-Mullen",
+        "identifiedBy": "H. Ikerd 2016"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3421541576",
+      "gbif_link": "https://www.gbif.org/occurrence/3421541576",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": null,
+        "coordinates": {
+          "lat": "46.4067",
+          "lon": "-119.5346"
+        }
+      },
+      "temporal": {
+        "date": "2015-05-26",
+        "month": "5.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "A. Hall-Mullen",
+        "identifiedBy": "H. Ikerd 2016"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3421538670",
+      "gbif_link": "https://www.gbif.org/occurrence/3421538670",
+      "location": {
+        "state": "Idaho",
+        "county": "Canyon",
+        "locality": null,
+        "coordinates": {
+          "lat": "43.562",
+          "lon": "-116.66801"
+        }
+      },
+      "temporal": {
+        "date": "2012-06-21",
+        "month": "6.0",
+        "year": "2012.0"
+      },
+      "collector": {
+        "recordedBy": "S. Seidel",
+        "identifiedBy": "S.J. Burrows 2016"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3421537870",
+      "gbif_link": "https://www.gbif.org/occurrence/3421537870",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": null,
+        "coordinates": {
+          "lat": "46.4175",
+          "lon": "-119.5359"
+        }
+      },
+      "temporal": {
+        "date": "2015-05-26",
+        "month": "5.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "A. Hall-Mullen",
+        "identifiedBy": "H. Ikerd 2016"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3421536874",
+      "gbif_link": "https://www.gbif.org/occurrence/3421536874",
+      "location": {
+        "state": "Washington",
+        "county": "Benton",
+        "locality": null,
+        "coordinates": {
+          "lat": "46.4067",
+          "lon": "-119.5346"
+        }
+      },
+      "temporal": {
+        "date": "2015-06-08",
+        "month": "6.0",
+        "year": "2015.0"
+      },
+      "collector": {
+        "recordedBy": "A. Hall-Mullen",
+        "identifiedBy": "H. Ikerd 2016"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3421528387",
+      "gbif_link": "https://www.gbif.org/occurrence/3421528387",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.1303",
+          "lon": "-111.8848"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-06",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Sphaeralcea coccinea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea coccinea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "coccinea",
+            "canonical_name": "Sphaeralcea coccinea"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421528382",
+      "gbif_link": "https://www.gbif.org/occurrence/3421528382",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.1303",
+          "lon": "-111.8848"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-06",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Sphaeralcea coccinea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea coccinea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "coccinea",
+            "canonical_name": "Sphaeralcea coccinea"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421528381",
+      "gbif_link": "https://www.gbif.org/occurrence/3421528381",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.1303",
+          "lon": "-111.8848"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-06",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Sphaeralcea coccinea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea coccinea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "coccinea",
+            "canonical_name": "Sphaeralcea coccinea"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421528374",
+      "gbif_link": "https://www.gbif.org/occurrence/3421528374",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.3811",
+          "lon": "-111.1126"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-05",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "K. Moredock",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Helianthus sp.",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Helianthus sp",
+            "accepted_genus": "Helianthus",
+            "accepted_species": "sp.",
+            "canonical_name": "Helianthus"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421523473",
+      "gbif_link": "https://www.gbif.org/occurrence/3421523473",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.7728",
+          "lon": "-111.4351"
+        }
+      },
+      "temporal": {
+        "date": "2001-05-28",
+        "month": "5.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "S. Messinger",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Sphaeralcea coccinea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea coccinea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "coccinea",
+            "canonical_name": "Sphaeralcea coccinea"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421520757",
+      "gbif_link": "https://www.gbif.org/occurrence/3421520757",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.4284",
+          "lon": "-111.2203"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-05",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "O.J. Messinger",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Helianthus petiolaris",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Helianthus petiolaris",
+            "accepted_genus": "Helianthus",
+            "accepted_species": "petiolaris",
+            "canonical_name": "Helianthus petiolaris"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421519785",
+      "gbif_link": "https://www.gbif.org/occurrence/3421519785",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.5557",
+          "lon": "-111.2936"
+        }
+      },
+      "temporal": {
+        "date": "2003-09-18",
+        "month": "9.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "A. Johansen",
+        "identifiedBy": "H. Ikerd 2005"
+      },
+      "ecology": {
+        "notes": "Collected from: Machaeranthera sp.",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Machaeranthera sp",
+            "accepted_genus": "Machaeranthera",
+            "accepted_species": "sp.",
+            "canonical_name": "Machaeranthera"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421517064",
+      "gbif_link": "https://www.gbif.org/occurrence/3421517064",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.5557",
+          "lon": "-111.2936"
+        }
+      },
+      "temporal": {
+        "date": "2003-09-18",
+        "month": "9.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "A. Johansen",
+        "identifiedBy": "K.W. Wright 2013"
+      },
+      "ecology": {
+        "notes": "Collected from: Asteraceae sp.",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421513170",
+      "gbif_link": "https://www.gbif.org/occurrence/3421513170",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.1303",
+          "lon": "-111.8848"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-06",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "E. Mullaney",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Asteraceae sp. (purple)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421506775",
+      "gbif_link": "https://www.gbif.org/occurrence/3421506775",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.85062",
+          "lon": "-111.35437"
+        }
+      },
+      "temporal": {
+        "date": "2003-08-12",
+        "month": "8.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421493923",
+      "gbif_link": "https://www.gbif.org/occurrence/3421493923",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.85062",
+          "lon": "-111.35437"
+        }
+      },
+      "temporal": {
+        "date": "2003-08-12",
+        "month": "8.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "B. Bradley",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421493819",
+      "gbif_link": "https://www.gbif.org/occurrence/3421493819",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.85062",
+          "lon": "-111.35437"
+        }
+      },
+      "temporal": {
+        "date": "2003-08-12",
+        "month": "8.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "B. Bradley",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421489241",
+      "gbif_link": "https://www.gbif.org/occurrence/3421489241",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.441",
+          "lon": "-111.2307"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-05",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "B. Morgan",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Helianthus sp.",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Helianthus sp",
+            "accepted_genus": "Helianthus",
+            "accepted_species": "sp.",
+            "canonical_name": "Helianthus"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421489234",
+      "gbif_link": "https://www.gbif.org/occurrence/3421489234",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.4284",
+          "lon": "-111.2203"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-05",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "B. Morgan",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Helianthus sp.",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Helianthus sp",
+            "accepted_genus": "Helianthus",
+            "accepted_species": "sp.",
+            "canonical_name": "Helianthus"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421489107",
+      "gbif_link": "https://www.gbif.org/occurrence/3421489107",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.7894",
+          "lon": "-111.1682"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-07",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Thelesperma subnudum",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Thelesperma subnudum",
+            "accepted_genus": "Thelesperma",
+            "accepted_species": "subnudum",
+            "canonical_name": "Thelesperma subnudum"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421487132",
+      "gbif_link": "https://www.gbif.org/occurrence/3421487132",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.4284",
+          "lon": "-111.2203"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-18",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Helianthus petiolaris",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Helianthus petiolaris",
+            "accepted_genus": "Helianthus",
+            "accepted_species": "petiolaris",
+            "canonical_name": "Helianthus petiolaris"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421487116",
+      "gbif_link": "https://www.gbif.org/occurrence/3421487116",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.441",
+          "lon": "-111.2307"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-18",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Helianthus petiolaris",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Helianthus petiolaris",
+            "accepted_genus": "Helianthus",
+            "accepted_species": "petiolaris",
+            "canonical_name": "Helianthus petiolaris"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421483577",
+      "gbif_link": "https://www.gbif.org/occurrence/3421483577",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.85062",
+          "lon": "-111.35437"
+        }
+      },
+      "temporal": {
+        "date": "2003-08-12",
+        "month": "8.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421483544",
+      "gbif_link": "https://www.gbif.org/occurrence/3421483544",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.85062",
+          "lon": "-111.35437"
+        }
+      },
+      "temporal": {
+        "date": "2003-08-12",
+        "month": "8.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421483446",
+      "gbif_link": "https://www.gbif.org/occurrence/3421483446",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.7821",
+          "lon": "-111.3539"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-22",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "B. Morgan",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Hymenopappus filifolius",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Hymenopappus filifolius",
+            "accepted_genus": "Hymenopappus",
+            "accepted_species": "filifolius",
+            "canonical_name": "Hymenopappus filifolius"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421463156",
+      "gbif_link": "https://www.gbif.org/occurrence/3421463156",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.4815",
+          "lon": "-111.2289"
+        }
+      },
+      "temporal": {
+        "date": "2000-05-22",
+        "month": "5.0",
+        "year": "2000.0"
+      },
+      "collector": {
+        "recordedBy": "O.J. Messinger",
+        "identifiedBy": "T.L. Griswold 2000"
+      },
+      "ecology": {
+        "notes": "Collected from: Psoralea lanceolata",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421451893",
+      "gbif_link": "https://www.gbif.org/occurrence/3421451893",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.4817",
+          "lon": "-111.2205"
+        }
+      },
+      "temporal": {
+        "date": "2001-06-05",
+        "month": "6.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "E. Mullaney",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Erigeron sp.",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Erigeron sp",
+            "accepted_genus": "Erigeron",
+            "accepted_species": "sp.",
+            "canonical_name": "Erigeron"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421451457",
+      "gbif_link": "https://www.gbif.org/occurrence/3421451457",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.85062",
+          "lon": "-111.35437"
+        }
+      },
+      "temporal": {
+        "date": "2003-07-03",
+        "month": "7.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "S.M. Higbee",
+        "identifiedBy": "T.L. Griswold 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421446249",
+      "gbif_link": "https://www.gbif.org/occurrence/3421446249",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.441",
+          "lon": "-111.2307"
+        }
+      },
+      "temporal": {
+        "date": "2003-06-04",
+        "month": "6.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "H. Ikerd 2005"
+      },
+      "ecology": {
+        "notes": "Collected from: Sphaeralcea sp.",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea sp",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "sp.",
+            "canonical_name": "Sphaeralcea"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421439862",
+      "gbif_link": "https://www.gbif.org/occurrence/3421439862",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.3811",
+          "lon": "-111.1126"
+        }
+      },
+      "temporal": {
+        "date": "2001-05-22",
+        "month": "5.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Heterotheca villosa",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Heterotheca villosa",
+            "accepted_genus": "Heterotheca",
+            "accepted_species": "villosa",
+            "canonical_name": "Heterotheca villosa"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421439857",
+      "gbif_link": "https://www.gbif.org/occurrence/3421439857",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.3811",
+          "lon": "-111.1126"
+        }
+      },
+      "temporal": {
+        "date": "2001-05-22",
+        "month": "5.0",
+        "year": "2001.0"
+      },
+      "collector": {
+        "recordedBy": "C.M. Davidson",
+        "identifiedBy": "T.L. Griswold"
+      },
+      "ecology": {
+        "notes": "Collected from: Heterotheca villosa",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Heterotheca villosa",
+            "accepted_genus": "Heterotheca",
+            "accepted_species": "villosa",
+            "canonical_name": "Heterotheca villosa"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421439040",
+      "gbif_link": "https://www.gbif.org/occurrence/3421439040",
+      "location": {
+        "state": "Utah",
+        "county": "Garfield",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.8658",
+          "lon": "-111.3425"
+        }
+      },
+      "temporal": {
+        "date": "2003-06-23",
+        "month": "6.0",
+        "year": "2003.0"
+      },
+      "collector": {
+        "recordedBy": "H. Ikerd",
+        "identifiedBy": "H. Ikerd 2005"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3421437689",
+      "gbif_link": "https://www.gbif.org/occurrence/3421437689",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": null,
+        "coordinates": {
+          "lat": "37.3811",
+          "lon": "-111.1126"
+        }
+      },
+      "temporal": {
+        "date": "2000-06-01",
+        "month": "6.0",
+        "year": "2000.0"
+      },
+      "collector": {
+        "recordedBy": "M. Somers",
+        "identifiedBy": "T.L. Griswold 2000"
+      },
+      "ecology": {
+        "notes": "Collected from: Scabrethia scabra",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Scabrethia scabra",
+            "accepted_genus": "Scabrethia",
+            "accepted_species": "scabra",
+            "canonical_name": "Scabrethia scabra"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "2248749984",
+      "gbif_link": "https://www.gbif.org/occurrence/2248749984",
+      "location": {
+        "state": "Utah",
+        "county": "Kane",
+        "locality": "Jody`s Knoll, 1.0 mi SSW",
+        "coordinates": {
+          "lat": "37.263",
+          "lon": "-112.256"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Ikerd, Harold",
+        "identifiedBy": "Terry L. Griswold"
+      },
+      "ecology": {
+        "notes": "No Floral Record",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2248749597",
+      "gbif_link": "https://www.gbif.org/occurrence/2248749597",
+      "location": {
+        "state": "Utah",
+        "county": "Mesa",
+        "locality": "Duffy Mesa, 2 mi NNW",
+        "coordinates": {
+          "lat": "39.103",
+          "lon": "-108.459"
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Bradley, Brosi",
+        "identifiedBy": "Terry L. Griswold"
+      },
+      "ecology": {
+        "notes": "No Floral Record",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1981067163",
+      "gbif_link": "https://www.gbif.org/occurrence/1981067163",
+      "location": {
+        "state": "Arizona",
+        "county": "Coconino",
+        "locality": "DS1",
+        "coordinates": {
+          "lat": "35.6927",
+          "lon": "-111.426"
+        }
+      },
+      "temporal": {
+        "date": "2011-08-25",
+        "month": "8.0",
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "Dave Smith",
+        "identifiedBy": "T. Griswold"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Northern Arizona University (2026). Northern Arizona University - Arthropod Collection. Occurrence dataset https://doi.org/10.15468/du1hci accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1981067143",
+      "gbif_link": "https://www.gbif.org/occurrence/1981067143",
+      "location": {
+        "state": "Arizona",
+        "county": "Coconino",
+        "locality": "DS1",
+        "coordinates": {
+          "lat": "35.6927",
+          "lon": "-111.426"
+        }
+      },
+      "temporal": {
+        "date": "2011-08-25",
+        "month": "8.0",
+        "year": "2011.0"
+      },
+      "collector": {
+        "recordedBy": "Dave Smith",
+        "identifiedBy": "T. Griswold"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Northern Arizona University (2026). Northern Arizona University - Arthropod Collection. Occurrence dataset https://doi.org/10.15468/du1hci accessed via GBIF.org on 2026-02-19.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1913918106",
+      "gbif_link": "https://www.gbif.org/occurrence/1913918106",
+      "location": {
+        "state": "California",
+        "county": "San Diego",
+        "locality": "Borrego Valley",
+        "coordinates": {
+          "lat": "33.2211",
+          "lon": "-116.3333"
+        }
+      },
+      "temporal": {
+        "date": "1957-04-18",
+        "month": "4.0",
+        "year": "1957.0"
+      },
+      "collector": {
+        "recordedBy": "Bohart, Richard",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1913918095",
+      "gbif_link": "https://www.gbif.org/occurrence/1913918095",
+      "location": {
+        "state": "Nevada",
+        "county": "Elko",
+        "locality": "Wendover",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1982-06-07",
+        "month": "6.0",
+        "year": "1982.0"
+      },
+      "collector": {
+        "recordedBy": "Brooks, Robert",
+        "identifiedBy": "Wright, Karen"
+      },
+      "ecology": {
+        "notes": "Stanleya viridiflora",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Stanleya viridiflora",
+            "accepted_genus": "Stanleya",
+            "accepted_species": "viridiflora",
+            "canonical_name": "Stanleya viridiflora"
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 166,
+    "geospatial_fixes": 5,
+    "contributing_datasets": [
+      "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-02-19. (CC BY 4.0)",
+      "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-02-19. (CC BY-NC 4.0)",
+      "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-02-19. (CC BY 4.0)",
+      "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-02-19. (CC BY 4.0)",
+      "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-02-19. (CC BY 4.0)",
+      "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-02-19. (CC BY 4.0)",
+      "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-02-19. (CC BY-NC 4.0)",
+      "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.33. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-02-19. (CC0 1.0)",
+      "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-02-19. (CC BY-NC 4.0)",
+      "Northern Arizona University (2026). Northern Arizona University - Arthropod Collection. Occurrence dataset https://doi.org/10.15468/du1hci accessed via GBIF.org on 2026-02-19. (CC0 1.0)"
+    ]
+  }
+}
