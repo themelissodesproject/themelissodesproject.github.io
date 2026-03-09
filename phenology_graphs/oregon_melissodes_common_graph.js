@@ -7,6 +7,8 @@
 const SpeciesOccurrenceGraph = (() => {
 
     const speciesList = `
+Melissodes ablusus
+
 Melissodes dagosus
 Melissodes dagosus
 Melissodes dagosus
@@ -48,7 +50,6 @@ Melissodes subagilis
 Melissodes subagilis
 Melissodes subagilis
 Melissodes semilupinus
-Melissodes robustior
 Melissodes paululus
 Melissodes paululus
 Melissodes paululus
@@ -229,12 +230,14 @@ Melissodes lupinus
 Melissodes lupinus
 Melissodes lupinus
 Melissodes lupinus
+Melissodes saponellus
+Melissodes saponellus
+Melissodes saponellus
 Melissodes glenwoodensis
 Melissodes pallidisignatus
 Melissodes dagosus
 Melissodes semilupinus
 Melissodes tepidus
-Melissodes robustior
 Melissodes communis
 Melissodes pallidisignatus
 Melissodes pallidisignatus
@@ -247,7 +250,6 @@ Melissodes tepidus
 Melissodes pallidisignatus
 Melissodes microstictus
 Melissodes communis
-Melissodes robustior
 Melissodes robustior
 Melissodes communis
 Melissodes pallidisignatus
