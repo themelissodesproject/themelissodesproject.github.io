@@ -9,20 +9,20 @@ const MAP_ID = "oregon_subagilis";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes subagilis	43.9815	-117.0247	P.F. Torchio	1961-08-17							https://www.gbif.org/occurrence/658949001		Malheur, Oregon, US
-Melissodes subagilis	43.65	-117.06	P.F. Torchio	1961-07-27							https://www.gbif.org/occurrence/658948999		Malheur, Oregon, US
-Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948998		Malheur, Oregon, US
-Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658948997		Malheur, Oregon, US
-Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948996		Malheur, Oregon, US
-Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-09							https://www.gbif.org/occurrence/658948995		Malheur, Oregon, US
-Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948994		Malheur, Oregon, US
-Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948993		Malheur, Oregon, US
-Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658948992		Malheur, Oregon, US
-Melissodes subagilis	43.741	-117.072	P.F. Torchio	1959-09-07		Adult					https://www.gbif.org/occurrence/3801939154		Malheur, Oregon, US
-Melissodes subagilis	44.027	-116.963	R.B. Roberts	1968-08-14		Adult					https://www.gbif.org/occurrence/3801857174		Malheur, Oregon, US
-Melissodes subagilis	44.027	-116.963	R.B. Roberts	1968-08-14		Adult					https://www.gbif.org/occurrence/3801853151		Malheur, Oregon, US
 Melissodes subagilis	44.027	-116.963	R.B. Roberts	1968-08-30		Adult					https://www.gbif.org/occurrence/3801381186		Malheur, Oregon, US
+Melissodes subagilis	44.027	-116.963	R.B. Roberts	1968-08-14		Adult					https://www.gbif.org/occurrence/3801853151		Malheur, Oregon, US
+Melissodes subagilis	44.027	-116.963	R.B. Roberts	1968-08-14		Adult					https://www.gbif.org/occurrence/3801857174		Malheur, Oregon, US
+Melissodes subagilis	43.65	-117.06	P.F. Torchio	1961-07-27							https://www.gbif.org/occurrence/658948999		Malheur, Oregon, US
+Melissodes subagilis	43.9815	-117.0247	P.F. Torchio	1961-08-17							https://www.gbif.org/occurrence/658949001		Malheur, Oregon, US
 Melissodes subagilis	42.219	-121.4433	P.F. Torchio	1960-08-03		Adult					https://www.gbif.org/occurrence/3801340140		Klamath, Oregon, US
+Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658948992		Malheur, Oregon, US
+Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948993		Malheur, Oregon, US
+Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948994		Malheur, Oregon, US
+Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-09							https://www.gbif.org/occurrence/658948995		Malheur, Oregon, US
+Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948996		Malheur, Oregon, US
+Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658948997		Malheur, Oregon, US
+Melissodes subagilis	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658948998		Malheur, Oregon, US
+Melissodes subagilis	43.741	-117.072	P.F. Torchio	1959-09-07		Adult					https://www.gbif.org/occurrence/3801939154		Malheur, Oregon, US
 Melissodes subagilis	42.169722	-121.4525	J. Schuh				Female			American Museum of Natural History	https://www.gbif.org/occurrence/2804763120		Klamath Co., Oregon, US
 `;
 

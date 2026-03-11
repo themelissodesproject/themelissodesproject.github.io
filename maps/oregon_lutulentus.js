@@ -9,15 +9,15 @@ const MAP_ID = "oregon_lutulentus";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes lutulentus	42.3787	-122.2123	P.F. Torchio	1959-08-06							https://www.gbif.org/occurrence/658947130		Klamath, Oregon, US
+Melissodes lutulentus	42.219	-121.4433	P.F. Torchio	1960-08-03		Adult					https://www.gbif.org/occurrence/3801374818		Klamath, Oregon, US
+Melissodes lutulentus	42.398	-121.1586	P.F. Torchio	1960-08-03		Adult					https://www.gbif.org/occurrence/3801852765		Klamath, Oregon, US
 Melissodes lutulentus	42.3787	-122.2123	P.F. Torchio	1959-08-06							https://www.gbif.org/occurrence/658947129		Klamath, Oregon, US
+Melissodes lutulentus	42.3787	-122.2123	P.F. Torchio	1959-08-06							https://www.gbif.org/occurrence/658947130		Klamath, Oregon, US
 Melissodes lutulentus	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658947128		Malheur, Oregon, US
+Melissodes lutulentus	44.4316	-120.5615	W.P. Stephen	1954-07-26		Adult					https://www.gbif.org/occurrence/3801940741		Crook, Oregon, US
+Melissodes lutulentus	44.3035	-121.0356	H.A. Scullen	1929-08-13		Adult					https://www.gbif.org/occurrence/3801941757		Crook, Oregon, US
 Melissodes lutulentus			Scullen, H	1937-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658309438		Yamhill, Oregon, US
 Melissodes lutulentus			Scullen, H	1930-07-24	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657594767		Oregon, US
-Melissodes lutulentus	44.3035	-121.0356	H.A. Scullen	1929-08-13		Adult					https://www.gbif.org/occurrence/3801941757		Crook, Oregon, US
-Melissodes lutulentus	44.4316	-120.5615	W.P. Stephen	1954-07-26		Adult					https://www.gbif.org/occurrence/3801940741		Crook, Oregon, US
-Melissodes lutulentus	42.398	-121.1586	P.F. Torchio	1960-08-03		Adult					https://www.gbif.org/occurrence/3801852765		Klamath, Oregon, US
-Melissodes lutulentus	42.219	-121.4433	P.F. Torchio	1960-08-03		Adult					https://www.gbif.org/occurrence/3801374818		Klamath, Oregon, US
 `;
 
 // =========================

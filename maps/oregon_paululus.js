@@ -9,22 +9,22 @@ const MAP_ID = "oregon_paululus";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-09-28							https://www.gbif.org/occurrence/658947886		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-09-14							https://www.gbif.org/occurrence/658947885		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-31							https://www.gbif.org/occurrence/658947884		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658947883		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658947882		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658947881		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658947880		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658947879		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658947876		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658947875		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658947874		Umatilla, Oregon, US
 Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658947873		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-06-23							https://www.gbif.org/occurrence/658947872		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-06-16							https://www.gbif.org/occurrence/658947871		Umatilla, Oregon, US
-Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658947870		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658947874		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658947875		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658947876		Umatilla, Oregon, US
 Melissodes paululus	45.6704	-118.6836	J.E. Harrison	1998-06-16							https://www.gbif.org/occurrence/658947869		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-06-16							https://www.gbif.org/occurrence/658947871		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-06-23							https://www.gbif.org/occurrence/658947872		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658947870		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658947879		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658947880		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658947881		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658947882		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658947883		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-08-31							https://www.gbif.org/occurrence/658947884		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-09-14							https://www.gbif.org/occurrence/658947885		Umatilla, Oregon, US
+Melissodes paululus	45.639	-118.6849	V.J. Tepedino	1997-09-28							https://www.gbif.org/occurrence/658947886		Umatilla, Oregon, US
 `;
 
 // =========================

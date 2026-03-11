@@ -9,55 +9,81 @@ const MAP_ID = "oregon_rivalis";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658952365		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658952364		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658952363		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658952362		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952361		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952360		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952359		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952358		Umatilla, Oregon, US
-Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952357		Umatilla, Oregon, US
-Melissodes rivalis	44.5591	-114.0565	G.F. Kraft	1957-08-08							https://www.gbif.org/occurrence/658952351		Wheeler, Oregon, US
+Melissodes rivalis	44	-117	Michael O'Loughlin	2019-05-22	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467769938		Baker, Oregon, US
+Melissodes rivalis	44.389	-117.245	Michael O'Loughlin	2019-05-22	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158894235		Baker, Oregon, US
+Melissodes rivalis	44.935	-123.015	Briana Lindh	2019-06-19	Briana C Lindh	Adult					https://www.gbif.org/occurrence/2979597438		Oregon, US
+Melissodes rivalis	45	-123	Scott Tienken	2019-06-25	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770043		Yamhill, Oregon, US
+Melissodes rivalis	45	-124	Martin Stein	2019-06-20	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770046		Lincoln, Oregon, US
+Melissodes rivalis	45	-124	Martin Stein	2019-06-20	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499818166		Lincoln, Oregon, US
+Melissodes rivalis	45.173	-123.344	Scott Tienken	2019-06-25	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158894402		Yamhill, Oregon, US
+Melissodes rivalis	44.615	-124	Martin Stein	2019-06-20	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158894407		Lincoln, Oregon, US
+Melissodes rivalis	44.615	-124	Martin Stein	2019-06-20	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158919145		Lincoln, Oregon, US
+Melissodes rivalis	46	-123	Mark Gorman	2019-07-16	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499816448		Washington, Oregon, US
+Melissodes rivalis	45	-124	Martin Stein	2019-07-23	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499818257		Lincoln, Oregon, US
+Melissodes rivalis	43.327	-117.186	Ellen Watrous	2019-07-07	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158894408		Malheur, Oregon, US
+Melissodes rivalis	44.625	-124.006	Martin Stein	2019-07-23	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158919467		Lincoln, Oregon, US
+Melissodes rivalis	45.521	-122.847	Mark Gorman	2019-07-16	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158947622		Washington, Oregon, US
+Melissodes rivalis	45.602	-119.943	Mark Gorman	2019-07-19	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158947996		Morrow, Oregon, US
+Melissodes rivalis	43	-119	Ellen Watrous	2019-08-23	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770068		Harney, Oregon, US
+Melissodes rivalis	44	-120	Robert Pederson	2019-08-16	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499806319		Crook, Oregon, US
+Melissodes rivalis	44	-121	Lisa Sanco	2019-08-08	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499808690		Deschutes, Oregon, US
+Melissodes rivalis	43	-119	Tom Robertson	2019-08-08	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499817088		Harney, Oregon, US
+Melissodes rivalis	45	-123	Jerry Paul	2019-08-17	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499821934		Benton, Oregon, US
+Melissodes rivalis	42.721	-118.623	Ellen Watrous	2019-08-23	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158894405		Harney, Oregon, US
+Melissodes rivalis	45.57	-121.787	Gretchen Pederson	2019-08-26	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158894406		Hood River, Oregon, US
+Melissodes rivalis	42.701	-118.593	Tom Robertson	2019-08-08	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158917929		Harney, Oregon, US
+Melissodes rivalis	44.402	-120.134	Robert Pederson	2019-08-16	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158933094		Crook, Oregon, US
+Melissodes rivalis	44.264	-121.255	Lisa Sanco	2019-08-08	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158936286		Deschutes, Oregon, US
+Melissodes rivalis	44.606	-123.277	Jerry Paul	2019-08-17	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158956453		Benton, Oregon, US
+Melissodes rivalis	44	-121	Toni Stephan	2019-09-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499801609		Deschutes, Oregon, US
+Melissodes rivalis	44	-123	Lori Humphreys	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499801895		Lane, Oregon, US
+Melissodes rivalis	44	-123	Lori Humphreys	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499801896		Lane, Oregon, US
+Melissodes rivalis	42	-120	Robert Pederson	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499812116		Lake, Oregon, US
+Melissodes rivalis	44	-121	Adrienne Smith	2019-09-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499812487		Deschutes, Oregon, US
+Melissodes rivalis	44	-121	Gretchen Pederson	2019-09-19	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499812841		Deschutes, Oregon, US
+Melissodes rivalis	43	-122	Robert Pederson	2019-09-12	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499813142		Klamath, Oregon, US
+Melissodes rivalis	42	-120	Robert Pederson	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499814678		Lake, Oregon, US
+Melissodes rivalis	44	-121	Adrienne Smith	2019-09-12	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499822011		Deschutes, Oregon, US
+Melissodes rivalis	44.001	-123.141	Lori Humphreys	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158894519		Lane, Oregon, US
+Melissodes rivalis	44.001	-123.141	Lori Humphreys	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158894521		Lane, Oregon, US
+Melissodes rivalis	42.204	-120.019	Robert Pederson	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158911322		Lake, Oregon, US
+Melissodes rivalis	44.146	-121.376	Gretchen Pederson	2019-09-19	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158912224		Deschutes, Oregon, US
+Melissodes rivalis	42.896	-121.812	Robert Pederson	2019-09-12	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158912739		Klamath, Oregon, US
+Melissodes rivalis	42.074	-119.963	Robert Pederson	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158915043		Lake, Oregon, US
+Melissodes rivalis	44.263	-121.255	Toni Stephan	2019-09-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158926955		Deschutes, Oregon, US
+Melissodes rivalis	44.262	-121.254	Adrienne Smith	2019-09-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158942020		Deschutes, Oregon, US
+Melissodes rivalis	44.001	-121.249	Adrienne Smith	2019-09-12	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158956494		Deschutes, Oregon, US
+Melissodes rivalis	44.812	-117.727	J. Rebholz	2012-06-06	S.J. Burrows 2015		Female		Content licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States (CC BY-NC-SA 3.0).http://creativecommons.org/licenses/by-nc-sa/3.0/us/ . User must cite: U. S. National Pollinating Insects Database, United States Department of Agriculture, Agriculture Research Service, Bee Biology and Systematics Laboratory, Logan, Utah (Accessed YYYY-DD-MM)	United States Department of Agriculture, Agriculture Research Service, Pollinating Insect-Biology, Management, Systematics Research, Logan, Utah	https://www.gbif.org/occurrence/3421560707		Baker, Oregon, US
+Melissodes rivalis	44.812	-117.727	J. Rebholz	2012-06-06	S.J. Burrows 2015		Female		Content licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States (CC BY-NC-SA 3.0).http://creativecommons.org/licenses/by-nc-sa/3.0/us/ . User must cite: U. S. National Pollinating Insects Database, United States Department of Agriculture, Agriculture Research Service, Bee Biology and Systematics Laboratory, Logan, Utah (Accessed YYYY-DD-MM)	United States Department of Agriculture, Agriculture Research Service, Pollinating Insect-Biology, Management, Systematics Research, Logan, Utah	https://www.gbif.org/occurrence/3421561717		Baker, Oregon, US
 Melissodes rivalis	45.6704	-118.6836	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658952308		Umatilla, Oregon, US
-Melissodes rivalis	45.6704	-118.6836	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658952307		Umatilla, Oregon, US
 Melissodes rivalis	45.6704	-118.6836	J.E. Harrison	1998-07-21							https://www.gbif.org/occurrence/658952306		Umatilla, Oregon, US
+Melissodes rivalis	45.6704	-118.6836	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658952307		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952357		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952358		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952359		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952360		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-10							https://www.gbif.org/occurrence/658952361		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658952362		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658952363		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-04							https://www.gbif.org/occurrence/658952364		Umatilla, Oregon, US
+Melissodes rivalis	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658952365		Umatilla, Oregon, US
+Melissodes rivalis	42.468132	-122.070653	Eric E. Remington	1987-08-20	John S. Ascher		Male		Open Access, http://creativecommons.org/publicdomain/zero/1.0/; see Yale Peabody policies at: http://hdl.handle.net/10079/8931zqj	Yale Peabody Museum	https://www.gbif.org/occurrence/1039077288		Klamath County, Oregon, US
+Melissodes rivalis	43.741	-117.072	R.B. Roberts	1968-07-20		Adult					https://www.gbif.org/occurrence/3801852795		Malheur, Oregon, US
+Melissodes rivalis	42.17181	-121.63083	Denno & Miller	1968-08-01	LaBerge, Walley	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/1913918207		Klamath, Oregon, US
+Melissodes rivalis	42.32667	-122.87444	L.G. Gentner	1956-08-03		Adult					https://www.gbif.org/occurrence/3801339783		Jackson, Oregon, US
+Melissodes rivalis	44.881	-117.115	W.P. Stephen	1954-08-06		Adult					https://www.gbif.org/occurrence/3801858795		Baker, Oregon, US
 Melissodes rivalis	42.40733	-124.42177		1933-08-05							https://www.gbif.org/occurrence/658952282		Curry, Oregon, US
+Melissodes rivalis	42.476944	-122.088056	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804616132		Klamath Co., Oregon, US
+Melissodes rivalis	42.283194	-121.89225	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804727331		Klamath Co., Oregon, US
+Melissodes rivalis	42.283194	-121.89225	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804768374		Klamath Co., Oregon, US
 Melissodes rivalis			Scullen, H	1944-08-03	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658183173		Lane, Oregon, US
 Melissodes rivalis			Schuh, Joe	1933-07-19	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657592252		Yamhill, Oregon, US
-Melissodes rivalis	44.881	-117.115	W.P. Stephen	1954-08-06		Adult					https://www.gbif.org/occurrence/3801858795		Baker, Oregon, US
-Melissodes rivalis	43.741	-117.072	R.B. Roberts	1968-07-20		Adult					https://www.gbif.org/occurrence/3801852795		Malheur, Oregon, US
-Melissodes rivalis	42.32667	-122.87444	L.G. Gentner	1956-08-03		Adult					https://www.gbif.org/occurrence/3801339783		Jackson, Oregon, US
-Melissodes rivalis	44	-121	Adrienne Smith	2019-09-12	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499822011		Deschutes, Oregon, US
-Melissodes rivalis	45	-123	Jerry Paul	2019-08-17	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499821934		Benton, Oregon, US
-Melissodes rivalis	45	-124	Martin Stein	2019-07-23	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499818257		Lincoln, Oregon, US
-Melissodes rivalis	45	-124	Martin Stein	2019-06-20	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499818166		Lincoln, Oregon, US
-Melissodes rivalis	43	-119	Tom Robertson	2019-08-08	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499817088		Harney, Oregon, US
-Melissodes rivalis	46	-120	Mark Gorman	2019-07-19	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499816627		Morrow, Oregon, US
-Melissodes rivalis	46	-123	Mark Gorman	2019-07-16	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499816448		Washington, Oregon, US
-Melissodes rivalis	42	-120	Robert Pederson	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499814678		Lake, Oregon, US
-Melissodes rivalis	43	-122	Robert Pederson	2019-09-12	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499813142		Klamath, Oregon, US
-Melissodes rivalis	44	-121	Gretchen Pederson	2019-09-19	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499812841		Deschutes, Oregon, US
-Melissodes rivalis	44	-121	Adrienne Smith	2019-09-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499812487		Deschutes, Oregon, US
-Melissodes rivalis	42	-120	Robert Pederson	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499812116		Lake, Oregon, US
-Melissodes rivalis	44	-121	Lisa Sanco	2019-08-08	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499808690		Deschutes, Oregon, US
-Melissodes rivalis	44	-120	Robert Pederson	2019-08-16	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499806319		Crook, Oregon, US
-Melissodes rivalis	44	-123	Lori Humphreys	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499801896		Lane, Oregon, US
-Melissodes rivalis	44	-123	Lori Humphreys	2019-09-13	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499801895		Lane, Oregon, US
-Melissodes rivalis	44	-121	Toni Stephan	2019-09-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499801609		Deschutes, Oregon, US
-Melissodes rivalis	43	-119	Ellen Watrous	2019-08-23	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770068		Harney, Oregon, US
-Melissodes rivalis	43	-117	Ellen Watrous	2019-07-07	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770051		Malheur, Oregon, US
-Melissodes rivalis	45	-124	Martin Stein	2019-06-20	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770046		Lincoln, Oregon, US
-Melissodes rivalis	46	-122	Gretchen Pederson	2019-08-26	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770044		Hood River, Oregon, US
-Melissodes rivalis	45	-123	Scott Tienken	2019-06-25	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467770043		Yamhill, Oregon, US
-Melissodes rivalis	44	-117	Michael O'Loughlin	2019-05-22	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467769938		Baker, Oregon, US
-Melissodes rivalis	44.812	-117.727	J. Rebholz	2012-06-06	S.J. Burrows 2015		Female		Content licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States (CC BY-NC-SA 3.0).http://creativecommons.org/licenses/by-nc-sa/3.0/us/ . User must cite: U. S. National Pollinating Insects Database, United States Department of Agriculture, Agriculture Research Service, Bee Biology and Systematics Laboratory, Logan, Utah (Accessed YYYY-DD-MM)	United States Department of Agriculture, Agriculture Research Service, Pollinating Insect-Biology, Management, Systematics Research, Logan, Utah	https://www.gbif.org/occurrence/3421561717		Baker, Oregon, US
-Melissodes rivalis	44.812	-117.727	J. Rebholz	2012-06-06	S.J. Burrows 2015		Female		Content licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States (CC BY-NC-SA 3.0).http://creativecommons.org/licenses/by-nc-sa/3.0/us/ . User must cite: U. S. National Pollinating Insects Database, United States Department of Agriculture, Agriculture Research Service, Bee Biology and Systematics Laboratory, Logan, Utah (Accessed YYYY-DD-MM)	United States Department of Agriculture, Agriculture Research Service, Pollinating Insect-Biology, Management, Systematics Research, Logan, Utah	https://www.gbif.org/occurrence/3421560707		Baker, Oregon, US
-Melissodes rivalis	44.935	-123.015	Briana Lindh	2019-06-19	Briana C Lindh	Adult					https://www.gbif.org/occurrence/2979597438		Oregon, US
-Melissodes rivalis	42.283194	-121.89225	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804768374		Klamath Co., Oregon, US
-Melissodes rivalis	42.283194	-121.89225	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804727331		Klamath Co., Oregon, US
-Melissodes rivalis	42.476944	-122.088056	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804616132		Klamath Co., Oregon, US
-Melissodes rivalis	42.17181	-121.63083	Denno & Miller	1968-08-01	LaBerge, Walley	Adult	F		http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/1913918207		Klamath, Oregon, US
+Melissodes rivalis			Chamberlain		20506				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4424932189		Crook, Oregon, US
+Melissodes rivalis					20506				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4424932241		Clackamas, Oregon, US
+Melissodes rivalis			Chamberlain		20506				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4424932940		Washington, Oregon, US
+Melissodes rivalis					20506				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4425434205		Clackamas, Oregon, US
+Melissodes rivalis			Chamberlain		20506				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4425439170		Crook, Oregon, US
+Melissodes rivalis					20506				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4425439171		Clackamas, Oregon, US
 `;
 
 // =========================

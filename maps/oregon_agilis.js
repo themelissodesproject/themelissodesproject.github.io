@@ -8,75 +8,76 @@ const SPECIES_PLACEHOLDER = "oregon_agilis"; // Your species-specific placeholde
 const MAP_ID = "oregon_agilis";              // Unique ID for this map div
 
 const tsvText = `
-speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality	label	institutionCode
-Melissodes agilis	43.87	-116.99		1956-07-30							https://www.gbif.org/occurrence/658945939		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.87	-116.99		1956-07-30							https://www.gbif.org/occurrence/658945938		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.87	-116.99	P.F. Torchio	1960-08-20							https://www.gbif.org/occurrence/658945833		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.9815	-117.0247	P.F. Torchio	1961-08-17							https://www.gbif.org/occurrence/658945831		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.9815	-117.0247	P.F. Torchio	1961-08-17							https://www.gbif.org/occurrence/658945830		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.9815	-117.0247	P.F. Torchio	1961-08-21							https://www.gbif.org/occurrence/658945829		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1969-09-06							https://www.gbif.org/occurrence/658945827		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-09							https://www.gbif.org/occurrence/658945826		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658945825		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658945824		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658945823		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-09							https://www.gbif.org/occurrence/658945822		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658945821		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658945820		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-28							https://www.gbif.org/occurrence/658945737		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945736		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945735		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945734		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945733		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-07							https://www.gbif.org/occurrence/658945732		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-07							https://www.gbif.org/occurrence/658945731		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-08-31							https://www.gbif.org/occurrence/658945730		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658945729		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658945728		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658945248		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658945247		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945246		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945245		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945244		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945243		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-06-16							https://www.gbif.org/occurrence/658945242		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658945241		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658945240		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945239		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945238		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-06-16							https://www.gbif.org/occurrence/658945237		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-07-14							https://www.gbif.org/occurrence/658945236		Umatilla, Oregon, US		USDA-ARS
-Melissodes agilis	44.35127	-117.26656	G.A. Hackwell	1959-07-15							https://www.gbif.org/occurrence/658945225		Baker, Oregon, US		USDA-ARS
-Melissodes agilis	43.8	-117.05	R.K. Eppley	1958-08-18							https://www.gbif.org/occurrence/658945183		Malheur, Oregon, US		USDA-ARS
-Melissodes agilis	44.881	-117.115	W.P. Stephen	1955-07-26		Adult					https://www.gbif.org/occurrence/3801381128		Baker, Oregon, US	Halfway, Oregon Baker County; July 26, 1955; on Helianthus; W.P. Stephen  Melissodes (Eumelissodes) agilis Cresson; det. W.E. LaBerge	INHS
-Melissodes agilis	44.415	-117.225	J.E. Davis	1948-08-18		Adult					https://www.gbif.org/occurrence/3801375147		Baker, Oregon, US	Gypsum, Oregon; 18 VIII 1948; J.E. Davis coll  Melissodes (Eumelissodes) agilis Cresson; det. W.E. LaBerge	INHS
-Melissodes agilis	45.742	-119.196	E.S.G. Titus	1904-05-15		Adult					https://www.gbif.org/occurrence/3801372155		Umatilla, Oregon, US	Echo Or; 15-5-04; ESG Titus Collector  Melissodes agilis Cresson; Det. W.E. LaBerge	INHS
-Melissodes agilis	45.742	-119.196	E.S.G. Titus	1904-05-15		Adult					https://www.gbif.org/occurrence/3801339153		Umatilla, Oregon, US	Echo Or; 15-5-04; ESG Titus Collector  Melissodes agilis Cresson; Det. W.E. LaBerge	INHS
-Melissodes agilis	45	-123	Steve Walters	2019-08-17	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499811547		Benton, Oregon, US		OSAC
-Melissodes agilis	45	-123	Steve Walters	2019-08-17	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499811522		Benton, Oregon, US		OSAC
-Melissodes agilis	44	-121	Gretchen Pederson	2019-07-15	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467769532		Deschutes, Oregon, US		OSAC
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804768318		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804768317		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804766127		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804765782		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804763148		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804763147		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804760168		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748121		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748120		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748119		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748118		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804747746		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804631444		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804626164		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804623185		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804623184		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804620290		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804619189		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804618232		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804617208		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804617206		Klamath Co., Oregon, US		AMNH
-Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804615298		Klamath Co., Oregon, US		AMNH
+speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
+Melissodes agilis	42.883	-118.379	M.O'Loughlin	2020-07-27	Briana C Lindh	Adult	Male				https://www.gbif.org/occurrence/6116593009		US
+Melissodes agilis	44	-121	Gretchen Pederson	2019-07-15	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3467769532		Deschutes, Oregon, US
+Melissodes agilis	44.146	-121.376	Gretchen Pederson	2019-07-15	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158893572		Deschutes, Oregon, US
+Melissodes agilis	45	-123	Steve Walters	2019-08-17	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499811522		Benton, Oregon, US
+Melissodes agilis	45	-123	Steve Walters	2019-08-17	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/3499811547		Benton, Oregon, US
+Melissodes agilis	44.606	-123.277	Steve Walters	2019-08-17	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158910439		Benton, Oregon, US
+Melissodes agilis	44.606	-123.277	Steve Walters	2019-08-17	Briana C. Lindh		Male			Oregon State University	https://www.gbif.org/occurrence/6158910472		Benton, Oregon, US
+Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945238		Umatilla, Oregon, US
+Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945239		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945243		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945244		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945245		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658945246		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658945247		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-05-26							https://www.gbif.org/occurrence/658945248		Umatilla, Oregon, US
+Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-06-16							https://www.gbif.org/occurrence/658945237		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-06-16							https://www.gbif.org/occurrence/658945242		Umatilla, Oregon, US
+Melissodes agilis	45.6704	-118.6836	J.E. Harrison	1998-07-14							https://www.gbif.org/occurrence/658945236		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658945240		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	J.E. Harrison	1998-07-28							https://www.gbif.org/occurrence/658945241		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658945728		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-08-17							https://www.gbif.org/occurrence/658945729		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-08-31							https://www.gbif.org/occurrence/658945730		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-07							https://www.gbif.org/occurrence/658945731		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-07							https://www.gbif.org/occurrence/658945732		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945733		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945734		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945735		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658945736		Umatilla, Oregon, US
+Melissodes agilis	45.639	-118.6849	V.J. Tepedino	1997-09-28							https://www.gbif.org/occurrence/658945737		Umatilla, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1969-09-06							https://www.gbif.org/occurrence/658945827		Malheur, Oregon, US
+Melissodes agilis	43.9815	-117.0247	P.F. Torchio	1961-08-21							https://www.gbif.org/occurrence/658945829		Malheur, Oregon, US
+Melissodes agilis	43.9815	-117.0247	P.F. Torchio	1961-08-17							https://www.gbif.org/occurrence/658945830		Malheur, Oregon, US
+Melissodes agilis	43.9815	-117.0247	P.F. Torchio	1961-08-17							https://www.gbif.org/occurrence/658945831		Malheur, Oregon, US
+Melissodes agilis	44.35127	-117.26656	G.A. Hackwell	1959-07-15							https://www.gbif.org/occurrence/658945225		Baker, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658945820		Malheur, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658945821		Malheur, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-09							https://www.gbif.org/occurrence/658945822		Malheur, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658945823		Malheur, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658945824		Malheur, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658945825		Malheur, Oregon, US
+Melissodes agilis	43.74	-117.07	P.F. Torchio	1959-09-09							https://www.gbif.org/occurrence/658945826		Malheur, Oregon, US
+Melissodes agilis	43.8	-117.05	R.K. Eppley	1958-08-18							https://www.gbif.org/occurrence/658945183		Malheur, Oregon, US
+Melissodes agilis	44.881	-117.115	W.P. Stephen	1955-07-26		Adult					https://www.gbif.org/occurrence/3801381128		Baker, Oregon, US
+Melissodes agilis	45.742	-119.196	E.S.G. Titus	1904-05-15		Adult					https://www.gbif.org/occurrence/3801339153		Umatilla, Oregon, US
+Melissodes agilis	45.742	-119.196	E.S.G. Titus	1904-05-15		Adult					https://www.gbif.org/occurrence/3801372155		Umatilla, Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804615298		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804617206		Klamath Co., Oregon, US
+Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804617208		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804618232		Klamath Co., Oregon, US
+Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804619189		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804620290		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804623184		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804623185		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804626164		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804631444		Klamath Co., Oregon, US
+Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804747746		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748118		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748119		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748120		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804748121		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804760168		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804763147		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804763148		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804765782		Klamath Co., Oregon, US
+Melissodes agilis	42.444722	-121.868333	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804766127		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804768317		Klamath Co., Oregon, US
+Melissodes agilis	42.198889	-121.406111	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804768318		Klamath Co., Oregon, US
+Melissodes agilis					15650				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4424939160		Polk, Oregon, US
 `;
 
 // =========================

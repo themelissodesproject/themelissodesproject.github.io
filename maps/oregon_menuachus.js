@@ -9,12 +9,12 @@ const MAP_ID = "oregon_menuachus";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes menuachus	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658947242		Malheur, Oregon, US
-Melissodes menuachus	45.639	-118.6849	V.J. Tepedino	1997-09-28							https://www.gbif.org/occurrence/658947237		Umatilla, Oregon, US
-Melissodes menuachus	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658947236		Umatilla, Oregon, US
 Melissodes menuachus	45.639	-118.6849	J.E. Harrison	1998-05-17							https://www.gbif.org/occurrence/658947222		Umatilla, Oregon, US
-Melissodes menuachus	43.65	-117.06	G.A. Hackwell	1959-07-10							https://www.gbif.org/occurrence/658947221		Malheur, Oregon, US
+Melissodes menuachus	45.639	-118.6849	V.J. Tepedino	1997-09-21							https://www.gbif.org/occurrence/658947236		Umatilla, Oregon, US
+Melissodes menuachus	45.639	-118.6849	V.J. Tepedino	1997-09-28							https://www.gbif.org/occurrence/658947237		Umatilla, Oregon, US
 Melissodes menuachus	43.741	-117.072	P.F. Torchio	1969-09-07		Adult					https://www.gbif.org/occurrence/3801371802		Malheur, Oregon, US
+Melissodes menuachus	43.65	-117.06	G.A. Hackwell	1959-07-10							https://www.gbif.org/occurrence/658947221		Malheur, Oregon, US
+Melissodes menuachus	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658947242		Malheur, Oregon, US
 `;
 
 // =========================

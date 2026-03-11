@@ -9,18 +9,27 @@ const MAP_ID = "oregon_bimatris";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
+Melissodes bimatris	45.704	-120.447	Erin Dunbar	2024-10-06	Karen W. Wright	Adult	Male				https://www.gbif.org/occurrence/5141243593		Klickitat, Washington, US
+Melissodes bimatris	42.721	-120.756	R.Pederson	2020-08-09	Briana C Lindh	Adult	Male				https://www.gbif.org/occurrence/6116573577		US
+Melissodes bimatris	45.72684	-118.65393	L.Robinson	2020-08-26	Briana C Lindh	Adult	Male				https://www.gbif.org/occurrence/6116707621		US
+Melissodes bimatris	42.074	-119.963	R.Pederson	2019-09-13	Briana C Lindh	Adult	Female				https://www.gbif.org/occurrence/6116593008		US
+Melissodes bimatris	44.001	-121.249	A.Smith	2019-09-12	Briana C Lindh	Adult	Female				https://www.gbif.org/occurrence/6116752194		US
+Melissodes bimatris	44.272	-121.426	G.Pederson	2019-09-21	Briana C Lindh	Adult	Female				https://www.gbif.org/occurrence/6116823738		US
+Melissodes bimatris	44.263	-121.255	H. Williams	2019-09-05	Briana C Lindh	Adult					https://www.gbif.org/occurrence/6117067362		US
+Melissodes bimatris	44.0416	-121.318	R.Bessette	2018-08-30	Briana C Lindh	Adult	Male				https://www.gbif.org/occurrence/6116918763		US
+Melissodes bimatris	45.2413	-120.0327	G.Pederson	2018-09-18	Briana C Lindh	Adult	Male				https://www.gbif.org/occurrence/6116514369		US
 Melissodes bimatris	43.845	-117.6174	P.F. Torchio	1961-08-16							https://www.gbif.org/occurrence/658946445		Malheur, Oregon, US
-Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658946444		Malheur, Oregon, US
-Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658946443		Malheur, Oregon, US
-Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658946442		Malheur, Oregon, US
-Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658946441		Malheur, Oregon, US
-Melissodes bimatris	45.7425	-119.1944	Titus, E		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658179965		Umatilla, Oregon, US
-Melissodes bimatris	45.8421	-119.1649	P.F. Torchio			Adult					https://www.gbif.org/occurrence/3801941759		Umatilla, Oregon, US
+Melissodes bimatris	45.84	-119.69944	C. E. Osgood	1961-09		Adult					https://www.gbif.org/occurrence/3801371797		Morrow, Oregon, US
 Melissodes bimatris	45.84	-119.69944	C. E. Osgood	1961-09-20		Adult					https://www.gbif.org/occurrence/3801938778		Morrow, Oregon, US
+Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658946441		Malheur, Oregon, US
+Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658946442		Malheur, Oregon, US
+Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-07							https://www.gbif.org/occurrence/658946443		Malheur, Oregon, US
+Melissodes bimatris	43.74	-117.07	P.F. Torchio	1959-09-06							https://www.gbif.org/occurrence/658946444		Malheur, Oregon, US
 Melissodes bimatris	42.1898	-122.1238	W.P. Stephen	1953-09-17		Adult					https://www.gbif.org/occurrence/3801376783		Klamath, Oregon, US
-Melissodes bimatris	45.84	-119.69944	C. E. Osgood			Adult					https://www.gbif.org/occurrence/3801371797		Morrow, Oregon, US
-Melissodes bimatris	45.8421	-119.1649	P.F. Torchio			Adult					https://www.gbif.org/occurrence/3801371782		Umatilla, Oregon, US
+Melissodes bimatris	45.7425	-119.1944	Titus, E		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658179965		Umatilla, Oregon, US
 Melissodes bimatris	42.403611	-121.437222	J. Schuh				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804622839		Klamath Co., Oregon, US
+Melissodes bimatris	45.8421	-119.1649	P.F. Torchio			Adult					https://www.gbif.org/occurrence/3801371782		Umatilla, Oregon, US
+Melissodes bimatris	45.8421	-119.1649	P.F. Torchio			Adult					https://www.gbif.org/occurrence/3801941759		Umatilla, Oregon, US
 `;
 
 // =========================

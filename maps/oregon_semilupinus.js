@@ -9,11 +9,16 @@ const MAP_ID = "oregon_semilupinus";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
+Melissodes semilupinus	44.146	-121.377	G.Pederson	2020-08-06	Briana C Lindh	Adult	Male				https://www.gbif.org/occurrence/6116524972		US
+Melissodes semilupinus	45.831	-119.298	J.Baldwin	2019-07-23	Briana C Lindh	Adult					https://www.gbif.org/occurrence/6116477362		US
+Melissodes semilupinus	45.831	-119.298	J. Baldwin	2019-07-23	Briana C Lindh	Adult					https://www.gbif.org/occurrence/6116481729		US
+Melissodes semilupinus	44.146	-121.376	G.Pederson	2019-09-19	Briana C Lindh	Adult					https://www.gbif.org/occurrence/6117001854		US
+Melissodes semilupinus	44.147	-121.377	R.Pederson	2019-09-19	Briana C Lindh	Adult	Male				https://www.gbif.org/occurrence/6117042723		US
 Melissodes semilupinus	45.639	-118.6849	V.J. Tepedino	1997-10-05							https://www.gbif.org/occurrence/658948687		Umatilla, Oregon, US
-Melissodes semilupinus			Scullen, H	1926-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658364052		Deschutes, Oregon, US
-Melissodes semilupinus	45.7425	-119.1944	Titus, E		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657819465		Umatilla, Oregon, US
 Melissodes semilupinus	45.84	-119.69944	C. E. Osgood	1961-09-14		Adult					https://www.gbif.org/occurrence/3801337124		Morrow, Oregon, US
+Melissodes semilupinus	45.7425	-119.1944	Titus, E		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657819465		Umatilla, Oregon, US
 Melissodes semilupinus	45.716667	-120.200833	M. A. Cazier				Female			American Museum of Natural History	https://www.gbif.org/occurrence/2804748105		Gilliam Co., Oregon, US
+Melissodes semilupinus			Scullen, H	1926-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658364052		Deschutes, Oregon, US
 `;
 
 // =========================

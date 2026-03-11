@@ -9,71 +9,71 @@ const MAP_ID = "oregon_minusculus";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943737		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943736		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943735		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943734		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943733		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943732		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943731		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943730		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943729		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943728		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943727		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943726		Nez Perce, Idaho, US
-Melissodes minusculus	46.4526	-116.6568	P.F. Torchio								https://www.gbif.org/occurrence/658943725		Nez Perce, Idaho, US
-Melissodes minusculus	29.25	-103.25	P.F. Torchio								https://www.gbif.org/occurrence/658943724		Brewster, Texas, US
-Melissodes minusculus	36.70248	-120.71366	P.F. Torchio	1962-06-25							https://www.gbif.org/occurrence/658943723		Fresno, California, US
+Melissodes minusculus	38.67852	-121.7733	unknown	1985-08-19	LaBerge, Walley	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/1899931939		Yolo, California, US
+Melissodes minusculus			Denno, R	1969-08-21	LaBerge, Walley	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/1899931947		Solano, California, US
+Melissodes minusculus	38.15139	-121.97167	R.F. Denno	1969-08-21		Adult					https://www.gbif.org/occurrence/3801339836		Solano, California, US
+Melissodes minusculus	38.28556	-121.81556	R.F. Denno	1969-08-21		Adult					https://www.gbif.org/occurrence/3801380879		Solano, California, US
 Melissodes minusculus	36.70248	-120.71366	P.F. Torchio	1962-06-25							https://www.gbif.org/occurrence/658943722		Fresno, California, US
-Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943721		Fresno, California, US
-Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943720		Fresno, California, US
-Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943719		Fresno, California, US
-Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943718		Fresno, California, US
-Melissodes minusculus	40.2056	-80.5567	D.J. Burdick	1962-07-26							https://www.gbif.org/occurrence/658943717		Brooke, West Virginia, US
+Melissodes minusculus	36.70248	-120.71366	P.F. Torchio	1962-06-25							https://www.gbif.org/occurrence/658943723		Fresno, California, US
+Melissodes minusculus			P.F. Torchio	1962-06-25		Adult					https://www.gbif.org/occurrence/3801371858		Fresno, California, US
 Melissodes minusculus	40.2056	-80.5567	D.J. Burdick	1962-07-26							https://www.gbif.org/occurrence/658943716		Brooke, West Virginia, US
-Melissodes minusculus	37.1267	-121.3071	Snelling, Roy	1951-08-06	LaBerge, Walley	Adult	F		http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658386062		Stanislaus, California, US
-Melissodes minusculus	37.404	-120.9943	Snelling, Roy	1951-08-06	LaBerge, Walley	Adult	F		http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658282416		Stanislaus, California, US
-Melissodes minusculus	35.2224	-119.0107	Beamer, Raymond	1929-07-24	LaBerge, Walley	Adult	M		http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658146511		Kern, California, US
-Melissodes minusculus	37.404	-120.9943	Snelling, Roy	1952-07-31	LaBerge, Walley	Adult	F		http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657686921		Stanislaus, California, US
+Melissodes minusculus	40.2056	-80.5567	D.J. Burdick	1962-07-26							https://www.gbif.org/occurrence/658943717		Brooke, West Virginia, US
+Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943718		Fresno, California, US
+Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943719		Fresno, California, US
+Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943720		Fresno, California, US
+Melissodes minusculus	36.71939	-120.3321	P.F. Torchio	1962-07-08							https://www.gbif.org/occurrence/658943721		Fresno, California, US
+Melissodes minusculus	29.25	-103.25	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943724		Brewster, Texas, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943725		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943726		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943727		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943728		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943729		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943730		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943731		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943732		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943733		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943734		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943735		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943736		Nez Perce, Idaho, US
+Melissodes minusculus	46.4526	-116.6568	P.F. Torchio	1962-07							https://www.gbif.org/occurrence/658943737		Nez Perce, Idaho, US
+Melissodes minusculus			D.J. Burdick	1962-07-26		Adult					https://www.gbif.org/occurrence/3801375843		Fresno, California, US
+Melissodes minusculus	36.78417	-120.36861	P.F. Torchio	1962-07-08		Adult					https://www.gbif.org/occurrence/3801851884		Fresno, California, US
+Melissodes minusculus	36.78417	-120.36861	P.F. Torchio	1962-07-08		Adult					https://www.gbif.org/occurrence/3801854846		Fresno, California, US
 Melissodes minusculus	36.48281	-120.00372	S.M. Fullerton	1960-08-31	R.R. Snelling						https://www.gbif.org/occurrence/5918932879		Fresno, California, US
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854162002		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161853		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161837		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161635		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161296		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161265		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160964		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160896		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160837		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160699		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160610		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160412		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160393		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160197		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160190		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160174		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160170		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159986		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159672		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159666		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159520		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159466		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159465		
-Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159351		
 Melissodes minusculus	35.40056	-119.46861	P.A. Opler	1957-07-21		Adult					https://www.gbif.org/occurrence/3801936849		Kern, California, US
 Melissodes minusculus	37.4053	-120.9995	R.R. Snelling	1953-07-28		Adult	Female				https://www.gbif.org/occurrence/3801858855		Stanislaus, California, US
-Melissodes minusculus	36.78417	-120.36861	P.F. Torchio	1962-07-08		Adult					https://www.gbif.org/occurrence/3801854846		Fresno, California, US
-Melissodes minusculus	36.78417	-120.36861	P.F. Torchio	1962-07-08		Adult					https://www.gbif.org/occurrence/3801851884		Fresno, California, US
-Melissodes minusculus	38.28556	-121.81556	R.F. Denno	1969-08-21		Adult					https://www.gbif.org/occurrence/3801380879		Solano, California, US
-Melissodes minusculus			D.J. Burdick	1962-07-26		Adult					https://www.gbif.org/occurrence/3801375843		Fresno, California, US
-Melissodes minusculus			P.F. Torchio	1962-06-25		Adult					https://www.gbif.org/occurrence/3801371858		Fresno, California, US
-Melissodes minusculus	38.15139	-121.97167	R.F. Denno	1969-08-21		Adult					https://www.gbif.org/occurrence/3801339836		Solano, California, US
-Melissodes minusculus	37.388056	-120.983333	R. R. Snelling				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804617238		Stanislaus Co., California, US
-Melissodes minusculus	36.75	-120.85	D. J. Burdick				Female			American Museum of Natural History	https://www.gbif.org/occurrence/2804613473		Fresno Co., California, US
-Melissodes minusculus	36.786028	-120.774167	P. F. Torchio				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804609705		Fresno Co., California, US
+Melissodes minusculus	37.404	-120.9943	Snelling, Roy	1952-07-31	LaBerge, Walley	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657686921		Stanislaus, California, US
+Melissodes minusculus	37.404	-120.9943	Snelling, Roy	1951-08-06	LaBerge, Walley	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658282416		Stanislaus, California, US
+Melissodes minusculus	37.1267	-121.3071	Snelling, Roy	1951-08-06	LaBerge, Walley	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658386062		Stanislaus, California, US
+Melissodes minusculus	35.2224	-119.0107	Beamer, Raymond	1929-07-24	LaBerge, Walley	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658146511		Kern, California, US
 Melissodes minusculus											https://www.gbif.org/occurrence/2238766727		
-Melissodes minusculus			Denno, R	1969-08-21	LaBerge, Walley	Adult	F		http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/1899931947		Solano, California, US
-Melissodes minusculus	38.67852	-121.7733	unknown	1985-08-19	LaBerge, Walley	Adult	M		http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/1899931939		Yolo, California, US
+Melissodes minusculus	36.786028	-120.774167	P. F. Torchio				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804609705		Fresno Co., California, US
+Melissodes minusculus	36.75	-120.85	D. J. Burdick				Female			American Museum of Natural History	https://www.gbif.org/occurrence/2804613473		Fresno Co., California, US
+Melissodes minusculus	37.388056	-120.983333	R. R. Snelling				Male			American Museum of Natural History	https://www.gbif.org/occurrence/2804617238		Stanislaus Co., California, US
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159351		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159465		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159466		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159520		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159666		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159672		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854159986		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160170		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160174		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160190		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160197		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160393		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160412		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160610		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160699		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160837		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160896		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854160964		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161265		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161296		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161635		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161837		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854161853		
+Melissodes minusculus									http://vertnet.org/resources/norms.html		https://www.gbif.org/occurrence/4854162002		
 `;
 
 // =========================

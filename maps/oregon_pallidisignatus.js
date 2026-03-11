@@ -9,30 +9,36 @@ const MAP_ID = "oregon_pallidisignatus";              // Unique ID for this map 
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes pallidisignatus	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658947712		Malheur, Oregon, US
-Melissodes pallidisignatus	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658947711		Malheur, Oregon, US
-Melissodes pallidisignatus	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658947710		Malheur, Oregon, US
-Melissodes pallidisignatus			unknown	1932-09-04	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658384627		Oregon, US
-Melissodes pallidisignatus			Scullen, H	1930-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658334068		Klamath, Oregon, US
-Melissodes pallidisignatus			Scullen, H	1955-08-11	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658328100		Klamath, Oregon, US
-Melissodes pallidisignatus			Scullen, H	1930-07-28	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658322480		Oregon, US
-Melissodes pallidisignatus			unknown		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658253824		Deschutes, Oregon, US
-Melissodes pallidisignatus			unknown		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658213997		Deschutes, Oregon, US
-Melissodes pallidisignatus	43.7692	-121.3142	Schuh, Grey	1939-08-08	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658156850		Deschutes, Oregon, US
-Melissodes pallidisignatus			Scullen, H	1930-08-14	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657849189		Klamath, Oregon, US
-Melissodes pallidisignatus			Scullen, H	1930-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657784553		Klamath, Oregon, US
-Melissodes pallidisignatus			Scullen, H	1930-09-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657749492		Klamath, Oregon, US
-Melissodes pallidisignatus			Scullen, H	1930-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657613385		Klamath, Oregon, US
-Melissodes pallidisignatus	42.9386	-122.1408	F.L. Wynd	1930-08-28		Adult					https://www.gbif.org/occurrence/3801938985		Klamath, Oregon, US
+Melissodes pallidisignatus	42.401757	-122.828387	M. Graham	2019-07-30	A. Moldenke		Female			Oregon State University	https://www.gbif.org/occurrence/3064158333		Jackson, Oregon, US
+Melissodes pallidisignatus	42.401757	-122.828387	M. Graham	2019-08-14	A. Moldenke		Female			Oregon State University	https://www.gbif.org/occurrence/3064158360		Jackson, Oregon, US
+Melissodes pallidisignatus	44	-121	Ellen Watrous	2019-10-04	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3467769941		Crook, Oregon, US
+Melissodes pallidisignatus	44	-119	Ellen Watrous	2019-10-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3467769973		Harney, Oregon, US
+Melissodes pallidisignatus	44	-121	Ellen Watrous	2019-10-04	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499822418		Crook, Oregon, US
+Melissodes pallidisignatus	44.303	-120.81	Ellen Watrous	2019-10-04	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158894233		Crook, Oregon, US
+Melissodes pallidisignatus	43.992	-118.69	Ellen Watrous	2019-10-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158894234		Harney, Oregon, US
+Melissodes pallidisignatus	44.303	-120.81	Ellen Watrous	2019-10-04	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/6158957077		Crook, Oregon, US
 Melissodes pallidisignatus	42.85306	-122.00806	C.W. Rettenmeyer, M.E. Rettenmeyer	1962-09-01		Adult					https://www.gbif.org/occurrence/3801857006		Klamath, Oregon, US
 Melissodes pallidisignatus	42.398	-121.1586	P.F. Torchio	1960-08-03		Adult					https://www.gbif.org/occurrence/3801372084		Klamath, Oregon, US
+Melissodes pallidisignatus	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658947710		Malheur, Oregon, US
+Melissodes pallidisignatus	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658947711		Malheur, Oregon, US
+Melissodes pallidisignatus	43.74	-117.07	P.F. Torchio	1959-09-08							https://www.gbif.org/occurrence/658947712		Malheur, Oregon, US
 Melissodes pallidisignatus	42.9175	-121.7843	H.A. Scullen	1952-08-20		Adult					https://www.gbif.org/occurrence/3801340989		Klamath, Oregon, US
 Melissodes pallidisignatus	42.1777	-119.8788	E.E. Grissell, R.F. Denno	1949-09-13		Adult					https://www.gbif.org/occurrence/3801340062		Lake, Oregon, US
+Melissodes pallidisignatus	43.7692	-121.3142	Schuh, Grey	1939-08-08	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658156850		Deschutes, Oregon, US
 Melissodes pallidisignatus	44.94306	-123.03389		1932-09-04		Adult					https://www.gbif.org/occurrence/3801339978		Marion, Oregon, US
-Melissodes pallidisignatus	44	-121	Ellen Watrous	2019-10-04	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3499822418		Crook, Oregon, US
-Melissodes pallidisignatus	44	-119	Ellen Watrous	2019-10-05	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3467769973		Harney, Oregon, US
-Melissodes pallidisignatus	44	-121	Ellen Watrous	2019-10-04	Briana C. Lindh		Female			Oregon State University	https://www.gbif.org/occurrence/3467769941		Crook, Oregon, US
+Melissodes pallidisignatus	42.9386	-122.1408	F.L. Wynd	1930-08-28		Adult					https://www.gbif.org/occurrence/3801938985		Klamath, Oregon, US
 Melissodes pallidisignatus	42.341667	-121.803333	J. Schuh				Female			American Museum of Natural History	https://www.gbif.org/occurrence/2804610841		Klamath Co., Oregon, US
+Melissodes pallidisignatus			Scullen, H	1955-08-11	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658328100		Klamath, Oregon, US
+Melissodes pallidisignatus			unknown	1932-09-04	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658384627		Oregon, US
+Melissodes pallidisignatus			Scullen, H	1930-07-28	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658322480		Oregon, US
+Melissodes pallidisignatus			Scullen, H	1930-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657613385		Klamath, Oregon, US
+Melissodes pallidisignatus			Scullen, H	1930-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657784553		Klamath, Oregon, US
+Melissodes pallidisignatus			Scullen, H	1930-08-14	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657849189		Klamath, Oregon, US
+Melissodes pallidisignatus			Scullen, H	1930-08-10	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658334068		Klamath, Oregon, US
+Melissodes pallidisignatus			Scullen, H	1930-09-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657749492		Klamath, Oregon, US
+Melissodes pallidisignatus			unknown		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658213997		Deschutes, Oregon, US
+Melissodes pallidisignatus			unknown		unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658253824		Deschutes, Oregon, US
+Melissodes pallidisignatus					20506				Not-for-profit use only	Texas A&M University	https://www.gbif.org/occurrence/4425663201		Deschutes, Oregon, US
 `;
 
 // =========================

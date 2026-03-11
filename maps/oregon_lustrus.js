@@ -9,7 +9,6 @@ const MAP_ID = "oregon_lustrus";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
 Melissodes lustrus	42.404	-120.2912	P.F. Torchio	1959-08-06							https://www.gbif.org/occurrence/658944906		Klamath, Oregon, US
 Melissodes lustrus	42.404	-120.2912	P.F. Torchio	1959-08-06							https://www.gbif.org/occurrence/658944905		Klamath, Oregon, US
 Melissodes lustrus	42.404	-120.2912	P.F. Torchio	1959-08-06							https://www.gbif.org/occurrence/658944904		Klamath, Oregon, US

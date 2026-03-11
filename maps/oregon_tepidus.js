@@ -9,41 +9,36 @@ const MAP_ID = "oregon_tepidus";              // Unique ID for this map div
 
 const tsvText = `
 speciesname	latitude	longitude	recordedby	datefound	determinedby	lifestage	sex	notes	rights	rightsholder	sourcelink	gbif_link	locality
-Melissodes tepidus	45.81179	-118.49052	J.R. Russell	1950-07-18							https://www.gbif.org/occurrence/658953567		Umatilla, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801337222		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801372219		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801376811		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801381241		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801852827		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801854821		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801858831		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801936823		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801939799		Jackson, Oregon, US
+Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801942209		Jackson, Oregon, US
+Melissodes tepidus	42.683	-118.551	H. W. Prescott	1961-06-24		Adult		The coordinates are given for Steen Mountains.			https://www.gbif.org/occurrence/3801337223		Harney, Oregon, US
+Melissodes tepidus	42.683	-118.551	H. W. Prescott	1961-06-24		Adult		The coordinates are given for Steen Mountains.			https://www.gbif.org/occurrence/3801859215		Harney, Oregon, US
 Melissodes tepidus	43.8	-117.05	R.K. Eppley	1958-08-18							https://www.gbif.org/occurrence/658953552		Malheur, Oregon, US
-Melissodes tepidus	43.87	-116.99	P.F. Torchio	1960-08-20							https://www.gbif.org/occurrence/658953525		Malheur, Oregon, US
-Melissodes tepidus	43.87	-116.99	P.F. Torchio	1960-08-20							https://www.gbif.org/occurrence/658953524		Malheur, Oregon, US
-Melissodes tepidus	43.87	-116.99	P.F. Torchio	1960-08-20							https://www.gbif.org/occurrence/658953523		Malheur, Oregon, US
+Melissodes tepidus	43.7824	-117.1534	R.K. Eppley	1958-08-18		Adult					https://www.gbif.org/occurrence/3801339213		Malheur, Oregon, US
+Melissodes tepidus	45.81179	-118.49052	J.R. Russell	1950-07-18							https://www.gbif.org/occurrence/658953567		Umatilla, Oregon, US
+Melissodes tepidus			Scullen, H	1948-07-19	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658137400		Malheur, Oregon, US
+Melissodes tepidus			Scullen, H	1940-07-16	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657703774		Malheur, Oregon, US
+Melissodes tepidus			Scullen, H	1940-07-16	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658168846		Malheur, Oregon, US
+Melissodes tepidus			Scullen, H	1940-07-18	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658184162		Malheur, Oregon, US
+Melissodes tepidus			Scullen, H	1940-07-16	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658285776		Malheur, Oregon, US
 Melissodes tepidus			Scullen, H	1938-07-22	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658358741		Malheur, Oregon, US
 Melissodes tepidus			Bolinger & Jewett	1937-07-29	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658291337		Harney, Oregon, US
-Melissodes tepidus			Scullen, H	1940-07-16	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658285776		Malheur, Oregon, US
-Melissodes tepidus			Scullen, H	1936-07-22	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658193497		Oregon, US
-Melissodes tepidus			Scullen, H	1940-07-18	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658184162		Malheur, Oregon, US
-Melissodes tepidus			Scullen, H	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658173104		Malheur, Oregon, US
-Melissodes tepidus			Rice, P	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658169447		Umatilla, Oregon, US
-Melissodes tepidus			Scullen, H	1940-07-16	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658168846		Malheur, Oregon, US
-Melissodes tepidus			Scullen, H	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658166536		Malheur, Oregon, US
-Melissodes tepidus			unknown	1931-07-30	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658146242		Malheur, Oregon, US
-Melissodes tepidus			Scullen, H	1948-07-19	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658137400		Malheur, Oregon, US
-Melissodes tepidus			Scullen, H	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658128950		Malheur, Oregon, US
-Melissodes tepidus			Scullen, H	1936-07-22	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657712687		Oregon, US
-Melissodes tepidus			Scullen, H	1940-07-16	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657703774		Malheur, Oregon, US
 Melissodes tepidus			Scullen, H	1936-07-22	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657691116		Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801942209		Jackson, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801939799		Jackson, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801936823		Jackson, Oregon, US
-Melissodes tepidus	42.683	-118.551	H. W. Prescott	1961-06-24		Adult		The coordinates are given for Steen Mountains.			https://www.gbif.org/occurrence/3801859215		Harney, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801858831		Jackson, Oregon, US
-Melissodes tepidus	43.87694	-116.99389	P.F. Torchio	1960-08-20		Adult					https://www.gbif.org/occurrence/3801858823		Malheur, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801854821		Jackson, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801852827		Jackson, Oregon, US
-Melissodes tepidus	43.87694	-116.99389	P.F. Torchio	1960-08-20		Adult					https://www.gbif.org/occurrence/3801852826		Malheur, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801381241		Jackson, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801376811		Jackson, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801372219		Jackson, Oregon, US
-Melissodes tepidus	43.7824	-117.1534	R.K. Eppley	1958-08-18		Adult					https://www.gbif.org/occurrence/3801339213		Malheur, Oregon, US
-Melissodes tepidus	42.683	-118.551	H. W. Prescott	1961-06-24		Adult		The coordinates are given for Steen Mountains.			https://www.gbif.org/occurrence/3801337223		Harney, Oregon, US
-Melissodes tepidus	42.32667	-122.87444	R.B. Roberts	1971-08-17		Adult					https://www.gbif.org/occurrence/3801337222		Jackson, Oregon, US
+Melissodes tepidus			Scullen, H	1936-07-22	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/657712687		Oregon, US
+Melissodes tepidus			Scullen, H	1936-07-22	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658193497		Oregon, US
+Melissodes tepidus			unknown	1931-07-30	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658146242		Malheur, Oregon, US
+Melissodes tepidus			Scullen, H	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658128950		Malheur, Oregon, US
+Melissodes tepidus			Scullen, H	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658166536		Malheur, Oregon, US
+Melissodes tepidus			Rice, P	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658169447		Umatilla, Oregon, US
+Melissodes tepidus			Scullen, H	1929-08-02	unknown	Adult			http://biodiversity.ku.edu/research/university-kansas-biodiversity-institute-data-publication-and-use-norms		https://www.gbif.org/occurrence/658173104		Malheur, Oregon, US
 `;
 
 // =========================
