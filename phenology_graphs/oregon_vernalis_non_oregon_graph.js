@@ -8,6 +8,7 @@ const vernalisOregonGraph = (() => {
     // Paste ONLY the date columns here
     // ==========================
     const melissodesDates = `
+datefound
 2014-06-04
 2012-05-05
 2012-07
@@ -161,6 +162,7 @@ const vernalisOregonGraph = (() => {
 1936-04-09
 1935-04-20
 1933-04-23
+
 `;
 
     const otherDates = `

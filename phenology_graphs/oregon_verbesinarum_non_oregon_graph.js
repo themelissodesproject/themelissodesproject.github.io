@@ -8,6 +8,7 @@ const verbesinarumOregonGraph = (() => {
     // Paste ONLY the date columns here
     // ==========================
     const melissodesDates = `
+datefound
 2023-04-13
 2023-04-13
 2023-05-11
@@ -102,7 +103,6 @@ const verbesinarumOregonGraph = (() => {
 2013-09-22
 2013-09-22
 2013-09-22
-2013-09-22
 2013-09-24
 2013-09-21
 2013-09-21
@@ -136,7 +136,6 @@ const verbesinarumOregonGraph = (() => {
 2008-09
 2008-09-14
 2007-05-18
-2007-08-27
 2007
 2006-05-09
 2006
@@ -855,6 +854,7 @@ const verbesinarumOregonGraph = (() => {
 1935-09-14
 1935-09-14
 1912-07-15
+
 `;
 
     const otherDates = `
