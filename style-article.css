@@ -2,29 +2,31 @@
 
 
 .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 @media only screen and (max-width: 850px ){
 
-
   header {
     flex-direction: column;
-    align-items: flex-start; /* left-align title + nav */
-    gap: 12px;               /* space between title and nav */
+    align-items: flex-start;
+    gap: 12px;
   }
-.banner {
+
+  .banner {
     text-align: center;
-    width: 100%;             /* prevent floating in the middle */
+    width: 100%;
   }
 
   nav ul {
@@ -32,12 +34,12 @@
     justify-content: center
   }
 
-    .tooltip .tooltip-text {
+  .tooltip .tooltip-text {
     width: 14vh !important;
-    max-width: 90vw !important;/* shrink only on small screens */
+    max-width: 90vw !important;
   }
 
-   .page{
+  .page{
     width: 100% !important;
     background: #fff!important;
     padding: 20px!important;
@@ -47,15 +49,15 @@
     border-style: solid!important;
     border-color: #F3F4F5!important;
     border-width: 1.5px!important;
-}
+  }
 
  .page::-webkit-scrollbar{
     display: none!important;
-}
+  }
 
  .page .page-content{
     justify-content: center!important;
-}
+  }
 
 
  .page .page-text h1{
@@ -63,7 +65,7 @@
     padding-left: 20px!important;
     font-style: italic!important;
     font-weight: bold!important;
-}
+  }
 
  .page .page-text h2{
     padding-top: 30px!important;
@@ -71,7 +73,7 @@
     font-style: italic!important;
     font-weight: bold!important;
     font-size: 2em;
-}
+  }
 
  .page .page-text #top{
     padding-top: 30px!important;
@@ -80,15 +82,15 @@
     font-weight: bold!important;
     font-size: 30px!important;
     margin-left: 0 !important;
-}
+  }
 
  .page .page-text p{
     padding-top: 20px!important;
     padding-left: 20px!important;
     padding-right: 20px!important;
-    overflow-wrap: anywhere !important; /* allows more aggressive line breaking */
-  word-break: break-word !important;
-}
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
 
  .page .page-text .long-bar{
     border: none!important;
@@ -99,8 +101,7 @@
     justify-content: center!important;
     margin-left: 10px!important;
     margin-right: 10px!important;
-    
-}
+  }
 
  .page .page-text .long-bar2{
     border: none!important;
@@ -112,84 +113,81 @@
     justify-content: center!important;
     margin-left: 10px!important;
     margin-right: 10px!important;
-}
+  }
 
  .page .page-text .sub-title{
     font-size: 10px!important;
     text-align: center!important;
     margin-left: 0 !important;
-
-}
+  }
 
  .page .page-text .synonyms-box {
     width: 95% !important;
-  max-width: 95% !important;
-  box-sizing: border-box !important;
-  margin: 10px!important;
-  padding: 12px !important;
-  background: rgb(251, 251, 250) !important;
-  border: 1.5px solid #F3F4F5 !important;
-  white-space: normal !important;
-  overflow-wrap: anywhere !important; /* allows more aggressive line breaking */
-  word-break: break-word !important;
-}
+    max-width: 95% !important;
+    box-sizing: border-box !important;
+    margin: 10px!important;
+    padding: 12px !important;
+    background: rgb(251, 251, 250) !important;
+    border: 1.5px solid #F3F4F5 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
 
  .page .page-text .body-text p{
     padding-top: 20px!important;
     padding-left: 20px!important;
     padding-right: 20px!important;
-    overflow-wrap: anywhere !important; /* allows more aggressive line breaking */
-  word-break: break-word !important;
-}
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
 
  .page .page-text .body-text{
     width: 100%!important;
     margin-top: 10px!important;
-
-}
+  }
 
  .page .page-text .page-content .species-box-parent{
     display: grid!important;
     justify-content: center!important;
     align-items: center!important;
-}
+  }
 
 
  .page .page-text .page-content{
     display: grid!important;
     gap: 0px!important;
-
-}
+  }
 
  .page .page-text .body-text h1{
     font-style: normal!important;
     font-weight: normal!important;
-}
+  }
 
  .page .page-text .body-text h2{
     font-style: normal!important;
     font-weight: normal!important;
     font-size: 2em;
-}
+  }
 
  .page .page-text .body-text .small-bar{
     width: 75%!important;
-}
+  }
 
  .page .page-text .body-text .long-bar{
     width: 75%!important;
-}
+  }
 
  .page .page-content .body-text .figure-1{
     width: 100%!important;
     margin-top: 10px!important;
     margin-left: 0!important;
-}
+  }
 
  .page .page-content .body-text .figure-caption{
     font-size: 13px!important;
     text-align: center!important;
-}
+  }
 
  .page .page-text .species-box{
     width: auto!important;
@@ -200,36 +198,36 @@
     border-width: 1.5px!important;
     margin-top: 20px!important;
     padding: 15px!important;
-}
+  } 
 
  .page .page-text .species-box .species-name{
     font-size: 18px!important;
     font-style: italic!important;
     font-weight: normal!important;
-}
+  }
 
  .page .page-text .species-box .species-img img{
     width: 200px!important;
     height: 200px!important;
     border-radius: 15px!important;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box{
     display: flex;
     gap: 0px;
     margin-left: 40px;
-}
+  }
 
 
  .page .page-text .species-box .scientific-classification .order-box{
     width: 120px;
     height: 210px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .phylo-box{
     width: 120px;
     height: 210px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .title{
     font-size: 15px;
@@ -238,62 +236,62 @@
     background-color: rgb(238, 238, 237);
     border-radius: 5px;
     padding: 4px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .kingdom{
     font-size: 15px;
     font-weight: normal;
     margin-top: 10px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .phylum{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .class{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .order{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .family{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tribe{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .genus{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .subgenus{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .species{
     font-size: 15px;
     font-style: normal;
     font-weight: bold;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .binomial-name{
     font-size: 15px;
@@ -303,73 +301,71 @@
     background-color: rgb(238, 238, 237);
     border-radius: 5px;
     padding: 4px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .species-id{
     font-size: 15px;
     font-style: italic;
     font-weight: bold;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .kingdom-name{
     font-size: 15px;
     font-weight: normal;
     margin-top: 10px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .phylum-name{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .class-name{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .order-name{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .family-name{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .tribe-name{
     font-size: 15px;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .genus-name{
     font-size: 15px;
     font-style: italic;
     font-weight: normal;
     margin-top: 5px;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .subgenus-name{
     font-size: 15px!important;
     font-style: italic!important;
     font-weight: normal!important;
     margin-top: 5px!important;
-}
+  }
 
  .page .page-text .species-box .scientific-classification .tax-box .phylo-box .species-name{
     font-size: 15px!important;
     font-style: italic!important;
     font-weight: bold !important;
-    margin-top: 5px !important;
-
-    
-}
+    margin-top: 5px !important;  
+  }
 
 
 
@@ -682,10 +678,11 @@ body {
 }
 
  .page .page-text .page-content .body-text{
-    width: auto;
-    display: inline-block;
-    vertical-align: top;
-
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
  .page .page-text .page-content{
@@ -721,8 +718,13 @@ body {
 }
 
  .page .page-content .body-text .figure-1{
-    width: 700px;
-    margin-left: 50px;
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
 }
 
@@ -1267,5 +1269,3 @@ border: 0px solid #F3F4F5 !important;
   }
 
 }
-
-
