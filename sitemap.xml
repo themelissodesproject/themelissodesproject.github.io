@@ -92,31 +92,32 @@
     <priority>0.8</priority>
   </url>
 
-    <url>
+  <url>
     <loc>https://themelissodesproject.wildref.org/melissodes-bimatris.html</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://themelissodesproject.wildref.org/melissodes-clarkiae.html</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://themelissodesproject.wildref.org/oregon-guide-metadata.html</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-      <url>
+  <url>
     <loc>https://themelissodesproject.wildref.org/oregon-melissodes-field-guide.html</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-      <loc>https://themelissodesproject.wildref.org/field-guide-search.html</loc>
+  <url>
+  <loc>https://themelissodesproject.wildref.org/field-guide-search.html</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
