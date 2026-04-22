@@ -1,0 +1,3459 @@
+{
+  "binomial_name": "Melissodes bruneri",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "bruneri"
+  },
+  "flight_period": {
+    "January": {
+      "count": 5,
+      "percentage": 10.64
+    },
+    "February": {
+      "count": 8,
+      "percentage": 17.02
+    },
+    "March": {
+      "count": 8,
+      "percentage": 17.02
+    },
+    "April": {
+      "count": 1,
+      "percentage": 2.13
+    },
+    "July": {
+      "count": 1,
+      "percentage": 2.13
+    },
+    "October": {
+      "count": 1,
+      "percentage": 2.13
+    },
+    "November": {
+      "count": 20,
+      "percentage": 42.55
+    },
+    "December": {
+      "count": 3,
+      "percentage": 6.38
+    }
+  },
+  "distribution": {
+    "La Rioja": {
+      "state_total": 26,
+      "counties": {}
+    },
+    "Cordoba": {
+      "state_total": 4,
+      "counties": {}
+    },
+    "Santa Fe": {
+      "state_total": 9,
+      "counties": {
+        "Garay": {
+          "count": 2
+        }
+      }
+    },
+    "Córdoba": {
+      "state_total": 6,
+      "counties": {
+        "Capital": {
+          "count": 5
+        }
+      }
+    },
+    "Catamarca": {
+      "state_total": 23,
+      "counties": {
+        "Capayán": {
+          "count": 1
+        }
+      }
+    },
+    "Buenos Aires": {
+      "state_total": 13,
+      "counties": {}
+    },
+    "Itapúa": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Santiago Del Estero": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "San Luis": {
+      "state_total": 8,
+      "counties": {}
+    },
+    "Salta": {
+      "state_total": 11,
+      "counties": {}
+    },
+    "Rio Negro": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Sante Fe": {
+      "state_total": 1,
+      "counties": {}
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "4998707929",
+      "gbif_link": "https://www.gbif.org/occurrence/4998707929",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998706933",
+      "gbif_link": "https://www.gbif.org/occurrence/4998706933",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998706053",
+      "gbif_link": "https://www.gbif.org/occurrence/4998706053",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998704670",
+      "gbif_link": "https://www.gbif.org/occurrence/4998704670",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998703094",
+      "gbif_link": "https://www.gbif.org/occurrence/4998703094",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998702600",
+      "gbif_link": "https://www.gbif.org/occurrence/4998702600",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998700624",
+      "gbif_link": "https://www.gbif.org/occurrence/4998700624",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998697333",
+      "gbif_link": "https://www.gbif.org/occurrence/4998697333",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998691266",
+      "gbif_link": "https://www.gbif.org/occurrence/4998691266",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998689803",
+      "gbif_link": "https://www.gbif.org/occurrence/4998689803",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998688296",
+      "gbif_link": "https://www.gbif.org/occurrence/4998688296",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998672797",
+      "gbif_link": "https://www.gbif.org/occurrence/4998672797",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998670225",
+      "gbif_link": "https://www.gbif.org/occurrence/4998670225",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998668384",
+      "gbif_link": "https://www.gbif.org/occurrence/4998668384",
+      "location": {
+        "state": "Cordoba",
+        "county": null,
+        "locality": "Cosquin, Sierra de Cordoba",
+        "coordinates": {
+          "lat": -31.43894,
+          "lon": -64.83449
+        }
+      },
+      "temporal": {
+        "date": "1920-03-01",
+        "month": "3",
+        "year": "1920"
+      },
+      "collector": {
+        "recordedBy": "Cornell University Expedition",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998667650",
+      "gbif_link": "https://www.gbif.org/occurrence/4998667650",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998657250",
+      "gbif_link": "https://www.gbif.org/occurrence/4998657250",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998654427",
+      "gbif_link": "https://www.gbif.org/occurrence/4998654427",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998649644",
+      "gbif_link": "https://www.gbif.org/occurrence/4998649644",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998629771",
+      "gbif_link": "https://www.gbif.org/occurrence/4998629771",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998626889",
+      "gbif_link": "https://www.gbif.org/occurrence/4998626889",
+      "location": {
+        "state": "Santa Fe",
+        "county": null,
+        "locality": "Laguna Paiva",
+        "coordinates": {
+          "lat": -31.306,
+          "lon": -60.661
+        }
+      },
+      "temporal": {
+        "date": "1920-02-21",
+        "month": "2",
+        "year": "1920"
+      },
+      "collector": {
+        "recordedBy": "Harris",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998622299",
+      "gbif_link": "https://www.gbif.org/occurrence/4998622299",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998620827",
+      "gbif_link": "https://www.gbif.org/occurrence/4998620827",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4998619584",
+      "gbif_link": "https://www.gbif.org/occurrence/4998619584",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": "La Rioja",
+        "coordinates": {
+          "lat": -29.4159,
+          "lon": -66.85996
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. Giacomelli",
+        "identifiedBy": "Neff"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801941967",
+      "gbif_link": "https://www.gbif.org/occurrence/3801941967",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "there is a determination label but it is too blurry to read. La Rioja; Argentina; (giacomelli)",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Argentina",
+            "accepted_genus": "Argentina",
+            "accepted_species": "sp.",
+            "canonical_name": "Argentina",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801941960",
+      "gbif_link": "https://www.gbif.org/occurrence/3801941960",
+      "location": {
+        "state": "Córdoba",
+        "county": "Capital",
+        "locality": null,
+        "coordinates": {
+          "lat": -31.35,
+          "lon": -64.25
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J.A. DeCarlo, M.J. Viana",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Cordoba; Arguello; (J.A.DecCarlo &; M.J.Viana)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801941957",
+      "gbif_link": "https://www.gbif.org/occurrence/3801941957",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940937",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940937",
+      "location": {
+        "state": "Catamarca",
+        "county": "Capayán",
+        "locality": null,
+        "coordinates": {
+          "lat": -28.7,
+          "lon": -65.833333
+        }
+      },
+      "temporal": {
+        "date": "1951-11-05",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "F. Plaumann",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Arg.; Rio del Valle; 580m XI-5-1951; Fritz Plaumann",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940934",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940934",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1952-02-01/1952-02-29",
+        "month": "2",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "A.C. Martinez",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Buenos Aires; Dto Puan Felipe; Sola II-1952; Arg. Martinez",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940932",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940932",
+      "location": {
+        "state": "Santa Fe",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Andres J. Giai",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Province; Santa Fe, Tostado; F.C.C.N., El Orden; ( Andres J. Giai )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940930",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940930",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939935",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939935",
+      "location": {
+        "state": "Santa Fe",
+        "county": "Garay",
+        "locality": null,
+        "coordinates": {
+          "lat": -31.1,
+          "lon": -60.083333
+        }
+      },
+      "temporal": {
+        "date": "1944-12-01/1944-12-31",
+        "month": "12",
+        "year": "1944"
+      },
+      "collector": {
+        "recordedBy": "A.F. Prosen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Helvecia, Santa Fe; Arg. S.A. XII-1944; A.F. Prosen",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939934",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939934",
+      "location": {
+        "state": "Santa Fe",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Andres J. Giai",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Province; Santa Fe, Tostado; F.C.C.N., El Orden; ( Andres J. Giai )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939932",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939932",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939903",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939903",
+      "location": {
+        "state": "Córdoba",
+        "county": "Capital",
+        "locality": null,
+        "coordinates": {
+          "lat": -31.35,
+          "lon": -64.25
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J.A. DeCarlo, M.J. Viana",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Cordoba; Arguello; (J.A.DecCarlo &; M.J.Viana)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801938966",
+      "gbif_link": "https://www.gbif.org/occurrence/3801938966",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1954-03-28",
+        "month": "3",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "M.A. Fritz",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA Buenos; Aires, Buenos; Aires 28 MAR. '54; ( M. A. Fritz )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801938965",
+      "gbif_link": "https://www.gbif.org/occurrence/3801938965",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -36.25,
+          "lon": -61.1
+        }
+      },
+      "temporal": {
+        "date": "1951-03-28",
+        "month": "3",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Bolivar, Prov. B; Aires Arg. III-28-51; J. Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801938964",
+      "gbif_link": "https://www.gbif.org/occurrence/3801938964",
+      "location": {
+        "state": "Santa Fe",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Andres J. Giai",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Province; Santa Fe, Tostado; F.C.C.N., El Orden; ( Andres J. Giai )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801938961",
+      "gbif_link": "https://www.gbif.org/occurrence/3801938961",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801938933",
+      "gbif_link": "https://www.gbif.org/occurrence/3801938933",
+      "location": {
+        "state": "Córdoba",
+        "county": "Capital",
+        "locality": null,
+        "coordinates": {
+          "lat": -31.35,
+          "lon": -64.25
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J.A. DeCarlo, M.J. Viana",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Cordoba; Arguello; (J.A.DecCarlo &; M.J.Viana)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801936958",
+      "gbif_link": "https://www.gbif.org/occurrence/3801936958",
+      "location": {
+        "state": "Santa Fe",
+        "county": "Garay",
+        "locality": null,
+        "coordinates": {
+          "lat": -31.1,
+          "lon": -60.083333
+        }
+      },
+      "temporal": {
+        "date": "1944-12-01/1944-12-31",
+        "month": "12",
+        "year": "1944"
+      },
+      "collector": {
+        "recordedBy": "A.F. Prosen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Helvecia, Santa Fe; Arg. S.A. XII-1944; A.F. Prosen",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801936957",
+      "gbif_link": "https://www.gbif.org/occurrence/3801936957",
+      "location": {
+        "state": "Santa Fe",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Andres J. Giai",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Province; Santa Fe, Tostado; F.C.C.N., El Orden; ( Andres J. Giai )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801936954",
+      "gbif_link": "https://www.gbif.org/occurrence/3801936954",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801936928",
+      "gbif_link": "https://www.gbif.org/occurrence/3801936928",
+      "location": {
+        "state": "Córdoba",
+        "county": "Capital",
+        "locality": null,
+        "coordinates": {
+          "lat": -31.35,
+          "lon": -64.25
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J.A. DeCarlo, M.J. Viana",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Cordoba; Arguello; (J.A.DecCarlo &; M.J.Viana)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801858968",
+      "gbif_link": "https://www.gbif.org/occurrence/3801858968",
+      "location": {
+        "state": "Córdoba",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1943-01-01/1943-01-31",
+        "month": "1",
+        "year": "1943"
+      },
+      "collector": {
+        "recordedBy": "A.F. Prosen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Carlos Paz, Cordoba; Arg. S.A. I-19443; A.F. Prosen",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801858966",
+      "gbif_link": "https://www.gbif.org/occurrence/3801858966",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1936-01-01/1936-01-31",
+        "month": "1",
+        "year": "1936"
+      },
+      "collector": {
+        "recordedBy": "M. Gomez",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-La Rioja; Illiar, January 1936; (Mateo Gomes)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801858963",
+      "gbif_link": "https://www.gbif.org/occurrence/3801858963",
+      "location": {
+        "state": "Santa Fe",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Andres J. Giai",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Province; Santa Fe, Tostado; F.C.C.N., El Orden; ( Andres J. Giai )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801856969",
+      "gbif_link": "https://www.gbif.org/occurrence/3801856969",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801854960",
+      "gbif_link": "https://www.gbif.org/occurrence/3801854960",
+      "location": {
+        "state": "Itapúa",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1955-12-01/1955-12-31",
+        "month": "12",
+        "year": "1955"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "PARAGUAY, Itapua; Vega. Dec. 1955; (Juan Foerster)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801852958",
+      "gbif_link": "https://www.gbif.org/occurrence/3801852958",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1954-03-28",
+        "month": "3",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "M.A. Fritz",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA Buenos; Aires, Buenos; Aires 28 MAR. '54; ( M. A. Fritz )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801852002",
+      "gbif_link": "https://www.gbif.org/occurrence/3801852002",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -34.510556,
+          "lon": -58.496389
+        }
+      },
+      "temporal": {
+        "date": "1951-04-08",
+        "month": "4",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Olivas, Buenos; Aires, Arg.; IV-8-51",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801851998",
+      "gbif_link": "https://www.gbif.org/occurrence/3801851998",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1936-01-01/1936-01-31",
+        "month": "1",
+        "year": "1936"
+      },
+      "collector": {
+        "recordedBy": "M. Gomez",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-La Rioja; Illiar, January 1936; (Mateo Gomes)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801380998",
+      "gbif_link": "https://www.gbif.org/occurrence/3801380998",
+      "location": {
+        "state": "Santiago Del Estero",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1928-10-24",
+        "month": "10",
+        "year": "1928"
+      },
+      "collector": {
+        "recordedBy": "M. Gomez",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Santiago; del Estero, Dpto.; Matara, Desvio 511; 24 October 1928; ( M. Gomes)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801380997",
+      "gbif_link": "https://www.gbif.org/occurrence/3801380997",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1934-02-01/1934-02-28",
+        "month": "2",
+        "year": "1934"
+      },
+      "collector": {
+        "recordedBy": "M. Gomez",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-La Rioja; Iliar. February; 1934. (M. Gomez)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801380994",
+      "gbif_link": "https://www.gbif.org/occurrence/3801380994",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -36.25,
+          "lon": -61.1
+        }
+      },
+      "temporal": {
+        "date": "1951-03-28",
+        "month": "3",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Bolivar, Prov. B; Aires Arg. III-28-51; J. Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801380993",
+      "gbif_link": "https://www.gbif.org/occurrence/3801380993",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1955-11-01/1955-11-30",
+        "month": "11",
+        "year": "1955"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca; Arg. XI; 1951; Foester",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801380991",
+      "gbif_link": "https://www.gbif.org/occurrence/3801380991",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801380981",
+      "gbif_link": "https://www.gbif.org/occurrence/3801380981",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801376949",
+      "gbif_link": "https://www.gbif.org/occurrence/3801376949",
+      "location": {
+        "state": "Córdoba",
+        "county": "Capital",
+        "locality": null,
+        "coordinates": {
+          "lat": -31.35,
+          "lon": -64.25
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J.A. DeCarlo, M.J. Viana",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Cordoba; Arguello; (J.A.DecCarlo &; M.J.Viana)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801376946",
+      "gbif_link": "https://www.gbif.org/occurrence/3801376946",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801375956",
+      "gbif_link": "https://www.gbif.org/occurrence/3801375956",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801375017",
+      "gbif_link": "https://www.gbif.org/occurrence/3801375017",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1938-02-07",
+        "month": "2",
+        "year": "1938"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Prov. de; Buenos Aires, Felipe; Sola. 7 Feb. 1938",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801375013",
+      "gbif_link": "https://www.gbif.org/occurrence/3801375013",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1952-02-01/1952-02-29",
+        "month": "2",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "A.C. Martinez",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Buenos Aires; Dto Puan Felipe; Sola II-1952; Arg. Martinez",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801375012",
+      "gbif_link": "https://www.gbif.org/occurrence/3801375012",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1954-03-28",
+        "month": "3",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "M.A. Fritz",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA Buenos; Aires, Buenos; Aires 28 MAR. '54; ( M. A. Fritz )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801375009",
+      "gbif_link": "https://www.gbif.org/occurrence/3801375009",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801340956",
+      "gbif_link": "https://www.gbif.org/occurrence/3801340956",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801340926",
+      "gbif_link": "https://www.gbif.org/occurrence/3801340926",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339952",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339952",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -34.840278,
+          "lon": -58.0975
+        }
+      },
+      "temporal": {
+        "date": "1955-02-01/1955-02-28",
+        "month": "2",
+        "year": "1955"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA, Bs. Aires; Prov., Villa Elisa; February 1955; ( Juan Foerster)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339948",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339948",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1950-01-01/1950-01-31",
+        "month": "1",
+        "year": "1950"
+      },
+      "collector": {
+        "recordedBy": "M. Senkeute",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Buenos Aires &; vicinity, Argen-; tina I-1950; M. Senkeute",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339946",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339946",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1955-11-01/1955-11-30",
+        "month": "11",
+        "year": "1955"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca; Arg. XI; 1951; Foester  Melissodes; bruneri Female; det. Claus Rasmussen2007",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339936",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339936",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801338974",
+      "gbif_link": "https://www.gbif.org/occurrence/3801338974",
+      "location": {
+        "state": "La Rioja",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1935-02-01/1935-02-28",
+        "month": "2",
+        "year": "1935"
+      },
+      "collector": {
+        "recordedBy": "M. Gomez",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-La Rioja; Estacion Amado.; February 1935; ( M. Gomez)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801338967",
+      "gbif_link": "https://www.gbif.org/occurrence/3801338967",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1955-11-01/1955-11-30",
+        "month": "11",
+        "year": "1955"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca; Arg. XI; 1951; Foester",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801338966",
+      "gbif_link": "https://www.gbif.org/occurrence/3801338966",
+      "location": {
+        "state": "Santa Fe",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Andres J. Giai",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARGENTINA-Province; Santa Fe, Tostado; F.C.C.N., El Orden; ( Andres J. Giai )",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801337970",
+      "gbif_link": "https://www.gbif.org/occurrence/3801337970",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -34.483333,
+          "lon": -58.5
+        }
+      },
+      "temporal": {
+        "date": "1951-03-15",
+        "month": "3",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "L.E. Peña",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Martinez, Prov.; Buenos Aires; III-15-51 Pena",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801337963",
+      "gbif_link": "https://www.gbif.org/occurrence/3801337963",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801336974",
+      "gbif_link": "https://www.gbif.org/occurrence/3801336974",
+      "location": {
+        "state": "Buenos Aires",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -34.234167,
+          "lon": -58.864167
+        }
+      },
+      "temporal": {
+        "date": "1955-03-01/1955-03-31",
+        "month": "3",
+        "year": "1955"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Argentina-Buenos; Aires-Okamendi; March 1955",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Argentina",
+            "accepted_genus": "Argentina",
+            "accepted_species": "sp.",
+            "canonical_name": "Argentina",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801336967",
+      "gbif_link": "https://www.gbif.org/occurrence/3801336967",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-11-11",
+        "month": "11",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "J. Foerster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Catamarca Campo; de Pocara, Arg; XI-11-1951; Juan Foerster",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804766153",
+      "gbif_link": "https://www.gbif.org/occurrence/2804766153",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804760199",
+      "gbif_link": "https://www.gbif.org/occurrence/2804760199",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804713159",
+      "gbif_link": "https://www.gbif.org/occurrence/2804713159",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804712156",
+      "gbif_link": "https://www.gbif.org/occurrence/2804712156",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "Guemes",
+        "coordinates": {
+          "lat": -24.666667,
+          "lon": -65.05
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "L. E. Pena",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804712155",
+      "gbif_link": "https://www.gbif.org/occurrence/2804712155",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "Salta",
+        "coordinates": {
+          "lat": -24.783333,
+          "lon": -65.416667
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Albeza, , , , , ,  &",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804712152",
+      "gbif_link": "https://www.gbif.org/occurrence/2804712152",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "\"42 km WNW of Hickman (label may read \"\"Hickmann\"\")\"",
+        "coordinates": {
+          "lat": -23.054444,
+          "lon": -63.9475
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804710235",
+      "gbif_link": "https://www.gbif.org/occurrence/2804710235",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "\"42 km WNW of Hickman (label may read \"\"Hickmann\"\")\"",
+        "coordinates": {
+          "lat": -23.054444,
+          "lon": -63.9475
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804710234",
+      "gbif_link": "https://www.gbif.org/occurrence/2804710234",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "\"42 km WNW of Hickman (label may read \"\"Hickmann\"\")\"",
+        "coordinates": {
+          "lat": -23.054444,
+          "lon": -63.9475
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804709262",
+      "gbif_link": "https://www.gbif.org/occurrence/2804709262",
+      "location": {
+        "state": "Cordoba",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -30.9,
+          "lon": -64.75
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804705158",
+      "gbif_link": "https://www.gbif.org/occurrence/2804705158",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "\"42 km WNW of Hickman (label may read \"\"Hickmann\"\")\"",
+        "coordinates": {
+          "lat": -23.054444,
+          "lon": -63.9475
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804697177",
+      "gbif_link": "https://www.gbif.org/occurrence/2804697177",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804697176",
+      "gbif_link": "https://www.gbif.org/occurrence/2804697176",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "\"42 km WNW of Hickman (label may read \"\"Hickmann\"\")\"",
+        "coordinates": {
+          "lat": -23.054444,
+          "lon": -63.9475
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804620351",
+      "gbif_link": "https://www.gbif.org/occurrence/2804620351",
+      "location": {
+        "state": "Cordoba",
+        "county": null,
+        "locality": "La Cruz",
+        "coordinates": {
+          "lat": -32.3,
+          "lon": -64.5
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Greg�rio J. Williner [S. J.]",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804573023",
+      "gbif_link": "https://www.gbif.org/occurrence/2804573023",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804573021",
+      "gbif_link": "https://www.gbif.org/occurrence/2804573021",
+      "location": {
+        "state": "Cordoba",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -30.9,
+          "lon": -64.75
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804572098",
+      "gbif_link": "https://www.gbif.org/occurrence/2804572098",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804572095",
+      "gbif_link": "https://www.gbif.org/occurrence/2804572095",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "\"42 km WNW of Hickman (label may read \"\"Hickmann\"\")\"",
+        "coordinates": {
+          "lat": -23.054444,
+          "lon": -63.9475
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804571212",
+      "gbif_link": "https://www.gbif.org/occurrence/2804571212",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804571211",
+      "gbif_link": "https://www.gbif.org/occurrence/2804571211",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": "\"42 km WNW of Hickman (label may read \"\"Hickmann\"\")\"",
+        "coordinates": {
+          "lat": -23.054444,
+          "lon": -63.9475
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804568199",
+      "gbif_link": "https://www.gbif.org/occurrence/2804568199",
+      "location": {
+        "state": "Rio Negro",
+        "county": null,
+        "locality": "Luis Beltran",
+        "coordinates": {
+          "lat": -39.316667,
+          "lon": -65.766667
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "U. Fritz",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804566218",
+      "gbif_link": "https://www.gbif.org/occurrence/2804566218",
+      "location": {
+        "state": "San Luis",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -35.723056,
+          "lon": -65.321111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804565142",
+      "gbif_link": "https://www.gbif.org/occurrence/2804565142",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -26.084167,
+          "lon": -65.975
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Manfredo A. Fritz Baier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804565141",
+      "gbif_link": "https://www.gbif.org/occurrence/2804565141",
+      "location": {
+        "state": "Salta",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": -26.084167,
+          "lon": -65.975
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899931956",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931956",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": "Andalgala,  IBP Program Desert scrub Site",
+        "coordinates": {
+          "lat": -27.58195,
+          "lon": -66.31646
+        }
+      },
+      "temporal": {
+        "date": "1973-02-06",
+        "month": "2",
+        "year": "1973"
+      },
+      "collector": {
+        "recordedBy": "Neff, J",
+        "identifiedBy": "Neff, J"
+      },
+      "ecology": {
+        "notes": "Wedelia glauca",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Wedelia glauca",
+            "accepted_genus": "Pascalia",
+            "accepted_species": "glauca",
+            "canonical_name": "Pascalia glauca",
+            "parse_method": "gbif_api",
+            "is_synonym": true
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1322952323",
+      "gbif_link": "https://www.gbif.org/occurrence/1322952323",
+      "location": {
+        "state": "Sante Fe",
+        "county": null,
+        "locality": "Carcaraña",
+        "coordinates": {
+          "lat": -32.8572,
+          "lon": -61.1577
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "[Not Stated]",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1092837268",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837268",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": "Andalgala, IBP Program, Desert Scrub Site",
+        "coordinates": {
+          "lat": -27.56048,
+          "lon": -66.33081
+        }
+      },
+      "temporal": {
+        "date": "1972-07-18",
+        "month": "7",
+        "year": "1972"
+      },
+      "collector": {
+        "recordedBy": "Neff, J",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837267",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837267",
+      "location": {
+        "state": "Catamarca",
+        "county": null,
+        "locality": "Andalgala, IBP Program, Desert Scrub Site",
+        "coordinates": {
+          "lat": -27.56048,
+          "lon": -66.33081
+        }
+      },
+      "temporal": {
+        "date": "1974-01-09",
+        "month": "1",
+        "year": "1974"
+      },
+      "collector": {
+        "recordedBy": "Neff, J",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Baccharis",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Baccharis",
+            "accepted_genus": "Baccharis",
+            "accepted_species": "sp.",
+            "canonical_name": "Baccharis",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 106,
+    "processed_records": 104,
+    "geocoded_records": 0,
+    "floral_records": 4,
+    "excluded_datasets": [
+      "iNaturalist Research-Grade",
+      "BugGuide"
+    ],
+    "contributing_datasets": [
+      {
+        "title": "Bee Biology and Systematics Laboratory",
+        "doi": "10.15468/anyror",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Snow Entomological Museum Collection",
+        "doi": "10.15468/fhntpy",
+        "license": "CC BY 4.0",
+        "citation": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museum of Southwestern Biology Division of Arthropods",
+        "doi": "10.15468/jtovgy",
+        "license": "CC BY-NC 4.0",
+        "citation": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "LACM Entomology Collection",
+        "doi": "10.15468/kc9hyp",
+        "license": "CC0 1.0",
+        "citation": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.34. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Cornell University Insect Collection (CUIC)",
+        "doi": "10.15468/w9b6ap",
+        "license": "CC BY 4.0",
+        "citation": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "International Barcode of Life project (iBOL)",
+        "doi": "10.15468/inygc6",
+        "license": "CC BY 4.0",
+        "citation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Nebraska State Museum Entomology",
+        "doi": "10.15468/6aq9nd",
+        "license": "CC BY-NC 4.0",
+        "citation": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Potential host plant records recovered from ECOAB wild bee collection, Mexico",
+        "doi": "10.15468/xdzgbt",
+        "license": "CC BY 4.0",
+        "citation": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF)-Inventaire des Collectivités d'outre-mer et de la métropole issu des données biogéographiques de TAXREF",
+        "doi": "10.15468/ktycv2",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2022). Référentiel taxonomique national (TAXREF)-Inventaire des Collectivités d'outre-mer et de la métropole issu des données biogéographiques de TAXREF. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/ktycv2 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN)",
+        "doi": "10.15468/gy3jna",
+        "license": "CC BY 4.0",
+        "citation": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Coleção Entomológica Padre Jesus Santiago Moure (DZUP) - Hymenoptera",
+        "doi": "10.15468/ge6vty",
+        "license": "CC BY-NC 4.0",
+        "citation": "Edwin Lattke Bravo J, Augusto Rodrigues de Melo G (2025). Coleção Entomológica Padre Jesus Santiago Moure (DZUP) - Hymenoptera. Version 1.8. Universidade Federal do Paraná. Occurrence dataset https://doi.org/10.15468/ge6vty accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "MCP - Coleção de Abelhas",
+        "doi": "10.15468/e5pqiq",
+        "license": "CC BY-NC 4.0",
+        "citation": "Blochtein B (2026). MCP - Coleção de Abelhas. Version 1.95. Museu de Ciências e Tecnologia - PUCRS. Occurrence dataset https://doi.org/10.15468/e5pqiq accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "INSDC Sequences",
+        "doi": "10.15468/sbmztx",
+        "license": "CC BY 4.0",
+        "citation": "European Bioinformatics Institute (EMBL-EBI), GBIF Helpdesk (2026). INSDC Sequences. Version 1.170. European Nucleotide Archive (EMBL-EBI). Occurrence dataset https://doi.org/10.15468/sbmztx accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museo Argentino de Ciencias Naturales \"Bernardino Rivadavia\" (MACN). Entomology National Collection (MACNEn)",
+        "doi": "10.15468/0cfrpt",
+        "license": "CC BY 4.0",
+        "citation": "Roig Alsina A, Rodríguez D (2021). Museo Argentino de Ciencias Naturales \"Bernardino Rivadavia\" (MACN). Entomology National Collection (MACNEn). Version 1.58. Museo Argentino de Ciencias Naturales. Occurrence dataset https://doi.org/10.15468/0cfrpt accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "ZFMK Hymenoptera collection",
+        "doi": "10.15468/dsd416",
+        "license": "CC BY 4.0",
+        "citation": "Leibniz Institute for the Analysis of Biodiversity Change (LIB). ZFMK Hymenoptera collection. Occurrence dataset https://doi.org/10.15468/dsd416 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_14) issu des données biogéographiques de TAXREF v14",
+        "doi": "10.15468/frrkp9",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2022). Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_14) issu des données biogéographiques de TAXREF v14. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/frrkp9 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Illinois Natural History Survey Insect Collection",
+        "doi": "10.15468/eol0pe",
+        "license": "CC BY 4.0",
+        "citation": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_15) issu des données biogéographiques de TAXREF v15",
+        "doi": "10.15468/5a75sk",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2021). Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_15) issu des données biogéographiques de TAXREF v15. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/5a75sk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "DZUP-Hymenoptera - Coleção Entomológica Pe. Jesus Santiago Moure (Hymenoptera)",
+        "doi": "10.15468/cwlwvm",
+        "license": "CC BY-NC 4.0",
+        "citation": "Marinoni L, Augusto Rodrigues Melo G (2026). DZUP-Hymenoptera - Coleção Entomológica Pe. Jesus Santiago Moure (Hymenoptera). Version 1.91. Universidade Federal do Paraná. Occurrence dataset https://doi.org/10.15468/cwlwvm accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NHMD Entomology Collection",
+        "doi": "10.15468/nnobcm",
+        "license": "CC BY 4.0",
+        "citation": "Scharff N, Pape T, Solodovnikov A, Vilhelmsen L, Enghoff H, Illum A A, Selvantharan S G, Pedersen J (2026). NHMD Entomology Collection. Natural History Museum of Denmark. Occurrence dataset https://doi.org/10.15468/nnobcm accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas)",
+        "doi": "10.15468/ydeiae",
+        "license": "CC BY 4.0",
+        "citation": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Puerto Rico Mayagüez Invertebrate Collection",
+        "doi": "10.15468/afmezg",
+        "license": "CC0 1.0",
+        "citation": "University of Puerto Rico Mayagüez Invertebrate Collection (2023). University of Puerto Rico Mayagüez Invertebrate Collection. Occurrence dataset https://doi.org/10.15468/afmezg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CNIN/Abejas de México/Apoidea",
+        "doi": "10.15468/uhlpgz",
+        "license": "CC BY-NC 4.0",
+        "citation": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "hymenoptera",
+        "doi": "10.15468/mvtuf5",
+        "license": "CC BY 4.0",
+        "citation": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America",
+        "doi": "10.15468/6autvb",
+        "license": "CC0 1.0",
+        "citation": "Droege S, Maffei C, Shumar S, Lent S (2026). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.30. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NMNH Extant Specimen Records (USNM, US)",
+        "doi": "10.15468/hnhrg3",
+        "license": "CC0 1.0",
+        "citation": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museu Paraense Emilio Goeldi - Hymenoptera Collection",
+        "doi": "10.15468/efkpxu",
+        "license": "CC BY-NC 4.0",
+        "citation": "Silveira O (2025). Museu Paraense Emilio Goeldi - Hymenoptera Collection. Version 1.10. Museu Paraense Emílio Goeldi. Occurrence dataset https://doi.org/10.15468/efkpxu accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Laboratório de Ecologia e Biogeografia de Insetos da Caatinga",
+        "doi": "10.15468/yxzgxk",
+        "license": "CC BY 4.0",
+        "citation": "Centro de Referência em Informação Ambiental. Laboratório de Ecologia e Biogeografia de Insetos da Caatinga. Occurrence dataset https://doi.org/10.15468/yxzgxk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP",
+        "doi": "10.15468/bb5nnj",
+        "license": "CC BY-NC 4.0",
+        "citation": "Lucia Imperatriz Fonseca V, Alves dos Santos I (2026). CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP. Universidade de São Paulo. Occurrence dataset https://doi.org/10.15468/bb5nnj accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Male sleeping aggregation of multiple Eucerini bee genera (Hymenoptera: Apidae) in Chapada Diamantina, Bahia, Brazil",
+        "doi": "10.15468/hvqr5w",
+        "license": "CC BY 4.0",
+        "citation": "Mahlmann T (2014). Male sleeping aggregation of multiple Eucerini bee genera (Hymenoptera: Apidae) in Chapada Diamantina, Bahia, Brazil. Biodiversity Data Journal. Checklist dataset https://doi.org/10.15468/hvqr5w accessed via GBIF.org on 2026-04-22."
+      }
+    ]
+  }
+}

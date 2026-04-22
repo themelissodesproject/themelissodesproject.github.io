@@ -1,0 +1,2060 @@
+{
+  "binomial_name": "Melissodes trifasciatus",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "trifasciatus"
+  },
+  "flight_period": {
+    "January": {
+      "count": 11,
+      "percentage": 22.45
+    },
+    "March": {
+      "count": 28,
+      "percentage": 57.14
+    },
+    "April": {
+      "count": 1,
+      "percentage": 2.04
+    },
+    "May": {
+      "count": 2,
+      "percentage": 4.08
+    },
+    "June": {
+      "count": 2,
+      "percentage": 4.08
+    },
+    "July": {
+      "count": 2,
+      "percentage": 4.08
+    },
+    "September": {
+      "count": 1,
+      "percentage": 2.04
+    },
+    "October": {
+      "count": 1,
+      "percentage": 2.04
+    },
+    "November": {
+      "count": 1,
+      "percentage": 2.04
+    }
+  },
+  "distribution": {
+    "Puerto Rico": {
+      "state_total": 6,
+      "counties": {
+        "Cordillera Central": {
+          "count": 1
+        },
+        "[not Stated]": {
+          "count": 1
+        }
+      }
+    },
+    "Virgin Islands": {
+      "state_total": 29,
+      "counties": {
+        "St. Thomas": {
+          "count": 2
+        },
+        "Saint Thomas": {
+          "count": 26
+        }
+      }
+    },
+    "United States Virgin Islands": {
+      "state_total": 1,
+      "counties": {
+        "St. Croix": {
+          "count": 1
+        }
+      }
+    },
+    "Puebla": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Colón": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "U. S. Virgin Islands": {
+      "state_total": 4,
+      "counties": {}
+    },
+    "Adjuntas": {
+      "state_total": 2,
+      "counties": {}
+    },
+    "Maricao": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Ponce": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Mayagez": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "[not Stated]": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Veracruz": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Colon": {
+      "state_total": 7,
+      "counties": {}
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "6177216021",
+      "gbif_link": "https://www.gbif.org/occurrence/6177216021",
+      "location": {
+        "state": "Puerto Rico",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1915-06-27",
+        "month": "6",
+        "year": "1915"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177216020",
+      "gbif_link": "https://www.gbif.org/occurrence/6177216020",
+      "location": {
+        "state": "Puerto Rico",
+        "county": "Cordillera Central",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1899-01",
+        "month": "1",
+        "year": "1899"
+      },
+      "collector": {
+        "recordedBy": "A. Busck",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177216015",
+      "gbif_link": "https://www.gbif.org/occurrence/6177216015",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "St. Thomas",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177215998",
+      "gbif_link": "https://www.gbif.org/occurrence/6177215998",
+      "location": {
+        "state": "Puerto Rico",
+        "county": null,
+        "locality": "Rio Piedras",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1926-05-23",
+        "month": "5",
+        "year": "1926"
+      },
+      "collector": {
+        "recordedBy": "E.E. Dale",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177215997",
+      "gbif_link": "https://www.gbif.org/occurrence/6177215997",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "St. Thomas",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5918276211",
+      "gbif_link": "https://www.gbif.org/occurrence/5918276211",
+      "location": {
+        "state": "United States Virgin Islands",
+        "county": "St. Croix",
+        "locality": "Cotton Grove",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "2014-11-11",
+        "month": "11",
+        "year": "2014"
+      },
+      "collector": {
+        "recordedBy": "P Gambino",
+        "identifiedBy": "KW Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3801372022",
+      "gbif_link": "https://www.gbif.org/occurrence/3801372022",
+      "location": {
+        "state": "Puebla",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1954-07-16",
+        "month": "7",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "J. R. Alcorn",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "I was not able to confirm this locality on line.. 3 mi W. lmt. S; Izncarde Matamorus; Pue.VII-16-1954; J. R.Alcorn",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339808",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339808",
+      "location": {
+        "state": "Colón",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-12",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "PANAMA Colon Prov; Pipeline Rd., 5 km.; NW Gamboa (C.Z.); on Aeschyonema; americana, 12 Jan.; 1981, C.D. Michener  Melissodes; tricfasciata Cresson; det. W. E. LaBerge  no! not; Ecplectica",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804792389",
+      "gbif_link": "https://www.gbif.org/occurrence/2804792389",
+      "location": {
+        "state": "U. S. Virgin Islands",
+        "county": null,
+        "locality": "St. Thomas",
+        "coordinates": {
+          "lat": 18.333333,
+          "lon": -64.95
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804788481",
+      "gbif_link": "https://www.gbif.org/occurrence/2804788481",
+      "location": {
+        "state": "U. S. Virgin Islands",
+        "county": null,
+        "locality": "St. Thomas",
+        "coordinates": {
+          "lat": 18.333333,
+          "lon": -64.95
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804788480",
+      "gbif_link": "https://www.gbif.org/occurrence/2804788480",
+      "location": {
+        "state": "Adjuntas",
+        "county": null,
+        "locality": "Adjuntas",
+        "coordinates": {
+          "lat": 18.164722,
+          "lon": -66.7225
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804752549",
+      "gbif_link": "https://www.gbif.org/occurrence/2804752549",
+      "location": {
+        "state": "U. S. Virgin Islands",
+        "county": null,
+        "locality": "St. Thomas",
+        "coordinates": {
+          "lat": 18.333333,
+          "lon": -64.95
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804743571",
+      "gbif_link": "https://www.gbif.org/occurrence/2804743571",
+      "location": {
+        "state": "U. S. Virgin Islands",
+        "county": null,
+        "locality": "St. Thomas",
+        "coordinates": {
+          "lat": 18.333333,
+          "lon": -64.95
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1993811266",
+      "gbif_link": "https://www.gbif.org/occurrence/1993811266",
+      "location": {
+        "state": "Maricao",
+        "county": null,
+        "locality": "Maricao",
+        "coordinates": {
+          "lat": 18.180822,
+          "lon": -66.979514
+        }
+      },
+      "temporal": {
+        "date": "1944-07-02",
+        "month": "7",
+        "year": "1944"
+      },
+      "collector": {
+        "recordedBy": "Ramos, J. A.",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Puerto Rico Mayagüez Invertebrate Collection (2023). University of Puerto Rico Mayagüez Invertebrate Collection. Occurrence dataset https://doi.org/10.15468/afmezg accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1993811246",
+      "gbif_link": "https://www.gbif.org/occurrence/1993811246",
+      "location": {
+        "state": "Ponce",
+        "county": null,
+        "locality": "Ponce",
+        "coordinates": {
+          "lat": 18.011908,
+          "lon": -66.614353
+        }
+      },
+      "temporal": {
+        "date": "1935-01",
+        "month": "1",
+        "year": "1935"
+      },
+      "collector": {
+        "recordedBy": "Malaret, E.",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Puerto Rico Mayagüez Invertebrate Collection (2023). University of Puerto Rico Mayagüez Invertebrate Collection. Occurrence dataset https://doi.org/10.15468/afmezg accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1993811236",
+      "gbif_link": "https://www.gbif.org/occurrence/1993811236",
+      "location": {
+        "state": "Adjuntas",
+        "county": null,
+        "locality": "Adjuntas",
+        "coordinates": {
+          "lat": 18.162053,
+          "lon": -66.722908
+        }
+      },
+      "temporal": {
+        "date": "1945-09-22",
+        "month": "9",
+        "year": "1945"
+      },
+      "collector": {
+        "recordedBy": "Candelario, I.M.",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Puerto Rico Mayagüez Invertebrate Collection (2023). University of Puerto Rico Mayagüez Invertebrate Collection. Occurrence dataset https://doi.org/10.15468/afmezg accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1993811225",
+      "gbif_link": "https://www.gbif.org/occurrence/1993811225",
+      "location": {
+        "state": "Mayagez",
+        "county": null,
+        "locality": "Mayagez",
+        "coordinates": {
+          "lat": 18.201117,
+          "lon": -67.138442
+        }
+      },
+      "temporal": {
+        "date": "1930-05-12",
+        "month": "5",
+        "year": "1930"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Puerto Rico Mayagüez Invertebrate Collection (2023). University of Puerto Rico Mayagüez Invertebrate Collection. Occurrence dataset https://doi.org/10.15468/afmezg accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1899932044",
+      "gbif_link": "https://www.gbif.org/occurrence/1899932044",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899932043",
+      "gbif_link": "https://www.gbif.org/occurrence/1899932043",
+      "location": {
+        "state": "Puerto Rico",
+        "county": null,
+        "locality": "Aguirre",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1925-06",
+        "month": "6",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "Box, H",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899932030",
+      "gbif_link": "https://www.gbif.org/occurrence/1899932030",
+      "location": {
+        "state": "Puerto Rico",
+        "county": null,
+        "locality": "Orocovis",
+        "coordinates": {
+          "lat": 18.2269,
+          "lon": -66.391
+        }
+      },
+      "temporal": {
+        "date": "1932-10-26",
+        "month": "10",
+        "year": "1932"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1320438991",
+      "gbif_link": "https://www.gbif.org/occurrence/1320438991",
+      "location": {
+        "state": "Puerto Rico",
+        "county": "[not Stated]",
+        "locality": "[not stated]",
+        "coordinates": {
+          "lat": 18.2,
+          "lon": -66.5
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "[Not Stated]",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1318989414",
+      "gbif_link": "https://www.gbif.org/occurrence/1318989414",
+      "location": {
+        "state": "[not Stated]",
+        "county": null,
+        "locality": "[Not Stated]",
+        "coordinates": {
+          "lat": 15.42,
+          "lon": -61.33
+        }
+      },
+      "temporal": {
+        "date": "1913",
+        "month": null,
+        "year": "1913"
+      },
+      "collector": {
+        "recordedBy": "H. Foote",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1092837373",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837373",
+      "location": {
+        "state": "Veracruz",
+        "county": null,
+        "locality": "El Saltillo waterfall, Catemaco, 18-20 km NE",
+        "coordinates": {
+          "lat": 18.5129,
+          "lon": -95.0352
+        }
+      },
+      "temporal": {
+        "date": "1982-01-07",
+        "month": "1",
+        "year": "1982"
+      },
+      "collector": {
+        "recordedBy": "Smith, Brian",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837365",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837365",
+      "location": {
+        "state": "Colon",
+        "county": null,
+        "locality": "Colon, 30 km E; Cerro Santa Rita",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-14",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Eupatorium",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Eupatorium",
+            "accepted_genus": "Eupatorium",
+            "accepted_species": "sp.",
+            "canonical_name": "Eupatorium",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837361",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837361",
+      "location": {
+        "state": "Colon",
+        "county": null,
+        "locality": "Colon, 30 km E; Cerro Santa Rita",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-14",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Ipomoea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Ipomoea",
+            "accepted_genus": "Ipomoea",
+            "accepted_species": "sp.",
+            "canonical_name": "Ipomoea",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837354",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837354",
+      "location": {
+        "state": "Colon",
+        "county": null,
+        "locality": "Colon, 30 km E; Cerro Santa Rita",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-14",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Eupatorium",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Eupatorium",
+            "accepted_genus": "Eupatorium",
+            "accepted_species": "sp.",
+            "canonical_name": "Eupatorium",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837351",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837351",
+      "location": {
+        "state": "Colon",
+        "county": null,
+        "locality": "Colon, 30 km E; Cerro Santa Rita",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-14",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Eupatorium",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Eupatorium",
+            "accepted_genus": "Eupatorium",
+            "accepted_species": "sp.",
+            "canonical_name": "Eupatorium",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837350",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837350",
+      "location": {
+        "state": "Colon",
+        "county": null,
+        "locality": "Colon, 30 km E; Cerro Santa Rita",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-14",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Eupatorium",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Eupatorium",
+            "accepted_genus": "Eupatorium",
+            "accepted_species": "sp.",
+            "canonical_name": "Eupatorium",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837346",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837346",
+      "location": {
+        "state": "Virgin Islands",
+        "county": null,
+        "locality": "unspecied",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1924-04-19",
+        "month": "4",
+        "year": "1924"
+      },
+      "collector": {
+        "recordedBy": "Thompson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837345",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837345",
+      "location": {
+        "state": "Colon",
+        "county": null,
+        "locality": "Colon, 30 km E; Cerro Santa Rita",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-14",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Eupatorium",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Eupatorium",
+            "accepted_genus": "Eupatorium",
+            "accepted_species": "sp.",
+            "canonical_name": "Eupatorium",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837339",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837339",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837335",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837335",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837332",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837332",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837331",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837331",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837328",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837328",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837325",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837325",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837323",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837323",
+      "location": {
+        "state": "Colon",
+        "county": null,
+        "locality": "Colon, 30 km E; Cerro Santa Rita",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1981-01-14",
+        "month": "1",
+        "year": "1981"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Eupatorium",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Eupatorium",
+            "accepted_genus": "Eupatorium",
+            "accepted_species": "sp.",
+            "canonical_name": "Eupatorium",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837322",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837322",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837320",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837320",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837317",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837317",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837312",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837312",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837311",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837311",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837303",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837303",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837302",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837302",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837297",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837297",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837295",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837295",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837292",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837292",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837283",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837283",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837282",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837282",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837281",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837281",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837280",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837280",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837273",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837273",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837270",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837270",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-11",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837261",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837261",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837256",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837256",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837249",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837249",
+      "location": {
+        "state": "Virgin Islands",
+        "county": "Saint Thomas",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": 18.35528,
+          "lon": -64.93694
+        }
+      },
+      "temporal": {
+        "date": "1925-03-12",
+        "month": "3",
+        "year": "1925"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 83,
+    "processed_records": 56,
+    "geocoded_records": 0,
+    "floral_records": 7,
+    "excluded_datasets": [
+      "iNaturalist Research-Grade",
+      "BugGuide"
+    ],
+    "contributing_datasets": [
+      {
+        "title": "Bee Biology and Systematics Laboratory",
+        "doi": "10.15468/anyror",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Snow Entomological Museum Collection",
+        "doi": "10.15468/fhntpy",
+        "license": "CC BY 4.0",
+        "citation": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museum of Southwestern Biology Division of Arthropods",
+        "doi": "10.15468/jtovgy",
+        "license": "CC BY-NC 4.0",
+        "citation": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "LACM Entomology Collection",
+        "doi": "10.15468/kc9hyp",
+        "license": "CC0 1.0",
+        "citation": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.34. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Cornell University Insect Collection (CUIC)",
+        "doi": "10.15468/w9b6ap",
+        "license": "CC BY 4.0",
+        "citation": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "International Barcode of Life project (iBOL)",
+        "doi": "10.15468/inygc6",
+        "license": "CC BY 4.0",
+        "citation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Nebraska State Museum Entomology",
+        "doi": "10.15468/6aq9nd",
+        "license": "CC BY-NC 4.0",
+        "citation": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Potential host plant records recovered from ECOAB wild bee collection, Mexico",
+        "doi": "10.15468/xdzgbt",
+        "license": "CC BY 4.0",
+        "citation": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF)-Inventaire des Collectivités d'outre-mer et de la métropole issu des données biogéographiques de TAXREF",
+        "doi": "10.15468/ktycv2",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2022). Référentiel taxonomique national (TAXREF)-Inventaire des Collectivités d'outre-mer et de la métropole issu des données biogéographiques de TAXREF. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/ktycv2 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN)",
+        "doi": "10.15468/gy3jna",
+        "license": "CC BY 4.0",
+        "citation": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Coleção Entomológica Padre Jesus Santiago Moure (DZUP) - Hymenoptera",
+        "doi": "10.15468/ge6vty",
+        "license": "CC BY-NC 4.0",
+        "citation": "Edwin Lattke Bravo J, Augusto Rodrigues de Melo G (2025). Coleção Entomológica Padre Jesus Santiago Moure (DZUP) - Hymenoptera. Version 1.8. Universidade Federal do Paraná. Occurrence dataset https://doi.org/10.15468/ge6vty accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "MCP - Coleção de Abelhas",
+        "doi": "10.15468/e5pqiq",
+        "license": "CC BY-NC 4.0",
+        "citation": "Blochtein B (2026). MCP - Coleção de Abelhas. Version 1.95. Museu de Ciências e Tecnologia - PUCRS. Occurrence dataset https://doi.org/10.15468/e5pqiq accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "INSDC Sequences",
+        "doi": "10.15468/sbmztx",
+        "license": "CC BY 4.0",
+        "citation": "European Bioinformatics Institute (EMBL-EBI), GBIF Helpdesk (2026). INSDC Sequences. Version 1.170. European Nucleotide Archive (EMBL-EBI). Occurrence dataset https://doi.org/10.15468/sbmztx accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museo Argentino de Ciencias Naturales \"Bernardino Rivadavia\" (MACN). Entomology National Collection (MACNEn)",
+        "doi": "10.15468/0cfrpt",
+        "license": "CC BY 4.0",
+        "citation": "Roig Alsina A, Rodríguez D (2021). Museo Argentino de Ciencias Naturales \"Bernardino Rivadavia\" (MACN). Entomology National Collection (MACNEn). Version 1.58. Museo Argentino de Ciencias Naturales. Occurrence dataset https://doi.org/10.15468/0cfrpt accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "ZFMK Hymenoptera collection",
+        "doi": "10.15468/dsd416",
+        "license": "CC BY 4.0",
+        "citation": "Leibniz Institute for the Analysis of Biodiversity Change (LIB). ZFMK Hymenoptera collection. Occurrence dataset https://doi.org/10.15468/dsd416 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_14) issu des données biogéographiques de TAXREF v14",
+        "doi": "10.15468/frrkp9",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2022). Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_14) issu des données biogéographiques de TAXREF v14. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/frrkp9 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Illinois Natural History Survey Insect Collection",
+        "doi": "10.15468/eol0pe",
+        "license": "CC BY 4.0",
+        "citation": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_15) issu des données biogéographiques de TAXREF v15",
+        "doi": "10.15468/5a75sk",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2021). Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_15) issu des données biogéographiques de TAXREF v15. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/5a75sk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "DZUP-Hymenoptera - Coleção Entomológica Pe. Jesus Santiago Moure (Hymenoptera)",
+        "doi": "10.15468/cwlwvm",
+        "license": "CC BY-NC 4.0",
+        "citation": "Marinoni L, Augusto Rodrigues Melo G (2026). DZUP-Hymenoptera - Coleção Entomológica Pe. Jesus Santiago Moure (Hymenoptera). Version 1.91. Universidade Federal do Paraná. Occurrence dataset https://doi.org/10.15468/cwlwvm accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NHMD Entomology Collection",
+        "doi": "10.15468/nnobcm",
+        "license": "CC BY 4.0",
+        "citation": "Scharff N, Pape T, Solodovnikov A, Vilhelmsen L, Enghoff H, Illum A A, Selvantharan S G, Pedersen J (2026). NHMD Entomology Collection. Natural History Museum of Denmark. Occurrence dataset https://doi.org/10.15468/nnobcm accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas)",
+        "doi": "10.15468/ydeiae",
+        "license": "CC BY 4.0",
+        "citation": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Puerto Rico Mayagüez Invertebrate Collection",
+        "doi": "10.15468/afmezg",
+        "license": "CC0 1.0",
+        "citation": "University of Puerto Rico Mayagüez Invertebrate Collection (2023). University of Puerto Rico Mayagüez Invertebrate Collection. Occurrence dataset https://doi.org/10.15468/afmezg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CNIN/Abejas de México/Apoidea",
+        "doi": "10.15468/uhlpgz",
+        "license": "CC BY-NC 4.0",
+        "citation": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "hymenoptera",
+        "doi": "10.15468/mvtuf5",
+        "license": "CC BY 4.0",
+        "citation": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America",
+        "doi": "10.15468/6autvb",
+        "license": "CC0 1.0",
+        "citation": "Droege S, Maffei C, Shumar S, Lent S (2026). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.30. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NMNH Extant Specimen Records (USNM, US)",
+        "doi": "10.15468/hnhrg3",
+        "license": "CC0 1.0",
+        "citation": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museu Paraense Emilio Goeldi - Hymenoptera Collection",
+        "doi": "10.15468/efkpxu",
+        "license": "CC BY-NC 4.0",
+        "citation": "Silveira O (2025). Museu Paraense Emilio Goeldi - Hymenoptera Collection. Version 1.10. Museu Paraense Emílio Goeldi. Occurrence dataset https://doi.org/10.15468/efkpxu accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Laboratório de Ecologia e Biogeografia de Insetos da Caatinga",
+        "doi": "10.15468/yxzgxk",
+        "license": "CC BY 4.0",
+        "citation": "Centro de Referência em Informação Ambiental. Laboratório de Ecologia e Biogeografia de Insetos da Caatinga. Occurrence dataset https://doi.org/10.15468/yxzgxk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP",
+        "doi": "10.15468/bb5nnj",
+        "license": "CC BY-NC 4.0",
+        "citation": "Lucia Imperatriz Fonseca V, Alves dos Santos I (2026). CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP. Universidade de São Paulo. Occurrence dataset https://doi.org/10.15468/bb5nnj accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Male sleeping aggregation of multiple Eucerini bee genera (Hymenoptera: Apidae) in Chapada Diamantina, Bahia, Brazil",
+        "doi": "10.15468/hvqr5w",
+        "license": "CC BY 4.0",
+        "citation": "Mahlmann T (2014). Male sleeping aggregation of multiple Eucerini bee genera (Hymenoptera: Apidae) in Chapada Diamantina, Bahia, Brazil. Biodiversity Data Journal. Checklist dataset https://doi.org/10.15468/hvqr5w accessed via GBIF.org on 2026-04-22."
+      }
+    ]
+  }
+}

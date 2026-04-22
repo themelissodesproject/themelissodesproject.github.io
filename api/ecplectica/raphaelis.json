@@ -1,0 +1,2332 @@
+{
+  "binomial_name": "Melissodes raphaelis",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "raphaelis"
+  },
+  "flight_period": {
+    "January": {
+      "count": 11,
+      "percentage": 16.67
+    },
+    "February": {
+      "count": 15,
+      "percentage": 22.73
+    },
+    "March": {
+      "count": 1,
+      "percentage": 1.52
+    },
+    "April": {
+      "count": 8,
+      "percentage": 12.12
+    },
+    "July": {
+      "count": 1,
+      "percentage": 1.52
+    },
+    "November": {
+      "count": 2,
+      "percentage": 3.03
+    },
+    "December": {
+      "count": 28,
+      "percentage": 42.42
+    }
+  },
+  "distribution": {
+    "Alajuela": {
+      "state_total": 11,
+      "counties": {}
+    },
+    "Guanacaste": {
+      "state_total": 12,
+      "counties": {}
+    },
+    "Limón": {
+      "state_total": 5,
+      "counties": {}
+    },
+    "Chiapas": {
+      "state_total": 20,
+      "counties": {
+        "Ocosingo": {
+          "count": 4
+        },
+        "Huehuetan": {
+          "count": 1
+        },
+        "San Juan Cancuc": {
+          "count": 1
+        },
+        "Union Juarez": {
+          "count": 1
+        }
+      }
+    },
+    "Cartago": {
+      "state_total": 1,
+      "counties": {
+        "Turrialba": {
+          "count": 1
+        }
+      }
+    },
+    "Panama": {
+      "state_total": 16,
+      "counties": {}
+    },
+    "Veracruz-llave": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Francisco Morazan": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Canal Zone": {
+      "state_total": 1,
+      "counties": {}
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "658516488",
+      "gbif_link": "https://www.gbif.org/occurrence/658516488",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-01-31",
+        "month": "1",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516487",
+      "gbif_link": "https://www.gbif.org/occurrence/658516487",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-01-21",
+        "month": "1",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516486",
+      "gbif_link": "https://www.gbif.org/occurrence/658516486",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-01-31",
+        "month": "1",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516485",
+      "gbif_link": "https://www.gbif.org/occurrence/658516485",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-01-31",
+        "month": "1",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516484",
+      "gbif_link": "https://www.gbif.org/occurrence/658516484",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-01-31",
+        "month": "1",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516483",
+      "gbif_link": "https://www.gbif.org/occurrence/658516483",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-01-31",
+        "month": "1",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516482",
+      "gbif_link": "https://www.gbif.org/occurrence/658516482",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1990-02-24",
+        "month": "2",
+        "year": "1990"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516481",
+      "gbif_link": "https://www.gbif.org/occurrence/658516481",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-02-23",
+        "month": "2",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516480",
+      "gbif_link": "https://www.gbif.org/occurrence/658516480",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-02-23",
+        "month": "2",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516479",
+      "gbif_link": "https://www.gbif.org/occurrence/658516479",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-02-23",
+        "month": "2",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516478",
+      "gbif_link": "https://www.gbif.org/occurrence/658516478",
+      "location": {
+        "state": "Alajuela",
+        "county": null,
+        "locality": "Bijagua, 20 km S Upala",
+        "coordinates": {
+          "lat": 10.7333,
+          "lon": -85.1
+        }
+      },
+      "temporal": {
+        "date": "1991-02-16",
+        "month": "2",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516477",
+      "gbif_link": "https://www.gbif.org/occurrence/658516477",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Cañas, 14 km S, EJN",
+        "coordinates": {
+          "lat": 10.3,
+          "lon": -85.0956
+        }
+      },
+      "temporal": {
+        "date": "1990-11-07",
+        "month": "11",
+        "year": "1990"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 91"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516476",
+      "gbif_link": "https://www.gbif.org/occurrence/658516476",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Volcán Orosi, Pitilla Biology Station",
+        "coordinates": {
+          "lat": 11,
+          "lon": -85.43
+        }
+      },
+      "temporal": {
+        "date": "1995-02-11",
+        "month": "2",
+        "year": "1995"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516475",
+      "gbif_link": "https://www.gbif.org/occurrence/658516475",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1992-11-15",
+        "month": "11",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516474",
+      "gbif_link": "https://www.gbif.org/occurrence/658516474",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1992-01-30",
+        "month": "1",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516473",
+      "gbif_link": "https://www.gbif.org/occurrence/658516473",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1992-01-31",
+        "month": "1",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516472",
+      "gbif_link": "https://www.gbif.org/occurrence/658516472",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1992-01-16",
+        "month": "1",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516471",
+      "gbif_link": "https://www.gbif.org/occurrence/658516471",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1992-01-24",
+        "month": "1",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516470",
+      "gbif_link": "https://www.gbif.org/occurrence/658516470",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1992-02-06",
+        "month": "2",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516469",
+      "gbif_link": "https://www.gbif.org/occurrence/658516469",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1993-02-19",
+        "month": "2",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516468",
+      "gbif_link": "https://www.gbif.org/occurrence/658516468",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1992-02-09",
+        "month": "2",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516467",
+      "gbif_link": "https://www.gbif.org/occurrence/658516467",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1991-12",
+        "month": "12",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516466",
+      "gbif_link": "https://www.gbif.org/occurrence/658516466",
+      "location": {
+        "state": "Guanacaste",
+        "county": null,
+        "locality": "Finca Montezuma, 3 km SE Rio Naranjo",
+        "coordinates": {
+          "lat": 10.6641,
+          "lon": -85.0972
+        }
+      },
+      "temporal": {
+        "date": "1991-12",
+        "month": "12",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516465",
+      "gbif_link": "https://www.gbif.org/occurrence/658516465",
+      "location": {
+        "state": "Limón",
+        "county": null,
+        "locality": "Quapiles, E, E.A.R.T.H.",
+        "coordinates": {
+          "lat": 10.21,
+          "lon": -83.73
+        }
+      },
+      "temporal": {
+        "date": "1995-02-15",
+        "month": "2",
+        "year": "1995"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516464",
+      "gbif_link": "https://www.gbif.org/occurrence/658516464",
+      "location": {
+        "state": "Limón",
+        "county": null,
+        "locality": "Quapiles, E, E.A.R.T.H.",
+        "coordinates": {
+          "lat": 10.21,
+          "lon": -83.73
+        }
+      },
+      "temporal": {
+        "date": "1995-02-15",
+        "month": "2",
+        "year": "1995"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516463",
+      "gbif_link": "https://www.gbif.org/occurrence/658516463",
+      "location": {
+        "state": "Limón",
+        "county": null,
+        "locality": "Quapiles, E, E.A.R.T.H.",
+        "coordinates": {
+          "lat": 10.21,
+          "lon": -83.73
+        }
+      },
+      "temporal": {
+        "date": "1995-02-15",
+        "month": "2",
+        "year": "1995"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516462",
+      "gbif_link": "https://www.gbif.org/occurrence/658516462",
+      "location": {
+        "state": "Limón",
+        "county": null,
+        "locality": "Quapiles, E, E.A.R.T.H.",
+        "coordinates": {
+          "lat": 10.21,
+          "lon": -83.73
+        }
+      },
+      "temporal": {
+        "date": "1995-02-15",
+        "month": "2",
+        "year": "1995"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658516461",
+      "gbif_link": "https://www.gbif.org/occurrence/658516461",
+      "location": {
+        "state": "Limón",
+        "county": null,
+        "locality": "Quapiles, E, E.A.R.T.H.",
+        "coordinates": {
+          "lat": 10.21,
+          "lon": -83.73
+        }
+      },
+      "temporal": {
+        "date": "1995-02-15",
+        "month": "2",
+        "year": "1995"
+      },
+      "collector": {
+        "recordedBy": "F.D. Parker",
+        "identifiedBy": "T.L. Griswold 96"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657935451",
+      "gbif_link": "https://www.gbif.org/occurrence/657935451",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, 52.9 km N, Shanil, nr Agua Azul",
+        "coordinates": {
+          "lat": 17.2167,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "Brooks, Robert",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657935450",
+      "gbif_link": "https://www.gbif.org/occurrence/657935450",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, 52.9 km N, Shanil, nr Agua Azul",
+        "coordinates": {
+          "lat": 17.2167,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "Brooks, Robert",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4169053353",
+      "gbif_link": "https://www.gbif.org/occurrence/4169053353",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, Ej. Shanil, 52.9 km N",
+        "coordinates": {
+          "lat": 17.21667,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "Robert W. Brooks",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4168960251",
+      "gbif_link": "https://www.gbif.org/occurrence/4168960251",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, Ej. Shanil, 52.9 km N",
+        "coordinates": {
+          "lat": 17.21667,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "E. Tovar",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4168891356",
+      "gbif_link": "https://www.gbif.org/occurrence/4168891356",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, Ej. Shanil, 52.9 km N",
+        "coordinates": {
+          "lat": 17.21667,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "Robert W. Brooks",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4120738147",
+      "gbif_link": "https://www.gbif.org/occurrence/4120738147",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Tzumbal",
+        "coordinates": {
+          "lat": 16.939,
+          "lon": -92.443
+        }
+      },
+      "temporal": {
+        "date": "2010-12-10",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "César López",
+        "identifiedBy": "Philippe Sagot"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4120738146",
+      "gbif_link": "https://www.gbif.org/occurrence/4120738146",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.084
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "Gonzalo Morales",
+        "identifiedBy": "Philippe Sagot"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4120730528",
+      "gbif_link": "https://www.gbif.org/occurrence/4120730528",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.084
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "Miguel Cigarroa",
+        "identifiedBy": "Philippe Sagot"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4120730523",
+      "gbif_link": "https://www.gbif.org/occurrence/4120730523",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.084
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "Gonzalo Morales",
+        "identifiedBy": "Philippe Sagot"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4120729982",
+      "gbif_link": "https://www.gbif.org/occurrence/4120729982",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.084
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "Gonzalo Morales",
+        "identifiedBy": "Philippe Sagot"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801340951",
+      "gbif_link": "https://www.gbif.org/occurrence/3801340951",
+      "location": {
+        "state": "Cartago",
+        "county": "Turrialba",
+        "locality": null,
+        "coordinates": {
+          "lat": 9.9,
+          "lon": -83.683333
+        }
+      },
+      "temporal": {
+        "date": "1956-02-09",
+        "month": "2",
+        "year": "1956"
+      },
+      "collector": {
+        "recordedBy": "R.B. Roberts",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "COSTA RICA, Cartago; Province Turrialba; 9 February 1956; (R. B. Roberts)  Melissodes; raphaelis Cockerell; det. W. E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3308800362",
+      "gbif_link": "https://www.gbif.org/occurrence/3308800362",
+      "location": {
+        "state": "Chiapas",
+        "county": "Ocosingo",
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.08374
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "MC",
+        "identifiedBy": "PS"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3308800039",
+      "gbif_link": "https://www.gbif.org/occurrence/3308800039",
+      "location": {
+        "state": "Chiapas",
+        "county": "Ocosingo",
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.08374
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "GM",
+        "identifiedBy": "PS"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3308798052",
+      "gbif_link": "https://www.gbif.org/occurrence/3308798052",
+      "location": {
+        "state": "Chiapas",
+        "county": "Ocosingo",
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.08374
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "GM",
+        "identifiedBy": "PS"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3308797829",
+      "gbif_link": "https://www.gbif.org/occurrence/3308797829",
+      "location": {
+        "state": "Chiapas",
+        "county": "Huehuetan",
+        "locality": "Huehuetán",
+        "coordinates": {
+          "lat": 15.0179,
+          "lon": -92.3939
+        }
+      },
+      "temporal": {
+        "date": "1987-03-15",
+        "month": "3",
+        "year": "1987"
+      },
+      "collector": {
+        "recordedBy": "RDS",
+        "identifiedBy": "PS"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3308796867",
+      "gbif_link": "https://www.gbif.org/occurrence/3308796867",
+      "location": {
+        "state": "Chiapas",
+        "county": "San Juan Cancuc",
+        "locality": "Tzumbal",
+        "coordinates": {
+          "lat": 16.9394,
+          "lon": -92.4434
+        }
+      },
+      "temporal": {
+        "date": "2010-12-10",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "CL",
+        "identifiedBy": "PS"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3308781126",
+      "gbif_link": "https://www.gbif.org/occurrence/3308781126",
+      "location": {
+        "state": "Chiapas",
+        "county": "Ocosingo",
+        "locality": "Ocosingo",
+        "coordinates": {
+          "lat": 16.892,
+          "lon": -92.08374
+        }
+      },
+      "temporal": {
+        "date": "2010-12-17",
+        "month": "12",
+        "year": "2010"
+      },
+      "collector": {
+        "recordedBy": "GM",
+        "identifiedBy": "PS"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3308771328",
+      "gbif_link": "https://www.gbif.org/occurrence/3308771328",
+      "location": {
+        "state": "Chiapas",
+        "county": "Union Juarez",
+        "locality": "Unión Juárez",
+        "coordinates": {
+          "lat": 15.0618,
+          "lon": -92.08
+        }
+      },
+      "temporal": {
+        "date": "1992-07-29",
+        "month": "7",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "AA",
+        "identifiedBy": "PS"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "219029375",
+      "gbif_link": "https://www.gbif.org/occurrence/219029375",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, Ej. Shanil, 52.9 km N",
+        "coordinates": {
+          "lat": 17.216667,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "Robert W. Brooks",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "219029374",
+      "gbif_link": "https://www.gbif.org/occurrence/219029374",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, Ej. Shanil, 52.9 km N",
+        "coordinates": {
+          "lat": 17.216667,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "Robert W. Brooks",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "219029373",
+      "gbif_link": "https://www.gbif.org/occurrence/219029373",
+      "location": {
+        "state": "Chiapas",
+        "county": null,
+        "locality": "Ocosingo, Ej. Shanil, 52.9 km N",
+        "coordinates": {
+          "lat": 17.216667,
+          "lon": -92.1
+        }
+      },
+      "temporal": {
+        "date": "1993-04-23",
+        "month": "4",
+        "year": "1993"
+      },
+      "collector": {
+        "recordedBy": "E. Tovar",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "1899932010",
+      "gbif_link": "https://www.gbif.org/occurrence/1899932010",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899931972",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931972",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899931936",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931936",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1899931934",
+      "gbif_link": "https://www.gbif.org/occurrence/1899931934",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Canal Zone, Curundu",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1958-01-29",
+        "month": "1",
+        "year": "1958"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1320947483",
+      "gbif_link": "https://www.gbif.org/occurrence/1320947483",
+      "location": {
+        "state": "Veracruz-llave",
+        "county": null,
+        "locality": "S. Rafael",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "[Not Stated]",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1320885028",
+      "gbif_link": "https://www.gbif.org/occurrence/1320885028",
+      "location": {
+        "state": "Francisco Morazan",
+        "county": null,
+        "locality": "Zamorano, Honduras",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Pelin",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1092837310",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837310",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837300",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837300",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837299",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837299",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837298",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837298",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837291",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837291",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837290",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837290",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837287",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837287",
+      "location": {
+        "state": "Canal Zone",
+        "county": null,
+        "locality": "Cerro Galera",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1958-12-27",
+        "month": "12",
+        "year": "1958"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837274",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837274",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837271",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837271",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837265",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837265",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837260",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837260",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837258",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837258",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092837224",
+      "gbif_link": "https://www.gbif.org/occurrence/1092837224",
+      "location": {
+        "state": "Panama",
+        "county": null,
+        "locality": "Gamboa",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1957-12-17",
+        "month": "12",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Hanson, W",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 74,
+    "processed_records": 68,
+    "geocoded_records": 0,
+    "floral_records": 0,
+    "excluded_datasets": [
+      "iNaturalist Research-Grade",
+      "BugGuide"
+    ],
+    "contributing_datasets": [
+      {
+        "title": "Bee Biology and Systematics Laboratory",
+        "doi": "10.15468/anyror",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Snow Entomological Museum Collection",
+        "doi": "10.15468/fhntpy",
+        "license": "CC BY 4.0",
+        "citation": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museum of Southwestern Biology Division of Arthropods",
+        "doi": "10.15468/jtovgy",
+        "license": "CC BY-NC 4.0",
+        "citation": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "LACM Entomology Collection",
+        "doi": "10.15468/kc9hyp",
+        "license": "CC0 1.0",
+        "citation": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.34. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Cornell University Insect Collection (CUIC)",
+        "doi": "10.15468/w9b6ap",
+        "license": "CC BY 4.0",
+        "citation": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "International Barcode of Life project (iBOL)",
+        "doi": "10.15468/inygc6",
+        "license": "CC BY 4.0",
+        "citation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Nebraska State Museum Entomology",
+        "doi": "10.15468/6aq9nd",
+        "license": "CC BY-NC 4.0",
+        "citation": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Potential host plant records recovered from ECOAB wild bee collection, Mexico",
+        "doi": "10.15468/xdzgbt",
+        "license": "CC BY 4.0",
+        "citation": "Vandame R, Mérida J, Sagot P, Madrigal  González D, Bedolla García B Y, González-Vanegas P A, Cultid-Medina C A, Barrios J M (2023). Potential host plant records recovered from ECOAB wild bee collection, Mexico. Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/xdzgbt accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF)-Inventaire des Collectivités d'outre-mer et de la métropole issu des données biogéographiques de TAXREF",
+        "doi": "10.15468/ktycv2",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2022). Référentiel taxonomique national (TAXREF)-Inventaire des Collectivités d'outre-mer et de la métropole issu des données biogéographiques de TAXREF. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/ktycv2 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN)",
+        "doi": "10.15468/gy3jna",
+        "license": "CC BY 4.0",
+        "citation": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Coleção Entomológica Padre Jesus Santiago Moure (DZUP) - Hymenoptera",
+        "doi": "10.15468/ge6vty",
+        "license": "CC BY-NC 4.0",
+        "citation": "Edwin Lattke Bravo J, Augusto Rodrigues de Melo G (2025). Coleção Entomológica Padre Jesus Santiago Moure (DZUP) - Hymenoptera. Version 1.8. Universidade Federal do Paraná. Occurrence dataset https://doi.org/10.15468/ge6vty accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "MCP - Coleção de Abelhas",
+        "doi": "10.15468/e5pqiq",
+        "license": "CC BY-NC 4.0",
+        "citation": "Blochtein B (2026). MCP - Coleção de Abelhas. Version 1.95. Museu de Ciências e Tecnologia - PUCRS. Occurrence dataset https://doi.org/10.15468/e5pqiq accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "INSDC Sequences",
+        "doi": "10.15468/sbmztx",
+        "license": "CC BY 4.0",
+        "citation": "European Bioinformatics Institute (EMBL-EBI), GBIF Helpdesk (2026). INSDC Sequences. Version 1.170. European Nucleotide Archive (EMBL-EBI). Occurrence dataset https://doi.org/10.15468/sbmztx accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museo Argentino de Ciencias Naturales \"Bernardino Rivadavia\" (MACN). Entomology National Collection (MACNEn)",
+        "doi": "10.15468/0cfrpt",
+        "license": "CC BY 4.0",
+        "citation": "Roig Alsina A, Rodríguez D (2021). Museo Argentino de Ciencias Naturales \"Bernardino Rivadavia\" (MACN). Entomology National Collection (MACNEn). Version 1.58. Museo Argentino de Ciencias Naturales. Occurrence dataset https://doi.org/10.15468/0cfrpt accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "ZFMK Hymenoptera collection",
+        "doi": "10.15468/dsd416",
+        "license": "CC BY 4.0",
+        "citation": "Leibniz Institute for the Analysis of Biodiversity Change (LIB). ZFMK Hymenoptera collection. Occurrence dataset https://doi.org/10.15468/dsd416 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_14) issu des données biogéographiques de TAXREF v14",
+        "doi": "10.15468/frrkp9",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2022). Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_14) issu des données biogéographiques de TAXREF v14. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/frrkp9 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Illinois Natural History Survey Insect Collection",
+        "doi": "10.15468/eol0pe",
+        "license": "CC BY 4.0",
+        "citation": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_15) issu des données biogéographiques de TAXREF v15",
+        "doi": "10.15468/5a75sk",
+        "license": "CC BY 4.0",
+        "citation": "Inventaire National du Patrimoine Naturel (2021). Référentiel taxonomique national (TAXREF) - Inventaire des Collectivités d'outre-mer et de la métropole (ICOM_15) issu des données biogéographiques de TAXREF v15. UAR PatriNat (OFB-MNHN-CNRS-IRD), Paris. Occurrence dataset https://doi.org/10.15468/5a75sk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "DZUP-Hymenoptera - Coleção Entomológica Pe. Jesus Santiago Moure (Hymenoptera)",
+        "doi": "10.15468/cwlwvm",
+        "license": "CC BY-NC 4.0",
+        "citation": "Marinoni L, Augusto Rodrigues Melo G (2026). DZUP-Hymenoptera - Coleção Entomológica Pe. Jesus Santiago Moure (Hymenoptera). Version 1.91. Universidade Federal do Paraná. Occurrence dataset https://doi.org/10.15468/cwlwvm accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NHMD Entomology Collection",
+        "doi": "10.15468/nnobcm",
+        "license": "CC BY 4.0",
+        "citation": "Scharff N, Pape T, Solodovnikov A, Vilhelmsen L, Enghoff H, Illum A A, Selvantharan S G, Pedersen J (2026). NHMD Entomology Collection. Natural History Museum of Denmark. Occurrence dataset https://doi.org/10.15468/nnobcm accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas)",
+        "doi": "10.15468/ydeiae",
+        "license": "CC BY 4.0",
+        "citation": "Pozo de la Tijera M D C, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Fortalecimiento de las colecciones de ECOSUR. Primera fase (Abejas). Version 1.10. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/ydeiae accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Puerto Rico Mayagüez Invertebrate Collection",
+        "doi": "10.15468/afmezg",
+        "license": "CC0 1.0",
+        "citation": "University of Puerto Rico Mayagüez Invertebrate Collection (2023). University of Puerto Rico Mayagüez Invertebrate Collection. Occurrence dataset https://doi.org/10.15468/afmezg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CNIN/Abejas de México/Apoidea",
+        "doi": "10.15468/uhlpgz",
+        "license": "CC BY-NC 4.0",
+        "citation": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "hymenoptera",
+        "doi": "10.15468/mvtuf5",
+        "license": "CC BY 4.0",
+        "citation": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America",
+        "doi": "10.15468/6autvb",
+        "license": "CC0 1.0",
+        "citation": "Droege S, Maffei C, Shumar S, Lent S (2026). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.30. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NMNH Extant Specimen Records (USNM, US)",
+        "doi": "10.15468/hnhrg3",
+        "license": "CC0 1.0",
+        "citation": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museu Paraense Emilio Goeldi - Hymenoptera Collection",
+        "doi": "10.15468/efkpxu",
+        "license": "CC BY-NC 4.0",
+        "citation": "Silveira O (2025). Museu Paraense Emilio Goeldi - Hymenoptera Collection. Version 1.10. Museu Paraense Emílio Goeldi. Occurrence dataset https://doi.org/10.15468/efkpxu accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Laboratório de Ecologia e Biogeografia de Insetos da Caatinga",
+        "doi": "10.15468/yxzgxk",
+        "license": "CC BY 4.0",
+        "citation": "Centro de Referência em Informação Ambiental. Laboratório de Ecologia e Biogeografia de Insetos da Caatinga. Occurrence dataset https://doi.org/10.15468/yxzgxk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP",
+        "doi": "10.15468/bb5nnj",
+        "license": "CC BY-NC 4.0",
+        "citation": "Lucia Imperatriz Fonseca V, Alves dos Santos I (2026). CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP. Universidade de São Paulo. Occurrence dataset https://doi.org/10.15468/bb5nnj accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Male sleeping aggregation of multiple Eucerini bee genera (Hymenoptera: Apidae) in Chapada Diamantina, Bahia, Brazil",
+        "doi": "10.15468/hvqr5w",
+        "license": "CC BY 4.0",
+        "citation": "Mahlmann T (2014). Male sleeping aggregation of multiple Eucerini bee genera (Hymenoptera: Apidae) in Chapada Diamantina, Bahia, Brazil. Biodiversity Data Journal. Checklist dataset https://doi.org/10.15468/hvqr5w accessed via GBIF.org on 2026-04-22."
+      }
+    ]
+  }
+}
