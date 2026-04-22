@@ -1,0 +1,2963 @@
+{
+  "binomial_name": "Melissodes intortus",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "intortus"
+  },
+  "flight_period": {
+    "April": {
+      "count": 6,
+      "percentage": 10.91
+    },
+    "May": {
+      "count": 12,
+      "percentage": 21.82
+    },
+    "June": {
+      "count": 37,
+      "percentage": 67.27
+    }
+  },
+  "distribution": {
+    "Nebraska": {
+      "state_total": 2,
+      "counties": {
+        "Furnas": {
+          "count": 2
+        }
+      }
+    },
+    "Kansas": {
+      "state_total": 37,
+      "counties": {
+        "Sumner": {
+          "count": 27
+        },
+        "Pratt": {
+          "count": 1
+        },
+        "Scott": {
+          "count": 2
+        },
+        "Cherokee": {
+          "count": 5
+        },
+        "Gove": {
+          "count": 1
+        },
+        "Barber": {
+          "count": 1
+        }
+      }
+    },
+    "Texas": {
+      "state_total": 32,
+      "counties": {
+        "Lee": {
+          "count": 6
+        },
+        "Gillespie": {
+          "count": 8
+        },
+        "Goliad": {
+          "count": 3
+        },
+        "Lavaca": {
+          "count": 2
+        },
+        "Colorado": {
+          "count": 2
+        },
+        "Brazos": {
+          "count": 9
+        },
+        "Robertson": {
+          "count": 1
+        }
+      }
+    },
+    "Michigan": {
+      "state_total": 1,
+      "counties": {}
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "658381459",
+      "gbif_link": "https://www.gbif.org/occurrence/658381459",
+      "location": {
+        "state": "Nebraska",
+        "county": "Furnas",
+        "locality": "Hendley, 6 km E",
+        "coordinates": {
+          "lat": 40.1283,
+          "lon": -99.92
+        }
+      },
+      "temporal": {
+        "date": "1988-06-13",
+        "month": "6",
+        "year": "1988"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658374557",
+      "gbif_link": "https://www.gbif.org/occurrence/658374557",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658373362",
+      "gbif_link": "https://www.gbif.org/occurrence/658373362",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": "Fedor",
+        "coordinates": {
+          "lat": 30.3158,
+          "lon": -97.0525
+        }
+      },
+      "temporal": {
+        "date": "1897-04-26",
+        "month": "4",
+        "year": "1897"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658365198",
+      "gbif_link": "https://www.gbif.org/occurrence/658365198",
+      "location": {
+        "state": "Kansas",
+        "county": "Pratt",
+        "locality": "Isabel, 8 mi NE",
+        "coordinates": {
+          "lat": 37.5485,
+          "lon": -98.4469
+        }
+      },
+      "temporal": {
+        "date": "1964-06-12",
+        "month": "6",
+        "year": "1964"
+      },
+      "collector": {
+        "recordedBy": "Michener & Kerfoot",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658348690",
+      "gbif_link": "https://www.gbif.org/occurrence/658348690",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658348084",
+      "gbif_link": "https://www.gbif.org/occurrence/658348084",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658313300",
+      "gbif_link": "https://www.gbif.org/occurrence/658313300",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658297432",
+      "gbif_link": "https://www.gbif.org/occurrence/658297432",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658291331",
+      "gbif_link": "https://www.gbif.org/occurrence/658291331",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "Harper",
+        "coordinates": {
+          "lat": 30.2997,
+          "lon": -99.2439
+        }
+      },
+      "temporal": {
+        "date": "1954-05-06",
+        "month": "5",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Lucy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658281944",
+      "gbif_link": "https://www.gbif.org/occurrence/658281944",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658268578",
+      "gbif_link": "https://www.gbif.org/occurrence/658268578",
+      "location": {
+        "state": "Texas",
+        "county": "Goliad",
+        "locality": "Goliad, 16 mi E",
+        "coordinates": {
+          "lat": 28.6681,
+          "lon": -97.1244
+        }
+      },
+      "temporal": {
+        "date": "1953-05-07",
+        "month": "5",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Raymond",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Gaillardia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gaillardia",
+            "accepted_genus": "Gaillardia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gaillardia",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658263232",
+      "gbif_link": "https://www.gbif.org/occurrence/658263232",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "Stonewall",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1953-04-19",
+        "month": "4",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Lucy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658261686",
+      "gbif_link": "https://www.gbif.org/occurrence/658261686",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658253861",
+      "gbif_link": "https://www.gbif.org/occurrence/658253861",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "Harper",
+        "coordinates": {
+          "lat": 30.2997,
+          "lon": -99.2439
+        }
+      },
+      "temporal": {
+        "date": "1954-05-06",
+        "month": "5",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Raymond",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658187175",
+      "gbif_link": "https://www.gbif.org/occurrence/658187175",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658184704",
+      "gbif_link": "https://www.gbif.org/occurrence/658184704",
+      "location": {
+        "state": "Kansas",
+        "county": "Scott",
+        "locality": "Scott City, 12 mi N",
+        "coordinates": {
+          "lat": 38.656,
+          "lon": -100.9067
+        }
+      },
+      "temporal": {
+        "date": "1950-06-18",
+        "month": "6",
+        "year": "1950"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Rorippa sinuata",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Rorippa sinuata",
+            "accepted_genus": "Rorippa",
+            "accepted_species": "sinuata",
+            "canonical_name": "Rorippa sinuata",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658182326",
+      "gbif_link": "https://www.gbif.org/occurrence/658182326",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658181566",
+      "gbif_link": "https://www.gbif.org/occurrence/658181566",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658146241",
+      "gbif_link": "https://www.gbif.org/occurrence/658146241",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "Harper",
+        "coordinates": {
+          "lat": 30.2997,
+          "lon": -99.2439
+        }
+      },
+      "temporal": {
+        "date": "1954-05-06",
+        "month": "5",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Raymond",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658146175",
+      "gbif_link": "https://www.gbif.org/occurrence/658146175",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658132319",
+      "gbif_link": "https://www.gbif.org/occurrence/658132319",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657828443",
+      "gbif_link": "https://www.gbif.org/occurrence/657828443",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657826655",
+      "gbif_link": "https://www.gbif.org/occurrence/657826655",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657825731",
+      "gbif_link": "https://www.gbif.org/occurrence/657825731",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657801930",
+      "gbif_link": "https://www.gbif.org/occurrence/657801930",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657799680",
+      "gbif_link": "https://www.gbif.org/occurrence/657799680",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657798952",
+      "gbif_link": "https://www.gbif.org/occurrence/657798952",
+      "location": {
+        "state": "Kansas",
+        "county": "Cherokee",
+        "locality": "Baxter Springs",
+        "coordinates": {
+          "lat": 37.0236,
+          "lon": -94.7353
+        }
+      },
+      "temporal": {
+        "date": "1951-06-26",
+        "month": "6",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "Beer, Robert",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe digitata",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe digitata",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "digitata",
+            "canonical_name": "Callirhoe digitata",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657789807",
+      "gbif_link": "https://www.gbif.org/occurrence/657789807",
+      "location": {
+        "state": "Kansas",
+        "county": "Scott",
+        "locality": "Scott City, 12 mi N",
+        "coordinates": {
+          "lat": 38.656,
+          "lon": -100.9067
+        }
+      },
+      "temporal": {
+        "date": "1950-06-18",
+        "month": "6",
+        "year": "1950"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Rorippa sinuata",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Rorippa sinuata",
+            "accepted_genus": "Rorippa",
+            "accepted_species": "sinuata",
+            "canonical_name": "Rorippa sinuata",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657753357",
+      "gbif_link": "https://www.gbif.org/occurrence/657753357",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1906-05-11",
+        "month": "5",
+        "year": "1906"
+      },
+      "collector": {
+        "recordedBy": "unknown",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657738999",
+      "gbif_link": "https://www.gbif.org/occurrence/657738999",
+      "location": {
+        "state": "Kansas",
+        "county": "Cherokee",
+        "locality": "Baxter Springs",
+        "coordinates": {
+          "lat": 37.0236,
+          "lon": -94.7353
+        }
+      },
+      "temporal": {
+        "date": "1951-06-26",
+        "month": "6",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "Beer, Robert",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe digitata",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe digitata",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "digitata",
+            "canonical_name": "Callirhoe digitata",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657731989",
+      "gbif_link": "https://www.gbif.org/occurrence/657731989",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "Harper",
+        "coordinates": {
+          "lat": 30.2997,
+          "lon": -99.2439
+        }
+      },
+      "temporal": {
+        "date": "1954-05-06",
+        "month": "5",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Lucy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657724766",
+      "gbif_link": "https://www.gbif.org/occurrence/657724766",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657720556",
+      "gbif_link": "https://www.gbif.org/occurrence/657720556",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657718760",
+      "gbif_link": "https://www.gbif.org/occurrence/657718760",
+      "location": {
+        "state": "Kansas",
+        "county": "Cherokee",
+        "locality": "Baxter Springs",
+        "coordinates": {
+          "lat": 37.0236,
+          "lon": -94.7353
+        }
+      },
+      "temporal": {
+        "date": "1951-06-26",
+        "month": "6",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "Beer, Robert",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe digitata",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe digitata",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "digitata",
+            "canonical_name": "Callirhoe digitata",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657707525",
+      "gbif_link": "https://www.gbif.org/occurrence/657707525",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "Harper",
+        "coordinates": {
+          "lat": 30.2997,
+          "lon": -99.2439
+        }
+      },
+      "temporal": {
+        "date": "1954-05-06",
+        "month": "5",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Raymond",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657706432",
+      "gbif_link": "https://www.gbif.org/occurrence/657706432",
+      "location": {
+        "state": "Texas",
+        "county": "Lavaca",
+        "locality": "Sweet Home",
+        "coordinates": {
+          "lat": 29.345,
+          "lon": -97.0714
+        }
+      },
+      "temporal": {
+        "date": "1950-04-14",
+        "month": "4",
+        "year": "1950"
+      },
+      "collector": {
+        "recordedBy": "Michener, Beamer, Rozen, Stephen",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe leiocarpa",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe leiocarpa",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "leiocarpa",
+            "canonical_name": "Callirhoe leiocarpa",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657701839",
+      "gbif_link": "https://www.gbif.org/occurrence/657701839",
+      "location": {
+        "state": "Texas",
+        "county": "Colorado",
+        "locality": "Glidden",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1953-04-10",
+        "month": "4",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Raymond",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657700416",
+      "gbif_link": "https://www.gbif.org/occurrence/657700416",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": "Fedor",
+        "coordinates": {
+          "lat": 30.3158,
+          "lon": -97.0525
+        }
+      },
+      "temporal": {
+        "date": "1899-04-27",
+        "month": "4",
+        "year": "1899"
+      },
+      "collector": {
+        "recordedBy": "Birkmann, G",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657676434",
+      "gbif_link": "https://www.gbif.org/occurrence/657676434",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657669904",
+      "gbif_link": "https://www.gbif.org/occurrence/657669904",
+      "location": {
+        "state": "Nebraska",
+        "county": "Furnas",
+        "locality": "Hendley, 6 km E",
+        "coordinates": {
+          "lat": 40.1283,
+          "lon": -99.92
+        }
+      },
+      "temporal": {
+        "date": "1988-06-13",
+        "month": "6",
+        "year": "1988"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657663770",
+      "gbif_link": "https://www.gbif.org/occurrence/657663770",
+      "location": {
+        "state": "Texas",
+        "county": "Goliad",
+        "locality": "Goliad, 16 mi E",
+        "coordinates": {
+          "lat": 28.6681,
+          "lon": -97.1244
+        }
+      },
+      "temporal": {
+        "date": "1953-05-07",
+        "month": "5",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Raymond",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Gaillardia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Gaillardia",
+            "accepted_genus": "Gaillardia",
+            "accepted_species": "sp.",
+            "canonical_name": "Gaillardia",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657647936",
+      "gbif_link": "https://www.gbif.org/occurrence/657647936",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657623219",
+      "gbif_link": "https://www.gbif.org/occurrence/657623219",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657617096",
+      "gbif_link": "https://www.gbif.org/occurrence/657617096",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "Harper",
+        "coordinates": {
+          "lat": 30.2997,
+          "lon": -99.2439
+        }
+      },
+      "temporal": {
+        "date": "1954-05-06",
+        "month": "5",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Lucy",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657606668",
+      "gbif_link": "https://www.gbif.org/occurrence/657606668",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657592787",
+      "gbif_link": "https://www.gbif.org/occurrence/657592787",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": "Caldwell, 9 mi N",
+        "coordinates": {
+          "lat": 37.1623,
+          "lon": -97.6067
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "6177211106",
+      "gbif_link": "https://www.gbif.org/occurrence/6177211106",
+      "location": {
+        "state": "Kansas",
+        "county": "Cherokee",
+        "locality": "5 mi. S. of Baxter Springs",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1951-06-26",
+        "month": "6",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": "W.E. LaBerge"
+      },
+      "ecology": {
+        "notes": "Callirhoe digitata",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe digitata",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "digitata",
+            "canonical_name": "Callirhoe digitata",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177210951",
+      "gbif_link": "https://www.gbif.org/occurrence/6177210951",
+      "location": {
+        "state": "Kansas",
+        "county": "Gove",
+        "locality": "2813 ft.",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "F.X. Williams",
+        "identifiedBy": "W.E. LaBerge"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177210950",
+      "gbif_link": "https://www.gbif.org/occurrence/6177210950",
+      "location": {
+        "state": "Texas",
+        "county": "Colorado",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1953-04-10",
+        "month": "4",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "R.H. Beamer",
+        "identifiedBy": "W.E. LaBerge"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177210946",
+      "gbif_link": "https://www.gbif.org/occurrence/6177210946",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Malvac",
+        "identifiedBy": "W.E. LaBerge"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4998658236",
+      "gbif_link": "https://www.gbif.org/occurrence/4998658236",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": "Fedor",
+        "coordinates": {
+          "lat": 30.1858,
+          "lon": -97.031
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Birkman",
+        "identifiedBy": "W. E. LaBerge"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "4425563732",
+      "gbif_link": "https://www.gbif.org/occurrence/4425563732",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "No further locality",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4425487687",
+      "gbif_link": "https://www.gbif.org/occurrence/4425487687",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "College Station, Riley Estate",
+        "coordinates": {
+          "lat": 30.5885118,
+          "lon": -96.2534066
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "Riley",
+        "identifiedBy": "3518"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4425334756",
+      "gbif_link": "https://www.gbif.org/occurrence/4425334756",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "No further locality",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "5579"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4425316768",
+      "gbif_link": "https://www.gbif.org/occurrence/4425316768",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "No further locality",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4425310733",
+      "gbif_link": "https://www.gbif.org/occurrence/4425310733",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "College Station",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "3052"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4425310601",
+      "gbif_link": "https://www.gbif.org/occurrence/4425310601",
+      "location": {
+        "state": "Texas",
+        "county": "Lavaca",
+        "locality": "Hallettsville",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "20506"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4425056617",
+      "gbif_link": "https://www.gbif.org/occurrence/4425056617",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "College Station",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "3052"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4425056567",
+      "gbif_link": "https://www.gbif.org/occurrence/4425056567",
+      "location": {
+        "state": "Texas",
+        "county": "Robertson",
+        "locality": "12.1 miles E junction Highway 6 & OSR",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "15650"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4424939220",
+      "gbif_link": "https://www.gbif.org/occurrence/4424939220",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "No further locality",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "20506"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4424818743",
+      "gbif_link": "https://www.gbif.org/occurrence/4424818743",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "No further locality",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4424811743",
+      "gbif_link": "https://www.gbif.org/occurrence/4424811743",
+      "location": {
+        "state": "Texas",
+        "county": "Brazos",
+        "locality": "College Station",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "15650"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939615",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939615",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": null,
+        "coordinates": {
+          "lat": 37.15599,
+          "lon": -97.59652
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "KANSAS Sumner Co.; 9 mi. N. Caldwell; 17 June 1962; (Michener & party) Melissodes; intorta Cresson; det. W. E. LaBerge Taken on; Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801936634",
+      "gbif_link": "https://www.gbif.org/occurrence/3801936634",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": null,
+        "coordinates": {
+          "lat": 37.15599,
+          "lon": -97.59652
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "KANSAS Sumner Co.; 9 mi. N. Caldwell; 17 June 1962; (Michener & party) Melissodes; intorta Cresson; det. W. E. LaBerge Taken on; Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801376634",
+      "gbif_link": "https://www.gbif.org/occurrence/3801376634",
+      "location": {
+        "state": "Kansas",
+        "county": "Barber",
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1962-05-12",
+        "month": "5",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "KANSAS Barber Co.; 11 mi. W. Hardtner; 12 May 1962; (Michener & party) Melissodes; intorta Cresson; det. W. E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801374688",
+      "gbif_link": "https://www.gbif.org/occurrence/3801374688",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": null,
+        "coordinates": {
+          "lat": 30.29972,
+          "lon": -99.24389
+        }
+      },
+      "temporal": {
+        "date": "1954-05-06",
+        "month": "5",
+        "year": "1954"
+      },
+      "collector": {
+        "recordedBy": "R.H. Beamer",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Harper; Tex. V-6-54; RH Beamer Melissodes; intorta; Cresson; det. W. E. LaBerge Taken on; Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801338652",
+      "gbif_link": "https://www.gbif.org/occurrence/3801338652",
+      "location": {
+        "state": "Kansas",
+        "county": "Cherokee",
+        "locality": null,
+        "coordinates": {
+          "lat": 37.02361,
+          "lon": -94.73528
+        }
+      },
+      "temporal": {
+        "date": "1951-06-26",
+        "month": "6",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "R.E. Beer",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Baxter Springs; Kans. VI-26-51; R. E. Beer Homotype XII-1953; Melissodes; intorta Cress.; deet. W.E. LaBerge Taken on; Callirhoe; digitata",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801337641",
+      "gbif_link": "https://www.gbif.org/occurrence/3801337641",
+      "location": {
+        "state": "Kansas",
+        "county": "Sumner",
+        "locality": null,
+        "coordinates": {
+          "lat": 37.15599,
+          "lon": -97.59652
+        }
+      },
+      "temporal": {
+        "date": "1962-06-17",
+        "month": "6",
+        "year": "1962"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "KANSAS Sumner Co.; 9 mi. N. Caldwell; 17 June 1962; (Michener & party) Melissodes; intorta Cresson; det. W. E. LaBerge Taken on; Callirhoe",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Callirhoe",
+            "accepted_genus": "Callirhoe",
+            "accepted_species": "sp.",
+            "canonical_name": "Callirhoe",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804620354",
+      "gbif_link": "https://www.gbif.org/occurrence/2804620354",
+      "location": {
+        "state": "Texas",
+        "county": "Goliad",
+        "locality": "Weser",
+        "coordinates": {
+          "lat": 28.865,
+          "lon": -97.367222
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "M. A. Cazier, W. J. Gertsch & R. Schrammel",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1932643442",
+      "gbif_link": "https://www.gbif.org/occurrence/1932643442",
+      "location": {
+        "state": "Michigan",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "A.J. Cook Arthropod Research Collection (2026). The Albert J. Cook Arthropod Research Collection. Occurrence dataset https://doi.org/10.15468/mtagq6 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1321095630",
+      "gbif_link": "https://www.gbif.org/occurrence/1321095630",
+      "location": {
+        "state": "Texas",
+        "county": null,
+        "locality": "[Not Stated]",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "[Not Stated]",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC0.1 0"
+      }
+    },
+    {
+      "gbifID": "1101314340",
+      "gbif_link": "https://www.gbif.org/occurrence/1101314340",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": "Fedor",
+        "coordinates": {
+          "lat": 30.3158,
+          "lon": -97.0525
+        }
+      },
+      "temporal": {
+        "date": "1899-05-03",
+        "month": "5",
+        "year": "1899"
+      },
+      "collector": {
+        "recordedBy": "Birkmann",
+        "identifiedBy": "Cockerell, Theodore D. A."
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Scott V (2025). UCM Entomology Collection. Version 6.6. University of Colorado Museum of Natural History. Occurrence dataset https://doi.org/10.15468/jsgtns accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 86,
+    "processed_records": 72,
+    "geocoded_records": 0,
+    "floral_records": 47,
+    "excluded_datasets": [
+      "iNaturalist Research-Grade",
+      "BugGuide"
+    ],
+    "contributing_datasets": [
+      {
+        "title": "Cornell University Insect Collection (CUIC)",
+        "doi": "10.15468/w9b6ap",
+        "license": "CC BY 4.0",
+        "citation": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Biology and Systematics Laboratory",
+        "doi": "10.15468/anyror",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Triplehorn Insect Collection, The Ohio State University",
+        "doi": "10.15468/efb17f",
+        "license": "CC BY 4.0",
+        "citation": "Johnson N (2026). Triplehorn Insect Collection, The Ohio State University. Museum of Biological Diversity, The Ohio State University. Occurrence dataset https://doi.org/10.15468/efb17f accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Nebraska State Museum Entomology",
+        "doi": "10.15468/6aq9nd",
+        "license": "CC BY-NC 4.0",
+        "citation": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bees (Hymenoptera: Anthophila) of seasonal herbaceous wetlands in Mississippi",
+        "doi": "10.5886/wv0tub",
+        "license": "CC0 1.0",
+        "citation": "Hughes H, Parys K A, Huntzinger K T, Lankford C, Fortuin C, Davis J B (2025). Bees (Hymenoptera: Anthophila) of seasonal herbaceous wetlands in Mississippi. Version 2.1. Specimen Micropublications. Occurrence dataset https://doi.org/10.5886/wv0tub accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museum of Southwestern Biology Division of Arthropods",
+        "doi": "10.15468/jtovgy",
+        "license": "CC BY-NC 4.0",
+        "citation": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "International Barcode of Life project (iBOL)",
+        "doi": "10.15468/inygc6",
+        "license": "CC BY 4.0",
+        "citation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Central Florida Collection of Arthropods (UCFC)",
+        "doi": "10.15468/kyulwg",
+        "license": "CC BY 4.0",
+        "citation": "Kelly S, Dal Pos D, Sharanowski B (2026). University of Central Florida Collection of Arthropods (UCFC). University of Central Florida Collection of Arthropods (UCFC). Occurrence dataset https://doi.org/10.15468/kyulwg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Minnesota Insect Collection",
+        "doi": "10.15468/ahwyqb",
+        "license": "CC0 1.0",
+        "citation": "University of Minnesota Insect Collection (2026). University of Minnesota Insect Collection. Occurrence dataset https://doi.org/10.15468/ahwyqb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Snow Entomological Museum Collection",
+        "doi": "10.15468/fhntpy",
+        "license": "CC BY 4.0",
+        "citation": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Washington State University Collection",
+        "doi": "10.15468/c8yk6t",
+        "license": "CC BY-NC 4.0",
+        "citation": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Michigan Museum of Zoology, Division of Insects",
+        "doi": "10.15468/tmxd7n",
+        "license": "CC BY-NC 4.0",
+        "citation": "UMMZ Insects Division Data Group, LSA IT A (2026). University of Michigan Museum of Zoology, Division of Insects. Version 1.109. University of Michigan Museum of Zoology. Occurrence dataset https://doi.org/10.15468/tmxd7n accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "San Diego Natural History Museum Entomology Department",
+        "doi": "10.15468/dpyqml",
+        "license": "CC0 1.0",
+        "citation": "San Diego Natural History Museum (2026). San Diego Natural History Museum Entomology Department. Occurrence dataset https://doi.org/10.15468/dpyqml accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Frost Entomological Museum",
+        "doi": "10.15468/epw1ws",
+        "license": "CC0 1.0",
+        "citation": "Frost Entomological Museum (2026). Frost Entomological Museum. Occurrence dataset https://doi.org/10.15468/epw1ws accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "J. B. Wallis / R. E. Roughley Museum of Entomology",
+        "doi": "10.5886/hgagiy",
+        "license": "CC BY 4.0",
+        "citation": "Gibbs J (2026). J. B. Wallis / R. E. Roughley Museum of Entomology. Version 1.4. University of Manitoba. Occurrence dataset https://doi.org/10.5886/hgagiy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Connecticut Agricultural Experiment Station Arthropod Collection",
+        "doi": "10.15468/nvkb6d",
+        "license": "CC BY-NC 4.0",
+        "citation": "Connecticut Agricultural Experiment Station (2026). Connecticut Agricultural Experiment Station Arthropod Collection. Occurrence dataset https://doi.org/10.15468/nvkb6d accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Natural History Museum (London) Collection Specimens",
+        "doi": "10.5519/qd.91gz53ab",
+        "license": "CC0 1.0",
+        "citation": "Natural History Museum (2026). Natural History Museum (London) Collection Specimens. Occurrence dataset https://doi.org/10.5519/qd.91gz53ab accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Brigham Young University Arthropod Museum",
+        "doi": "10.15468/gqf6no",
+        "license": "CC BY-NC 4.0",
+        "citation": "Brigham Young University, Arthropod Collection (2026). Brigham Young University Arthropod Museum. Occurrence dataset https://doi.org/10.15468/gqf6no accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America",
+        "doi": "10.15468/6autvb",
+        "license": "CC0 1.0",
+        "citation": "Droege S, Maffei C, Shumar S, Lent S (2026). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.30. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "López-Uribe Lab Collection",
+        "doi": "10.15468/fyyzub",
+        "license": "CC BY-NC 4.0",
+        "citation": "López-Uribe Lab (2024). López-Uribe Lab Collection. Occurrence dataset https://doi.org/10.15468/fyyzub accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Mississippi Entomological Museum",
+        "doi": "10.15468/iuhxpw",
+        "license": "CC0 1.0",
+        "citation": "Mississippi Entomological Museum (2026). Mississippi Entomological Museum. Occurrence dataset https://doi.org/10.15468/iuhxpw accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "North Carolina State University Insect Collection",
+        "doi": "10.15468/3ck2nw",
+        "license": "CC BY-NC 4.0",
+        "citation": "North Carolina State University Insect Collection (2024). North Carolina State University Insect Collection. Occurrence dataset https://doi.org/10.15468/3ck2nw accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Texas A&M University Insect Collection",
+        "doi": "10.15468/caprqh",
+        "license": "CC BY-NC 4.0",
+        "citation": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "LACM Entomology Collection",
+        "doi": "10.15468/kc9hyp",
+        "license": "CC0 1.0",
+        "citation": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.34. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "State of Vermont Forest Biology Lab",
+        "doi": "10.15468/s3gj9m",
+        "license": "CC BY-NC 4.0",
+        "citation": "Vermont Agricultural and Environmental Laboratory (2026). State of Vermont Forest Biology Lab. Occurrence dataset https://doi.org/10.15468/s3gj9m accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Specimens from Michael Veit Collection",
+        "doi": "10.15468/b8sg4a",
+        "license": "CC BY-NC 4.0",
+        "citation": "Veit M, McFarland K (2024). Bee Specimens from Michael Veit Collection. Version 1.3. Vermont Center for Ecostudies. Occurrence dataset https://doi.org/10.15468/b8sg4a accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Lund University Biological Museum - Insect collections Inventory",
+        "doi": "10.15468/dahk2a",
+        "license": "CC BY-NC 4.0",
+        "citation": "Fägerström C (2026). Lund University Biological Museum - Insect collections Inventory. Version 367.889. Lund University Biological Museum. Occurrence dataset https://doi.org/10.15468/dahk2a accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "A checklist of the bees (Hymenoptera: Apoidea) of Minnesota",
+        "doi": "10.15468/qt7spn",
+        "license": "CC0 1.0",
+        "citation": "Portman Z M, Gardner J, Lane I G, Gerjets N, Petersen J D, Ascher J S, Arduser M, Evans E C, Boyd C, Thomson R, Cariveau D P, plazi (2023). A checklist of the bees (Hymenoptera: Apoidea) of Minnesota. Plazi.org taxonomic treatments database. Checklist dataset https://doi.org/10.15468/qt7spn accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Arizona Insect Collection",
+        "doi": "10.15468/hzkbpg",
+        "license": "CC0 1.0",
+        "citation": "University of Arizona Insect Collection (2026). University of Arizona Insect Collection. Occurrence dataset https://doi.org/10.15468/hzkbpg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN)",
+        "doi": "10.15468/gy3jna",
+        "license": "CC BY 4.0",
+        "citation": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Illinois Natural History Survey Insect Collection",
+        "doi": "10.15468/eol0pe",
+        "license": "CC BY 4.0",
+        "citation": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Vermont Wild Bee Survey (2019-2021)",
+        "doi": "10.15468/yjw5fk",
+        "license": "CC BY 4.0",
+        "citation": "Hardy S, McFarland K, Sharp N, Milam J, Veit M, Richardson L, Droege S (2025). Vermont Wild Bee Survey (2019-2021). Version 1.19. Vermont Center for Ecostudies. Sampling event dataset https://doi.org/10.15468/yjw5fk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "hymenoptera",
+        "doi": "10.15468/mvtuf5",
+        "license": "CC BY 4.0",
+        "citation": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016",
+        "doi": "10.15468/ppjnys",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Arizona Insect Collection RL Minckley Insect Collection",
+        "doi": "10.15468/sj3uvh",
+        "license": "CC0 1.0",
+        "citation": "University of Arizona Insect Collection (2026). University of Arizona Insect Collection RL Minckley Insect Collection. Occurrence dataset https://doi.org/10.15468/sj3uvh accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Leif Richardson Vermont Bee Specimens",
+        "doi": "10.15468/nddf7z",
+        "license": "CC BY-NC 4.0",
+        "citation": "Richardson L, Hardy S (2025). Leif Richardson Vermont Bee Specimens. Version 1.12. Vermont Center for Ecostudies. Occurrence dataset https://doi.org/10.15468/nddf7z accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "ARC-PPRI: Collection of Southern African bees  (1800-2007)",
+        "doi": "10.15468/itdvb2",
+        "license": "CC BY 4.0",
+        "citation": "Eardley C, Ranwashe F (2017). ARC-PPRI: Collection of Southern African bees  (1800-2007). Version 1.1. South African National Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/itdvb2 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CAS Entomology Type (TYPE)",
+        "doi": "10.15468/gak5hc",
+        "license": "CC0 1.0",
+        "citation": "Grinter C, Diaz-Bastin R, Fong J (2026). CAS Entomology Type (TYPE). Version 1.336. California Academy of Sciences. Occurrence dataset https://doi.org/10.15468/gak5hc accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Wild bees of Grand Staircase-Escalante National Monument",
+        "doi": "10.7717/peerj.5867",
+        "license": "CC BY-NC 4.0",
+        "citation": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Virginia Polytechnic Institute and State University Insect Collection",
+        "doi": "10.15468/m2htqa",
+        "license": "CC0 1.0",
+        "citation": "Virginia Tech Insect Collection (2026). Virginia Polytechnic Institute and State University Insect Collection. Occurrence dataset https://doi.org/10.15468/m2htqa accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CNIN/Abejas de México/Apoidea",
+        "doi": "10.15468/uhlpgz",
+        "license": "CC BY-NC 4.0",
+        "citation": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NMNH Extant Specimen Records (USNM, US)",
+        "doi": "10.15468/hnhrg3",
+        "license": "CC0 1.0",
+        "citation": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "The Albert J. Cook Arthropod Research Collection",
+        "doi": "10.15468/mtagq6",
+        "license": "CC0 1.0",
+        "citation": "A.J. Cook Arthropod Research Collection (2026). The Albert J. Cook Arthropod Research Collection. Occurrence dataset https://doi.org/10.15468/mtagq6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bees of Canada / Gschwendtner property collection",
+        "doi": "10.15468/i6absz",
+        "license": "CC BY 4.0",
+        "citation": "York University. Bees of Canada / Gschwendtner property collection. Version 1.0. Occurrence dataset https://doi.org/10.15468/i6absz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP",
+        "doi": "10.15468/bb5nnj",
+        "license": "CC BY-NC 4.0",
+        "citation": "Lucia Imperatriz Fonseca V, Alves dos Santos I (2026). CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP. Universidade de São Paulo. Occurrence dataset https://doi.org/10.15468/bb5nnj accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "UCM Entomology Collection",
+        "doi": "10.15468/jsgtns",
+        "license": "CC BY-NC 4.0",
+        "citation": "Scott V (2025). UCM Entomology Collection. Version 6.6. University of Colorado Museum of Natural History. Occurrence dataset https://doi.org/10.15468/jsgtns accessed via GBIF.org on 2026-04-22."
+      }
+    ]
+  }
+}

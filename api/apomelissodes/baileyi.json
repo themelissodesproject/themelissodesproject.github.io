@@ -1,0 +1,508 @@
+{
+  "binomial_name": "Melissodes baileyi",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "baileyi"
+  },
+  "flight_period": {
+    "April": {
+      "count": 3,
+      "percentage": 100
+    }
+  },
+  "distribution": {
+    "Texas": {
+      "state_total": 6,
+      "counties": {
+        "Gillespie": {
+          "count": 1
+        },
+        "Williamson": {
+          "count": 1
+        },
+        "Lavaca": {
+          "count": 1
+        },
+        "Lee": {
+          "count": 3
+        }
+      }
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "4425573377",
+      "gbif_link": "https://www.gbif.org/occurrence/4425573377",
+      "location": {
+        "state": "Texas",
+        "county": "Gillespie",
+        "locality": "4 miles W Eckert",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "15650"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4424822388",
+      "gbif_link": "https://www.gbif.org/occurrence/4424822388",
+      "location": {
+        "state": "Texas",
+        "county": "Williamson",
+        "locality": "Taylor",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "15650"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4424818735",
+      "gbif_link": "https://www.gbif.org/occurrence/4424818735",
+      "location": {
+        "state": "Texas",
+        "county": "Lavaca",
+        "locality": "No further locality",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "15650"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "3801942274",
+      "gbif_link": "https://www.gbif.org/occurrence/3801942274",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": null,
+        "coordinates": {
+          "lat": 30.41889,
+          "lon": -97.01139
+        }
+      },
+      "temporal": {
+        "date": "1953-04-14",
+        "month": "4",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "R.H. Beamer",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Lexington Tex.; IV-14-1953; R.H. Beamer; taken on Gallirhoe  Melissodes baileyi Ckll.; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801940255",
+      "gbif_link": "https://www.gbif.org/occurrence/3801940255",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": null,
+        "coordinates": {
+          "lat": 30.2847,
+          "lon": -96.863
+        }
+      },
+      "temporal": {
+        "date": "1953-04-14",
+        "month": "4",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "R.H. Beamer",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "6 mi E. Lincoln Tex.; IV-14-1953; R.H. Beamer; taken on Gallirhoe  Melissodes baileyi Ckll.; det. W.E. LaBerge",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339288",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339288",
+      "location": {
+        "state": "Texas",
+        "county": "Lee",
+        "locality": null,
+        "coordinates": {
+          "lat": 30.1852,
+          "lon": -97.0853
+        }
+      },
+      "temporal": {
+        "date": "1953-04-11",
+        "month": "4",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "L.D. Beamer",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "9 mi W. Giddings, Tex.; IV-11-1953; L.D.. Beamer",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 8,
+    "processed_records": 6,
+    "geocoded_records": 0,
+    "floral_records": 0,
+    "excluded_datasets": [
+      "iNaturalist Research-Grade",
+      "BugGuide"
+    ],
+    "contributing_datasets": [
+      {
+        "title": "Cornell University Insect Collection (CUIC)",
+        "doi": "10.15468/w9b6ap",
+        "license": "CC BY 4.0",
+        "citation": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Biology and Systematics Laboratory",
+        "doi": "10.15468/anyror",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Triplehorn Insect Collection, The Ohio State University",
+        "doi": "10.15468/efb17f",
+        "license": "CC BY 4.0",
+        "citation": "Johnson N (2026). Triplehorn Insect Collection, The Ohio State University. Museum of Biological Diversity, The Ohio State University. Occurrence dataset https://doi.org/10.15468/efb17f accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Nebraska State Museum Entomology",
+        "doi": "10.15468/6aq9nd",
+        "license": "CC BY-NC 4.0",
+        "citation": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bees (Hymenoptera: Anthophila) of seasonal herbaceous wetlands in Mississippi",
+        "doi": "10.5886/wv0tub",
+        "license": "CC0 1.0",
+        "citation": "Hughes H, Parys K A, Huntzinger K T, Lankford C, Fortuin C, Davis J B (2025). Bees (Hymenoptera: Anthophila) of seasonal herbaceous wetlands in Mississippi. Version 2.1. Specimen Micropublications. Occurrence dataset https://doi.org/10.5886/wv0tub accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museum of Southwestern Biology Division of Arthropods",
+        "doi": "10.15468/jtovgy",
+        "license": "CC BY-NC 4.0",
+        "citation": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "International Barcode of Life project (iBOL)",
+        "doi": "10.15468/inygc6",
+        "license": "CC BY 4.0",
+        "citation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Central Florida Collection of Arthropods (UCFC)",
+        "doi": "10.15468/kyulwg",
+        "license": "CC BY 4.0",
+        "citation": "Kelly S, Dal Pos D, Sharanowski B (2026). University of Central Florida Collection of Arthropods (UCFC). University of Central Florida Collection of Arthropods (UCFC). Occurrence dataset https://doi.org/10.15468/kyulwg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Minnesota Insect Collection",
+        "doi": "10.15468/ahwyqb",
+        "license": "CC0 1.0",
+        "citation": "University of Minnesota Insect Collection (2026). University of Minnesota Insect Collection. Occurrence dataset https://doi.org/10.15468/ahwyqb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Snow Entomological Museum Collection",
+        "doi": "10.15468/fhntpy",
+        "license": "CC BY 4.0",
+        "citation": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Washington State University Collection",
+        "doi": "10.15468/c8yk6t",
+        "license": "CC BY-NC 4.0",
+        "citation": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Michigan Museum of Zoology, Division of Insects",
+        "doi": "10.15468/tmxd7n",
+        "license": "CC BY-NC 4.0",
+        "citation": "UMMZ Insects Division Data Group, LSA IT A (2026). University of Michigan Museum of Zoology, Division of Insects. Version 1.109. University of Michigan Museum of Zoology. Occurrence dataset https://doi.org/10.15468/tmxd7n accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "San Diego Natural History Museum Entomology Department",
+        "doi": "10.15468/dpyqml",
+        "license": "CC0 1.0",
+        "citation": "San Diego Natural History Museum (2026). San Diego Natural History Museum Entomology Department. Occurrence dataset https://doi.org/10.15468/dpyqml accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Frost Entomological Museum",
+        "doi": "10.15468/epw1ws",
+        "license": "CC0 1.0",
+        "citation": "Frost Entomological Museum (2026). Frost Entomological Museum. Occurrence dataset https://doi.org/10.15468/epw1ws accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "J. B. Wallis / R. E. Roughley Museum of Entomology",
+        "doi": "10.5886/hgagiy",
+        "license": "CC BY 4.0",
+        "citation": "Gibbs J (2026). J. B. Wallis / R. E. Roughley Museum of Entomology. Version 1.4. University of Manitoba. Occurrence dataset https://doi.org/10.5886/hgagiy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Connecticut Agricultural Experiment Station Arthropod Collection",
+        "doi": "10.15468/nvkb6d",
+        "license": "CC BY-NC 4.0",
+        "citation": "Connecticut Agricultural Experiment Station (2026). Connecticut Agricultural Experiment Station Arthropod Collection. Occurrence dataset https://doi.org/10.15468/nvkb6d accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Natural History Museum (London) Collection Specimens",
+        "doi": "10.5519/qd.91gz53ab",
+        "license": "CC0 1.0",
+        "citation": "Natural History Museum (2026). Natural History Museum (London) Collection Specimens. Occurrence dataset https://doi.org/10.5519/qd.91gz53ab accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Brigham Young University Arthropod Museum",
+        "doi": "10.15468/gqf6no",
+        "license": "CC BY-NC 4.0",
+        "citation": "Brigham Young University, Arthropod Collection (2026). Brigham Young University Arthropod Museum. Occurrence dataset https://doi.org/10.15468/gqf6no accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America",
+        "doi": "10.15468/6autvb",
+        "license": "CC0 1.0",
+        "citation": "Droege S, Maffei C, Shumar S, Lent S (2026). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.30. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "López-Uribe Lab Collection",
+        "doi": "10.15468/fyyzub",
+        "license": "CC BY-NC 4.0",
+        "citation": "López-Uribe Lab (2024). López-Uribe Lab Collection. Occurrence dataset https://doi.org/10.15468/fyyzub accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Mississippi Entomological Museum",
+        "doi": "10.15468/iuhxpw",
+        "license": "CC0 1.0",
+        "citation": "Mississippi Entomological Museum (2026). Mississippi Entomological Museum. Occurrence dataset https://doi.org/10.15468/iuhxpw accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "North Carolina State University Insect Collection",
+        "doi": "10.15468/3ck2nw",
+        "license": "CC BY-NC 4.0",
+        "citation": "North Carolina State University Insect Collection (2024). North Carolina State University Insect Collection. Occurrence dataset https://doi.org/10.15468/3ck2nw accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Texas A&M University Insect Collection",
+        "doi": "10.15468/caprqh",
+        "license": "CC BY-NC 4.0",
+        "citation": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "LACM Entomology Collection",
+        "doi": "10.15468/kc9hyp",
+        "license": "CC0 1.0",
+        "citation": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.34. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "State of Vermont Forest Biology Lab",
+        "doi": "10.15468/s3gj9m",
+        "license": "CC BY-NC 4.0",
+        "citation": "Vermont Agricultural and Environmental Laboratory (2026). State of Vermont Forest Biology Lab. Occurrence dataset https://doi.org/10.15468/s3gj9m accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Specimens from Michael Veit Collection",
+        "doi": "10.15468/b8sg4a",
+        "license": "CC BY-NC 4.0",
+        "citation": "Veit M, McFarland K (2024). Bee Specimens from Michael Veit Collection. Version 1.3. Vermont Center for Ecostudies. Occurrence dataset https://doi.org/10.15468/b8sg4a accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Lund University Biological Museum - Insect collections Inventory",
+        "doi": "10.15468/dahk2a",
+        "license": "CC BY-NC 4.0",
+        "citation": "Fägerström C (2026). Lund University Biological Museum - Insect collections Inventory. Version 367.889. Lund University Biological Museum. Occurrence dataset https://doi.org/10.15468/dahk2a accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "A checklist of the bees (Hymenoptera: Apoidea) of Minnesota",
+        "doi": "10.15468/qt7spn",
+        "license": "CC0 1.0",
+        "citation": "Portman Z M, Gardner J, Lane I G, Gerjets N, Petersen J D, Ascher J S, Arduser M, Evans E C, Boyd C, Thomson R, Cariveau D P, plazi (2023). A checklist of the bees (Hymenoptera: Apoidea) of Minnesota. Plazi.org taxonomic treatments database. Checklist dataset https://doi.org/10.15468/qt7spn accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Arizona Insect Collection",
+        "doi": "10.15468/hzkbpg",
+        "license": "CC0 1.0",
+        "citation": "University of Arizona Insect Collection (2026). University of Arizona Insect Collection. Occurrence dataset https://doi.org/10.15468/hzkbpg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN)",
+        "doi": "10.15468/gy3jna",
+        "license": "CC BY 4.0",
+        "citation": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Illinois Natural History Survey Insect Collection",
+        "doi": "10.15468/eol0pe",
+        "license": "CC BY 4.0",
+        "citation": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Vermont Wild Bee Survey (2019-2021)",
+        "doi": "10.15468/yjw5fk",
+        "license": "CC BY 4.0",
+        "citation": "Hardy S, McFarland K, Sharp N, Milam J, Veit M, Richardson L, Droege S (2025). Vermont Wild Bee Survey (2019-2021). Version 1.19. Vermont Center for Ecostudies. Sampling event dataset https://doi.org/10.15468/yjw5fk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "hymenoptera",
+        "doi": "10.15468/mvtuf5",
+        "license": "CC BY 4.0",
+        "citation": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016",
+        "doi": "10.15468/ppjnys",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Arizona Insect Collection RL Minckley Insect Collection",
+        "doi": "10.15468/sj3uvh",
+        "license": "CC0 1.0",
+        "citation": "University of Arizona Insect Collection (2026). University of Arizona Insect Collection RL Minckley Insect Collection. Occurrence dataset https://doi.org/10.15468/sj3uvh accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Leif Richardson Vermont Bee Specimens",
+        "doi": "10.15468/nddf7z",
+        "license": "CC BY-NC 4.0",
+        "citation": "Richardson L, Hardy S (2025). Leif Richardson Vermont Bee Specimens. Version 1.12. Vermont Center for Ecostudies. Occurrence dataset https://doi.org/10.15468/nddf7z accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "ARC-PPRI: Collection of Southern African bees  (1800-2007)",
+        "doi": "10.15468/itdvb2",
+        "license": "CC BY 4.0",
+        "citation": "Eardley C, Ranwashe F (2017). ARC-PPRI: Collection of Southern African bees  (1800-2007). Version 1.1. South African National Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/itdvb2 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CAS Entomology Type (TYPE)",
+        "doi": "10.15468/gak5hc",
+        "license": "CC0 1.0",
+        "citation": "Grinter C, Diaz-Bastin R, Fong J (2026). CAS Entomology Type (TYPE). Version 1.336. California Academy of Sciences. Occurrence dataset https://doi.org/10.15468/gak5hc accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Wild bees of Grand Staircase-Escalante National Monument",
+        "doi": "10.7717/peerj.5867",
+        "license": "CC BY-NC 4.0",
+        "citation": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Virginia Polytechnic Institute and State University Insect Collection",
+        "doi": "10.15468/m2htqa",
+        "license": "CC0 1.0",
+        "citation": "Virginia Tech Insect Collection (2026). Virginia Polytechnic Institute and State University Insect Collection. Occurrence dataset https://doi.org/10.15468/m2htqa accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CNIN/Abejas de México/Apoidea",
+        "doi": "10.15468/uhlpgz",
+        "license": "CC BY-NC 4.0",
+        "citation": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NMNH Extant Specimen Records (USNM, US)",
+        "doi": "10.15468/hnhrg3",
+        "license": "CC0 1.0",
+        "citation": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "The Albert J. Cook Arthropod Research Collection",
+        "doi": "10.15468/mtagq6",
+        "license": "CC0 1.0",
+        "citation": "A.J. Cook Arthropod Research Collection (2026). The Albert J. Cook Arthropod Research Collection. Occurrence dataset https://doi.org/10.15468/mtagq6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bees of Canada / Gschwendtner property collection",
+        "doi": "10.15468/i6absz",
+        "license": "CC BY 4.0",
+        "citation": "York University. Bees of Canada / Gschwendtner property collection. Version 1.0. Occurrence dataset https://doi.org/10.15468/i6absz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP",
+        "doi": "10.15468/bb5nnj",
+        "license": "CC BY-NC 4.0",
+        "citation": "Lucia Imperatriz Fonseca V, Alves dos Santos I (2026). CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP. Universidade de São Paulo. Occurrence dataset https://doi.org/10.15468/bb5nnj accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "UCM Entomology Collection",
+        "doi": "10.15468/jsgtns",
+        "license": "CC BY-NC 4.0",
+        "citation": "Scott V (2025). UCM Entomology Collection. Version 6.6. University of Colorado Museum of Natural History. Occurrence dataset https://doi.org/10.15468/jsgtns accessed via GBIF.org on 2026-04-22."
+      }
+    ]
+  }
+}

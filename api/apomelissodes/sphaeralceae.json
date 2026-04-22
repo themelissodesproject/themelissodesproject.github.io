@@ -1,0 +1,2045 @@
+{
+  "binomial_name": "Melissodes sphaeralceae",
+  "common_name": "",
+  "taxonomy": {
+    "family": "Apidae",
+    "subfamily": "Apinae",
+    "tribe": "Eucerini",
+    "genus": "Melissodes",
+    "subgenus": "N/A",
+    "species": "sphaeralceae"
+  },
+  "flight_period": {
+    "March": {
+      "count": 1,
+      "percentage": 2.86
+    },
+    "April": {
+      "count": 2,
+      "percentage": 5.71
+    },
+    "May": {
+      "count": 1,
+      "percentage": 2.86
+    },
+    "June": {
+      "count": 1,
+      "percentage": 2.86
+    },
+    "July": {
+      "count": 13,
+      "percentage": 37.14
+    },
+    "August": {
+      "count": 10,
+      "percentage": 28.57
+    },
+    "September": {
+      "count": 7,
+      "percentage": 20
+    }
+  },
+  "distribution": {
+    "Arizona": {
+      "state_total": 20,
+      "counties": {
+        "Yavapai": {
+          "count": 1
+        },
+        "Cochise": {
+          "count": 16
+        },
+        "Navajo": {
+          "count": 1
+        },
+        "Apache": {
+          "count": 1
+        },
+        "Santa Cruz": {
+          "count": 1
+        }
+      }
+    },
+    "Chihuahua": {
+      "state_total": 4,
+      "counties": {}
+    },
+    "New Mexico": {
+      "state_total": 17,
+      "counties": {
+        "Bernalillo": {
+          "count": 9
+        },
+        "Santa Fe": {
+          "count": 2
+        },
+        "Grant": {
+          "count": 1
+        },
+        "Hidalgo": {
+          "count": 3
+        }
+      }
+    },
+    "Oaxaca": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Hidalgo": {
+      "state_total": 2,
+      "counties": {}
+    },
+    "Tamaulipas": {
+      "state_total": 1,
+      "counties": {}
+    },
+    "Distrito Federal": {
+      "state_total": 2,
+      "counties": {}
+    },
+    "Texas": {
+      "state_total": 1,
+      "counties": {
+        "Hidalgo": {
+          "count": 1
+        }
+      }
+    },
+    "Durango": {
+      "state_total": 4,
+      "counties": {}
+    }
+  },
+  "occurrences": [
+    {
+      "gbifID": "658953570",
+      "gbif_link": "https://www.gbif.org/occurrence/658953570",
+      "location": {
+        "state": "Arizona",
+        "county": "Yavapai",
+        "locality": "Wickenburg, 20 mi NW",
+        "coordinates": {
+          "lat": 34.1542,
+          "lon": -112.9932
+        }
+      },
+      "temporal": {
+        "date": "1964-05-05",
+        "month": "5",
+        "year": "1964"
+      },
+      "collector": {
+        "recordedBy": "G. Bohart, P. Torchio",
+        "identifiedBy": "W.E. LaBerge 2002"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658953569",
+      "gbif_link": "https://www.gbif.org/occurrence/658953569",
+      "location": {
+        "state": "Chihuahua",
+        "county": null,
+        "locality": "Escalon, 5 mi N",
+        "coordinates": {
+          "lat": 26.83472,
+          "lon": -104.33823
+        }
+      },
+      "temporal": {
+        "date": "1970-09-20",
+        "month": "9",
+        "year": "1970"
+      },
+      "collector": {
+        "recordedBy": "G.E. & R.M. Bohart",
+        "identifiedBy": "W.E. LaBerge 2002"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658953568",
+      "gbif_link": "https://www.gbif.org/occurrence/658953568",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mountains",
+        "coordinates": {
+          "lat": 35.20893,
+          "lon": -106.4478
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "R.&L. Beamer, W.E. LaBerge, C. Liang",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658385226",
+      "gbif_link": "https://www.gbif.org/occurrence/658385226",
+      "location": {
+        "state": "Oaxaca",
+        "county": null,
+        "locality": "Los Reyes Ella",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1992-09-22",
+        "month": "9",
+        "year": "1992"
+      },
+      "collector": {
+        "recordedBy": "Godinez, L",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Ipomoea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Ipomoea",
+            "accepted_genus": "Ipomoea",
+            "accepted_species": "sp.",
+            "canonical_name": "Ipomoea",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658319889",
+      "gbif_link": "https://www.gbif.org/occurrence/658319889",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658249725",
+      "gbif_link": "https://www.gbif.org/occurrence/658249725",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658243115",
+      "gbif_link": "https://www.gbif.org/occurrence/658243115",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Chiricahua Mts, SW Research Station",
+        "coordinates": {
+          "lat": 31.5922,
+          "lon": -109.24
+        }
+      },
+      "temporal": {
+        "date": "1964-08-20",
+        "month": "8",
+        "year": "1964"
+      },
+      "collector": {
+        "recordedBy": "Michener, Charles",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": "Heterotheca subaxillaris",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Heterotheca subaxillaris",
+            "accepted_genus": "Heterotheca",
+            "accepted_species": "subaxillaris",
+            "canonical_name": "Heterotheca subaxillaris",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658236687",
+      "gbif_link": "https://www.gbif.org/occurrence/658236687",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658208295",
+      "gbif_link": "https://www.gbif.org/occurrence/658208295",
+      "location": {
+        "state": "Hidalgo",
+        "county": null,
+        "locality": "Ixmiquilpan",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1953-06-23",
+        "month": "6",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "Univ. of Kans. Mex. Exped.",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Sphaeralcea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "sp.",
+            "canonical_name": "Sphaeralcea",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "658187144",
+      "gbif_link": "https://www.gbif.org/occurrence/658187144",
+      "location": {
+        "state": "Arizona",
+        "county": "Navajo",
+        "locality": "unspecified",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1927-08-15",
+        "month": "8",
+        "year": "1927"
+      },
+      "collector": {
+        "recordedBy": "Beamer, Raymond",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657823534",
+      "gbif_link": "https://www.gbif.org/occurrence/657823534",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657819456",
+      "gbif_link": "https://www.gbif.org/occurrence/657819456",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657799915",
+      "gbif_link": "https://www.gbif.org/occurrence/657799915",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657676405",
+      "gbif_link": "https://www.gbif.org/occurrence/657676405",
+      "location": {
+        "state": "Tamaulipas",
+        "county": null,
+        "locality": "San Fernando, 63 mi N",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1967-04-24",
+        "month": "4",
+        "year": "1967"
+      },
+      "collector": {
+        "recordedBy": "Beer, Robert",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657633035",
+      "gbif_link": "https://www.gbif.org/occurrence/657633035",
+      "location": {
+        "state": "New Mexico",
+        "county": "Santa Fe",
+        "locality": "Santa Fe",
+        "coordinates": {
+          "lat": 35.6869,
+          "lon": -105.9372
+        }
+      },
+      "temporal": {
+        "date": "1952-07-19",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": "Sphaeralcea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "sp.",
+            "canonical_name": "Sphaeralcea",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657627167",
+      "gbif_link": "https://www.gbif.org/occurrence/657627167",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "657623777",
+      "gbif_link": "https://www.gbif.org/occurrence/657623777",
+      "location": {
+        "state": "New Mexico",
+        "county": "Bernalillo",
+        "locality": "Sandia Mts",
+        "coordinates": {
+          "lat": 35.1981,
+          "lon": -106.4331
+        }
+      },
+      "temporal": {
+        "date": "1952-07-17",
+        "month": "7",
+        "year": "1952"
+      },
+      "collector": {
+        "recordedBy": "Beamers, Liang, LaBerge",
+        "identifiedBy": "unknown"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "6177197083",
+      "gbif_link": "https://www.gbif.org/occurrence/6177197083",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "S.W. Research Sta. Chiricahua Mts.",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1958-09-02",
+        "month": "9",
+        "year": "1958"
+      },
+      "collector": {
+        "recordedBy": "E.G. Linsley",
+        "identifiedBy": "W.E. LaBerge"
+      },
+      "ecology": {
+        "notes": "Sphaeralcea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "sp.",
+            "canonical_name": "Sphaeralcea",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177197082",
+      "gbif_link": "https://www.gbif.org/occurrence/6177197082",
+      "location": {
+        "state": "New Mexico",
+        "county": null,
+        "locality": "Sandia Mts.",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1953-07-17",
+        "month": "7",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": "W.E. LaBerge"
+      },
+      "ecology": {
+        "notes": "Sphaeralcea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "sp.",
+            "canonical_name": "Sphaeralcea",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "6177197081",
+      "gbif_link": "https://www.gbif.org/occurrence/6177197081",
+      "location": {
+        "state": "New Mexico",
+        "county": null,
+        "locality": "Sandia Mts.",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1953-07-17",
+        "month": "7",
+        "year": "1953"
+      },
+      "collector": {
+        "recordedBy": "R.H. Beamer; L.D. Beamer, W.E. LaBerge, C. Liang",
+        "identifiedBy": "W.E. LaBerge"
+      },
+      "ecology": {
+        "notes": "Sphaeralcea",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "sp.",
+            "canonical_name": "Sphaeralcea",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "5918275024",
+      "gbif_link": "https://www.gbif.org/occurrence/5918275024",
+      "location": {
+        "state": "New Mexico",
+        "county": "Grant",
+        "locality": "near Silver City",
+        "coordinates": {
+          "lat": 32.756217,
+          "lon": -108.3609
+        }
+      },
+      "temporal": {
+        "date": "2011-09-02",
+        "month": "9",
+        "year": "2011"
+      },
+      "collector": {
+        "recordedBy": "A Payne",
+        "identifiedBy": "KW Wright"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "4169112251",
+      "gbif_link": "https://www.gbif.org/occurrence/4169112251",
+      "location": {
+        "state": "Chihuahua",
+        "county": null,
+        "locality": "El Morrion, 67 km NE Chihuahua",
+        "coordinates": {
+          "lat": 29.06,
+          "lon": -105.59694
+        }
+      },
+      "temporal": {
+        "date": "1991-08-27",
+        "month": "8",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "R. Ayala",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801939145",
+      "gbif_link": "https://www.gbif.org/occurrence/3801939145",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": null,
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.203
+        }
+      },
+      "temporal": {
+        "date": "1958-08-27",
+        "month": "8",
+        "year": "1958"
+      },
+      "collector": {
+        "recordedBy": "H.V. Weems, Jr.",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "S.W.RES.STA.; COCHISE CO., ARIZ.  Melissodes; sphaeralceae Cockerell; det. W. E. LaBerge  H. V WEEMS, JR.; COLL. 27 VIII 58; HETEROTHECA; SUBAXILLARIS; ELEVATION; 5-6000 FT.",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801859145",
+      "gbif_link": "https://www.gbif.org/occurrence/3801859145",
+      "location": {
+        "state": "Distrito Federal",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": 19.478611,
+          "lon": -99.095833
+        }
+      },
+      "temporal": {
+        "date": "1903-09-04",
+        "month": "9",
+        "year": "1903"
+      },
+      "collector": {
+        "recordedBy": "W.L. Tower",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "GuadalupeDF; Mex IX 4 03  Melissodes; sphaeralceae; Ckll.; det. W. E. LaBerge  W.L.Tower; Collection",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801855140",
+      "gbif_link": "https://www.gbif.org/occurrence/3801855140",
+      "location": {
+        "state": "Arizona",
+        "county": "Apache",
+        "locality": null,
+        "coordinates": {
+          "lat": 34.0718,
+          "lon": -109.7162
+        }
+      },
+      "temporal": {
+        "date": "1961-08-15",
+        "month": "8",
+        "year": "1961"
+      },
+      "collector": {
+        "recordedBy": "W.J. Hanson",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARIZ. Apache Co.; Bog Cr, 8 m. e.; McNary VIII-15-61; W. J. Hanson",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801853139",
+      "gbif_link": "https://www.gbif.org/occurrence/3801853139",
+      "location": {
+        "state": "Hidalgo",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": 20.116667,
+          "lon": -98.733333
+        }
+      },
+      "temporal": {
+        "date": "1990-08-22",
+        "month": "8",
+        "year": "1990"
+      },
+      "collector": {
+        "recordedBy": null,
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "MEX: HIDALGO CO.; PACHUCA; 22-VIII-90  Melissodes; sphaeralceae Cockerell; det. W. E. LaBerge  N. xerofilo; 22-VIII-90",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801853138",
+      "gbif_link": "https://www.gbif.org/occurrence/3801853138",
+      "location": {
+        "state": "Texas",
+        "county": "Hidalgo",
+        "locality": null,
+        "coordinates": {
+          "lat": 26.30139,
+          "lon": -98.16306
+        }
+      },
+      "temporal": {
+        "date": "1939-04-01/1939-04-30",
+        "month": "4",
+        "year": "1939"
+      },
+      "collector": {
+        "recordedBy": "S. Mulaik, D. Mulaik",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "EDINBURG, TEXAS; HIDALGO CO.; 4-39  S & D MULAIK; COLL.",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801381175",
+      "gbif_link": "https://www.gbif.org/occurrence/3801381175",
+      "location": {
+        "state": "Durango",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": 23.85,
+          "lon": -104.233333
+        }
+      },
+      "temporal": {
+        "date": "1951-08-01",
+        "month": "8",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "P.D. Hurd",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Nombre de Dios; Durango, Mex.; 1 Aug. 1951  Sphaeralceae  P. D. Hurd; Collector; (yellow tag)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801341143",
+      "gbif_link": "https://www.gbif.org/occurrence/3801341143",
+      "location": {
+        "state": "Durango",
+        "county": null,
+        "locality": null,
+        "coordinates": {
+          "lat": 23.85,
+          "lon": -104.233333
+        }
+      },
+      "temporal": {
+        "date": "1951-08-06",
+        "month": "8",
+        "year": "1951"
+      },
+      "collector": {
+        "recordedBy": "P.D. Hurd",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "Nombre de Dios; Durango, Mex.; 6 Aug. 1951  Asclepias; P. D. Hurd; Collector; (yellow tag)",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801340128",
+      "gbif_link": "https://www.gbif.org/occurrence/3801340128",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": null,
+        "coordinates": {
+          "lat": 31.8819,
+          "lon": -109.2028
+        }
+      },
+      "temporal": {
+        "date": "1964-08-20",
+        "month": "8",
+        "year": "1964"
+      },
+      "collector": {
+        "recordedBy": "C.D. Michener",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "ARIZONA, Chiricahua Mts.; S.W. Research Station; 20 August 1964. 5400'; (C.D. Michener)  Melissodes; sphaeralceae Cockerell; det. W. E. LaBerge  on; Heterotheca; subaxillaris",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Heterotheca",
+            "accepted_genus": "Heterotheca",
+            "accepted_species": "sp.",
+            "canonical_name": "Heterotheca",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "3801339151",
+      "gbif_link": "https://www.gbif.org/occurrence/3801339151",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": null,
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.203
+        }
+      },
+      "temporal": {
+        "date": "1958-09-07",
+        "month": "9",
+        "year": "1958"
+      },
+      "collector": {
+        "recordedBy": "H.V. Weems, Jr.",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": "S.W. RES.STA.; ARIZ.  Melissodes; sphaeralceae Cockerell; det. W. E. LaBerge  H. V WEEMS, JR.; COLL. 7 IX 58; SPHAEREALCEA; FENDLERI; ELEVATION; 5-6000 FT.",
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804748662",
+      "gbif_link": "https://www.gbif.org/occurrence/2804748662",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Southwestern Research Station (SWRS), 5 mi W of Portal",
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.206111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "C. Cazier & M. A. Cazier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804744371",
+      "gbif_link": "https://www.gbif.org/occurrence/2804744371",
+      "location": {
+        "state": "Durango",
+        "county": null,
+        "locality": "Yerbanis",
+        "coordinates": {
+          "lat": 26.416389,
+          "lon": -105.99
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "R. Schrammel",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804737497",
+      "gbif_link": "https://www.gbif.org/occurrence/2804737497",
+      "location": {
+        "state": "New Mexico",
+        "county": "Hidalgo",
+        "locality": "6 mi E of Animas",
+        "coordinates": {
+          "lat": 31.958056,
+          "lon": -108.706111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen, J. S. Ascher & Margaret A. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804722546",
+      "gbif_link": "https://www.gbif.org/occurrence/2804722546",
+      "location": {
+        "state": "New Mexico",
+        "county": "Hidalgo",
+        "locality": "Rodeo",
+        "coordinates": {
+          "lat": 31.835278,
+          "lon": -109.030556
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & Barbara L. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804720688",
+      "gbif_link": "https://www.gbif.org/occurrence/2804720688",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "13.3 mi SW of Apache",
+        "coordinates": {
+          "lat": 31.541111,
+          "lon": -109.275
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804714453",
+      "gbif_link": "https://www.gbif.org/occurrence/2804714453",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Southwestern Research Station (SWRS), 5 mi W of Portal",
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.206111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804714452",
+      "gbif_link": "https://www.gbif.org/occurrence/2804714452",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Southwestern Research Station (SWRS), 5 mi W of Portal",
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.206111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "G. Tannor",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804705592",
+      "gbif_link": "https://www.gbif.org/occurrence/2804705592",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "5 mi S of San Simon",
+        "coordinates": {
+          "lat": 32.195278,
+          "lon": -109.226944
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen, Barbara L. Rozen & A. Pence",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804705591",
+      "gbif_link": "https://www.gbif.org/occurrence/2804705591",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "14 mi SW of Apache",
+        "coordinates": {
+          "lat": 31.536111,
+          "lon": -109.283333
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & J. S. Ascher",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804705590",
+      "gbif_link": "https://www.gbif.org/occurrence/2804705590",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "12 mi NW of Douglas",
+        "coordinates": {
+          "lat": 31.466917,
+          "lon": -109.688889
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen, Barbara L. Rozen & R. L. Foster",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804631427",
+      "gbif_link": "https://www.gbif.org/occurrence/2804631427",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "10 mi W of Douglas",
+        "coordinates": {
+          "lat": 31.343889,
+          "lon": -109.716667
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen, Kenneth C. Rozen, M. Favreau & R. J. McGinley",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804623178",
+      "gbif_link": "https://www.gbif.org/occurrence/2804623178",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Southwestern Research Station (SWRS), 5 mi W of Portal",
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.206111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "C. Cazier & M. A. Cazier",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804619182",
+      "gbif_link": "https://www.gbif.org/occurrence/2804619182",
+      "location": {
+        "state": "Durango",
+        "county": null,
+        "locality": "Yerbanis",
+        "coordinates": {
+          "lat": 26.416389,
+          "lon": -105.99
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "R. Schrammel",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804618223",
+      "gbif_link": "https://www.gbif.org/occurrence/2804618223",
+      "location": {
+        "state": "Distrito Federal",
+        "county": null,
+        "locality": "Guadalupe Hidalgo",
+        "coordinates": {
+          "lat": 19.478611,
+          "lon": -99.095833
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "W. L. Tower",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804581531",
+      "gbif_link": "https://www.gbif.org/occurrence/2804581531",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Southwestern Research Station (SWRS), 5 mi W of Portal",
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.206111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen & M. Favreau",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804577588",
+      "gbif_link": "https://www.gbif.org/occurrence/2804577588",
+      "location": {
+        "state": "Arizona",
+        "county": "Cochise",
+        "locality": "Southwestern Research Station (SWRS), 5 mi W of Portal",
+        "coordinates": {
+          "lat": 31.8825,
+          "lon": -109.206111
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "J. G. Rozen, M. Statham & Sam J. Hessel",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "2804573580",
+      "gbif_link": "https://www.gbif.org/occurrence/2804573580",
+      "location": {
+        "state": "New Mexico",
+        "county": "Hidalgo",
+        "locality": "Rodeo",
+        "coordinates": {
+          "lat": 31.835278,
+          "lon": -109.030556
+        }
+      },
+      "temporal": {
+        "date": null,
+        "month": null,
+        "year": null
+      },
+      "collector": {
+        "recordedBy": "E. G. Linsley, J. Linsley & M. Favreau",
+        "identifiedBy": null
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "219029830",
+      "gbif_link": "https://www.gbif.org/occurrence/219029830",
+      "location": {
+        "state": "Chihuahua",
+        "county": null,
+        "locality": "El Morrion, 67 km NE Chihuahua",
+        "coordinates": {
+          "lat": 29.06,
+          "lon": -105.596944
+        }
+      },
+      "temporal": {
+        "date": "1991-08-27",
+        "month": "8",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "Ricardo Ayala",
+        "identifiedBy": "Douglas Yanega"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY NC 4.0"
+      }
+    },
+    {
+      "gbifID": "1913918221",
+      "gbif_link": "https://www.gbif.org/occurrence/1913918221",
+      "location": {
+        "state": "Arizona",
+        "county": "Santa Cruz",
+        "locality": "Sonoita",
+        "coordinates": {
+          "lat": 31.6794,
+          "lon": -110.6547
+        }
+      },
+      "temporal": {
+        "date": "1957-09-06",
+        "month": "9",
+        "year": "1957"
+      },
+      "collector": {
+        "recordedBy": "Haig, T",
+        "identifiedBy": "Wright, Karen"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1101314243",
+      "gbif_link": "https://www.gbif.org/occurrence/1101314243",
+      "location": {
+        "state": "New Mexico",
+        "county": "Santa Fe",
+        "locality": "Santa Fe",
+        "coordinates": {
+          "lat": 35.6786,
+          "lon": -105.9558
+        }
+      },
+      "temporal": {
+        "date": "1895-07-25",
+        "month": "7",
+        "year": "1895"
+      },
+      "collector": {
+        "recordedBy": "Cockerell, Theodore D. A.",
+        "identifiedBy": "Cockerell, Theodore D. A."
+      },
+      "ecology": {
+        "notes": "Sphaeralcea angustifolia",
+        "extracted_floral_hosts": [
+          {
+            "original_query": "Sphaeralcea angustifolia",
+            "accepted_genus": "Sphaeralcea",
+            "accepted_species": "angustifolia",
+            "canonical_name": "Sphaeralcea angustifolia",
+            "parse_method": "gbif_api",
+            "is_synonym": false
+          }
+        ]
+      },
+      "citation": {
+        "text": "Scott V (2025). UCM Entomology Collection. Version 6.6. University of Colorado Museum of Natural History. Occurrence dataset https://doi.org/10.15468/jsgtns accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "gbifID": "1092785947",
+      "gbif_link": "https://www.gbif.org/occurrence/1092785947",
+      "location": {
+        "state": "Chihuahua",
+        "county": null,
+        "locality": "El Morrion, 67 km NW",
+        "coordinates": {
+          "lat": null,
+          "lon": null
+        }
+      },
+      "temporal": {
+        "date": "1991-03-27",
+        "month": "3",
+        "year": "1991"
+      },
+      "collector": {
+        "recordedBy": "Ayala, Ricardo",
+        "identifiedBy": "LaBerge, Walley"
+      },
+      "ecology": {
+        "notes": null,
+        "extracted_floral_hosts": []
+      },
+      "citation": {
+        "text": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22.",
+        "license": "CC BY 4.0"
+      }
+    }
+  ],
+  "metadata": {
+    "project_name": "The Melissodes Project",
+    "total_records": 61,
+    "processed_records": 52,
+    "geocoded_records": 0,
+    "floral_records": 9,
+    "excluded_datasets": [
+      "iNaturalist Research-Grade",
+      "BugGuide"
+    ],
+    "contributing_datasets": [
+      {
+        "title": "Cornell University Insect Collection (CUIC)",
+        "doi": "10.15468/w9b6ap",
+        "license": "CC BY 4.0",
+        "citation": "Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Biology and Systematics Laboratory",
+        "doi": "10.15468/anyror",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H (2019). Bee Biology and Systematics Laboratory. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/anyror accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Triplehorn Insect Collection, The Ohio State University",
+        "doi": "10.15468/efb17f",
+        "license": "CC BY 4.0",
+        "citation": "Johnson N (2026). Triplehorn Insect Collection, The Ohio State University. Museum of Biological Diversity, The Ohio State University. Occurrence dataset https://doi.org/10.15468/efb17f accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Nebraska State Museum Entomology",
+        "doi": "10.15468/6aq9nd",
+        "license": "CC BY-NC 4.0",
+        "citation": "University of Nebraska State Museum (2026). University of Nebraska State Museum Entomology. Occurrence dataset https://doi.org/10.15468/6aq9nd accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bees (Hymenoptera: Anthophila) of seasonal herbaceous wetlands in Mississippi",
+        "doi": "10.5886/wv0tub",
+        "license": "CC0 1.0",
+        "citation": "Hughes H, Parys K A, Huntzinger K T, Lankford C, Fortuin C, Davis J B (2025). Bees (Hymenoptera: Anthophila) of seasonal herbaceous wetlands in Mississippi. Version 2.1. Specimen Micropublications. Occurrence dataset https://doi.org/10.5886/wv0tub accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Museum of Southwestern Biology Division of Arthropods",
+        "doi": "10.15468/jtovgy",
+        "license": "CC BY-NC 4.0",
+        "citation": "Museum of Southwestern Biology (2026). Museum of Southwestern Biology Division of Arthropods. Occurrence dataset https://doi.org/10.15468/jtovgy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "International Barcode of Life project (iBOL)",
+        "doi": "10.15468/inygc6",
+        "license": "CC BY 4.0",
+        "citation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Central Florida Collection of Arthropods (UCFC)",
+        "doi": "10.15468/kyulwg",
+        "license": "CC BY 4.0",
+        "citation": "Kelly S, Dal Pos D, Sharanowski B (2026). University of Central Florida Collection of Arthropods (UCFC). University of Central Florida Collection of Arthropods (UCFC). Occurrence dataset https://doi.org/10.15468/kyulwg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Minnesota Insect Collection",
+        "doi": "10.15468/ahwyqb",
+        "license": "CC0 1.0",
+        "citation": "University of Minnesota Insect Collection (2026). University of Minnesota Insect Collection. Occurrence dataset https://doi.org/10.15468/ahwyqb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Snow Entomological Museum Collection",
+        "doi": "10.15468/fhntpy",
+        "license": "CC BY 4.0",
+        "citation": "Bentley A, Osborn R (2026). Snow Entomological Museum Collection. University of Kansas Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/fhntpy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Washington State University Collection",
+        "doi": "10.15468/c8yk6t",
+        "license": "CC BY-NC 4.0",
+        "citation": "MT James Entomological Collection, Washington State University (2026). Washington State University Collection. Occurrence dataset https://doi.org/10.15468/c8yk6t accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Michigan Museum of Zoology, Division of Insects",
+        "doi": "10.15468/tmxd7n",
+        "license": "CC BY-NC 4.0",
+        "citation": "UMMZ Insects Division Data Group, LSA IT A (2026). University of Michigan Museum of Zoology, Division of Insects. Version 1.109. University of Michigan Museum of Zoology. Occurrence dataset https://doi.org/10.15468/tmxd7n accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "San Diego Natural History Museum Entomology Department",
+        "doi": "10.15468/dpyqml",
+        "license": "CC0 1.0",
+        "citation": "San Diego Natural History Museum (2026). San Diego Natural History Museum Entomology Department. Occurrence dataset https://doi.org/10.15468/dpyqml accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Frost Entomological Museum",
+        "doi": "10.15468/epw1ws",
+        "license": "CC0 1.0",
+        "citation": "Frost Entomological Museum (2026). Frost Entomological Museum. Occurrence dataset https://doi.org/10.15468/epw1ws accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "J. B. Wallis / R. E. Roughley Museum of Entomology",
+        "doi": "10.5886/hgagiy",
+        "license": "CC BY 4.0",
+        "citation": "Gibbs J (2026). J. B. Wallis / R. E. Roughley Museum of Entomology. Version 1.4. University of Manitoba. Occurrence dataset https://doi.org/10.5886/hgagiy accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Connecticut Agricultural Experiment Station Arthropod Collection",
+        "doi": "10.15468/nvkb6d",
+        "license": "CC BY-NC 4.0",
+        "citation": "Connecticut Agricultural Experiment Station (2026). Connecticut Agricultural Experiment Station Arthropod Collection. Occurrence dataset https://doi.org/10.15468/nvkb6d accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Natural History Museum (London) Collection Specimens",
+        "doi": "10.5519/qd.91gz53ab",
+        "license": "CC0 1.0",
+        "citation": "Natural History Museum (2026). Natural History Museum (London) Collection Specimens. Occurrence dataset https://doi.org/10.5519/qd.91gz53ab accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Brigham Young University Arthropod Museum",
+        "doi": "10.15468/gqf6no",
+        "license": "CC BY-NC 4.0",
+        "citation": "Brigham Young University, Arthropod Collection (2026). Brigham Young University Arthropod Museum. Occurrence dataset https://doi.org/10.15468/gqf6no accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America",
+        "doi": "10.15468/6autvb",
+        "license": "CC0 1.0",
+        "citation": "Droege S, Maffei C, Shumar S, Lent S (2026). Insect Species Occurrence Data from Multiple Projects Worldwide with Focus on Bees and Wasps in North America. Version 1.30. United States Geological Survey. Sampling event dataset https://doi.org/10.15468/6autvb accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "López-Uribe Lab Collection",
+        "doi": "10.15468/fyyzub",
+        "license": "CC BY-NC 4.0",
+        "citation": "López-Uribe Lab (2024). López-Uribe Lab Collection. Occurrence dataset https://doi.org/10.15468/fyyzub accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Mississippi Entomological Museum",
+        "doi": "10.15468/iuhxpw",
+        "license": "CC0 1.0",
+        "citation": "Mississippi Entomological Museum (2026). Mississippi Entomological Museum. Occurrence dataset https://doi.org/10.15468/iuhxpw accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "North Carolina State University Insect Collection",
+        "doi": "10.15468/3ck2nw",
+        "license": "CC BY-NC 4.0",
+        "citation": "North Carolina State University Insect Collection (2024). North Carolina State University Insect Collection. Occurrence dataset https://doi.org/10.15468/3ck2nw accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Texas A&M University Insect Collection",
+        "doi": "10.15468/caprqh",
+        "license": "CC BY-NC 4.0",
+        "citation": "Texas A&M University Insect Collection (2023). Texas A&M University Insect Collection. Occurrence dataset https://doi.org/10.15468/caprqh accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "LACM Entomology Collection",
+        "doi": "10.15468/kc9hyp",
+        "license": "CC0 1.0",
+        "citation": "Mertz W, Kung G, Xie W (2026). LACM Entomology Collection. Version 5.34. Natural History Museum of Los Angeles County. Occurrence dataset https://doi.org/10.15468/kc9hyp accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "State of Vermont Forest Biology Lab",
+        "doi": "10.15468/s3gj9m",
+        "license": "CC BY-NC 4.0",
+        "citation": "Vermont Agricultural and Environmental Laboratory (2026). State of Vermont Forest Biology Lab. Occurrence dataset https://doi.org/10.15468/s3gj9m accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Specimens from Michael Veit Collection",
+        "doi": "10.15468/b8sg4a",
+        "license": "CC BY-NC 4.0",
+        "citation": "Veit M, McFarland K (2024). Bee Specimens from Michael Veit Collection. Version 1.3. Vermont Center for Ecostudies. Occurrence dataset https://doi.org/10.15468/b8sg4a accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Lund University Biological Museum - Insect collections Inventory",
+        "doi": "10.15468/dahk2a",
+        "license": "CC BY-NC 4.0",
+        "citation": "Fägerström C (2026). Lund University Biological Museum - Insect collections Inventory. Version 367.889. Lund University Biological Museum. Occurrence dataset https://doi.org/10.15468/dahk2a accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "A checklist of the bees (Hymenoptera: Apoidea) of Minnesota",
+        "doi": "10.15468/qt7spn",
+        "license": "CC0 1.0",
+        "citation": "Portman Z M, Gardner J, Lane I G, Gerjets N, Petersen J D, Ascher J S, Arduser M, Evans E C, Boyd C, Thomson R, Cariveau D P, plazi (2023). A checklist of the bees (Hymenoptera: Apoidea) of Minnesota. Plazi.org taxonomic treatments database. Checklist dataset https://doi.org/10.15468/qt7spn accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Arizona Insect Collection",
+        "doi": "10.15468/hzkbpg",
+        "license": "CC0 1.0",
+        "citation": "University of Arizona Insect Collection (2026). University of Arizona Insect Collection. Occurrence dataset https://doi.org/10.15468/hzkbpg accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN)",
+        "doi": "10.15468/gy3jna",
+        "license": "CC BY 4.0",
+        "citation": "Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (CNIN). Version 1.7. Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/gy3jna accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Illinois Natural History Survey Insect Collection",
+        "doi": "10.15468/eol0pe",
+        "license": "CC BY 4.0",
+        "citation": "Illinois Natural History Survey (2026). Illinois Natural History Survey Insect Collection. Occurrence dataset https://doi.org/10.15468/eol0pe accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Vermont Wild Bee Survey (2019-2021)",
+        "doi": "10.15468/yjw5fk",
+        "license": "CC BY 4.0",
+        "citation": "Hardy S, McFarland K, Sharp N, Milam J, Veit M, Richardson L, Droege S (2025). Vermont Wild Bee Survey (2019-2021). Version 1.19. Vermont Center for Ecostudies. Sampling event dataset https://doi.org/10.15468/yjw5fk accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "hymenoptera",
+        "doi": "10.15468/mvtuf5",
+        "license": "CC BY 4.0",
+        "citation": "Johnson C (2020). hymenoptera. Version 1.3. American Museum of Natural History. Occurrence dataset https://doi.org/10.15468/mvtuf5 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016",
+        "doi": "10.15468/ppjnys",
+        "license": "CC BY 4.0",
+        "citation": "Ikerd H, Engler J (2023). Bee Fauna of National Wildlife Refuges in the Pacific Northwest, 2010-2016. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.15468/ppjnys accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "University of Arizona Insect Collection RL Minckley Insect Collection",
+        "doi": "10.15468/sj3uvh",
+        "license": "CC0 1.0",
+        "citation": "University of Arizona Insect Collection (2026). University of Arizona Insect Collection RL Minckley Insect Collection. Occurrence dataset https://doi.org/10.15468/sj3uvh accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Leif Richardson Vermont Bee Specimens",
+        "doi": "10.15468/nddf7z",
+        "license": "CC BY-NC 4.0",
+        "citation": "Richardson L, Hardy S (2025). Leif Richardson Vermont Bee Specimens. Version 1.12. Vermont Center for Ecostudies. Occurrence dataset https://doi.org/10.15468/nddf7z accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "ARC-PPRI: Collection of Southern African bees  (1800-2007)",
+        "doi": "10.15468/itdvb2",
+        "license": "CC BY 4.0",
+        "citation": "Eardley C, Ranwashe F (2017). ARC-PPRI: Collection of Southern African bees  (1800-2007). Version 1.1. South African National Biodiversity Institute. Occurrence dataset https://doi.org/10.15468/itdvb2 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CAS Entomology Type (TYPE)",
+        "doi": "10.15468/gak5hc",
+        "license": "CC0 1.0",
+        "citation": "Grinter C, Diaz-Bastin R, Fong J (2026). CAS Entomology Type (TYPE). Version 1.336. California Academy of Sciences. Occurrence dataset https://doi.org/10.15468/gak5hc accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Wild bees of Grand Staircase-Escalante National Monument",
+        "doi": "10.7717/peerj.5867",
+        "license": "CC BY-NC 4.0",
+        "citation": "Carril O, Wilson J, Griswold T, Ikerd H I (2023). Wild bees of Grand Staircase-Escalante National Monument. USDA-ARS Pollinating Insect-Biology, Management, Systematics Research. Occurrence dataset https://doi.org/10.7717/peerj.5867 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Virginia Polytechnic Institute and State University Insect Collection",
+        "doi": "10.15468/m2htqa",
+        "license": "CC0 1.0",
+        "citation": "Virginia Tech Insect Collection (2026). Virginia Polytechnic Institute and State University Insect Collection. Occurrence dataset https://doi.org/10.15468/m2htqa accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CNIN/Abejas de México/Apoidea",
+        "doi": "10.15468/uhlpgz",
+        "license": "CC BY-NC 4.0",
+        "citation": "UNIBIO, IBUNAM. CNIN/Abejas de México/Apoidea. Occurrence dataset https://doi.org/10.15468/uhlpgz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "NMNH Extant Specimen Records (USNM, US)",
+        "doi": "10.15468/hnhrg3",
+        "license": "CC0 1.0",
+        "citation": "Orrell T, Informatics and Data Science Center - Digital Stewardship (2026). NMNH Extant Specimen Records (USNM, US). Version 1.107. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/hnhrg3 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "The Albert J. Cook Arthropod Research Collection",
+        "doi": "10.15468/mtagq6",
+        "license": "CC0 1.0",
+        "citation": "A.J. Cook Arthropod Research Collection (2026). The Albert J. Cook Arthropod Research Collection. Occurrence dataset https://doi.org/10.15468/mtagq6 accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "Bees of Canada / Gschwendtner property collection",
+        "doi": "10.15468/i6absz",
+        "license": "CC BY 4.0",
+        "citation": "York University. Bees of Canada / Gschwendtner property collection. Version 1.0. Occurrence dataset https://doi.org/10.15468/i6absz accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP",
+        "doi": "10.15468/bb5nnj",
+        "license": "CC BY-NC 4.0",
+        "citation": "Lucia Imperatriz Fonseca V, Alves dos Santos I (2026). CEPANN - Coleção Entomológica Paulo Nogueira-Neto - IB/USP. Universidade de São Paulo. Occurrence dataset https://doi.org/10.15468/bb5nnj accessed via GBIF.org on 2026-04-22."
+      },
+      {
+        "title": "UCM Entomology Collection",
+        "doi": "10.15468/jsgtns",
+        "license": "CC BY-NC 4.0",
+        "citation": "Scott V (2025). UCM Entomology Collection. Version 6.6. University of Colorado Museum of Natural History. Occurrence dataset https://doi.org/10.15468/jsgtns accessed via GBIF.org on 2026-04-22."
+      }
+    ]
+  }
+}
