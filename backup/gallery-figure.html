@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Melissodes figure gallery</title>
+  <meta name="description" content="Figure gallery of Melissodes species">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://themelissodesproject.wildref.org/gallery-figure.html">
+
+  <meta name="application-name" content="The Melissodes Project">
+  <meta property="og:site_name" content="The Melissodes Project">
+  <meta property="og:title" content="Melissodes figure gallery">
+  <meta property="og:description" content="Figure gallery of Melissodes species">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themelissodesproject.wildref.org/gallery-figure.html">
+  <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Melissodes figure gallery">
+  <meta name="twitter:description" content="figure gallery of Melissodes species">
+  <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+  }
+
+  body {
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #222;
+        background-color: rgb(251, 251, 250);
+      }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .heading {
+    margin: 0 auto;
+  }
+
+  .bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .heading header{
+    padding: 20px;
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
+
+  .heading header .banner {
+    font-size: 1.63rem;
+    margin: 0;
+    flex: 1 1 auto;
+    font-weight: bold;
+  }
+
+  nav {
+    flex: 0 0 auto;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.95rem;
+  }
+
+  .page{
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
+
+
+  .search-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem;
+  }
+
+  .search-filter input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* ✅ prevents overflow */
+    }
+    
+  .filters {
+    text-align: left;
+      margin: 10px auto;
+      padding: 12px 16px;
+      background: rgb(251, 251, 250);
+      border-style: solid;
+      border-color: #F3F4F5;
+      border-width: 1.5px;
+      font-size: 0.95rem;
+      width: 100%;
+    }
+    
+    
+
+    .filters label {
+    gap: 6px; 
+    cursor: pointer;
+    padding-left: 6px;
+}
+
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .gallery-card {
+    width: 220px;
+    aspect-ratio: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-card:hover {
+    transform: scale(1.03);
+  }
+
+  a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+  .gallery-card img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  .gallery-card .caption {
+    flex: 1;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .overlay-content {
+    background: #fff;
+    border-radius: 8px;
+    max-width: 40%;
+    max-height: 85%;
+    padding: 1rem;
+    text-align: center;
+    overflow: auto;
+  }
+
+  .overlay-content img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+
+  .close-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .overlay-content::-webkit-scrollbar {
+  width: 8px;        /* width of vertical scrollbar */
+  height: 12px;       /* height of horizontal scrollbar */
+}
+
+/* Remove buttons completely */
+.overlay-content::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Optional: style track and thumb */
+.overlay-content::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+  border-radius: 6px;
+}
+
+  @media only screen and (max-width: 1000px) {
+    .gallery-card {
+      width: 45%;
+      max-width: 220px;
+    }
+    .gallery-card .caption {
+      font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px ){
+    .bar-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-header header .banner {
+      text-align: center;
+      width: 100%;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center
+    }
+
+    .overlay-content {
+    max-width: 90%;
+    }
+  }
+
+  @media (max-width: 600px) {
+  .filters {
+    display: grid;                 /* switch to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 6px 15px;                /* vertical 10px, horizontal 15px */
+  }
+
+    .filters label {
+    gap: 6px; 
+    cursor: pointer;
+    margin-left: -10px;
+    font-size: 13px;
+}
+
+  footer {
+    padding: 20px;
+  }
+}
+
+footer {
+      margin: 40px 0;
+      font-size: 0.85rem;
+      color: #555;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <header class="bar-header">
+        <h1 class="banner">The Melissodes Project</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+             <li><a href="resources-menu.html">Resources</a></li>
+            <li><a href="melissodes.html">Genus</a></li>
+            <li><a href="species-index.html">Species Index</a></li>
+            <li><a href="gallery-menu.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="page">
+      <header class="page-header">
+        <div class="search-filter">
+          <input type="text" id="search" placeholder="Search diagram gallery..." />
+        </div>
+      </header>
+
+      <main>
+        <div class="gallery-grid" id="gallery">
+
+          <div class="gallery-card" 
+          id="apicatus-galea"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the lateral galeal hairs of a female M. apicatus.<br>Photo credit: Christopher Wilson (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/85272573' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-galea-f.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus F - galeal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus-terga-f"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the apical tergal bands of a female M. apicatus.<br>Photo credit: Christopher Wilson (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/102356621' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-terga-bands-f.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus F - tergal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus-scutellum-f"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the hairs of the scutellum of a female M. apicatus.<br>Photo credit: Smithsonian Institution, National Museum of Natural History, Entomology Collection (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1655983' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-scutellum-hairs-f.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus F - scutellum hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus-t1-f"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the white hairs of T1 of a female M. apicatus.<br>Photo credit: Smithsonian Institution, National Museum of Natural History, Entomology Collection (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1655983' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-t1-hairs-f.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus F - T1 hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus-t3-t4-f"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the basal bands of brown to black totementum of T3-4 of a female M. apicatus.<br>Photo credit: Smithsonian Institution, National Museum of Natural History, Entomology Collection (CC0 1.0); Christopher Wilson (All Rights Reserved)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1655983' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (Smithsonian)</a>
+              <a href='https://www.inaturalist.org/observations/102356106' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (Christopher Wilson)</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-t3-t4-hairs-f.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus F - T3-T4 hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus-t5-t6-f"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the basal hairs of T5-6 of a female M. apicatus.<br>Photo credit: Smithsonian Institution, National Museum of Natural History, Entomology Collection (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1655983' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-t5-t6-hairs-f.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus F - T5-T6 hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus-clypeus-m"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the ranging irregular clypeal macula of 3 male M. apicatus individuals<br>Photo credit: Photo credit: Christopher Wilson (All Rights Reserved); Josh Klostermann (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/84918058' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (Christopher Wilson)</a>
+              <a href='https://www.inaturalist.org/observations/97856051' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (Josh Klostermann)</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-clypeus-macula-m.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus M - clypeus</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus-terga-m"
+              data-caption="Melissodes apicatus" 
+              data-overlay="A labeled diagram showing the apical tergal bands of a male M. apicatus.<br>Photo credit: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/86215247' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Apomelissodes">
+            <img src="img/apicatus-terga-bands-M.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus M - tergal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-F2"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the length of the second flagellar segment of females of M. bimatris (left) in comparison to 
+                      those of M. menuachus, demonstrating the apical width and ventral lengh are approximatly equal in M. bimatris. The red lines are indicative of the ventral length and the white lines indicate the apical width. 
+                      An enlarged width/length comparison (10x) is given below each female.<br>Photo credit: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/277812904' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/199617832' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-menuachus-f2-comairison.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - F2 length and width (in comparison to M. menuachus)</div>
+          </div>
+
+           <div class="gallery-card" 
+          id="bimatris-mesoscutum-f"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A comparison of the mesoscutal sculpturing of a femal M. bimatris (left), and a female M. trinodis (right), illustrating the shiny nature of the mesoscutum of the female M. bimatris.
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/277812904' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/144441360' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-trinodis-mesoscutum.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - Mesoscutal microsculpture (in comparison to M. trinodis)</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-T1-f"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the ratio of the basal punctate area to the impunctate apical area of the first tergum of a female M. bimatris.
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/277812904' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (left)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-t1-punctures.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - T1 punctures</div>
+          </div>
+
+
+          <div class="gallery-card" 
+          id="bimatris-morphs-f"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the two distinct M. bimatris morphs (dark and light).
+              <br>Photo credits: (left) Lori Weidenhammer (CC-BY-NC); (right) Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/313693375' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/277812904' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/oregon_bimatris_morphs.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - Light and dark morphs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-metasomal-hair-f"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the coloration of the dorsal thoracic hairs of a pale female M. bimatris.
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/277812904' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (same link)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-light-f-dorsal-no-dark.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - Light form mesoscutal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-T3-apical"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the presence of pale ochraceous simple apical hairs on the third tergum of a pale female M. bimatris.
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/277812904' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-light-f-T3-band.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - Light form mesoscutal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-dark-thorax-head-f"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the head and thoracic vestiture of a dark female M. bimatris.
+              <br>Photo credit: Lori Weidenhammer (CC-BY-NC).<br>
+              <a href='https://www.inaturalist.org/observations/313693375' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-dark-f-lateral-labeled.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - Dark form head and thoracic hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-dark-thorax-head-f"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the metasomal vestiture of a dark female M. bimatris.
+              <br>Photo credit: Lori Weidenhammer (CC-BY-NC).<br>
+              <a href='https://www.inaturalist.org/observations/313693375' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-dark-f-metasomal.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - Dark form metasomal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-dark-metasoma-f"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the leg vestiture of a dark female M. bimatris.
+              <br>Photo credit: Lori Weidenhammer (CC-BY-NC).<br>
+              <a href='https://www.inaturalist.org/observations/313693375' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (same link)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-dark-f-legs.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - Dark form leg hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-m-mandible-labrum"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the integumental coloration of the labrum and mandibles of a male M. bimatris.
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/258431446' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-m-labrum-mandibles.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris M - Mandibles and labrum</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-flagellar-segments"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A comparative diagram showing the ratio of flagellar lengths of a male M. bimatris. The yellow line is indicative of the longer side (maximum length) of F2, the red line indicates the longer side of F1, and the 
+                      white line represents the shorter side of F1. These are as described above, but the short side of F1 is slightly longer than two thirds of the maximum length of the same segment (this is still representative of a regular M. bimatris). An enlarged width/length comparison (2.5x) is given below.
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/258431446' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-m-F1-F2.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris M - F1/F2</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-m-T1"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A labeled diagram showing the dense appressed apical band of hairs on the first tergum that obscures the apical margin across the entier tergum of a male M. bimatris.
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/258431446' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-m-t1.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris M - T1 dense hair band</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-v-bicoloratus-nigracauada"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A comparison of the scopal hair coloration of the females of
+                      M. bimatris (top left), M. nigracauada (top right), and M. bicoloratus (bottom) showing the light hairs on M. bimatris and the dark hairs on M. nigracauada and M. bicoloratus.
+              <br>Photo credits: (top left) Lori Weidenhammer (CC-BY-NC 4.0); (top right) Natural History Museum of Los Angeles County (CC-BY 4.0); (bottom) Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/313693375' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (top left)</a>
+              <a href='https://www.gbif.org/occurrence/4854159919' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (top right)</a>
+              <a href='https://www.inaturalist.org/observations/199277884' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (bottom)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/oregon_bimatris_scopae_contrast.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris vs. M. nigracauda vs. M. bicoloratus F - Scopae</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-m-v-semilupinus-ochreaus"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A comparison of the mandibular bases among the males of M. bimatris (top left), M. semilupinus (top right), and M. ochraeus (bottom).
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/258431446' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (top left)</a>
+              <a href='https://www.inaturalist.org/observations/193950960' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (top right)</a>
+              <a href='https://www.inaturalist.org/observations/199248238' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (bottom)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-m-v-semilupinus-ochreaus.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris vs. M. semilupinus vs. M. ochreaus m - Mandibles</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris-m-v-semilupinus-ochreaus-antennae"
+              data-caption="Melissodes bimatris" 
+              data-overlay="A comparison of the ratio of the minimum length of the first flagellar segment to the maximum length of the third flagellar segment among the males of M. bimatris (top left), M. semilupinus (top right), and M. ochraeus (bottom).
+              <br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/258431446' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (top left)</a>
+              <a href='https://www.inaturalist.org/observations/193950960' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (top right)</a>
+              <a href='https://www.inaturalist.org/observations/199248238' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original images ➜ (bottom)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/bimatris-m-v-semilupinus-ochreaus-antennae.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris vs. M. semilupinus vs. M. ochreaus m - Antennae</div>
+          </div>
+          
+          <div class="gallery-card" 
+          id="clarkiae-scopae-f"
+              data-caption="Melissodes clarkiae" 
+              data-overlay=" A comparison of the scopal hairs of a M. clarkiae (left), and a female M. vernoniae (right), illustrating the simple nature of the scopae of the female M. clarkiae.<br>
+              Photo credits: Christopher Wilson (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/204093794' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/174785514' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Callimelissodes">
+            <img src="img/clarkiae-vernoniae-scopae.webp" alt="Melissodes clarkiae"/>
+            <div class="caption">Melissodes clarkiae F - Scopal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="clarkiae-pygidial-plate"
+              data-caption="Melissodes clarkiae" 
+              data-overlay="A comparison of the pygidial plate structure of a M. clarkiae (left), and a female M. trindois (right), illustrating the narrow U structure of the pygidial plate of the female M. clarkiae.<br>
+              Photo credits: Christopher Wilson (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/204093794' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/190523045' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Callimelissodes">
+            <img src="img/clarkiae-trinodis-pygidial-plate-f.webp" alt="Melissodes clarkiae"/>
+            <div class="caption">Melissodes clarkiae F - Pygidial plate</div>
+          </div>
+
+
+          <div class="gallery-card" 
+          id="desponsus-eye"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the inner eye margins of a femal M. desponsus (left), and a female M. dentiventris (right), illustrating the parallel nature of the inner eye margins of the female M. desponsus.<br>
+              Photo credits: (right) Isabel Dalton (All Rights Reserved); (left) David Mantack (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/311329586' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/311132963' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-inner-eye.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - inner eye margins</div>
+          </div>
+          
+
+          <div class="gallery-card" 
+          id="desponsus-carina"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the clypeus of a female M. desponsus (left), and a female M. rivalis (right), illustrating the lack of a clypeal carina of the female M. desponsus.<br>
+              Photo credit: (right) Isabel Dalton (All Rights Reserved); (left) Christopher Wilson (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/311329586' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-clypeus-f.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - clypeal structure</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-t1"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A labeled diagram showing the latitudinal line of closely spaces punctures on T1 of a female M. desponsus.<br>
+              Photo credit: Linda Williams (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/92265320' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-t1-line.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - T1 puncture line</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-mesonotum"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A labeled diagram showing the mesonotal hairs of a female M. desponsus.<br>
+              Photo credit: Chelsea Gottfried (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/192990158' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-mesonotum-f.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - mesonotal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-mesepisterna"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A labeled diagram showing the mesepisternal hairs of a female M. desponsus.<br>
+              Photo credit: Pascal Gaudette (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/296533511' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-mesepisterna.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - mesepisternal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-terga"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A labeled diagram showing the tergal hairs of a female M. desponsus.<br>
+              Photo credits: (left) Linda Williams (CC-BY-NC 4.0); (right) Pascal Gaudette (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/92265320' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/296533511' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-terga-f.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - tergal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-leg-hair"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A labeled diagram showing the leg hairs of a female M. desponsus.<br>
+              Photo credit: Heather Holm (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/303803232' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-legs-f.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - leg hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-f1"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the first flagellar segemnt of male M. desponsus (left), and a male M. dentiventris (right), illustrating the extreme lenth of F1 of a male M. desponsus.<br>
+              Photo credits: (right) iNaturalist username: hobiecat (CC-BY-NC 4.0); (left) iNaturalist username: misspt (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/30287004' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/185993016' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-f1-m.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus M - F1</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-legs-m"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A labeled diagram showing the pubescent coloration of the legs of a male M. desponsus.<br>
+              Photo credit: iNaturalist username: bob15noble (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/86611049' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-legs-m.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus M - leg hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventris-tibial-spur"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the tibial spurs of the females of M. desponsus (left) and M. dentiventris (right).<br>
+               Photo credits: (left) Linda Williams (CC-BY-NC 4.0); (right) iNaturalist username: misspt (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/92265320' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/185994875' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-tibial-spur.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris F - tibial spur</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventris-t1-puncture"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the first tergal punctures of the females of M. desponsus (left) and M. dentiventris (right).<br>
+               Photo credits: (left) Linda Williams (CC-BY-NC 4.0); (right) Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/92265320' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/136845163' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-t1-punctures.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris F - T1 punctures</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventris-head-hairs"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the head hairs of the females of M. desponsus (left) and M. dentiventris (right).<br>
+               Photo credits: (top left) Heather Holm (CC-BY-NC 4.0); (top right) iNaturalist username: misspt (CC-BY-NC 4.0); (bottom left) Pascal Gaudette (CC-BY-NC 4.0); (bottom right) Sam Wilhelm (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/303803232' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (top left)</a>
+              <a href='https://www.inaturalist.org/observations/185994363' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(top right)</a>
+              <a href='https://www.inaturalist.org/observations/296533511' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (bottom left)</a>
+              <a href='https://www.inaturalist.org/observations/247251813' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (bottom right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-facial-hair.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris F - head hair</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventris-mesonotal-hairs"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the mesonotal hair coloration (dark and light M. dentiventris) of the females of M. desponsus (left) and M. dentiventris (right).<br>
+               Photo credits: (top left) Pascal Gaudette (CC-BY-NC 4.0); (top right) iNaturalist username: misspt (CC-BY-NC 4.0); (bottom left) Heather Holm (CC-BY-NC 4.0); (bottom right) Sam Wilhelm (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/296533511' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (top left)</a>
+              <a href='https://www.inaturalist.org/observations/185993336' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(top right)</a>
+              <a href='https://www.inaturalist.org/observations/303803232' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (bottom left)</a>
+              <a href='https://www.inaturalist.org/observations/247251813' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (bottom right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-mesonotal-hair.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris F - mesonotal hair</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventis-t1-hair"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the T1 hairs of the females of M. desponsus (left) and M. dentiventris (right).<br>
+              Photo credits: (left) Chelsea Gottfried (CC-BY-NC 4.0); (right) iNaturalist username: misspt (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/192990158' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/185842351' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-t1-hairs.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris F - T1 hair</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventris-terga-bands"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the tergal bands of the females of M. desponsus (left) and M. dentiventris (right).<br>
+               Photo credits: (left) iNaturalist username: hobiecat (CC-BY-NC 4.0); (right) iNaturalist username: misspt (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/92265320' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/185993336' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-terga.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris F - tergal hair</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventris-tibial-spur-m"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the tibial spurs of the males of M. desponsus (left) and M. dentiventris (right).<br>
+               Photo credits: (left) Linda Williams (CC-BY-NC 4.0); (right) iNaturalist username: misspt (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/124332188' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/185993016' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-tibial-spur-m.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris M - tibial spur</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus-v-dentiventris-legs-m"
+              data-caption="Melissodes desponsus" 
+              data-overlay="A comparison of the leg hair coloration of the males of M. desponsus (left) and M. dentiventris (right).<br>
+               Photo credits: (left) iNaturalist username: bob15noble (CC-BY-NC 4.0); (right) Chandler Olson (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/86611049' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/185690891' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜(right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/desponsus-v-dentiventris-legs-m.webp" alt="Melissodes desponsus vs. Melissodes dentiventris"/>
+            <div class="caption">Melissodes desponsus vs. Melissodes dentiventris M - leg hair</div>
+          </div>
+
+
+
+          <div class="gallery-card" 
+              data-caption="Melissodes Leg Diagram" 
+              data-overlay="Diagram showing the sexual diamorphism in leg structre of the genus Melissodes. Frank Hogland, 2025 (CC BY-NC 4.0)" 
+              data-subgenus="">
+            <img src="img/Melissodes MvF Leg Diagram.png" alt="Eumelissodes"/>
+            <div class="caption">Melissodes Leg Diagram</div>
+          </div>
+
+          <div class="gallery-card" 
+              data-caption="Melissodes Wing Diagram" 
+              data-overlay="Diagram showing the wing structure of the genus Melissodes. Frank Hogland, 2025 (CC BY-NC 4.0)" 
+              data-subgenus="">
+            <img src="img/Wing Diagram.webp" alt="Melissodes Wing Diagram"/>
+            <div class="caption">Melissodes Wing Diagram</div>
+          </div>
+
+          <div class="gallery-card" 
+              data-caption="Melissodes Antennae Diagram" 
+              data-overlay="Diagram showing the sexual diamorphism in antennal structre of the genus Melissodes. Antennae lengths vary between species. Frank Hogland, 2025 (CC BY-NC 4.0)" 
+              data-subgenus="">
+            <img src="img/Melissodes MvF Antennae Diagram.png" alt="Melissodes Antennae Diagram"/>
+            <div class="caption">Melissodes Antennae Diagram</div>
+          </div>
+
+          <div class="gallery-card" 
+              data-caption="Melissodes Subgenera Phylogeny Diagram" 
+              data-overlay="Diagram representing the phylogenetic relationship between Melissodes subgenera taken from Laberge (1956). Originally presented as “FIG. 1. Diagrammatic representation of the relationships of the subgenera of Melissodes Latreille. The area of each circle indicates the approximate number of species in each subgenus, Psilomelissodes being unity. The distances between the perimeters of adjacent circles represent degree of relationship. The subgenera Epimelissodes, Idiomelissodes and Brachymelissodes form a distinct group and are not closely related to any one of the remaining subgenera.”" 
+              data-subgenus="">
+            <img src="img/Laberge, 1956 circle diagram.png" alt="Melissodes dagosus"/>
+            <div class="caption">Melissodes Subgenera Phylogeny Diagram</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-eye"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the inner eye margins of a femal M. rivalis (left), and a female M. agilis (right), illustrating the parallel nature of the inner eye mergins of the female M. rivalis.<br>Photo credits: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (M. rivalis)</a>
+              <a href='https://www.inaturalist.org/observations/190534617' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (M. agilis)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-eye-margins.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - inner eye margins</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-carina"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A labeled diagram showing the longitudinal carina of the clypeus of a female M. rivalis.<br>Photo credit: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-clypeal-carina.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis - clypeal carina</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-t1"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A labeled diagram showing the latitudinal line of closely spaces punctures on T1 of a female M. rivalis.<br>Photo credit: Christopher Wilson (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-t1-puncture-line.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - T1 punctures</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-mesonotum"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A labeled diagram showing the patch of dark brown to black hairs on the mesonotum of a female M. rivalis.<br>Photo credit: Brian Dykstra (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/57709615' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-mesonotal-hairs-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - mesonotal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-clypeus"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A labeled diagram showing the ranging irregular clypeal marking of 2 male M. rivalis individuals.<br>Photo credits: Photo credits: (right) Wendy McCrady (CC BY 4.0); (left) Monte L. Bean Life Science Museum (CC BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/302010560' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (Wendy McCrady)</a>
+              <a href='https://www.gbif.org/occurrence/4900719741' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (Monte L. Bean Life Science Museum)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-clypeas-m.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis M - clypeal markings</div>
+          </div>
+
+           <div class="gallery-card" 
+          id="rivalis-legs"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A labeled diagram showing the pubescent coloration of the legs of a male M. rivalis.<br>Photo credit: Wendy McCrady (CC BY 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/302010560' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-legs-m.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis M - leg hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-clypeus-f"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the mesonotum of the females of M. rivalis (left) and M. desponsus (right).<br>Photo credits: (left) Christopher Wilson (All Rights Reserved); (right) Isabel Dalton (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/311329586' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-clypeus-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus F - clypeus</div>
+          </div>
+
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-mesonotal"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the mesonotum of the females of M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is dark.<br>Photo credits: (left) Brian Dykstra (CC-BY-NC 4.0); (right) Heather Holm (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/57709615' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/303803232' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-mesonotal-hairs.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus F - mesonotal hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-lateral"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the lateral thoratic hairs of the females of M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale.<br>Photo credits: (left) Christopher Wilson (All Rights Reserved); (right) Heather Holm (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/303803232' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-f-pelura hairs.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus F - lateral thoratic hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-terga-f"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the bands on terga 3 and 4 of the females of M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale.<br>Photo credits: (left) Christopher Wilson (All Rights Reserved); (right) Thomas Shahan (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/314870132' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-bands-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus F - T3-4 bands</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-t2"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the bands of the second tergum of the females of M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale.<br>Photo credits: (left) Christopher Wilson (All Rights Reserved); (right) Stephen Barten (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/131249882' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-t2-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus F - T2 bands</div>
+          </div>
+
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-clypeus-m"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the clypei of male M. rivalis (left) and M. desponsus (right).<br>Photo credits: (left) Monte L. Bean Life Science Museum (CC BY-NC 4.0); (right) iNaturalist username: hobiecat (CC-BY-NC 4.0).<br>
+              <a href='https://media01.symbiota.org/media/ecdysis/BYU_BYUC/BYUC324/BYUC324871_-_FRONT_1741045431_lg.jpg' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/30287004' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-clypeus.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus M - clypeal markings</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-light"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the general leg and thoratic periphery coloration of male M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale.<br>Photo credits: (left) Wendy McCrady (CC BY 4.0); (right) Richard Baxter (CC-BY-NC 4.0).<br>
+              <a href='https://www.inaturalist.org/observations/302010560' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/53779049' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-lightness-m.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus M - leg and thoratic hairs</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis-v-desponsus-terga"
+              data-caption="Melissodes rivalis" 
+              data-overlay="A comparison of the bands of the terga of male M. rivalis (left) and M. desponsus (right). Note, this M. rivalis specimen is pale.<br>Photo credits: (left) Wendy McCrady (CC BY 4.0); (right); Josh Klostermann (All Rights Reserved).<br>
+              <a href='https://www.inaturalist.org/observations/302010560' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (left)</a>
+              <a href='https://www.inaturalist.org/observations/116478618' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original image ➜ (right)</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/rivalis-v-desponsus-bands.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis vs. Melissodes desponsus M - tergal bands</div>
+          </div>
+
+
+
+
+
+        </div>
+        <footer style="text-align: center;">
+    © 2025-present The Melissodes Project. All Rights Reserved.
+    </footer>
+      </main>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <img id="overlay-img" src="" alt=""/>
+          <p id="overlay-caption"></p>
+          <button class="close-btn" onclick="closeOverlay()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const checkboxes = document.querySelectorAll('.subgenus-checkbox');
+    const cards = document.querySelectorAll('.gallery-card');
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+    const overlayCaption = document.getElementById('overlay-caption');
+    const gallery = document.getElementById('gallery');
+
+    // ✅ Sorting function
+    function sortGallery() {
+      const cardsArray = Array.from(cards);
+
+      cardsArray.sort((a, b) => {
+        const nameA = a.dataset.caption.toLowerCase();
+        const nameB = b.dataset.caption.toLowerCase();
+        return nameA.localeCompare(nameB);
+      });
+
+      cardsArray.forEach(card => gallery.appendChild(card));
+    }
+
+    function filterGallery() {
+      const query = searchInput.value.toLowerCase();
+      const activeSubgenera = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value.toLowerCase());
+
+      cards.forEach(card => {
+        const caption = card.dataset.caption.toLowerCase();
+        const subgenus = card.dataset.subgenus.toLowerCase();
+        const matchesSearch = caption.includes(query);
+        const matchesSubgenus = activeSubgenera.length === 0 || activeSubgenera.includes(subgenus);
+
+        if (matchesSearch && matchesSubgenus) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // ✅ Keep alphabetical order after filtering
+      sortGallery();
+    }
+
+    searchInput.addEventListener('input', filterGallery);
+    checkboxes.forEach(cb => cb.addEventListener('change', filterGallery));
+
+    // Overlay modal logic
+    cards.forEach(card => {
+  card.addEventListener('click', () => {
+    overlayImg.src = card.querySelector('img').src;
+    overlayCaption.innerHTML = card.dataset.overlay; // ← allows HTML tags
+    overlay.style.display = 'flex';
+  });
+});
+
+    function closeOverlay() {
+      overlay.style.display = 'none';
+    }
+
+    overlay.addEventListener('click', e => {
+      if(e.target === overlay) closeOverlay();
+    });
+
+    // ✅ Sort once on page load
+    sortGallery();
+  </script>
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash.substring(1);
+  const allCards = document.querySelectorAll(".gallery-card");
+  const galleryGrid = document.querySelector(".gallery-grid");
+
+  if (hash) {
+    const targetCard = document.getElementById(hash);
+
+    if (targetCard) {
+      // Hide all cards except the one with the matching ID
+      allCards.forEach(card => {
+        card.style.display = (card.id === hash) ? "flex" : "none";
+      });
+
+      // Smooth scroll to the visible card
+      setTimeout(() => targetCard.scrollIntoView({ behavior: "smooth", block: "center" }), 200);
+
+      // Create the "Show All" button
+      const showAllBtn = document.createElement("button");
+      showAllBtn.textContent = "Show All Figures";
+      showAllBtn.classList.add("close-btn");
+      showAllBtn.style.margin = "20px auto";
+      showAllBtn.style.display = "block";
+      showAllBtn.style.cursor = "pointer";
+
+      // Button logic: restore all cards, remove button, clear hash
+      showAllBtn.addEventListener("click", () => {
+        allCards.forEach(card => card.style.display = "flex");
+        showAllBtn.remove();
+
+        // Remove the hash from the URL (so it won’t refilter after reload)
+        history.replaceState(null, "", window.location.pathname);
+      });
+
+      // Insert button before gallery grid
+      galleryGrid.before(showAllBtn);
+    }
+  }
+});
+</script>
+  <script>
+  document.querySelectorAll('img').forEach(img => img.loading = 'lazy');
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Improved regex to capture all CC variants:
+  // CC0
+  // CC-BY, CC-BY-NC, CC-BY-NC-SA, CC BY NC SA, etc.
+  const ccRegex = /\((CC(?:0|(?:[-\s]*[A-Z]{1,5})+))\s+([0-9.]+)\)/gi;
+
+  function buildCCURL(code, version) {
+    // normalize
+    let clean = code
+      .replace(/[()]/g, "")
+      .replace(/^CC[-\s]*/, "")
+      .trim()
+      .replace(/\s+/g, "-")
+      .toLowerCase();
+
+    // CC0 uses different base
+    if (clean === "0") {
+      return `https://creativecommons.org/publicdomain/zero/${version}/`;
+    }
+
+    return `https://creativecommons.org/licenses/${clean}/${version}/`;
+  }
+
+  function convertCC(text) {
+    return text.replace(ccRegex, (match, code, version) => {
+      const url = buildCCURL(code, version);
+
+      return `<a href="${url}"
+                 target="_blank"
+                 style="color:black; font-weight:bold; text-decoration:none;">
+                 (${code.replace(/\s+/g, " ")} ${version})
+              </a>`;
+    });
+  }
+
+  // Apply to gallery cards
+  document.querySelectorAll(".gallery-card").forEach(card => {
+    const raw = card.getAttribute("data-overlay");
+    if (raw) {
+      card.setAttribute("data-overlay", convertCC(raw));
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>

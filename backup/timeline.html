@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Interactive SVG Timeline</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            /* Match Chart.js colors provided */
+            --stroke-blue: rgba(51, 102, 255, 0.9);
+            --fill-blue: rgba(102, 153, 255, 0.8);
+            --hover-blue: rgba(51, 102, 255, 1.0);
+            
+            --axis-color: rgba(51, 102, 255, 0.9);
+            --line-muted: #cbd5e1;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --popup-bg: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: transparent;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+
+
+        .timeline-viewport {
+            flex: 1;
+            width: 100%;
+            cursor: grab;
+            position: relative;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 30px 30px;
+            overflow: hidden;
+            touch-action: none; /* Prevents mobile browser scrolling while dragging */
+        }
+
+        .timeline-viewport:active {
+            cursor: grabbing;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: visible;
+        }
+
+        .axis {
+            stroke: var(--axis-color);
+            stroke-width: 2;
+            stroke-linecap: round;
+        }
+
+        .guide-line {
+            stroke: var(--line-muted);
+            stroke-width: 1.5;
+            stroke-dasharray: 4,4;
+            pointer-events: none;
+        }
+
+        /* Styling for standard points */
+        .main-dot {
+            fill: var(--fill-blue);
+            stroke: var(--stroke-blue);
+            stroke-width: 2;
+            transition: fill 0.2s ease, stroke-width 0.2s ease;
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+        .main-dot:hover {
+            fill: var(--hover-blue);
+            stroke-width: 3;
+        }
+
+        /* 1955 Split Specific Styling */
+        .dot-a, .dot-b {
+            fill: var(--fill-blue);
+            stroke: var(--stroke-blue);
+            stroke-width: 2;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+            pointer-events: none;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Proxy dot to show when NOT split */
+        .dot-proxy {
+            fill: var(--fill-blue);
+            stroke: var(--stroke-blue);
+            stroke-width: 2;
+            transition: opacity 0.2s ease;
+            pointer-events: none; 
+        }
+
+        /* Buffer animation to prevent popup flashing */
+        @keyframes enableInteraction {
+            0% { pointer-events: none; }
+            99% { pointer-events: none; }
+            100% { pointer-events: all; }
+        }
+
+        .is-split .dot-a, .is-split .dot-b {
+            opacity: 1;
+            /* Re-introduced the 0.2s delay before allowing pointer events */
+            animation: enableInteraction 0.2s forwards;
+        }
+        
+        .is-split .dot-proxy {
+            opacity: 0;
+        }
+
+        .is-split .dot-a { transform: translateY(-30px); }
+        .is-split .dot-b { transform: translateY(30px); }
+
+        .is-split .dot-a:hover, .is-split .dot-b:hover {
+            fill: var(--hover-blue);
+            stroke-width: 3;
+        }
+
+        /* Bridge logic */
+        .trigger-bridge {
+            fill: rgba(0,0,0,0);
+            pointer-events: none; 
+        }
+        .is-split .trigger-bridge { pointer-events: all; }
+
+        /* Force cursor to trigger immediately on the 1955 proxy hit-area */
+        #trigger-1955 {
+            cursor: pointer !important;
+            fill: rgba(0,0,0,0) !important;
+            pointer-events: all !important;
+        }
+
+        /* Popups and Labels */
+        .popup-group {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+        .popup-group.active { opacity: 1; }
+
+        .popup-rect {
+            fill: var(--popup-bg);
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+            stroke: var(--line-muted);
+            stroke-width: 1;
+        }
+
+        .popup-triangle { fill: var(--popup-bg); }
+        .popup-year { font-size: 11px; font-weight: 700; fill: var(--text-main); }
+        .popup-species { font-size: 10px; font-style: italic; fill: var(--stroke-blue); }
+        .label-year { font-size: 11px; fill: var(--text-main); font-weight: 600; pointer-events: none; }
+
+   
+
+          .controls {
+            position: absolute;
+            top: 0.6em;
+            right: 0.6em;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 0.25em 0.65em;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.78em;
+            font-weight: normal;
+            color: var(--text-main);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+            transition: background 0.15s;
+        }
+        .btn:hover { background: #f8fafc; transform: translateY(-1px); }
+
+        @media print{
+            .btn{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="timeline-viewport" id="viewport">
+    <svg id="timeline-svg" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+        <g id="main-content">
+            <!-- AXIS -->
+            <line x1="50" y1="200" x2="950" y2="200" class="axis" />
+
+            <!-- DATA POINTS -->
+            <g class="data-point" transform="translate(50, 200)" data-popup="pop-1825"><line x1="0" y1="0" x2="0" y2="-40" class="guide-line" /><text y="-50" text-anchor="middle" class="label-year">1825</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(362, 200)" data-popup="pop-1894"><line x1="0" y1="0" x2="0" y2="40" class="guide-line" /><text y="55" text-anchor="middle" class="label-year">1894</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(412, 200)" data-popup="pop-1905"><line x1="0" y1="0" x2="0" y2="-65" class="guide-line" /><text y="-75" text-anchor="middle" class="label-year">1905</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(488, 200)" data-popup="pop-1922"><line x1="0" y1="0" x2="0" y2="65" class="guide-line" /><text y="80" text-anchor="middle" class="label-year">1922</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(506, 200)" data-popup="pop-1926"><line x1="0" y1="0" x2="0" y2="-40" class="guide-line" /><text y="-50" text-anchor="middle" class="label-year">1926</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(515, 200)" data-popup="pop-1928"><line x1="0" y1="0" x2="0" y2="40" class="guide-line" /><text y="55" text-anchor="middle" class="label-year">1928</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(551, 200)" data-popup="pop-1936"><line x1="0" y1="0" x2="0" y2="-65" class="guide-line" /><text y="-75" text-anchor="middle" class="label-year">1936</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(596, 200)" data-popup="pop-1946"><line x1="0" y1="0" x2="0" y2="65" class="guide-line" /><text y="80" text-anchor="middle" class="label-year">1946</text><circle r="5" class="main-dot" /></g>
+
+            <!-- 1955 SPLIT -->
+            <g class="split-container" id="pt-1955" transform="translate(637, 200)">
+                <line x1="0" y1="0" x2="0" y2="-40" class="guide-line" />
+                <text y="-50" text-anchor="middle" class="label-year">1955</text>
+                
+                <!-- The actual hover trigger for the split - background level -->
+                <circle r="12" fill="rgba(0,0,0,0)" id="trigger-1955" pointer-events="all" style="cursor: pointer;" />
+                <!-- Bridge area - background level -->
+                <rect x="-15" y="-45" width="30" height="90" class="trigger-bridge" />
+
+                <circle r="5" class="dot-proxy" />
+                <!-- Move data dots to be top-most within the group -->
+                <circle r="5" class="dot-a" data-popup="pop-1955-a" />
+                <circle r="5" class="dot-b" data-popup="pop-1955-b" />
+            </g>
+
+            <g class="data-point" transform="translate(642, 200)" data-popup="pop-1956"><line x1="0" y1="0" x2="0" y2="60" class="guide-line" /><text y="75" text-anchor="middle" class="label-year">1956</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(651, 200)" data-popup="pop-1958"><line x1="0" y1="0" x2="0" y2="40" class="guide-line" /><text y="55" text-anchor="middle" class="label-year">1958</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(655, 200)" data-popup="pop-1959"><line x1="0" y1="0" x2="0" y2="-65" class="guide-line" /><text y="-75" text-anchor="middle" class="label-year">1959</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(678, 200)" data-popup="pop-1964"><line x1="0" y1="0" x2="0" y2="90" class="guide-line" /><text y="105" text-anchor="middle" class="label-year">1964</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(718, 200)" data-popup="pop-1973"><line x1="0" y1="0" x2="0" y2="-40" class="guide-line" /><text y="-50" text-anchor="middle" class="label-year">1973</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(736, 200)" data-popup="pop-1977"><line x1="0" y1="0" x2="0" y2="65" class="guide-line" /><text y="80" text-anchor="middle" class="label-year">1977</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(750, 200)" data-popup="pop-1980"><line x1="0" y1="0" x2="0" y2="-65" class="guide-line" /><text y="-75" text-anchor="middle" class="label-year">1980</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(754, 200)" data-popup="pop-1981"><line x1="0" y1="0" x2="0" y2="105" class="guide-line" /><text y="120" text-anchor="middle" class="label-year">1981</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(786, 200)" data-popup="pop-1988"><line x1="0" y1="0" x2="0" y2="-40" class="guide-line" /><text y="-50" text-anchor="middle" class="label-year">1988</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(822, 200)" data-popup="pop-1996"><line x1="0" y1="0" x2="0" y2="65" class="guide-line" /><text y="80" text-anchor="middle" class="label-year">1996</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(841, 200)" data-popup="pop-2000"><line x1="0" y1="0" x2="0" y2="-40" class="guide-line" /><text y="-50" text-anchor="middle" class="label-year">2000</text><circle r="5" class="main-dot" /></g>
+            <g class="data-point" transform="translate(950, 200)" data-popup="pop-2024"><line x1="0" y1="0" x2="0" y2="65" class="guide-line" /><text y="80" text-anchor="middle" class="label-year">2024</text><circle r="5" class="main-dot" /></g>
+
+            <!-- POPUPS LAYER (Always on top) -->
+             <g class="popup-group" id="pop-1825" transform="translate(50, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Lepeletier, 1825)</text><text x="-50" y="33" class="popup-species">Genus</text></g>
+                <g class="popup-group" id="pop-1894" transform="translate(362, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Ashmead, 1894)</text><text x="-50" y="33" class="popup-species">M. bimaculatus</text></g>
+                <g class="popup-group" id="pop-1905" transform="translate(412, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Graenicher, 1905)</text><text x="-50" y="33" class="popup-species">M. trinodis</text></g>
+                <g class="popup-group" id="pop-1922" transform="translate(488, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Rau, 1922)</text><text x="-50" y="33" class="popup-species">M. agilis</text></g>
+                <g class="popup-group" id="pop-1926" transform="translate(506, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">Hicks, 1926</text><text x="-50" y="33" class="popup-species">M. menuachus & M. subagilis</text></g>
+                <g class="popup-group" id="pop-1928" transform="translate(515, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Scullen, 1928)</text><text x="-50" y="33" class="popup-species">M. rivalis</text></g>
+                <g class="popup-group" id="pop-1936" transform="translate(551, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Hicks, 1936)</text><text x="-50" y="33" class="popup-species">M. tepidus ssp. timberlakei</text></g>
+                <g class="popup-group" id="pop-1946" transform="translate(596, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Linsley, 1946)</text><text x="-50" y="33" class="popup-species">M. tepidus ssp timberlakei</text></g>
+
+                <g class="popup-group" id="pop-1955-a" transform="translate(637, 110)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Linsley et al., 1955)</text><text x="-50" y="33" class="popup-species">M. robustior</text></g>
+                <g class="popup-group" id="pop-1955-b" transform="translate(637, 245)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Janvier, 1955)</text><text x="-50" y="33" class="popup-species">M. sexcinctus</text></g>
+
+                <g class="popup-group" id="pop-1956" transform="translate(642, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Laberge, 1956a)</text><text x="-50" y="33" class="popup-species">M. tepidus ssp. timberlakei</text></g>
+                <g class="popup-group" id="pop-1958" transform="translate(651, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Michener, 1958)</text><text x="-50" y="33" class="popup-species">M. nigroaeneus</text></g>
+                <g class="popup-group" id="pop-1959" transform="translate(655, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Hurd & Linsley, 1959)</text><text x="-50" y="33" class="popup-species">M. compositus</text></g>
+                <g class="popup-group" id="pop-1964" transform="translate(678, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Thorp & Chemsak, 1964)</text><text x="-50" y="33" class="popup-species">M. pallidisignatus</text></g>
+                <g class="popup-group" id="pop-1973" transform="translate(718, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Clement, 1973)</text><text x="-50" y="33" class="popup-species">M. druriellus</text></g>
+                <g class="popup-group" id="pop-1977" transform="translate(736, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Batra & Schuster, 1977)</text><text x="-50" y="33" class="popup-species">M. floris</text></g>
+                <g class="popup-group" id="pop-1980" transform="translate(750, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Buchmann & Jones, 1980)</text><text x="-50" y="33" class="popup-species">M. persimils</text></g>
+                <g class="popup-group" id="pop-1981" transform="translate(754, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Parker et al., 1981)</text><text x="-50" y="33" class="popup-species">M. agilis</text></g>
+                <g class="popup-group" id="pop-1988" transform="translate(786, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Triplett & Gittins, 1988)</text><text x="-50" y="33" class="popup-species">M. tepidus ssp. tepidus</text></g>
+                <g class="popup-group" id="pop-1996" transform="translate(822, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Cameron et al., 1996)</text><text x="-50" y="33" class="popup-species">M. druriellus</text></g>
+                <g class="popup-group" id="pop-2000" transform="translate(841, 215)"><polygon points="-5,0 5,0 0,-8" class="popup-triangle"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Miliczky, 2000)</text><text x="-50" y="33" class="popup-species">M. microstictus</text></g>
+                <g class="popup-group" id="pop-2024" transform="translate(950, 140)"><polygon points="-5,0 5,0 0,8" class="popup-triangle" transform="translate(0, 45)"/><rect x="-60" y="0" width="120" height="45" rx="4" class="popup-rect" /><text x="-50" y="18" class="popup-year">(Giulian et al., 2024)</text><text x="-50" y="33" class="popup-species">M. bimaculatus</text></g>
+            </g>
+        </g>
+    </svg>
+
+    <div class="controls">
+        <button class="btn" id="reset">Reset View</button>
+    </div>
+</div>
+
+<script>
+    const content = document.getElementById('main-content');
+    const viewport = document.getElementById('viewport');
+    const resetBtn = document.getElementById('reset');
+    const splitContainer = document.getElementById('pt-1955');
+    const trigger1955 = document.getElementById('trigger-1955');
+
+       let scale = 0.95;
+    let pointX = 50;
+    let pointY = 30;
+    let start = { x: 0, y: 0 };
+    let isPanning = false;
+
+    function setTransform() {
+        content.setAttribute('transform', `translate(${pointX}, ${pointY}) scale(${scale})`);
+    }
+
+    // Interactive Hover Logic for Popups
+    function initPopups() {
+        const hoverableElements = document.querySelectorAll('.main-dot, .dot-a, .dot-b');
+        hoverableElements.forEach(el => {
+            const popupId = el.closest('[data-popup]')?.getAttribute('data-popup') || el.getAttribute('data-popup');
+            if (!popupId) return;
+            const popup = document.getElementById(popupId);
+            
+            el.addEventListener('mouseenter', () => {
+                if (popup) popup.classList.add('active');
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                if (popup) popup.classList.remove('active');
+            });
+            
+            // Adding touch support for popups (toggle on tap)
+            el.addEventListener('touchstart', (e) => {
+                if (popup) {
+                    const isActive = popup.classList.contains('active');
+                    document.querySelectorAll('.popup-group').forEach(p => p.classList.remove('active'));
+                    if (!isActive) popup.classList.add('active');
+                }
+            });
+        });
+    }
+
+    // 1955 Split Interaction
+    trigger1955.onmouseenter = () => {
+        splitContainer.classList.add('is-split');
+    };
+
+    splitContainer.onmouseleave = (e) => {
+        if (e.relatedTarget && (e.relatedTarget.classList?.contains('dot-a') || e.relatedTarget.classList?.contains('dot-b'))) {
+            return;
+        }
+        splitContainer.classList.remove('is-split');
+    };
+    
+    // Mobile Touch trigger for 1955 split
+    trigger1955.ontouchstart = (e) => {
+        splitContainer.classList.toggle('is-split');
+    };
+
+    // Zooming logic (Mouse wheel)
+    viewport.onwheel = function(e) {
+        e.preventDefault();
+        const rect = viewport.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        const targetX = (mouseX - pointX) / scale;
+        const targetY = (mouseY - pointY) / scale;
+        const delta = -e.deltaY;
+        const factor = (delta > 0) ? 1.1 : (1/1.1);
+        const nextScale = scale * factor;
+        if (nextScale < 0.3 || nextScale > 20) return;
+        scale = nextScale;
+        pointX = mouseX - targetX * scale;
+        pointY = mouseY - targetY * scale;
+        setTransform();
+    };
+
+    // Helper to check if we should start panning (ignore interaction dots)
+    function shouldInitiatePan(target) {
+        return !(target.closest('.main-dot') || 
+                 target.closest('.dot-a') || 
+                 target.closest('.dot-b') || 
+                 target === trigger1955);
+    }
+
+    // Panning logic (Mouse)
+    viewport.onmousedown = function(e) {
+        if (!shouldInitiatePan(e.target)) return; 
+        
+        e.preventDefault();
+        isPanning = true;
+        start = { x: e.clientX - pointX, y: e.clientY - pointY };
+        viewport.style.cursor = 'grabbing';
+    };
+
+    // Panning logic (Touch)
+    viewport.addEventListener('touchstart', (e) => {
+        if (!shouldInitiatePan(e.target)) return;
+        
+        const touch = e.touches[0];
+        isPanning = true;
+        start = { x: touch.clientX - pointX, y: touch.clientY - pointY };
+    }, { passive: false });
+
+    window.onmousemove = function(e) {
+        if (!isPanning) return;
+        pointX = e.clientX - start.x;
+        pointY = e.clientY - start.y;
+        setTransform();
+    };
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isPanning) return;
+        const touch = e.touches[0];
+        pointX = touch.clientX - start.x;
+        pointY = touch.clientY - start.y;
+        setTransform();
+    }, { passive: false });
+
+    window.onmouseup = function() {
+        isPanning = false;
+        viewport.style.cursor = 'grab';
+    };
+
+    window.addEventListener('touchend', () => {
+        isPanning = false;
+    });
+
+        resetBtn.onclick = function() {
+        scale = 0.95;
+        pointX = 50;
+        pointY = 30;
+        setTransform();
+    };
+
+    // Auto-resize popups to fit their text content
+    function resizePopups() {
+        const padding = 20; // horizontal padding on each side
+        document.querySelectorAll('.popup-group').forEach(group => {
+            const texts = group.querySelectorAll('text');
+            const rect = group.querySelector('.popup-rect');
+            if (!rect || texts.length === 0) return;
+
+            // Measure the widest text element
+            let maxWidth = 0;
+            texts.forEach(t => {
+                try { maxWidth = Math.max(maxWidth, t.getComputedTextLength()); } catch(e) {}
+            });
+
+            const newWidth = Math.ceil(maxWidth) + padding * 2;
+            const half = newWidth / 2;
+
+            // Update rect dimensions
+            rect.setAttribute('x', -half);
+            rect.setAttribute('width', newWidth);
+
+            // Re-anchor all text elements to left-pad from the new left edge
+            texts.forEach(t => {
+                t.setAttribute('x', -half + padding);
+            });
+        });
+    }
+
+    window.onload = () => {
+        setTransform();
+        initPopups();
+        resizePopups();
+    };
+</script>
+
+</body>
+</html>

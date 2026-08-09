@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Melissodes species gallery</title>
+  <meta name="description" content="Image gallery of Melissodes species">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://themelissodesproject.wildref.org/gallery-img.html">
+
+  <meta name="application-name" content="The Melissodes Project">
+  <meta property="og:site_name" content="The Melissodes Project">
+  <meta property="og:title" content="Melissodes species gallery">
+  <meta property="og:description" content="Image gallery of Melissodes species">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themelissodesproject.wildref.org/gallery-img.html">
+  <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Melissodes species gallery">
+  <meta name="twitter:description" content="Image gallery of Melissodes species">
+  <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+  }
+
+  body {
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #222;
+        background-color: rgb(251, 251, 250);
+      }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .heading {
+    margin: 0 auto;
+  }
+
+  .bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .heading header{
+    padding: 20px;
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
+
+  .heading header .banner{
+    font-size: 1.63rem;
+    margin: 0;
+    flex: 1 1 auto;
+    font-weight: bold;
+  }
+
+  nav {
+    flex: 0 0 auto;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.95rem;
+  }
+
+  .page{
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
+
+
+  .search-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem;
+  }
+
+  .search-filter input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* ✅ prevents overflow */
+    }
+    
+  .filters {
+    text-align: left;
+      margin: 10px auto;
+      padding: 12px 16px;
+      background: rgb(251, 251, 250);
+      border-style: solid;
+      border-color: #F3F4F5;
+      border-width: 1.5px;
+      font-size: 0.95rem;
+      width: 100%;
+    }
+    
+    
+
+    .filters label {
+    gap: 6px; 
+    cursor: pointer;
+    padding-left: 6px;
+}
+
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .gallery-card {
+    width: 220px;
+    aspect-ratio: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-card:hover {
+    transform: scale(1.03);
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-card .caption {
+    flex: 1;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .overlay-content {
+    background: #fff;
+    border-radius: 8px;
+    max-width: 40%;
+    max-height: 85%;
+    padding: 1rem;
+    text-align: center;
+    overflow: auto;
+  }
+
+.overlay-content::-webkit-scrollbar {
+  width: 8px;        /* width of vertical scrollbar */
+  height: 12px;       /* height of horizontal scrollbar */
+}
+
+/* Remove buttons completely */
+.overlay-content::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Optional: style track and thumb */
+.overlay-content::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+  border-radius: 6px;
+}
+
+  .overlay-content img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+
+  .close-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+
+
+  @media only screen and (max-width: 1000px) {
+    .gallery-card {
+      width: 45%;
+      max-width: 220px;
+    }
+    .gallery-card .caption {
+      font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px ){
+    .bar-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-header header .banner {
+      text-align: center;
+      width: 100%;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center
+    }
+    .overlay-content {
+    max-width: 90%;
+    }
+  }
+
+  @media (max-width: 600px) {
+  .filters {
+    display: grid;                 /* switch to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 6px 15px;                /* vertical 10px, horizontal 15px */
+  }
+
+    .filters label {
+    gap: 6px; 
+    cursor: pointer;
+    margin-left: -10px;
+    font-size: 13px;
+}
+  footer {
+    padding: 20px;
+  }
+}
+
+footer {
+      margin: 40px 0;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <header class="bar-header">
+        <p class="banner">The Melissodes Project</p>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+             <li><a href="resources-menu.html">Resources</a></li>
+            <li><a href="melissodes.html">Genus</a></li>
+            <li><a href="species-index.html">Species Index</a></li>
+            <li><a href="gallery-menu.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="page">
+      <header class="page-header">
+        <div class="search-filter">
+          <input type="text" id="search" placeholder="Search species gallery..." />
+          <div class="filters">
+    <strong>Filter by Subgenus:</strong><br>
+    <label><input type="checkbox" class="subgenus-checkbox" value="Apomelissodes"> Apomelissodes</label>
+    <label><input type="checkbox" class="subgenus-checkbox" value="Callimelissodes"> Callimelissodes</label>
+    <label><input type="checkbox" class="subgenus-checkbox" value="Ecplectica"> Ecplectica</label>
+    <label><input type="checkbox" class="subgenus-checkbox" value="Eumelissodes"> Eumelissodes</label>
+    <label><input type="checkbox" class="subgenus-checkbox" value="Melissodes"> Melissodes</label>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="gallery-grid" id="gallery">
+
+          <div class="gallery-card" 
+              id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Frank Hogland - Aurora, Oregon Melissodes agilis, F (CC BY-NC 4.0)" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-Agilis.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="scotti"
+              data-caption="Melissodes scotti" 
+              data-overlay="Sue Meiman - Los Angeles County, California Melissodes scotti, F (note: nomen dubium) (CC BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/49869633' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-Scotti.webp" alt="Melissodes scotti"/>
+            <div class="caption">Melissodes scotti</div>
+          </div>
+
+          <div class="gallery-card"
+          id="dagosus" 
+              data-caption="Melissodes dagosus" 
+              data-overlay="California Academy of Sciences - San Francisco, California Melissodes dagosus (Holotype), M (All Rights Reserved)" 
+              data-subgenus="Apomelissodes">
+            <img src="img/M._Dagosa_Dorsal.webp" alt="Melissodes dagosus"/>
+            <div class="caption">Melissodes dagosus M - dorsal view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="dagosus"
+              data-caption="Melissodes dagosus" 
+              data-overlay="California Academy of Sciences - San Francisco, California Melissodes dagosus (Holotype), M (All Rights Reserved)" 
+              data-subgenus="Apomelissodes">
+            <img src="img/M._Dagosa_Face.webp" alt="Melissodes dagosus"/>
+            <div class="caption">Melissodes dagosus M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="dagosus"
+              data-caption="Melissodes dagosus" 
+              data-overlay="California Academy of Sciences - San Francisco, California Melissodes dagosus (Holotype), M (All Rights Reserved)" 
+              data-subgenus="Apomelissodes">
+            <img src="img/M._Dagosa_Lateral.webp" alt="Melissodes dagosus"/>
+            <div class="caption">Melissodes dagosus M - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="ablusus"
+              data-caption="Melissodes ablusus" 
+              data-overlay="Christopher Wilson, INHS collection - San Jose, California Melissodes ablusus, M (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/313002848' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>"
+              data-subgenus="Callimelissodes">
+            <img src="img/Melissodes_ablusus_M.webp" alt="Melissodes ablusus"/>
+            <div class="caption">Melissodes ablusus M</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="ablusus"
+              data-caption="Melissodes ablusus" 
+              data-overlay="Christopher Wilson, INHS collection - San Jose, California Melissodes ablusus, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/313002849' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Callimelissodes">
+            <img src="img/Melissodes_ablusus_F.webp" alt="Melissodes ablusus"/>
+            <div class="caption">Melissodes ablusus F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus"
+              data-caption="Melissodes apicatus" 
+              data-overlay="Paula Sharp, Gainesville, Florida Melissodes apicatus, F (Copyright 2025 Paula Sharp, All Rights Reserved)" 
+              data-subgenus="Apomelissodes">
+            <img src="img/Melissodes-apicatus-female.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus F <br>© 2025 Paula Sharp</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="apicatus"
+              data-caption="Melissodes apicatus" 
+              data-overlay="Paula Sharp, Gainesville, Florida Melissodes apicatus, M (Copyright 2025 Paula Sharp, All Rights Reserved)" 
+              data-subgenus="Apomelissodes">
+            <img src="img/Melissodes-apicatus-male.webp" alt="Melissodes apicatus"/>
+            <div class="caption">Melissodes apicatus M <br>© 2025 Paula Sharp</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="appressus"
+              data-caption="Melissodes appressus" 
+              data-overlay="LACM ENT 735022 dorsal habitus with labels - Melissodes appressus LaBerge, 1961 Male by Natural History Museum of Los Angeles County (CC-BY 4.0)<br>
+              <a href='https://www.gbif.org/occurrence/4854159630' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-appressus-m-dorsal.webp" alt="Melissodes appressus"/>
+            <div class="caption">Melissodes appressus M</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="appressus"
+              data-caption="Melissodes appressus" 
+              data-overlay="LACM ENT 735022 dorsal habitus with labels - Melissodes appressus LaBerge, 1961 Female by Natural History Museum of Los Angeles County (CC-BY 4.0)<br>
+              <a href='https://www.gbif.org/occurrence/4854159768' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-appressus-f-dorsal.webp" alt="Melissodes appressus"/>
+            <div class="caption">Melissodes appressus F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="baileyi"
+              data-caption="Melissodes baileyi" 
+              data-overlay="LACM ENT 729430 dorsal habitus with labels - Melissodes baileyi Cockerell, 1906 by Natural History Museum of Los Angeles County, Female(CC-BY 4.0)<br>
+              <a href='https://www.gbif.org/occurrence/4605043648' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Apomelissodes">
+            <img src="img/melissodes-baileyi-dorsal-f.webp" alt="Melissodes baileyi"/>
+            <div class="caption">Melissodes baileyi F - dorsal</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bicoloratus"
+              data-caption="Melissodes bicoloratus" 
+              data-overlay="Christopher Wilson, Nixon, Nevada Melissodes bicoloratus, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/199277884' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>"
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bicoloratus-F.webp" alt="Melissodes bicoloratus"/>
+            <div class="caption">Melissodes bicoloratus F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bidentis"
+              data-caption="Melissodes bidentis" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes bidentis, F (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1691580' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bidentis F face.webp" alt="Melissodes bidentis"/>
+            <div class="caption">Melissodes bidentis F - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bidentis"
+              data-caption="Melissodes bidentis" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes bidentis, F (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1691580' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bidentis F Lateral veiw.webp" alt="Melissodes bidentis"/>
+            <div class="caption">Melissodes bidentis F - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bidentis"
+              data-caption="Melissodes bidentis" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes bidentis, F (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1691580' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bidentis F top.webp" alt="Melissodes bidentis"/>
+            <div class="caption">Melissodes bidentis F - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="floris"
+              data-caption="Melissodes floris" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes floris, M (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1645189' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes floris-face M.webp" alt="Melissodes floris"/>
+            <div class="caption">Melissodes floris M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="floris"
+              data-caption="Melissodes floris" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes floris, M (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1645189' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes floris-lateralM.webp" alt="Melissodes floris"/>
+            <div class="caption">Melissodes floris M - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="floris"
+              data-caption="Melissodes floris" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes floris, M (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1645189' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes floris top M.webp" alt="Melissodes floris"/>
+            <div class="caption">Melissodes floris M - dorsal veiw</div>
+          </div>
+          
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Michelle Orcutt, Saint Paul, Minnesota Melissodes agilis, F (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/305081870' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-agilis-F-face.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis F - face</div>
+          </div>
+          
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Jane Abel, Richland, Washington Melissodes agilis, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/129047357' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-agilis-f-lateral.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis F - lateral veiw</div>
+          </div>
+
+
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Michelle Orcutt, Saint Paul, Minnesota Melissodes agilis, F (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/305081870' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-agilis-F-dorsal.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis F - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Michelle Orcutt, Cottage Grove, Minnesota Melissodes agilis, M (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/182564401' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-agilis-M-face.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Michelle Orcutt, Cottage Grove, Minnesota Melissodes agilis, M (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/236223418' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-agilis-M-dorsal.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis M - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Michelle Orcutt, Cottage Grove, Minnesota Melissodes agilis, M (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/236223418' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-agilis-M-lateral.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis M - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Lisa H. Robinson, Chelan County, Washington Melissodes agilis, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/129234771' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-agilis-M-face2.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis M - face</div>
+          </div>
+
+          
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Jane Abel, Richland, Washington Melissodes agilis, F&M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/129047357' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-agilis-FM.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis F&M</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="agilis"
+              data-caption="Melissodes agilis" 
+              data-overlay="Jane Abel, Richland, Washington Melissodes agilis, mating (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/129047357' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-agilis-Mating.webp" alt="Melissodes agilis"/>
+            <div class="caption">Melissodes agilis mating</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimaculatus"
+              data-caption="Melissodes bimaculatus" 
+              data-overlay="Michelle Orcutt, Saint Paul, Minnesota Melissodes bimaculatus, M (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/128047117' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/melissodes-bimaculatus-m-dorsal.webp" alt="Melissodes bimaculatus"/>
+            <div class="caption">Melissodes bimaculatus M - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimaculatus"
+              data-caption="Melissodes bimaculatus" 
+              data-overlay="Michelle Orcutt, Saint Paul, Minnesota Melissodes bimaculatus, M (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/130311790' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/melissodes-bimaculatus-m-dorsal2.webp" alt="Melissodes bimaculatus"/>
+            <div class="caption">Melissodes bimaculatus M - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimaculatus"
+              data-caption="Melissodes bimaculatus" 
+              data-overlay="Michelle Orcutt, Saint Paul, Minnesota Melissodes bimaculatus, F (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/300226327' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-bimaculatus-F-lateral.webp" alt="Melissodes bimaculatus"/>
+            <div class="caption">Melissodes bimaculatus F - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimaculatus"
+              data-caption="Melissodes bimaculatus" 
+              data-overlay="Gray Rothkopf, Cape Coral, Florida Melissodes bimaculatus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/320051362' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/melissodes-bimaculatus-f-lateral2.webp" alt="Melissodes bimaculatus"/>
+            <div class="caption">Melissodes bimaculatus F - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimaculatus"
+              data-caption="Melissodes bimaculatus" 
+              data-overlay="Gray Rothkopf, Cape Coral, Florida Melissodes bimaculatus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/320051362' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-bimaculatus-F-face.webp" alt="Melissodes bimaculatus"/>
+            <div class="caption">Melissodes bimaculatus F - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimaculatus"
+              data-caption="Melissodes bimaculatus" 
+              data-overlay="Gray Rothkopf, Cape Coral, Florida Melissodes bimaculatus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/320051362' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/melissodes-bimaculatus-f.webp" alt="Melissodes bimaculatus"/>
+            <div class="caption">Melissodes bimaculatus F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimaculatus"
+              data-caption="Melissodes bimaculatus" 
+              data-overlay="Gray Rothkopf, Cape Coral, Florida Melissodes bimaculatus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/320051362' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-bimaculatus-F-sternal.webp" alt="Melissodes bimaculatus"/>
+            <div class="caption">Melissodes bimaculatus F - sternal view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Royal Tyler, Vivian, Louisiana Melissodes boltoniae, M (CC BY-NC-SA 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/12800125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-M-dorsal.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae M - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Royal Tyler, Vivian, Louisiana Melissodes boltoniae, M (CC BY-NC-SA 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/17806141' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-M-face.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Royal Tyler, Vivian, Louisiana Melissodes boltoniae, M (CC BY-NC-SA 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/12800125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-M-lateral.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae M - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Royal Tyler, Vivian, Louisiana Melissodes boltoniae, M (CC BY-NC-SA 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/17806141' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-M-metasoma.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae M - metasomal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Royal Tyler, Vivian, Louisiana Melissodes boltoniae, F (CC BY-NC-SA 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/16877783' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-f-metasomal.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae F - metasomal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Royal Tyler, Vivian, Louisiana Melissodes boltoniae, F (CC BY-NC-SA 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/16877783' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-f-lateral.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae F - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Sam Wilhelm, South Carolina Melissodes boltoniae, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/247251876' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-f-metasoma.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae F - metasomal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="boltoniae"
+              data-caption="Melissodes boltoniae" 
+              data-overlay="Sam Wilhelm, South Carolina Melissodes boltoniae, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/247251876' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-boltoniae-f-face.webp" alt="Melissodes boltoniae"/>
+            <div class="caption">Melissodes boltoniae F - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bruneri"
+              data-caption="Melissodes bruneri" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes bruneri, F (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1702582' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Ecplectica">
+            <img src="img/Melissodes-bruneri-F-dorsal.webp" alt="Melissodes bruneri"/>
+            <div class="caption">Melissodes bruneri F - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bruneri"
+              data-caption="Melissodes bruneri" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes bruneri, F (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1702582' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Ecplectica">
+            <img src="img/Melissodes-bruneri-F-lateral.webp" alt="Melissodes bruneri"/>
+            <div class="caption">Melissodes bruneri F - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bruneri"
+              data-caption="Melissodes bruneri" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes bruneri, F (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1702582' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Ecplectica">
+            <img src="img/Melissodes-bruneri-F-face.webp" alt="Melissodes bruneri"/>
+            <div class="caption">Melissodes bruneri F - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris"
+              data-caption="Melissodes bimatris" 
+              data-overlay="Lisa H. Robinson, Chelan County, Washington Melissodes bimatris, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/98771751' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bimatris-F-face.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris"
+              data-caption="Melissodes bimatris" 
+              data-overlay="Lisa H. Robinson, Chelan County, Washington Melissodes bimatris, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/185823070' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bimatris-F-face2.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris"
+              data-caption="Melissodes bimatris" 
+              data-overlay="Lisa H. Robinson, Chelan County, Washington Melissodes bimatris, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/98771751' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bimatris-F-dorsal.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris"
+              data-caption="Melissodes bimatris" 
+              data-overlay="Lisa H. Robinson, Chelan County, Washington Melissodes bimatris, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/98771751' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bimatris-F-metasomal.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - metasomal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris"
+              data-caption="Melissodes bimatris" 
+              data-overlay="Lisa H. Robinson, Chelan County, Washington Melissodes bimatris, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/98771751' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bimatris-F-lateral.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris F - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="bimatris"
+              data-caption="Melissodes bimatris" 
+              data-overlay="Jane Abel, Richland, Washington Melissodes bimatris, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/314441408' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-bimatris-M-face.webp" alt="Melissodes bimatris"/>
+            <div class="caption">Melissodes bimatris M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="cestus"
+              data-caption="Melissodes cestus" 
+              data-overlay="Bert Harris, Grand Bahama Island, Bahamas, Melissodes cestus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/22038904' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-cestus-M.webp" alt="Melissodes cestus"/>
+            <div class="caption">Melissodes cestus M</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="cestus"
+              data-caption="Melissodes cestus" 
+              data-overlay="Bert Harris, Grand Bahama Island, Bahamas, Melissodes cestus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/22039044' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-cestus-M-dorsal.webp" alt="Melissodes cestus"/>
+            <div class="caption">Melissodes cestus M - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="cestus"
+              data-caption="Melissodes cestus" 
+              data-overlay="Bert Harris, Grand Bahama Island, Bahamas, Melissodes cestus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/22293579' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-cestus-M-face.webp" alt="Melissodes cestus"/>
+            <div class="caption">Melissodes cestus M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="cestus"
+              data-caption="Melissodes cestus" 
+              data-overlay="Bert Harris, Grand Bahama Island, Bahamas, Melissodes cestus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/22039044' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-cestus-M-lateral.webp" alt="Melissodes cestus"/>
+            <div class="caption">Melissodes cestus M - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="colliciatus"
+              data-caption="Melissodes colliciatus" 
+              data-overlay="University of Arizona Insect Collection (UA:UAIC), Melissodes colliciatus, M (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=2260954' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Melissodes">
+            <img src="img/Melissodes-colliciatus-M-dorsal.webp" alt="Melissodes colliciatuss"/>
+            <div class="caption">Melissodes colliciatus M - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="compositus"
+              data-caption="Melissodes compositus" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes compositus, M (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1687328' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Callimelissodes">
+            <img src="img/Melissodes-compositus-M-face.webp" alt="Melissodes compositus"/>
+            <div class="caption">Melissodes compositus M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="compositus"
+              data-caption="Melissodes compositus" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes compositus, M (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1687328' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Callimelissodes">
+            <img src="img/Melissodes-compositus-M-lateral.webp" alt="Melissodes compositus"/>
+            <div class="caption">Melissodes compositus M - lateral veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="compositus"
+              data-caption="Melissodes compositus" 
+              data-overlay="Smithsonian Institution, National Museum of Natural History, Entomology Collection, Washington, D.C. Melissodes compositus, M (CC0 1.0)<br>
+              <a href='https://library.big-bee.net/portal/collections/individual/index.php?occid=1687328' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Callimelissodes">
+            <img src="img/Melissodes-compositus-M.webp" alt="Melissodes compositus"/>
+            <div class="caption">Melissodes compositus M - dorsal veiw</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="denticulatus"
+              data-caption="Melissodes denticulatus" 
+              data-overlay="Liz Anna Kozik, Wickham, Coralville, Iowa, Melissodes denticulatus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/316343128' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-denticulatus-F.webp" alt="Melissodes denticulatus"/>
+            <div class="caption">Melissodes denticulatus F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="denticulatus"
+              data-caption="Melissodes denticulatus" 
+              data-overlay="Liz Anna Kozik, Wickham, Coralville, Iowa, Melissodes denticulatus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/316343128' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-denticulatus-F2.webp" alt="Melissodes denticulatus"/>
+            <div class="caption">Melissodes denticulatus F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="denticulatus"
+              data-caption="Melissodes denticulatus" 
+              data-overlay="Liz Anna Kozik, Wickham, Coralville, Iowa, Melissodes denticulatus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/316343146' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-denticulatus-F-dorsal.webp" alt="Melissodes denticulatus"/>
+            <div class="caption">Melissodes denticulatus F - dorsal view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="denticulatus"
+              data-caption="Melissodes denticulatus" 
+              data-overlay="Angie Hartley, Chanticleer, Wayne, Pennsylvania, Melissodes denticulatus, F (CC BY-ND 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/320205849' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-denticulatus-F-dorsal2.webp" alt="Melissodes denticulatus"/>
+            <div class="caption">Melissodes denticulatus F - dorsal view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="denticulatus"
+              data-caption="Melissodes denticulatus" 
+              data-overlay="Angie Hartley, Chanticleer, Wayne, Pennsylvania, Melissodes denticulatus, F (CC BY-ND 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/320205849' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-denticulatus-F-lateral.webp" alt="Melissodes denticulatus"/>
+            <div class="caption">Melissodes denticulatus F - lateral view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="denticulatus"
+              data-caption="Melissodes denticulatus" 
+              data-overlay="Angie Hartley, Mountain Rd, Pennsylvania, Melissodes denticulatus, M (CC BY-ND 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/305067010' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-denticulatus-M-lateral.webp" alt="Melissodes denticulatus"/>
+            <div class="caption">Melissodes denticulatus M - lateral view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="denticulatus"
+              data-caption="Melissodes denticulatus" 
+              data-overlay="Angie Hartley, Mountain Rd, Pennsylvania, Melissodes denticulatus, M (CC BY-ND 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/305067010' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/Melissodes-denticulatus-M-face.webp" alt="Melissodes denticulatus"/>
+            <div class="caption">Melissodes denticulatus M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="Heather Holm, Minnetonka, Minnesota, Melissodes desponsus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/303803232' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-f-lateral.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - lateral view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="Heather Holm, Minnetonka, Minnesota, Melissodes desponsus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/308039189' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-f-flower.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="Chelsea Gottfried, Adams County, Ohio, Melissodes desponsus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/192990158' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-f-side.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - scopal view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="Pascal Gaudette, Cowansville, Quebec, Melissodes desponsus, F (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/296533511' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-f-side2.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus F - lateral view 2</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="Heather Holm, Minnetonka, Minnesota, Melissodes desponsus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/303803225' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-m.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus M</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="iNaturalist Username: hankj, Westmere, New York, Melissodes desponsus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/299163761' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-m-face.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="iNaturalist Username: chdphoto, Delafield, Wisconsin, Melissodes desponsus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/229567637' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-m-standing.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus M - standing</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="desponsus"
+              data-caption="Melissodes desponsus" 
+              data-overlay="Pascal Gaudette, Cowansville, Quebec, Melissodes desponsus, M (CC-BY-NC 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/296755699' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-desponsus-mating.webp" alt="Melissodes desponsus"/>
+            <div class="caption">Melissodes desponsus - mating</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Wendy McCrady, Coconino County, Arizona, Melissodes rivalis, M (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/302010560' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-m-dorsal.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis M</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Wendy McCrady, Coconino County, Arizona, Melissodes rivalis, M (CC BY 4.0)<br>
+              <a href='https://www.inaturalist.org/observations/302010560' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-m-face.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Monte L. Bean Life Science Museum, USA, Melissodes rivalis, M (CC BY-NC 4.0)<br>
+              <a href='https://media01.symbiota.org/media/ecdysis/BYU_BYUC/BYUC325/BYUC325171_-_DORSAL_1741044803_lg.jpg' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-dorsal-m.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis M - dorsal view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Monte L. Bean Life Science Museum, USA, Melissodes rivalis, M (CC BY-NC 4.0)<br>
+              <a href='https://media01.symbiota.org/media/ecdysis/BYU_BYUC/BYUC324/BYUC324871_-_FRONT_1741045431_lg.jpg' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-face-m.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis M - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Monte L. Bean Life Science Museum, USA, Melissodes rivalis, M (CC BY-NC 4.0)<br>
+              <a href='https://media01.symbiota.org/media/ecdysis/BYU_BYUC/BYUC324/BYUC324871_-_SIDE_1741045443_lg.jpg' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-lateral-m.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis M - lateral view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Christopher Wilson, Cache County, Utah, Melissodes rivalis, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-dorsal-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - dorsal view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Christopher Wilson, Cache County, Utah, Melissodes rivalis, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-face-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - face</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Christopher Wilson, Cache County, Utah, Melissodes rivalis, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-lateral-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - lateral view</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Christopher Wilson, Cache County, Utah, Melissodes rivalis, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-galea-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - galea</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Christopher Wilson, Cache County, Utah, Melissodes rivalis, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-pygidial-plate-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - pygidial plate</div>
+          </div>
+
+          <div class="gallery-card" 
+          id="rivalis"
+              data-caption="Melissodes rivalis" 
+              data-overlay="Christopher Wilson, Cache County, Utah, Melissodes rivalis, F (All Rights Reserved)<br>
+              <a href='https://www.inaturalist.org/observations/238768125' target='_blank' rel='noopener noreferrer' style='color:black; font-weight:bold; text-decoration:none;'>View original entry ➜</a>" 
+              data-subgenus="Eumelissodes">
+            <img src="img/melissodes-rivalis-terga-f.webp" alt="Melissodes rivalis"/>
+            <div class="caption">Melissodes rivalis F - terga</div>
+          </div>
+
+
+
+        </div>
+        <footer style="text-align: center;">
+    © 2025-present The Melissodes Project. All Rights Reserved.
+    </footer>
+      </main>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <div class="zoom-container">
+          <img id="overlay-img" src="" alt=""/>
+          </div>
+          <p id="overlay-caption"></p>
+          <button class="close-btn" onclick="closeOverlay()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const checkboxes = document.querySelectorAll('.subgenus-checkbox');
+    const cards = document.querySelectorAll('.gallery-card');
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+    const overlayCaption = document.getElementById('overlay-caption');
+    const gallery = document.getElementById('gallery');
+
+    // ✅ Sorting function
+    function sortGallery() {
+      const cardsArray = Array.from(cards);
+      cardsArray.sort((a, b) => {
+        const nameA = a.dataset.caption.toLowerCase();
+        const nameB = b.dataset.caption.toLowerCase();
+        return nameA.localeCompare(nameB);
+      });
+      cardsArray.forEach(card => gallery.appendChild(card));
+    }
+
+    function filterGallery() {
+      const query = searchInput.value.toLowerCase();
+      const activeSubgenera = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value.toLowerCase());
+
+      cards.forEach(card => {
+        const caption = card.dataset.caption.toLowerCase();
+        const subgenus = card.dataset.subgenus.toLowerCase();
+        const matchesSearch = caption.includes(query);
+        const matchesSubgenus = activeSubgenera.length === 0 || activeSubgenera.includes(subgenus);
+        card.style.display = (matchesSearch && matchesSubgenus) ? 'flex' : 'none';
+      });
+
+      sortGallery();
+    }
+
+    searchInput.addEventListener('input', filterGallery);
+    checkboxes.forEach(cb => cb.addEventListener('change', filterGallery));
+
+    // Overlay modal logic
+    cards.forEach(card => {
+  card.addEventListener('click', () => {
+    overlayImg.src = card.querySelector('img').src;
+    overlayCaption.innerHTML = card.dataset.overlay; // ← allows HTML tags
+    overlay.style.display = 'flex';
+  });
+});
+
+    function closeOverlay() {
+      overlay.style.display = 'none';
+    }
+
+    overlay.addEventListener('click', e => {
+      if(e.target === overlay) closeOverlay();
+    });
+
+    // ✅ Pre-fill search from URL hash and filter on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const hash = decodeURIComponent(location.hash.slice(1));
+      if (hash) {
+        searchInput.value = hash;
+      }
+      sortGallery();
+      filterGallery(); // apply initial filter immediately
+    });
+  </script>
+  <script>
+  document.querySelectorAll('img').forEach(img => img.loading = 'lazy');
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Improved regex to capture all CC variants:
+  // CC0
+  // CC-BY, CC-BY-NC, CC-BY-NC-SA, CC BY NC SA, etc.
+  const ccRegex = /\((CC(?:0|(?:[-\s]*[A-Z]{1,5})+))\s+([0-9.]+)\)/gi;
+
+  function buildCCURL(code, version) {
+    // normalize
+    let clean = code
+      .replace(/[()]/g, "")
+      .replace(/^CC[-\s]*/, "")
+      .trim()
+      .replace(/\s+/g, "-")
+      .toLowerCase();
+
+    // CC0 uses different base
+    if (clean === "0") {
+      return `https://creativecommons.org/publicdomain/zero/${version}/`;
+    }
+
+    return `https://creativecommons.org/licenses/${clean}/${version}/`;
+  }
+
+  function convertCC(text) {
+    return text.replace(ccRegex, (match, code, version) => {
+      const url = buildCCURL(code, version);
+
+      return `<a href="${url}"
+                 target="_blank"
+                 style="color:black; font-weight:bold; text-decoration:none;">
+                 (${code.replace(/\s+/g, " ")} ${version})
+              </a>`;
+    });
+  }
+
+  // Apply to gallery cards
+  document.querySelectorAll(".gallery-card").forEach(card => {
+    const raw = card.getAttribute("data-overlay");
+    if (raw) {
+      card.setAttribute("data-overlay", convertCC(raw));
+    }
+  });
+
+});
+</script>
+
+
+
+</body>
+</html>
