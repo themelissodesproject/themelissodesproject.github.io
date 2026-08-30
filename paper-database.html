@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Paper database</title>
+  <meta name="description" content="Full-text searchable index of the literature on the bee genus Melissodes">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://themelissodesproject.wildref.org/paper-database.html">
+
+  <meta name="application-name" content="The Melissodes Project">
+  <meta property="og:site_name" content="The Melissodes Project">
+  <meta property="og:title" content="Paper database">
+  <meta property="og:description" content="Full-text searchable index of the literature on the bee genus Melissodes">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themelissodesproject.wildref.org/paper-database.html">
+  <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Paper database">
+  <meta name="twitter:description" content="Full-text searchable index of the literature on the bee genus Melissodes">
+  <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
+
+  <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+  }
+
+  /* Several elements below set an explicit `display` (flex, absolute, etc.)
+     at the same specificity as the browser's built-in `[hidden]{display:
+     none}` rule, which -- by source order -- would otherwise win and keep
+     them visible even with the `hidden` attribute set. This makes `hidden`
+     authoritative everywhere. */
+  [hidden] {
+    display: none !important;
+  }
+
+  body {
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #222;
+        background-color: rgb(251, 251, 250);
+      }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .heading {
+    margin: 0 auto;
+  }
+
+  .bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .heading header{
+    padding: 20px;
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
+
+  .heading header .banner{
+    font-size: 1.63rem;
+    margin: 0;
+    flex: 1 1 auto;
+    font-weight: bold;
+  }
+
+  nav {
+    flex: 0 0 auto;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.95rem;
+  }
+
+  .page{
+    background-color: white;
+    border-style: solid;
+    border-color: #F3F4F5;
+    border-width: 1.5px;
+  }
+
+  .page-header {
+    padding: 20px;
+  }
+
+  .tagline {
+    max-width: 40rem;
+    margin: 0 0 1rem;
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.15rem 0.25rem 0.15rem 1rem;
+  }
+
+  .search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 12px 8px;
+    color: #222;
+  }
+  .search-bar input:focus { outline: none; }
+  .search-bar input::placeholder { color: #666; opacity: 0.85; }
+
+  .result-count {
+    font-size: 0.8rem;
+    color: #555;
+    white-space: nowrap;
+    padding: 0 0.75rem;
+  }
+
+  .search-hint {
+    margin: 0.6rem 0 0;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  .search-hint code {
+    background: #F3F4F5;
+    color: #222;
+    border-radius: 3px;
+    padding: 0.05rem 0.35rem;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 1.5rem;
+    padding: 0 20px 20px;
+    align-items: start;
+  }
+
+  @media (max-width: 46rem) {
+    .layout { grid-template-columns: 1fr; gap: 1.25rem; }
+  }
+
+  .drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 46.01rem) {
+    .drawer {
+      position: sticky;
+      top: 1.25rem;
+      align-self: start;
+      /* No max-height/overflow here on purpose: the topic and species
+         controls open absolutely-positioned dropdown panels inside the
+         drawer, and clipping overflow would cut those panels off. */
+    }
+  }
+
+  .drawer-section h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #222;
+    border-bottom: 1.5px solid #F3F4F5;
+    padding-bottom: 0.35rem;
+    margin: 0 0 0.6rem;
+  }
+
+  .chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .chip {
+    font-size: 0.8rem;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #555;
+    border-radius: 999px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    line-height: 1.2;
+  }
+  .chip:hover { border-color: #aaa; }
+  .chip[aria-pressed="true"] {
+    background: #333;
+    border-color: #333;
+    color: #fff;
+  }
+
+  .drawer-search {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+  }
+
+  .species-list {
+    max-height: 15rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding-right: 0.25rem;
+  }
+
+  .species-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 0.3rem 0.35rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .species-row:hover { background: #F3F4F5; }
+  .species-row:has(input:checked) {
+    background: #F3F4F5;
+    color: #222;
+    font-weight: 700;
+  }
+  .species-row input { margin: 0; flex-shrink: 0; }
+  .species-dot {
+    width: 0.6rem; height: 0.6rem; border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .species-no-match {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+    padding: 0.4rem 0.35rem;
+  }
+
+  /* species-filters doubles as a .dropdown-panel now (see .combo above) */
+  #species-filters.dropdown-panel {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0;
+    right: 0;
+  }
+
+  /* ---- Dropdown (topic) ---- */
+  .dropdown { position: relative; }
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    cursor: pointer;
+    text-align: left;
+  }
+  .dropdown-toggle:hover { border-color: #aaa; }
+  .dropdown-toggle .chevron {
+    width: 0.85rem;
+    height: 0.85rem;
+    flex-shrink: 0;
+    fill: none;
+    stroke: #555;
+    stroke-width: 2;
+    transition: transform 0.15s ease;
+  }
+  .dropdown-toggle[aria-expanded="true"] .chevron,
+  .combo-chevron[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+  .dropdown-panel {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+    max-height: 15rem;
+    overflow-y: auto;
+    padding: 0.4rem;
+  }
+
+  .dropdown-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .dropdown-option:hover { background: #F3F4F5; }
+  .dropdown-option:has(input:checked) { background: #F3F4F5; font-weight: 600; }
+  .dropdown-option input { margin: 0; }
+
+  /* ---- Combo (species: search box + chevron) ---- */
+  .combo { position: relative; }
+  .combo-input-row {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .combo-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.6rem;
+    color: #222;
+  }
+  .combo-input:focus { outline: none; }
+  .combo-chevron {
+    border: none;
+    border-left: 1px solid #ccc;
+    background: #fff;
+    padding: 0 0.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .combo-chevron:hover { background: #F3F4F5; }
+  .combo-chevron svg {
+    width: 0.85rem;
+    height: 0.85rem;
+    fill: none;
+    stroke: #555;
+    stroke-width: 2;
+    transition: transform 0.15s ease;
+  }
+
+  /* ---- Decade: type field + optional range ---- */
+  .decade-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .decade-range-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #444;
+    cursor: pointer;
+  }
+  .decade-inputs:not([hidden]) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .decade-input {
+    width: 100%;
+    min-width: 0;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    /* Suppress the native up/down spinner buttons -- this is a plain year
+       field, not a counter, and the spinner reads as a stray default
+       rather than an intentional control. Firefox: */
+    -moz-appearance: textfield;
+  }
+  /* Chrome/Safari/Edge use pseudo-elements instead of -moz-appearance. */
+  .decade-input::-webkit-outer-spin-button,
+  .decade-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .decade-input:focus { outline: none; border-color: #999; }
+  .decade-range-sep { color: #888; flex-shrink: 0; }
+
+  .clear-btn {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    background: none;
+    border: 1px solid #ccc;
+    color: #222;
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+  }
+  .clear-btn:hover { background: #F3F4F5; }
+
+  .active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .active-filters:empty { display: none; }
+  .active-filter {
+    font-size: 0.75rem;
+    background: #333;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.25rem 0.6rem 0.25rem 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .active-filter button {
+    background: none; border: none; color: inherit;
+    cursor: pointer; font-size: 0.85rem; line-height: 1; padding: 0;
+  }
+
+  .results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    padding: 1.1rem 1.25rem 1.2rem;
+    transition: margin 0.2s ease, width 0.2s ease, padding 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  /* "More context" used to bleed the card out over the filter drawer's
+     width so it could grow horizontally. It should instead stay the same
+     width as the collapsed card and grow taller (see .context-window,
+     which now wraps instead of scrolling sideways). */
+  .card.expanded {
+    z-index: 3;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  }
+
+  /* No flex-wrap: with wrapping enabled, a long title that fills the
+     whole row leaves no room for the ⋯ button on that row OR the next,
+     so it drops onto its own line below the title instead of staying
+     pinned top-right. Without wrap, the row simply grows as tall as the
+     (possibly multi-line) title, and align-items: flex-start keeps the
+     button anchored at its top-right corner regardless of title length. */
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .card h3 {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 0.15rem;
+    line-height: 1.35;
+  }
+
+  .card-byline {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0 0 0.65rem;
+  }
+
+  .card-excerpt-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .card-excerpt {
+    font-size: 0.92rem;
+    color: #222;
+    margin: 0;
+    padding: 0.6rem 0.8rem;
+    background: #F3F4F5;
+    border-radius: 6px;
+  }
+  .card-excerpt mark {
+    background: #fff59d;
+    color: #222;
+    border-radius: 2px;
+    padding: 0 0.1em;
+  }
+
+  .context-toggle {
+    font-size: 0.78rem;
+    background: none;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 6px;
+    padding: 0.3rem 0.65rem;
+    cursor: pointer;
+  }
+  .context-toggle:hover { background: #F3F4F5; }
+
+  /* Row holding the More/Less context toggle plus, when a paper has more
+     than one occurrence of the matched term, the prev/next match nav. */
+  .context-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .context-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .context-nav-btn {
+    font-size: 0.85rem;
+    line-height: 1;
+    background: none;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 6px;
+    padding: 0.28rem 0.55rem;
+    cursor: pointer;
+  }
+  .context-nav-btn:hover { background: #F3F4F5; }
+
+  .context-nav-label {
+    font-size: 0.78rem;
+    color: #555;
+    white-space: nowrap;
+  }
+
+  /* Keyword-in-context view shown when "More context" is toggled: the
+     extra text now wraps within the card's normal width and the box
+     simply grows taller, instead of bleeding wider and scrolling
+     horizontally as a single row. */
+  .context-window {
+    width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #222;
+    margin: 0;
+    padding: 1.1rem 1.25rem;
+    background: #F3F4F5;
+    border-radius: 6px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .context-window .context-before,
+  .context-window .context-after {
+    color: #555;
+  }
+  .context-window mark.context-target {
+    background: #fff59d;
+    color: #222;
+    border-radius: 2px;
+    padding: 0 0.2em;
+    font-weight: 700;
+  }
+
+  /* One-sentence teaser shown on the compact card -- from the paper's
+     own abstract (never the AI-generated overview, which is search-index
+     only and never rendered). The full text (plus keywords and minor
+     bibliographic fields) lives in .card-details instead. */
+  .card-summary {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0 0 0.75rem;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .species-badge {
+    font-style: italic;
+    font-size: 0.75rem;
+    color: #fff;
+    padding: 0.22rem 0.6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .topic-chip {
+    font-size: 0.75rem;
+    color: #222;
+    background: #F3F4F5;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* Curated AI-derived keyword tags -- kept visually distinct from the
+     species/topic filter badges above since they aren't clickable filters.
+     Only shown inside the details panel, not on the compact card. */
+  .keyword-chip {
+    font-size: 0.72rem;
+    color: #6b4f1d;
+    background: #FBEFD9;
+    border: 1px solid #EAD9AE;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* Non-Melissodes organisms directly tied to Melissodes in the paper
+     (host plants, parasites, predators, etc.) -- visually distinct from
+     both the clickable species/topic badges and the keyword tags. */
+  .organism-chip {
+    font-size: 0.75rem;
+    color: #2f4a3d;
+    background: #E7F0EA;
+    border: 1px solid #C9DCCF;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+  .organism-chip em { font-style: italic; }
+
+  /* "⋯" button that reveals keywords, the full abstract, and minor
+     bibliographic fields inline. Sits at the top-right of the card via
+     .card-top's space-between layout. */
+  .details-toggle {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 1.15rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
+  .details-toggle:hover { background: #F3F4F5; color: #222; }
+
+  .card-details {
+    margin: 0 0 0.85rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .details-section h4 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #888;
+    margin: 0 0 0.4rem;
+    font-weight: 700;
+  }
+
+  .details-section p {
+    font-size: 0.88rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .details-meta {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+  }
+
+  .card-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .card-links a { text-decoration: none; color: #333; }
+  .card-links a:hover { text-decoration: underline; }
+
+  .empty-state {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 2rem 0;
+  }
+
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+
+  @media only screen and (max-width: 1000px ){
+    .bar-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-header header .banner {
+      text-align: center;
+      width: 100%;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center
+    }
+  }
+
+  footer {
+      margin: 40px 0;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <header class="bar-header">
+        <p class="banner">The Melissodes Project</p>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources-menu.html">Resources</a></li>
+            <li><a href="melissodes.html">Genus</a></li>
+            <li><a href="species-index.html">Species Index</a></li>
+            <li><a href="gallery-menu.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="page">
+      <header class="page-header">
+        <p class="tagline">A full-text searchable index of the literature: taxonomy, ecology, natural enemies, and more. Every record links out to its legal source.</p>
+        <div class="search-bar">
+          <label class="visually-hidden" for="q">Search full text</label>
+          <input id="q" type="text" autocomplete="off" placeholder="Search full text: species, localities, methods, taxa…" />
+          <span id="result-count" class="result-count" aria-live="polite"></span>
+        </div>
+        <p class="search-hint">
+          Search matches full text as well as each paper's tagged species, topics, and keywords --
+          e.g. <code>Melissodes rivalis biology</code> finds papers tagged with that species and topic.
+          Combine terms: <code>Melissodes + Triepeolus</code> for papers mentioning both,
+          <code>Melissodes / Triepeolus</code> for papers mentioning either.
+        </p>
+      </header>
+
+      <main class="layout">
+        <aside class="drawer" aria-label="Filters">
+          <div class="drawer-section">
+            <h2>Topic</h2>
+            <div class="dropdown" id="topic-dropdown">
+              <button type="button" id="topic-dropdown-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
+                <span id="topic-dropdown-label">All topics</span>
+                <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div id="topic-dropdown-panel" class="dropdown-panel" role="listbox" aria-multiselectable="true" hidden></div>
+            </div>
+          </div>
+
+          <div class="drawer-section">
+            <h2>Species</h2>
+            <div class="combo" id="species-combo">
+              <div class="combo-input-row">
+                <label class="visually-hidden" for="species-search">Search species</label>
+                <input id="species-search" class="combo-input" type="text" autocomplete="off" placeholder="Search species…" />
+                <button type="button" id="species-chevron" class="combo-chevron" aria-haspopup="listbox" aria-expanded="false" aria-label="Show species list">
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <div id="species-filters" class="dropdown-panel species-list" role="listbox" aria-multiselectable="true" hidden></div>
+            </div>
+          </div>
+
+          <div class="drawer-section">
+            <h2 id="decade-heading">Year</h2>
+            <div class="decade-filter">
+              <label class="decade-range-toggle">
+                <input type="checkbox" id="decade-range-toggle" />
+                Use a range
+              </label>
+              <div class="decade-inputs" id="decade-inputs-single">
+                <label class="visually-hidden" for="decade-single">Year</label>
+                <input type="number" id="decade-single" class="decade-input" placeholder="e.g. 1990" step="10" inputmode="numeric" />
+              </div>
+              <div class="decade-inputs" id="decade-inputs-range" hidden>
+                <label class="visually-hidden" for="decade-from">From year</label>
+                <input type="number" id="decade-from" class="decade-input" placeholder="From" inputmode="numeric" />
+                <span class="decade-range-sep">–</span>
+                <label class="visually-hidden" for="decade-to">To year</label>
+                <input type="number" id="decade-to" class="decade-input" placeholder="To" inputmode="numeric" />
+              </div>
+            </div>
+          </div>
+
+          <div class="drawer-section">
+            <h2>Source</h2>
+            <div id="source-filters" class="chip-list"></div>
+          </div>
+
+          <button id="clear-filters" class="clear-btn" type="button">Clear all filters</button>
+        </aside>
+
+        <section class="results" aria-label="Results">
+          <div id="active-filters" class="active-filters"></div>
+          <div id="results-list" class="results-list"></div>
+          <p id="empty-state" class="empty-state" hidden>No records match this search and filter combination. Try clearing a filter or broadening the search term.</p>
+        </section>
+      </main>
+
+      <footer style="text-align: center;">
+        Full text, tagged species/topics/keywords, and curated overviews are indexed for search; OCR text itself is never displayed in full -- results show short matching excerpts, and every record links to its legal published source. Records are compiled and maintained by hand.<br>
+        © 2025-present The Melissodes Project. All Rights Reserved.
+      </footer>
+    </div>
+  </div>
+
+<script type="module" src="paper-database/js/app.js"></script>
+</body>
+</html>
