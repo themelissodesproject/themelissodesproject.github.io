@@ -8,8 +8,9 @@ const state = {
   query: "",
   species: new Set(),
   topics: new Set(),
-  decades: new Set(),
-  sources: new Set(),
+  // Exact inclusive year range: { from, to }, or null when no year filter is
+  // active. A single typed year is stored as from === to.
+  year: null,
 };
 
 // Must match the marker string build.py writes immediately before the OCR
@@ -55,8 +56,7 @@ async function init() {
 
   buildTopicFilters();
   buildSpeciesFilters();
-  setupDecadeControls();
-  buildSourceFilters();
+  setupYearControls();
 
   setupDropdown("topic-dropdown-toggle", "topic-dropdown-panel");
   setupDropdown("species-chevron", "species-filters");
@@ -210,104 +210,77 @@ function closeAllDropdowns() {
     .forEach(b => b.setAttribute("aria-expanded", "false"));
 }
 
-// ---------- Decade: typed value, optionally as a from/to range ----------
+// ---------- Year: typed value, optionally as a from/to range ----------
 //
-// Internally this still fills state.decades with "YYYYs" bucket strings —
-// exactly what matchesFilters() and the Pagefind decade:XXXXs filter
-// already expect — so a range just expands to every decade bucket it spans
-// and everything downstream (browse filtering, search filters, the active
-// filter chips) works unmodified.
+// Filters on the exact publication year -- state.year is either null (no
+// filter) or an inclusive { from, to } range, with from === to for a single
+// typed year. matchesFilters() and the Pagefind year:YYYY filter both work
+// against exact years, never decade buckets.
 
-function setupDecadeControls() {
-  const rangeToggle = document.getElementById("decade-range-toggle");
-  const singleWrap = document.getElementById("decade-inputs-single");
-  const rangeWrap = document.getElementById("decade-inputs-range");
-  const singleInput = document.getElementById("decade-single");
-  const fromInput = document.getElementById("decade-from");
-  const toInput = document.getElementById("decade-to");
+function setupYearControls() {
+  const rangeToggle = document.getElementById("year-range-toggle");
+  const singleWrap = document.getElementById("year-inputs-single");
+  const rangeWrap = document.getElementById("year-inputs-range");
+  const singleInput = document.getElementById("year-single");
+  const fromInput = document.getElementById("year-from");
+  const toInput = document.getElementById("year-to");
 
-  const knownDecades = new Set();
-  catalog.forEach(p => { if (p.year) knownDecades.add(Math.floor(p.year / 10) * 10); });
-  if (knownDecades.size) {
-    const minD = Math.min(...knownDecades);
-    const maxD = Math.max(...knownDecades);
-    [singleInput, fromInput, toInput].forEach(inp => { inp.min = minD; inp.max = maxD + 9; });
-    singleInput.placeholder = `e.g. ${maxD}`;
-    fromInput.placeholder = String(minD);
-    toInput.placeholder = String(maxD + 9);
+  const knownYears = [];
+  catalog.forEach(p => { if (p.year) knownYears.push(p.year); });
+  if (knownYears.length) {
+    const minY = Math.min(...knownYears);
+    const maxY = Math.max(...knownYears);
+    [singleInput, fromInput, toInput].forEach(inp => { inp.min = minY; inp.max = maxY; });
+    singleInput.placeholder = `e.g. ${maxY}`;
+    fromInput.placeholder = String(minY);
+    toInput.placeholder = String(maxY);
   }
 
-  function applyDecadeInputs() {
-    state.decades.clear();
+  function applyYearInputs() {
     if (rangeToggle.checked) {
       const from = parseInt(fromInput.value, 10);
       const to = parseInt(toInput.value, 10);
-      if (!isNaN(from) && !isNaN(to)) {
-        const lo = Math.floor(Math.min(from, to) / 10) * 10;
-        const hi = Math.floor(Math.max(from, to) / 10) * 10;
-        for (let d = lo; d <= hi; d += 10) state.decades.add(`${d}s`);
-      }
+      state.year = (!isNaN(from) && !isNaN(to))
+        ? { from: Math.min(from, to), to: Math.max(from, to) }
+        : null;
     } else {
       const val = parseInt(singleInput.value, 10);
-      if (!isNaN(val)) state.decades.add(`${Math.floor(val / 10) * 10}s`);
+      state.year = !isNaN(val) ? { from: val, to: val } : null;
     }
     render();
   }
 
-  const heading = document.getElementById("decade-heading");
+  const heading = document.getElementById("year-heading");
 
   rangeToggle.addEventListener("change", () => {
     singleWrap.hidden = rangeToggle.checked;
     rangeWrap.hidden = !rangeToggle.checked;
     heading.textContent = rangeToggle.checked ? "Years" : "Year";
-    applyDecadeInputs();
+    applyYearInputs();
   });
-  singleInput.addEventListener("input", debounce(applyDecadeInputs, 300));
-  fromInput.addEventListener("input", debounce(applyDecadeInputs, 300));
-  toInput.addEventListener("input", debounce(applyDecadeInputs, 300));
+  singleInput.addEventListener("input", debounce(applyYearInputs, 300));
+  fromInput.addEventListener("input", debounce(applyYearInputs, 300));
+  toInput.addEventListener("input", debounce(applyYearInputs, 300));
 }
 
-function resetDecadeInputs() {
-  const rangeToggle = document.getElementById("decade-range-toggle");
+function resetYearInputs() {
+  const rangeToggle = document.getElementById("year-range-toggle");
   rangeToggle.checked = false;
-  document.getElementById("decade-inputs-single").hidden = false;
-  document.getElementById("decade-inputs-range").hidden = true;
-  document.getElementById("decade-heading").textContent = "Year";
-  document.getElementById("decade-single").value = "";
-  document.getElementById("decade-from").value = "";
-  document.getElementById("decade-to").value = "";
-}
-
-function buildSourceFilters() {
-  const sources = new Set();
-  catalog.forEach(p => { if (p.source_type) sources.add(p.source_type); });
-  const el = document.getElementById("source-filters");
-  el.innerHTML = "";
-  [...sources].sort().forEach(s => {
-    const btn = document.createElement("button");
-    btn.className = "chip";
-    btn.type = "button";
-    btn.textContent = SOURCE_LABELS[s] || s;
-    btn.setAttribute("aria-pressed", "false");
-    btn.addEventListener("click", () => toggle(state.sources, s, btn, render));
-    el.appendChild(btn);
-  });
-}
-
-function toggle(set, value, btn, after) {
-  if (set.has(value)) { set.delete(value); btn.setAttribute("aria-pressed", "false"); }
-  else { set.add(value); btn.setAttribute("aria-pressed", "true"); }
-  after();
+  document.getElementById("year-inputs-single").hidden = false;
+  document.getElementById("year-inputs-range").hidden = true;
+  document.getElementById("year-heading").textContent = "Year";
+  document.getElementById("year-single").value = "";
+  document.getElementById("year-from").value = "";
+  document.getElementById("year-to").value = "";
 }
 
 function clearAllFilters() {
-  state.species.clear(); state.topics.clear(); state.decades.clear(); state.sources.clear();
-  document.querySelectorAll('[aria-pressed="true"]').forEach(el => el.setAttribute("aria-pressed", "false"));
+  state.species.clear(); state.topics.clear(); state.year = null;
   document.querySelectorAll("#species-filters input, #topic-dropdown-panel input").forEach(cb => { cb.checked = false; });
   updateTopicDropdownLabel();
   document.getElementById("species-search").value = "";
   filterSpeciesRows("");
-  resetDecadeInputs();
+  resetYearInputs();
   closeAllDropdowns();
   render();
 }
@@ -335,14 +308,12 @@ function renderActiveFilters() {
   el.innerHTML = "";
   const groups = [
     ["species", state.species], ["topic", state.topics],
-    ["decade", state.decades], ["source", state.sources],
   ];
   groups.forEach(([label, set]) => {
     set.forEach(value => {
       const chip = document.createElement("span");
       chip.className = "active-filter";
-      const display = label === "topic" ? (topicById.get(value)?.label || value)
-        : label === "source" ? (SOURCE_LABELS[value] || value) : value;
+      const display = label === "topic" ? (topicById.get(value)?.label || value) : value;
       chip.innerHTML = `<span>${escapeHtml(display)}</span>`;
       const x = document.createElement("button");
       x.type = "button";
@@ -357,6 +328,26 @@ function renderActiveFilters() {
       el.appendChild(chip);
     });
   });
+
+  if (state.year) {
+    const display = state.year.from === state.year.to
+      ? String(state.year.from)
+      : `${state.year.from}–${state.year.to}`;
+    const chip = document.createElement("span");
+    chip.className = "active-filter";
+    chip.innerHTML = `<span>${escapeHtml(display)}</span>`;
+    const x = document.createElement("button");
+    x.type = "button";
+    x.setAttribute("aria-label", `Remove filter ${display}`);
+    x.textContent = "×";
+    x.addEventListener("click", () => {
+      state.year = null;
+      resetYearInputs();
+      render();
+    });
+    chip.appendChild(x);
+    el.appendChild(chip);
+  }
 }
 
 function syncFilterButtons() {
@@ -367,25 +358,19 @@ function syncFilterButtons() {
     cb.checked = state.topics.has(cb.value);
   });
   updateTopicDropdownLabel();
-  // Decade is a typed value/range rather than a toggle list, so removing a
-  // decade chip from the active-filters row can't be mapped back onto a
-  // single input — just clear the typed fields so they don't imply a
-  // selection that's no longer fully active.
-  if (!state.decades.size) resetDecadeInputs();
-  document.querySelectorAll("#source-filters .chip").forEach(btn => {
-    const key = Object.keys(SOURCE_LABELS).find(k => SOURCE_LABELS[k] === btn.textContent) || btn.textContent;
-    btn.setAttribute("aria-pressed", state.sources.has(key) ? "true" : "false");
-  });
+  // Year is a typed value/range rather than a toggle list, so removing the
+  // year chip from the active-filters row can't be mapped back onto the
+  // inputs — just clear the typed fields so they don't imply a selection
+  // that's no longer active.
+  if (!state.year) resetYearInputs();
 }
 
 function matchesFilters(p) {
   if (state.species.size && ![...state.species].some(s => p.species.includes(s))) return false;
   if (state.topics.size && ![...state.topics].some(t => p.topics.includes(t))) return false;
-  if (state.decades.size) {
-    const d = p.year ? `${Math.floor(p.year / 10) * 10}s` : null;
-    if (!d || !state.decades.has(d)) return false;
+  if (state.year) {
+    if (!p.year || p.year < state.year.from || p.year > state.year.to) return false;
   }
-  if (state.sources.size && !state.sources.has(p.source_type)) return false;
   return true;
 }
 
@@ -544,8 +529,11 @@ async function renderSearchResults() {
   const filters = {};
   if (state.species.size) filters.species = [...state.species];
   if (state.topics.size) filters.topic = [...state.topics];
-  if (state.decades.size) filters.decade = [...state.decades];
-  if (state.sources.size) filters.source_type = [...state.sources];
+  if (state.year) {
+    const years = [];
+    for (let y = state.year.from; y <= state.year.to; y++) years.push(String(y));
+    filters.year = years;
+  }
 
   const myToken = ++searchToken;
   const groups = parseBooleanQuery(state.query);
@@ -610,7 +598,7 @@ function renderMessage(msg) {
 
 function setCount(n, total) {
   const el = document.getElementById("result-count");
-  el.textContent = state.query || state.species.size || state.topics.size || state.decades.size || state.sources.size
+  el.textContent = state.query || state.species.size || state.topics.size || state.year
     ? `${n} of ${total} records`
     : `${total} records`;
 }

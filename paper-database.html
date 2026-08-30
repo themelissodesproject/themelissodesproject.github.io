@@ -204,29 +204,6 @@
     margin: 0 0 0.6rem;
   }
 
-  .chip-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .chip {
-    font-size: 0.8rem;
-    border: 1px solid #ddd;
-    background: #fff;
-    color: #555;
-    border-radius: 999px;
-    padding: 0.3rem 0.7rem;
-    cursor: pointer;
-    line-height: 1.2;
-  }
-  .chip:hover { border-color: #aaa; }
-  .chip[aria-pressed="true"] {
-    background: #333;
-    border-color: #333;
-    color: #fff;
-  }
-
   .drawer-search {
     width: 100%;
     font-size: 0.85rem;
@@ -386,13 +363,13 @@
     transition: transform 0.15s ease;
   }
 
-  /* ---- Decade: type field + optional range ---- */
-  .decade-filter {
+  /* ---- Year: type field + optional range ---- */
+  .year-filter {
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
   }
-  .decade-range-toggle {
+  .year-range-toggle {
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -400,12 +377,12 @@
     color: #444;
     cursor: pointer;
   }
-  .decade-inputs:not([hidden]) {
+  .year-inputs:not([hidden]) {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  .decade-input {
+  .year-input {
     width: 100%;
     min-width: 0;
     font-size: 0.85rem;
@@ -420,13 +397,13 @@
     -moz-appearance: textfield;
   }
   /* Chrome/Safari/Edge use pseudo-elements instead of -moz-appearance. */
-  .decade-input::-webkit-outer-spin-button,
-  .decade-input::-webkit-inner-spin-button {
+  .year-input::-webkit-outer-spin-button,
+  .year-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-  .decade-input:focus { outline: none; border-color: #999; }
-  .decade-range-sep { color: #888; flex-shrink: 0; }
+  .year-input:focus { outline: none; border-color: #999; }
+  .year-range-sep { color: #888; flex-shrink: 0; }
 
   .clear-btn {
     align-self: flex-start;
@@ -823,29 +800,24 @@
           </div>
 
           <div class="drawer-section">
-            <h2 id="decade-heading">Year</h2>
-            <div class="decade-filter">
-              <label class="decade-range-toggle">
-                <input type="checkbox" id="decade-range-toggle" />
+            <h2 id="year-heading">Year</h2>
+            <div class="year-filter">
+              <label class="year-range-toggle">
+                <input type="checkbox" id="year-range-toggle" />
                 Use a range
               </label>
-              <div class="decade-inputs" id="decade-inputs-single">
-                <label class="visually-hidden" for="decade-single">Year</label>
-                <input type="number" id="decade-single" class="decade-input" placeholder="e.g. 1990" step="10" inputmode="numeric" />
+              <div class="year-inputs" id="year-inputs-single">
+                <label class="visually-hidden" for="year-single">Year</label>
+                <input type="number" id="year-single" class="year-input" placeholder="e.g. 1990" inputmode="numeric" />
               </div>
-              <div class="decade-inputs" id="decade-inputs-range" hidden>
-                <label class="visually-hidden" for="decade-from">From year</label>
-                <input type="number" id="decade-from" class="decade-input" placeholder="From" inputmode="numeric" />
-                <span class="decade-range-sep">–</span>
-                <label class="visually-hidden" for="decade-to">To year</label>
-                <input type="number" id="decade-to" class="decade-input" placeholder="To" inputmode="numeric" />
+              <div class="year-inputs" id="year-inputs-range" hidden>
+                <label class="visually-hidden" for="year-from">From year</label>
+                <input type="number" id="year-from" class="year-input" placeholder="From" inputmode="numeric" />
+                <span class="year-range-sep">–</span>
+                <label class="visually-hidden" for="year-to">To year</label>
+                <input type="number" id="year-to" class="year-input" placeholder="To" inputmode="numeric" />
               </div>
             </div>
-          </div>
-
-          <div class="drawer-section">
-            <h2>Source</h2>
-            <div id="source-filters" class="chip-list"></div>
           </div>
 
           <button id="clear-filters" class="clear-btn" type="button">Clear all filters</button>
@@ -859,7 +831,6 @@
       </main>
 
       <footer style="text-align: center;">
-        Full text, tagged species/topics/keywords, and curated overviews are indexed for search; OCR text itself is never displayed in full -- results show short matching excerpts, and every record links to its legal published source. Records are compiled and maintained by hand.<br>
         © 2025-present The Melissodes Project. All Rights Reserved.
       </footer>
     </div>

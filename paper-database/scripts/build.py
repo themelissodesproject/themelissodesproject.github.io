@@ -165,10 +165,8 @@ def build():
 
         filter_pairs = [f"species:{esc(sp)}" for sp in p.get("species", [])]
         filter_pairs += [f"topic:{esc(t)}" for t in p.get("topics", [])]
-        if p.get("source_type"):
-            filter_pairs.append(f"source_type:{esc(p['source_type'])}")
         if p.get("year"):
-            filter_pairs.append(f"decade:{esc(str((int(p['year']) // 10) * 10))}s")
+            filter_pairs.append(f"year:{esc(str(int(p['year'])))}")
         filter_attr = ", ".join(filter_pairs)
 
         # Metadata as searchable TEXT, not just as exact-match filter values.
