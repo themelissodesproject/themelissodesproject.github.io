@@ -163,11 +163,26 @@ def build():
             ocr = ""
             print(f"  [warn] no fulltext file for '{pid}' -- expected {txt_path.relative_to(ROOT)}")
 
-        filter_pairs = [f"species:{esc(sp)}" for sp in p.get("species", [])]
-        filter_pairs += [f"topic:{esc(t)}" for t in p.get("topics", [])]
+        # One data-pagefind-filter attribute per value, not one comma-joined
+        # "species:X, topic:Y, year:Z" attribute -- same issue as the
+        # data-pagefind-meta split above. Pagefind's inline "key:value" filter
+        # form captures everything up to the end of the attribute, and only
+        # the LAST item in a comma list may use that inline form; every
+        # earlier "key:value" segment gets swallowed into the tail of the
+        # filter before it instead of becoming its own filter/value. Giving
+        # each value (each species, each topic, and the year) its own
+        # single-item attribute sidesteps that entirely -- each one is
+        # trivially "the last item" in its own one-item list.
+        filter_spans = "".join(
+            f'\n  <span data-pagefind-filter="species:{esc(sp)}" hidden></span>'
+            for sp in p.get("species", [])
+        )
+        filter_spans += "".join(
+            f'\n  <span data-pagefind-filter="topic:{esc(t)}" hidden></span>'
+            for t in p.get("topics", [])
+        )
         if p.get("year"):
-            filter_pairs.append(f"year:{esc(str(int(p['year'])))}")
-        filter_attr = ", ".join(filter_pairs)
+            filter_spans += f'\n  <span data-pagefind-filter="year:{esc(str(int(p["year"])))}" hidden></span>'
 
         # Metadata as searchable TEXT, not just as exact-match filter values.
         # data-pagefind-filter only powers the sidebar's exact-match chips --
@@ -207,9 +222,7 @@ def build():
   in the site UI and carries no reading layout. See legal_url for the
   actual publication.
 -->
-<article data-pagefind-body
-  data-pagefind-filter="{filter_attr}"
-  >
+<article data-pagefind-body>
   <!--
     Two separate data-pagefind-meta attributes, not one comma-joined
     "title:..., paper_id:..." attribute -- Pagefind does not reliably
@@ -220,7 +233,7 @@ def build():
   -->
   <h1 data-pagefind-meta="title">{esc(p['title'])}</h1>
   <span data-pagefind-meta="paper_id:{esc(pid)}" hidden></span>
-  <p>{esc(', '.join(p.get('authors', [])))} ({p.get('year', '')}). {esc(p.get('journal',''))}.</p>
+  <p>{esc(', '.join(p.get('authors', [])))} ({p.get('year', '')}). {esc(p.get('journal',''))}.</p>{filter_spans}
   <div data-pagefind-weight="5">{esc(metadata_search_text)}</div>
   <div data-pagefind-weight="3">{esc(overview)}</div>
   <div data-pagefind-weight="0.3">{esc(p.get('abstract',''))}</div>
