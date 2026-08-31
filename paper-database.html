@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Paper database</title>
-  <meta name="description" content="Full-text searchable index of the literature on the bee genus Melissodes">
+  <meta name="description" content="A full-text searchable databse of the literature regarding Melissodes">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
@@ -15,14 +15,14 @@
   <meta name="application-name" content="The Melissodes Project">
   <meta property="og:site_name" content="The Melissodes Project">
   <meta property="og:title" content="Paper database">
-  <meta property="og:description" content="Full-text searchable index of the literature on the bee genus Melissodes">
+  <meta property="og:description" content="A full-text searchable databse of the literature regarding Melissodes">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://themelissodesproject.wildref.org/paper-database.html">
   <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Paper database">
-  <meta name="twitter:description" content="Full-text searchable index of the literature on the bee genus Melissodes">
+  <meta name="twitter:description" content="A full-text searchable databse of the literature regarding Melissodes">
   <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
 
   <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
@@ -37,11 +37,6 @@
       font-family: "Roboto", sans-serif;
   }
 
-  /* Several elements below set an explicit `display` (flex, absolute, etc.)
-     at the same specificity as the browser's built-in `[hidden]{display:
-     none}` rule, which -- by source order -- would otherwise win and keep
-     them visible even with the `hidden` attribute set. This makes `hidden`
-     authoritative everywhere. */
   [hidden] {
     display: none !important;
   }
@@ -188,9 +183,7 @@
       position: sticky;
       top: 1.25rem;
       align-self: start;
-      /* No max-height/overflow here on purpose: the topic and species
-         controls open absolutely-positioned dropdown panels inside the
-         drawer, and clipping overflow would cut those panels off. */
+
     }
   }
 
@@ -257,7 +250,6 @@
     padding: 0.4rem 0.35rem;
   }
 
-  /* species-filters doubles as a .dropdown-panel now (see .combo above) */
   #species-filters.dropdown-panel {
     position: absolute;
     top: calc(100% + 0.3rem);
@@ -265,7 +257,6 @@
     right: 0;
   }
 
-  /* ---- Dropdown (topic) ---- */
   .dropdown { position: relative; }
   .dropdown-toggle {
     display: flex;
@@ -323,7 +314,6 @@
   .dropdown-option:has(input:checked) { background: #F3F4F5; font-weight: 600; }
   .dropdown-option input { margin: 0; }
 
-  /* ---- Combo (species: search box + chevron) ---- */
   .combo { position: relative; }
   .combo-input-row {
     display: flex;
@@ -363,7 +353,6 @@
     transition: transform 0.15s ease;
   }
 
-  /* ---- Year: type field + optional range ---- */
   .year-filter {
     display: flex;
     flex-direction: column;
@@ -391,12 +380,10 @@
     border-radius: 6px;
     background: #fff;
     color: #222;
-    /* Suppress the native up/down spinner buttons -- this is a plain year
-       field, not a counter, and the spinner reads as a stray default
-       rather than an intentional control. Firefox: */
+
     -moz-appearance: textfield;
   }
-  /* Chrome/Safari/Edge use pseudo-elements instead of -moz-appearance. */
+
   .year-input::-webkit-outer-spin-button,
   .year-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -455,21 +442,11 @@
     transition: margin 0.2s ease, width 0.2s ease, padding 0.2s ease, box-shadow 0.2s ease;
   }
 
-  /* "More context" used to bleed the card out over the filter drawer's
-     width so it could grow horizontally. It should instead stay the same
-     width as the collapsed card and grow taller (see .context-window,
-     which now wraps instead of scrolling sideways). */
   .card.expanded {
     z-index: 3;
     box-shadow: 0 10px 26px rgba(0,0,0,0.18);
   }
 
-  /* No flex-wrap: with wrapping enabled, a long title that fills the
-     whole row leaves no room for the ⋯ button on that row OR the next,
-     so it drops onto its own line below the title instead of staying
-     pinned top-right. Without wrap, the row simply grows as tall as the
-     (possibly multi-line) title, and align-items: flex-start keeps the
-     button anchored at its top-right corner regardless of title length. */
   .card-top {
     display: flex;
     justify-content: space-between;
@@ -526,8 +503,6 @@
   }
   .context-toggle:hover { background: #F3F4F5; }
 
-  /* Row holding the More/Less context toggle plus, when a paper has more
-     than one occurrence of the matched term, the prev/next match nav. */
   .context-controls {
     display: flex;
     align-items: center;
@@ -559,10 +534,6 @@
     white-space: nowrap;
   }
 
-  /* Keyword-in-context view shown when "More context" is toggled: the
-     extra text now wraps within the card's normal width and the box
-     simply grows taller, instead of bleeding wider and scrolling
-     horizontally as a single row. */
   .context-window {
     width: 100%;
     font-size: 0.92rem;
@@ -587,10 +558,6 @@
     font-weight: 700;
   }
 
-  /* One-sentence teaser shown on the compact card -- from the paper's
-     own abstract (never the AI-generated overview, which is search-index
-     only and never rendered). The full text (plus keywords and minor
-     bibliographic fields) lives in .card-details instead. */
   .card-summary {
     font-size: 0.9rem;
     color: #333;
@@ -622,9 +589,6 @@
     padding: 0.2rem 0.6rem;
   }
 
-  /* Curated AI-derived keyword tags -- kept visually distinct from the
-     species/topic filter badges above since they aren't clickable filters.
-     Only shown inside the details panel, not on the compact card. */
   .keyword-chip {
     font-size: 0.72rem;
     color: #6b4f1d;
@@ -634,9 +598,6 @@
     padding: 0.2rem 0.6rem;
   }
 
-  /* Non-Melissodes organisms directly tied to Melissodes in the paper
-     (host plants, parasites, predators, etc.) -- visually distinct from
-     both the clickable species/topic badges and the keyword tags. */
   .organism-chip {
     font-size: 0.75rem;
     color: #2f4a3d;
@@ -647,9 +608,6 @@
   }
   .organism-chip em { font-style: italic; }
 
-  /* "⋯" button that reveals keywords, the full abstract, and minor
-     bibliographic fields inline. Sits at the top-right of the card via
-     .card-top's space-between layout. */
   .details-toggle {
     flex-shrink: 0;
     background: none;
