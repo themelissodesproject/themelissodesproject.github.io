@@ -3,8 +3,7 @@ name: Build paper database
 on:
   push:
     branches: [main]
-    # Ignore pushes that only touch generated output, so this workflow's
-    # own commit (step below) doesn't trigger itself in a loop.
+
     paths-ignore:
       - "paper-database/records/**"
       - "paper-database/data/catalog.json"
@@ -15,8 +14,7 @@ on:
 permissions:
   contents: write
 
-# Queue runs instead of killing an in-progress one -- cancelling mid-commit
-# is what left the site half-updated before.
+
 concurrency:
   group: paper-database-build
   cancel-in-progress: false
