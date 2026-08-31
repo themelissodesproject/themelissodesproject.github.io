@@ -2,26 +2,30 @@
 """
 Build script for The Melissodes Project paper database.
 
-This page lives inside a larger site: the page itself is served from the
-site root as `paper-database.html`, while everything that supports it
-(source data, frontend script, this build script) lives alongside it in
-the `paper-database/` directory. The build mirrors that same split in its
-output so the page's relative references keep resolving the same way in
-both places:
-  - source: <site-root>/paper-database.html + <site-root>/paper-database/{js,data}/...
-  - built:  dist/paper-database.html        + dist/paper-database/{js,data,records}/...
+This runs IN PLACE, only ever touching files under paper-database/. It
+does not build, copy, or know anything about the rest of the site --
+your other pages, images, and any large media folders are never read,
+copied, or rebuilt. The wider site keeps deploying exactly however it
+already does (e.g. GitHub Pages "Deploy from a branch" straight off this
+repo) with zero involvement from this script.
 
-Reads paper-database/data/papers.json (which includes private OCR full
-text) and produces a dist/ tree where:
-  - dist/paper-database.html is a copy of the page itself.
-  - dist/paper-database/js/app.js is a copy of the frontend script.
-  - dist/paper-database/records/<id>.html holds the OCR text wrapped for
-    Pagefind indexing only. These pages are never linked from the UI, are
-    marked noindex, and render no reading-friendly layout -- they exist
-    purely as index fodder.
-  - dist/paper-database/data/catalog.json holds everything EXCEPT
-    ocr_text, for the frontend to use when rendering cards, badges, and
-    filters.
+Reads paper-database/data/papers.json (metadata only -- the private OCR
+full text lives separately, one .txt per paper, in
+paper-database/data/fulltext/) and writes, in place:
+  - paper-database/records/<id>.html -- the OCR text wrapped for Pagefind
+    indexing only. These pages are never linked from the UI, are marked
+    noindex, and render no reading-friendly layout -- they exist purely
+    as index fodder. See the README's privacy-model section for the
+    honest caveat about what "hidden" does and doesn't guarantee on a
+    plain static host.
+  - paper-database/data/catalog.json -- papers.json's fields, sorted and
+    defaulted, for the frontend to render cards/badges/filters from.
+    (papers.json itself never contains OCR text, so this step is about
+    consistent sorting/defaults, not stripping anything private.)
+  - paper-database/data/species.json -- a stable color per species name.
+  paper-database/data/topics.json is NOT regenerated -- the frontend
+  fetches your hand-maintained source file directly, since in-place means
+  there's nowhere else for it to live.
 
 Per-paper fields in papers.json beyond the obvious bibliographic ones:
   - species / topics: also indexed as free-text search terms (not just as
@@ -46,25 +50,23 @@ Per-paper fields in papers.json beyond the obvious bibliographic ones:
     (moderately weighted -- below keywords/species/topics, above the raw
     OCR body).
 
-Run `npx pagefind --site dist/paper-database` after this script to build
-the search index (scoped to dist/paper-database, not the whole dist/,
-since that's the directory app.js's own relative pagefind import resolves
-against -- see the note by pagefind import in app.js).
+Run `npx pagefind --site paper-database` after this script to build the
+search index in place (paper-database/pagefind/) -- scoped to
+paper-database/, not the whole repo, since that's the directory app.js's
+own relative pagefind import resolves against -- see the note by the
+pagefind import in app.js. The CI workflow (.github/workflows/*.yml) runs
+both steps and commits the generated files back to the branch; you don't
+need to run this by hand unless you're testing locally.
 """
 import json
 import hashlib
-import shutil
 import re
 from pathlib import Path
 
 PKG = Path(__file__).resolve().parent.parent      # .../paper-database
-ROOT = PKG.parent                                 # site root
 DATA = PKG / "data"
 FULLTEXT = DATA / "fulltext"
-JS_SRC = PKG / "js"
-HTML_SRC = ROOT / "paper-database.html"
-DIST = ROOT / "dist"
-DIST_PKG = DIST / "paper-database"
+RECORDS = PKG / "records"
 
 # Written into the record HTML immediately before the OCR text, and used
 # by app.js (OCR_MARKER there -- keep the two in sync) to find where the
@@ -99,20 +101,7 @@ def build():
     topics = json.loads((DATA / "topics.json").read_text(encoding="utf-8"))
     topic_by_id = {t["id"]: t for t in topics}
 
-    if DIST.exists():
-        shutil.rmtree(DIST)
-    DIST.mkdir(parents=True)
-    DIST_PKG.mkdir()
-    (DIST_PKG / "records").mkdir()
-    (DIST_PKG / "data").mkdir()
-
-    # Copy the page itself to the dist root, and the frontend script into
-    # dist/paper-database/js -- this mirrors the source layout so
-    # paper-database.html's own reference to "paper-database/js/app.js",
-    # and app.js's own relative fetch()/import calls, resolve exactly the
-    # same way in dist/ as they do in the source tree.
-    shutil.copy2(HTML_SRC, DIST / "paper-database.html")
-    shutil.copytree(JS_SRC, DIST_PKG / "js")
+    RECORDS.mkdir(parents=True, exist_ok=True)
 
     seen_ids = set()
     all_species = {}
@@ -161,7 +150,7 @@ def build():
             ocr = txt_path.read_text(encoding="utf-8")
         else:
             ocr = ""
-            print(f"  [warn] no fulltext file for '{pid}' -- expected {txt_path.relative_to(ROOT)}")
+            print(f"  [warn] no fulltext file for '{pid}' -- expected {txt_path.relative_to(PKG.parent)}")
 
         # One data-pagefind-filter attribute per value, not one comma-joined
         # "species:X, topic:Y, year:Z" attribute -- same issue as the
@@ -242,20 +231,21 @@ def build():
 </body>
 </html>
 """
-        (DIST_PKG / "records" / f"{pid}.html").write_text(record_html, encoding="utf-8")
+        (RECORDS / f"{pid}.html").write_text(record_html, encoding="utf-8")
 
     catalog.sort(key=lambda p: (-(p["year"] or 0), p["title"]))
 
-    (DIST_PKG / "data" / "catalog.json").write_text(
+    (DATA / "catalog.json").write_text(
         json.dumps(catalog, indent=2), encoding="utf-8")
-    (DIST_PKG / "data" / "topics.json").write_text(
-        json.dumps(topics, indent=2), encoding="utf-8")
-    (DIST_PKG / "data" / "species.json").write_text(
+    (DATA / "species.json").write_text(
         json.dumps([{"name": k, "color": v} for k, v in sorted(all_species.items())], indent=2),
         encoding="utf-8")
+    # topics.json is intentionally NOT rewritten here -- see module
+    # docstring: it's your hand-maintained source file, and the frontend
+    # fetches it directly, so there's nothing to regenerate.
 
     print(f"Built {len(papers)} records, {len(all_species)} species, {len(topics)} topics.")
-    print("Next: npx pagefind --site dist/paper-database")
+    print("Next: npx pagefind --site paper-database")
 
 
 if __name__ == "__main__":
