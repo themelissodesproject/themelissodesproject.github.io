@@ -16,12 +16,30 @@
     "legal_url": "",
     "source_type": "publisher",
     "topics": [
-      "ecology",
-      "pollination",
-      "host-plant",
-      "oligolecty",
-      "foraging-behavior",
-      "methodology"
+      {
+        "id": "ecology",
+        "percent": 17.0
+      },
+      {
+        "id": "pollination",
+        "percent": 17.0
+      },
+      {
+        "id": "host-plant",
+        "percent": 17.0
+      },
+      {
+        "id": "oligolecty",
+        "percent": 17.0
+      },
+      {
+        "id": "foraging-behavior",
+        "percent": 16.0
+      },
+      {
+        "id": "methodology",
+        "percent": 16.0
+      }
     ],
     "species": [
       "Melissodes tintinnans",
@@ -46,10 +64,22 @@
     "legal_url": "",
     "source_type": "other",
     "topics": [
-      "pollination",
-      "behavior",
-      "ecology",
-      "host-plant"
+      {
+        "id": "pollination",
+        "percent": 25.0
+      },
+      {
+        "id": "behavior",
+        "percent": 25.0
+      },
+      {
+        "id": "ecology",
+        "percent": 25.0
+      },
+      {
+        "id": "host-plant",
+        "percent": 25.0
+      }
     ],
     "species": [
       "Melissodes agilis"
@@ -74,11 +104,26 @@
     "legal_url": "",
     "source_type": "other",
     "topics": [
-      "life-history",
-      "nest-architecture",
-      "parasitism",
-      "pollination",
-      "behavior"
+      {
+        "id": "life-history",
+        "percent": 20.0
+      },
+      {
+        "id": "nest-architecture",
+        "percent": 20.0
+      },
+      {
+        "id": "parasitism",
+        "percent": 20.0
+      },
+      {
+        "id": "pollination",
+        "percent": 20.0
+      },
+      {
+        "id": "behavior",
+        "percent": 20.0
+      }
     ],
     "species": [
       "Melissodes floris"
@@ -107,22 +152,70 @@
     "legal_url": "",
     "source_type": "other",
     "topics": [
-      "taxonomy",
-      "nomenclature",
-      "species-description",
-      "distribution",
-      "host-plant",
-      "oligolecty",
-      "morphology",
-      "checklist",
-      "ecology",
-      "behavior",
-      "life-history",
-      "voltinism",
-      "foraging-behavior",
-      "parasitism",
-      "natural-enemies",
-      "nest-architecture"
+      {
+        "id": "taxonomy",
+        "percent": 30.0
+      },
+      {
+        "id": "nomenclature",
+        "percent": 15.0
+      },
+      {
+        "id": "species-description",
+        "percent": 15.0
+      },
+      {
+        "id": "distribution",
+        "percent": 8.0
+      },
+      {
+        "id": "host-plant",
+        "percent": 6.0
+      },
+      {
+        "id": "oligolecty",
+        "percent": 5.0
+      },
+      {
+        "id": "morphology",
+        "percent": 5.0
+      },
+      {
+        "id": "checklist",
+        "percent": 4.0
+      },
+      {
+        "id": "ecology",
+        "percent": 2.0
+      },
+      {
+        "id": "behavior",
+        "percent": 2.0
+      },
+      {
+        "id": "life-history",
+        "percent": 2.0
+      },
+      {
+        "id": "voltinism",
+        "percent": 2.0
+      },
+      {
+        "id": "foraging-behavior",
+        "percent": 1.0
+      },
+      {
+        "id": "parasitism",
+        "percent": 1.0
+      },
+      {
+        "id": "natural-enemies",
+        "percent": 1.0
+      },
+      {
+        "id": "nest-architecture",
+        "percent": 1.0
+      }
     ],
     "species": [
       "Melissodes cressonii",
@@ -812,10 +905,22 @@
     "legal_url": "",
     "source_type": "BHL",
     "topics": [
-      "behavior",
-      "mating-behavior",
-      "parasitism",
-      "natural-enemies"
+      {
+        "id": "behavior",
+        "percent": 25.0
+      },
+      {
+        "id": "mating-behavior",
+        "percent": 25.0
+      },
+      {
+        "id": "parasitism",
+        "percent": 25.0
+      },
+      {
+        "id": "natural-enemies",
+        "percent": 25.0
+      }
     ],
     "species": [],
     "associated_organisms": [
