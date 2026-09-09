@@ -1,6 +1,74 @@
 [
   {
+    "name": "Melissodes aegis",
+    "color": "hsl(120, 46%, 38%)"
+  },
+  {
     "name": "Melissodes agilis",
     "color": "hsl(26, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes albocollaris",
+    "color": "hsl(27, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes atripes",
+    "color": "hsl(49, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes comanche",
+    "color": "hsl(205, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes cressonii",
+    "color": "hsl(112, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes floris",
+    "color": "hsl(325, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes grandissima",
+    "color": "hsl(290, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes helianthelli",
+    "color": "hsl(159, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes machaerantherae",
+    "color": "hsl(139, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes minima",
+    "color": "hsl(350, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes nitida",
+    "color": "hsl(358, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes obliqua",
+    "color": "hsl(52, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes petulca",
+    "color": "hsl(125, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes rufithorax",
+    "color": "hsl(175, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes sabinensis",
+    "color": "hsl(217, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes texana",
+    "color": "hsl(154, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes tintinnans",
+    "color": "hsl(96, 46%, 38%)"
   }
 ]

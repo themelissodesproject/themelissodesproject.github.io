@@ -1,6 +1,39 @@
 [
   {
-    "id": "test",
+    "id": "cilla-2012",
+    "title": "The foraging preferences of two species of Melissodes Latreille (Hymenoptera, Apidae, Eucerini) in farmed sunflower in Argentina",
+    "authors": [
+      "Cilla, G.",
+      "Caccavari, M.",
+      "Bartoloni, N. J.",
+      "Roig-Alsina, A."
+    ],
+    "year": 2012,
+    "journal": "Grana",
+    "volume": "51:1",
+    "pages": "63-75",
+    "doi": "10.1080/00173134.2011.644324",
+    "legal_url": "",
+    "source_type": "publisher",
+    "topics": [
+      "ecology",
+      "pollination",
+      "host-plant",
+      "oligolecty",
+      "foraging-behavior",
+      "methodology"
+    ],
+    "species": [
+      "Melissodes tintinnans",
+      "Melissodes rufithorax"
+    ],
+    "associated_organisms": [],
+    "overview": "This paper reports the pollen foraging preferences of Melissodes (Ecplectica) tintinnans and M. (Ecplectica) rufithorax in a commercial sunflower field and its field margins near Carlos Casares, Buenos Aires Province, Argentina, based on scopal and body-hair pollen load analysis over a full growing season. It shows both species rely heavily on Helianthus annuus pollen during bloom but shift to Bidens sp. and Baccharis sp. after bloom, classifying M. tintinnans as eclectic oligolectic and M. rufithorax as broadly oligolectic on Asteraceae, and highlights the role of hedgerow trees (Ligustrum, Eucalyptus) and field-margin vegetation in sustaining these populations as potential sunflower pollinators.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "parker-1981",
     "title": "How Efficient Are Bees in Pollinating Sunflowers?",
     "authors": [
       "Parker, F. D."
@@ -22,18 +55,777 @@
       "Melissodes agilis"
     ],
     "associated_organisms": [],
-    "abstract": "The relative efficiencies of native bees and honey bees in pollinating sunflower were compared with male sterile and male fertile lines. Wild bees as a group and some oligolectic females were more effective in pollinating florets than were the apids (honey bees and bumble bees). In comparisons of the fidelity of bee visitation to either sterile or pollen varieties, apids preferred male sterile rows, some wild bee species were evenly distributed between sterile and pollen rows, and other wild bees preferred pollen rows. In comparisons of the amount of pollen carried on a bee body, oligolectic sunflower bees carried more pollen than did other kinds of bees.",
     "overview": "This field study at Logan, Utah compares pollination efficiency of native bees versus honey bees on sunflower, finding Melissodes agilis (both sexes) to be the most effective and most faithful pollinator across all sterile/fertile line combinations, producing far more seeds per visit than Apis mellifera and carrying substantially more pollen (up to ~104,500 grains per female) than any other bee group studied.",
-    "keywords": [
-      "Melissodes agilis pollination efficiency",
-      "Melissodes agilis sunflower pollinator",
-      "Melissodes pollen load per visit",
-      "Melissodes vs honey bee seed set",
-      "Melissodes male patrolling and clustering behavior",
-      "Melissodes floral fidelity sunflower rows",
-      "Melissodes oligolecty on sunflower",
-      "Melissodes as most abundant wild bee"
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "batra-1977",
+    "title": "Nests of Centris, Melissodes, and Colletes in Guatemala (Hymenoptera: Apoidea)",
+    "authors": [
+      "Batra, S. W. T.",
+      "Schuster, J. C."
     ],
+    "year": 1977,
+    "journal": "Biotropica",
+    "volume": "9(2)",
+    "pages": "135-138",
+    "doi": "",
+    "legal_url": "",
+    "source_type": "other",
+    "topics": [
+      "life-history",
+      "nest-architecture",
+      "parasitism",
+      "pollination",
+      "behavior"
+    ],
+    "species": [
+      "Melissodes floris"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Phoridae (phorid fly)",
+        "relationship": "parasitoid"
+      }
+    ],
+    "overview": "This paper gives one of the few available nest descriptions for the genus Melissodes, documenting a complete nest of Melissodes floris (subgenus Eumelissodes) found within a dense multi-species bee aggregation on a roadside bank near San Miguel Duenas, Guatemala. It reports burrow and cell dimensions, provision character, and notes that three dead M. floris females each carried a puparium of a phorid fly (Phoridae) in the thorax, indicating parasitism of the bee by this fly.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "laberge-1956",
+    "title": "A Revision of the Bees of the Genus Melissodes in North and Central America. Part I. (Hymenoptera, Apidae)",
+    "authors": [
+      "LaBerge, Wallace E."
+    ],
+    "year": 1956,
+    "journal": "The University of Kansas Science Bulletin",
+    "volume": "Vol. XXXVII, Pt. II, No. 18",
+    "pages": "911-1224",
+    "doi": "",
+    "legal_url": "",
+    "source_type": "other",
+    "topics": [
+      "taxonomy",
+      "nomenclature",
+      "species-description",
+      "distribution",
+      "host-plant",
+      "oligolecty",
+      "morphology",
+      "checklist",
+      "ecology",
+      "behavior",
+      "life-history",
+      "voltinism",
+      "foraging-behavior",
+      "parasitism",
+      "natural-enemies",
+      "nest-architecture"
+    ],
+    "species": [
+      "Melissodes cressonii",
+      "Melissodes minima",
+      "Melissodes atripes",
+      "Melissodes albocollaris",
+      "Melissodes grandissima",
+      "Melissodes aegis",
+      "Melissodes comanche",
+      "Melissodes machaerantherae",
+      "Melissodes helianthelli",
+      "Melissodes nitida",
+      "Melissodes obliqua",
+      "Melissodes texana",
+      "Melissodes petulca",
+      "Melissodes sabinensis"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Euphorbia marginata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Vernonia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Cardia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Polygonum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Gossypium herbaceum (cotton)",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Medicago sativa (alfalfa)",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Prionopsis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Teucrium canadense",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Cleome",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Cassia chamaecrista",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Dalea lanata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Cleome serrulata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Gaillardia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Thelesperma megapotamicum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Bidens aristosa",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Vernonia fasciculata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Asclepias incarnata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Gonolobus laevis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus annuus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ipomoea pandurata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lythrum alatum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Melilotus alba",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Pycnanthemum virginianum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Verbena hastata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Verbena stricta",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Bradburya virginiana",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Buddleia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Gerardia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Hibiscus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Koellia hysopifolia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Kuhnistera",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Monarda punctata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Passiflora incarnata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Primula vulgaris",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ximenesia encelioides",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Nematoda (roundworms)",
+        "relationship": "parasite"
+      },
+      {
+        "name": "Aster",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helenium tenuifolium",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus radula",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Vernonia glauca",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Machaeranthera (=Aster)",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Cucurbita palmata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Asclepias",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Verbesina",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Verbesina encelioides",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Wislizenia refracta",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus ciliaris",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Eysenhardtia polystachya",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Triepeolus concavus",
+        "relationship": "cleptoparasite"
+      },
+      {
+        "name": "Triepeolus",
+        "relationship": "cleptoparasite"
+      },
+      {
+        "name": "Melissodes agilis",
+        "relationship": "cohabitant"
+      },
+      {
+        "name": "Borrichia frutescens",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus atrorubens",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus microcephalum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus zonatus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Vernonia noveboracensis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Abutilon theophrasti",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ambrosia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Asclepias incarnatus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Aster ericoides",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Bidens involucrata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Boltonia asteroides",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Carduus crispus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Cephalanthus occidentalis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Chrysopsis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Cirsium discolor",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Coreopsis tinctoria",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Coreopsis tripteris",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Echinacea pallida",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Erigeron philadelphus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Grindelia squarrosa",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helenium altissimum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helenium autumnale",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus divaricatus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus grosse-serratus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus laetiflorus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus maximillianus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus mollis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus petiolaris",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus scaberimus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus strumosus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus tuberosus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Heliopsis helianthioides",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Kuhnistera purpurea",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lacinaria pycnostachys",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lactuca floridana",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lobelia leptostachys",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lobelia siphillitica",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lythrum salicaria",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Monarda fistulosa",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Nepeta cataria",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Oenothera biennis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Petalostemum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Petalostemum candidens",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Petalostemum oligophyllum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Prionopsis ciliata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Psoralea tenuiflora",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Pycnanthemum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Pycnanthemum flexuosum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Pycnanthemum pilosum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ratibida",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ratibida pinnata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Rudbeckia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Rudbeckia hirta",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Rudbeckia laciniata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Rudbeckia subtomentosa",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Rudbeckia triloba",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Schrankia uncinata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Silphium",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Silphium integrifolium",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Silphium laciniatum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Silphium perfoliatum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Silphium speciosum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Silphium terebinthinaceum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Solidago missouriensis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Solidago rigida",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Solidago serotina",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Trifolium pratense",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Vernonia baldwinia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Verbesina helianthoides",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Achillea",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Artemisia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Brassica adpressa",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Centaurea",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Centromadia pungens",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Chrysopsis grandifolia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Chrysopsis lanceolata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Engelmannia pinnatifida",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Geranium atropurpureum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Gilia capitata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Grindelia camporum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Grindelia nana",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus bolanderi",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Heliotropium",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Isocoma vernonioides",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Petalostemum flavescens",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Pluchea sericea",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Scabiosa",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Chrysothamnus",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Flaveria angustifolia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Coreopsis cardaminefolia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Coreopsis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Gaillardia pulchella",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Gaillardia suavis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helenium",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helenium microcephalum",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lepachys pinnata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Lithospermum canescens",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Monarda",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Monarda citriodora",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Pyrrhopappus geiseri",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ratibida columnaris",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ratibida columnifera pulcherrima",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Ratibida tagetes",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Rudbeckia amplexicaulis",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Rudbeckia bicolor",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Bacharris",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Chrysopsis hispida",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Opuntia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Phacelia",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Sphaeralcea",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Tetragonotheca ludoviciana",
+        "relationship": "forage plant"
+      }
+    ],
+    "overview": "This is Part I of LaBerge's monographic revision of Melissodes for North and Central America, so far covering the introduction, phylogenetic and geographic-variation discussion, the key to subgenera, the complete subgenus Brachymelissodes (cressonii, minima), and a large part of subgenus Epimelissodes: full species accounts for M. atripes, M. albocollaris, M. grandissima, the newly described M. aegis, M. comanche, M. machaerantherae, M. helianthelli, the newly described M. nitida, an extensive account of M. obliqua with three subspecies (obliqua, expurgata, caliginosa) including a nesting-biology account (Custer, Colorado) describing Triepeolus concavus as a cleptoparasite, M. texana with the new subspecies M. texana eluta, M. petulca with its two subspecies (petulca, suffusa; with illinoensis and townsendi treated as synonyms), including a geographic pie-graph analysis of the Texas intergradation zone between the subspecies and extensive flower records dominated by Compositae (especially Helianthus (sunflower), Ratibida, Gaillardia, Rudbeckia, Coreopsis, and Helenium), and the start of the species account of M. sabinensis (Epimelissodes), a species of three largely allopatric subspecies distinguished from petulca suffusa mainly by male mesepisternal hair density and genitalic characters. THIS RECORD IS PARTIAL \u2014 only pages 911-1020 of a roughly 250-page work have been processed so far; topics/keywords/species/overview will be revised as later batches (covering the remaining subgenera and species) are added.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "turner-1908",
+    "title": "THE SUN-DANCE OF MELISSODES.",
+    "authors": [
+      "Turner, C. H."
+    ],
+    "year": 1908,
+    "journal": "Psyche",
+    "volume": "15(6)",
+    "pages": "122-124",
+    "doi": "",
+    "legal_url": "",
+    "source_type": "BHL",
+    "topics": [
+      "behavior",
+      "mating-behavior",
+      "parasitism",
+      "natural-enemies"
+    ],
+    "species": [],
+    "associated_organisms": [
+      {
+        "name": "Nomadidae",
+        "relationship": "cleptoparasite"
+      }
+    ],
+    "overview": "This 1908 field note describes a male mating aggregation display ('sun-dance') observed at a Melissodes nesting site in Augusta, Georgia, in which yellow-clypeus males repeatedly chase, dodge, and grapple with black-clypeus females returning to their burrows carrying pollen loads, which Turner interprets as a 'nuptial ambuscade' facilitating copulation. It also notes Nomadidae (cuckoo bees), a cleptoparasitic bee family, loitering near Melissodes burrows waiting to oviposit on the bees' stored pollen provisions.",
+    "author_keywords": [],
     "added_date": ""
   }
 ]
