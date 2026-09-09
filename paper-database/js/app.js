@@ -48,11 +48,25 @@ const SOURCE_LABELS = {
 // Topic chips are weighted by "percent" — roughly how much of the paper's
 // content concerns that topic (see build.py's normalize_topics). At or
 // above this share a chip gets the bold "dominant" look; below it, the
-// chip fades proportionally. In the full-record modal, topics under
-// MINOR_TOPIC_THRESHOLD are omitted entirely rather than just faded, so a
-// broad paper's tag list doesn't bury what it's actually mostly about.
+// chip fades proportionally.
 const DOMINANT_TOPIC_THRESHOLD = 25;
-const MINOR_TOPIC_THRESHOLD = 5;
+// The card itself only ever shows a paper's 6 most significant topics
+// (catalog.json already lists each paper's topics sorted by percent
+// descending) so a broadly-tagged paper doesn't clutter the results
+// list — the full-record modal always lists every topic. If a topic
+// filter is active and the paper matched on a topic outside that top 6,
+// cardTopics() appends it at the end so it's still visible for why the
+// paper matched, without displacing the paper's normal top 6.
+const CARD_TOPIC_LIMIT = 6;
+
+function cardTopics(p) {
+  const sorted = p.topics || [];
+  const top = sorted.slice(0, CARD_TOPIC_LIMIT);
+  if (!state.topics.size) return top;
+  const topIds = new Set(top.map(t => t.id));
+  const filterMatches = sorted.filter(t => state.topics.has(t.id) && !topIds.has(t.id));
+  return filterMatches.length ? [...top, ...filterMatches] : top;
+}
 
 function styleTopicChip(el, pt) {
   const pct = typeof pt.percent === "number" ? pt.percent : 0;
@@ -63,6 +77,57 @@ function styleTopicChip(el, pt) {
     el.className = "topic-chip";
     el.style.opacity = Math.max(0.35, Math.min(1, 0.35 + 0.65 * (pct / DOMINANT_TOPIC_THRESHOLD)));
   }
+}
+
+// Deterministic color per topic id (same idea as build.py's
+// species_color) so a topic's pie slice and its chip/legend swatch are
+// always the same color across every record that uses it.
+function colorForTopic(id) {
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    hash = (hash * 31 + id.charCodeAt(i)) | 0;
+  }
+  const hue = Math.abs(hash) % 360;
+  return `hsl(${hue}, 46%, 42%)`;
+}
+
+function buildTopicPieChart(topics) {
+  const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
+  if (!total) return null;
+
+  const wrap = document.createElement("div");
+  wrap.className = "topic-pie-wrap";
+
+  const pie = document.createElement("div");
+  pie.className = "topic-pie";
+  pie.setAttribute("role", "img");
+  pie.setAttribute("aria-label", "Proportion of the paper devoted to each topic");
+  let cursor = 0;
+  const stops = topics.map(t => {
+    const share = (t.percent || 0) / total * 100;
+    const slice = `${colorForTopic(t.id)} ${cursor}% ${cursor + share}%`;
+    cursor += share;
+    return slice;
+  });
+  pie.style.background = `conic-gradient(${stops.join(", ")})`;
+  wrap.appendChild(pie);
+
+  const legend = document.createElement("ul");
+  legend.className = "topic-pie-legend";
+  topics.forEach(t => {
+    const meta = topicById.get(t.id);
+    if (!meta) return;
+    const li = document.createElement("li");
+    const swatch = document.createElement("span");
+    swatch.className = "topic-pie-swatch";
+    swatch.style.background = colorForTopic(t.id);
+    li.appendChild(swatch);
+    li.appendChild(document.createTextNode(`${meta.label} — ${Math.round(t.percent || 0)}%`));
+    legend.appendChild(li);
+  });
+  wrap.appendChild(legend);
+
+  return wrap;
 }
 
 async function init() {
@@ -679,7 +744,7 @@ function renderCard(p, { excerpt } = {}) {
   if (p.topics && p.topics.length) {
     const row = document.createElement("div");
     row.className = "badge-row";
-    p.topics.forEach(pt => {
+    cardTopics(p).forEach(pt => {
       const t = topicById.get(pt.id);
       if (!t) return;
       const b = document.createElement("span");
@@ -834,21 +899,24 @@ function buildModalBody(p) {
     frag.appendChild(section);
   }
 
-  // Only topics that make up a real share of the paper are listed here —
-  // ones under MINOR_TOPIC_THRESHOLD are omitted so a broad revision's
-  // tag list doesn't bury the topics that matter. All topics, including
-  // minor ones, still show (faded, proportional to their percent) on the
-  // card itself and remain filterable/searchable.
-  const significantTopics = (p.topics || []).filter(t => (t.percent || 0) >= MINOR_TOPIC_THRESHOLD);
-  if (significantTopics.length) {
+  // Every topic the paper is tagged with is listed here (unlike the card
+  // itself, which only shows the top few) — the pie chart makes the
+  // relative proportions legible at a glance, and the chip row below it
+  // still fades minor topics via styleTopicChip.
+  const allTopics = p.topics || [];
+  if (allTopics.length) {
     const section = document.createElement("div");
     section.className = "details-section";
     const h4 = document.createElement("h4");
     h4.textContent = "Topics";
     section.appendChild(h4);
+
+    const pie = buildTopicPieChart(allTopics);
+    if (pie) section.appendChild(pie);
+
     const row = document.createElement("div");
     row.className = "badge-row";
-    significantTopics.forEach(pt => {
+    allTopics.forEach(pt => {
       const t = topicById.get(pt.id);
       if (!t) return;
       const b = document.createElement("span");
