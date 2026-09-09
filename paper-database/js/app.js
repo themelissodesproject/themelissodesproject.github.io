@@ -93,41 +93,56 @@ function styleTopicChip(el, pt) {
   }
 }
 
-// No separate legend: the chip row immediately below the pie already
+// No separate legend: the chip row immediately below the bar already
 // names every topic, so a second color-key/label list would just repeat
-// the same information. Slices are grayscale, shaded by the same
-// magnitude scale as the chips (darkest = most dominant); a thin white
-// gap is inserted between adjacent slices so two similarly-sized topics
-// next to each other stay visually distinct even when their shades are
-// close.
-const PIE_SLICE_GAP_PCT = 1.2;
+// the same information.
+//
+// Shading here is deliberately RANK-based, not a continuous function of
+// percent (unlike the chips above) — two topics with close but unequal
+// percentages (e.g. 21% and 18%) would land almost on top of each other
+// on a continuous grayscale, making adjacent segments indistinguishable.
+// Since `topics` always arrives pre-sorted by percent descending (see
+// build.py), assigning a fixed, well-spread shade per rank position keeps
+// every segment visually distinct while still preserving the dominant-to-
+// minor ordering. Ranks beyond the scale (rare — a handful of very broad
+// papers) just reuse the lightest shade, which is semantically fine since
+// those are the paper's most minor topics anyway.
+const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#e8e8e8"];
 
-function buildTopicPieChart(topics) {
+function shadeForRank(i) {
+  return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
+}
+
+// A GitHub-style horizontal segmented bar (like the "Languages" bar on a
+// repo page) — segments sized proportionally, in rank order, with a thin
+// white gap between each so segment boundaries are always readable even
+// when two shades end up close. Simple rectangles avoid the radial
+// artifacts a conic-gradient produces at shallow slice angles.
+function buildTopicBar(topics) {
   const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
   if (!total) return null;
 
-  const pie = document.createElement("div");
-  pie.className = "topic-pie";
-  pie.setAttribute("role", "img");
+  const bar = document.createElement("div");
+  bar.className = "topic-bar";
+  bar.setAttribute("role", "img");
   const labelList = topics.map(t => {
     const meta = topicById.get(t.id);
     return meta ? `${meta.label} (${Math.round((t.percent || 0) / total * 100)}%)` : null;
   }).filter(Boolean).join(", ");
-  pie.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
+  bar.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
 
-  let cursor = 0;
-  const stops = [];
   topics.forEach((t, i) => {
+    const meta = topicById.get(t.id);
     const share = (t.percent || 0) / total * 100;
-    const gap = (i < topics.length - 1) ? Math.min(PIE_SLICE_GAP_PCT, share / 3) : 0;
-    const color = grayForMagnitude(t.percent || 0);
-    stops.push(`${color} ${cursor}% ${cursor + share - gap}%`);
-    stops.push(`white ${cursor + share - gap}% ${cursor + share}%`);
-    cursor += share;
+    const seg = document.createElement("div");
+    seg.className = "topic-bar-segment";
+    seg.style.width = `${share}%`;
+    seg.style.background = shadeForRank(i);
+    seg.title = meta ? `${meta.label} — ${Math.round(share)}%` : `${Math.round(share)}%`;
+    bar.appendChild(seg);
   });
-  pie.style.background = `conic-gradient(${stops.join(", ")})`;
 
-  return pie;
+  return bar;
 }
 
 async function init() {
@@ -900,9 +915,9 @@ function buildModalBody(p) {
   }
 
   // Every topic the paper is tagged with is listed here (unlike the card
-  // itself, which only shows the top few) — the pie chart makes the
-  // relative proportions legible at a glance, and the chip row below it
-  // still fades minor topics via styleTopicChip.
+  // itself, which only shows the top few) — the bar makes the relative
+  // proportions legible at a glance, and the chip row below it still
+  // fades minor topics via styleTopicChip.
   const allTopics = p.topics || [];
   if (allTopics.length) {
     const section = document.createElement("div");
@@ -911,8 +926,8 @@ function buildModalBody(p) {
     h4.textContent = "Topics";
     section.appendChild(h4);
 
-    const pie = buildTopicPieChart(allTopics);
-    if (pie) section.appendChild(pie);
+    const bar = buildTopicBar(allTopics);
+    if (bar) section.appendChild(bar);
 
     const row = document.createElement("div");
     row.className = "badge-row";
