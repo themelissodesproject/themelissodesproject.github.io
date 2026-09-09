@@ -17,23 +17,15 @@
     "source_type": "publisher",
     "topics": [
       {
+        "id": "pollination",
+        "percent": 51.0
+      },
+      {
         "id": "ecology",
         "percent": 17.0
       },
       {
-        "id": "pollination",
-        "percent": 17.0
-      },
-      {
-        "id": "host-plant",
-        "percent": 17.0
-      },
-      {
-        "id": "oligolecty",
-        "percent": 17.0
-      },
-      {
-        "id": "foraging-behavior",
+        "id": "behavior",
         "percent": 16.0
       },
       {
@@ -66,7 +58,7 @@
     "topics": [
       {
         "id": "pollination",
-        "percent": 25.0
+        "percent": 50.0
       },
       {
         "id": "behavior",
@@ -74,10 +66,6 @@
       },
       {
         "id": "ecology",
-        "percent": 25.0
-      },
-      {
-        "id": "host-plant",
         "percent": 25.0
       }
     ],
@@ -106,14 +94,10 @@
     "topics": [
       {
         "id": "life-history",
-        "percent": 20.0
+        "percent": 40.0
       },
       {
-        "id": "nest-architecture",
-        "percent": 20.0
-      },
-      {
-        "id": "parasitism",
+        "id": "natural-enemies",
         "percent": 20.0
       },
       {
@@ -154,67 +138,35 @@
     "topics": [
       {
         "id": "taxonomy",
-        "percent": 30.0
-      },
-      {
-        "id": "nomenclature",
-        "percent": 15.0
-      },
-      {
-        "id": "species-description",
-        "percent": 15.0
+        "percent": 60.0
       },
       {
         "id": "distribution",
-        "percent": 8.0
+        "percent": 12.0
       },
       {
-        "id": "host-plant",
-        "percent": 6.0
-      },
-      {
-        "id": "oligolecty",
-        "percent": 5.0
+        "id": "pollination",
+        "percent": 11.0
       },
       {
         "id": "morphology",
         "percent": 5.0
       },
       {
-        "id": "checklist",
-        "percent": 4.0
+        "id": "life-history",
+        "percent": 5.0
+      },
+      {
+        "id": "behavior",
+        "percent": 3.0
       },
       {
         "id": "ecology",
         "percent": 2.0
       },
       {
-        "id": "behavior",
-        "percent": 2.0
-      },
-      {
-        "id": "life-history",
-        "percent": 2.0
-      },
-      {
-        "id": "voltinism",
-        "percent": 2.0
-      },
-      {
-        "id": "foraging-behavior",
-        "percent": 1.0
-      },
-      {
-        "id": "parasitism",
-        "percent": 1.0
-      },
-      {
         "id": "natural-enemies",
-        "percent": 1.0
-      },
-      {
-        "id": "nest-architecture",
-        "percent": 1.0
+        "percent": 2.0
       }
     ],
     "species": [
@@ -907,19 +859,11 @@
     "topics": [
       {
         "id": "behavior",
-        "percent": 25.0
-      },
-      {
-        "id": "mating-behavior",
-        "percent": 25.0
-      },
-      {
-        "id": "parasitism",
-        "percent": 25.0
+        "percent": 50.0
       },
       {
         "id": "natural-enemies",
-        "percent": 25.0
+        "percent": 50.0
       }
     ],
     "species": [],
