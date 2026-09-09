@@ -7,6 +7,7 @@ on:
       - "paper-database/records/**"
       - "paper-database/data/catalog.json"
       - "paper-database/data/species.json"
+      - "paper-database/data/search-index.json"
       - "paper-database/pagefind/**"
   workflow_dispatch:
 
@@ -49,7 +50,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add paper-database/records paper-database/data/catalog.json \
-                   paper-database/data/species.json paper-database/pagefind
+                   paper-database/data/species.json paper-database/data/search-index.json \
+                   paper-database/pagefind
           if git diff --cached --quiet; then
             echo "Nothing changed, skipping commit."
           else
