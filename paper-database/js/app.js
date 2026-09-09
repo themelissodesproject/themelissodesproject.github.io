@@ -68,41 +68,40 @@ function cardTopics(p) {
   return filterMatches.length ? [...top, ...filterMatches] : top;
 }
 
-function styleTopicChip(el, pt) {
-  const pct = typeof pt.percent === "number" ? pt.percent : 0;
-  const color = colorForTopic(pt.id);
-  // The percent itself is never shown as text anywhere in the UI — it
-  // only drives how saturated/solid the chip looks (and is available on
-  // hover for anyone who wants the exact figure).
-  el.title = `${Math.round(pct)}% of paper`;
-  el.style.borderColor = color;
-  if (pct >= DOMINANT_TOPIC_THRESHOLD) {
-    el.className = "topic-chip topic-chip--dominant";
-    el.style.background = color;
-  } else {
-    el.className = "topic-chip";
-    const strength = Math.max(15, Math.min(85, (pct / DOMINANT_TOPIC_THRESHOLD) * 85));
-    el.style.background = `color-mix(in srgb, ${color} ${strength}%, white)`;
-  }
+// Monochrome only: a topic's identity is conveyed by its label text (on
+// the chip itself, or via the pie's title tooltip), never by hue — every
+// topic uses the same black-to-white scale, keyed purely by how much of
+// the paper it accounts for. This intentionally matches the plain
+// grayscale look the site used before per-topic colors were introduced.
+function grayForMagnitude(pct) {
+  if (pct >= DOMINANT_TOPIC_THRESHOLD) return "#222";
+  const strength = Math.max(15, Math.min(85, (pct / DOMINANT_TOPIC_THRESHOLD) * 85));
+  return `color-mix(in srgb, #222 ${strength}%, white)`;
 }
 
-// A topic's color comes from topics.json (curated per-topic there) so the
-// same hue is used everywhere that topic appears — its chip on the card,
-// its chip in the modal, and its pie slice. Falls back to a deterministic
-// hash-based color only if a topic is somehow missing one.
-function colorForTopic(id) {
-  const meta = topicById.get(id);
-  if (meta && meta.color) return meta.color;
-  let hash = 0;
-  for (let i = 0; i < id.length; i++) {
-    hash = (hash * 31 + id.charCodeAt(i)) | 0;
+function styleTopicChip(el, pt) {
+  const pct = typeof pt.percent === "number" ? pt.percent : 0;
+  // The percent itself is never shown as text anywhere in the UI — it
+  // only drives how dark/solid the chip looks (and is available on
+  // hover for anyone who wants the exact figure).
+  el.title = `${Math.round(pct)}% of paper`;
+  if (pct >= DOMINANT_TOPIC_THRESHOLD) {
+    el.className = "topic-chip topic-chip--dominant";
+  } else {
+    el.className = "topic-chip";
+    el.style.background = grayForMagnitude(pct);
   }
-  return `hsl(${Math.abs(hash) % 360}, 46%, 42%)`;
 }
 
 // No separate legend: the chip row immediately below the pie already
-// names every topic in the same colors as its slice, so a second
-// color-key/label list would just repeat the same information.
+// names every topic, so a second color-key/label list would just repeat
+// the same information. Slices are grayscale, shaded by the same
+// magnitude scale as the chips (darkest = most dominant); a thin white
+// gap is inserted between adjacent slices so two similarly-sized topics
+// next to each other stay visually distinct even when their shades are
+// close.
+const PIE_SLICE_GAP_PCT = 1.2;
+
 function buildTopicPieChart(topics) {
   const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
   if (!total) return null;
@@ -110,13 +109,21 @@ function buildTopicPieChart(topics) {
   const pie = document.createElement("div");
   pie.className = "topic-pie";
   pie.setAttribute("role", "img");
-  pie.setAttribute("aria-label", "Proportion of the paper devoted to each topic");
+  const labelList = topics.map(t => {
+    const meta = topicById.get(t.id);
+    return meta ? `${meta.label} (${Math.round((t.percent || 0) / total * 100)}%)` : null;
+  }).filter(Boolean).join(", ");
+  pie.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
+
   let cursor = 0;
-  const stops = topics.map(t => {
+  const stops = [];
+  topics.forEach((t, i) => {
     const share = (t.percent || 0) / total * 100;
-    const slice = `${colorForTopic(t.id)} ${cursor}% ${cursor + share}%`;
+    const gap = (i < topics.length - 1) ? Math.min(PIE_SLICE_GAP_PCT, share / 3) : 0;
+    const color = grayForMagnitude(t.percent || 0);
+    stops.push(`${color} ${cursor}% ${cursor + share - gap}%`);
+    stops.push(`white ${cursor + share - gap}% ${cursor + share}%`);
     cursor += share;
-    return slice;
   });
   pie.style.background = `conic-gradient(${stops.join(", ")})`;
 
@@ -176,7 +183,7 @@ async function init() {
     pagefindReady = true;
   } catch (e) {
     pagefindReady = false;
-    console.warn("Pagefind index not available yet — full-text search is disabled until the site is built.", e);
+    console.warn("Pagefind index not available yet — falling back to the built-in matcher only (no enhanced excerpts).", e);
   }
 
   render();
