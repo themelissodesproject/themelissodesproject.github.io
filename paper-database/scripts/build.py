@@ -39,6 +39,42 @@ RECORDS = PKG / "records"
 # rendered as a labeled field.
 
 
+def normalize_topics(raw):
+    """A paper's "topics" field is a list of {"id", "percent"} objects,
+    where "percent" is roughly how much of the paper's content concerns
+    that topic (ideally summing to ~100 across a paper's topics, though
+    this isn't strictly enforced — see the sum-sanity warning in build()
+    below). This is what lets the front end visually weight topic chips
+    by actual significance instead of presenting every tag a paper
+    touches on as equally important.
+
+    For backward compatibility, a bare list of topic id strings (no
+    percentages given) is accepted too and split evenly across the
+    listed topics, and a numeric "percent" is coerced/clamped to 0-100.
+    """
+    out = []
+    for t in raw:
+        if isinstance(t, dict):
+            tid = t.get("id")
+            try:
+                pct = float(t.get("percent", 0))
+            except (TypeError, ValueError):
+                pct = 0
+            pct = max(0, min(100, pct))
+        else:
+            tid, pct = t, None  # filled in below once we know the count
+        if tid:
+            out.append({"id": tid, "percent": pct})
+
+    missing = [t for t in out if t["percent"] is None]
+    if missing:
+        share = 100 / len(out)
+        for t in missing:
+            t["percent"] = round(share, 1)
+
+    return out
+
+
 def species_color(name: str) -> str:
     """Deterministic, pleasant color per species name so badges stay stable
     across builds without hand-maintaining a color table."""
@@ -77,7 +113,11 @@ def build():
         for sp in p.get("species", []):
             all_species[sp] = species_color(sp)
 
-        topic_labels = [topic_by_id[t]["label"] for t in p.get("topics", []) if t in topic_by_id]
+        topic_labels = [topic_by_id[t["id"]]["label"] for t in normalize_topics(p.get("topics", [])) if t["id"] in topic_by_id]
+
+        topic_pct_sum = sum(t["percent"] for t in normalize_topics(p.get("topics", [])))
+        if topic_pct_sum and not (70 <= topic_pct_sum <= 130):
+            print(f"  warning: {pid} topic percentages sum to {topic_pct_sum:.0f} (expected ~100)")
 
         catalog.append({
             "id": pid,
@@ -90,7 +130,10 @@ def build():
             "doi": p.get("doi", ""),
             "legal_url": p.get("legal_url", ""),
             "source_type": p.get("source_type", ""),
-            "topics": p.get("topics", []),
+            "topics": sorted(
+                (t for t in normalize_topics(p.get("topics", [])) if t["id"] in topic_by_id),
+                key=lambda t: -t["percent"],
+            ),
             "species": p.get("species", []),
             "associated_organisms": p.get("associated_organisms", []),
             "overview": p.get("overview", ""),
@@ -108,8 +151,8 @@ def build():
             for sp in p.get("species", [])
         )
         filter_spans += "".join(
-            f'\n  <span data-pagefind-filter="topic:{esc(t)}" hidden></span>'
-            for t in p.get("topics", [])
+            f'\n  <span data-pagefind-filter="topic:{esc(t["id"])}" hidden></span>'
+            for t in normalize_topics(p.get("topics", []))
         )
         if p.get("year"):
             filter_spans += f'\n  <span data-pagefind-filter="year:{esc(str(int(p["year"])))}" hidden></span>'

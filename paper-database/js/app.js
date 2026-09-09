@@ -45,6 +45,26 @@ const SOURCE_LABELS = {
   other: "Other",
 };
 
+// Topic chips are weighted by "percent" — roughly how much of the paper's
+// content concerns that topic (see build.py's normalize_topics). At or
+// above this share a chip gets the bold "dominant" look; below it, the
+// chip fades proportionally. In the full-record modal, topics under
+// MINOR_TOPIC_THRESHOLD are omitted entirely rather than just faded, so a
+// broad paper's tag list doesn't bury what it's actually mostly about.
+const DOMINANT_TOPIC_THRESHOLD = 25;
+const MINOR_TOPIC_THRESHOLD = 5;
+
+function styleTopicChip(el, pt) {
+  const pct = typeof pt.percent === "number" ? pt.percent : 0;
+  el.title = `${Math.round(pct)}% of paper`;
+  if (pct >= DOMINANT_TOPIC_THRESHOLD) {
+    el.className = "topic-chip topic-chip--dominant";
+  } else {
+    el.className = "topic-chip";
+    el.style.opacity = Math.max(0.35, Math.min(1, 0.35 + 0.65 * (pct / DOMINANT_TOPIC_THRESHOLD)));
+  }
+}
+
 async function init() {
   const [catalogRes, topicsRes, speciesRes, searchIndexRes] = await Promise.all([
     fetch("paper-database/data/catalog.json").then(r => r.json()),
@@ -356,7 +376,7 @@ function syncFilterButtons() {
 
 function matchesFilters(p) {
   if (state.species.size && ![...state.species].some(s => p.species.includes(s))) return false;
-  if (state.topics.size && ![...state.topics].some(t => p.topics.includes(t))) return false;
+  if (state.topics.size && ![...state.topics].some(t => p.topics.some(pt => pt.id === t))) return false;
   if (state.year) {
     if (!p.year || p.year < state.year.from || p.year > state.year.to) return false;
   }
@@ -649,11 +669,6 @@ function renderCard(p, { excerpt } = {}) {
   h3.textContent = p.title;
   top.appendChild(h3);
 
-  const hasDetails = (p.author_keywords && p.author_keywords.length)
-    || (p.associated_organisms && p.associated_organisms.length)
-    || (p.species && p.species.length)
-    || p.volume || p.pages || p.source_type || p.added_date;
-
   card.appendChild(top);
 
   const byline = document.createElement("p");
@@ -664,11 +679,11 @@ function renderCard(p, { excerpt } = {}) {
   if (p.topics && p.topics.length) {
     const row = document.createElement("div");
     row.className = "badge-row";
-    p.topics.forEach(tid => {
-      const t = topicById.get(tid);
+    p.topics.forEach(pt => {
+      const t = topicById.get(pt.id);
       if (!t) return;
       const b = document.createElement("span");
-      b.className = "topic-chip";
+      styleTopicChip(b, pt);
       b.textContent = t.label;
       row.appendChild(b);
     });
@@ -720,36 +735,130 @@ function renderCard(p, { excerpt } = {}) {
   }
   card.appendChild(links);
 
-  if (hasDetails) {
-    const detailsToggle = document.createElement("button");
-    detailsToggle.type = "button";
-    detailsToggle.className = "details-toggle";
-    detailsToggle.setAttribute("aria-label", "Show more details");
-    detailsToggle.setAttribute("aria-expanded", "false");
-    detailsToggle.textContent = "⋯";
-    top.appendChild(detailsToggle);
+  // A "Show more" button opens a full modal window with the complete
+  // overview, species, real keywords, and every associated organism —
+  // kept out of the card itself so a heavily-tagged record (e.g. a broad
+  // taxonomic revision with 100+ associated organisms) never bloats the
+  // results list. The modal scrolls internally, so nothing in it needs
+  // its own separate truncation.
+  const hasMore = (p.author_keywords && p.author_keywords.length)
+    || (p.associated_organisms && p.associated_organisms.length)
+    || (p.species && p.species.length)
+    || p.volume || p.pages || p.source_type || p.added_date
+    || (p.overview && p.overview.trim().length > summary.length);
 
-    const panel = buildDetailsPanel(p, summary);
-    panel.hidden = true;
-    card.insertBefore(panel, links);
-
-    detailsToggle.addEventListener("click", () => {
-      const willShow = panel.hidden;
-      panel.hidden = !willShow;
-      detailsToggle.setAttribute("aria-expanded", String(willShow));
-      detailsToggle.textContent = willShow ? "✕" : "⋯";
-      detailsToggle.setAttribute("aria-label", willShow ? "Hide details" : "Show more details");
-
-      if (sumEl) sumEl.hidden = willShow;
-    });
+  if (hasMore) {
+    const moreBtn = document.createElement("button");
+    moreBtn.type = "button";
+    moreBtn.className = "show-more-btn";
+    moreBtn.textContent = "Show more";
+    moreBtn.addEventListener("click", () => openRecordModal(p));
+    card.appendChild(moreBtn);
   }
 
   return card;
 }
 
-function buildDetailsPanel(p, shownSummary) {
-  const panel = document.createElement("div");
-  panel.className = "card-details";
+function openRecordModal(p) {
+  closeRecordModal();
+
+  const overlay = document.createElement("div");
+  overlay.className = "modal-overlay";
+  overlay.id = "record-modal-overlay";
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeRecordModal();
+  });
+
+  const modal = document.createElement("div");
+  modal.className = "modal";
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-label", p.title);
+
+  const header = document.createElement("div");
+  header.className = "modal-header";
+  const h2 = document.createElement("h2");
+  h2.className = "modal-title";
+  h2.textContent = p.title;
+  const closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "modal-close";
+  closeBtn.setAttribute("aria-label", "Close");
+  closeBtn.textContent = "✕";
+  closeBtn.addEventListener("click", closeRecordModal);
+  header.appendChild(h2);
+  header.appendChild(closeBtn);
+
+  const body = document.createElement("div");
+  body.className = "modal-body";
+  body.appendChild(buildModalBody(p));
+
+  modal.appendChild(header);
+  modal.appendChild(body);
+  overlay.appendChild(modal);
+  document.body.appendChild(overlay);
+
+  document.addEventListener("keydown", onModalKeydown);
+}
+
+function closeRecordModal() {
+  const overlay = document.getElementById("record-modal-overlay");
+  if (overlay) overlay.remove();
+  document.removeEventListener("keydown", onModalKeydown);
+}
+
+function onModalKeydown(e) {
+  if (e.key === "Escape") closeRecordModal();
+}
+
+function buildModalBody(p) {
+  const frag = document.createDocumentFragment();
+
+  const byline = document.createElement("p");
+  byline.className = "card-byline";
+  byline.textContent = `${(p.authors || []).join(", ")} (${p.year || "n.d."}) — ${p.journal || ""}`;
+  frag.appendChild(byline);
+
+  // Full "overview" text (the project's own original analysis, never the
+  // paper's abstract or any OCR'd text) — the card itself only shows the
+  // first sentence as a teaser.
+  if (p.overview) {
+    const section = document.createElement("div");
+    section.className = "details-section";
+    const h4 = document.createElement("h4");
+    h4.textContent = "Overview";
+    const para = document.createElement("p");
+    para.textContent = p.overview;
+    section.appendChild(h4);
+    section.appendChild(para);
+    frag.appendChild(section);
+  }
+
+  // Only topics that make up a real share of the paper are listed here —
+  // ones under MINOR_TOPIC_THRESHOLD are omitted so a broad revision's
+  // tag list doesn't bury the topics that matter. All topics, including
+  // minor ones, still show (faded, proportional to their percent) on the
+  // card itself and remain filterable/searchable.
+  const significantTopics = (p.topics || []).filter(t => (t.percent || 0) >= MINOR_TOPIC_THRESHOLD);
+  if (significantTopics.length) {
+    const section = document.createElement("div");
+    section.className = "details-section";
+    const h4 = document.createElement("h4");
+    h4.textContent = "Topics";
+    section.appendChild(h4);
+    const row = document.createElement("div");
+    row.className = "badge-row";
+    significantTopics.forEach(pt => {
+      const t = topicById.get(pt.id);
+      if (!t) return;
+      const b = document.createElement("span");
+      styleTopicChip(b, pt);
+      b.textContent = t.label;
+      row.appendChild(b);
+    });
+    section.appendChild(row);
+    frag.appendChild(section);
+  }
 
   if (p.species && p.species.length) {
     const section = document.createElement("div");
@@ -767,7 +876,7 @@ function buildDetailsPanel(p, shownSummary) {
       row.appendChild(b);
     });
     section.appendChild(row);
-    panel.appendChild(section);
+    frag.appendChild(section);
   }
 
   // Only the paper's own real, printed keyword list is ever shown here.
@@ -790,7 +899,7 @@ function buildDetailsPanel(p, shownSummary) {
       row.appendChild(b);
     });
     section.appendChild(row);
-    panel.appendChild(section);
+    frag.appendChild(section);
   }
 
   if (p.associated_organisms && p.associated_organisms.length) {
@@ -813,7 +922,7 @@ function buildDetailsPanel(p, shownSummary) {
       row.appendChild(b);
     });
     section.appendChild(row);
-    panel.appendChild(section);
+    frag.appendChild(section);
   }
 
   const metaBits = [];
@@ -825,10 +934,30 @@ function buildDetailsPanel(p, shownSummary) {
     const meta = document.createElement("p");
     meta.className = "details-meta";
     meta.textContent = metaBits.join(" · ");
-    panel.appendChild(meta);
+    frag.appendChild(meta);
   }
 
-  return panel;
+  const links = document.createElement("div");
+  links.className = "card-links";
+  if (p.legal_url) {
+    const a = document.createElement("a");
+    a.href = p.legal_url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "View source ↗";
+    links.appendChild(a);
+  }
+  if (p.doi) {
+    const a = document.createElement("a");
+    a.href = `https://doi.org/${p.doi}`;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "DOI";
+    links.appendChild(a);
+  }
+  if (links.childNodes.length) frag.appendChild(links);
+
+  return frag;
 }
 
 function escapeHtml(s) {
