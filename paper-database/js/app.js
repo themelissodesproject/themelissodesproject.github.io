@@ -70,33 +70,42 @@ function cardTopics(p) {
 
 function styleTopicChip(el, pt) {
   const pct = typeof pt.percent === "number" ? pt.percent : 0;
+  const color = colorForTopic(pt.id);
+  // The percent itself is never shown as text anywhere in the UI — it
+  // only drives how saturated/solid the chip looks (and is available on
+  // hover for anyone who wants the exact figure).
   el.title = `${Math.round(pct)}% of paper`;
+  el.style.borderColor = color;
   if (pct >= DOMINANT_TOPIC_THRESHOLD) {
     el.className = "topic-chip topic-chip--dominant";
+    el.style.background = color;
   } else {
     el.className = "topic-chip";
-    el.style.opacity = Math.max(0.35, Math.min(1, 0.35 + 0.65 * (pct / DOMINANT_TOPIC_THRESHOLD)));
+    const strength = Math.max(15, Math.min(85, (pct / DOMINANT_TOPIC_THRESHOLD) * 85));
+    el.style.background = `color-mix(in srgb, ${color} ${strength}%, white)`;
   }
 }
 
-// Deterministic color per topic id (same idea as build.py's
-// species_color) so a topic's pie slice and its chip/legend swatch are
-// always the same color across every record that uses it.
+// A topic's color comes from topics.json (curated per-topic there) so the
+// same hue is used everywhere that topic appears — its chip on the card,
+// its chip in the modal, and its pie slice. Falls back to a deterministic
+// hash-based color only if a topic is somehow missing one.
 function colorForTopic(id) {
+  const meta = topicById.get(id);
+  if (meta && meta.color) return meta.color;
   let hash = 0;
   for (let i = 0; i < id.length; i++) {
     hash = (hash * 31 + id.charCodeAt(i)) | 0;
   }
-  const hue = Math.abs(hash) % 360;
-  return `hsl(${hue}, 46%, 42%)`;
+  return `hsl(${Math.abs(hash) % 360}, 46%, 42%)`;
 }
 
+// No separate legend: the chip row immediately below the pie already
+// names every topic in the same colors as its slice, so a second
+// color-key/label list would just repeat the same information.
 function buildTopicPieChart(topics) {
   const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
   if (!total) return null;
-
-  const wrap = document.createElement("div");
-  wrap.className = "topic-pie-wrap";
 
   const pie = document.createElement("div");
   pie.className = "topic-pie";
@@ -110,24 +119,8 @@ function buildTopicPieChart(topics) {
     return slice;
   });
   pie.style.background = `conic-gradient(${stops.join(", ")})`;
-  wrap.appendChild(pie);
 
-  const legend = document.createElement("ul");
-  legend.className = "topic-pie-legend";
-  topics.forEach(t => {
-    const meta = topicById.get(t.id);
-    if (!meta) return;
-    const li = document.createElement("li");
-    const swatch = document.createElement("span");
-    swatch.className = "topic-pie-swatch";
-    swatch.style.background = colorForTopic(t.id);
-    li.appendChild(swatch);
-    li.appendChild(document.createTextNode(`${meta.label} — ${Math.round(t.percent || 0)}%`));
-    legend.appendChild(li);
-  });
-  wrap.appendChild(legend);
-
-  return wrap;
+  return pie;
 }
 
 async function init() {
