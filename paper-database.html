@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Paper database</title>
-  <meta name="description" content="A full-text searchable databse of the literature regarding Melissodes">
+  <meta name="description" content="A searchable database of the scientific literature on Melissodes bees, tagged by species, topic, and keyword">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
@@ -15,14 +15,14 @@
   <meta name="application-name" content="The Melissodes Project">
   <meta property="og:site_name" content="The Melissodes Project">
   <meta property="og:title" content="Paper database">
-  <meta property="og:description" content="A full-text searchable databse of the literature regarding Melissodes">
+  <meta property="og:description" content="A searchable database of the scientific literature on Melissodes bees, tagged by species, topic, and keyword">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://themelissodesproject.wildref.org/paper-database.html">
   <meta property="og:image" content="https://themelissodesproject.wildref.org/favicon.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Paper database">
-  <meta name="twitter:description" content="A full-text searchable databse of the literature regarding Melissodes">
+  <meta name="twitter:description" content="A searchable database of the scientific literature on Melissodes bees, tagged by species, topic, and keyword">
   <meta name="twitter:image" content="https://themelissodesproject.wildref.org/favicon.png">
 
   <meta name="google-site-verification" content="3FBTvb3eNfQYUXbZzn4Q-1-6W1FJwJLzKFdkYJOHirM" />
@@ -710,14 +710,23 @@
   }
   .modal-body .card-byline { margin: -0.3rem 0 0; }
 
-  .topic-pie {
-    width: 8.5rem;
-    height: 8.5rem;
-    border-radius: 50%;
-    flex-shrink: 0;
+  .topic-bar {
+    display: flex;
+    width: 100%;
+    height: 0.65rem;
+    border-radius: 999px;
+    overflow: hidden;
+    background: #eee;
     box-shadow: 0 0 0 1px #eee;
     margin-bottom: 0.75rem;
   }
+
+  .topic-bar-segment {
+    height: 100%;
+    min-width: 3px;
+    border-right: 2px solid #fff;
+  }
+  .topic-bar-segment:last-child { border-right: none; }
 
   .card-details {
     margin: 0 0 0.85rem;
@@ -813,14 +822,14 @@
 
     <div class="page">
       <header class="page-header">
-        <p class="tagline">A full-text searchable index of the literature: taxonomy, ecology, natural enemies, and more. Every record links out to its legal source.</p>
+        <p class="tagline">A searchable index of the literature: taxonomy, ecology, natural enemies, and more. Every record links out to its legal source.</p>
         <div class="search-bar">
-          <label class="visually-hidden" for="q">Search full text</label>
-          <input id="q" type="text" autocomplete="off" placeholder="Search full text: species, localities, methods, taxa…" />
+          <label class="visually-hidden" for="q">Search papers</label>
+          <input id="q" type="text" autocomplete="off" placeholder="Search species, topics, keywords…" />
           <span id="result-count" class="result-count" aria-live="polite"></span>
         </div>
         <p class="search-hint">
-          Search matches full text as well as each paper's tagged species, topics, and keywords --
+          Search matches each paper's tagged species, topics, and keywords, plus our written overview of the paper --
           e.g. <code>Melissodes rivalis biology</code> finds papers tagged with that species and topic.
           Combine terms: <code>Melissodes + Triepeolus</code> for papers mentioning both,
           <code>Melissodes / Triepeolus</code> for papers mentioning either.
