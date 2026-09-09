@@ -5,10 +5,38 @@ from pathlib import Path
 
 PKG = Path(__file__).resolve().parent.parent
 DATA = PKG / "data"
-FULLTEXT = DATA / "fulltext"
 RECORDS = PKG / "records"
 
-OCR_MARKER = "OCRFULLTEXTSTARTMARKER8f3c1"
+# NOTE: This build intentionally never reads or embeds any part of a
+# paper's original text (no OCR, no verbatim abstract). Any personal OCR
+# transcription Frank keeps for his own reference lives outside this repo
+# entirely and is never read by this script. Every word that ends up in a
+# record's HTML/JSON comes from the papers.json metadata: either bare
+# bibliographic facts (title, authors, journal, etc.), the paper's own
+# printed keyword list ("author_keywords", copied as-is because it's a
+# short factual index list, not prose), or the "overview"/"search_keywords"
+# fields, which are original analysis written for this project, not copied
+# from the source. The only connection to the actual paper text is the
+# outbound "legal_url" link, which points to a legitimate external host
+# (publisher, BHL, JSTOR, author page, etc.).
+#
+# "search_keywords" are fuzzy-search bait, not the paper's real keywords —
+# they're indexed for matching (below) but deliberately left OUT of
+# catalog.json so the front end never displays them as if they were
+# genuine. "author_keywords" (the paper's own real keyword list, when one
+# exists) IS included in catalog.json and displayed.
+#
+# search-index.json carries that same matching text (metadata terms +
+# overview) out to the front end as plain JSON, keyed by paper id. It
+# exists so app.js's OWN fuzzy word/edit-distance matcher (see app.js) can
+# decide what counts as a match directly, for every record, rather than
+# being limited to whatever a literal-text search engine like Pagefind
+# would surface. Pagefind is still built and used, but only as an
+# optional enhancement (nicer highlighted excerpts) — never as a gate on
+# which records are considered matches. Like catalog.json, this file
+# never contains search_keywords standing alone as if they were real
+# keywords in the UI; it's read only by the matching/excerpt code, never
+# rendered as a labeled field.
 
 
 def species_color(name: str) -> str:
@@ -38,6 +66,7 @@ def build():
     seen_ids = set()
     all_species = {}
     catalog = []
+    search_index = {}
 
     for p in papers:
         pid = p["id"]
@@ -64,18 +93,15 @@ def build():
             "topics": p.get("topics", []),
             "species": p.get("species", []),
             "associated_organisms": p.get("associated_organisms", []),
-            "abstract": p.get("abstract", ""),
             "overview": p.get("overview", ""),
-            "keywords": p.get("keywords", []),
+            # Real, paper-printed keywords only — shown to readers as-is.
+            "author_keywords": p.get("author_keywords", []),
+            # NOTE: "search_keywords" (fuzzy-search bait, not real
+            # keywords) is intentionally NOT included here — see the
+            # module docstring above. It's indexed into the record HTML
+            # below instead, for search matching only.
             "added_date": p.get("added_date", ""),
         })
-
-        txt_path = FULLTEXT / f"{pid}.txt"
-        if txt_path.exists():
-            ocr = txt_path.read_text(encoding="utf-8")
-        else:
-            ocr = ""
-            print(f"  [warn] no fulltext file for '{pid}' -- expected {txt_path.relative_to(PKG.parent)}")
 
         filter_spans = "".join(
             f'\n  <span data-pagefind-filter="species:{esc(sp)}" hidden></span>'
@@ -89,17 +115,28 @@ def build():
             filter_spans += f'\n  <span data-pagefind-filter="year:{esc(str(int(p["year"])))}" hidden></span>'
 
         species_names = p.get("species", [])
-        keywords = p.get("keywords", [])
+        search_keywords = p.get("search_keywords", [])
+        author_keywords = p.get("author_keywords", [])
         organism_terms = []
         for org in p.get("associated_organisms", []):
             if org.get("name"):
                 organism_terms.append(org["name"])
             if org.get("relationship"):
                 organism_terms.append(org["relationship"])
-        metadata_terms = species_names + topic_labels + keywords + organism_terms
+        # search_keywords go into the index for matching but are never
+        # exposed via catalog.json/the UI (see docstring above).
+        metadata_terms = species_names + topic_labels + search_keywords + author_keywords + organism_terms
         metadata_search_text = ", ".join(metadata_terms)
         overview = p.get("overview", "")
 
+        # Same text that gets indexed into the record HTML below, exported
+        # as plain JSON so app.js's own fuzzy matcher can run directly
+        # against it instead of depending on Pagefind's literal-match index.
+        search_index[pid] = f"{metadata_search_text}. {overview}".strip()
+
+        # Everything indexed below is either bare bibliographic fact or
+        # original project-written analysis (overview/keywords). No
+        # OCR text and no verbatim abstract are read or embedded here.
         record_html = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -114,8 +151,6 @@ def build():
   <p>{esc(', '.join(p.get('authors', [])))} ({p.get('year', '')}). {esc(p.get('journal',''))}.</p>{filter_spans}
   <div data-pagefind-weight="5">{esc(metadata_search_text)}</div>
   <div data-pagefind-weight="3">{esc(overview)}</div>
-  <div data-pagefind-weight="0.3">{esc(p.get('abstract',''))}</div>
-  <div>{OCR_MARKER} {esc(ocr)}</div>
 </article>
 </body>
 </html>
@@ -129,9 +164,11 @@ def build():
     (DATA / "species.json").write_text(
         json.dumps([{"name": k, "color": v} for k, v in sorted(all_species.items())], indent=2),
         encoding="utf-8")
+    (DATA / "search-index.json").write_text(
+        json.dumps(search_index, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print(f"Built {len(papers)} records, {len(all_species)} species, {len(topics)} topics.")
-    print("Next: npx pagefind --site paper-database")
+    print("Next (optional, for nicer excerpts only): npx pagefind --site paper-database")
 
 
 if __name__ == "__main__":

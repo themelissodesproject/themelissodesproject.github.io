@@ -6,17 +6,36 @@ const state = {
   year: null,
 };
 
-const OCR_MARKER = "OCRFULLTEXTSTARTMARKER8f3c1";
+// NOTE: This app never stores, indexes, or displays any part of a paper's
+// original text — no OCR full text, no verbatim abstract. The only
+// searchable material is bibliographic metadata and the project's own
+// original "overview"/"search_keywords" writeups (see build.py). Search
+// excerpts below are built from that same content, never from the paper
+// itself. The only path to a paper's actual text is the outbound
+// "legal_url" link to its legitimate external host.
+//
+// MATCHING STRATEGY: whether a record counts as "a match" for the current
+// query is decided entirely by our own fuzzy word/edit-distance matcher
+// (findMatchingGroup / hasCloseMatch, below) running directly over every
+// record's own metadata+overview text (catalogSearchText, loaded from
+// search-index.json). This is what lets a near-miss query like
+// "Melissodes abundance" find a record whose search_keywords say
+// "...most abundant wild bee" — the match isn't gated behind a literal
+// full-text search engine at all, so there's nothing that could veto it.
+// Once a record matches, findHitSpans/clusterHitSpans locate the actual
+// word(s) that satisfied the query inside that same text so we can show
+// a highlighted excerpt with "more context" navigation.
 
 let catalog = [];
 let catalogById = new Map();
+let catalogSearchText = new Map();
 let topicsMeta = [];
 let topicById = new Map();
 let speciesMeta = [];
 let speciesColor = new Map();
+let searchToken = 0;
 let pagefind = null;
 let pagefindReady = false;
-let searchToken = 0;
 
 const SOURCE_LABELS = {
   publisher: "Publisher",
@@ -27,10 +46,11 @@ const SOURCE_LABELS = {
 };
 
 async function init() {
-  const [catalogRes, topicsRes, speciesRes] = await Promise.all([
+  const [catalogRes, topicsRes, speciesRes, searchIndexRes] = await Promise.all([
     fetch("paper-database/data/catalog.json").then(r => r.json()),
     fetch("paper-database/data/topics.json").then(r => r.json()),
     fetch("paper-database/data/species.json").then(r => r.json()),
+    fetch("paper-database/data/search-index.json").then(r => r.json()),
   ]);
 
   catalog = catalogRes;
@@ -39,6 +59,13 @@ async function init() {
   topicsMeta.forEach(t => topicById.set(t.id, t));
   speciesMeta = speciesRes;
   speciesMeta.forEach(s => speciesColor.set(s.name, s.color));
+  // This is the same metadata+overview text build.py indexes into each
+  // record's HTML — loaded here as plain JSON so our own fuzzy matcher
+  // (below) can run directly against it, per-record, as the actual
+  // decider of what counts as a match. Pagefind is used later only to
+  // fetch nicer pre-highlighted excerpts when it's available; it never
+  // gates which records are considered matches.
+  catalogSearchText = new Map(Object.entries(searchIndexRes));
 
   buildTopicFilters();
   buildSpeciesFilters();
@@ -261,10 +288,8 @@ function onQueryChange(e) {
 
 async function render() {
   renderActiveFilters();
-  if (state.query && pagefindReady) {
+  if (state.query) {
     await renderSearchResults();
-  } else if (state.query && !pagefindReady) {
-    renderMessage("Full-text search index isn't built yet in this environment. Run the build script, then `npx pagefind --site dist`, and serve the dist/ folder.");
   } else {
     renderBrowseResults();
   }
@@ -406,80 +431,196 @@ function hasCloseMatch(word, contentWordSet, contentWordList) {
   return false;
 }
 
-function getQueryWords(rawQuery) {
-  return rawQuery
-    .split(/[+/]/)
-    .join(" ")
-    .split(/\s+/)
-    .map(w => w.trim())
-    .filter(Boolean);
-}
-
-function resultIsRelevant(content, wordGroups) {
-  if (!wordGroups.length) return true;
+// Returns the index of the first OR-group (in query order) whose every
+// word has a close match somewhere in `content`, or -1 if none do. This
+// is the actual match decision for a record — nothing upstream of this
+// (Pagefind included) gets to veto it.
+function findMatchingGroup(content, wordGroups) {
   const contentWordList = tokenizeWords(content || "");
   const contentWordSet = new Set(contentWordList);
-  return wordGroups.some(group =>
-    group.every(word => hasCloseMatch(word, contentWordSet, contentWordList))
-  );
+  for (let i = 0; i < wordGroups.length; i++) {
+    const group = wordGroups[i];
+    if (group.length && group.every(w => hasCloseMatch(w, contentWordSet, contentWordList))) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+// Same word tokenizer as tokenizeWords, but keeps each token's character
+// offsets so hit locations can be sliced back out of the original text.
+function tokenizeWordsWithPositions(text) {
+  const out = [];
+  const re = /[\p{L}\p{N}]+/gu;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    out.push({ word: m[0], start: m.index, end: m.index + m[0].length });
+  }
+  return out;
+}
+
+// Locates every token in `content` that satisfies one of the words in a
+// matched AND-group (exact, prefix, or close-edit-distance — same rules
+// as hasCloseMatch), so the excerpt can highlight the words that actually
+// caused the match rather than an arbitrary snippet.
+function findHitSpans(content, group) {
+  const tokens = tokenizeWordsWithPositions(content);
+  const spans = [];
+  group.forEach(rawWord => {
+    const w = rawWord.toLowerCase();
+    const prefixEligible = w.length >= PREFIX_MIN_LENGTH;
+    const maxDist = allowedEditDistance(w);
+    tokens.forEach(tok => {
+      const t = tok.word.toLowerCase();
+      const isHit = t === w
+        || (prefixEligible && t.length > w.length && t.startsWith(w))
+        || (maxDist > 0 && Math.abs(t.length - w.length) <= maxDist && editDistance(w, t) <= maxDist);
+      if (isHit) spans.push(tok);
+    });
+  });
+  spans.sort((a, b) => a.start - b.start);
+  return spans;
+}
+
+// Groups nearby hit spans into clusters (so several hits close together
+// become one excerpt instead of one per word), best cluster first — most
+// distinct matched words, then most hits, then earliest in the text.
+const CLUSTER_GAP = 80;
+
+function clusterHitSpans(spans) {
+  if (!spans.length) return [];
+  const clusters = [];
+  let current = [spans[0]];
+  for (let i = 1; i < spans.length; i++) {
+    const prev = current[current.length - 1];
+    if (spans[i].start - prev.end <= CLUSTER_GAP) {
+      current.push(spans[i]);
+    } else {
+      clusters.push(current);
+      current = [spans[i]];
+    }
+  }
+  clusters.push(current);
+  clusters.sort((a, b) => {
+    const da = new Set(a.map(s => s.word.toLowerCase())).size;
+    const db = new Set(b.map(s => s.word.toLowerCase())).size;
+    if (db !== da) return db - da;
+    if (b.length !== a.length) return b.length - a.length;
+    return a[0].start - b[0].start;
+  });
+  return clusters;
+}
+
+function snapToWordBoundary(content, start, end) {
+  while (start > 0 && /\S/.test(content[start - 1])) start--;
+  while (end < content.length && /\S/.test(content[end])) end++;
+  return [start, end];
+}
+
+// Compact snippet shown directly on the card — plain <mark> highlights.
+function compactExcerptHtml(cluster, content, radius = 70) {
+  const first = cluster[0], last = cluster[cluster.length - 1];
+  let [start, end] = snapToWordBoundary(content, Math.max(0, first.start - radius), Math.min(content.length, last.end + radius));
+  let out = "";
+  let cursor = start;
+  cluster.forEach(span => {
+    out += escapeHtml(content.slice(cursor, span.start));
+    out += `<mark>${escapeHtml(content.slice(span.start, span.end))}</mark>`;
+    cursor = span.end;
+  });
+  out += escapeHtml(content.slice(cursor, end));
+  return (start > 0 ? "…" : "") + out + (end < content.length ? "…" : "");
+}
+
+// Larger "more context" window — muted surrounding text, bold target hits.
+function windowExcerptHtml(cluster, content, radius = 240) {
+  const first = cluster[0], last = cluster[cluster.length - 1];
+  let [start, end] = snapToWordBoundary(content, Math.max(0, first.start - radius), Math.min(content.length, last.end + radius));
+  const before = (start > 0 ? "…" : "") + escapeHtml(content.slice(start, first.start));
+  let middle = "";
+  let cursor = first.start;
+  cluster.forEach(span => {
+    middle += escapeHtml(content.slice(cursor, span.start));
+    middle += `<mark class="context-target">${escapeHtml(content.slice(span.start, span.end))}</mark>`;
+    cursor = span.end;
+  });
+  const after = escapeHtml(content.slice(cursor, end)) + (end < content.length ? "…" : "");
+  return `<span class="context-before">${before}</span>${middle}<span class="context-after">${after}</span>`;
+}
+
+// Builds the per-record excerpt data used when Pagefind doesn't already
+// have a nicer one: one {compact, window} pair per hit cluster, best
+// cluster first, for the card excerpt + "more context" nav to page through.
+function buildExcerptData(content, group) {
+  const spans = findHitSpans(content, group);
+  const clusters = clusterHitSpans(spans);
+  if (!clusters.length) return null;
+  return clusters.map(cluster => ({
+    compact: compactExcerptHtml(cluster, content),
+    window: windowExcerptHtml(cluster, content),
+  }));
 }
 
 async function renderSearchResults() {
-  const filters = {};
-  if (state.species.size) filters.species = [...state.species];
-  if (state.topics.size) filters.topic = [...state.topics];
-  if (state.year) {
-    const years = [];
-    for (let y = state.year.from; y <= state.year.to; y++) years.push(String(y));
-    filters.year = years;
-  }
-
   const myToken = ++searchToken;
   const groups = parseBooleanQuery(state.query);
+  const wordGroups = groups.map(g => g.split(/\s+/).filter(Boolean));
 
-  let mergedResults;
+  // The fuzzy word/edit-distance matcher (findMatchingGroup) is the sole
+  // gate on what counts as a match — it runs directly over each record's
+  // own metadata+overview text (catalogSearchText), so a near-miss query
+  // like "Melissodes abundance" finds a record whose search_keywords say
+  // "...most abundant wild bee" with nothing upstream able to veto it.
+  const matched = [];
+  catalog.filter(matchesFilters).forEach(p => {
+    const content = catalogSearchText.get(p.id) || "";
+    const groupIdx = findMatchingGroup(content, wordGroups);
+    if (groupIdx === -1) return;
+    const excerptData = buildExcerptData(content, wordGroups[groupIdx]);
+    const hitCount = findHitSpans(content, wordGroups[groupIdx]).length;
+    matched.push({ p, excerptData, hitCount });
+  });
+  matched.sort((a, b) => b.hitCount - a.hitCount);
 
-  if (groups.length <= 1) {
-
-    const search = await pagefind.debouncedSearch(groups[0] ?? state.query, { filters });
-    if (search === null || myToken !== searchToken) return;
-    mergedResults = search.results;
-  } else {
-
-    const searches = await Promise.all(
-      groups.map(g => pagefind.search(g, { filters }))
-    );
-    if (myToken !== searchToken) return;
-
-    const byId = new Map();
-    searches.forEach(search => {
-      search.results.forEach(r => {
-        const existing = byId.get(r.id);
-        if (!existing || r.score > existing.score) byId.set(r.id, r);
+  // Pagefind, if it built successfully, is asked for its own excerpts on
+  // the same query purely so already-matched records can show a nicer
+  // pre-highlighted snippet where it agrees — it never adds or removes a
+  // record from `matched` above, and failures here are silently ignored.
+  const pagefindExcerpts = new Map();
+  if (pagefindReady && matched.length) {
+    try {
+      const filters = {};
+      if (state.species.size) filters.species = [...state.species];
+      if (state.topics.size) filters.topic = [...state.topics];
+      if (state.year) {
+        const years = [];
+        for (let y = state.year.from; y <= state.year.to; y++) years.push(String(y));
+        filters.year = years;
+      }
+      const matchedIds = new Set(matched.map(m => m.p.id));
+      const searches = await Promise.all(groups.map(g => pagefind.search(g, { filters })));
+      if (myToken !== searchToken) return;
+      const items = await Promise.all(searches.flatMap(s => s.results).map(r => r.data()));
+      items.forEach(item => {
+        const id = item.meta && item.meta.paper_id;
+        if (id && matchedIds.has(id) && item.excerpt) pagefindExcerpts.set(id, item.excerpt);
       });
-    });
-    mergedResults = [...byId.values()].sort((a, b) => b.score - a.score);
+    } catch (e) {
+      // Nicer excerpts are a bonus only — fall back to our own below.
+    }
   }
+  if (myToken !== searchToken) return;
 
   const list = document.getElementById("results-list");
   list.innerHTML = "";
 
-  const items = await Promise.all(mergedResults.slice(0, 60).map(r => r.data()));
-  if (myToken !== searchToken) return;
+  const shown = matched.slice(0, 60);
+  setCount(matched.length, catalog.length);
+  document.getElementById("empty-state").hidden = matched.length > 0;
 
-  const wordGroups = groups.map(g => g.split(/\s+/).filter(Boolean));
-  const queryWords = getQueryWords(state.query);
-
-  const relevantItems = items.filter(item => resultIsRelevant(item.content, wordGroups));
-
-  setCount(relevantItems.length, catalog.length);
-  document.getElementById("empty-state").hidden = relevantItems.length > 0;
-
-  relevantItems.forEach(item => {
-    const id = item.meta && item.meta.paper_id;
-    const p = catalogById.get(id);
-    if (!p) return;
-    list.appendChild(renderCard(p, { excerpt: item.excerpt, content: item.content, queryWords }));
+  shown.forEach(({ p, excerptData }) => {
+    const excerpt = pagefindExcerpts.get(p.id) || (excerptData && excerptData[0].compact);
+    list.appendChild(renderCard(p, { excerpt }));
   });
 }
 
@@ -498,7 +639,7 @@ function setCount(n, total) {
     : `${total} records`;
 }
 
-function renderCard(p, { excerpt, abstract, content, queryWords } = {}) {
+function renderCard(p, { excerpt } = {}) {
   const card = document.createElement("article");
   card.className = "card";
 
@@ -508,7 +649,7 @@ function renderCard(p, { excerpt, abstract, content, queryWords } = {}) {
   h3.textContent = p.title;
   top.appendChild(h3);
 
-  const hasDetails = (p.keywords && p.keywords.length) || p.abstract
+  const hasDetails = (p.author_keywords && p.author_keywords.length)
     || (p.associated_organisms && p.associated_organisms.length)
     || (p.species && p.species.length)
     || p.volume || p.pages || p.source_type || p.added_date;
@@ -534,8 +675,10 @@ function renderCard(p, { excerpt, abstract, content, queryWords } = {}) {
     card.appendChild(row);
   }
 
-  const summarySource = p.abstract || "";
-  const summary = firstSentence(summarySource);
+  // The card's summary line is always the project's own "overview" text
+  // (original analysis), never the paper's own abstract — this database
+  // doesn't store the paper's abstract at all.
+  const summary = firstSentence(p.overview || "");
   let sumEl = null;
   if (summary) {
     sumEl = document.createElement("p");
@@ -544,112 +687,17 @@ function renderCard(p, { excerpt, abstract, content, queryWords } = {}) {
     card.appendChild(sumEl);
   }
 
+  // `excerpt` is pagefind's own highlighted snippet, built only from the
+  // metadata/overview text we indexed in build.py (never from the paper's
+  // original text), so it's safe to render as-is.
   if (excerpt) {
-    const term = extractMatchedTerm(excerpt, queryWords);
-    const ocrText = extractOcrText(content);
-
-    const shortCtx = buildContextWindow(term, ocrText, 10);
-
-    if (shortCtx) {
-      const wrap = document.createElement("div");
-      wrap.className = "card-excerpt-block";
-
-      const ex = document.createElement("p");
-      ex.className = "card-excerpt";
-      ex.appendChild(renderKwic(shortCtx));
-      wrap.appendChild(ex);
-
-      const allMatches = findAllMatchIndices(term, ocrText);
-
-      const controlsRow = document.createElement("div");
-      controlsRow.className = "context-controls";
-
-      const toggleBtn = document.createElement("button");
-      toggleBtn.type = "button";
-      toggleBtn.className = "context-toggle";
-      toggleBtn.textContent = "More context";
-      controlsRow.appendChild(toggleBtn);
-
-      let navRow = null;
-      let matchLabel = null;
-      let prevBtn = null;
-      let nextBtn = null;
-
-      if (allMatches.length > 1) {
-        navRow = document.createElement("div");
-        navRow.className = "context-nav";
-        navRow.hidden = true;
-
-        prevBtn = document.createElement("button");
-        prevBtn.type = "button";
-        prevBtn.className = "context-nav-btn";
-        prevBtn.textContent = "‹";
-        prevBtn.setAttribute("aria-label", "Previous match in this paper");
-
-        matchLabel = document.createElement("span");
-        matchLabel.className = "context-nav-label";
-
-        nextBtn = document.createElement("button");
-        nextBtn.type = "button";
-        nextBtn.className = "context-nav-btn";
-        nextBtn.textContent = "›";
-        nextBtn.setAttribute("aria-label", "Next match in this paper");
-
-        navRow.append(prevBtn, matchLabel, nextBtn);
-        controlsRow.appendChild(navRow);
-      }
-
-      let expanded = false;
-      let contextEl = null;
-      let matchIdx = 0;
-
-      function showMatch(i) {
-        matchIdx = i;
-        const charIdx = allMatches[matchIdx];
-        const longCtx = buildContextAt(ocrText, charIdx, term.length, 45);
-        contextEl.innerHTML = "";
-        contextEl.appendChild(renderKwic(longCtx));
-        if (matchLabel) matchLabel.textContent = `Match ${matchIdx + 1} of ${allMatches.length}`;
-      }
-
-      toggleBtn.addEventListener("click", () => {
-        if (!expanded) {
-          if (!allMatches.length) return;
-          ex.hidden = true;
-          contextEl = document.createElement("div");
-          contextEl.className = "context-window";
-          wrap.insertBefore(contextEl, controlsRow);
-          showMatch(0);
-          card.classList.add("expanded");
-          toggleBtn.textContent = "Less context";
-          if (navRow) navRow.hidden = false;
-          expanded = true;
-        } else {
-          if (contextEl) { contextEl.remove(); contextEl = null; }
-          ex.hidden = false;
-          card.classList.remove("expanded");
-          toggleBtn.textContent = "More context";
-          if (navRow) navRow.hidden = true;
-          expanded = false;
-        }
-      });
-
-      if (prevBtn) {
-        prevBtn.addEventListener("click", () => {
-          if (!expanded) return;
-          showMatch((matchIdx - 1 + allMatches.length) % allMatches.length);
-        });
-      }
-      if (nextBtn) {
-        nextBtn.addEventListener("click", () => {
-          if (!expanded) return;
-          showMatch((matchIdx + 1) % allMatches.length);
-        });
-      }
-
-      wrap.appendChild(controlsRow);
-      card.appendChild(wrap);
-    }
+    const wrap = document.createElement("div");
+    wrap.className = "card-excerpt-block";
+    const ex = document.createElement("p");
+    ex.className = "card-excerpt";
+    ex.innerHTML = excerpt;
+    wrap.appendChild(ex);
+    card.appendChild(wrap);
   }
 
   const links = document.createElement("div");
@@ -722,7 +770,12 @@ function buildDetailsPanel(p, shownSummary) {
     panel.appendChild(section);
   }
 
-  if (p.keywords && p.keywords.length) {
+  // Only the paper's own real, printed keyword list is ever shown here.
+  // The database's internal search-matching terms ("search_keywords")
+  // are never displayed — they're not real keywords, just fuzzy-search
+  // bait, and showing them as if they were the paper's own would be
+  // misleading. See build.py / catalog.json.
+  if (p.author_keywords && p.author_keywords.length) {
     const section = document.createElement("div");
     section.className = "details-section";
     const h4 = document.createElement("h4");
@@ -730,7 +783,7 @@ function buildDetailsPanel(p, shownSummary) {
     section.appendChild(h4);
     const row = document.createElement("div");
     row.className = "badge-row";
-    p.keywords.forEach(kw => {
+    p.author_keywords.forEach(kw => {
       const b = document.createElement("span");
       b.className = "keyword-chip";
       b.textContent = kw;
@@ -763,17 +816,6 @@ function buildDetailsPanel(p, shownSummary) {
     panel.appendChild(section);
   }
 
-  if (p.abstract && p.abstract.trim() !== shownSummary.trim()) {
-    const section = document.createElement("div");
-    section.className = "details-section";
-    const h4 = document.createElement("h4");
-    h4.textContent = "Abstract";
-    const para = document.createElement("p");
-    para.textContent = p.abstract;
-    section.append(h4, para);
-    panel.appendChild(section);
-  }
-
   const metaBits = [];
   if (p.volume) metaBits.push(`Vol. ${p.volume}`);
   if (p.pages) metaBits.push(`pp. ${p.pages}`);
@@ -787,110 +829,6 @@ function buildDetailsPanel(p, shownSummary) {
   }
 
   return panel;
-}
-
-function extractMatchedTerm(excerptHtml, queryWords) {
-  if (!excerptHtml) return "";
-  const container = document.createElement("div");
-  container.innerHTML = excerptHtml;
-  const marks = [...container.querySelectorAll("mark")].map(m => m.textContent.trim()).filter(Boolean);
-  if (!marks.length) return "";
-  if (!queryWords || !queryWords.length) return marks[0];
-
-  let best = marks[0];
-  let bestScore = -1;
-  for (const markText of marks) {
-    const lower = markText.toLowerCase();
-    let score = markText.length;
-    for (const qw of queryWords) {
-      const qLower = qw.toLowerCase();
-      if (lower === qLower) score = Math.max(score, 10000);
-      else if (lower.startsWith(qLower) || qLower.startsWith(lower)) {
-        score = Math.max(score, 1000 + Math.min(lower.length, qLower.length));
-      }
-    }
-    if (score > bestScore) { bestScore = score; best = markText; }
-  }
-  return best;
-}
-
-function extractOcrText(contentText) {
-  if (!contentText) return "";
-  const idx = contentText.indexOf(OCR_MARKER);
-  return idx === -1 ? "" : contentText.slice(idx + OCR_MARKER.length);
-}
-
-function findAllMatchIndices(term, ocrText) {
-  if (!term || !ocrText) return [];
-  const lowerText = ocrText.toLowerCase();
-  const lowerTerm = term.toLowerCase();
-  const indices = [];
-  let from = 0;
-  while (true) {
-    const idx = lowerText.indexOf(lowerTerm, from);
-    if (idx === -1) break;
-    indices.push(idx);
-    from = idx + lowerTerm.length;
-  }
-  return indices;
-}
-
-function trimToLastWords(text, wordWindow) {
-  const runs = [...text.matchAll(/\S+/g)];
-  if (runs.length <= wordWindow) return { text, truncated: false };
-  const cut = runs[runs.length - wordWindow];
-  return { text: text.slice(cut.index), truncated: true };
-}
-
-function trimToFirstWords(text, wordWindow) {
-  const runs = [...text.matchAll(/\S+/g)];
-  if (runs.length <= wordWindow) return { text, truncated: false };
-  const cut = runs[wordWindow - 1];
-  return { text: text.slice(0, cut.index + cut[0].length), truncated: true };
-}
-
-function buildContextAt(ocrText, charIdx, termLen, wordWindow = 45) {
-  const matched = ocrText.slice(charIdx, charIdx + termLen);
-
-  const beforeTrim = trimToLastWords(ocrText.slice(0, charIdx), wordWindow);
-  const afterTrim = trimToFirstWords(ocrText.slice(charIdx + termLen), wordWindow);
-
-  return {
-    before: beforeTrim.text,
-    beforeTruncated: beforeTrim.truncated,
-    matched,
-    after: afterTrim.text,
-    afterTruncated: afterTrim.truncated,
-  };
-}
-
-function buildContextWindow(term, ocrText, wordWindow = 45) {
-  if (!term || !ocrText) return null;
-  const idx = ocrText.toLowerCase().indexOf(term.toLowerCase());
-  if (idx === -1) return null;
-  return buildContextAt(ocrText, idx, term.length, wordWindow);
-}
-
-function renderKwic(ctx) {
-  const frag = document.createDocumentFragment();
-
-  const before = document.createElement("span");
-  before.className = "context-before";
-
-  before.textContent = (ctx.beforeTruncated ? "… " : "") + ctx.before;
-  frag.appendChild(before);
-
-  const mark = document.createElement("mark");
-  mark.className = "context-target";
-  mark.textContent = ctx.matched;
-  frag.appendChild(mark);
-
-  const after = document.createElement("span");
-  after.className = "context-after";
-  after.textContent = ctx.after + (ctx.afterTruncated ? " …" : "");
-  frag.appendChild(after);
-
-  return frag;
 }
 
 function escapeHtml(s) {
