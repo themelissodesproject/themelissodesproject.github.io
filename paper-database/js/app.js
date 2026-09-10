@@ -83,15 +83,13 @@ function cardTopics(p) {
 // as plain adjoining wedges — no dividing gap needed between them.
 const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#e8e8e8"];
 
-// Text stays in the light family for every chip except the last two
-// (lightest) ranks, which switch to dark text since those backgrounds
-// are light enough that white text has essentially no contrast left.
-// Values dim gradually as the background lightens. Worth flagging: by
-// rank 5 (#b8b8b8) even pure white only reaches ~2:1 contrast against
-// the background — there's no light color left that reads comfortably
-// there, so that chip is a look-over-legibility tradeoff more than the
-// others.
-const TOPIC_TEXT_SCALE = ["#ffffff", "#f5f5f5", "#ececec", "#e0e0e0", "#f2f2f2", "#ffffff", "#1a1a1a", "#1a1a1a"];
+// Flat white/black split, no in-between shades. The split lands after
+// rank 2, not "all but the last two" — white text stops reading
+// clearly past that point (e.g. rank 5's #b8b8b8 background only gives
+// pure white ~2:1 contrast, which looks washed out no matter what
+// shade of white is used). Splitting here instead keeps every chip on
+// the strong side of ~4.9:1 contrast or better.
+const TOPIC_TEXT_SCALE = ["#ffffff", "#ffffff", "#ffffff", "#000000", "#000000", "#000000", "#000000", "#000000"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
