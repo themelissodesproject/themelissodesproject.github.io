@@ -69,25 +69,17 @@ function cardTopics(p) {
   return filterMatches.length ? [...top, ...filterMatches] : top;
 }
 
-// Every step stays dark enough that flat white text reads clearly
-// against it (all above 4.5:1 contrast, up to 17:1 at the darkest
-// end). Steps are spaced ~13 apart, evenly, from near-black down to
-// #767676 — #767676 is close to the darkest gray where white text
-// still clears a solid 4.5:1, so the range stops there rather than
-// drifting into the lighter tones that stopped supporting white text
-// well (that was the earlier light-background attempt's problem,
-// just mirrored).
-const TOPIC_SHADE_SCALE = ["#1a1a1a", "#272727", "#343434", "#424242", "#4f4f4f", "#5c5c5c", "#696969", "#767676"];
+// Every step stays light enough that flat black text reads clearly
+// against it — no per-rank text color needed at all. The range runs
+// from #767676 (black text still clears ~4.6:1 there, the floor for
+// comfortable reading) up to #e6e6e6, with even ~16-value steps so
+// adjoining pie slices stay visually distinct without needing to dip
+// into darker tones that would require light text again.
+const TOPIC_SHADE_SCALE = ["#767676", "#868686", "#969696", "#a6a6a6", "#b6b6b6", "#c6c6c6", "#d6d6d6", "#e6e6e6"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
 }
-
-// A border a couple shades darker than the fill it sits on, giving
-// every chip a visible edge against the white card without needing a
-// per-rank lookup (dark-on-dark borders like this read fine, unlike
-// the earlier same-color-as-fill attempt which was invisible).
-const TOPIC_CHIP_BORDER = "#000000";
 
 // Used for species badges, whose background colors are arbitrary
 // per-species data (not the fixed, always-light TOPIC_SHADE_SCALE
@@ -138,8 +130,8 @@ function styleTopicChip(el, pt, rank) {
   const shade = shadeForRank(rank || 0);
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
-  el.style.borderColor = TOPIC_CHIP_BORDER;
-  el.style.color = "#ffffff";
+  el.style.borderColor = shade;
+  el.style.color = "#000000";
 }
 
 // No separate legend: the chip row immediately below the pie already
