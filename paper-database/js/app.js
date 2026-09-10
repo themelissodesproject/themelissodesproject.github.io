@@ -81,24 +81,43 @@ function cardTopics(p) {
 // semantically fine since those are the paper's most minor topics
 // anyway. Steps are spread widely enough that pie slices read cleanly
 // as plain adjoining wedges — no dividing gap needed between them.
-const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#d6d6d6", "#d6d6d6", "#d6d6d6", "#e8e8e8"];
+const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#e8e8e8"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
 }
 
-// Exact color inversion (255-r, 255-g, 255-b) so a chip's text is always
-// the precise photographic negative of its own background — guaranteed
-// readable at every step of TOPIC_SHADE_SCALE without hand-picking a
-// black/white cutoff. Works for any hex color, not just grayscale.
-function invertHexColor(hex) {
+// Photographic inversion (255-r, 255-g, 255-b) is NOT a contrast
+// function — for a mid-gray background like #7a7a7a it inverts to
+// #858585, a nearly identical gray, which is exactly the "not enough
+// contrast on the mid tones" bug. What actually guarantees legibility
+// is picking whichever of pure black or pure white has the higher WCAG
+// contrast ratio against the given background. This works for any hex
+// color (not just the grayscale TOPIC_SHADE_SCALE) and its worst case
+// — the background luminance where black and white tie — still clears
+// a ~4.6:1 ratio, comfortably past the 4.5:1 AA threshold for text.
+function relativeLuminance(hex) {
   let h = hex.replace("#", "");
   if (h.length === 3) h = h.split("").map(c => c + c).join("");
   const num = parseInt(h, 16);
-  const r = 255 - ((num >> 16) & 0xff);
-  const g = 255 - ((num >> 8) & 0xff);
-  const b = 255 - (num & 0xff);
-  return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+  const channels = [(num >> 16) & 0xff, (num >> 8) & 0xff, num & 0xff].map(c => {
+    const s = c / 255;
+    return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+}
+
+function contrastRatio(lumA, lumB) {
+  const lighter = Math.max(lumA, lumB);
+  const darker = Math.min(lumA, lumB);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+function textColorForBackground(hex) {
+  const lum = relativeLuminance(hex);
+  const whiteContrast = contrastRatio(lum, 1);
+  const blackContrast = contrastRatio(lum, 0);
+  return whiteContrast >= blackContrast ? "#ffffff" : "#000000";
 }
 
 // A topic's rank is its position in the paper's full topics array (sorted
@@ -122,7 +141,7 @@ function styleTopicChip(el, pt, rank) {
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
   el.style.borderColor = shade;
-  el.style.color = invertHexColor(shade);
+  el.style.color = textColorForBackground(shade);
 }
 
 // No separate legend: the chip row immediately below the pie already
@@ -963,7 +982,9 @@ function buildModalBody(p) {
     p.species.forEach(sp => {
       const b = document.createElement("span");
       b.className = "species-badge";
-      b.style.background = speciesColor.get(sp) || "#556B4A";
+      const spColor = speciesColor.get(sp) || "#556B4A";
+      b.style.background = spColor;
+      b.style.color = textColorForBackground(spColor);
       b.textContent = sp;
       row.appendChild(b);
     });
