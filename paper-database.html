@@ -582,6 +582,7 @@
 
   .topic-chip {
     font-size: 0.75rem;
+    font-weight: 600;
     color: #222;
     background: #F3F4F5;
     border: 1px solid #ddd;
@@ -591,12 +592,7 @@
 
   /* Background, border, and text color are all set inline by
      styleTopicChip in app.js, keyed to the topic's rank on
-     TOPIC_SHADE_SCALE (the same scale the topic bar's segments use) —
-     this class only adds the bold weight for a topic that's actually
-     dominant (>=25% of the paper), independent of its shade/rank. */
-  .topic-chip--dominant {
-    font-weight: 600;
-  }
+     TOPIC_SHADE_SCALE (the same scale the topic bar's segments use). */
 
   .keyword-chip {
     font-size: 0.72rem;
