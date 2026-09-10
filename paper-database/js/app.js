@@ -73,7 +73,7 @@ function cardTopics(p) {
 // against it (all above 12:1 contrast). Steps are spaced ~9 apart —
 // wide enough to tell ranks apart at a glance, but still light overall
 // so the set doesn't compete with the page. The last rank is pure
-// white, matching the card background it sits on (see borderForShade
+// white, matching the card background it sits on (see TOPIC_CHIP_BORDER
 // below for why that one needs special handling).
 const TOPIC_SHADE_SCALE = ["#c4c4c4", "#cdcdcd", "#d6d6d6", "#dfdfdf", "#e8e8e8", "#f1f1f1", "#fafafa", "#ffffff"];
 
@@ -81,16 +81,13 @@ function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
 }
 
-// Every rank's border normally matches its own fill (a barely-there
-// edge, since the fill itself already reads against the white card).
-// The lightest rank is an exception: its fill IS the card's white
-// background, so a same-color border would vanish entirely and the
-// chip would have no visible edge at all — it gets a fixed light-gray
-// border instead, consistent with the app's other hairline borders
-// (.card and .topic-chip both already use similar grays).
-function borderForShade(shade) {
-  return shade === "#ffffff" ? "#cccccc" : shade;
-}
+// Every rank gets the same fixed light-gray border, consistent with
+// the app's other hairline borders (.card and the default .topic-chip
+// both already use similar grays). A border that matched its own
+// fill color would be invisible against that fill — true for every
+// rank, not just the white one — so this is a flat constant rather
+// than a per-shade lookup.
+const TOPIC_CHIP_BORDER = "#cccccc";
 
 // Used for species badges, whose background colors are arbitrary
 // per-species data (not the fixed, always-light TOPIC_SHADE_SCALE
@@ -141,7 +138,7 @@ function styleTopicChip(el, pt, rank) {
   const shade = shadeForRank(rank || 0);
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
-  el.style.borderColor = borderForShade(shade);
+  el.style.borderColor = TOPIC_CHIP_BORDER;
   el.style.color = "#000000";
 }
 
