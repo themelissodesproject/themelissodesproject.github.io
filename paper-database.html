@@ -589,15 +589,12 @@
     padding: 0.2rem 0.6rem;
   }
 
-  /* Chips are weighted by how much of the paper the topic actually
-     accounts for (see styleTopicChip in app.js). At/above the dominant
-     threshold a chip gets this bold look; below it, JS applies a
-     proportional inline opacity fade instead, so the more a topic is
-     what the paper is actually about, the more solid its chip looks. */
+  /* Background, border, and text color are all set inline by
+     styleTopicChip in app.js, keyed to the topic's rank on
+     TOPIC_SHADE_SCALE (the same scale the topic bar's segments use) —
+     this class only adds the bold weight for a topic that's actually
+     dominant (>=25% of the paper), independent of its shade/rank. */
   .topic-chip--dominant {
-    background: #333;
-    border-color: #333;
-    color: #fff;
     font-weight: 600;
   }
 
