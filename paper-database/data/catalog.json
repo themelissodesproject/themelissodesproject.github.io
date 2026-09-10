@@ -844,6 +844,46 @@
     "added_date": ""
   },
   {
+    "id": "hicks-1926",
+    "title": "Nesting Habits and Parasites of Certain Bees of Boulder County, Colorado",
+    "authors": [
+      "Hicks, C. H."
+    ],
+    "year": 1926,
+    "journal": "University of Colorado Studies",
+    "volume": "15",
+    "pages": "217-252",
+    "doi": "",
+    "legal_url": "https://babel.hathitrust.org/cgi/pt?id=nyp.33433107731824&__cf_chl_tk=aWJEfe0EuaqZ8Sqpn8q31BKtU2eL9PbRx6wMQNVmSMU-1788913214-1.0.1.1-cNZLQwS6J0F3Ajd3gMvIoyUmQwThCaTkiOXtUSkG_c4&seq=233&view=1up",
+    "source_type": "Hathitrust",
+    "topics": [
+      {
+        "id": "natural-enemies",
+        "percent": 33.3
+      },
+      {
+        "id": "life-history",
+        "percent": 33.3
+      },
+      {
+        "id": "behavior",
+        "percent": 33.3
+      }
+    ],
+    "species": [
+      "Melissodes menuachus"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Triepeolus occidentalis",
+        "relationship": "cleptoparasite"
+      }
+    ],
+    "overview": "Reports timed field observations of a Melissodes menuachus (as M. mixeae in the paper) ground nest near Boulder, Colorado, tracking pollen-provisioning visits, alongside two separate instances in which a female Triepeolus occidentalis Cresson (a cleptoparasitic bee) entered the nest entrance while the host bee was provisioning. The author considers this evidence for a parasite-host relationship between the two species.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
     "id": "turner-1908",
     "title": "THE SUN-DANCE OF MELISSODES.",
     "authors": [
