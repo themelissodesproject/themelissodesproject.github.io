@@ -178,6 +178,10 @@ function buildTopicPieChart(topics) {
   svg.setAttribute("width", "100%");
   svg.setAttribute("height", "100%");
 
+  // Keyed by topic id so the modal builder can wire up hover
+  // cross-highlighting with the matching chip below.
+  const pathsByTopicId = new Map();
+
   let cursorDeg = 0;
   topics.forEach((t, i) => {
     const share = (t.percent || 0) / total * 100;
@@ -187,19 +191,28 @@ function buildTopicPieChart(topics) {
 
     const meta = topicById.get(t.id);
     const pct = Math.round(share);
+    const shade = shadeForRank(i);
     const path = document.createElementNS(SVG_NS, "path");
     path.setAttribute("d", describePieSlice(50, 50, 50, startDeg, endDeg));
-    path.setAttribute("fill", shadeForRank(i));
+    path.setAttribute("fill", shade);
+    // Adjacent slice edges land on the same coordinates in theory, but
+    // anti-aliasing still shows a faint seam between them at render
+    // time. A stroke in the same color as the fill, thick enough to
+    // straddle that seam, papers over it without changing the visible
+    // wedge boundary.
+    path.setAttribute("stroke", shade);
+    path.setAttribute("stroke-width", "0.75");
 
     const title = document.createElementNS(SVG_NS, "title");
     title.textContent = meta ? `${meta.label} (${pct}%)` : `${pct}%`;
     path.appendChild(title);
 
     svg.appendChild(path);
+    if (t.id != null) pathsByTopicId.set(t.id, path);
   });
 
   wrap.appendChild(svg);
-  return wrap;
+  return { wrap, pathsByTopicId };
 }
 
 async function init() {
@@ -987,11 +1000,12 @@ function buildModalBody(p) {
     const pieRow = document.createElement("div");
     pieRow.className = "topic-pie-row";
 
-    const pie = buildTopicPieChart(allTopics);
-    if (pie) pieRow.appendChild(pie);
+    const pieResult = buildTopicPieChart(allTopics);
+    if (pieResult) pieRow.appendChild(pieResult.wrap);
 
     const row = document.createElement("div");
     row.className = "badge-row";
+    const chipsByTopicId = new Map();
     allTopics.forEach((pt, i) => {
       const t = topicById.get(pt.id);
       if (!t) return;
@@ -999,8 +1013,28 @@ function buildModalBody(p) {
       styleTopicChip(b, pt, i);
       b.textContent = t.label;
       row.appendChild(b);
+      chipsByTopicId.set(pt.id, b);
     });
     pieRow.appendChild(row);
+
+    // Hovering a wedge dims every other chip to 40% opacity, leaving
+    // only the one matching that topic at full strength — makes it
+    // obvious which chip a given slice corresponds to without relying
+    // on shade alone (several ranks can look close in a quick glance).
+    if (pieResult) {
+      pieResult.pathsByTopicId.forEach((path, topicId) => {
+        const chip = chipsByTopicId.get(topicId);
+        if (!chip) return;
+        path.addEventListener("mouseenter", () => {
+          chipsByTopicId.forEach((c, id) => {
+            c.style.opacity = id === topicId ? "1" : "0.4";
+          });
+        });
+        path.addEventListener("mouseleave", () => {
+          chipsByTopicId.forEach(c => { c.style.opacity = "1"; });
+        });
+      });
+    }
 
     section.appendChild(pieRow);
     frag.appendChild(section);
