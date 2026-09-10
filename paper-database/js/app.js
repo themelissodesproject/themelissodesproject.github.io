@@ -75,23 +75,36 @@ function cardTopics(p) {
 // them indistinguishable. Since a paper's `topics` array always arrives
 // pre-sorted by percent descending (see build.py), assigning a fixed,
 // well-spread shade per rank position keeps every topic visually
-// distinct — on the bar AND on its chip — while still preserving the
+// distinct — on the pie AND on its chip — while still preserving the
 // dominant-to-minor ordering. Ranks beyond the scale (rare — a handful
 // of very broad papers) just reuse the lightest shade, which is
 // semantically fine since those are the paper's most minor topics
-// anyway. The first three shades are dark enough to need white text;
-// everything from #7a7a7a on uses the normal dark chip text.
-const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#e8e8e8"];
-const LIGHT_TEXT_RANK_CUTOFF = 3; // ranks 0-2 (darker than #7a7a7a) get white text
+// anyway. Steps are spread widely enough that pie slices read cleanly
+// as plain adjoining wedges — no dividing gap needed between them.
+const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#d6d6d6", "#d6d6d6", "#d6d6d6", "#e8e8e8"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
 }
 
+// Exact color inversion (255-r, 255-g, 255-b) so a chip's text is always
+// the precise photographic negative of its own background — guaranteed
+// readable at every step of TOPIC_SHADE_SCALE without hand-picking a
+// black/white cutoff. Works for any hex color, not just grayscale.
+function invertHexColor(hex) {
+  let h = hex.replace("#", "");
+  if (h.length === 3) h = h.split("").map(c => c + c).join("");
+  const num = parseInt(h, 16);
+  const r = 255 - ((num >> 16) & 0xff);
+  const g = 255 - ((num >> 8) & 0xff);
+  const b = 255 - (num & 0xff);
+  return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+}
+
 // A topic's rank is its position in the paper's full topics array (sorted
 // percent descending), not its position in whatever subset is currently
 // being rendered — this is what keeps a topic's color consistent between
-// the bar, the card's (possibly reordered/truncated) chip row, and the
+// the pie, the card's (possibly reordered/truncated) chip row, and the
 // modal's chip row, all for the same paper.
 function topicRankMap(p) {
   const map = new Map();
@@ -109,42 +122,35 @@ function styleTopicChip(el, pt, rank) {
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
   el.style.borderColor = shade;
-  el.style.color = (rank || 0) < LIGHT_TEXT_RANK_CUTOFF ? "#fff" : "#222";
+  el.style.color = invertHexColor(shade);
 }
 
-// A GitHub-style horizontal segmented bar (like the "Languages" bar on a
-// repo page) — segments sized proportionally, in rank order, with a thin
-// white gap between each so segment boundaries are always readable even
-// when two shades end up close. Simple rectangles avoid the radial
-// artifacts a conic-gradient produces at shallow slice angles. No
-// separate legend: the chip row immediately below the bar already names
-// every topic in the same shades, so a second color-key list would just
-// repeat the same information.
-function buildTopicBar(topics) {
+// No separate legend: the chip row immediately below the pie already
+// names every topic in the same shades, so a second color-key list would
+// just repeat the same information.
+function buildTopicPieChart(topics) {
   const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
   if (!total) return null;
 
-  const bar = document.createElement("div");
-  bar.className = "topic-bar";
-  bar.setAttribute("role", "img");
+  const pie = document.createElement("div");
+  pie.className = "topic-pie";
+  pie.setAttribute("role", "img");
   const labelList = topics.map(t => {
     const meta = topicById.get(t.id);
     return meta ? `${meta.label} (${Math.round((t.percent || 0) / total * 100)}%)` : null;
   }).filter(Boolean).join(", ");
-  bar.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
+  pie.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
 
-  topics.forEach((t, i) => {
-    const meta = topicById.get(t.id);
+  let cursor = 0;
+  const stops = topics.map((t, i) => {
     const share = (t.percent || 0) / total * 100;
-    const seg = document.createElement("div");
-    seg.className = "topic-bar-segment";
-    seg.style.width = `${share}%`;
-    seg.style.background = shadeForRank(i);
-    seg.title = meta ? `${meta.label} — ${Math.round(share)}%` : `${Math.round(share)}%`;
-    bar.appendChild(seg);
+    const slice = `${shadeForRank(i)} ${cursor}% ${cursor + share}%`;
+    cursor += share;
+    return slice;
   });
+  pie.style.background = `conic-gradient(${stops.join(", ")})`;
 
-  return bar;
+  return pie;
 }
 
 async function init() {
@@ -918,7 +924,7 @@ function buildModalBody(p) {
   }
 
   // Every topic the paper is tagged with is listed here (unlike the card
-  // itself, which only shows the top few) — the bar makes the relative
+  // itself, which only shows the top few) — the pie makes the relative
   // proportions legible at a glance, and the chip row below it uses the
   // same rank-based shading via styleTopicChip.
   const allTopics = p.topics || [];
@@ -929,8 +935,8 @@ function buildModalBody(p) {
     h4.textContent = "Topics";
     section.appendChild(h4);
 
-    const bar = buildTopicBar(allTopics);
-    if (bar) section.appendChild(bar);
+    const pie = buildTopicPieChart(allTopics);
+    if (pie) section.appendChild(pie);
 
     const row = document.createElement("div");
     row.className = "badge-row";
