@@ -469,95 +469,6 @@
     margin: 0 0 0.65rem;
   }
 
-  .card-excerpt-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin: 0 0 0.75rem;
-  }
-
-  .card-excerpt {
-    font-size: 0.92rem;
-    color: #222;
-    margin: 0;
-    padding: 0.6rem 0.8rem;
-    background: #F3F4F5;
-    border-radius: 6px;
-  }
-  .card-excerpt mark {
-    background: #fff59d;
-    color: #222;
-    border-radius: 2px;
-    padding: 0 0.1em;
-  }
-
-  .context-toggle {
-    font-size: 0.78rem;
-    background: none;
-    border: 1px solid #ccc;
-    color: #333;
-    border-radius: 6px;
-    padding: 0.3rem 0.65rem;
-    cursor: pointer;
-  }
-  .context-toggle:hover { background: #F3F4F5; }
-
-  .context-controls {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .context-nav {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .context-nav-btn {
-    font-size: 0.85rem;
-    line-height: 1;
-    background: none;
-    border: 1px solid #ccc;
-    color: #333;
-    border-radius: 6px;
-    padding: 0.28rem 0.55rem;
-    cursor: pointer;
-  }
-  .context-nav-btn:hover { background: #F3F4F5; }
-
-  .context-nav-label {
-    font-size: 0.78rem;
-    color: #555;
-    white-space: nowrap;
-  }
-
-  .context-window {
-    width: 100%;
-    font-size: 0.92rem;
-    line-height: 1.7;
-    color: #222;
-    margin: 0;
-    padding: 1.1rem 1.25rem;
-    background: #F3F4F5;
-    border-radius: 6px;
-    white-space: normal;
-    overflow-wrap: break-word;
-  }
-  .context-window .context-before,
-  .context-window .context-after {
-    color: #555;
-  }
-  .context-window mark.context-target {
-    background: #fff59d;
-    color: #222;
-    border-radius: 2px;
-    padding: 0 0.2em;
-    font-weight: 700;
-  }
-
   .card-summary {
     font-size: 0.9rem;
     color: #333;
@@ -588,7 +499,7 @@
     border: 1px solid #ddd;
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
-    transition: background-color 0.15s ease, color 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease, opacity 0.2s ease;
   }
 
   /* Background, border, and text color are all set inline by
@@ -704,6 +615,30 @@
   }
   .modal-body .card-byline { margin: -0.3rem 0 0; }
 
+  .modal-body::-webkit-scrollbar {
+    width: 8px;        /* width of vertical scrollbar */
+    height: 12px;       /* height of horizontal scrollbar */
+  }
+
+  /* Remove buttons completely */
+  .modal-body::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  /* Optional: style track and thumb */
+  .modal-body::-webkit-scrollbar-track {
+    background: transparent;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .modal-body::-webkit-scrollbar-thumb {
+    background: #d3d3d3;
+    border-radius: 6px;
+  }
+
   .topic-pie {
     width: 8.5rem;
     height: 8.5rem;
@@ -712,6 +647,16 @@
     flex-shrink: 0;
     box-shadow: 0 0 0 1px #eee;
     cursor: default;
+  }
+
+  /* Each wedge eases its opacity/scale rather than snapping, and grows
+     from its own center (transform-origin set inline per-path in
+     app.js, since each slice's center differs) so the hovered slice
+     reads as gently "lifting" rather than just fading in place. */
+  .topic-pie path {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform-box: fill-box;
+    transform-origin: center;
   }
 
   /* Pairs the pie with its chip row side by side instead of stacking
