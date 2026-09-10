@@ -47,8 +47,9 @@ const SOURCE_LABELS = {
 
 // Topic chips are weighted by "percent" — roughly how much of the paper's
 // content concerns that topic (see build.py's normalize_topics). At or
-// above this share a chip gets the bold "dominant" look; below it, the
-// chip fades proportionally.
+// above this share a chip gets the bold "dominant" look (font-weight
+// only — the chip's actual shade comes from its rank, see
+// TOPIC_SHADE_SCALE below, not from this threshold).
 const DOMINANT_TOPIC_THRESHOLD = 25;
 // The card itself only ever shows a paper's 6 most significant topics
 // (catalog.json already lists each paper's topics sorted by percent
@@ -68,56 +69,57 @@ function cardTopics(p) {
   return filterMatches.length ? [...top, ...filterMatches] : top;
 }
 
-// Monochrome only: a topic's identity is conveyed by its label text (on
-// the chip itself, or via the pie's title tooltip), never by hue — every
-// topic uses the same black-to-white scale, keyed purely by how much of
-// the paper it accounts for. This intentionally matches the plain
-// grayscale look the site used before per-topic colors were introduced.
-function grayForMagnitude(pct) {
-  if (pct >= DOMINANT_TOPIC_THRESHOLD) return "#222";
-  const strength = Math.max(15, Math.min(85, (pct / DOMINANT_TOPIC_THRESHOLD) * 85));
-  return `color-mix(in srgb, #222 ${strength}%, white)`;
-}
-
-function styleTopicChip(el, pt) {
-  const pct = typeof pt.percent === "number" ? pt.percent : 0;
-  // The percent itself is never shown as text anywhere in the UI — it
-  // only drives how dark/solid the chip looks (and is available on
-  // hover for anyone who wants the exact figure).
-  el.title = `${Math.round(pct)}% of paper`;
-  if (pct >= DOMINANT_TOPIC_THRESHOLD) {
-    el.className = "topic-chip topic-chip--dominant";
-  } else {
-    el.className = "topic-chip";
-    el.style.background = grayForMagnitude(pct);
-  }
-}
-
-// No separate legend: the chip row immediately below the bar already
-// names every topic, so a second color-key/label list would just repeat
-// the same information.
-//
-// Shading here is deliberately RANK-based, not a continuous function of
-// percent (unlike the chips above) — two topics with close but unequal
-// percentages (e.g. 21% and 18%) would land almost on top of each other
-// on a continuous grayscale, making adjacent segments indistinguishable.
-// Since `topics` always arrives pre-sorted by percent descending (see
-// build.py), assigning a fixed, well-spread shade per rank position keeps
-// every segment visually distinct while still preserving the dominant-to-
-// minor ordering. Ranks beyond the scale (rare — a handful of very broad
-// papers) just reuse the lightest shade, which is semantically fine since
-// those are the paper's most minor topics anyway.
+// Shading is RANK-based, not a continuous function of percent — two
+// topics with close but unequal percentages (e.g. 21% and 18%) would
+// land almost on top of each other on a continuous grayscale, making
+// them indistinguishable. Since a paper's `topics` array always arrives
+// pre-sorted by percent descending (see build.py), assigning a fixed,
+// well-spread shade per rank position keeps every topic visually
+// distinct — on the bar AND on its chip — while still preserving the
+// dominant-to-minor ordering. Ranks beyond the scale (rare — a handful
+// of very broad papers) just reuse the lightest shade, which is
+// semantically fine since those are the paper's most minor topics
+// anyway. The first three shades are dark enough to need white text;
+// everything from #7a7a7a on uses the normal dark chip text.
 const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#e8e8e8"];
+const LIGHT_TEXT_RANK_CUTOFF = 3; // ranks 0-2 (darker than #7a7a7a) get white text
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
+}
+
+// A topic's rank is its position in the paper's full topics array (sorted
+// percent descending), not its position in whatever subset is currently
+// being rendered — this is what keeps a topic's color consistent between
+// the bar, the card's (possibly reordered/truncated) chip row, and the
+// modal's chip row, all for the same paper.
+function topicRankMap(p) {
+  const map = new Map();
+  (p.topics || []).forEach((t, i) => map.set(t.id, i));
+  return map;
+}
+
+function styleTopicChip(el, pt, rank) {
+  const pct = typeof pt.percent === "number" ? pt.percent : 0;
+  // The percent itself is never shown as text anywhere in the UI — it
+  // only drives (via rank) how dark/solid the chip looks, and is
+  // available on hover for anyone who wants the exact figure.
+  el.title = `${Math.round(pct)}% of paper`;
+  const shade = shadeForRank(rank || 0);
+  el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
+  el.style.background = shade;
+  el.style.borderColor = shade;
+  el.style.color = (rank || 0) < LIGHT_TEXT_RANK_CUTOFF ? "#fff" : "#222";
 }
 
 // A GitHub-style horizontal segmented bar (like the "Languages" bar on a
 // repo page) — segments sized proportionally, in rank order, with a thin
 // white gap between each so segment boundaries are always readable even
 // when two shades end up close. Simple rectangles avoid the radial
-// artifacts a conic-gradient produces at shallow slice angles.
+// artifacts a conic-gradient produces at shallow slice angles. No
+// separate legend: the chip row immediately below the bar already names
+// every topic in the same shades, so a second color-key list would just
+// repeat the same information.
 function buildTopicBar(topics) {
   const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
   if (!total) return null;
@@ -759,11 +761,12 @@ function renderCard(p, { excerpt } = {}) {
   if (p.topics && p.topics.length) {
     const row = document.createElement("div");
     row.className = "badge-row";
+    const rankMap = topicRankMap(p);
     cardTopics(p).forEach(pt => {
       const t = topicById.get(pt.id);
       if (!t) return;
       const b = document.createElement("span");
-      styleTopicChip(b, pt);
+      styleTopicChip(b, pt, rankMap.get(pt.id));
       b.textContent = t.label;
       row.appendChild(b);
     });
@@ -916,8 +919,8 @@ function buildModalBody(p) {
 
   // Every topic the paper is tagged with is listed here (unlike the card
   // itself, which only shows the top few) — the bar makes the relative
-  // proportions legible at a glance, and the chip row below it still
-  // fades minor topics via styleTopicChip.
+  // proportions legible at a glance, and the chip row below it uses the
+  // same rank-based shading via styleTopicChip.
   const allTopics = p.topics || [];
   if (allTopics.length) {
     const section = document.createElement("div");
@@ -931,11 +934,11 @@ function buildModalBody(p) {
 
     const row = document.createElement("div");
     row.className = "badge-row";
-    allTopics.forEach(pt => {
+    allTopics.forEach((pt, i) => {
       const t = topicById.get(pt.id);
       if (!t) return;
       const b = document.createElement("span");
-      styleTopicChip(b, pt);
+      styleTopicChip(b, pt, i);
       b.textContent = t.label;
       row.appendChild(b);
     });
