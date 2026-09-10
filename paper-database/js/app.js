@@ -83,8 +83,26 @@ function cardTopics(p) {
 // as plain adjoining wedges — no dividing gap needed between them.
 const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#e8e8e8"];
 
+// Text stays in the light family through the middle of the scale rather
+// than flipping to black the moment a computed contrast check tips
+// past 50/50 — that flip reads as an inconsistent, jarring switch
+// right in the middle of an otherwise smooth gradient. Values dim
+// gradually as the background lightens (full white on the darkest
+// chip down to a soft off-white on #7a7a7a/#999999), then switch to
+// dark text only once the background itself is genuinely light
+// (#b8b8b8 and beyond). Note the tradeoff: #7a7a7a and #999999 don't
+// have room for both "light" and "high contrast" at once — even pure
+// white only reaches ~4.3:1 and ~2.9:1 on those two backgrounds
+// respectively, so this is a deliberate look-over-AA-compliance choice
+// for those two ranks specifically.
+const TOPIC_TEXT_SCALE = ["#ffffff", "#f5f5f5", "#ececec", "#e0e0e0", "#f2f2f2", "#1a1a1a", "#1a1a1a", "#1a1a1a"];
+
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
+}
+
+function textForRank(i) {
+  return TOPIC_TEXT_SCALE[Math.min(i, TOPIC_TEXT_SCALE.length - 1)];
 }
 
 // Photographic inversion (255-r, 255-g, 255-b) is NOT a contrast
@@ -96,6 +114,9 @@ function shadeForRank(i) {
 // color (not just the grayscale TOPIC_SHADE_SCALE) and its worst case
 // — the background luminance where black and white tie — still clears
 // a ~4.6:1 ratio, comfortably past the 4.5:1 AA threshold for text.
+// Used for species badges, whose background colors are arbitrary
+// per-species data rather than the fixed, rank-paired TOPIC scales
+// above, so a computed check (not a hand-tuned lookup) is what fits.
 function relativeLuminance(hex) {
   let h = hex.replace("#", "");
   if (h.length === 3) h = h.split("").map(c => c + c).join("");
@@ -141,7 +162,7 @@ function styleTopicChip(el, pt, rank) {
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
   el.style.borderColor = shade;
-  el.style.color = textColorForBackground(shade);
+  el.style.color = textForRank(rank || 0);
 }
 
 // No separate legend: the chip row immediately below the pie already
