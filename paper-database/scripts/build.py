@@ -5,20 +5,20 @@ from pathlib import Path
 
 PKG = Path(__file__).resolve().parent.parent
 DATA = PKG / "data"
-RECORDS = PKG / "records"
 
 # NOTE: This build intentionally never reads or embeds any part of a
 # paper's original text (no OCR, no verbatim abstract). Any personal OCR
 # transcription Frank keeps for his own reference lives outside this repo
-# entirely and is never read by this script. Every word that ends up in a
-# record's HTML/JSON comes from the papers.json metadata: either bare
-# bibliographic facts (title, authors, journal, etc.), the paper's own
-# printed keyword list ("author_keywords", copied as-is because it's a
-# short factual index list, not prose), or the "overview"/"search_keywords"
-# fields, which are original analysis written for this project, not copied
-# from the source. The only connection to the actual paper text is the
-# outbound "legal_url" link, which points to a legitimate external host
-# (publisher, BHL, JSTOR, author page, etc.).
+# entirely and is never read by this script. Every word that ends up in
+# catalog.json/search-index.json comes from the papers.json metadata:
+# either bare bibliographic facts (title, authors, journal, etc.), the
+# paper's own printed keyword list ("author_keywords", copied as-is
+# because it's a short factual index list, not prose), or the
+# "overview"/"search_keywords" fields, which are original analysis
+# written for this project, not copied from the source. The only
+# connection to the actual paper text is the outbound "legal_url" link,
+# which points to a legitimate external host (publisher, BHL, JSTOR,
+# author page, etc.).
 #
 # "search_keywords" are fuzzy-search bait, not the paper's real keywords —
 # they're indexed for matching (below) but deliberately left OUT of
@@ -28,15 +28,12 @@ RECORDS = PKG / "records"
 #
 # search-index.json carries that same matching text (metadata terms +
 # overview) out to the front end as plain JSON, keyed by paper id. It
-# exists so app.js's OWN fuzzy word/edit-distance matcher (see app.js) can
-# decide what counts as a match directly, for every record, rather than
-# being limited to whatever a literal-text search engine like Pagefind
-# would surface. Pagefind is still built and used, but only as an
-# optional enhancement (nicer highlighted excerpts) — never as a gate on
-# which records are considered matches. Like catalog.json, this file
-# never contains search_keywords standing alone as if they were real
-# keywords in the UI; it's read only by the matching/excerpt code, never
-# rendered as a labeled field.
+# exists so app.js's OWN fuzzy word/edit-distance matcher (see app.js) is
+# the sole decider of what counts as a match for every record. There's no
+# separate full-text search engine or per-record excerpt/snippet — this
+# JSON blob is the entire search surface. Like catalog.json, it never
+# contains search_keywords labeled as if they were real keywords; it's
+# read only by the matching code, never rendered as a field.
 
 
 def normalize_topics(raw):
@@ -97,8 +94,6 @@ def build():
     topics = json.loads((DATA / "topics.json").read_text(encoding="utf-8"))
     topic_by_id = {t["id"]: t for t in topics}
 
-    RECORDS.mkdir(parents=True, exist_ok=True)
-
     seen_ids = set()
     all_species = {}
     catalog = []
@@ -141,21 +136,10 @@ def build():
             "author_keywords": p.get("author_keywords", []),
             # NOTE: "search_keywords" (fuzzy-search bait, not real
             # keywords) is intentionally NOT included here — see the
-            # module docstring above. It's indexed into the record HTML
+            # module docstring above. It's indexed into search_index
             # below instead, for search matching only.
             "added_date": p.get("added_date", ""),
         })
-
-        filter_spans = "".join(
-            f'\n  <span data-pagefind-filter="species:{esc(sp)}" hidden></span>'
-            for sp in p.get("species", [])
-        )
-        filter_spans += "".join(
-            f'\n  <span data-pagefind-filter="topic:{esc(t["id"])}" hidden></span>'
-            for t in normalize_topics(p.get("topics", []))
-        )
-        if p.get("year"):
-            filter_spans += f'\n  <span data-pagefind-filter="year:{esc(str(int(p["year"])))}" hidden></span>'
 
         species_names = p.get("species", [])
         search_keywords = p.get("search_keywords", [])
@@ -172,33 +156,13 @@ def build():
         metadata_search_text = ", ".join(metadata_terms)
         overview = p.get("overview", "")
 
-        # Same text that gets indexed into the record HTML below, exported
-        # as plain JSON so app.js's own fuzzy matcher can run directly
-        # against it instead of depending on Pagefind's literal-match index.
+        # Exported as plain JSON so app.js's own fuzzy matcher can run
+        # directly against it — this is the entire search surface, no
+        # separate full-text index is built anywhere else. Everything
+        # indexed here is either bare bibliographic fact or original
+        # project-written analysis (overview/keywords); no OCR text and
+        # no verbatim abstract are read or embedded.
         search_index[pid] = f"{metadata_search_text}. {overview}".strip()
-
-        # Everything indexed below is either bare bibliographic fact or
-        # original project-written analysis (overview/keywords). No
-        # OCR text and no verbatim abstract are read or embedded here.
-        record_html = f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
-<title>{esc(p['title'])}</title>
-</head>
-<body>
-<article data-pagefind-body>
-  <h1 data-pagefind-meta="title">{esc(p['title'])}</h1>
-  <span data-pagefind-meta="paper_id:{esc(pid)}" hidden></span>
-  <p>{esc(', '.join(p.get('authors', [])))} ({p.get('year', '')}). {esc(p.get('journal',''))}.</p>{filter_spans}
-  <div data-pagefind-weight="5">{esc(metadata_search_text)}</div>
-  <div data-pagefind-weight="3">{esc(overview)}</div>
-</article>
-</body>
-</html>
-"""
-        (RECORDS / f"{pid}.html").write_text(record_html, encoding="utf-8")
 
     catalog.sort(key=lambda p: (-(p["year"] or 0), p["title"]))
 
@@ -211,7 +175,6 @@ def build():
         json.dumps(search_index, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print(f"Built {len(papers)} records, {len(all_species)} species, {len(topics)} topics.")
-    print("Next (optional, for nicer excerpts only): npx pagefind --site paper-database")
 
 
 if __name__ == "__main__":
