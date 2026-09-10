@@ -97,6 +97,40 @@
     ]
   },
   {
+  "id": "hicks-1926",
+  "title": "Nesting Habits and Parasites of Certain Bees of Boulder County, Colorado",
+  "authors": ["Hicks, C. H."],
+  "year": 1926,
+  "journal": "University of Colorado Studies",
+  "volume": "15",
+  "pages": "217-252",
+  "doi": "",
+  "legal_url": "https://babel.hathitrust.org/cgi/pt?id=nyp.33433107731824&__cf_chl_tk=aWJEfe0EuaqZ8Sqpn8q31BKtU2eL9PbRx6wMQNVmSMU-1788913214-1.0.1.1-cNZLQwS6J0F3Ajd3gMvIoyUmQwThCaTkiOXtUSkG_c4&seq=233&view=1up",
+  "source_type": "Hathitrust",
+  "added_date": "",
+  "topics": ["natural-enemies", "life-history", "behavior"],
+  "species": ["Melissodes menuachus"],
+  "associated_organisms": [
+    {
+      "name": "Triepeolus occidentalis",
+      "relationship": "cleptoparasite"
+    }
+  ],
+  "author_keywords": [],
+  "search_keywords": [
+    "Melissodes menuachus nesting behavior",
+    "Melissodes mixeae nesting behavior",
+    "Melissodes menuachus cleptoparasitism by Triepeolus occidentalis",
+    "Melissodes mixeae cleptoparasitism by Triepeolus occidentalis",
+    "Triepeolus occidentalis cleptoparasite of Melissodes menuachus",
+    "Melissodes menuachus ground nest provisioning",
+    "Melissodes menuachus pollen collection",
+    "Melissodes menuachus Boulder County Colorado",
+    "Melissodes mixeae Boulder County Colorado"
+  ],
+  "overview": "Reports timed field observations of a Melissodes menuachus (as M. mixeae in the paper) ground nest near Boulder, Colorado, tracking pollen-provisioning visits, alongside two separate instances in which a female Triepeolus occidentalis Cresson (a cleptoparasitic bee) entered the nest entrance while the host bee was provisioning. The author considers this evidence for a parasite-host relationship between the two species."
+},
+  {
     "id": "cilla-2012",
     "title": "The foraging preferences of two species of Melissodes Latreille (Hymenoptera, Apidae, Eucerini) in farmed sunflower in Argentina",
     "authors": [
