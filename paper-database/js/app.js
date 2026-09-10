@@ -70,14 +70,26 @@ function cardTopics(p) {
 }
 
 // Every step stays light enough that flat black text reads clearly
-// against it (all comfortably above 14:1 contrast) — no per-rank text
-// color needed. The range sits close to white with tight ~4-value
-// steps between ranks, subtle enough not to compete with the page,
-// while still distinct enough for adjoining pie slices to read apart.
-const TOPIC_SHADE_SCALE = ["#d8d8d8", "#dcdcdc", "#e0e0e0", "#e4e4e4", "#e8e8e8", "#ececec", "#f0f0f0", "#f4f4f4"];
+// against it (all above 12:1 contrast). Steps are spaced ~9 apart —
+// wide enough to tell ranks apart at a glance, but still light overall
+// so the set doesn't compete with the page. The last rank is pure
+// white, matching the card background it sits on (see borderForShade
+// below for why that one needs special handling).
+const TOPIC_SHADE_SCALE = ["#c4c4c4", "#cdcdcd", "#d6d6d6", "#dfdfdf", "#e8e8e8", "#f1f1f1", "#fafafa", "#ffffff"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
+}
+
+// Every rank's border normally matches its own fill (a barely-there
+// edge, since the fill itself already reads against the white card).
+// The lightest rank is an exception: its fill IS the card's white
+// background, so a same-color border would vanish entirely and the
+// chip would have no visible edge at all — it gets a fixed light-gray
+// border instead, consistent with the app's other hairline borders
+// (.card and .topic-chip both already use similar grays).
+function borderForShade(shade) {
+  return shade === "#ffffff" ? "#cccccc" : shade;
 }
 
 // Used for species badges, whose background colors are arbitrary
@@ -129,7 +141,7 @@ function styleTopicChip(el, pt, rank) {
   const shade = shadeForRank(rank || 0);
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
-  el.style.borderColor = shade;
+  el.style.borderColor = borderForShade(shade);
   el.style.color = "#000000";
 }
 
