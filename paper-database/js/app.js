@@ -9,10 +9,9 @@ const state = {
 // NOTE: This app never stores, indexes, or displays any part of a paper's
 // original text — no OCR full text, no verbatim abstract. The only
 // searchable material is bibliographic metadata and the project's own
-// original "overview"/"search_keywords" writeups (see build.py). Search
-// excerpts below are built from that same content, never from the paper
-// itself. The only path to a paper's actual text is the outbound
-// "legal_url" link to its legitimate external host.
+// original "overview"/"search_keywords" writeups (see build.py). The
+// only path to a paper's actual text is the outbound "legal_url" link
+// to its legitimate external host.
 //
 // MATCHING STRATEGY: whether a record counts as "a match" for the current
 // query is decided entirely by our own fuzzy word/edit-distance matcher
@@ -20,11 +19,10 @@ const state = {
 // record's own metadata+overview text (catalogSearchText, loaded from
 // search-index.json). This is what lets a near-miss query like
 // "Melissodes abundance" find a record whose search_keywords say
-// "...most abundant wild bee" — the match isn't gated behind a literal
-// full-text search engine at all, so there's nothing that could veto it.
-// Once a record matches, findHitSpans/clusterHitSpans locate the actual
-// word(s) that satisfied the query inside that same text so we can show
-// a highlighted excerpt with "more context" navigation.
+// "...most abundant wild bee". There's no separate full-text search
+// engine layered on top, and no per-record excerpt/snippet is built or
+// shown — a record either matches or it doesn't, and the card just
+// displays its own overview text as normal.
 
 let catalog = [];
 let catalogById = new Map();
@@ -34,8 +32,6 @@ let topicById = new Map();
 let speciesMeta = [];
 let speciesColor = new Map();
 let searchToken = 0;
-let pagefind = null;
-let pagefindReady = false;
 
 const SOURCE_LABELS = {
   publisher: "Publisher",
@@ -229,12 +225,9 @@ async function init() {
   topicsMeta.forEach(t => topicById.set(t.id, t));
   speciesMeta = speciesRes;
   speciesMeta.forEach(s => speciesColor.set(s.name, s.color));
-  // This is the same metadata+overview text build.py indexes into each
-  // record's HTML — loaded here as plain JSON so our own fuzzy matcher
-  // (below) can run directly against it, per-record, as the actual
-  // decider of what counts as a match. Pagefind is used later only to
-  // fetch nicer pre-highlighted excerpts when it's available; it never
-  // gates which records are considered matches.
+  // Metadata+overview text per paper, loaded as plain JSON so our own
+  // fuzzy matcher (below) can run directly against it, per-record, as
+  // the sole decider of what counts as a match.
   catalogSearchText = new Map(Object.entries(searchIndexRes));
 
   buildTopicFilters();
@@ -261,15 +254,6 @@ async function init() {
 
   document.getElementById("q").addEventListener("input", debounce(onQueryChange, 250));
   document.getElementById("clear-filters").addEventListener("click", clearAllFilters);
-
-  try {
-    pagefind = await import("../pagefind/pagefind.js");
-    await pagefind.options({ excerptLength: 24 });
-    pagefindReady = true;
-  } catch (e) {
-    pagefindReady = false;
-    console.warn("Pagefind index not available yet — falling back to the built-in matcher only (no enhanced excerpts).", e);
-  }
 
   render();
 }
@@ -456,10 +440,23 @@ function onQueryChange(e) {
   render();
 }
 
-async function render() {
+// A query shorter than this can't really match anything yet (see
+// PREFIX_MIN_LENGTH below — a 1-2 char word only matches an identical
+// 1-2 char content word). Rather than run the search and show a
+// misleading "nothing matches" while the person is still mid-word, we
+// just hold off on searching at all until there's enough to go on, and
+// show the plain browse list (still honoring species/topic/year filters)
+// in the meantime.
+const MIN_QUERY_LENGTH = 3;
+
+function isQueryActive() {
+  return state.query.length >= MIN_QUERY_LENGTH;
+}
+
+function render() {
   renderActiveFilters();
-  if (state.query) {
-    await renderSearchResults();
+  if (isQueryActive()) {
+    renderSearchResults();
   } else {
     renderBrowseResults();
   }
@@ -583,7 +580,14 @@ function tokenizeWords(text) {
   return text.toLowerCase().match(/[\p{L}\p{N}]+/gu) || [];
 }
 
-const PREFIX_MIN_LENGTH = 4;
+// A query word of at least this length can prefix-match a longer content
+// word (so "mel" finds "Melissodes"). Below this, a short query like "a"
+// or "of" would prefix-match half the dictionary, so it's held to an
+// exact match instead. Note this is intentionally one-directional: the
+// content word must be LONGER than and start with the query word, never
+// the reverse, so a query for the full word "Melissodes" never turns
+// around and matches an unrelated short content word like "mel".
+const PREFIX_MIN_LENGTH = 3;
 
 function hasCloseMatch(word, contentWordSet, contentWordList) {
   const w = word.toLowerCase();
@@ -617,122 +621,27 @@ function findMatchingGroup(content, wordGroups) {
   return -1;
 }
 
-// Same word tokenizer as tokenizeWords, but keeps each token's character
-// offsets so hit locations can be sliced back out of the original text.
-function tokenizeWordsWithPositions(text) {
-  const out = [];
-  const re = /[\p{L}\p{N}]+/gu;
-  let m;
-  while ((m = re.exec(text)) !== null) {
-    out.push({ word: m[0], start: m.index, end: m.index + m[0].length });
-  }
-  return out;
-}
-
-// Locates every token in `content` that satisfies one of the words in a
-// matched AND-group (exact, prefix, or close-edit-distance — same rules
-// as hasCloseMatch), so the excerpt can highlight the words that actually
-// caused the match rather than an arbitrary snippet.
-function findHitSpans(content, group) {
-  const tokens = tokenizeWordsWithPositions(content);
-  const spans = [];
+// Counts how many content words satisfy each word in a matched AND-group
+// (exact, prefix, or close-edit-distance — same rules as hasCloseMatch).
+// Used only to rank results with more/closer hits above thinner matches;
+// no location tracking is needed since matches are no longer highlighted.
+function countMatches(contentWordList, group) {
+  let count = 0;
   group.forEach(rawWord => {
     const w = rawWord.toLowerCase();
     const prefixEligible = w.length >= PREFIX_MIN_LENGTH;
     const maxDist = allowedEditDistance(w);
-    tokens.forEach(tok => {
-      const t = tok.word.toLowerCase();
-      const isHit = t === w
-        || (prefixEligible && t.length > w.length && t.startsWith(w))
-        || (maxDist > 0 && Math.abs(t.length - w.length) <= maxDist && editDistance(w, t) <= maxDist);
-      if (isHit) spans.push(tok);
+    contentWordList.forEach(token => {
+      const isHit = token === w
+        || (prefixEligible && token.length > w.length && token.startsWith(w))
+        || (maxDist > 0 && Math.abs(token.length - w.length) <= maxDist && editDistance(w, token) <= maxDist);
+      if (isHit) count++;
     });
   });
-  spans.sort((a, b) => a.start - b.start);
-  return spans;
+  return count;
 }
 
-// Groups nearby hit spans into clusters (so several hits close together
-// become one excerpt instead of one per word), best cluster first — most
-// distinct matched words, then most hits, then earliest in the text.
-const CLUSTER_GAP = 80;
-
-function clusterHitSpans(spans) {
-  if (!spans.length) return [];
-  const clusters = [];
-  let current = [spans[0]];
-  for (let i = 1; i < spans.length; i++) {
-    const prev = current[current.length - 1];
-    if (spans[i].start - prev.end <= CLUSTER_GAP) {
-      current.push(spans[i]);
-    } else {
-      clusters.push(current);
-      current = [spans[i]];
-    }
-  }
-  clusters.push(current);
-  clusters.sort((a, b) => {
-    const da = new Set(a.map(s => s.word.toLowerCase())).size;
-    const db = new Set(b.map(s => s.word.toLowerCase())).size;
-    if (db !== da) return db - da;
-    if (b.length !== a.length) return b.length - a.length;
-    return a[0].start - b[0].start;
-  });
-  return clusters;
-}
-
-function snapToWordBoundary(content, start, end) {
-  while (start > 0 && /\S/.test(content[start - 1])) start--;
-  while (end < content.length && /\S/.test(content[end])) end++;
-  return [start, end];
-}
-
-// Compact snippet shown directly on the card — plain <mark> highlights.
-function compactExcerptHtml(cluster, content, radius = 70) {
-  const first = cluster[0], last = cluster[cluster.length - 1];
-  let [start, end] = snapToWordBoundary(content, Math.max(0, first.start - radius), Math.min(content.length, last.end + radius));
-  let out = "";
-  let cursor = start;
-  cluster.forEach(span => {
-    out += escapeHtml(content.slice(cursor, span.start));
-    out += `<mark>${escapeHtml(content.slice(span.start, span.end))}</mark>`;
-    cursor = span.end;
-  });
-  out += escapeHtml(content.slice(cursor, end));
-  return (start > 0 ? "…" : "") + out + (end < content.length ? "…" : "");
-}
-
-// Larger "more context" window — muted surrounding text, bold target hits.
-function windowExcerptHtml(cluster, content, radius = 240) {
-  const first = cluster[0], last = cluster[cluster.length - 1];
-  let [start, end] = snapToWordBoundary(content, Math.max(0, first.start - radius), Math.min(content.length, last.end + radius));
-  const before = (start > 0 ? "…" : "") + escapeHtml(content.slice(start, first.start));
-  let middle = "";
-  let cursor = first.start;
-  cluster.forEach(span => {
-    middle += escapeHtml(content.slice(cursor, span.start));
-    middle += `<mark class="context-target">${escapeHtml(content.slice(span.start, span.end))}</mark>`;
-    cursor = span.end;
-  });
-  const after = escapeHtml(content.slice(cursor, end)) + (end < content.length ? "…" : "");
-  return `<span class="context-before">${before}</span>${middle}<span class="context-after">${after}</span>`;
-}
-
-// Builds the per-record excerpt data used when Pagefind doesn't already
-// have a nicer one: one {compact, window} pair per hit cluster, best
-// cluster first, for the card excerpt + "more context" nav to page through.
-function buildExcerptData(content, group) {
-  const spans = findHitSpans(content, group);
-  const clusters = clusterHitSpans(spans);
-  if (!clusters.length) return null;
-  return clusters.map(cluster => ({
-    compact: compactExcerptHtml(cluster, content),
-    window: windowExcerptHtml(cluster, content),
-  }));
-}
-
-async function renderSearchResults() {
-  const myToken = ++searchToken;
+function renderSearchResults() {
   const groups = parseBooleanQuery(state.query);
   const wordGroups = groups.map(g => g.split(/\s+/).filter(Boolean));
 
@@ -746,40 +655,10 @@ async function renderSearchResults() {
     const content = catalogSearchText.get(p.id) || "";
     const groupIdx = findMatchingGroup(content, wordGroups);
     if (groupIdx === -1) return;
-    const excerptData = buildExcerptData(content, wordGroups[groupIdx]);
-    const hitCount = findHitSpans(content, wordGroups[groupIdx]).length;
-    matched.push({ p, excerptData, hitCount });
+    const hitCount = countMatches(tokenizeWords(content), wordGroups[groupIdx]);
+    matched.push({ p, hitCount });
   });
   matched.sort((a, b) => b.hitCount - a.hitCount);
-
-  // Pagefind, if it built successfully, is asked for its own excerpts on
-  // the same query purely so already-matched records can show a nicer
-  // pre-highlighted snippet where it agrees — it never adds or removes a
-  // record from `matched` above, and failures here are silently ignored.
-  const pagefindExcerpts = new Map();
-  if (pagefindReady && matched.length) {
-    try {
-      const filters = {};
-      if (state.species.size) filters.species = [...state.species];
-      if (state.topics.size) filters.topic = [...state.topics];
-      if (state.year) {
-        const years = [];
-        for (let y = state.year.from; y <= state.year.to; y++) years.push(String(y));
-        filters.year = years;
-      }
-      const matchedIds = new Set(matched.map(m => m.p.id));
-      const searches = await Promise.all(groups.map(g => pagefind.search(g, { filters })));
-      if (myToken !== searchToken) return;
-      const items = await Promise.all(searches.flatMap(s => s.results).map(r => r.data()));
-      items.forEach(item => {
-        const id = item.meta && item.meta.paper_id;
-        if (id && matchedIds.has(id) && item.excerpt) pagefindExcerpts.set(id, item.excerpt);
-      });
-    } catch (e) {
-      // Nicer excerpts are a bonus only — fall back to our own below.
-    }
-  }
-  if (myToken !== searchToken) return;
 
   const list = document.getElementById("results-list");
   list.innerHTML = "";
@@ -788,9 +667,8 @@ async function renderSearchResults() {
   setCount(matched.length, catalog.length);
   document.getElementById("empty-state").hidden = matched.length > 0;
 
-  shown.forEach(({ p, excerptData }) => {
-    const excerpt = pagefindExcerpts.get(p.id) || (excerptData && excerptData[0].compact);
-    list.appendChild(renderCard(p, { excerpt }));
+  shown.forEach(({ p }) => {
+    list.appendChild(renderCard(p));
   });
 }
 
@@ -804,12 +682,12 @@ function renderMessage(msg) {
 
 function setCount(n, total) {
   const el = document.getElementById("result-count");
-  el.textContent = state.query || state.species.size || state.topics.size || state.year
+  el.textContent = isQueryActive() || state.species.size || state.topics.size || state.year
     ? `${n} of ${total} records`
     : `${total} records`;
 }
 
-function renderCard(p, { excerpt } = {}) {
+function renderCard(p) {
   const card = document.createElement("article");
   card.className = "card";
 
@@ -851,19 +729,6 @@ function renderCard(p, { excerpt } = {}) {
     sumEl.className = "card-summary";
     sumEl.textContent = summary;
     card.appendChild(sumEl);
-  }
-
-  // `excerpt` is pagefind's own highlighted snippet, built only from the
-  // metadata/overview text we indexed in build.py (never from the paper's
-  // original text), so it's safe to render as-is.
-  if (excerpt) {
-    const wrap = document.createElement("div");
-    wrap.className = "card-excerpt-block";
-    const ex = document.createElement("p");
-    ex.className = "card-excerpt";
-    ex.innerHTML = excerpt;
-    wrap.appendChild(ex);
-    card.appendChild(wrap);
   }
 
   const links = document.createElement("div");
@@ -1017,20 +882,30 @@ function buildModalBody(p) {
     });
     pieRow.appendChild(row);
 
-    // Hovering a wedge dims every other chip to 40% opacity, leaving
-    // only the one matching that topic at full strength — makes it
-    // obvious which chip a given slice corresponds to without relying
-    // on shade alone (several ranks can look close in a quick glance).
+    // Hovering a wedge dims every other chip AND every other wedge to
+    // 40% opacity, and eases the hovered wedge up to a slightly larger
+    // scale — leaving only the hovered topic at full strength across
+    // both the pie and the chip row, so it's obvious which chip a
+    // given slice corresponds to without relying on shade alone
+    // (several ranks can look close in a quick glance). The actual
+    // easing is CSS (`.topic-pie path` transition), this just toggles
+    // the end-state opacity/transform.
     if (pieResult) {
       pieResult.pathsByTopicId.forEach((path, topicId) => {
-        const chip = chipsByTopicId.get(topicId);
-        if (!chip) return;
         path.addEventListener("mouseenter", () => {
+          pieResult.pathsByTopicId.forEach((p, id) => {
+            p.style.opacity = id === topicId ? "1" : "0.4";
+            p.style.transform = id === topicId ? "scale(1.05)" : "scale(1)";
+          });
           chipsByTopicId.forEach((c, id) => {
             c.style.opacity = id === topicId ? "1" : "0.4";
           });
         });
         path.addEventListener("mouseleave", () => {
+          pieResult.pathsByTopicId.forEach(p => {
+            p.style.opacity = "1";
+            p.style.transform = "scale(1)";
+          });
           chipsByTopicId.forEach(c => { c.style.opacity = "1"; });
         });
       });
