@@ -130,32 +130,76 @@ function styleTopicChip(el, pt, rank) {
   el.style.color = "#ffffff";
 }
 
-// No separate legend: the chip row immediately below the pie already
+// No separate legend: the chip row immediately beside the pie already
 // names every topic in the same shades, so a second color-key list would
 // just repeat the same information.
+//
+// Each wedge is its own <path>, not one div with a conic-gradient
+// background — a single gradient background has no way to target an
+// individual slice for a hover tooltip, since it's all one element.
+// Each path gets a native <title> child so hovering any wedge shows
+// its topic name and share, the same way a browser tooltip works
+// anywhere else.
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+function polarToCartesian(cx, cy, r, angleDeg) {
+  const rad = (angleDeg * Math.PI) / 180;
+  return { x: cx + r * Math.sin(rad), y: cy - r * Math.cos(rad) };
+}
+
+function describePieSlice(cx, cy, r, startDeg, endDeg) {
+  // A slice spanning (essentially) the full circle degenerates under
+  // the normal start/end-point arc formula below, so it's drawn as an
+  // explicit two-arc circle instead.
+  if (endDeg - startDeg >= 359.99) {
+    return `M ${cx - r},${cy} A ${r},${r} 0 1,1 ${cx + r},${cy} A ${r},${r} 0 1,1 ${cx - r},${cy} Z`;
+  }
+  const start = polarToCartesian(cx, cy, r, startDeg);
+  const end = polarToCartesian(cx, cy, r, endDeg);
+  const largeArc = endDeg - startDeg > 180 ? 1 : 0;
+  return `M ${cx},${cy} L ${start.x},${start.y} A ${r},${r} 0 ${largeArc},1 ${end.x},${end.y} Z`;
+}
+
 function buildTopicPieChart(topics) {
   const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
   if (!total) return null;
 
-  const pie = document.createElement("div");
-  pie.className = "topic-pie";
-  pie.setAttribute("role", "img");
+  const wrap = document.createElement("div");
+  wrap.className = "topic-pie";
+  wrap.setAttribute("role", "img");
   const labelList = topics.map(t => {
     const meta = topicById.get(t.id);
     return meta ? `${meta.label} (${Math.round((t.percent || 0) / total * 100)}%)` : null;
   }).filter(Boolean).join(", ");
-  pie.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
+  wrap.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
 
-  let cursor = 0;
-  const stops = topics.map((t, i) => {
+  const svg = document.createElementNS(SVG_NS, "svg");
+  svg.setAttribute("viewBox", "0 0 100 100");
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", "100%");
+
+  let cursorDeg = 0;
+  topics.forEach((t, i) => {
     const share = (t.percent || 0) / total * 100;
-    const slice = `${shadeForRank(i)} ${cursor}% ${cursor + share}%`;
-    cursor += share;
-    return slice;
-  });
-  pie.style.background = `conic-gradient(${stops.join(", ")})`;
+    const startDeg = cursorDeg;
+    const endDeg = cursorDeg + share * 3.6;
+    cursorDeg = endDeg;
 
-  return pie;
+    const meta = topicById.get(t.id);
+    const pct = Math.round(share);
+    const path = document.createElementNS(SVG_NS, "path");
+    path.setAttribute("d", describePieSlice(50, 50, 50, startDeg, endDeg));
+    path.setAttribute("fill", shadeForRank(i));
+
+    const title = document.createElementNS(SVG_NS, "title");
+    title.textContent = meta ? `${meta.label} (${pct}%)` : `${pct}%`;
+    path.appendChild(title);
+
+    svg.appendChild(path);
+  });
+
+  wrap.appendChild(svg);
+  return wrap;
 }
 
 async function init() {
@@ -930,7 +974,7 @@ function buildModalBody(p) {
 
   // Every topic the paper is tagged with is listed here (unlike the card
   // itself, which only shows the top few) — the pie makes the relative
-  // proportions legible at a glance, and the chip row below it uses the
+  // proportions legible at a glance, and the chip row beside it uses the
   // same rank-based shading via styleTopicChip.
   const allTopics = p.topics || [];
   if (allTopics.length) {
@@ -940,8 +984,11 @@ function buildModalBody(p) {
     h4.textContent = "Topics";
     section.appendChild(h4);
 
+    const pieRow = document.createElement("div");
+    pieRow.className = "topic-pie-row";
+
     const pie = buildTopicPieChart(allTopics);
-    if (pie) section.appendChild(pie);
+    if (pie) pieRow.appendChild(pie);
 
     const row = document.createElement("div");
     row.className = "badge-row";
@@ -953,7 +1000,9 @@ function buildModalBody(p) {
       b.textContent = t.label;
       row.appendChild(b);
     });
-    section.appendChild(row);
+    pieRow.appendChild(row);
+
+    section.appendChild(pieRow);
     frag.appendChild(section);
   }
 
