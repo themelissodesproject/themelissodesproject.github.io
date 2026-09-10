@@ -69,25 +69,25 @@ function cardTopics(p) {
   return filterMatches.length ? [...top, ...filterMatches] : top;
 }
 
-// Every step stays light enough that flat black text reads clearly
-// against it (all above 12:1 contrast). Steps are spaced ~9 apart —
-// wide enough to tell ranks apart at a glance, but still light overall
-// so the set doesn't compete with the page. The last rank is pure
-// white, matching the card background it sits on (see TOPIC_CHIP_BORDER
-// below for why that one needs special handling).
-const TOPIC_SHADE_SCALE = ["#c4c4c4", "#cdcdcd", "#d6d6d6", "#dfdfdf", "#e8e8e8", "#f1f1f1", "#fafafa", "#ffffff"];
+// Every step stays dark enough that flat white text reads clearly
+// against it (all above 4.5:1 contrast, up to 17:1 at the darkest
+// end). Steps are spaced ~13 apart, evenly, from near-black down to
+// #767676 — #767676 is close to the darkest gray where white text
+// still clears a solid 4.5:1, so the range stops there rather than
+// drifting into the lighter tones that stopped supporting white text
+// well (that was the earlier light-background attempt's problem,
+// just mirrored).
+const TOPIC_SHADE_SCALE = ["#1a1a1a", "#272727", "#343434", "#424242", "#4f4f4f", "#5c5c5c", "#696969", "#767676"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
 }
 
-// Every rank gets the same fixed light-gray border, consistent with
-// the app's other hairline borders (.card and the default .topic-chip
-// both already use similar grays). A border that matched its own
-// fill color would be invisible against that fill — true for every
-// rank, not just the white one — so this is a flat constant rather
-// than a per-shade lookup.
-const TOPIC_CHIP_BORDER = "#cccccc";
+// A border a couple shades darker than the fill it sits on, giving
+// every chip a visible edge against the white card without needing a
+// per-rank lookup (dark-on-dark borders like this read fine, unlike
+// the earlier same-color-as-fill attempt which was invisible).
+const TOPIC_CHIP_BORDER = "#000000";
 
 // Used for species badges, whose background colors are arbitrary
 // per-species data (not the fixed, always-light TOPIC_SHADE_SCALE
@@ -139,7 +139,7 @@ function styleTopicChip(el, pt, rank) {
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
   el.style.borderColor = TOPIC_CHIP_BORDER;
-  el.style.color = "#000000";
+  el.style.color = "#ffffff";
 }
 
 // No separate legend: the chip row immediately below the pie already
