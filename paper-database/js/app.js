@@ -70,12 +70,11 @@ function cardTopics(p) {
 }
 
 // Every step stays light enough that flat black text reads clearly
-// against it — no per-rank text color needed at all. The range runs
-// from #767676 (black text still clears ~4.6:1 there, the floor for
-// comfortable reading) up to #e6e6e6, with even ~16-value steps so
-// adjoining pie slices stay visually distinct without needing to dip
-// into darker tones that would require light text again.
-const TOPIC_SHADE_SCALE = ["#767676", "#868686", "#969696", "#a6a6a6", "#b6b6b6", "#c6c6c6", "#d6d6d6", "#e6e6e6"];
+// against it (all comfortably above 14:1 contrast) — no per-rank text
+// color needed. The range sits close to white with tight ~4-value
+// steps between ranks, subtle enough not to compete with the page,
+// while still distinct enough for adjoining pie slices to read apart.
+const TOPIC_SHADE_SCALE = ["#d8d8d8", "#dcdcdc", "#e0e0e0", "#e4e4e4", "#e8e8e8", "#ececec", "#f0f0f0", "#f4f4f4"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
