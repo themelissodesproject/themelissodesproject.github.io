@@ -707,9 +707,28 @@
     width: 8.5rem;
     height: 8.5rem;
     border-radius: 50%;
+    overflow: hidden;
     flex-shrink: 0;
     box-shadow: 0 0 0 1px #eee;
+    cursor: default;
+  }
+
+  /* Pairs the pie with its chip row side by side instead of stacking
+     them — the chips wrap and fill the space to the pie's right
+     rather than leaving it blank and starting a fresh row below. If
+     there are enough chips to wrap past the pie's own height, they
+     just continue in that same flex row's remaining width; the row's
+     overall height grows to fit them, same as before. */
+  .topic-pie-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
     margin-bottom: 0.75rem;
+  }
+  .topic-pie-row .badge-row {
+    flex: 1;
+    align-content: flex-start;
+    margin-bottom: 0;
   }
 
   .card-details {
