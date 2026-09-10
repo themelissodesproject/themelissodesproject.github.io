@@ -69,48 +69,23 @@ function cardTopics(p) {
   return filterMatches.length ? [...top, ...filterMatches] : top;
 }
 
-// Shading is RANK-based, not a continuous function of percent — two
-// topics with close but unequal percentages (e.g. 21% and 18%) would
-// land almost on top of each other on a continuous grayscale, making
-// them indistinguishable. Since a paper's `topics` array always arrives
-// pre-sorted by percent descending (see build.py), assigning a fixed,
-// well-spread shade per rank position keeps every topic visually
-// distinct — on the pie AND on its chip — while still preserving the
-// dominant-to-minor ordering. Ranks beyond the scale (rare — a handful
-// of very broad papers) just reuse the lightest shade, which is
-// semantically fine since those are the paper's most minor topics
-// anyway. Steps are spread widely enough that pie slices read cleanly
-// as plain adjoining wedges — no dividing gap needed between them.
-const TOPIC_SHADE_SCALE = ["#1a1a1a", "#3d3d3d", "#5c5c5c", "#7a7a7a", "#999999", "#b8b8b8", "#d6d6d6", "#e8e8e8"];
-
-// Flat white/black split, no in-between shades. The split lands after
-// rank 2, not "all but the last two" — white text stops reading
-// clearly past that point (e.g. rank 5's #b8b8b8 background only gives
-// pure white ~2:1 contrast, which looks washed out no matter what
-// shade of white is used). Splitting here instead keeps every chip on
-// the strong side of ~4.9:1 contrast or better.
-const TOPIC_TEXT_SCALE = ["#ffffff", "#ffffff", "#ffffff", "#000000", "#000000", "#000000", "#000000", "#000000"];
+// Every step stays light enough that flat black text reads clearly
+// against it — no per-rank text color needed at all. The range runs
+// from #767676 (black text still clears ~4.6:1 there, the floor for
+// comfortable reading) up to #e6e6e6, with even ~16-value steps so
+// adjoining pie slices stay visually distinct without needing to dip
+// into darker tones that would require light text again.
+const TOPIC_SHADE_SCALE = ["#767676", "#868686", "#969696", "#a6a6a6", "#b6b6b6", "#c6c6c6", "#d6d6d6", "#e6e6e6"];
 
 function shadeForRank(i) {
   return TOPIC_SHADE_SCALE[Math.min(i, TOPIC_SHADE_SCALE.length - 1)];
 }
 
-function textForRank(i) {
-  return TOPIC_TEXT_SCALE[Math.min(i, TOPIC_TEXT_SCALE.length - 1)];
-}
-
-// Photographic inversion (255-r, 255-g, 255-b) is NOT a contrast
-// function — for a mid-gray background like #7a7a7a it inverts to
-// #858585, a nearly identical gray, which is exactly the "not enough
-// contrast on the mid tones" bug. What actually guarantees legibility
-// is picking whichever of pure black or pure white has the higher WCAG
-// contrast ratio against the given background. This works for any hex
-// color (not just the grayscale TOPIC_SHADE_SCALE) and its worst case
-// — the background luminance where black and white tie — still clears
-// a ~4.6:1 ratio, comfortably past the 4.5:1 AA threshold for text.
 // Used for species badges, whose background colors are arbitrary
-// per-species data rather than the fixed, rank-paired TOPIC scales
-// above, so a computed check (not a hand-tuned lookup) is what fits.
+// per-species data (not the fixed, always-light TOPIC_SHADE_SCALE
+// above), so a computed check — rather than a hand-tuned lookup — is
+// what fits: picks whichever of pure black or pure white has the
+// higher WCAG contrast ratio against the given background.
 function relativeLuminance(hex) {
   let h = hex.replace("#", "");
   if (h.length === 3) h = h.split("").map(c => c + c).join("");
@@ -156,7 +131,7 @@ function styleTopicChip(el, pt, rank) {
   el.className = "topic-chip" + (pct >= DOMINANT_TOPIC_THRESHOLD ? " topic-chip--dominant" : "");
   el.style.background = shade;
   el.style.borderColor = shade;
-  el.style.color = textForRank(rank || 0);
+  el.style.color = "#000000";
 }
 
 // No separate legend: the chip row immediately below the pie already
