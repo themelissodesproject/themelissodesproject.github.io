@@ -499,7 +499,7 @@
     border: 1px solid #ddd;
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
-    transition: background-color 0.15s ease, color 0.15s ease, opacity 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
   /* Background, border, and text color are all set inline by
@@ -649,12 +649,17 @@
     cursor: default;
   }
 
-  /* Each wedge eases its opacity/scale rather than snapping, and grows
-     from its own center (transform-origin set inline per-path in
-     app.js, since each slice's center differs) so the hovered slice
-     reads as gently "lifting" rather than just fading in place. */
+  /* Each wedge eases its fill/stroke color and scale rather than
+     snapping. transform-box/transform-origin make the hover "pop"
+     grow from the slice's own center (its bounding-box center, not
+     the pie's) rather than the SVG's (0,0) corner. Only the actively
+     hovered path ever has a transform written to it (see app.js) —
+     giving every wedge an inline transform, even scale(1), promotes
+     each one to its own compositing layer and breaks the
+     stroke-overlap trick that hides the seams between slices,
+     producing faint lines across the whole pie. */
   .topic-pie path {
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: fill 0.2s ease, stroke 0.2s ease, transform 0.2s ease;
     transform-box: fill-box;
     transform-origin: center;
   }
