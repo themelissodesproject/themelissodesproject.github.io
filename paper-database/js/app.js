@@ -186,7 +186,6 @@ function buildTopicPieChart(topics) {
     cursorDeg = endDeg;
 
     const meta = topicById.get(t.id);
-    const pct = Math.round(share);
     const shade = shadeForRank(i);
     const path = document.createElementNS(SVG_NS, "path");
     path.setAttribute("d", describePieSlice(50, 50, 50, startDeg, endDeg));
@@ -202,9 +201,14 @@ function buildTopicPieChart(topics) {
     // slice's real color instead of having to recompute shadeForRank.
     path.dataset.shade = shade;
 
-    const title = document.createElementNS(SVG_NS, "title");
-    title.textContent = meta ? `${meta.label} (${pct}%)` : `${pct}%`;
-    path.appendChild(title);
+    // Tooltip is topic name only — the exact percent is available on
+    // hover in the modal's chip row (its title attribute), so it isn't
+    // duplicated here.
+    if (meta) {
+      const title = document.createElementNS(SVG_NS, "title");
+      title.textContent = meta.label;
+      path.appendChild(title);
+    }
 
     svg.appendChild(path);
     if (t.id != null) pathsByTopicId.set(t.id, path);
@@ -911,6 +915,14 @@ function buildModalBody(p) {
             p.style.fill = color;
             p.style.stroke = color;
           });
+          // SVG has no z-index — elements paint in document order, so
+          // the hovered slice's neighbor (added to the <svg> after it)
+          // was painting its edge on top of the hovered slice's tip
+          // once that tip grew past the neighbor's edge under the
+          // scale below. Re-appending moves the hovered path to the
+          // end of the <svg>, making it paint last (on top) so the
+          // grown tip is no longer clipped.
+          path.parentNode.appendChild(path);
           // Scale is only ever applied to the actively hovered path —
           // never written to the others — so the rest of the wedges
           // stay exactly as originally rendered instead of each
