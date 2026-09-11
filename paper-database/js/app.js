@@ -198,6 +198,9 @@ function buildTopicPieChart(topics) {
     // wedge boundary.
     path.setAttribute("stroke", shade);
     path.setAttribute("stroke-width", "0.75");
+    // Stashed so hover dimming (buildModalBody) can restore each
+    // slice's real color instead of having to recompute shadeForRank.
+    path.dataset.shade = shade;
 
     const title = document.createElementNS(SVG_NS, "title");
     title.textContent = meta ? `${meta.label} (${pct}%)` : `${pct}%`;
@@ -877,36 +880,60 @@ function buildModalBody(p) {
       const b = document.createElement("span");
       styleTopicChip(b, pt, i);
       b.textContent = t.label;
+      // Stashed for the same reason as path.dataset.shade above — lets
+      // hover dimming below restore this chip's real color.
+      b.dataset.shade = shadeForRank(i);
       row.appendChild(b);
       chipsByTopicId.set(pt.id, b);
     });
     pieRow.appendChild(row);
 
-    // Hovering a wedge dims every other chip AND every other wedge to
-    // 40% opacity, and eases the hovered wedge up to a slightly larger
-    // scale — leaving only the hovered topic at full strength across
-    // both the pie and the chip row, so it's obvious which chip a
-    // given slice corresponds to without relying on shade alone
-    // (several ranks can look close in a quick glance). The actual
-    // easing is CSS (`.topic-pie path` transition), this just toggles
-    // the end-state opacity/transform.
+    // Hovering a wedge recolors every other chip AND every other wedge
+    // to a near-white neutral, and eases the hovered wedge up to a
+    // slightly larger scale — leaving only the hovered topic at its
+    // real color across both the pie and the chip row. This used to
+    // dim everything else via opacity, but a dark slice at 40% opacity
+    // ends up roughly the same brightness as an undimmed light slice,
+    // so it was genuinely ambiguous which wedge was "the" match at a
+    // glance. Swapping the shade itself for near-white removes that
+    // ambiguity outright. (Opacity was also quietly the cause of faint
+    // seam lines appearing across every wedge — applying it forces
+    // each path onto its own compositing layer, which breaks the
+    // stroke-overlap trick that normally hides the seams between
+    // slices — so this fixes that too.)
+    const DIM_SHADE = "#f2f2f2";
+    const DIM_TEXT = "#b5b5b5";
     if (pieResult) {
       pieResult.pathsByTopicId.forEach((path, topicId) => {
         path.addEventListener("mouseenter", () => {
           pieResult.pathsByTopicId.forEach((p, id) => {
-            p.style.opacity = id === topicId ? "1" : "0.4";
-            p.style.transform = id === topicId ? "scale(1.05)" : "scale(1)";
+            const color = id === topicId ? p.dataset.shade : DIM_SHADE;
+            p.style.fill = color;
+            p.style.stroke = color;
           });
+          // Scale is only ever applied to the actively hovered path —
+          // never written to the others — so the rest of the wedges
+          // stay exactly as originally rendered instead of each
+          // picking up their own (seam-causing) compositing layer.
+          path.style.transform = "scale(1.05)";
           chipsByTopicId.forEach((c, id) => {
-            c.style.opacity = id === topicId ? "1" : "0.4";
+            const isHovered = id === topicId;
+            c.style.background = isHovered ? c.dataset.shade : DIM_SHADE;
+            c.style.borderColor = isHovered ? c.dataset.shade : DIM_SHADE;
+            c.style.color = isHovered ? "#ffffff" : DIM_TEXT;
           });
         });
         path.addEventListener("mouseleave", () => {
           pieResult.pathsByTopicId.forEach(p => {
-            p.style.opacity = "1";
-            p.style.transform = "scale(1)";
+            p.style.fill = p.dataset.shade;
+            p.style.stroke = p.dataset.shade;
           });
-          chipsByTopicId.forEach(c => { c.style.opacity = "1"; });
+          path.style.transform = "";
+          chipsByTopicId.forEach(c => {
+            c.style.background = c.dataset.shade;
+            c.style.borderColor = c.dataset.shade;
+            c.style.color = "#ffffff";
+          });
         });
       });
     }
