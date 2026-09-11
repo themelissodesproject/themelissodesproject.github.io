@@ -649,19 +649,28 @@
     cursor: default;
   }
 
-  /* Each wedge eases its fill/stroke color and scale rather than
-     snapping. transform-box/transform-origin make the hover "pop"
-     grow from the slice's own center (its bounding-box center, not
-     the pie's) rather than the SVG's (0,0) corner. Only the actively
-     hovered path ever has a transform written to it (see app.js) —
-     giving every wedge an inline transform, even scale(1), promotes
-     each one to its own compositing layer and breaks the
-     stroke-overlap trick that hides the seams between slices,
-     producing faint lines across the whole pie. */
+  /* Each real wedge eases its fill/stroke color when dimmed/undimmed
+     on hover — never its transform (see app.js: the "pop" is drawn by
+     a separate always-on-top overlay path, not by transforming the
+     real wedge, so a real wedge's transform is never touched at all).
+     transform-box/transform-origin are still declared here since the
+     overlay below shares this same selector and needs them. */
   .topic-pie path {
-    transition: fill 0.2s ease, stroke 0.2s ease, transform 0.2s ease;
+    transition: fill 0.2s ease, stroke 0.2s ease;
     transform-box: fill-box;
     transform-origin: center;
+  }
+
+  /* The overlay itself (app.js's pieResult.highlight): always the last
+     child of the <svg>, so it always paints on top — no reordering of
+     real wedges needed to avoid a clipped tip. Its "d"/fill are swapped
+     instantly to mirror whichever wedge is hovered (no transition on
+     those), so switching between wedges never blends one wedge's shape
+     into another's — only its opacity/scale ease, for the appear/
+     disappear and the "pop". Higher specificity than ".topic-pie path"
+     above so it overrides that rule's fill/stroke transition. */
+  .topic-pie path.topic-pie-highlight {
+    transition: opacity 0.15s ease, transform 0.2s ease;
   }
 
   /* Pairs the pie with its chip row side by side instead of stacking
