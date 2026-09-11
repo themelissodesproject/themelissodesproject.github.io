@@ -214,8 +214,25 @@ function buildTopicPieChart(topics) {
     if (t.id != null) pathsByTopicId.set(t.id, path);
   });
 
+  // A single reusable overlay path, always the last child (so it always
+  // paints on top — no DOM reordering needed to fix tip-clipping, which
+  // is what caused the flicker: moving a real wedge to the end of the
+  // SVG on every hover swap was a genuine DOM mutation each time, and
+  // doing that mid-transition is what glitched. This overlay's "d"/fill
+  // are just swapped to mirror whichever wedge is hovered, so the only
+  // change ever made is small attribute updates — same node, same
+  // position in the DOM, every time. It never receives pointer events,
+  // so it can't interfere with hover detection on the real wedges
+  // underneath it.
+  const highlight = document.createElementNS(SVG_NS, "path");
+  highlight.setAttribute("class", "topic-pie-highlight");
+  highlight.setAttribute("pointer-events", "none");
+  highlight.setAttribute("stroke-width", "0.75");
+  highlight.style.opacity = "0";
+  svg.appendChild(highlight);
+
   wrap.appendChild(svg);
-  return { wrap, pathsByTopicId };
+  return { wrap, pathsByTopicId, highlight };
 }
 
 async function init() {
@@ -893,20 +910,39 @@ function buildModalBody(p) {
     pieRow.appendChild(row);
 
     // Hovering a wedge recolors every other chip AND every other wedge
-    // to a near-white neutral, and eases the hovered wedge up to a
-    // slightly larger scale — leaving only the hovered topic at its
+    // to a near-white neutral — leaving only the hovered topic at its
     // real color across both the pie and the chip row. This used to
     // dim everything else via opacity, but a dark slice at 40% opacity
     // ends up roughly the same brightness as an undimmed light slice,
     // so it was genuinely ambiguous which wedge was "the" match at a
     // glance. Swapping the shade itself for near-white removes that
-    // ambiguity outright. (Opacity was also quietly the cause of faint
-    // seam lines appearing across every wedge — applying it forces
-    // each path onto its own compositing layer, which breaks the
-    // stroke-overlap trick that normally hides the seams between
-    // slices — so this fixes that too.)
+    // ambiguity outright.
+    //
+    // The "pop" animation is drawn entirely by the overlay path
+    // (pieResult.highlight, see buildTopicPieChart) rather than by
+    // scaling the real wedge — its "d"/color are just set to mirror the
+    // hovered wedge, then scaled up. Nothing about the real wedges'
+    // DOM position or transform ever changes, which is what fixes both
+    // the flicker when swapping between wedges (a real reorder was
+    // happening on every swap) and the clipped tip (the overlay is
+    // always the last child, so it always paints on top already).
     const DIM_SHADE = "#f2f2f2";
     const DIM_TEXT = "#b5b5b5";
+
+    function resetPieHover() {
+      if (!pieResult) return;
+      pieResult.pathsByTopicId.forEach(p => {
+        p.style.fill = p.dataset.shade;
+        p.style.stroke = p.dataset.shade;
+      });
+      pieResult.highlight.style.opacity = "0";
+      chipsByTopicId.forEach(c => {
+        c.style.background = c.dataset.shade;
+        c.style.borderColor = c.dataset.shade;
+        c.style.color = "#ffffff";
+      });
+    }
+
     if (pieResult) {
       pieResult.pathsByTopicId.forEach((path, topicId) => {
         path.addEventListener("mouseenter", () => {
@@ -915,19 +951,11 @@ function buildModalBody(p) {
             p.style.fill = color;
             p.style.stroke = color;
           });
-          // SVG has no z-index — elements paint in document order, so
-          // the hovered slice's neighbor (added to the <svg> after it)
-          // was painting its edge on top of the hovered slice's tip
-          // once that tip grew past the neighbor's edge under the
-          // scale below. Re-appending moves the hovered path to the
-          // end of the <svg>, making it paint last (on top) so the
-          // grown tip is no longer clipped.
-          path.parentNode.appendChild(path);
-          // Scale is only ever applied to the actively hovered path —
-          // never written to the others — so the rest of the wedges
-          // stay exactly as originally rendered instead of each
-          // picking up their own (seam-causing) compositing layer.
-          path.style.transform = "scale(1.05)";
+          pieResult.highlight.setAttribute("d", path.getAttribute("d"));
+          pieResult.highlight.style.fill = path.dataset.shade;
+          pieResult.highlight.style.stroke = path.dataset.shade;
+          pieResult.highlight.style.opacity = "1";
+          pieResult.highlight.style.transform = "scale(1.05)";
           chipsByTopicId.forEach((c, id) => {
             const isHovered = id === topicId;
             c.style.background = isHovered ? c.dataset.shade : DIM_SHADE;
@@ -935,19 +963,14 @@ function buildModalBody(p) {
             c.style.color = isHovered ? "#ffffff" : DIM_TEXT;
           });
         });
-        path.addEventListener("mouseleave", () => {
-          pieResult.pathsByTopicId.forEach(p => {
-            p.style.fill = p.dataset.shade;
-            p.style.stroke = p.dataset.shade;
-          });
-          path.style.transform = "";
-          chipsByTopicId.forEach(c => {
-            c.style.background = c.dataset.shade;
-            c.style.borderColor = c.dataset.shade;
-            c.style.color = "#ffffff";
-          });
-        });
       });
+      // A per-wedge mouseleave can get missed at the exact boundary
+      // between adjacent slices (the pointer moving straight from one
+      // wedge into the next), leaving the pie stuck mid-hover. Resetting
+      // on the container's mouseleave instead guarantees a clean return
+      // to normal the moment the pointer actually leaves the whole
+      // chart, regardless of how it got there.
+      pieResult.wrap.addEventListener("mouseleave", resetPieHover);
     }
 
     section.appendChild(pieRow);
