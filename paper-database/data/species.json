@@ -1,31 +1,135 @@
 [
   {
+    "name": "Melissodes actuosa",
+    "color": "hsl(326, 46%, 38%)"
+  },
+  {
     "name": "Melissodes aegis",
     "color": "hsl(120, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes afflicta",
+    "color": "hsl(2, 46%, 38%)"
   },
   {
     "name": "Melissodes agilis",
     "color": "hsl(26, 46%, 38%)"
   },
   {
+    "name": "Melissodes albilabris",
+    "color": "hsl(62, 46%, 38%)"
+  },
+  {
     "name": "Melissodes albocollaris",
     "color": "hsl(27, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes apacha",
+    "color": "hsl(78, 46%, 38%)"
   },
   {
     "name": "Melissodes atripes",
     "color": "hsl(49, 46%, 38%)"
   },
   {
+    "name": "Melissodes aurigenia",
+    "color": "hsl(38, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes australis",
+    "color": "hsl(33, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes bituberculata",
+    "color": "hsl(231, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes bombiformis",
+    "color": "hsl(255, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes californica",
+    "color": "hsl(74, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes caliginosa",
+    "color": "hsl(332, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes coloradensis",
+    "color": "hsl(354, 46%, 38%)"
+  },
+  {
     "name": "Melissodes comanche",
     "color": "hsl(205, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes communis",
+    "color": "hsl(38, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes compta",
+    "color": "hsl(262, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes condigna",
+    "color": "hsl(290, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes confusa",
+    "color": "hsl(74, 46%, 38%)"
   },
   {
     "name": "Melissodes cressonii",
     "color": "hsl(112, 46%, 38%)"
   },
   {
+    "name": "Melissodes dilecta",
+    "color": "hsl(311, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes diminuta",
+    "color": "hsl(330, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes donata",
+    "color": "hsl(160, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes dubitata",
+    "color": "hsl(259, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes edwardsii",
+    "color": "hsl(223, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes exquisita",
+    "color": "hsl(114, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes fimbriata",
+    "color": "hsl(159, 46%, 38%)"
+  },
+  {
     "name": "Melissodes floris",
     "color": "hsl(325, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes frater",
+    "color": "hsl(190, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes fulvitarsis",
+    "color": "hsl(6, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes fulvohirta",
+    "color": "hsl(185, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes georgica",
+    "color": "hsl(44, 46%, 38%)"
   },
   {
     "name": "Melissodes grandissima",
@@ -34,6 +138,14 @@
   {
     "name": "Melissodes helianthelli",
     "color": "hsl(159, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes lepida",
+    "color": "hsl(127, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes lupina",
+    "color": "hsl(234, 46%, 38%)"
   },
   {
     "name": "Melissodes machaerantherae",
@@ -48,6 +160,22 @@
     "color": "hsl(350, 46%, 38%)"
   },
   {
+    "name": "Melissodes montana",
+    "color": "hsl(333, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes montezuma",
+    "color": "hsl(292, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes morosa",
+    "color": "hsl(330, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes nigrifrons",
+    "color": "hsl(246, 46%, 38%)"
+  },
+  {
     "name": "Melissodes nitida",
     "color": "hsl(358, 46%, 38%)"
   },
@@ -56,8 +184,24 @@
     "color": "hsl(52, 46%, 38%)"
   },
   {
+    "name": "Melissodes olivacea",
+    "color": "hsl(268, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes otomita",
+    "color": "hsl(170, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes perplexa",
+    "color": "hsl(172, 46%, 38%)"
+  },
+  {
     "name": "Melissodes petulca",
     "color": "hsl(125, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes pinguis",
+    "color": "hsl(10, 46%, 38%)"
   },
   {
     "name": "Melissodes rufithorax",
@@ -68,11 +212,55 @@
     "color": "hsl(217, 46%, 38%)"
   },
   {
+    "name": "Melissodes snowii",
+    "color": "hsl(325, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes speciosa",
+    "color": "hsl(221, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes strenua",
+    "color": "hsl(354, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes stretchii",
+    "color": "hsl(87, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes suavis",
+    "color": "hsl(107, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes suffusa",
+    "color": "hsl(173, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes sumichrasti",
+    "color": "hsl(339, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes tepaneca",
+    "color": "hsl(227, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes tepida",
+    "color": "hsl(356, 46%, 38%)"
+  },
+  {
     "name": "Melissodes texana",
     "color": "hsl(154, 46%, 38%)"
   },
   {
     "name": "Melissodes tintinnans",
     "color": "hsl(96, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes toluca",
+    "color": "hsl(145, 46%, 38%)"
+  },
+  {
+    "name": "Melissodes trifasciata",
+    "color": "hsl(76, 46%, 38%)"
   }
 ]
