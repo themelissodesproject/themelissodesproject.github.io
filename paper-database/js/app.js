@@ -849,19 +849,6 @@ function copyText(text) {
   });
 }
 
-// A table row: label on the left, value (text or a DOM node) on the right.
-function modalRow(label, value) {
-  const tr = document.createElement("tr");
-  const th = document.createElement("th");
-  th.scope = "row";
-  th.textContent = label;
-  const td = document.createElement("td");
-  if (value instanceof Node) td.appendChild(value); else td.textContent = value;
-  tr.appendChild(th);
-  tr.appendChild(td);
-  return tr;
-}
-
 // A closed-by-default dropdown for long lists (species, associated organisms).
 function modalCollapsible(summaryText, content) {
   const d = document.createElement("details");
@@ -945,15 +932,6 @@ function buildModalContent(p) {
   }
   actions.appendChild(modalCopyCitationButton(p));
 
-  // Topics: every topic the paper is tagged with, all in one color, next to the buttons.
-  (p.topics || []).forEach(pt => {
-    const t = topicById.get(pt.id);
-    if (!t) return;
-    const b = document.createElement("span");
-    b.className = "m-topic";
-    b.textContent = t.label;
-    actions.appendChild(b);
-  });
   frag.appendChild(actions);
 
   // Overview sits above the details grid.
@@ -970,6 +948,19 @@ function buildModalContent(p) {
     frag.appendChild(ov);
   }
 
+  // Topics: every topic the paper is tagged with, all in one color, centered under the overview.
+  const topicWrap = document.createElement("div");
+  topicWrap.className = "m-topics";
+  (p.topics || []).forEach(pt => {
+    const t = topicById.get(pt.id);
+    if (!t) return;
+    const b = document.createElement("span");
+    b.className = "m-topic";
+    b.textContent = t.label;
+    topicWrap.appendChild(b);
+  });
+  if (topicWrap.childNodes.length) frag.appendChild(topicWrap);
+
   // Details grid: two columns on a computer (column 1: author, year, journal; column 2: page range,
   // volume, source), one column on a phone. The cells are in that reading order.
   const c = citationParts(p);
@@ -984,12 +975,9 @@ function buildModalContent(p) {
   grid.appendChild(modalField("Source", p.source_type ? (SOURCE_SHORT[p.source_type] || p.source_type) : ""));
   frag.appendChild(grid);
 
-  // Below the grid: species and keywords and the other dropdowns (no divider lines).
-  const table = document.createElement("table");
-  table.className = "m-table";
-  const tbody = document.createElement("tbody");
-  table.appendChild(tbody);
-  const add = (label, value) => tbody.appendChild(modalRow(label, value));
+  // Below the grid: free-form sections (no table, no divider lines) that use the full width of the pop-up.
+  const sections = document.createElement("div");
+  sections.className = "m-sections";
 
   if (p.species && p.species.length) {
     const row = document.createElement("div");
@@ -1003,7 +991,7 @@ function buildModalContent(p) {
       b.textContent = sp;
       row.appendChild(b);
     });
-    add("Species", modalCollapsible(`${p.species.length} species`, row));
+    sections.appendChild(modalCollapsible(`Species (${p.species.length})`, row));
   }
 
   // Only the paper's own printed keyword list is ever shown; the internal search-matching terms
@@ -1017,7 +1005,14 @@ function buildModalContent(p) {
       b.textContent = kw;
       row.appendChild(b);
     });
-    add("Keywords", row);
+    const kw = document.createElement("div");
+    kw.className = "m-section";
+    const kl = document.createElement("div");
+    kl.className = "m-section-label";
+    kl.textContent = "Keywords";
+    kw.appendChild(kl);
+    kw.appendChild(row);
+    sections.appendChild(kw);
   }
 
   if (p.associated_organisms && p.associated_organisms.length) {
@@ -1033,10 +1028,10 @@ function buildModalContent(p) {
       row.appendChild(b);
     });
     const n = p.associated_organisms.length;
-    add("Associated organisms", modalCollapsible(`${n} ${n === 1 ? "organism" : "organisms"}`, row));
+    sections.appendChild(modalCollapsible(`Associated organisms (${n})`, row));
   }
 
-  if (tbody.childNodes.length) frag.appendChild(table);
+  if (sections.childNodes.length) frag.appendChild(sections);
 
   const metaBits = [];
   if (p.added_date) metaBits.push(`Added ${p.added_date}`);
