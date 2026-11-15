@@ -569,7 +569,8 @@
 
   .modal {
     width: 100%;
-    max-width: 720px;
+    max-width: 720px;   /* phones; on computers app.js sizes the width to the content */
+    box-sizing: border-box;
     max-height: 90vh;
     overflow-y: auto;
     padding: 1.25rem 1.25rem 1.1rem;
@@ -643,9 +644,9 @@
   .m-cite-box {
     position: relative;
     padding: 0.7rem 0.9rem;
-    background: #F7F8F8;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    background: #FBFBFA;
+    border: 1px solid #F3F4F5;
+    border-radius: 0;
     cursor: pointer;
     overflow: hidden;
   }
@@ -677,6 +678,13 @@
   .m-cite-box:focus-visible .m-cite-overlay,
   .m-cite-box.is-active .m-cite-overlay { opacity: 1; }
 
+  /* Phones: "scroll for more" hint over the bottom edge of a scrolling pop-up (white fade + nudging arrow) */
+  .m-scroll-hint { position: fixed; z-index: 1001; height: 64px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; box-sizing: border-box; pointer-events: none; border-radius: 0 0 8px 8px; background: linear-gradient(to top, #fff 30%, rgba(255,255,255,0)); }
+  .m-scroll-hint[hidden] { display: none; }
+  .m-scroll-hint svg { display: block; color: #8a8a8a; animation: m-nudge 1.8s ease-in-out infinite; }
+  @keyframes m-nudge { 0%, 100% { transform: translateY(-2px); opacity: 0.55; } 50% { transform: translateY(3px); opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .m-scroll-hint svg { animation: none; } }
+
   .m-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 0.9rem; }
   .m-actions-bottom { margin: 0.2rem 0 0; }
   .m-btn, .modal-close { padding: 7px 14px; font-size: 0.9rem; line-height: 1.3; border-radius: 6px; cursor: pointer; }
@@ -693,7 +701,10 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    color: #222;
+    /* match the field labels (Author, Year, Overview…), not the values */
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #777;
   }
   .m-collapsible > summary::-webkit-details-marker { display: none; }
   .m-collapsible > summary::before {
@@ -707,7 +718,8 @@
     transition: transform 0.15s ease;
   }
   .m-collapsible[open] > summary::before { transform: rotate(45deg); }
-  .m-collapsible > summary:hover { color: #000; }
+  .m-collapsible > summary:hover { color: #222; }
+  .m-section-label { font-size: 0.78rem; font-weight: 600; color: #777; margin-bottom: 0.5rem; }
   .m-collapsible[open] > summary { margin-bottom: 0.5rem; }
 
   .card-details {
