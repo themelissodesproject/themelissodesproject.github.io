@@ -107,7 +107,7 @@ function textColorForBackground(hex) {
 // A topic's rank is its position in the paper's full topics array (sorted
 // percent descending), not its position in whatever subset is currently
 // being rendered — this is what keeps a topic's color consistent between
-// the pie, the card's (possibly reordered/truncated) chip row, and the
+// the card's (possibly reordered/truncated) chip row and the
 // modal's chip row, all for the same paper.
 function topicRankMap(p) {
   const map = new Map();
@@ -116,125 +116,13 @@ function topicRankMap(p) {
 }
 
 function styleTopicChip(el, pt, rank) {
-  const pct = typeof pt.percent === "number" ? pt.percent : 0;
-  // The percent itself is never shown as text anywhere in the UI — it
-  // only drives (via rank) how dark/solid the chip looks, and is
-  // available on hover for anyone who wants the exact figure.
-  el.title = `${Math.round(pct)}% of paper`;
+  // No percentages are stored or shown anywhere; a chip's shade comes only
+  // from its rank (position in the paper's topic list, most central first).
   const shade = shadeForRank(rank || 0);
   el.className = "topic-chip";
   el.style.background = shade;
   el.style.borderColor = shade;
   el.style.color = "#ffffff";
-}
-
-// No separate legend: the chip row immediately beside the pie already
-// names every topic in the same shades, so a second color-key list would
-// just repeat the same information.
-//
-// Each wedge is its own <path>, not one div with a conic-gradient
-// background — a single gradient background has no way to target an
-// individual slice for a hover tooltip, since it's all one element.
-// Each path gets a native <title> child so hovering any wedge shows
-// its topic name and share, the same way a browser tooltip works
-// anywhere else.
-const SVG_NS = "http://www.w3.org/2000/svg";
-
-function polarToCartesian(cx, cy, r, angleDeg) {
-  const rad = (angleDeg * Math.PI) / 180;
-  return { x: cx + r * Math.sin(rad), y: cy - r * Math.cos(rad) };
-}
-
-function describePieSlice(cx, cy, r, startDeg, endDeg) {
-  // A slice spanning (essentially) the full circle degenerates under
-  // the normal start/end-point arc formula below, so it's drawn as an
-  // explicit two-arc circle instead.
-  if (endDeg - startDeg >= 359.99) {
-    return `M ${cx - r},${cy} A ${r},${r} 0 1,1 ${cx + r},${cy} A ${r},${r} 0 1,1 ${cx - r},${cy} Z`;
-  }
-  const start = polarToCartesian(cx, cy, r, startDeg);
-  const end = polarToCartesian(cx, cy, r, endDeg);
-  const largeArc = endDeg - startDeg > 180 ? 1 : 0;
-  return `M ${cx},${cy} L ${start.x},${start.y} A ${r},${r} 0 ${largeArc},1 ${end.x},${end.y} Z`;
-}
-
-function buildTopicPieChart(topics) {
-  const total = topics.reduce((sum, t) => sum + (t.percent || 0), 0);
-  if (!total) return null;
-
-  const wrap = document.createElement("div");
-  wrap.className = "topic-pie";
-  wrap.setAttribute("role", "img");
-  const labelList = topics.map(t => {
-    const meta = topicById.get(t.id);
-    return meta ? `${meta.label} (${Math.round((t.percent || 0) / total * 100)}%)` : null;
-  }).filter(Boolean).join(", ");
-  wrap.setAttribute("aria-label", `Proportion of the paper devoted to each topic: ${labelList}`);
-
-  const svg = document.createElementNS(SVG_NS, "svg");
-  svg.setAttribute("viewBox", "0 0 100 100");
-  svg.setAttribute("width", "100%");
-  svg.setAttribute("height", "100%");
-
-  // Keyed by topic id so the modal builder can wire up hover
-  // cross-highlighting with the matching chip below.
-  const pathsByTopicId = new Map();
-
-  let cursorDeg = 0;
-  topics.forEach((t, i) => {
-    const share = (t.percent || 0) / total * 100;
-    const startDeg = cursorDeg;
-    const endDeg = cursorDeg + share * 3.6;
-    cursorDeg = endDeg;
-
-    const meta = topicById.get(t.id);
-    const shade = shadeForRank(i);
-    const path = document.createElementNS(SVG_NS, "path");
-    path.setAttribute("d", describePieSlice(50, 50, 50, startDeg, endDeg));
-    path.setAttribute("fill", shade);
-    // Adjacent slice edges land on the same coordinates in theory, but
-    // anti-aliasing still shows a faint seam between them at render
-    // time. A stroke in the same color as the fill, thick enough to
-    // straddle that seam, papers over it without changing the visible
-    // wedge boundary.
-    path.setAttribute("stroke", shade);
-    path.setAttribute("stroke-width", "0.75");
-    // Stashed so hover dimming (buildModalBody) can restore each
-    // slice's real color instead of having to recompute shadeForRank.
-    path.dataset.shade = shade;
-
-    // Tooltip is topic name only — the exact percent is available on
-    // hover in the modal's chip row (its title attribute), so it isn't
-    // duplicated here.
-    if (meta) {
-      const title = document.createElementNS(SVG_NS, "title");
-      title.textContent = meta.label;
-      path.appendChild(title);
-    }
-
-    svg.appendChild(path);
-    if (t.id != null) pathsByTopicId.set(t.id, path);
-  });
-
-  // A single reusable overlay path, always the last child (so it always
-  // paints on top — no DOM reordering needed to fix tip-clipping, which
-  // is what caused the flicker: moving a real wedge to the end of the
-  // SVG on every hover swap was a genuine DOM mutation each time, and
-  // doing that mid-transition is what glitched. This overlay's "d"/fill
-  // are just swapped to mirror whichever wedge is hovered, so the only
-  // change ever made is small attribute updates — same node, same
-  // position in the DOM, every time. It never receives pointer events,
-  // so it can't interfere with hover detection on the real wedges
-  // underneath it.
-  const highlight = document.createElementNS(SVG_NS, "path");
-  highlight.setAttribute("class", "topic-pie-highlight");
-  highlight.setAttribute("pointer-events", "none");
-  highlight.setAttribute("stroke-width", "0.75");
-  highlight.style.opacity = "0";
-  svg.appendChild(highlight);
-
-  wrap.appendChild(svg);
-  return { wrap, pathsByTopicId, highlight };
 }
 
 async function init() {
@@ -937,9 +825,8 @@ function buildModalBody(p) {
   }
 
   // Every topic the paper is tagged with is listed here (unlike the card
-  // itself, which only shows the top few) — the pie makes the relative
-  // proportions legible at a glance, and the chip row beside it uses the
-  // same rank-based shading via styleTopicChip.
+  // itself, which only shows the top few), using the same rank-based
+  // shading as the card via styleTopicChip.
   const allTopics = p.topics || [];
   if (allTopics.length) {
     const section = document.createElement("div");
@@ -948,94 +835,17 @@ function buildModalBody(p) {
     h4.textContent = "Topics";
     section.appendChild(h4);
 
-    const pieRow = document.createElement("div");
-    pieRow.className = "topic-pie-row";
-
-    const pieResult = buildTopicPieChart(allTopics);
-    if (pieResult) pieRow.appendChild(pieResult.wrap);
-
     const row = document.createElement("div");
     row.className = "badge-row";
-    const chipsByTopicId = new Map();
     allTopics.forEach((pt, i) => {
       const t = topicById.get(pt.id);
       if (!t) return;
       const b = document.createElement("span");
       styleTopicChip(b, pt, i);
       b.textContent = t.label;
-      // Stashed for the same reason as path.dataset.shade above — lets
-      // hover dimming below restore this chip's real color.
-      b.dataset.shade = shadeForRank(i);
       row.appendChild(b);
-      chipsByTopicId.set(pt.id, b);
     });
-    pieRow.appendChild(row);
-
-    // Hovering a wedge recolors every other chip AND every other wedge
-    // to a near-white neutral — leaving only the hovered topic at its
-    // real color across both the pie and the chip row. This used to
-    // dim everything else via opacity, but a dark slice at 40% opacity
-    // ends up roughly the same brightness as an undimmed light slice,
-    // so it was genuinely ambiguous which wedge was "the" match at a
-    // glance. Swapping the shade itself for near-white removes that
-    // ambiguity outright.
-    //
-    // The "pop" animation is drawn entirely by the overlay path
-    // (pieResult.highlight, see buildTopicPieChart) rather than by
-    // scaling the real wedge — its "d"/color are just set to mirror the
-    // hovered wedge, then scaled up. Nothing about the real wedges'
-    // DOM position or transform ever changes, which is what fixes both
-    // the flicker when swapping between wedges (a real reorder was
-    // happening on every swap) and the clipped tip (the overlay is
-    // always the last child, so it always paints on top already).
-    const DIM_SHADE = "#f2f2f2";
-    const DIM_TEXT = "#b5b5b5";
-
-    function resetPieHover() {
-      if (!pieResult) return;
-      pieResult.pathsByTopicId.forEach(p => {
-        p.style.fill = p.dataset.shade;
-        p.style.stroke = p.dataset.shade;
-      });
-      pieResult.highlight.style.opacity = "0";
-      chipsByTopicId.forEach(c => {
-        c.style.background = c.dataset.shade;
-        c.style.borderColor = c.dataset.shade;
-        c.style.color = "#ffffff";
-      });
-    }
-
-    if (pieResult) {
-      pieResult.pathsByTopicId.forEach((path, topicId) => {
-        path.addEventListener("mouseenter", () => {
-          pieResult.pathsByTopicId.forEach((p, id) => {
-            const color = id === topicId ? p.dataset.shade : DIM_SHADE;
-            p.style.fill = color;
-            p.style.stroke = color;
-          });
-          pieResult.highlight.setAttribute("d", path.getAttribute("d"));
-          pieResult.highlight.style.fill = path.dataset.shade;
-          pieResult.highlight.style.stroke = path.dataset.shade;
-          pieResult.highlight.style.opacity = "1";
-          pieResult.highlight.style.transform = "scale(1.05)";
-          chipsByTopicId.forEach((c, id) => {
-            const isHovered = id === topicId;
-            c.style.background = isHovered ? c.dataset.shade : DIM_SHADE;
-            c.style.borderColor = isHovered ? c.dataset.shade : DIM_SHADE;
-            c.style.color = isHovered ? "#ffffff" : DIM_TEXT;
-          });
-        });
-      });
-      // A per-wedge mouseleave can get missed at the exact boundary
-      // between adjacent slices (the pointer moving straight from one
-      // wedge into the next), leaving the pie stuck mid-hover. Resetting
-      // on the container's mouseleave instead guarantees a clean return
-      // to normal the moment the pointer actually leaves the whole
-      // chart, regardless of how it got there.
-      pieResult.wrap.addEventListener("mouseleave", resetPieHover);
-    }
-
-    section.appendChild(pieRow);
+    section.appendChild(row);
     frag.appendChild(section);
   }
 
