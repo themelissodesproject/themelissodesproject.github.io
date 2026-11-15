@@ -4,6 +4,8 @@ const state = {
   topics: new Set(),
 
   year: null,
+  paper: null,      // id of a single paper to show (from ?paper=<id>); null = normal browse/search
+  paperSig: "",
 };
 
 // NOTE: This app never stores, indexes, or displays any part of a paper's
@@ -279,6 +281,13 @@ async function init() {
   document.getElementById("q").addEventListener("input", debounce(onQueryChange, 250));
   document.getElementById("clear-filters").addEventListener("click", clearAllFilters);
 
+  // Deep link: paper-database.html?paper=<id> shows just that one paper.
+  const wanted = new URLSearchParams(location.search).get("paper");
+  if (wanted) {
+    state.paper = wanted;
+    state.paperSig = filterSig();
+  }
+
   render();
 }
 
@@ -477,8 +486,61 @@ function isQueryActive() {
   return state.query.length >= MIN_QUERY_LENGTH;
 }
 
+// Snapshot of the search box and filters, used to leave single-paper view
+// as soon as the person changes any of them.
+function filterSig() {
+  return JSON.stringify([state.query, [...state.species], [...state.topics], state.year]);
+}
+
+function exitPaperView() {
+  state.paper = null;
+  const note = document.getElementById("paper-view-note");
+  if (note) note.remove();
+  try {
+    const u = new URL(location.href);
+    u.searchParams.delete("paper");
+    history.replaceState(null, "", u);
+  } catch (e) { /* leave the address as is */ }
+}
+
+// Shows exactly one paper: the one whose catalog id equals state.paper.
+// Search and filters are ignored while this view is active.
+function renderSinglePaper() {
+  const list = document.getElementById("results-list");
+  list.innerHTML = "";
+  document.getElementById("empty-state").hidden = true;
+  document.getElementById("empty-state").textContent = "No records match this search and filter combination. Try clearing a filter or broadening the search term.";
+
+  let note = document.getElementById("paper-view-note");
+  if (!note) {
+    note = document.createElement("p");
+    note.id = "paper-view-note";
+    note.className = "paper-view-note";
+    list.parentNode.insertBefore(note, list);
+  }
+  const p = catalogById.get(state.paper);
+  note.textContent = "";
+  const msg = document.createElement("span");
+  msg.textContent = p ? "Showing one paper. " : `No paper with the id "${state.paper}" is in the database. `;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "clear-btn";
+  btn.textContent = "Show all papers";
+  btn.addEventListener("click", () => { exitPaperView(); render(); });
+  note.appendChild(msg);
+  note.appendChild(btn);
+
+  document.getElementById("result-count").textContent = p ? "1 of " + catalog.length + " records" : "";
+  if (p) list.appendChild(renderCard(p));
+}
+
 function render() {
+  if (state.paper && filterSig() !== state.paperSig) exitPaperView();
   renderActiveFilters();
+  if (state.paper) {
+    renderSinglePaper();
+    return;
+  }
   if (isQueryActive()) {
     renderSearchResults();
   } else {
