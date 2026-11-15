@@ -96,7 +96,7 @@
       "Melissodes Eumelissodes subgenus nest description"
     ]
   },
-  {
+{
   "id": "hicks-1926",
   "title": "Nesting Habits and Parasites of Certain Bees of Boulder County, Colorado",
   "authors": ["Hicks, C. H."],
@@ -105,10 +105,14 @@
   "volume": "15",
   "pages": "217-252",
   "doi": "",
-  "legal_url": "https://babel.hathitrust.org/cgi/pt?id=nyp.33433107731824&__cf_chl_tk=aWJEfe0EuaqZ8Sqpn8q31BKtU2eL9PbRx6wMQNVmSMU-1788913214-1.0.1.1-cNZLQwS6J0F3Ajd3gMvIoyUmQwThCaTkiOXtUSkG_c4&seq=233&view=1up",
-  "source_type": "Hathitrust",
+  "legal_url": "",
+  "source_type": "other",
   "added_date": "",
-  "topics": ["natural-enemies", "life-history", "behavior"],
+  "topics": [
+    { "id": "natural-enemies", "percentage": 34 },
+    { "id": "life-history", "percentage": 37 },
+    { "id": "behavior", "percentage": 28 }
+  ],
   "species": ["Melissodes menuachus"],
   "associated_organisms": [
     {
