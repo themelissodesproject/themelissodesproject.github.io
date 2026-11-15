@@ -670,7 +670,44 @@
   const cap = x => x.charAt(0).toUpperCase() + x.slice(1);
   const mRow = (label, html) => '<tr><th scope="row">' + esc(label) + '</th><td>' + html + '</td></tr>';
 
+  // Photos are fetched and decoded BEFORE the pop-up opens, so it appears fully laid out (no empty photo box, no re-layout
+  // when the photo arrives). All photos are also preloaded in the background once the page is idle, and a card's photo is
+  // preloaded as soon as the pointer reaches it. A 2.5 s cap means a slow or broken photo never blocks the pop-up.
+  const imgReady = new Map();
+  const preloadImg = url => {
+    if (!imgReady.has(url)) imgReady.set(url, new Promise(resolve => {
+      const im = new Image();
+      const done = () => resolve();
+      im.onload = () => { (im.decode ? im.decode().catch(() => {}) : Promise.resolve()).then(done); };
+      im.onerror = done;
+      im.src = url;
+    }));
+    return imgReady.get(url);
+  };
+  const shownImage = t => { const v = t && (t.status === 'valid' ? t : (t.valid_id ? byId.get(t.valid_id) : null)); return (v && v.image) || ''; };
+  const idle = window.requestIdleCallback || (f => setTimeout(f, 300));
+  idle(() => data.names.forEach(n => { const u = shownImage(n); if (u) preloadImg(u); }));
+  grid.addEventListener('pointerover', e => {
+    const d = e.target.closest && e.target.closest('[data-detail]');
+    const u = d && shownImage(byId.get(d.dataset.detail));
+    if (u) preloadImg(u);
+  });
+  let openSeq = 0;
+  const imgDone = new Set();
   function openDetail(id, trigger) {
+    const t = byId.get(id);
+    if (!t) return;
+    const url = shownImage(t), seq = ++openSeq;
+    if (url && !imgDone.has(url)) {
+      Promise.race([preloadImg(url), new Promise(r => setTimeout(r, 2500))]).then(() => {
+        imgDone.add(url);
+        if (seq === openSeq) openDetailNow(id, trigger);   // ignore if another pop-up was requested meanwhile
+      });
+      return;
+    }
+    openDetailNow(id, trigger);
+  }
+  function openDetailNow(id, trigger) {
     const t = byId.get(id);
     if (!t) return;
     const isValid = t.status === 'valid';
