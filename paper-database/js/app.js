@@ -873,37 +873,28 @@ function modalCollapsible(summaryText, content) {
   return d;
 }
 
-function modalCitationCell(p) {
-  const wrap = document.createElement("div");
-  const para = document.createElement("p");
-  para.className = "m-cite-text";
-  para.textContent = citationText(p);
-  wrap.appendChild(para);
-
+// "Copy citation" button: copies the formatted citation (no long citation text is shown in the pop-up).
+function modalCopyCitationButton(p) {
   const btn = document.createElement("button");
   btn.type = "button";
-  btn.className = "m-btn m-btn-sm";
+  btn.className = "m-btn";
   btn.textContent = "Copy citation";
   let timer = null;
   btn.addEventListener("click", () => {
     copyText(citationText(p)).then(() => {
       btn.textContent = "Copied!";
     }).catch(() => {
-      // last resort: select the visible text so Ctrl/Cmd+C works
-      const r = document.createRange();
-      r.selectNodeContents(para);
-      const sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(r);
-      btn.textContent = "Press Ctrl+C to copy";
+      btn.textContent = "Copy failed";
     }).finally(() => {
       clearTimeout(timer);
       timer = setTimeout(() => { btn.textContent = "Copy citation"; }, 2200);
     });
   });
-  wrap.appendChild(btn);
-  return wrap;
+  return btn;
 }
+
+// Short source names, so the Source cell never runs longer than a journal name.
+const SOURCE_SHORT = { publisher: "Publisher", BHL: "BHL", JSTOR: "JSTOR", "author-provided": "Author", other: "Other" };
 
 // One cell of the details grid: small label above, value below (muted dash when the paper has none).
 function modalField(label, value) {
@@ -952,7 +943,18 @@ function buildModalContent(p) {
     a.innerHTML = "DOI" + EXT_ICON;
     actions.appendChild(a);
   }
-  if (actions.childNodes.length) frag.appendChild(actions);
+  actions.appendChild(modalCopyCitationButton(p));
+
+  // Topics: every topic the paper is tagged with, all in one color, next to the buttons.
+  (p.topics || []).forEach(pt => {
+    const t = topicById.get(pt.id);
+    if (!t) return;
+    const b = document.createElement("span");
+    b.className = "m-topic";
+    b.textContent = t.label;
+    actions.appendChild(b);
+  });
+  frag.appendChild(actions);
 
   // Overview sits above the details grid.
   if (p.overview) {
@@ -969,7 +971,7 @@ function buildModalContent(p) {
   }
 
   // Details grid: two columns on a computer (column 1: author, year, journal; column 2: page range,
-  // volume, citation), one column on a phone. The cells are in that reading order.
+  // volume, source), one column on a phone. The cells are in that reading order.
   const c = citationParts(p);
   const grid = document.createElement("div");
   grid.className = "m-grid";
@@ -979,28 +981,15 @@ function buildModalContent(p) {
   grid.appendChild(modalField("Journal", c.journal));
   grid.appendChild(modalField("Page range", c.pages));
   grid.appendChild(modalField("Volume", c.volume));
-  grid.appendChild(modalField("Citation", modalCitationCell(p)));
+  grid.appendChild(modalField("Source", p.source_type ? (SOURCE_SHORT[p.source_type] || p.source_type) : ""));
   frag.appendChild(grid);
 
-  // Below the grid: topics, keywords and the dropdowns for the long lists.
+  // Below the grid: species and keywords and the other dropdowns (no divider lines).
   const table = document.createElement("table");
   table.className = "m-table";
   const tbody = document.createElement("tbody");
   table.appendChild(tbody);
   const add = (label, value) => tbody.appendChild(modalRow(label, value));
-
-  // Every topic the paper is tagged with (the card shows only the top few), using the card's rank-based shading.
-  const topicRow = document.createElement("div");
-  topicRow.className = "badge-row";
-  (p.topics || []).forEach((pt, i) => {
-    const t = topicById.get(pt.id);
-    if (!t) return;
-    const b = document.createElement("span");
-    styleTopicChip(b, pt, i);
-    b.textContent = t.label;
-    topicRow.appendChild(b);
-  });
-  if (topicRow.childNodes.length) add("Topics", topicRow);
 
   if (p.species && p.species.length) {
     const row = document.createElement("div");
@@ -1050,7 +1039,6 @@ function buildModalContent(p) {
   if (tbody.childNodes.length) frag.appendChild(table);
 
   const metaBits = [];
-  if (p.source_type) metaBits.push(`Source: ${SOURCE_LABELS[p.source_type] || p.source_type}`);
   if (p.added_date) metaBits.push(`Added ${p.added_date}`);
   if (metaBits.length) {
     const meta = document.createElement("p");
