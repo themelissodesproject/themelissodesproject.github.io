@@ -905,6 +905,23 @@ function modalCitationCell(p) {
   return wrap;
 }
 
+// One cell of the details grid: small label above, value below (muted dash when the paper has none).
+function modalField(label, value) {
+  const d = document.createElement("div");
+  d.className = "m-field";
+  const l = document.createElement("div");
+  l.className = "m-label";
+  l.textContent = label;
+  const v = document.createElement("div");
+  v.className = "m-value";
+  if (value instanceof Node) v.appendChild(value);
+  else if (value) v.textContent = value;
+  else { v.classList.add("m-none"); v.textContent = "—"; }
+  d.appendChild(l);
+  d.appendChild(v);
+  return d;
+}
+
 function buildModalContent(p) {
   const frag = document.createDocumentFragment();
 
@@ -937,27 +954,45 @@ function buildModalContent(p) {
   }
   if (actions.childNodes.length) frag.appendChild(actions);
 
+  // Overview sits above the details grid.
+  if (p.overview) {
+    const ov = document.createElement("div");
+    ov.className = "m-overview";
+    const l = document.createElement("div");
+    l.className = "m-label";
+    l.textContent = "Overview";
+    const para = document.createElement("p");
+    para.textContent = p.overview;
+    ov.appendChild(l);
+    ov.appendChild(para);
+    frag.appendChild(ov);
+  }
+
+  // Details grid: two columns on a computer (column 1: author, year, journal; column 2: page range,
+  // volume, citation), one column on a phone. The cells are in that reading order.
+  const c = citationParts(p);
+  const grid = document.createElement("div");
+  grid.className = "m-grid";
+  const au = p.authors || [];
+  grid.appendChild(modalField(au.length > 1 ? "Authors" : "Author", au.join("; ")));
+  grid.appendChild(modalField("Year", p.year ? String(p.year) : ""));
+  grid.appendChild(modalField("Journal", c.journal));
+  grid.appendChild(modalField("Page range", c.pages));
+  grid.appendChild(modalField("Volume", c.volume));
+  grid.appendChild(modalField("Citation", modalCitationCell(p)));
+  frag.appendChild(grid);
+
+  // Below the grid: topics, keywords and the dropdowns for the long lists.
   const table = document.createElement("table");
   table.className = "m-table";
   const tbody = document.createElement("tbody");
   table.appendChild(tbody);
   const add = (label, value) => tbody.appendChild(modalRow(label, value));
 
-  if ((p.authors || []).length) add(p.authors.length > 1 ? "Authors" : "Author", p.authors.join("; "));
-  if (p.year) add("Year", String(p.year));
-  const c = citationParts(p);
-  const where = [c.journal, c.volume, c.pages].filter(Boolean).join(", ");
-  if (where) add("Published in", where);
-
-  add("Citation", modalCitationCell(p));
-
-  if (p.overview) add("Overview", p.overview);
-
   // Every topic the paper is tagged with (the card shows only the top few), using the card's rank-based shading.
-  const allTopics = p.topics || [];
   const topicRow = document.createElement("div");
   topicRow.className = "badge-row";
-  allTopics.forEach((pt, i) => {
+  (p.topics || []).forEach((pt, i) => {
     const t = topicById.get(pt.id);
     if (!t) return;
     const b = document.createElement("span");
@@ -1012,10 +1047,18 @@ function buildModalContent(p) {
     add("Associated organisms", modalCollapsible(`${n} ${n === 1 ? "organism" : "organisms"}`, row));
   }
 
-  if (p.source_type) add("Source", SOURCE_LABELS[p.source_type] || p.source_type);
-  if (p.added_date) add("Added", p.added_date);
+  if (tbody.childNodes.length) frag.appendChild(table);
 
-  frag.appendChild(table);
+  const metaBits = [];
+  if (p.source_type) metaBits.push(`Source: ${SOURCE_LABELS[p.source_type] || p.source_type}`);
+  if (p.added_date) metaBits.push(`Added ${p.added_date}`);
+  if (metaBits.length) {
+    const meta = document.createElement("p");
+    meta.className = "m-meta";
+    meta.textContent = metaBits.join(" · ");
+    frag.appendChild(meta);
+  }
+
   return frag;
 }
 
