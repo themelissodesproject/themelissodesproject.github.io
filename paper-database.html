@@ -641,58 +641,6 @@
     border-radius: 6px;
   }
 
-  .topic-pie {
-    width: 8.5rem;
-    height: 8.5rem;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    box-shadow: 0 0 0 1px #eee;
-    cursor: default;
-  }
-
-  /* Each real wedge eases its fill/stroke color when dimmed/undimmed
-     on hover — never its transform (see app.js: the "pop" is drawn by
-     a separate always-on-top overlay path, not by transforming the
-     real wedge, so a real wedge's transform is never touched at all).
-     transform-box/transform-origin are still declared here since the
-     overlay below shares this same selector and needs them. */
-  .topic-pie path {
-    transition: fill 0.2s ease, stroke 0.2s ease;
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
-  /* The overlay itself (app.js's pieResult.highlight): always the last
-     child of the <svg>, so it always paints on top — no reordering of
-     real wedges needed to avoid a clipped tip. Its "d"/fill are swapped
-     instantly to mirror whichever wedge is hovered (no transition on
-     those), so switching between wedges never blends one wedge's shape
-     into another's — only its opacity/scale ease, for the appear/
-     disappear and the "pop". Higher specificity than ".topic-pie path"
-     above so it overrides that rule's fill/stroke transition. */
-  .topic-pie path.topic-pie-highlight {
-    transition: opacity 0.15s ease, transform 0.2s ease;
-  }
-
-  /* Pairs the pie with its chip row side by side instead of stacking
-     them — the chips wrap and fill the space to the pie's right
-     rather than leaving it blank and starting a fresh row below. If
-     there are enough chips to wrap past the pie's own height, they
-     just continue in that same flex row's remaining width; the row's
-     overall height grows to fit them, same as before. */
-  .topic-pie-row {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-  }
-  .topic-pie-row .badge-row {
-    flex: 1;
-    align-content: flex-start;
-    margin-bottom: 0;
-  }
-
   .card-details {
     margin: 0 0 0.85rem;
     padding-top: 0.75rem;
