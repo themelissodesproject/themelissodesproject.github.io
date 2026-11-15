@@ -619,7 +619,14 @@
     .m-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
   }
 
-  /* Topics: one color (same as the Close button), shown next to the buttons at the top */
+  /* Topics: one color (same as the Close button), centered between the overview and the details grid */
+  .m-topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 12px;
+    margin: 1.4rem 0 1.5rem;
+  }
   .m-topic {
     align-self: center;
     padding: 0.25rem 0.7rem;
@@ -630,6 +637,45 @@
     background: #333;
     border-radius: 999px;
   }
+
+  /* Citation box: full citation; blurs on hover with a "Copy" label over it */
+  .m-cite { margin: 0.4rem 0 1rem; text-align: left; }
+  .m-cite-box {
+    position: relative;
+    padding: 0.7rem 0.9rem;
+    background: #F7F8F8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .m-cite-box:focus-visible { outline: 2px solid #333; outline-offset: 2px; }
+  .m-cite-text {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #222;
+    word-break: break-word;
+    transition: filter 0.18s ease, opacity 0.18s ease;
+  }
+  .m-cite-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+  }
+  .m-cite-box:hover .m-cite-text,
+  .m-cite-box:focus-visible .m-cite-text,
+  .m-cite-box.is-active .m-cite-text { filter: blur(5px); opacity: 0.7; }
+  .m-cite-box:hover .m-cite-overlay,
+  .m-cite-box:focus-visible .m-cite-overlay,
+  .m-cite-box.is-active .m-cite-overlay { opacity: 1; }
 
   .m-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 0.9rem; }
   .m-actions-bottom { margin: 0.2rem 0 0; }
