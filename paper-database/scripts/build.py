@@ -105,6 +105,9 @@ def build():
             raise SystemExit(f"Duplicate paper id: {pid}")
         seen_ids.add(pid)
 
+        if not p.get("citation"):
+            print(f"  warning: {pid} has no \"citation\" in papers.json")
+
         for sp in p.get("species", []):
             all_species[sp] = species_color(sp)
 
@@ -123,6 +126,11 @@ def build():
             "volume": p.get("volume", ""),
             "pages": p.get("pages", ""),
             "doi": p.get("doi", ""),
+            # Full formatted citation, written in papers.json (the single
+            # source of truth). The front end displays/copies this string
+            # verbatim; it only falls back to assembling one from the
+            # fields above if a record has no "citation".
+            "citation": p.get("citation", ""),
             "legal_url": p.get("legal_url", ""),
             "source_type": p.get("source_type", ""),
             "topics": sorted(

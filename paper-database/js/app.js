@@ -755,8 +755,8 @@ function renderCard(p) {
 
 let modalReturnFocus = null;
 
-// The pop-up follows the same layout as the species index pop-up: title, a row of buttons,
-// a label/value table, and a dark Close button at the bottom.
+// The pop-up follows the same layout as the species index pop-up: title, overview, topics,
+// a label/value grid, the citation box, and a bottom row with View paper next to the dark Close button.
 function openRecordModal(p) {
   closeRecordModal();
   modalReturnFocus = document.activeElement;
@@ -777,6 +777,24 @@ function openRecordModal(p) {
 
   const bottom = document.createElement("div");
   bottom.className = "m-actions m-actions-bottom";
+  if (p.legal_url) {
+    const a = document.createElement("a");
+    a.className = "m-btn";
+    a.href = p.legal_url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = "View paper" + EXT_ICON;
+    bottom.appendChild(a);
+  }
+  if (p.doi) {
+    const a = document.createElement("a");
+    a.className = "m-btn";
+    a.href = `https://doi.org/${p.doi}`;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = "DOI" + EXT_ICON;
+    bottom.appendChild(a);
+  }
   const closeBtn = document.createElement("button");
   closeBtn.type = "button";
   closeBtn.className = "modal-close";
@@ -823,6 +841,9 @@ function citationParts(p) {
 }
 
 function citationText(p) {
+  // The citation comes from papers.json (via catalog.json). The assembled version below is only
+  // a fallback for a record that has no "citation" field.
+  if (p.citation && p.citation.trim()) return p.citation.trim();
   const c = citationParts(p);
   const src = [c.journal, c.volume, c.pages].filter(Boolean).join(", ");
   return [
@@ -860,24 +881,59 @@ function modalCollapsible(summaryText, content) {
   return d;
 }
 
-// "Copy citation" button: copies the formatted citation (no long citation text is shown in the pop-up).
-function modalCopyCitationButton(p) {
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.className = "m-btn";
-  btn.textContent = "Copy citation";
+// Citation box: shows the full citation. Hovering blurs the box and reveals "Copy" over it;
+// clicking copies the citation and the label changes to "Copied".
+function modalCitationBox(p) {
+  const text = citationText(p);
+  const box = document.createElement("div");
+  box.className = "m-cite";
+  box.setAttribute("role", "button");
+  box.tabIndex = 0;
+  box.setAttribute("aria-label", "Copy citation");
+
+  const label = document.createElement("div");
+  label.className = "m-label";
+  label.textContent = "Citation";
+
+  const wrap = document.createElement("div");
+  wrap.className = "m-cite-box";
+  const body = document.createElement("div");
+  body.className = "m-cite-text";
+  body.textContent = text;
+  const overlay = document.createElement("div");
+  overlay.className = "m-cite-overlay";
+  overlay.setAttribute("aria-hidden", "true");
+  overlay.textContent = "Copy";
+  wrap.appendChild(body);
+  wrap.appendChild(overlay);
+
+  box.appendChild(label);
+  box.appendChild(wrap);
+
   let timer = null;
-  btn.addEventListener("click", () => {
-    copyText(citationText(p)).then(() => {
-      btn.textContent = "Copied!";
+  const doCopy = () => {
+    copyText(text).then(() => {
+      overlay.textContent = "Copied";
     }).catch(() => {
-      btn.textContent = "Copy failed";
+      overlay.textContent = "Copy failed";
     }).finally(() => {
+      wrap.classList.add("is-active");
       clearTimeout(timer);
-      timer = setTimeout(() => { btn.textContent = "Copy citation"; }, 2200);
+      timer = setTimeout(() => {
+        wrap.classList.remove("is-active");
+        overlay.textContent = "Copy";
+      }, 1800);
     });
+  };
+  wrap.addEventListener("click", doCopy);
+  wrap.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); doCopy(); }
   });
-  return btn;
+  wrap.tabIndex = 0;
+  wrap.setAttribute("role", "button");
+  wrap.setAttribute("aria-label", "Copy citation");
+  box.removeAttribute("role"); box.removeAttribute("tabindex"); box.removeAttribute("aria-label");
+  return box;
 }
 
 // Short source names, so the Source cell never runs longer than a journal name.
@@ -908,31 +964,6 @@ function buildModalContent(p) {
   h2.id = "record-modal-title";
   h2.textContent = p.title;
   frag.appendChild(h2);
-
-  // Links to the paper itself sit right under the title so they are easy to find.
-  const actions = document.createElement("div");
-  actions.className = "m-actions";
-  if (p.legal_url) {
-    const a = document.createElement("a");
-    a.className = "m-btn";
-    a.href = p.legal_url;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.innerHTML = "View paper" + EXT_ICON;
-    actions.appendChild(a);
-  }
-  if (p.doi) {
-    const a = document.createElement("a");
-    a.className = "m-btn";
-    a.href = `https://doi.org/${p.doi}`;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.innerHTML = "DOI" + EXT_ICON;
-    actions.appendChild(a);
-  }
-  actions.appendChild(modalCopyCitationButton(p));
-
-  frag.appendChild(actions);
 
   // Overview sits above the details grid.
   if (p.overview) {
@@ -1041,6 +1072,9 @@ function buildModalContent(p) {
     meta.textContent = metaBits.join(" · ");
     frag.appendChild(meta);
   }
+
+  // Citation sits at the very bottom, directly above the View paper / Close buttons.
+  frag.appendChild(modalCitationBox(p));
 
   return frag;
 }
