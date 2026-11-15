@@ -854,20 +854,20 @@
     "volume": "15",
     "pages": "217-252",
     "doi": "",
-    "legal_url": "",
-    "source_type": "other",
+    "legal_url": "https://babel.hathitrust.org/cgi/pt?id=nyp.33433107731824&__cf_chl_tk=aWJEfe0EuaqZ8Sqpn8q31BKtU2eL9PbRx6wMQNVmSMU-1788913214-1.0.1.1-cNZLQwS6J0F3Ajd3gMvIoyUmQwThCaTkiOXtUSkG_c4&seq=233&view=1up",
+    "source_type": "Hathitrust",
     "topics": [
       {
         "id": "natural-enemies",
-        "percent": 0
+        "percent": 33.3
       },
       {
         "id": "life-history",
-        "percent": 0
+        "percent": 33.3
       },
       {
         "id": "behavior",
-        "percent": 0
+        "percent": 33.3
       }
     ],
     "species": [
@@ -914,6 +914,89 @@
       }
     ],
     "overview": "This 1908 field note describes a male mating aggregation display ('sun-dance') observed at a Melissodes nesting site in Augusta, Georgia, in which yellow-clypeus males repeatedly chase, dodge, and grapple with black-clypeus females returning to their burrows carrying pollen loads, which Turner interprets as a 'nuptial ambuscade' facilitating copulation. It also notes Nomadidae (cuckoo bees), a cleptoparasitic bee family, loitering near Melissodes burrows waiting to oviposit on the bees' stored pollen provisions.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "cresson-1878",
+    "title": "DESCRIPTIONS OF NEW SPECIES OF NORTH AMERICAN BEES.",
+    "authors": [
+      "Cresson, E. T."
+    ],
+    "year": 1878,
+    "journal": "Proceedings of the Academy of Natural Sciences of Philadelphia",
+    "volume": "",
+    "pages": "181-221",
+    "doi": "",
+    "legal_url": "https://www.biodiversitylibrary.org/page/26309251#page/183/mode/1up",
+    "source_type": "BHL",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 97.0
+      },
+      {
+        "id": "morphology",
+        "percent": 97.0
+      },
+      {
+        "id": "distribution",
+        "percent": 3.0
+      }
+    ],
+    "species": [
+      "Melissodes caliginosa",
+      "Melissodes morosa",
+      "Melissodes montezuma",
+      "Melissodes dubitata",
+      "Melissodes nigrifrons",
+      "Melissodes edwardsii",
+      "Melissodes californica",
+      "Melissodes fulvitarsis",
+      "Melissodes frater",
+      "Melissodes lepida",
+      "Melissodes speciosa",
+      "Melissodes dilecta",
+      "Melissodes compta",
+      "Melissodes georgica",
+      "Melissodes coloradensis",
+      "Melissodes petulca",
+      "Melissodes montana",
+      "Melissodes suffusa",
+      "Melissodes fimbriata",
+      "Melissodes agilis",
+      "Melissodes communis",
+      "Melissodes confusa",
+      "Melissodes perplexa",
+      "Melissodes condigna",
+      "Melissodes stretchii",
+      "Melissodes actuosa",
+      "Melissodes donata",
+      "Melissodes trifasciata",
+      "Melissodes albilabris",
+      "Melissodes otomita",
+      "Melissodes tepida",
+      "Melissodes suavis",
+      "Melissodes lupina",
+      "Melissodes snowii",
+      "Melissodes tepaneca",
+      "Melissodes aurigenia",
+      "Melissodes fulvohirta",
+      "Melissodes exquisita",
+      "Melissodes strenua",
+      "Melissodes australis",
+      "Melissodes diminuta",
+      "Melissodes olivacea",
+      "Melissodes pinguis",
+      "Melissodes afflicta",
+      "Melissodes apacha",
+      "Melissodes sumichrasti",
+      "Melissodes bituberculata",
+      "Melissodes toluca",
+      "Melissodes bombiformis"
+    ],
+    "associated_organisms": [],
+    "overview": "The Melissodes portion of this paper gives separate female and male descriptions of 49 species, each with body length, collection localities and collectors, and in many cases comparisons with similar species; this includes Melissodes agilis, Melissodes communis and Melissodes aurigenia. The author notes that the last group of Melissodes described seem intermediate between Melissodes and Anthophora, based on antennal length in males and wing venation.",
     "author_keywords": [],
     "added_date": ""
   }
