@@ -56,6 +56,149 @@
 </script>
 
   <link rel="stylesheet" href="species-index.css">
+  <style>
+    /* Filter dropdowns for the species index. Builds on species-index.css (same palette, borders and radii). */
+    .sf-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; grid-column: 1 / -1; }
+    .sf-dd { position: relative; }
+    .sf-dd-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; font-size: 0.9rem; color: #222; background: #fff; border: 1px solid #ccc; border-radius: 6px; cursor: pointer; }
+    .sf-dd-btn:hover, .sf-dd-btn[aria-expanded="true"] { background: #F3F4F5; }
+    .sf-dd-btn.sf-active { border-color: #222; }
+    .sf-sel { min-width: 18px; padding: 0 6px; border-radius: 9px; background: #222; color: #fff; font-size: 0.75rem; line-height: 18px; text-align: center; }
+    .sf-caret { font-size: 0.7rem; color: #555; }
+
+    .sf-menu { position: absolute; top: 100%; left: 0; z-index: 30; min-width: 250px; max-width: calc(100vw - 40px); max-height: 340px; overflow-y: auto; margin-top: 4px; padding: 6px 0; background: #fff; border: 1px solid #ccc; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+    .filters .sf-menu[hidden], .filters .sf-sel[hidden] { display: none; }
+    .filters .sf-menu label { display: flex; align-items: center; gap: 8px; padding: 5px 14px; margin: 0; font-size: 0.9rem; cursor: pointer; }
+    .filters .sf-menu label:hover { background: #F3F4F5; }
+    .filters .sf-menu label.sf-zero { color: #999; cursor: default; }
+    .sf-count { margin-left: auto; padding-left: 12px; font-size: 0.8rem; color: #777; }
+    .sf-note { padding: 4px 14px 6px; font-size: 0.78rem; color: #777; }
+    .sf-foot { margin-top: 4px; padding: 6px 14px 2px; border-top: 1px solid #F3F4F5; }
+
+    .sf-link { padding: 0; font-size: 0.85rem; color: #555; background: none; border: none; text-decoration: underline; cursor: pointer; }
+    .sf-link:hover { color: #000; }
+    .sf-reset { margin-left: 4px; }
+    .sf-trash { display: inline-flex; align-items: center; justify-content: center; margin-left: 4px; padding: 6px 8px; color: #555; background: #fff; border: 1px solid #ccc; border-radius: 6px; cursor: pointer; }
+    .sf-trash:hover { color: #000; background: #F3F4F5; }
+    .sf-preset { display: block; width: 100%; padding: 7px 14px; font-size: 0.9rem; text-align: left; color: #222; background: none; border: none; cursor: pointer; }
+    .sf-preset:hover { background: #F3F4F5; }
+    .sf-preset small { display: block; font-size: 0.75rem; color: #777; }
+
+    .sf-toolbar { margin: 12px 0 14px; font-size: 0.9rem; color: #555; }
+    .sf-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; }
+    .sf-sort select { margin-left: 4px; padding: 5px 8px; font-size: 0.9rem; color: #222; background: #fff; border: 1px solid #ccc; border-radius: 6px; }
+    .sf-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .sf-chips:not(:empty) { margin-top: 10px; }
+    .sf-chip { padding: 3px 10px; font-size: 0.8rem; color: #222; background: #F3F4F5; border: 1px solid #ccc; border-radius: 999px; cursor: pointer; }
+    .sf-chip:hover { background: #e4e5e6; }
+    .sf-xlink { text-decoration: underline; cursor: pointer; }
+    .sf-xlink:hover { color: #000; }
+    .sf-table a.sf-xlink { color: inherit; }
+    .sf-cite { text-decoration: underline; text-underline-offset: 2px; }
+    .sf-auth { font-size: 0.8em; font-weight: normal; font-style: normal; color: #666; }
+
+    /* Validity colour-coding (card border only) + toolbar toggle and key */
+    .sf-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+    .sf-colortoggle { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+    .sf-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 0.82rem; color: #555; }
+    .sf-legend[hidden] { display: none; }
+    .sf-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .sf-legend i { display: inline-block; width: 14px; height: 14px; border: 3px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .sf-legend i[data-validity="valid"] { border-color: #2e9e5b; } .sf-legend i[data-validity="synonym"] { border-color: #e6b800; }
+    .sf-legend i[data-validity="variant"] { border-color: #3b82c4; } .sf-legend i[data-validity="combination"] { border-color: #8a5cc2; }
+    .sf-legend i[data-validity="homonym"] { border-color: #e07b00; } .sf-legend i[data-validity="uncertain"] { border-color: #8c8c8c; }
+    .sf-legend i[data-validity="elsewhere"] { border-color: #d64545; }
+    .sf-color .species-card { border-width: 2px !important; border-style: solid !important; }
+    .sf-color .species-card[data-validity="valid"]       { border-color: #2e9e5b !important; }
+    .sf-color .species-card[data-validity="synonym"]     { border-color: #e6b800 !important; }
+    .sf-color .species-card[data-validity="variant"]     { border-color: #3b82c4 !important; }
+    .sf-color .species-card[data-validity="combination"] { border-color: #8a5cc2 !important; }
+    .sf-color .species-card[data-validity="homonym"]     { border-color: #e07b00 !important; }
+    .sf-color .species-card[data-validity="uncertain"]   { border-color: #8c8c8c !important; }
+    .sf-color .species-card[data-validity="elsewhere"]   { border-color: #d64545 !important; }
+
+    /* Even card heights: cards in a row stretch to the tallest one, so a wrapped line never leaves gaps */
+    .species-grid { align-items: stretch; }
+    .species-grid > a { display: flex; }
+    .species-grid > a > .species-card { flex: 1 1 auto; box-sizing: border-box; }
+
+    /* Clear (x) button inside the search bar */
+    .search-bar { position: relative; }
+    .sf-search-clear { position: absolute; width: 24px; height: 24px; margin: 0; padding: 0; font-size: 0.95rem; line-height: 24px; text-align: center; color: #777; background: none; border: none; border-radius: 50%; cursor: pointer; }
+    .sf-search-clear:hover { color: #222; background: #F3F4F5; }
+    .sf-search-clear[hidden] { display: none; }
+
+    /* Old-name cards open a centered detail pop-up (same look as the gallery image pop-up) */
+    .sf-card-link { cursor: pointer; }
+    .sf-modal-overlay { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1rem; background: rgba(0,0,0,0.8); z-index: 1000; }
+    .sf-modal-overlay[hidden] { display: none; }
+    .sf-modal { width: 100%; max-width: 600px; max-height: 90vh; overflow-y: auto; padding: 1.25rem 1.25rem 1.1rem; background: #fff; border-radius: 8px; text-align: center; }
+    .sf-modal::-webkit-scrollbar { width: 8px; }
+    .sf-modal::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+    .sf-modal::-webkit-scrollbar-track { background: transparent; margin-top: 5px; margin-bottom: 5px; }
+    .sf-modal::-webkit-scrollbar-thumb { background: #d3d3d3; border-radius: 6px; }
+
+    /* with a photo the pop-up goes wide: photo on the left, details on the right, so it rarely needs scrolling */
+    .sf-modal.sf-has-img { max-width: 800px; display: grid; grid-template-columns: minmax(240px, 340px) 1fr; grid-template-rows: auto auto; grid-template-areas: "img main" "actions actions"; column-gap: 1.5rem; align-items: start; text-align: left; }
+    .sf-modal.sf-has-img .sf-modal-img { grid-area: img; position: sticky; top: 0; margin-bottom: 0; }
+    .sf-modal.sf-has-img .sf-modal-main { grid-area: main; }
+    .sf-modal.sf-has-img .sf-m-actions { grid-area: actions; margin-top: 0.9rem; }
+    /* Flow state (set by fitModal() only when the details are taller than the photo):
+       the photo floats left and the long rows (subspecies, synonyms, notes...) become running text that wraps around it,
+       then runs full width once past the photo, so there is no empty space under the photo */
+    .sf-modal.sf-has-img.sf-split { display: block; }
+    .sf-modal.sf-has-img.sf-split .sf-modal-img { float: left; position: static; width: 340px; max-width: 45%; margin: 0 1.5rem 0.5rem 0; }
+    .sf-modal.sf-has-img.sf-split .sf-modal-main { display: block; }
+    .sf-modal.sf-has-img.sf-split .sf-table, .sf-modal.sf-has-img.sf-split .sf-table tbody { display: block; }
+    .sf-modal.sf-has-img.sf-split .sf-table { border-top: none; margin-bottom: 0; }
+    .sf-modal.sf-has-img.sf-split .sf-table tr { display: grid; grid-template-columns: 30% 1fr; }
+    .sf-modal.sf-has-img.sf-split .sf-table tr:first-child { border-top: 1px solid #e5e5e5; }
+    .sf-modal.sf-has-img.sf-split .sf-table th { width: auto; }
+    .sf-flow { margin: 0; padding: 9px 4px; font-size: 0.92rem; line-height: 1.5; color: #222; }
+    /* separator line between rows: a zero-height block formatting context, so it sits beside the photo (narrower) and runs full width once below it */
+    .sf-flow-sep { display: flow-root; height: 0; border-top: 1px solid #e5e5e5; }
+    .sf-flow-label { margin-right: 0.35rem; font-size: 0.82rem; font-weight: 600; color: #777; }
+    .sf-flow-label::after { content: ':'; }
+    .sf-flow .sf-hist { display: block; }
+    .sf-modal.sf-has-img.sf-split .sf-m-actions { margin-top: 0.9rem; }
+    .sf-modal.sf-has-img .sf-modal-img img { max-height: 70vh; }
+    .sf-modal.sf-has-img .sf-m-actions { justify-content: center; }
+    .sf-modal.sf-has-img .sf-modal-credit { text-align: left; }
+    .sf-modal-main { min-width: 0; }
+    .sf-modal-img { margin-bottom: 0.75rem; }
+    .sf-modal-img img { display: block; margin: 0 auto; max-width: 100%; max-height: 240px; object-fit: contain; border-radius: 5px; }
+    .sf-modal-credit { margin-top: 0.35rem; font-size: 0.78rem; line-height: 1.3; color: #777; text-align: center; }
+    .sf-modal-title { margin: 0 0 0.7rem; font-size: 1.15rem; font-weight: 700; line-height: 1.3; }
+
+    .sf-table { width: 100%; margin: 0 0 0.9rem; border-collapse: collapse; text-align: left; font-size: 0.92rem; border-top: 1px solid #e5e5e5; }
+    .sf-table th, .sf-table td { padding: 5px 4px; vertical-align: top; border-bottom: 1px solid #e5e5e5; }
+    .sf-table th { width: 30%; padding-right: 12px; font-weight: 600; color: #777; font-size: 0.82rem; }
+    .sf-table td { color: #222; }
+
+    .sf-m-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 0.2rem; }
+    .sf-m-btn, .sf-modal-close { padding: 7px 14px; font-size: 0.9rem; line-height: 1.3; border-radius: 6px; cursor: pointer; }
+    .sf-m-btn { color: #222; background: #fff; border: 1px solid #ccc; }
+    .sf-m-btn:hover { background: #F3F4F5; }
+    a.sf-m-btn { display: inline-block; text-decoration: none; }
+    .sf-table .sf-none { color: #999; }
+    .sf-table .sf-hist { display: block; }
+    .sf-table .sf-hist + .sf-hist { margin-top: 6px; }
+    .sf-modal-close { color: #fff; background: #333; border: 1px solid #333; }
+
+    /* "Scroll for more" hint over the bottom edge of a scrolling pop-up (small screens): white fade + a subtle arrow */
+    .sf-scroll-hint { position: fixed; z-index: 1001; height: 64px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; box-sizing: border-box; pointer-events: none; border-radius: 0 0 8px 8px; background: linear-gradient(to top, #fff 30%, rgba(255,255,255,0)); }
+    .sf-scroll-hint[hidden] { display: none; }
+    .sf-scroll-hint svg { display: block; color: #8a8a8a; animation: sf-nudge 1.8s ease-in-out infinite; }
+    @keyframes sf-nudge { 0%, 100% { transform: translateY(-2px); opacity: 0.55; } 50% { transform: translateY(3px); opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .sf-scroll-hint svg { animation: none; } }
+    @media (max-width: 700px) {
+      .sf-modal.sf-has-img { display: block; max-width: 520px; text-align: center; }
+      .sf-modal.sf-has-img .sf-modal-img { position: static; margin-bottom: 0.75rem; }
+      .sf-modal.sf-has-img .sf-modal-img img { max-height: 200px; }
+      .sf-modal.sf-has-img .sf-m-actions { justify-content: center; }
+      .sf-modal.sf-has-img .sf-modal-credit { text-align: center; }
+    }
+  </style>
 </head>
 <body>
 <div class="container">
@@ -79,703 +222,682 @@
   <!-- Search bar -->
   <div class="search-bar">
     <input type="text" id="searchInput" placeholder="Search species...">
+    <button type="button" id="searchClear" class="sf-search-clear" aria-label="Clear search" title="Clear search" hidden>✕</button>
   </div>
 
-  <div class="filters">
-    <strong>Filter by Subgenus:</strong><br>
-    <label><input type="checkbox" value="Apomelissodes"> Apomelissodes</label>
-    <label><input type="checkbox" value="Callimelissodes"> Callimelissodes</label>
-    <label><input type="checkbox" value="Ecplectica"> Ecplectica</label>
-    <label><input type="checkbox" value="Eumelissodes"> Eumelissodes</label>
-    <label><input type="checkbox" value="Melissodes"> Melissodes</label>
-  </div>
+  <div class="filters" id="filters"></div>
+
+  <div class="sf-toolbar" id="toolbar"></div>
 
   <div class="species-grid" id="speciesGrid">
-    
-     <a href="Melissodes-Ablusus.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes ablusus</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="melissodes-agilis.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes agilis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="melissodes-apicatus.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes apicatus</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="melissodes-appressus.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes appressus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="melissodes-baileyi.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes baileyi</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="melissodes-bicoloratus.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes bicoloratus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#bidentis"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes bidentis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#bimaculatus"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes bimaculatus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="melissodes-bimatris.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes bimatris</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes blandus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#boltoniae"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes boltoniae</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes brevipygus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#bruneri"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes bruneri</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes cerussatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#cestus"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes cestus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="melissodes-clarkiae.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes clarkiae</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#colliciatus"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes colliciatus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes coloradensis</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes comatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="melissodes-communis.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes communis</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#compositus"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes compositus</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes comptoides</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes confusus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes coreopsis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes crocinus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes cubensis</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#dagosus"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes dagosus</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="gallery-img.html#denticulatus"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes denticulatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes dentiventris</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="melissodes-desponsus.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes desponsus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes druriellus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes ecuadorius</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes elegans</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes exilis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes expolitus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes fasciatellus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes fimbriatus</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes flexus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes floris</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes foxi</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes fumosus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes gelidus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes gilensis</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes glenwoodensis</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes grindeliae</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes haitiensis</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes humilior</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes hurdi</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes hymenoxidis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes illatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes interruptus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes intortus</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes labiatarum</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes leprieuri</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes limbus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes lupinus</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes lustrus</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes lutulentus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes maestus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes manipularis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes martinicensis</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes melanurus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes menuachus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes metenuus</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes micheneri</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes microstictus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes mimicus</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes minusculus</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes mitchelli</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes monoensis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes montanus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes moorei</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes morrilli</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes negligendus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes nigracauda</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes nigroaeneus</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes niveus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes ochraeus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes opuntiellus</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes pallidisignatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes panamensis</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes paroselae</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes paucipuncta</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes paululus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes perlusus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes perpolitus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes persimilis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes personatellus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes pexa</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes pilleatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes plumosus</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes pullatellus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes pullatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes raphaelis</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes relucens</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="melissodes-rivalis.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes rivalis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes robustior</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes rufipes</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes rufodentatus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes saponellus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes semilupinus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes sexcinctus</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes snowii</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes sonorensis</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Apomelissodes">
-      <h3>Melissodes sphaeralceae</h3> 
-      <p>Subgenus: Apomelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes stearnsi</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes subagilis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes subillatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes submenuacha</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes tepaneca</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes tepidus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes terminatus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes tescorum</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes tessellatus</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Melissodes">
-      <h3>Melissodes thelypodii</h3> 
-      <p>Subgenus: Melissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes tibialis</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes tinctus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes tintinnans</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes tribas</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Ecplectica">
-      <h3>Melissodes trifasciatus</h3> 
-      <p>Subgenus: Ecplectica</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes trinodis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes tristis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Callimelissodes">
-      <h3>Melissodes tuckeri</h3> 
-      <p>Subgenus: Callimelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes utahensis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes velutinus</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes verbesinarum</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes vernalis</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes vernoniae</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
-<a href="Temp-page.html"><div class="species-card" data-subgenus="Eumelissodes">
-      <h3>Melissodes wheeleri</h3> 
-      <p>Subgenus: Eumelissodes</p>
-    </div></a>
-
   </div>
   <footer style="text-align: center;">
     © 2025-present The Melissodes Project. All Rights Reserved.
     </footer>
 </div>
 </div>
+<script src="api/species.js"></script>
 <script>
-const checkboxes = document.querySelectorAll('.filters input[type="checkbox"]');
-const searchInput = document.getElementById('searchInput');
-const grid = document.getElementById("speciesGrid");
-const speciesLinks = Array.from(grid.querySelectorAll('a')); // select the <a> wrappers
+(async () => {
+  const grid = document.getElementById('speciesGrid');
+  const filters = document.getElementById('filters');
+  const toolbar = document.getElementById('toolbar');
+  const searchInput = document.getElementById('searchInput');
+  const clearBtn = document.getElementById('searchClear');
+  searchInput.style.paddingRight = '36px';             // keep typed text clear of the x
+  // sit the x inside the right-hand end of the input, wherever the stylesheet puts the input
+  const placeClear = () => {
+    clearBtn.style.top = (searchInput.offsetTop + (searchInput.offsetHeight - 24) / 2) + 'px';
+    clearBtn.style.left = (searchInput.offsetLeft + searchInput.offsetWidth - 24 - 8) + 'px';
+  };
 
-function filterCards() {
-  const activeFilters = Array.from(checkboxes)
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
+  const FALLBACK_PAGE = 'Temp-page.html';   // used for species with no article or gallery page yet
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  // lowercase, strip accents, and treat long-horned / long horn / longhorn as the same word
+  const norm = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/long[\s-]?horn(ed)?/g, 'longhorn').replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim();
 
-  const searchValue = searchInput.value.toLowerCase();
+  let data, byId, kids, GROUPS;
+  const state = {};          // state[groupKey] = Set of checked option values (empty set = no restriction)
+  let sortKey = 'relevance';
+  // when subspecies are listed, a species that has accepted subspecies is replaced by them unless this is on
+  const PARENT_KEY = 'melissodes-species-index-parents-v2';
+  // on by default; only a deliberate untick (stored as '0') turns it off
+  let showParents = (() => { try { return localStorage.getItem(PARENT_KEY) !== '0'; } catch (e) { return true; } })();
+  // subspecies are listed when the Rank filter is empty or includes subspecies
+  const subsShown = () => !state.rank.size || state.rank.has('subspecies');
 
-  speciesLinks.forEach(link => {
-    const card = link.querySelector('.species-card');
-    const subgenus = card.getAttribute('data-subgenus');
-    const name = card.querySelector('h3').textContent.toLowerCase();
+  async function loadTaxonomy() {
+    if (!window.SPECIES_DATA) throw new Error('api/species.js did not load');
+    data = window.SPECIES_DATA;
+    byId = new Map(data.names.map(n => [n.id, n]));
+    data.names.forEach(n => { n._name = norm(n.name); n._ep = norm(n.epithet); n._cn = norm(n.common_name); n._au = norm(n.author); n._tau = norm(n.transfer_author); n._sub = norm(n.subspecies); });
+    const parenStatuses = DISP().authority_parentheses_statuses || ['previous_combination'];
+    data.names.forEach(n => { const v = parenStatuses.includes(n.status) && n.valid_id && byId.get(n.valid_id); if (v && v.genus !== n.genus) recombined.add(v.id); });
+    // a subspecies belongs to the species-level record with the same genus + epithet (if that record exists)
+    const spKey = n => n.genus + '|' + n.epithet;
+    const bySp = new Map(data.names.filter(n => !n.subspecies).map(n => [spKey(n), n]));
+    kids = new Map();
+    data.names.forEach(n => {
+      n._parent = n.subspecies ? (bySp.get(spKey(n)) || null) : null;
+      if (n._parent) { if (!kids.has(n._parent.id)) kids.set(n._parent.id, []); kids.get(n._parent.id).push(n); }
+    });
+  }
 
-    const matchesFilter = activeFilters.length === 0 || activeFilters.includes(subgenus);
-    const matchesSearch = name.includes(searchValue);
+  // ---------- labels ----------
+  // wording, defaults and presets come from data.display in species.js; the fallbacks below only apply if a key is missing there
+  const DISP = () => data.display || {};
+  const PT = () => DISP().parent_species_toggle || {};
+  const CARD = (k, fb) => (DISP().card_labels || {})[k] || fb;
+  const statusOrder = () => DISP().status_order || Object.keys(data.statuses);
+  const STATUS_LABELS = () => DISP().status_labels || {};
+  const statusLabel = st => STATUS_LABELS()[st] || st.replace(/_/g, ' ');
+  const statusName = st => st.replace(/_/g, ' ');            // singular, lowercase, used on cards
+  // authority = author + year; parenthesised when the accepted name was originally described in another genus,
+  // i.e. when a record with one of display.authority_parentheses_statuses points to it
+  const recombined = new Set();
+  const authority = n => {
+    if (!n.author && !n.year) return '';
+    const a = [n.author, n.year].filter(Boolean).join(', ');
+    return recombined.has(n.id) ? '(' + a + ')' : a;
+  };
+  // who merged / transferred a non-valid name into its accepted name (author style: author, year)
+  const transferBy = n => [n.transfer_author, n.transfer_year].filter(Boolean).join(', ');
+  // citation links: a paper-database id (author_citation / transfer_citation in species.js) makes the Authority / transfer text a link
+  // to that paper's ENTRY in the Melissodes Project paper database (display.citations.url), never to the paper itself. No id, no link.
+  const citeHTML = (text, id) => {
+    const c = (DISP().citations || {});
+    if (!id || !c.url) return esc(text);
+    return '<a class="sf-cite" href="' + esc(c.url.replace('{id}', encodeURIComponent(id))) + '" target="_blank" rel="noopener" title="' + esc(c.link_title || 'View this paper in the paper database') + '">' + esc(text) + '</a>';
+  };
+  // name including its subgenus, e.g. Melissodes (Callimelissodes) metenua
+  // display name: subspecies are abbreviated, e.g. Melissodes communis communis -> M. c. communis (genus spelled out if it is not the project genus)
+  const dispName = n => !n.subspecies ? n.name
+    : ((data.genus && n.genus === data.genus.name) ? n.genus.charAt(0) + '.' : n.genus) + ' ' + n.epithet.charAt(0) + '. ' + n.subspecies;
+  const withAuth = n => { const a = authority(n); return dispName(n) + (a ? ' ' + a : ''); };
+  // in-page link to another name's record (the whole card is an <a>, so this is a span handled by script)
+  const nameLink = (n, txt) => '<span class="sf-xlink" role="link" tabindex="0" data-jump="' + esc(n.id) + '" title="Show this name">' + esc(txt || withAuth(n)) + '</span>';
+  const firstSentence = s => String(s || '').split(/\.\s/)[0].replace(/\.$/, '');
+  const subgenusName = id => (data.subgenera.find(s => s.id === id) || {}).name || id || '';
+  const subLabel = id => id === 'none' ? 'None assigned' : subgenusName(id);
+  // synonyms and other non-valid names inherit the subgenus of the species they point to
+  const effSub = n => (n.status === 'valid' ? n.subgenus : (((n.valid_id && byId.get(n.valid_id)) || {}).subgenus || n.subgenus)) || 'none';
+  const contentTags = n => {
+    const t = [];
+    if (n.article) t.push('article');
+    if (n.gallery) t.push('gallery');
+    if (n.image) t.push('image');
+    return t.length ? t : ['none'];
+  };
+  // non-valid names link through to the accepted species' page
+  const linkFor = t => {
+    let v = t.status === 'valid' ? t : (t.valid_id ? byId.get(t.valid_id) : null);
+    if (v && v.subspecies && !v.article && !v.gallery && v._parent) v = v._parent;   // a subspecies is covered by its species' page
+    return v ? (v.article || v.gallery || FALLBACK_PAGE) : null;
+  };
 
-    if (matchesFilter && matchesSearch) {
-      link.style.display = "";
-      grid.appendChild(link); // reorders to the top
-    } else {
-      link.style.display = "none";
+  // ---------- filter groups ----------
+  function defineGroups() {
+    const ranks = [...new Set(data.names.map(n => n.rank))];
+    const order = statusOrder();
+    const statusKeys = order.filter(k => data.statuses[k])
+      .concat(Object.keys(data.statuses).filter(k => !order.includes(k)));
+    GROUPS = [
+      { key: 'status', title: 'Name status', get: n => [n.status],
+        opts: statusKeys.map(k => ({ v: k, label: statusLabel(k), hint: firstSentence(data.statuses[k]) })) },
+      { key: 'subgenus', title: 'Subgenus', note: DISP().subgenus_note, get: n => [effSub(n)],
+        opts: data.subgenera.map(sg => ({ v: sg.id, label: sg.name })).concat([{ v: 'none', label: 'No subgenus assigned', hint: 'e.g. names with no accepted species' }]) },
+      { key: 'rank', title: 'Rank', get: n => [n.rank],
+        opts: ranks.map(r => ({ v: r, label: (DISP().rank_labels || {})[r] || r.charAt(0).toUpperCase() + r.slice(1) })) },
+      { key: 'content', title: 'Page content', get: contentTags,
+        opts: [
+          { v: 'article', label: 'Has a species article' },
+          { v: 'gallery', label: 'Has gallery images' },
+          { v: 'image', label: 'Has a photo' },
+          { v: 'none', label: 'No content yet' }
+        ] }
+    ];
+    GROUPS.forEach(g => { state[g.key] = new Set(); });
+    setDefaults();
+  }
+
+  // default view comes from display.default_filters (group key -> option values)
+  function setDefaults() {
+    const df = DISP().default_filters || {};
+    GROUPS.forEach(g => (df[g.key] || []).forEach(v => { if (g.opts.some(o => o.v === v)) state[g.key].add(v); }));
+  }
+
+  // quick filters come from display.presets: { id, label, hint, filters: { group: [values] }, defaults: false to skip default filters }
+  const presets = () => DISP().presets || [{ id: 'all', label: 'Show everything', hint: 'Remove every filter', defaults: false, filters: {} }];
+  function applyPreset(id) {
+    GROUPS.forEach(g => { state[g.key] = new Set(); });
+    if (id === 'reset') { setDefaults(); return; }
+    const p = presets().find(x => x.id === id);
+    if (!p) return;
+    if (p.defaults !== false) setDefaults();
+    Object.keys(p.filters || {}).forEach(k => { if (state[k]) state[k] = new Set(p.filters[k]); });
+  }
+
+  // ---------- matching ----------
+  const passes = (n, skip) => GROUPS.every(g =>
+    g.key === skip || !state[g.key].size || g.get(n).some(v => state[g.key].has(v)));
+
+  function scoreOf(n, q) {
+    if (!q) return [1, false];
+    if (n._name === q || n._ep === q || (n._sub && n._sub === q)) return [4, false];
+    if (n._name.startsWith(q) || n._ep.startsWith(q) || (n._sub && n._sub.startsWith(q))) return [3, false];
+    if (n._name.includes(q)) return [2, false];
+    if (n._cn.includes(q)) return [1, true];
+    if ((n._au && n._au.includes(q)) || (n._tau && n._tau.includes(q))) return [1, false];
+    return [0, false];
+  }
+
+  // Names matching the search that pass every filter except the `skip` group (used for live counts).
+  // A synonym hit also surfaces the accepted species it points to, when that species passes the filters.
+  function candidates(q, skip) {
+    const out = new Map();
+    // pin = reached through a non-valid name that points straight at this taxon (a synonym of the species itself)
+    // direct = the name itself matched the search (not reached through another name)
+    const add = (t, s, syn, pin, direct) => {
+      const p = out.get(t.id);
+      if (!p) { out.set(t.id, { t, s, syn, pin: !!pin, direct: !!direct }); return; }
+      if (pin) p.pin = true;
+      if (direct) p.direct = true;
+      if (s > p.s) { p.s = s; p.syn = syn; }
+    };
+    for (const n of data.names) {
+      const [s, common] = scoreOf(n, q);
+      if (!s) continue;
+      if (passes(n, skip)) add(n, s, null, false, true);
+      if (q) [n.valid_id && byId.get(n.valid_id), n.status === 'valid' ? n._parent : null].forEach((t, i) => {   // only a currently valid subspecies surfaces its species
+        if (!t) return;
+        if (passes(t, skip)) add(t, s, common ? null : n, i === 0 && n.status !== 'valid', false);
+        // the accepted name is a subspecies that the filters hide (e.g. Rank = Species only): show its species instead
+        else if (i === 0 && t.subspecies && t._parent && passes(t._parent, skip)) add(t._parent, s, common ? null : n, true, false);
+      });
+    }
+    // A species with accepted subspecies is made up of them, so while its subspecies are on screen they stand in for it
+    // (unless "Show parent species" is on, or a synonym of the species itself was searched).
+    if (!showParents) {
+      for (const [id, hit] of [...out]) {
+        const t = hit.t;
+        if (hit.pin || t.status !== 'valid' || t.subspecies) continue;
+        const vis = (kids.get(id) || []).filter(k => k.status === 'valid' && passes(k, null));
+        if (!vis.length) continue;
+        out.delete(id);
+        if (hit.direct) vis.forEach(k => { if (!out.has(k.id)) add(k, hit.s, t, false, false); });   // the species itself matched (e.g. its common name), so its subspecies stand in for it
+      }
+    }
+    return out;
+  }
+
+  const subKey = n => (n.subspecies && n.subspecies !== n.epithet) ? n.subspecies : '';   // nominotypical subspecies sorts first
+  const cmpEp = (a, b) => a.t.epithet.localeCompare(b.t.epithet) || subKey(a.t).localeCompare(subKey(b.t)) || a.t.genus.localeCompare(b.t.genus);
+  const SORTS = {
+    relevance: (a, b) => b.s - a.s || cmpEp(a, b),
+    'ep-asc': cmpEp,
+    'ep-desc': (a, b) => cmpEp(b, a),
+    subgenus: (a, b) => subLabel(effSub(a.t)).localeCompare(subLabel(effSub(b.t))) || cmpEp(a, b),
+    year: (a, b) => (a.t.year || 9999) - (b.t.year || 9999) || cmpEp(a, b),
+    status: (a, b) => statusOrder().indexOf(a.t.status) - statusOrder().indexOf(b.t.status) || cmpEp(a, b)
+  };
+
+  // ---------- dropdown UI ----------
+  const optEls = {};
+  function buildPanel() {
+    const dd = (key, title, inner) =>
+      '<div class="sf-dd" data-dd="' + esc(key) + '">' +
+      '<button type="button" class="sf-dd-btn" aria-haspopup="true" aria-expanded="false">' + esc(title) +
+      '<span class="sf-sel" data-sel="' + esc(key) + '" hidden></span><span class="sf-caret" aria-hidden="true">▾</span></button>' +
+      '<div class="sf-menu" hidden>' + inner + '</div></div>';
+
+    const quick = dd('quick', 'Quick filters',
+      presets().map(p => '<button type="button" class="sf-preset" data-preset="' + p.id + '">' + esc(p.label) + '<small>' + esc(p.hint) + '</small></button>').join(''));
+
+    const groups = GROUPS.map(g => dd(g.key, g.title,
+      (g.note ? '<p class="sf-note">' + esc(g.note) + '</p>' : '') +
+      g.opts.map(o =>
+        '<label class="sf-opt" data-opt="' + esc(g.key + '|' + o.v) + '"' + (o.hint ? ' title="' + esc(o.hint) + '"' : '') + '>' +
+        '<input type="checkbox" data-group="' + esc(g.key) + '" value="' + esc(o.v) + '">' +
+        '<span class="sf-label">' + esc(o.label) + '</span><span class="sf-count"></span></label>').join('') +
+      '<div class="sf-foot"><button type="button" class="sf-link" data-clear="' + esc(g.key) + '">Clear</button></div>')).join('');
+
+    filters.innerHTML = '<div class="sf-row">' + quick + groups +
+      '<button type="button" class="sf-trash" data-preset="reset" aria-label="Reset all filters and clear the search" title="Reset all filters and clear the search">' +
+      '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg></button></div>';
+    filters.querySelectorAll('.sf-opt').forEach(el => { optEls[el.dataset.opt] = el; });
+
+    toolbar.innerHTML =
+      '<div class="sf-bar"><div class="sf-summary" id="sfSummary"></div>' +
+      '<div class="sf-controls"><label class="sf-colortoggle" id="parentWrap" title="' + esc(PT().hint || '') + '"><input type="checkbox" id="parentToggle"' + (showParents ? ' checked' : '') + '> ' + esc(PT().label || 'Show parent species') + '</label>' +
+      '<label class="sf-colortoggle"><input type="checkbox" id="colorToggle"' + (colorOn() ? ' checked' : '') + '> Color-code by validity</label>' +
+      '<label class="sf-sort">Sort by <select id="sortSel">' +
+      '<option value="relevance">Best match</option>' +
+      '<option value="ep-asc">Epithet A–Z</option>' +
+      '<option value="ep-desc">Epithet Z–A</option>' +
+      '<option value="subgenus">Subgenus</option>' +
+      '<option value="year">Year described</option>' +
+      '<option value="status">Name status</option>' +
+      '</select></label></div></div><div class="sf-chips" id="sfChips"></div>' +
+      '<div class="sf-legend" id="sfLegend" hidden>' +
+      [...new Set(data.names.map(validityOf))].sort((a, b) => Object.keys(VALIDITY).indexOf(a) - Object.keys(VALIDITY).indexOf(b))
+        .map(k => '<span><i data-validity="' + k + '"></i>' + esc(validityLabel(k)) + '</span>').join('') + '</div>';
+    applyColor(colorOn());
+  }
+
+  function closeMenus() {
+    filters.querySelectorAll('.sf-menu').forEach(m => { m.hidden = true; m.style.left = ''; m.style.right = ''; });
+    filters.querySelectorAll('.sf-dd-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  }
+  function toggleMenu(dd) {
+    const menu = dd.querySelector('.sf-menu');
+    const wasClosed = menu.hidden;
+    closeMenus();
+    if (!wasClosed) return;
+    menu.hidden = false;
+    dd.querySelector('.sf-dd-btn').setAttribute('aria-expanded', 'true');
+    // keep the menu on screen when the button sits near the right edge
+    if (menu.getBoundingClientRect().right > document.documentElement.clientWidth - 8) { menu.style.left = 'auto'; menu.style.right = '0'; }
+  }
+
+  function updateFacets(q) {
+    GROUPS.forEach(g => {
+      const counts = {};
+      candidates(q, g.key).forEach(h => g.get(h.t).forEach(v => { counts[v] = (counts[v] || 0) + 1; }));
+      g.opts.forEach(o => {
+        const el = optEls[g.key + '|' + o.v];
+        const c = counts[o.v] || 0;
+        const on = state[g.key].has(o.v);
+        const inp = el.querySelector('input');
+        inp.checked = on;
+        inp.disabled = c === 0 && !on;
+        el.classList.toggle('sf-zero', c === 0);
+        el.querySelector('.sf-count').textContent = c;
+      });
+      const n = state[g.key].size;
+      const badge = filters.querySelector('[data-sel="' + g.key + '"]');
+      badge.textContent = n;
+      badge.hidden = !n;
+      badge.parentElement.classList.toggle('sf-active', n > 0);
+    });
+  }
+
+  function updateToolbar(shown) {
+    document.getElementById('sfSummary').innerHTML =
+      'Showing <b>' + shown + '</b> of ' + data.names.length + ' names';
+    const chips = [];
+    GROUPS.forEach(g => state[g.key].forEach(v => {
+      const o = g.opts.find(x => x.v === v);
+      chips.push('<button type="button" class="sf-chip" data-group="' + esc(g.key) + '" data-value="' + esc(v) + '" title="Remove this filter">' +
+        esc(g.title + ': ' + (o ? o.label : v)) + ' ×</button>');
+    }));
+    document.getElementById('sfChips').innerHTML = chips.join('');
+  }
+
+  // ---------- validity colour-coding ----------
+  // key -> [legend label, border colour]; the colours themselves live in the CSS above
+  const VALIDITY = {
+    valid: 'Valid (accepted)', synonym: 'Synonym', variant: 'Variant spelling', combination: 'Previous combination',
+    homonym: 'Homonym', uncertain: 'Uncertain name (nomen dubium / nudum / unplaced)',
+    elsewhere: null                                   // filled in at load: "No longer in <genus>"
+  };
+  const validityLabel = k => k === 'elsewhere' ? 'No longer in ' + ((data.genus && data.genus.name) || 'the genus') : VALIDITY[k];
+  const VALIDITY_STATUS = { valid: 'valid', synonym: 'synonym', variant_spelling: 'variant', previous_combination: 'combination', homonym: 'homonym' };
+  // red: the accepted taxon sits in a different genus, i.e. the name is no longer a member of this genus
+  const validityOf = n => {
+    const acc = n.status === 'valid' ? n : (n.valid_id ? byId.get(n.valid_id) : null);
+    if (acc && data.genus && acc.genus !== data.genus.name) return 'elsewhere';
+    return VALIDITY_STATUS[n.status] || 'uncertain';
+  };
+  const COLOR_KEY = 'melissodes-species-index-colorcode-v1';
+  const colorOn = () => { try { return localStorage.getItem(COLOR_KEY) === '1'; } catch (e) { return false; } };
+  function applyColor(on) {
+    grid.classList.toggle('sf-color', on);
+    document.getElementById('sfLegend').hidden = !on;
+  }
+
+  // "Melissodes bimaculatus" -> "M. bimaculatus" on cards (same genus as the project genus only, so it is never ambiguous)
+  const shortName = n => n.subspecies ? dispName(n) : (data.genus && n.genus === data.genus.name) ? n.name.replace(/^(\S)\S*\s/, '$1. ') : n.name;
+
+  // what the 'matched' tag on a card says, by the kind of name that was matched
+  const matchLabel = syn =>
+    syn.status === 'variant_spelling' ? CARD('matched_variant', 'Matched variant spelling')
+    : syn.status !== 'valid' ? CARD('matched_synonym', 'Matched synonym')
+    : syn.subspecies ? CARD('matched_subspecies', 'Matched subspecies')
+    : CARD('matched_parent', 'Matched parent species');
+
+  // Every card is compact (name, authority, one line); all other details open in a pop-up on click
+  const cardHTML = h => {
+    const t = h.t, syn = h.syn;
+    const acc = (t.status !== 'valid' && t.valid_id) ? byId.get(t.valid_id) : null;
+    const line = t.status === 'valid'
+      ? esc(CARD('subgenus', 'Subgenus')) + ': ' + esc(subLabel(effSub(t)))
+      : acc ? esc(CARD('accepted_name', 'Accepted name')) + ': <i>' + esc(shortName(acc)) + '</i>'
+            : esc(CARD('status', 'Status')) + ': ' + esc(statusName(t.status));
+    return '<a href="#" class="sf-card-link" role="button" aria-haspopup="dialog" data-detail="' + esc(t.id) + '">' +
+      '<div class="species-card" data-validity="' + validityOf(t) + '" data-subgenus="' + esc(subLabel(effSub(t))) + '"><h3>' + esc(dispName(t)) + '</h3> <p>' + line + '</p>' +
+      (syn ? '<p><i>' + esc(matchLabel(syn)) + ': ' + esc(shortName(syn)) + '</i></p>' : '') +
+      '</div></a>';
+  };
+
+  // ---------- detail pop-up (all names) ----------
+  const modal = document.createElement('div');
+  modal.className = 'sf-modal-overlay';
+  modal.hidden = true;
+  modal.innerHTML = '<div class="sf-modal" role="dialog" aria-modal="true" aria-labelledby="sfModalTitle">' +
+    '<div class="sf-modal-img" id="sfModalImg"></div>' +
+    '<div class="sf-modal-main">' +
+    '<h2 class="sf-modal-title" id="sfModalTitle"></h2>' +
+    '<table class="sf-table"><tbody id="sfModalRows"></tbody></table>' +
+    '<div id="sfModalFlow"></div></div>' +
+    '<div class="sf-m-actions" id="sfModalActions"></div></div>';
+  document.body.appendChild(modal);
+  const modalTitle = modal.querySelector('#sfModalTitle');
+  const modalImg = modal.querySelector('#sfModalImg');
+  const modalRows = modal.querySelector('#sfModalRows');
+  const modalFlow = modal.querySelector('#sfModalFlow');
+  const modalActions = modal.querySelector('#sfModalActions');
+  let modalReturnFocus = null;
+  let curShortHtml = '', curLong = [];   // curLong: [label, valueHtml] for the rows that can wrap under the photo
+
+  // "Scroll for more" hint (phones / touch screens): while a pop-up is taller than the screen, its bottom edge fades to white
+  // with a small arrow. Once the reader has reached the bottom the hint is dropped and stays gone until the pop-up is opened again.
+  const hint = document.createElement('div');
+  hint.className = 'sf-scroll-hint';
+  hint.hidden = true;
+  hint.setAttribute('aria-hidden', 'true');
+  hint.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  modal.appendChild(hint);
+  let hintDone = false;
+  const isMobile = () => window.innerWidth <= 700 || (window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+  function updateHint() {
+    const box = modal.querySelector('.sf-modal');
+    if (modal.hidden || hintDone || !isMobile() || box.scrollHeight <= box.clientHeight + 4) { hint.hidden = true; return; }
+    if (box.scrollTop + box.clientHeight >= box.scrollHeight - 4) { hintDone = true; hint.hidden = true; return; }   // reached the bottom: never show again
+    const r = box.getBoundingClientRect();
+    hint.style.left = r.left + 'px';
+    hint.style.width = box.clientWidth + 'px';
+    hint.style.top = (r.bottom - 64) + 'px';
+    hint.hidden = false;
+  }
+  modal.querySelector('.sf-modal').addEventListener('scroll', updateHint, { passive: true });
+  const refit = () => { fitModal(); updateHint(); };
+
+  // With a photo, the details sit beside it. If they are taller than the photo (which leaves empty space under it),
+  // switch to the flow layout: the long rows wrap around the photo and then run full width underneath it.
+  function fitModal() {
+    const box = modal.querySelector('.sf-modal');
+    box.classList.remove('sf-split');
+    modalImg.style.marginBottom = '';
+    modalRows.innerHTML = curShortHtml + curLong.map(r => mRow(r[0], r[1])).join('');
+    modalFlow.innerHTML = '';
+    if (modal.hidden || !box.classList.contains('sf-has-img') || window.innerWidth <= 700 || !curLong.length) return;
+    const im = modalImg.querySelector('img');
+    if (im && !im.complete) return;                          // photo still loading; its load event calls this again
+    // details no taller than the photo: nothing to wrap, keep the side-by-side layout
+    if (modalRows.closest('.sf-modal-main').offsetHeight <= modalImg.offsetHeight + 8) return;
+    modalRows.innerHTML = curShortHtml;
+    modalFlow.innerHTML = curLong.map(r => '<div class="sf-flow"><span class="sf-flow-label">' + esc(r[0]) + '</span> ' + r[1] + '</div><div class="sf-flow-sep"></div>').join('');
+    box.classList.add('sf-split');
+    avoidOrphanLine();
+  }
+
+  // Text wraps around the photo, but a row must never leave just ONE line under it. If that would happen,
+  // lengthen the photo block by a line so the last line stays beside the photo (repeats in case that moves other rows).
+  function avoidOrphanLine() {
+    for (let pass = 0; pass < 4; pass++) {
+      const cs = getComputedStyle(modalImg);
+      const floatBottom = modalImg.getBoundingClientRect().bottom + parseFloat(cs.marginBottom);
+      let fix = 0;
+      for (const row of modalFlow.querySelectorAll('.sf-flow')) {
+        const r = row.getBoundingClientRect(), rs = getComputedStyle(row);
+        const lh = parseFloat(rs.lineHeight) || 22;
+        const top = r.top + parseFloat(rs.paddingTop), bottom = r.bottom - parseFloat(rs.paddingBottom);
+        const total = Math.round((bottom - top) / lh);
+        const beside = Math.min(total, Math.max(0, Math.ceil((floatBottom - top) / lh - 0.01)));
+        if (beside > 0 && total - beside === 1) { fix = top + (total - 1) * lh - floatBottom + 2; break; }
+      }
+      if (fix <= 0) break;
+      modalImg.style.marginBottom = (parseFloat(cs.marginBottom) + fix) + 'px';
+    }
+  }
+
+  const cap = x => x.charAt(0).toUpperCase() + x.slice(1);
+  const mRow = (label, html) => '<tr><th scope="row">' + esc(label) + '</th><td>' + html + '</td></tr>';
+
+  function openDetail(id, trigger) {
+    const t = byId.get(id);
+    if (!t) return;
+    const isValid = t.status === 'valid';
+    const acc = !isValid && t.valid_id ? byId.get(t.valid_id) : null;
+    const subs = kids.get(t.id) || [];
+    const au = authority(t);
+    const parentTxt = t.subspecies ? (t._parent ? withAuth(t._parent) : t.genus + ' ' + t.epithet) : '';
+    const pubSub = !isValid ? (t.subgenus ? subgenusName(t.subgenus) : 'None') : '';
+    const xfer = !isValid ? transferBy(t) : '';
+    const shown = isValid ? t : acc;                       // the taxon whose image is displayed
+    const subIds = new Set(subs.filter(x => x.status === 'valid').map(x => x.id));
+    const others = isValid ? data.names.filter(n => (n.valid_id === t.id || subIds.has(n.valid_id)) && !subs.includes(n)) : [];
+    const T = (DISP().transfer_labels || {});
+
+    modalImg.innerHTML = (shown && shown.image)
+      ? '<img src="' + esc(shown.image) + '" alt="' + esc(shown.name) + '" onerror="this.parentNode.hidden=true;this.closest(\'.sf-modal\').classList.remove(\'sf-has-img\')">' +
+        (shown.photo_credit ? '<div class="sf-modal-credit">Photo credit: ' + esc(shown.photo_credit) + '</div>' : '') : '';
+    modalImg.hidden = !modalImg.innerHTML;
+    modal.querySelector('.sf-modal').classList.toggle('sf-has-img', !modalImg.hidden);
+
+    modalTitle.innerHTML = '<i>' + esc(dispName(t)) + '</i>' + (au ? ' <span class="sf-auth">' + esc(au) + '</span>' : '');
+
+    let rows = mRow(CARD('status', 'Status'), esc(isValid ? statusLabel('valid') : cap(statusName(t.status))));
+    rows += mRow('Authority', au ? citeHTML(au, t.author_citation) : '<span class="sf-none">Not yet entered</span>');
+    if (t.common_name) rows += mRow('Common name', esc(t.common_name));
+    if (acc) rows += mRow(CARD('accepted_name', 'Accepted name'), '<a class="sf-xlink" href="#" data-open="' + esc(acc.id) + '" title="Show this species"><i>' + esc(withAuth(acc)) + '</i></a>');
+    if (xfer) rows += mRow(T[t.status] || T.default || 'Synonymized by', citeHTML(xfer, t.transfer_citation));
+    if (isValid) rows += mRow(CARD('subgenus', 'Subgenus'), esc(subLabel(effSub(t))));
+    else rows += mRow(CARD('published_subgenus', 'Assigned subgenus'), t.subgenus ? esc(pubSub) : '<span class="sf-none">None</span>');
+    if (parentTxt) rows += mRow(isValid ? CARD('subspecies_of', 'Subspecies of') : CARD('historical_subspecies_of', 'Originally described as a subspecies of'), '<i>' + (t._parent ? nameLink(t._parent) : esc(parentTxt)) + '</i>');
+    const long = [];   // long-content rows: wrap under the photo when the pop-up would scroll
+    const vk = subs.filter(x => x.status === 'valid'), ik = subs.filter(x => x.status !== 'valid');
+    // how a former subspecies name was treated, e.g. "Erroneously described as a subspecies of ...; raised to species rank by ... Now a synonym of ..."
+    const histOf = k => {
+      const a = k.valid_id ? byId.get(k.valid_id) : null;
+      const h = k.history ? cap(k.history) : 'Described as a subspecies of this species';
+      return esc(h.replace(/\.$/, '') + '.') + (a ? ' Now a ' + esc(statusName(k.status)) + ' of <i>' + esc(dispName(a)) + '</i>.' : '');
+    };
+    if (vk.length) long.push([CARD('subspecies', 'Subspecies'), vk.map(x => '<i>' + nameLink(x) + '</i>').join('; ')]);
+    if (ik.length) long.push([CARD('historical_subspecies', 'Subspecies names (not currently recognised)'), ik.map(x => '<span class="sf-hist"><i>' + nameLink(x) + '</i> — ' + histOf(x) + '</span>').join('')]);
+    if (others.length) long.push(['Synonyms & other names', others.map(n => '<i>' + nameLink(n) + '</i> <span class="sf-auth">(' + esc(statusName(n.status) + (n.valid_id !== t.id ? ' of ' + shortName(byId.get(n.valid_id)) : '')) + ')</span>').join('; ')]);
+    if (t.history) long.push(['History', esc(cap(t.history).replace(/\.$/, '') + '.')]);
+    // Type material: the statements are built from the holotype_* and paratypes_* fields in species.js
+    // (sex, count, locality, state, date, collector, repository, link) and are shown in their own Type material row;
+    // the Notes row is only the free-text notes. Notes may contain **bold** text, *italic* text, [link text](https://...) links and \n line breaks.
+    const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const fmtDate = d => { const m = /^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/.exec(d || ''); return !m ? (d || '') : [m[3] && +m[3], m[2] && MONTHS[+m[2] - 1], m[1]].filter(Boolean).join(' '); };
+    const joinAnd = a => a.length < 3 ? a.join(' and ') : a.slice(0, -1).join('; ') + ' and ' + a[a.length - 1];
+    const joinList = a => a.length < 3 ? a.join(' and ') : a.slice(0, -1).join(', ') + ', and ' + a[a.length - 1];   // Oxford comma, for places
+    // kinds: holotype, lectotype, allotype, paratypes, and paratypes2 (a second group of paratypes, e.g. the other sex)
+    const typeBlock = kind => {
+      const g = k => t[kind + '_' + k];
+      const isPara = kind.indexOf('paratypes') === 0;
+      const n = g('count'), many = isPara && n !== 1;
+      const label = isPara ? (many ? 'Paratypes' : 'Paratype') : cap(kind);
+      const who = [isPara && n > 1 ? n : '', g('sex') ? g('sex') + (many ? 's' : '') : ''].filter(Boolean).join(' ');
+      // the value "unknown" (as opposed to null = not entered) prints as "Date unknown" / "Collector unknown" / "Location unknown"
+      const date = g('date') === 'unknown' ? 'Date unknown' : fmtDate(g('date'));
+      const coll = g('collector') === 'unknown' ? 'Collector unknown' : g('collector');
+      // state may be a list (one per specimen); *_respectively adds ", respectively"
+      const states = [].concat(g('state') || []).filter(Boolean);
+      const place = states.length === 1 && states[0] === 'unknown' ? 'Location unknown'
+        : joinList(states) + (g('respectively') && states.length > 1 ? ', respectively' : '');
+      const where = [g('locality'), place, date, coll].filter(Boolean).join(', ');
+      const repos = [].concat(g('repository') || []).filter(Boolean);
+      const dep = repos.length ? 'deposited in the collection' + (repos.length > 1 ? 's' : '') + ' of ' + joinAnd(repos) + (g('number') ? ' (No. ' + g('number') + ')' : '') : '';
+      const body = [where, dep].filter(Boolean).join('; ');
+      const link = /^https?:\/\//.test(g('link') || '') ? ' <a class="sf-xlink" href="' + esc(g('link')) + '" target="_blank" rel="noopener noreferrer">View specimen</a>' : '';
+      if (!who && !body && !link) return '';
+      return '<b>' + label + '</b>' + (who ? ' (' + esc(who) + ')' : '') + (body ? ': ' + esc(body) + '.' : '') + link;
+    };
+    const noteHtml = t.notes ? esc(t.notes)
+      .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
+      .replace(/\*(.+?)\*/g, '<i>$1</i>')
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a class="sf-xlink" href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+      .replace(/\n/g, '<br>') : '';
+    const typeParts = ['holotype', 'lectotype', 'allotype', 'paratypes', 'paratypes2'].map(typeBlock).filter(Boolean);
+    if (typeParts.length) long.push([CARD('type_material', 'Type material'), typeParts.join('<br><br>')]);
+    if (noteHtml) long.push(['Notes', noteHtml]);
+    curShortHtml = rows;
+    curLong = long;
+
+    modalActions.innerHTML = (isValid
+      ? '<a class="sf-m-btn" href="' + esc(linkFor(t)) + '">View species page</a>'
+      : acc ? '<a class="sf-m-btn" href="' + esc(linkFor(t)) + '">View valid species page</a>' : '') +
+      '<button type="button" class="sf-modal-close">Close</button>';
+
+    modalReturnFocus = trigger || null;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    hintDone = false;
+    refit();
+    const im = modalImg.querySelector('img');
+    if (im && !im.complete) im.addEventListener('load', refit, { once: true });
+    modal.querySelector('.sf-modal-close').focus({ preventScroll: true });   // do not let focusing the Close button scroll the pop-up down
+    modal.querySelector('.sf-modal').scrollTop = 0;                          // always start at the top
+    updateHint();
+  }
+  function closeModal() {
+    if (modal.hidden) return;
+    modal.hidden = true;
+    hint.hidden = true;
+    document.body.style.overflow = '';
+    if (modalReturnFocus && document.contains(modalReturnFocus)) modalReturnFocus.focus();
+    modalReturnFocus = null;
+  }
+  window.addEventListener('resize', () => { if (!modal.hidden) refit(); });
+  modal.addEventListener('click', e => {
+    if (e.target === modal || e.target.closest('.sf-modal-close')) { closeModal(); return; }
+    const o = e.target.closest('[data-open]');
+    if (o) { e.preventDefault(); showTaxon(o.dataset.open); return; }
+    const l = e.target.closest('[data-jump]');
+    if (l) { e.preventDefault(); showTaxon(l.dataset.jump); }
+  });
+  // search for a name, then open its pop-up
+  function showTaxon(id) {
+    modalReturnFocus = null;
+    closeModal();
+    jumpTo(id);
+    openDetail(id, grid.querySelector('[data-detail="' + id + '"]'));
+  }
+  modal.addEventListener('keydown', e => {
+    const l = e.target.closest && e.target.closest('span[data-jump]');
+    if (l && e.key === 'Enter') { e.preventDefault(); showTaxon(l.dataset.jump); }
+  });
+
+  function render() {
+    clearBtn.hidden = !searchInput.value;
+    placeClear();
+    document.getElementById('parentWrap').style.display = subsShown() ? '' : 'none';   // the parent-species option only applies when subspecies are listed
+    const q = norm(searchInput.value);
+    const hits = [...candidates(q, null).values()].sort(SORTS[sortKey]);
+    grid.innerHTML = hits.map(cardHTML).join('\n') ||
+      '<p>No names match the current search and filters.</p>';
+    updateFacets(q);
+    updateToolbar(hits.length);
+  }
+
+  // ---------- init ----------
+  try { await loadTaxonomy(); } catch (e) { console.error('Could not load species data', e); grid.innerHTML = '<p>Could not load the species list.</p>'; return; }
+  defineGroups();
+  // Remember the person's filters between visits. First ever visit (nothing saved): the defaults from
+  // display.default_filters in species.js (valid names, species rank).
+  const FILTER_KEY = 'melissodes-species-index-filters-v1';
+  function loadSavedFilters() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(FILTER_KEY));
+      if (!saved || typeof saved !== 'object') return;
+      GROUPS.forEach(g => {
+        const vals = Array.isArray(saved[g.key]) ? saved[g.key] : [];
+        state[g.key] = new Set(vals.filter(v => g.opts.some(o => o.v === v)));   // ignore options that no longer exist
+      });
+    } catch (e) { /* storage blocked or unreadable: keep the defaults */ }
+  }
+  function saveFilters() {
+    try {
+      const out = {};
+      GROUPS.forEach(g => { out[g.key] = [...state[g.key]]; });
+      localStorage.setItem(FILTER_KEY, JSON.stringify(out));
+    } catch (e) { /* storage blocked: filters just won't be remembered */ }
+  }
+  loadSavedFilters();
+  buildPanel();
+  searchInput.value = new URLSearchParams(location.search).get('q') || '';
+
+  filters.addEventListener('change', e => {
+    const i = e.target;
+    if (!i.matches || !i.matches('input[data-group]')) return;
+    const set = state[i.dataset.group];
+    if (i.checked) set.add(i.value); else set.delete(i.value);
+    saveFilters();
+    render();
+  });
+  filters.addEventListener('click', e => {
+    const btn = e.target.closest('.sf-dd-btn');
+    if (btn) { toggleMenu(btn.parentElement); return; }
+    const pre = e.target.closest('[data-preset]');
+    if (pre) {
+      applyPreset(pre.dataset.preset);
+      if (pre.dataset.preset === 'reset') {          // "Reset all" also clears the search box (and any ?q= in the address bar)
+        searchInput.value = '';
+        try { const u = new URL(location.href); if (u.searchParams.has('q')) { u.searchParams.delete('q'); history.replaceState(null, '', u); } } catch (err) { /* leave the address as is */ }
+      }
+      saveFilters(); closeMenus(); render(); return;
+    }
+    const clr = e.target.closest('[data-clear]');
+    if (clr) { state[clr.dataset.clear] = new Set(); saveFilters(); render(); }
+  });
+  document.addEventListener('click', e => { if (!filters.contains(e.target)) closeMenus(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenus(); closeModal(); } });
+  toolbar.addEventListener('click', e => {
+    const c = e.target.closest('.sf-chip');
+    if (c) { state[c.dataset.group].delete(c.dataset.value); saveFilters(); render(); }
+  });
+  toolbar.addEventListener('change', e => {
+    if (e.target.id === 'sortSel') { sortKey = e.target.value; render(); }
+    if (e.target.id === 'parentToggle') {
+      showParents = e.target.checked;
+      try { localStorage.setItem(PARENT_KEY, showParents ? '1' : '0'); } catch (err) { /* not remembered */ }
+      render();
+    }
+    if (e.target.id === 'colorToggle') {
+      applyColor(e.target.checked);
+      try { localStorage.setItem(COLOR_KEY, e.target.checked ? '1' : '0'); } catch (err) { /* not remembered */ }
     }
   });
-}
-
-// Event listeners
-checkboxes.forEach(cb => cb.addEventListener('change', filterCards));
-searchInput.addEventListener('input', filterCards);
+  searchInput.addEventListener('input', render);
+  clearBtn.addEventListener('click', () => { searchInput.value = ''; render(); searchInput.focus(); });
+  window.addEventListener('resize', placeClear);
+  if (window.ResizeObserver) new ResizeObserver(placeClear).observe(searchInput);
+  // jump to another name: search for it and drop any filter that would hide it
+  function jumpTo(id) {
+    const rec = byId.get(id);
+    if (!rec) return;
+    GROUPS.forEach(g => { if (state[g.key].size && !g.get(rec).some(v => state[g.key].has(v))) state[g.key] = new Set(); });
+    searchInput.value = rec.name;
+    sortKey = 'relevance'; const ss = document.getElementById('sortSel'); if (ss) ss.value = 'relevance';
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  grid.addEventListener('click', e => {
+    const d = e.target.closest('[data-detail]');
+    if (d) { e.preventDefault(); openDetail(d.dataset.detail, d); return; }
+    const l = e.target.closest('[data-jump]');
+    if (l) { e.preventDefault(); e.stopPropagation(); jumpTo(l.dataset.jump); }
+  });
+  grid.addEventListener('keydown', e => {
+    const l = e.target.closest && e.target.closest('[data-jump]');
+    if (l && e.key === 'Enter') { e.preventDefault(); jumpTo(l.dataset.jump); }
+  });
+  render();
+})();
 </script>
 </body>
 </html>
