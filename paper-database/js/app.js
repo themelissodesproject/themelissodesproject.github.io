@@ -104,6 +104,10 @@ function textColorForBackground(hex) {
   return whiteContrast >= blackContrast ? "#ffffff" : "#000000";
 }
 
+// Lucide "external-link" icon (box with an arrow) — the same icon the species
+// index uses next to authority links. Marks a link that opens in a new tab.
+const EXT_ICON = '<svg class="ext-icon" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+
 // A topic's rank is its position in the paper's full topics array (sorted
 // percent descending), not its position in whatever subset is currently
 // being rendered — this is what keeps a topic's color consistent between
@@ -712,7 +716,7 @@ function renderCard(p) {
     a.href = p.legal_url;
     a.target = "_blank";
     a.rel = "noopener";
-    a.textContent = "View source ↗";
+    a.innerHTML = "View paper" + EXT_ICON;
     links.appendChild(a);
   }
   if (p.doi) {
@@ -801,6 +805,84 @@ function onModalKeydown(e) {
   if (e.key === "Escape") closeRecordModal();
 }
 
+// Plain-text citation for a paper, built only from the bibliographic facts in its record
+// (authors as printed, year, title as printed, journal, volume, pages, DOI or hosting link).
+function citationParts(p) {
+  const au = (p.authors || []).filter(Boolean);
+  const authors = au.length <= 1 ? (au[0] || "")
+    : au.length === 2 ? `${au[0]} & ${au[1]}`
+    : `${au.slice(0, -1).join(", ")}, & ${au[au.length - 1]}`;
+  let title = (p.title || "").trim();
+  if (title && !/[.!?]$/.test(title)) title += ".";
+  const pages = (p.pages || "").replace(/(\d)\s*-\s*(\d)/g, "$1–$2");
+  const url = p.doi ? `https://doi.org/${p.doi}` : (p.legal_url || "");
+  return { authors, year: p.year || "n.d.", title, journal: p.journal || "", volume: p.volume || "", pages, url };
+}
+
+function citationText(p) {
+  const c = citationParts(p);
+  const src = [c.journal, c.volume, c.pages].filter(Boolean).join(", ");
+  return [
+    c.authors ? `${c.authors} (${c.year}).` : `(${c.year}).`,
+    c.title,
+    src ? `${src}.` : "",
+    c.url,
+  ].filter(Boolean).join(" ");
+}
+
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+  return new Promise((resolve, reject) => {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { /* fall through */ }
+    ta.remove();
+    ok ? resolve() : reject(new Error("copy failed"));
+  });
+}
+
+function buildCitationBlock(p) {
+  const section = document.createElement("div");
+  section.className = "details-section cite-block";
+  const h4 = document.createElement("h4");
+  h4.textContent = "Cite this paper";
+  section.appendChild(h4);
+
+  const para = document.createElement("p");
+  para.className = "cite-text";
+  para.textContent = citationText(p);
+  section.appendChild(para);
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "cite-btn";
+  btn.textContent = "Copy citation";
+  let timer = null;
+  btn.addEventListener("click", () => {
+    copyText(citationText(p)).then(() => {
+      btn.textContent = "Copied!";
+    }).catch(() => {
+      // last resort: select the visible text so Ctrl/Cmd+C works
+      const r = document.createRange();
+      r.selectNodeContents(para);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(r);
+      btn.textContent = "Press Ctrl+C to copy";
+    }).finally(() => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { btn.textContent = "Copy citation"; }, 2200);
+    });
+  });
+  section.appendChild(btn);
+  return section;
+}
+
 function buildModalBody(p) {
   const frag = document.createDocumentFragment();
 
@@ -808,6 +890,29 @@ function buildModalBody(p) {
   byline.className = "card-byline";
   byline.textContent = `${(p.authors || []).join(", ")} (${p.year || "n.d."}) — ${p.journal || ""}`;
   frag.appendChild(byline);
+
+  // Links to the paper itself sit right under the byline so they are easy to find.
+  const links = document.createElement("div");
+  links.className = "card-links modal-links";
+  if (p.legal_url) {
+    const a = document.createElement("a");
+    a.href = p.legal_url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = "View paper" + EXT_ICON;
+    links.appendChild(a);
+  }
+  if (p.doi) {
+    const a = document.createElement("a");
+    a.href = `https://doi.org/${p.doi}`;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "DOI";
+    links.appendChild(a);
+  }
+  if (links.childNodes.length) frag.appendChild(links);
+
+  frag.appendChild(buildCitationBlock(p));
 
   // Full "overview" text (the project's own original analysis, never the
   // paper's abstract or any OCR'd text) — the card itself only shows the
@@ -850,10 +955,11 @@ function buildModalBody(p) {
   }
 
   if (p.species && p.species.length) {
-    const section = document.createElement("div");
-    section.className = "details-section";
-    const h4 = document.createElement("h4");
-    h4.textContent = "Species";
+    // Collapsible and closed by default: a paper can cover a long list of species.
+    const section = document.createElement("details");
+    section.className = "details-section details-collapsible";
+    const h4 = document.createElement("summary");
+    h4.textContent = `Species (${p.species.length})`;
     section.appendChild(h4);
     const row = document.createElement("div");
     row.className = "badge-row";
@@ -927,26 +1033,6 @@ function buildModalBody(p) {
     meta.textContent = metaBits.join(" · ");
     frag.appendChild(meta);
   }
-
-  const links = document.createElement("div");
-  links.className = "card-links";
-  if (p.legal_url) {
-    const a = document.createElement("a");
-    a.href = p.legal_url;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = "View source ↗";
-    links.appendChild(a);
-  }
-  if (p.doi) {
-    const a = document.createElement("a");
-    a.href = `https://doi.org/${p.doi}`;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = "DOI";
-    links.appendChild(a);
-  }
-  if (links.childNodes.length) frag.appendChild(links);
 
   return frag;
 }
