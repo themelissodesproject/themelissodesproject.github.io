@@ -753,8 +753,13 @@ function renderCard(p) {
   return card;
 }
 
+let modalReturnFocus = null;
+
+// The pop-up follows the same layout as the species index pop-up: title, a row of buttons,
+// a label/value table, and a dark Close button at the bottom.
 function openRecordModal(p) {
   closeRecordModal();
+  modalReturnFocus = document.activeElement;
 
   const overlay = document.createElement("div");
   overlay.className = "modal-overlay";
@@ -767,38 +772,36 @@ function openRecordModal(p) {
   modal.className = "modal";
   modal.setAttribute("role", "dialog");
   modal.setAttribute("aria-modal", "true");
-  modal.setAttribute("aria-label", p.title);
+  modal.setAttribute("aria-labelledby", "record-modal-title");
+  modal.appendChild(buildModalContent(p));
 
-  const header = document.createElement("div");
-  header.className = "modal-header";
-  const h2 = document.createElement("h2");
-  h2.className = "modal-title";
-  h2.textContent = p.title;
+  const bottom = document.createElement("div");
+  bottom.className = "m-actions m-actions-bottom";
   const closeBtn = document.createElement("button");
   closeBtn.type = "button";
   closeBtn.className = "modal-close";
-  closeBtn.setAttribute("aria-label", "Close");
-  closeBtn.textContent = "✕";
+  closeBtn.textContent = "Close";
   closeBtn.addEventListener("click", closeRecordModal);
-  header.appendChild(h2);
-  header.appendChild(closeBtn);
+  bottom.appendChild(closeBtn);
+  modal.appendChild(bottom);
 
-  const body = document.createElement("div");
-  body.className = "modal-body";
-  body.appendChild(buildModalBody(p));
-
-  modal.appendChild(header);
-  modal.appendChild(body);
   overlay.appendChild(modal);
   document.body.appendChild(overlay);
+  document.body.style.overflow = "hidden";
+  closeBtn.focus({ preventScroll: true });
+  modal.scrollTop = 0;
 
   document.addEventListener("keydown", onModalKeydown);
 }
 
 function closeRecordModal() {
   const overlay = document.getElementById("record-modal-overlay");
-  if (overlay) overlay.remove();
+  if (!overlay) return;
+  overlay.remove();
+  document.body.style.overflow = "";
   document.removeEventListener("keydown", onModalKeydown);
+  if (modalReturnFocus && document.contains(modalReturnFocus)) modalReturnFocus.focus({ preventScroll: true });
+  modalReturnFocus = null;
 }
 
 function onModalKeydown(e) {
@@ -846,21 +849,40 @@ function copyText(text) {
   });
 }
 
-function buildCitationBlock(p) {
-  const section = document.createElement("div");
-  section.className = "details-section cite-block";
-  const h4 = document.createElement("h4");
-  h4.textContent = "Cite this paper";
-  section.appendChild(h4);
+// A table row: label on the left, value (text or a DOM node) on the right.
+function modalRow(label, value) {
+  const tr = document.createElement("tr");
+  const th = document.createElement("th");
+  th.scope = "row";
+  th.textContent = label;
+  const td = document.createElement("td");
+  if (value instanceof Node) td.appendChild(value); else td.textContent = value;
+  tr.appendChild(th);
+  tr.appendChild(td);
+  return tr;
+}
 
+// A closed-by-default dropdown for long lists (species, associated organisms).
+function modalCollapsible(summaryText, content) {
+  const d = document.createElement("details");
+  d.className = "m-collapsible";
+  const sum = document.createElement("summary");
+  sum.textContent = summaryText;
+  d.appendChild(sum);
+  d.appendChild(content);
+  return d;
+}
+
+function modalCitationCell(p) {
+  const wrap = document.createElement("div");
   const para = document.createElement("p");
-  para.className = "cite-text";
+  para.className = "m-cite-text";
   para.textContent = citationText(p);
-  section.appendChild(para);
+  wrap.appendChild(para);
 
   const btn = document.createElement("button");
   btn.type = "button";
-  btn.className = "cite-btn";
+  btn.className = "m-btn m-btn-sm";
   btn.textContent = "Copy citation";
   let timer = null;
   btn.addEventListener("click", () => {
@@ -879,88 +901,73 @@ function buildCitationBlock(p) {
       timer = setTimeout(() => { btn.textContent = "Copy citation"; }, 2200);
     });
   });
-  section.appendChild(btn);
-  return section;
+  wrap.appendChild(btn);
+  return wrap;
 }
 
-function buildModalBody(p) {
+function buildModalContent(p) {
   const frag = document.createDocumentFragment();
 
-  const byline = document.createElement("p");
-  byline.className = "card-byline";
-  byline.textContent = `${(p.authors || []).join(", ")} (${p.year || "n.d."}) — ${p.journal || ""}`;
-  frag.appendChild(byline);
+  const h2 = document.createElement("h2");
+  h2.className = "modal-title";
+  h2.id = "record-modal-title";
+  h2.textContent = p.title;
+  frag.appendChild(h2);
 
-  // Links to the paper itself sit right under the byline so they are easy to find.
-  const links = document.createElement("div");
-  links.className = "card-links modal-links";
+  // Links to the paper itself sit right under the title so they are easy to find.
+  const actions = document.createElement("div");
+  actions.className = "m-actions";
   if (p.legal_url) {
     const a = document.createElement("a");
+    a.className = "m-btn";
     a.href = p.legal_url;
     a.target = "_blank";
     a.rel = "noopener";
     a.innerHTML = "View paper" + EXT_ICON;
-    links.appendChild(a);
+    actions.appendChild(a);
   }
   if (p.doi) {
     const a = document.createElement("a");
+    a.className = "m-btn";
     a.href = `https://doi.org/${p.doi}`;
     a.target = "_blank";
     a.rel = "noopener";
-    a.textContent = "DOI";
-    links.appendChild(a);
+    a.innerHTML = "DOI" + EXT_ICON;
+    actions.appendChild(a);
   }
-  if (links.childNodes.length) frag.appendChild(links);
+  if (actions.childNodes.length) frag.appendChild(actions);
 
-  frag.appendChild(buildCitationBlock(p));
+  const table = document.createElement("table");
+  table.className = "m-table";
+  const tbody = document.createElement("tbody");
+  table.appendChild(tbody);
+  const add = (label, value) => tbody.appendChild(modalRow(label, value));
 
-  // Full "overview" text (the project's own original analysis, never the
-  // paper's abstract or any OCR'd text) — the card itself only shows the
-  // first sentence as a teaser.
-  if (p.overview) {
-    const section = document.createElement("div");
-    section.className = "details-section";
-    const h4 = document.createElement("h4");
-    h4.textContent = "Overview";
-    const para = document.createElement("p");
-    para.textContent = p.overview;
-    section.appendChild(h4);
-    section.appendChild(para);
-    frag.appendChild(section);
-  }
+  if ((p.authors || []).length) add(p.authors.length > 1 ? "Authors" : "Author", p.authors.join("; "));
+  if (p.year) add("Year", String(p.year));
+  const c = citationParts(p);
+  const where = [c.journal, c.volume, c.pages].filter(Boolean).join(", ");
+  if (where) add("Published in", where);
 
-  // Every topic the paper is tagged with is listed here (unlike the card
-  // itself, which only shows the top few), using the same rank-based
-  // shading as the card via styleTopicChip.
+  add("Citation", modalCitationCell(p));
+
+  if (p.overview) add("Overview", p.overview);
+
+  // Every topic the paper is tagged with (the card shows only the top few), using the card's rank-based shading.
   const allTopics = p.topics || [];
-  if (allTopics.length) {
-    const section = document.createElement("div");
-    section.className = "details-section";
-    const h4 = document.createElement("h4");
-    h4.textContent = "Topics";
-    section.appendChild(h4);
-
-    const row = document.createElement("div");
-    row.className = "badge-row";
-    allTopics.forEach((pt, i) => {
-      const t = topicById.get(pt.id);
-      if (!t) return;
-      const b = document.createElement("span");
-      styleTopicChip(b, pt, i);
-      b.textContent = t.label;
-      row.appendChild(b);
-    });
-    section.appendChild(row);
-    frag.appendChild(section);
-  }
+  const topicRow = document.createElement("div");
+  topicRow.className = "badge-row";
+  allTopics.forEach((pt, i) => {
+    const t = topicById.get(pt.id);
+    if (!t) return;
+    const b = document.createElement("span");
+    styleTopicChip(b, pt, i);
+    b.textContent = t.label;
+    topicRow.appendChild(b);
+  });
+  if (topicRow.childNodes.length) add("Topics", topicRow);
 
   if (p.species && p.species.length) {
-    // Collapsible and closed by default: a paper can cover a long list of species.
-    const section = document.createElement("details");
-    section.className = "details-section details-collapsible";
-    const h4 = document.createElement("summary");
-    h4.textContent = `Species (${p.species.length})`;
-    section.appendChild(h4);
     const row = document.createElement("div");
     row.className = "badge-row";
     p.species.forEach(sp => {
@@ -972,21 +979,12 @@ function buildModalBody(p) {
       b.textContent = sp;
       row.appendChild(b);
     });
-    section.appendChild(row);
-    frag.appendChild(section);
+    add("Species", modalCollapsible(`${p.species.length} species`, row));
   }
 
-  // Only the paper's own real, printed keyword list is ever shown here.
-  // The database's internal search-matching terms ("search_keywords")
-  // are never displayed — they're not real keywords, just fuzzy-search
-  // bait, and showing them as if they were the paper's own would be
-  // misleading. See build.py / catalog.json.
+  // Only the paper's own printed keyword list is ever shown; the internal search-matching terms
+  // ("search_keywords") are never displayed (see build.py / catalog.json).
   if (p.author_keywords && p.author_keywords.length) {
-    const section = document.createElement("div");
-    section.className = "details-section";
-    const h4 = document.createElement("h4");
-    h4.textContent = "Keywords";
-    section.appendChild(h4);
     const row = document.createElement("div");
     row.className = "badge-row";
     p.author_keywords.forEach(kw => {
@@ -995,16 +993,10 @@ function buildModalBody(p) {
       b.textContent = kw;
       row.appendChild(b);
     });
-    section.appendChild(row);
-    frag.appendChild(section);
+    add("Keywords", row);
   }
 
   if (p.associated_organisms && p.associated_organisms.length) {
-    const section = document.createElement("div");
-    section.className = "details-section";
-    const h4 = document.createElement("h4");
-    h4.textContent = "Associated organisms";
-    section.appendChild(h4);
     const row = document.createElement("div");
     row.className = "badge-row";
     p.associated_organisms.forEach(org => {
@@ -1013,27 +1005,17 @@ function buildModalBody(p) {
       const name = document.createElement("em");
       name.textContent = org.name || "";
       b.appendChild(name);
-      if (org.relationship) {
-        b.appendChild(document.createTextNode(` — ${org.relationship}`));
-      }
+      if (org.relationship) b.appendChild(document.createTextNode(` — ${org.relationship}`));
       row.appendChild(b);
     });
-    section.appendChild(row);
-    frag.appendChild(section);
+    const n = p.associated_organisms.length;
+    add("Associated organisms", modalCollapsible(`${n} ${n === 1 ? "organism" : "organisms"}`, row));
   }
 
-  const metaBits = [];
-  if (p.volume) metaBits.push(`Vol. ${p.volume}`);
-  if (p.pages) metaBits.push(`pp. ${p.pages}`);
-  if (p.source_type) metaBits.push(SOURCE_LABELS[p.source_type] || p.source_type);
-  if (p.added_date) metaBits.push(`Added ${p.added_date}`);
-  if (metaBits.length) {
-    const meta = document.createElement("p");
-    meta.className = "details-meta";
-    meta.textContent = metaBits.join(" · ");
-    frag.appendChild(meta);
-  }
+  if (p.source_type) add("Source", SOURCE_LABELS[p.source_type] || p.source_type);
+  if (p.added_date) add("Added", p.added_date);
 
+  frag.appendChild(table);
   return frag;
 }
 
