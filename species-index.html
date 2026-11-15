@@ -95,6 +95,9 @@
     .sf-xlink:hover { color: #000; }
     .sf-table a.sf-xlink { color: inherit; }
     .sf-cite { text-decoration: underline; text-underline-offset: 2px; }
+    .sf-cite .sf-ext { margin-left: 3px; vertical-align: -1px; }
+    .sf-speclink { text-decoration: none; }
+    .sf-speclink .sf-ext { margin-left: 0; vertical-align: -2px; }
     .sf-auth { font-size: 0.8em; font-weight: normal; font-style: normal; color: #666; }
 
     /* Validity colour-coding (card border only) + toolbar toggle and key */
@@ -305,10 +308,12 @@
   const transferBy = n => [n.transfer_author, n.transfer_year].filter(Boolean).join(', ');
   // citation links: a paper-database id (author_citation / transfer_citation in species.js) makes the Authority / transfer text a link
   // to that paper's ENTRY in the Melissodes Project paper database (display.citations.url), never to the paper itself. No id, no link.
+  // Lucide "external-link" icon: marks links that open in a new tab (authority citations and specimen records)
+  const ICON_EXT = '<svg class="sf-ext" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
   const citeHTML = (text, id) => {
     const c = (DISP().citations || {});
     if (!id || !c.url) return esc(text);
-    return '<a class="sf-cite" href="' + esc(c.url.replace('{id}', encodeURIComponent(id))) + '" target="_blank" rel="noopener" title="' + esc(c.link_title || 'View this paper in the paper database') + '">' + esc(text) + '</a>';
+    return '<a class="sf-cite" href="' + esc(c.url.replace('{id}', encodeURIComponent(id))) + '" target="_blank" rel="noopener" title="' + esc(c.link_title || 'View this paper in the paper database') + '">' + esc(text) + ICON_EXT + '</a>';
   };
   // name including its subgenus, e.g. Melissodes (Callimelissodes) metenua
   // display name: subspecies are abbreviated, e.g. Melissodes communis communis -> M. c. communis (genus spelled out if it is not the project genus)
@@ -733,7 +738,7 @@
       const repos = [].concat(g('repository') || []).filter(Boolean);
       const dep = repos.length ? 'deposited in the collection' + (repos.length > 1 ? 's' : '') + ' of ' + joinAnd(repos) + (g('number') ? ' (No. ' + g('number') + ')' : '') : '';
       const body = [where, dep].filter(Boolean).join('; ');
-      const link = /^https?:\/\//.test(g('link') || '') ? ' <a class="sf-xlink" href="' + esc(g('link')) + '" target="_blank" rel="noopener noreferrer">View specimen</a>' : '';
+      const link = /^https?:\/\//.test(g('link') || '') ? ' <a class="sf-xlink sf-speclink" href="' + esc(g('link')) + '" target="_blank" rel="noopener noreferrer" title="Open the specimen record in a new tab" aria-label="Specimen record (opens in a new tab)">' + ICON_EXT + '</a>' : '';
       if (!who && !body && !link) return '';
       return '<b>' + label + '</b>' + (who ? ' (' + esc(who) + ')' : '') + (body ? ': ' + esc(body) + '.' : '') + link;
     };
