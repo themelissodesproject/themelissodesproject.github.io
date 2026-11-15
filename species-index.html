@@ -822,12 +822,10 @@
     const l = e.target.closest('[data-jump]');
     if (l) { e.preventDefault(); showTaxon(l.dataset.jump); }
   });
-  // search for a name, then open its pop-up
+  // open another name's pop-up from inside this one (synonym, accepted name, subspecies...). The search box, filters and
+  // sort are left untouched, and the pop-up simply swaps in place, so closing it returns to the page exactly as it was.
   function showTaxon(id) {
-    modalReturnFocus = null;
-    closeModal();
-    jumpTo(id);
-    openDetail(id, grid.querySelector('[data-detail="' + id + '"]'));
+    openDetail(id, modalReturnFocus);
   }
   modal.addEventListener('keydown', e => {
     const l = e.target.closest && e.target.closest('span[data-jump]');
