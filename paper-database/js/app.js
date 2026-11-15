@@ -754,9 +754,10 @@ function renderCard(p) {
 }
 
 let modalReturnFocus = null;
+let recordResizeHandler = null;
 
-// The pop-up follows the same layout as the species index pop-up: title, overview, topics,
-// a label/value grid, the citation box, and a bottom row with View paper next to the dark Close button.
+// The pop-up follows the same layout as the species index pop-up: title, overview, topics, a label/value
+// grid, the citation box, and a bottom row with View paper / DOI next to the dark Close button.
 function openRecordModal(p) {
   closeRecordModal();
   modalReturnFocus = document.activeElement;
@@ -809,7 +810,51 @@ function openRecordModal(p) {
   closeBtn.focus({ preventScroll: true });
   modal.scrollTop = 0;
 
+  // Phones / touch screens: while the pop-up is taller than the screen, its bottom edge fades to white
+  // with a small down arrow (same as the species index). The hint is dropped once the reader reaches
+  // the bottom and stays gone until the pop-up is opened again.
+  const hint = document.createElement("div");
+  hint.className = "m-scroll-hint";
+  hint.hidden = true;
+  hint.setAttribute("aria-hidden", "true");
+  hint.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  overlay.appendChild(hint);
+  let hintDone = false;
+  const isMobile = () => window.innerWidth <= 700 || (window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
+  const updateHint = () => {
+    if (hintDone || !isMobile() || modal.scrollHeight <= modal.clientHeight + 4) { hint.hidden = true; return; }
+    if (modal.scrollTop + modal.clientHeight >= modal.scrollHeight - 4) { hintDone = true; hint.hidden = true; return; }
+    const r = modal.getBoundingClientRect();
+    hint.style.left = r.left + "px";
+    hint.style.width = modal.clientWidth + "px";
+    hint.style.top = (r.bottom - 64) + "px";
+    hint.hidden = false;
+  };
+  modal.addEventListener("scroll", updateHint, { passive: true });
+  modal.addEventListener("toggle", updateHint, true);   // expanding Species / Organisms makes it taller
+
+  recordResizeHandler = () => { fitRecordModal(modal); updateHint(); };
+  window.addEventListener("resize", recordResizeHandler);
+  recordResizeHandler();
+
   document.addEventListener("keydown", onModalKeydown);
+}
+
+// Computer view: size the pop-up to its content. It starts narrow and widens until everything fits
+// without scrolling (up to a cap), so short records get a slim pop-up and long ones a wider one.
+// Species / Associated organisms start collapsed, so opening them afterwards can make it scroll.
+// On phones the width is left to the CSS (full width, single column).
+function fitRecordModal(modal) {
+  if (window.innerWidth <= 700) { modal.style.width = ""; modal.style.maxWidth = ""; return; }
+  const MIN = 460, STEP = 20;
+  const max = Math.min(1000, window.innerWidth - 32);
+  let w = Math.min(MIN, max);
+  modal.style.maxWidth = "none";
+  modal.style.width = w + "px";
+  while (w < max && modal.scrollHeight > modal.clientHeight + 1) {
+    w = Math.min(w + STEP, max);
+    modal.style.width = w + "px";
+  }
 }
 
 function closeRecordModal() {
@@ -818,6 +863,7 @@ function closeRecordModal() {
   overlay.remove();
   document.body.style.overflow = "";
   document.removeEventListener("keydown", onModalKeydown);
+  if (recordResizeHandler) { window.removeEventListener("resize", recordResizeHandler); recordResizeHandler = null; }
   if (modalReturnFocus && document.contains(modalReturnFocus)) modalReturnFocus.focus({ preventScroll: true });
   modalReturnFocus = null;
 }
@@ -887,9 +933,6 @@ function modalCitationBox(p) {
   const text = citationText(p);
   const box = document.createElement("div");
   box.className = "m-cite";
-  box.setAttribute("role", "button");
-  box.tabIndex = 0;
-  box.setAttribute("aria-label", "Copy citation");
 
   const label = document.createElement("div");
   label.className = "m-label";
@@ -897,6 +940,9 @@ function modalCitationBox(p) {
 
   const wrap = document.createElement("div");
   wrap.className = "m-cite-box";
+  wrap.tabIndex = 0;
+  wrap.setAttribute("role", "button");
+  wrap.setAttribute("aria-label", "Copy citation");
   const body = document.createElement("div");
   body.className = "m-cite-text";
   body.textContent = text;
@@ -906,7 +952,6 @@ function modalCitationBox(p) {
   overlay.textContent = "Copy";
   wrap.appendChild(body);
   wrap.appendChild(overlay);
-
   box.appendChild(label);
   box.appendChild(wrap);
 
@@ -929,10 +974,6 @@ function modalCitationBox(p) {
   wrap.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); doCopy(); }
   });
-  wrap.tabIndex = 0;
-  wrap.setAttribute("role", "button");
-  wrap.setAttribute("aria-label", "Copy citation");
-  box.removeAttribute("role"); box.removeAttribute("tabindex"); box.removeAttribute("aria-label");
   return box;
 }
 
