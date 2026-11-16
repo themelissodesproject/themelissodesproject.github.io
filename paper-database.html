@@ -541,18 +541,15 @@
   }
   .details-toggle:hover { background: #F3F4F5; color: #222; }
 
-  .show-more-btn {
-    align-self: flex-start;
-    margin-top: 0.6rem;
-    font-size: 0.8rem;
-    background: none;
-    border: 1px solid #ccc;
-    color: #333;
-    border-radius: 6px;
-    padding: 0.35rem 0.75rem;
-    cursor: pointer;
+  /* Whole card opens the pop-up; on hover it lifts up, like the species cards */
+  .card-clickable { cursor: pointer; }
+  .card-clickable:focus-visible { outline: 2px solid #333; outline-offset: 2px; }
+  .card-clickable a { cursor: pointer; }
+  @media (hover: hover) {
+    .card-clickable { transition: transform 0.18s ease, box-shadow 0.18s ease, margin 0.2s ease, width 0.2s ease, padding 0.2s ease; }
+    .card-clickable:hover { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0,0,0,0.16); }
   }
-  .show-more-btn:hover { background: #F3F4F5; }
+  @media (prefers-reduced-motion: reduce) { .card-clickable:hover { transform: none; } }
 
   /* Pop-up: same look as the species index pop-up (dark backdrop, centered white box,
      title, buttons, label/value table, dark Close button) */
