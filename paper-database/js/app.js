@@ -807,8 +807,9 @@ function openRecordModal(p) {
   closeBtn.focus({ preventScroll: true });
   modal.scrollTop = 0;
 
-  // Phones / touch screens: while the pop-up is taller than the screen, its bottom edge fades to white
-  // with a small down arrow (same as the species index). The hint is dropped once the reader reaches
+  // Any screen size: while the pop-up is taller than the screen (always on phones; on computers once it
+  // is as wide as it gets and still needs scrolling), its bottom edge fades to white with a small down
+  // arrow (same as the species index). The hint is dropped once the reader reaches
   // the bottom and stays gone until the pop-up is opened again.
   const hint = document.createElement("div");
   hint.className = "m-scroll-hint";
@@ -817,9 +818,8 @@ function openRecordModal(p) {
   hint.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
   overlay.appendChild(hint);
   let hintDone = false;
-  const isMobile = () => window.innerWidth <= 700 || (window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
   const updateHint = () => {
-    if (hintDone || !isMobile() || modal.scrollHeight <= modal.clientHeight + 4) { hint.hidden = true; return; }
+    if (hintDone || modal.scrollHeight <= modal.clientHeight + 4) { hint.hidden = true; return; }
     if (modal.scrollTop + modal.clientHeight >= modal.scrollHeight - 4) { hintDone = true; hint.hidden = true; return; }
     const r = modal.getBoundingClientRect();
     hint.style.left = r.left + "px";
