@@ -889,47 +889,6 @@
     "added_date": ""
   },
   {
-    "id": "cockerell-1926",
-    "title": "SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES",
-    "authors": [
-      "Cockerell, T. D. A."
-    ],
-    "year": 1926,
-    "journal": "The Pan-Pacific Entomologist",
-    "volume": "3(2)",
-    "pages": "80-90",
-    "doi": "",
-    "citation": "Cockerell, T. D. A. (1926). SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES. The Pan-Pacific Entomologist, 3(2), 80\u201390. https://www.biodiversitylibrary.org/page/53396041",
-    "legal_url": "https://www.biodiversitylibrary.org/page/53396041",
-    "source_type": "BHL",
-    "topics": [
-      {
-        "id": "taxonomy",
-        "percent": 33.3
-      },
-      {
-        "id": "morphology",
-        "percent": 33.3
-      },
-      {
-        "id": "distribution",
-        "percent": 33.3
-      }
-    ],
-    "species": [
-      "Melissodes ablusus"
-    ],
-    "associated_organisms": [
-      {
-        "name": "Asteraceae (composites)",
-        "relationship": "forage plant"
-      }
-    ],
-    "overview": "Describes the female of Melissodes ablusus from Millbrae, California (type and seven paratypes, collected 1 September 1912), noting its ferruginous flagellum, variable thoracic hair and creamy-white hairs on the hind basitarsi and tibiae. The author treats it as a slightly modified form of Melissodes metenua from Oregon, and notes that the mouth parts are typical of Melissodes and that the bees had collected light orange pollen, apparently from Asteraceae (composites).",
-    "author_keywords": [],
-    "added_date": ""
-  },
-  {
     "id": "turner-1908",
     "title": "THE SUN-DANCE OF MELISSODES.",
     "authors": [
@@ -1045,6 +1004,47 @@
     ],
     "associated_organisms": [],
     "overview": "Gives female and/or male descriptions of 49 Melissodes species, from Melissodes caliginosa through Melissodes bombiformis, each with body length, locality, collector and number of specimens, drawn mainly from Colorado, Georgia, Texas, California and Mexico. Many entries compare the species with similar Melissodes, such as Melissodes californica with Melissodes edwardsii and Melissodes frater and Melissodes lepida with Melissodes honesta. A note after Melissodes australis says that species and those following it look intermediate between Melissodes and Anthophora (flower bees), based on male antennae and forewing venation.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "cockerell-1926",
+    "title": "SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES",
+    "authors": [
+      "Cockerell, T. D. A."
+    ],
+    "year": 1926,
+    "journal": "The Pan-Pacific Entomologist",
+    "volume": "3(2)",
+    "pages": "80-90",
+    "doi": "",
+    "citation": "Cockerell, T. D. A. (1926). SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES. The Pan-Pacific Entomologist, 3(2), 80\u201390.",
+    "legal_url": "https://www.biodiversitylibrary.org/page/53396041",
+    "source_type": "BHL",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 33.3
+      },
+      {
+        "id": "morphology",
+        "percent": 33.3
+      },
+      {
+        "id": "distribution",
+        "percent": 33.3
+      }
+    ],
+    "species": [
+      "Melissodes ablusus"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Asteraceae (composites)",
+        "relationship": "forage plant"
+      }
+    ],
+    "overview": "Describes the female of Melissodes ablusus from Millbrae, California (type and seven paratypes, collected 1 September 1912), noting its ferruginous flagellum, variable thoracic hair and creamy-white hairs on the hind basitarsi and tibiae. The author treats it as a slightly modified form of Melissodes metenua from Oregon, and notes that the mouth parts are typical of Melissodes and that the bees had collected light orange pollen, apparently from Asteraceae (composites).",
     "author_keywords": [],
     "added_date": ""
   }
