@@ -115,18 +115,6 @@
     padding: 20px;
   }
 
-  /* Computers: the search header sticks the instant the nav bar has scrolled away (top: 0),
-     and the filters stick directly beneath it (see .drawer). Cards scroll underneath. */
-  @media (min-width: 46.01rem) {
-    .page-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: #fff;
-      border-bottom: 1.5px solid #F3F4F5;
-    }
-  }
-
   .tagline {
     max-width: 40rem;
     margin: 0 0 1rem;
@@ -193,8 +181,7 @@
   @media (min-width: 46.01rem) {
     .drawer {
       position: sticky;
-      top: calc(var(--header-h, 0px) + 1.25rem);
-      z-index: 10;
+      top: 1.25rem;
       align-self: start;
 
     }
@@ -506,20 +493,16 @@
     white-space: nowrap;
   }
 
+  /* All topic pills share one color: the same as the Close button (#333). */
   .topic-chip {
     font-size: 0.75rem;
     font-weight: 600;
-    color: #222;
-    background: #F3F4F5;
-    border: 1px solid #ddd;
+    color: #fff;
+    background: #333;
+    border: 1px solid #333;
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
-    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
-
-  /* Background, border, and text color are all set inline by
-     styleTopicChip in app.js, keyed to the topic's rank on
-     TOPIC_SHADE_SCALE (the same scale the topic bar's segments use). */
 
   .keyword-chip {
     font-size: 0.72rem;
