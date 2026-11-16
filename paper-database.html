@@ -115,6 +115,18 @@
     padding: 20px;
   }
 
+  /* Computers: the search header sticks the instant the nav bar has scrolled away (top: 0),
+     and the filters stick directly beneath it (see .drawer). Cards scroll underneath. */
+  @media (min-width: 46.01rem) {
+    .page-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #fff;
+      border-bottom: 1.5px solid #F3F4F5;
+    }
+  }
+
   .tagline {
     max-width: 40rem;
     margin: 0 0 1rem;
@@ -181,7 +193,8 @@
   @media (min-width: 46.01rem) {
     .drawer {
       position: sticky;
-      top: 1.25rem;
+      top: calc(var(--header-h, 0px) + 1.25rem);
+      z-index: 10;
       align-self: start;
 
     }
