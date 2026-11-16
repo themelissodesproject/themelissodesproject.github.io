@@ -1116,5 +1116,46 @@
       "melissodes collectors and specimen localities",
       "melissodes australis forewing venation"
     ]
+  },
+  {
+    "id": "cockerell-1926",
+    "title": "SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES",
+    "authors": [
+      "Cockerell, T. D. A."
+    ],
+    "year": 1926,
+    "journal": "The Pan-Pacific Entomologist",
+    "volume": "3(2)",
+    "pages": "80-90",
+    "citation": "Cockerell, T. D. A. (1926). SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES. The Pan-Pacific Entomologist, 3(2), 80–90.",
+    "doi": "",
+    "legal_url": "",
+    "source_type": "other",
+    "added_date": "",
+    "topics": [
+      "taxonomy",
+      "morphology",
+      "distribution"
+    ],
+    "species": [
+      "Melissodes ablusus"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Asteraceae (composites)",
+        "relationship": "forage plant"
+      }
+    ],
+    "author_keywords": [],
+    "search_keywords": [
+      "Melissodes ablusus original description",
+      "Melissodes ablusus female morphology",
+      "Melissodes ablusus type locality Millbrae California",
+      "Melissodes ablusus paratypes California Academy of Sciences",
+      "Melissodes ablusus relationship to Melissodes metenua",
+      "Melissodes ablusus mouth parts paraglossae maxillary palpi",
+      "Melissodes ablusus Asteraceae (composites) pollen collection"
+    ],
+    "overview": "Describes the female of Melissodes ablusus from Millbrae, California (type and seven paratypes, collected 1 September 1912), noting its ferruginous flagellum, variable thoracic hair and creamy-white hairs on the hind basitarsi and tibiae. The author treats it as a slightly modified form of Melissodes metenua from Oregon, and notes that the mouth parts are typical of Melissodes and that the bees had collected light orange pollen, apparently from Asteraceae (composites)."
   }
 ]
