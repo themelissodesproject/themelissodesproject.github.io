@@ -724,7 +724,7 @@ function renderCard(p) {
     a.href = `https://doi.org/${p.doi}`;
     a.target = "_blank";
     a.rel = "noopener";
-    a.textContent = "DOI";
+    a.innerHTML = "DOI" + EXT_ICON;
     links.appendChild(a);
   }
   card.appendChild(links);
@@ -1134,5 +1134,18 @@ function firstSentence(text, maxLen = 220) {
   sentence = sentence.replace(/[.!?…]+$/, "").replace(/\s+$/, "");
   return sentence + "…";
 }
+
+// Sticky layout (computers): the search header sticks to the very top of the screen the moment the nav bar
+// scrolls out of view, and the filters stick right underneath it. The filters need to know how tall the
+// header is, so that height is published as a CSS variable and kept up to date as the header reflows.
+(function syncStickyOffset() {
+  const header = document.querySelector(".page-header");
+  const page = document.querySelector(".page");
+  if (!header || !page) return;
+  const sync = () => page.style.setProperty("--header-h", header.offsetHeight + "px");
+  sync();
+  if (window.ResizeObserver) new ResizeObserver(sync).observe(header);
+  window.addEventListener("resize", sync);
+})();
 
 init();
