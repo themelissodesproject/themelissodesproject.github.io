@@ -940,15 +940,15 @@
     "topics": [
       {
         "id": "taxonomy",
-        "percent": 97.0
+        "percent": 33.3
       },
       {
         "id": "morphology",
-        "percent": 97.0
+        "percent": 33.3
       },
       {
         "id": "distribution",
-        "percent": 3.0
+        "percent": 33.3
       }
     ],
     "species": [
@@ -1003,7 +1003,7 @@
       "Melissodes bombiformis"
     ],
     "associated_organisms": [],
-    "overview": "The Melissodes portion of this paper gives separate female and male descriptions of 49 species, each with body length, collection localities and collectors, and in many cases comparisons with similar species; this includes Melissodes agilis, Melissodes communis and Melissodes aurigenia. The author notes that the last group of Melissodes described seem intermediate between Melissodes and Anthophora, based on antennal length in males and wing venation.",
+    "overview": "Gives female and/or male descriptions of 49 Melissodes species, from Melissodes caliginosa through Melissodes bombiformis, each with body length, locality, collector and number of specimens, drawn mainly from Colorado, Georgia, Texas, California and Mexico. Many entries compare the species with similar Melissodes, such as Melissodes californica with Melissodes edwardsii and Melissodes frater and Melissodes lepida with Melissodes honesta. A note after Melissodes australis says that species and those following it look intermediate between Melissodes and Anthophora (flower bees), based on male antennae and forewing venation.",
     "author_keywords": [],
     "added_date": ""
   }

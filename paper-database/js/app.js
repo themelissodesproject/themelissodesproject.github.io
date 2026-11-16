@@ -119,14 +119,9 @@ function topicRankMap(p) {
   return map;
 }
 
-function styleTopicChip(el, pt, rank) {
-  // No percentages are stored or shown anywhere; a chip's shade comes only
-  // from its rank (position in the paper's topic list, most central first).
-  const shade = shadeForRank(rank || 0);
+function styleTopicChip(el) {
+  // Every topic pill is the same color (the Close button's #333, set in CSS) — no per-rank shading.
   el.className = "topic-chip";
-  el.style.background = shade;
-  el.style.borderColor = shade;
-  el.style.color = "#ffffff";
 }
 
 async function init() {
@@ -1134,18 +1129,5 @@ function firstSentence(text, maxLen = 220) {
   sentence = sentence.replace(/[.!?…]+$/, "").replace(/\s+$/, "");
   return sentence + "…";
 }
-
-// Sticky layout (computers): the search header sticks to the very top of the screen the moment the nav bar
-// scrolls out of view, and the filters stick right underneath it. The filters need to know how tall the
-// header is, so that height is published as a CSS variable and kept up to date as the header reflows.
-(function syncStickyOffset() {
-  const header = document.querySelector(".page-header");
-  const page = document.querySelector(".page");
-  if (!header || !page) return;
-  const sync = () => page.style.setProperty("--header-h", header.offsetHeight + "px");
-  sync();
-  if (window.ResizeObserver) new ResizeObserver(sync).observe(header);
-  window.addEventListener("resize", sync);
-})();
 
 init();

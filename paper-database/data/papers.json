@@ -1044,18 +1044,9 @@
     "source_type": "BHL",
     "added_date": "",
     "topics": [
-      {
-        "id": "taxonomy",
-        "percent": 97
-      },
-      {
-        "id": "morphology",
-        "percent": 97
-      },
-      {
-        "id": "distribution",
-        "percent": 3
-      }
+      "taxonomy",
+      "morphology",
+      "distribution"
     ],
     "species": [
       "Melissodes caliginosa",
@@ -1110,18 +1101,20 @@
     ],
     "associated_organisms": [],
     "author_keywords": [],
-    "overview": "The Melissodes portion of this paper gives separate female and male descriptions of 49 species, each with body length, collection localities and collectors, and in many cases comparisons with similar species; this includes Melissodes agilis, Melissodes communis and Melissodes aurigenia. The author notes that the last group of Melissodes described seem intermediate between Melissodes and Anthophora, based on antennal length in males and wing venation.",
+    "overview": "Gives female and/or male descriptions of 49 Melissodes species, from Melissodes caliginosa through Melissodes bombiformis, each with body length, locality, collector and number of specimens, drawn mainly from Colorado, Georgia, Texas, California and Mexico. Many entries compare the species with similar Melissodes, such as Melissodes californica with Melissodes edwardsii and Melissodes frater and Melissodes lepida with Melissodes honesta. A note after Melissodes australis says that species and those following it look intermediate between Melissodes and Anthophora (flower bees), based on male antennae and forewing venation.",
     "search_keywords": [
-      "Melissodes agilis description Texas",
-      "Melissodes communis description Georgia and Illinois",
-      "Melissodes aurigenia description",
-      "Melissodes species described from Colorado, Texas, Georgia and California",
-      "Melissodes male and female morphological descriptions",
-      "Melissodes pubescence color and abdominal banding",
-      "Melissodes male antennae and leg structure",
-      "Melissodes intermediate between Melissodes and Anthophora",
-      "Melissodes Sumichrast Mexico species",
-      "Melissodes Morrison and Belfrage collecting localities"
+      "melissodes species descriptions",
+      "melissodes female and male morphological descriptions",
+      "melissodes species described from colorado, georgia and texas",
+      "melissodes species described from california and mexico",
+      "melissodes comparisons with similar species",
+      "melissodes pubescence color and abdominal banding",
+      "melissodes aurigenia locality records",
+      "melissodes sumichrasti mexico specimens",
+      "melissodes male antennae and leg structure",
+      "melissodes intermediate between melissodes and anthophora",
+      "melissodes collectors and specimen localities",
+      "melissodes australis forewing venation"
     ]
   }
 ]
