@@ -729,26 +729,23 @@ function renderCard(p) {
   }
   card.appendChild(links);
 
-  // A "Show more" button opens a full modal window with the complete
-  // overview, species, real keywords, and every associated organism —
-  // kept out of the card itself so a heavily-tagged record (e.g. a broad
-  // taxonomic revision with 100+ associated organisms) never bloats the
-  // results list. The modal scrolls internally, so nothing in it needs
-  // its own separate truncation.
-  const hasMore = (p.author_keywords && p.author_keywords.length)
-    || (p.associated_organisms && p.associated_organisms.length)
-    || (p.species && p.species.length)
-    || p.volume || p.pages || p.source_type || p.added_date
-    || (p.overview && p.overview.trim().length > summary.length);
-
-  if (hasMore) {
-    const moreBtn = document.createElement("button");
-    moreBtn.type = "button";
-    moreBtn.className = "show-more-btn";
-    moreBtn.textContent = "Show more";
-    moreBtn.addEventListener("click", () => openRecordModal(p));
-    card.appendChild(moreBtn);
-  }
+  // The whole card opens the full record pop-up (complete overview, species, real keywords, associated
+  // organisms, citation), which keeps heavily-tagged records from bloating the results list. Clicks on
+  // the "View paper" / "DOI" links (or any other link or button in the card) keep their own behavior.
+  card.classList.add("card-clickable");
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-haspopup", "dialog");
+  card.addEventListener("click", (e) => {
+    if (e.target.closest("a, button")) return;
+    const sel = window.getSelection && window.getSelection();
+    if (sel && sel.toString().trim()) return;   // the reader is selecting text, not opening the card
+    openRecordModal(p);
+  });
+  card.addEventListener("keydown", (e) => {
+    if (e.target !== card) return;
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openRecordModal(p); }
+  });
 
   return card;
 }
