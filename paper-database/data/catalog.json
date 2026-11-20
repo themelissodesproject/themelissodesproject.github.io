@@ -1098,5 +1098,47 @@
     "overview": "Gives female and/or male descriptions of 49 Melissodes species, from Melissodes caliginosa through Melissodes bombiformis, each with body length, locality, collector and number of specimens, drawn mainly from Colorado, Georgia, Texas, California and Mexico. Many entries compare the species with similar Melissodes, such as Melissodes californica with Melissodes edwardsii and Melissodes frater and Melissodes lepida with Melissodes honesta. A note after Melissodes australis says that species and those following it look intermediate between Melissodes and Anthophora (flower bees), based on male antennae and forewing venation.",
     "author_keywords": [],
     "added_date": ""
+  },
+  {
+    "id": "latreille-1825",
+    "title": "Macroc\u00e8re, Macrocera",
+    "authors": [
+      "Latreille, P. A.",
+      "Le Peletier de Saint-Fargeau, A. L. M.",
+      "Serville, J. G. A.",
+      "Gu\u00e9rin, F. E."
+    ],
+    "year": 1825,
+    "journal": "Encyclop\u00e9die m\u00e9thodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustac\u00e9s, des arachnides et des insectes",
+    "volume": "10",
+    "pages": "527\u2013528",
+    "doi": "",
+    "citation": "Latreille, P. A., Le Peletier de Saint-Fargeau, A. L. M., Serville, J. G. A., & Gu\u00e9rin, F. E. (1825). Macroc\u00e8re, Macrocera. Encyclop\u00e9die m\u00e9thodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustac\u00e9s, des arachnides et des insectes, 10, 527\u2013528.",
+    "legal_url": "",
+    "source_type": "BHL",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 33.3
+      },
+      {
+        "id": "morphology",
+        "percent": 33.3
+      },
+      {
+        "id": "distribution",
+        "percent": 33.3
+      }
+    ],
+    "species": [
+      "Melissodes bimaculatus"
+    ],
+    "taxon_ids": [
+      "melissodes-bimaculatus"
+    ],
+    "associated_organisms": [],
+    "overview": "Gives the French-language genus account of Macrocera, with a Latin diagnosis and French description of the female of Melissodes bimaculatus (referred to as Macrocera bimaculata), covering its black pubescence, the interrupted white hair band on abdominal segment 4, reddish hairs on the hind tibiae and tarsi, and brownish, slightly violet wings. The specimen is recorded as sent from Philadelphia to the Cabinet du Roi by M. Lesueur.",
+    "author_keywords": [],
+    "added_date": ""
   }
 ]
