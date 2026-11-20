@@ -1,10 +1,32 @@
 import json
 import hashlib
 import re
+import sys
 from pathlib import Path
 
 PKG = Path(__file__).resolve().parent.parent
 DATA = PKG / "data"
+
+# The Melissodes Project taxonomy (single source of truth for names).
+# Adjust if species.js lives somewhere else in the repo.
+SPECIES_JS_CANDIDATES = [
+    PKG.parent / "api" / "species.js",
+    PKG / "api" / "species.js",
+    PKG.parent / "species.js",
+]
+
+# TAXON IDS (how papers refer to species)
+# ---------------------------------------
+# papers.json never stores a species NAME. Each entry in a paper's "species"
+# list is the id of a record in species.js ("names"), exactly the name as the
+# paper used it, e.g. "melissodes-aurigenia" (a synonym) or "melissodes-agilis".
+# At build time every id is resolved through species.js (valid_id, followed to
+# the end of the chain) to the currently accepted taxon, and ONLY the accepted
+# name is written to catalog.json / species.json / search-index.json. When the
+# taxonomy changes, edit species.js and re-run this script: no paper changes.
+# Names that cannot be resolved to an accepted name (unknown id, nomen dubium,
+# nomen nudum, unplaced, broken chain) are left out of the display and listed
+# in the build report; "python build.py --strict" turns them into an error.
 
 # NOTE: This build intentionally never reads or embeds any part of a
 # paper's original text (no OCR, no verbatim abstract). Any personal OCR
@@ -89,7 +111,49 @@ def slugify(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
+def load_taxa():
+    """Read api/species.js (window.SPECIES_DATA = {...};) -> {id: record}."""
+    path = next((p for p in SPECIES_JS_CANDIDATES if p.exists()), None)
+    if path is None:
+        raise SystemExit("species.js not found; looked in: "
+                         + ", ".join(str(p) for p in SPECIES_JS_CANDIDATES))
+    text = path.read_text(encoding="utf-8")
+    start, end = text.index("{"), text.rindex("}") + 1
+    data = json.loads(text[start:end])
+    taxa = {}
+    for rec in data["names"]:
+        if rec["id"] in taxa:
+            raise SystemExit(f"Duplicate taxon id in species.js: {rec['id']}")
+        taxa[rec["id"]] = rec
+    return taxa
+
+
+def resolve_taxon(tid, taxa):
+    """Follow valid_id links to the accepted taxon.
+    Returns (accepted_record, None) or (None, reason)."""
+    seen = []
+    cur = tid
+    while True:
+        rec = taxa.get(cur)
+        if rec is None:
+            return None, ("unknown taxon id (not in species.js)" if not seen
+                          else f"valid_id points to missing id {cur}")
+        if rec["status"] == "valid":
+            return rec, None
+        if cur in seen:
+            return None, "valid_id loop"
+        seen.append(cur)
+        if not rec.get("valid_id"):
+            return None, f"status '{rec['status']}' has no accepted name"
+        cur = rec["valid_id"]
+        if len(seen) > 10:
+            return None, "valid_id chain too long"
+
+
 def build():
+    strict = "--strict" in sys.argv
+    taxa = load_taxa()
+    unresolved = {}   # taxon id -> (reason, [paper ids])
     papers = json.loads((DATA / "papers.json").read_text(encoding="utf-8"))
     topics = json.loads((DATA / "topics.json").read_text(encoding="utf-8"))
     topic_by_id = {t["id"]: t for t in topics}
@@ -108,8 +172,22 @@ def build():
         if not p.get("citation"):
             print(f"  warning: {pid} has no \"citation\" in papers.json")
 
-        for sp in p.get("species", []):
-            all_species[sp] = species_color(sp)
+        # Resolve every stored taxon id to its currently accepted taxon.
+        accepted = []        # accepted records, in paper order, de-duplicated
+        as_published = []    # names exactly as the paper used them (search only)
+        for tid in p.get("species", []):
+            rec, why = resolve_taxon(tid, taxa)
+            if rec is None:
+                unresolved.setdefault(tid, (why, []))[1].append(pid)
+                continue
+            if taxa[tid]["name"] != rec["name"]:
+                as_published.append(taxa[tid]["name"])
+            if all(a["id"] != rec["id"] for a in accepted):
+                accepted.append(rec)
+                all_species[rec["id"]] = {"id": rec["id"], "name": rec["name"],
+                                          "color": species_color(rec["id"])}
+        species_names = [r["name"] for r in accepted]
+        species_ids = [r["id"] for r in accepted]
 
         topic_labels = [topic_by_id[t["id"]]["label"] for t in normalize_topics(p.get("topics", [])) if t["id"] in topic_by_id]
 
@@ -137,7 +215,9 @@ def build():
                 (t for t in normalize_topics(p.get("topics", [])) if t["id"] in topic_by_id),
                 key=lambda t: -t["percent"],
             ),
-            "species": p.get("species", []),
+            # Accepted names only (resolved via species.js), never synonyms.
+            "species": species_names,
+            "taxon_ids": species_ids,
             "associated_organisms": p.get("associated_organisms", []),
             "overview": p.get("overview", ""),
             # Real, paper-printed keywords only — shown to readers as-is.
@@ -149,7 +229,6 @@ def build():
             "added_date": p.get("added_date", ""),
         })
 
-        species_names = p.get("species", [])
         search_keywords = p.get("search_keywords", [])
         author_keywords = p.get("author_keywords", [])
         organism_terms = []
@@ -160,7 +239,7 @@ def build():
                 organism_terms.append(org["relationship"])
         # search_keywords go into the index for matching but are never
         # exposed via catalog.json/the UI (see docstring above).
-        metadata_terms = species_names + topic_labels + search_keywords + author_keywords + organism_terms
+        metadata_terms = species_names + as_published + topic_labels + search_keywords + author_keywords + organism_terms
         metadata_search_text = ", ".join(metadata_terms)
         overview = p.get("overview", "")
 
@@ -177,10 +256,19 @@ def build():
     (DATA / "catalog.json").write_text(
         json.dumps(catalog, indent=2), encoding="utf-8")
     (DATA / "species.json").write_text(
-        json.dumps([{"name": k, "color": v} for k, v in sorted(all_species.items())], indent=2),
+        json.dumps(sorted(all_species.values(), key=lambda s: s["name"]), indent=2),
         encoding="utf-8")
     (DATA / "search-index.json").write_text(
         json.dumps(search_index, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    if unresolved:
+        print(f"\n  {len(unresolved)} taxon id(s) could not be resolved to an accepted name "
+              "and were left out of the display:")
+        for tid, (why, pids) in sorted(unresolved.items()):
+            print(f"    {tid}: {why}  [{', '.join(pids)}]")
+        print()
+        if strict:
+            raise SystemExit("Unresolved taxa (--strict).")
 
     print(f"Built {len(papers)} records, {len(all_species)} species, {len(topics)} topics.")
 

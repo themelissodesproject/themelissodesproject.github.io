@@ -35,8 +35,10 @@
       }
     ],
     "species": [
-      "Melissodes tintinnans",
-      "Melissodes rufithorax"
+      "Melissodes tintinnans"
+    ],
+    "taxon_ids": [
+      "melissodes-tintinnans"
     ],
     "associated_organisms": [],
     "overview": "This paper reports the pollen foraging preferences of Melissodes (Ecplectica) tintinnans and M. (Ecplectica) rufithorax in a commercial sunflower field and its field margins near Carlos Casares, Buenos Aires Province, Argentina, based on scopal and body-hair pollen load analysis over a full growing season. It shows both species rely heavily on Helianthus annuus pollen during bloom but shift to Bidens sp. and Baccharis sp. after bloom, classifying M. tintinnans as eclectic oligolectic and M. rufithorax as broadly oligolectic on Asteraceae, and highlights the role of hedgerow trees (Ligustrum, Eucalyptus) and field-margin vegetation in sustaining these populations as potential sunflower pollinators.",
@@ -73,6 +75,9 @@
     ],
     "species": [
       "Melissodes agilis"
+    ],
+    "taxon_ids": [
+      "melissodes-agilis"
     ],
     "associated_organisms": [],
     "overview": "This field study at Logan, Utah compares pollination efficiency of native bees versus honey bees on sunflower, finding Melissodes agilis (both sexes) to be the most effective and most faithful pollinator across all sterile/fertile line combinations, producing far more seeds per visit than Apis mellifera and carrying substantially more pollen (up to ~104,500 grains per female) than any other bee group studied.",
@@ -114,6 +119,9 @@
     ],
     "species": [
       "Melissodes floris"
+    ],
+    "taxon_ids": [
+      "melissodes-floris"
     ],
     "associated_organisms": [
       {
@@ -173,22 +181,8 @@
         "percent": 2.0
       }
     ],
-    "species": [
-      "Melissodes cressonii",
-      "Melissodes minima",
-      "Melissodes atripes",
-      "Melissodes albocollaris",
-      "Melissodes grandissima",
-      "Melissodes aegis",
-      "Melissodes comanche",
-      "Melissodes machaerantherae",
-      "Melissodes helianthelli",
-      "Melissodes nitida",
-      "Melissodes obliqua",
-      "Melissodes texana",
-      "Melissodes petulca",
-      "Melissodes sabinensis"
-    ],
+    "species": [],
+    "taxon_ids": [],
     "associated_organisms": [
       {
         "name": "Euphorbia marginata",
@@ -878,6 +872,9 @@
     "species": [
       "Melissodes menuachus"
     ],
+    "taxon_ids": [
+      "melissodes-menuachus"
+    ],
     "associated_organisms": [
       {
         "name": "Triepeolus occidentalis",
@@ -919,6 +916,9 @@
     "species": [
       "Melissodes ablusus"
     ],
+    "taxon_ids": [
+      "melissodes-ablusus"
+    ],
     "associated_organisms": [
       {
         "name": "Asteraceae (composites)",
@@ -954,6 +954,7 @@
       }
     ],
     "species": [],
+    "taxon_ids": [],
     "associated_organisms": [
       {
         "name": "Nomadidae",
@@ -961,6 +962,93 @@
       }
     ],
     "overview": "This 1908 field note describes a male mating aggregation display ('sun-dance') observed at a Melissodes nesting site in Augusta, Georgia, in which yellow-clypeus males repeatedly chase, dodge, and grapple with black-clypeus females returning to their burrows carrying pollen loads, which Turner interprets as a 'nuptial ambuscade' facilitating copulation. It also notes Nomadidae (cuckoo bees), a cleptoparasitic bee family, loitering near Melissodes burrows waiting to oviposit on the bees' stored pollen provisions.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "lovell-and-cockerell-1906",
+    "title": "Notes on the Bees of Southern Maine: Anthophoridae, Halictoididae, Macropidae and Panurgidae",
+    "authors": [
+      "Lovell, J. H.",
+      "Cockerell, T. D. A."
+    ],
+    "year": 1906,
+    "journal": "Psyche",
+    "volume": "13",
+    "pages": "109-113",
+    "doi": "10.1155/1906/82926",
+    "citation": "Lovell, J. H., & Cockerell, T. D. A. (1906). Notes on the Bees of Southern Maine: Anthophoridae, Halictoididae, Macropidae and Panurgidae. Psyche, 13, 109\u2013113. https://doi.org/10.1155/1906/82926",
+    "legal_url": "",
+    "source_type": "other",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 20.0
+      },
+      {
+        "id": "morphology",
+        "percent": 20.0
+      },
+      {
+        "id": "distribution",
+        "percent": 20.0
+      },
+      {
+        "id": "pollination",
+        "percent": 20.0
+      },
+      {
+        "id": "ecology",
+        "percent": 20.0
+      }
+    ],
+    "species": [
+      "Melissodes illatus",
+      "Melissodes apicatus",
+      "Melissodes desponsus",
+      "Melissodes agilis",
+      "Melissodes vernoniae",
+      "Melissodes manipularis"
+    ],
+    "taxon_ids": [
+      "melissodes-illatus",
+      "melissodes-apicatus",
+      "melissodes-desponsus",
+      "melissodes-agilis",
+      "melissodes-vernoniae",
+      "melissodes-manipularis"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Carduus odoratus (pasture thistle)",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Carduus arvensis (Canada thistle)",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Helianthus (garden sunflower)",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Solidago (goldenrod)",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Pontederia cordata",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Inula helenium",
+        "relationship": "forage plant"
+      },
+      {
+        "name": "Epilobium angustifolium",
+        "relationship": "forage plant"
+      }
+    ],
+    "overview": "Reports the five Melissodes taken at Waldoboro, southern Maine, including Melissodes desponsus, Melissodes agilis (with a partial gynandromorph male), Melissodes illatus and Melissodes apicatus, giving flight dates, flower records and diagnostic notes. Melissodes illatus and Melissodes apicatus are described as new species (n. sp.) and compared with Melissodes vernoniae, Melissodes manipularis and other Melissodes, and an alternative name proposed by Robertson for the bee treated as Melissodes desponsus is noted. Recorded forage plants include Carduus odoratus (pasture thistle) and Carduus arvensis (Canada thistle) for M. desponsus, Helianthus (garden sunflower) for M. agilis, Solidago (goldenrod), Inula helenium and Epilobium angustifolium for M. illatus, and Pontederia cordata for M. apicatus.",
     "author_keywords": [],
     "added_date": ""
   },
@@ -993,55 +1081,18 @@
       }
     ],
     "species": [
-      "Melissodes caliginosa",
-      "Melissodes morosa",
-      "Melissodes montezuma",
-      "Melissodes dubitata",
-      "Melissodes nigrifrons",
-      "Melissodes edwardsii",
-      "Melissodes californica",
-      "Melissodes fulvitarsis",
-      "Melissodes frater",
-      "Melissodes lepida",
-      "Melissodes speciosa",
-      "Melissodes dilecta",
-      "Melissodes compta",
-      "Melissodes georgica",
       "Melissodes coloradensis",
-      "Melissodes petulca",
-      "Melissodes montana",
-      "Melissodes suffusa",
-      "Melissodes fimbriata",
       "Melissodes agilis",
       "Melissodes communis",
-      "Melissodes confusa",
-      "Melissodes perplexa",
-      "Melissodes condigna",
-      "Melissodes stretchii",
-      "Melissodes actuosa",
-      "Melissodes donata",
-      "Melissodes trifasciata",
-      "Melissodes albilabris",
-      "Melissodes otomita",
-      "Melissodes tepida",
-      "Melissodes suavis",
-      "Melissodes lupina",
       "Melissodes snowii",
-      "Melissodes tepaneca",
-      "Melissodes aurigenia",
-      "Melissodes fulvohirta",
-      "Melissodes exquisita",
-      "Melissodes strenua",
-      "Melissodes australis",
-      "Melissodes diminuta",
-      "Melissodes olivacea",
-      "Melissodes pinguis",
-      "Melissodes afflicta",
-      "Melissodes apacha",
-      "Melissodes sumichrasti",
-      "Melissodes bituberculata",
-      "Melissodes toluca",
-      "Melissodes bombiformis"
+      "Melissodes tepaneca"
+    ],
+    "taxon_ids": [
+      "melissodes-coloradensis",
+      "melissodes-agilis",
+      "melissodes-communis",
+      "melissodes-snowii",
+      "melissodes-tepaneca"
     ],
     "associated_organisms": [],
     "overview": "Gives female and/or male descriptions of 49 Melissodes species, from Melissodes caliginosa through Melissodes bombiformis, each with body length, locality, collector and number of specimens, drawn mainly from Colorado, Georgia, Texas, California and Mexico. Many entries compare the species with similar Melissodes, such as Melissodes californica with Melissodes edwardsii and Melissodes frater and Melissodes lepida with Melissodes honesta. A note after Melissodes australis says that species and those following it look intermediate between Melissodes and Anthophora (flower bees), based on male antennae and forewing venation.",
