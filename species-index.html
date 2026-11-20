@@ -776,9 +776,12 @@
       const repos = [].concat(g('repository') || []).filter(Boolean);
       const dep = repos.length ? 'deposited in the collection' + (repos.length > 1 ? 's' : '') + ' of ' + joinAnd(repos) + (g('number') ? ' (No. ' + g('number') + ')' : '') : '';
       const body = [where, dep].filter(Boolean).join('; ');
-      const link = /^https?:\/\//.test(g('link') || '') ? ' <a class="sf-xlink sf-speclink" href="' + esc(g('link')) + '" target="_blank" rel="noopener noreferrer" title="Open the specimen record in a new tab" aria-label="Specimen record (opens in a new tab)">' + ICON_EXT + '</a>' : '';
-      if (!who && !body && !link) return '';
-      return '<b>' + label + '</b>' + (who ? ' (' + esc(who) + ')' : '') + (body ? ': ' + esc(body) + '.' : '') + link;
+      // a specimen record link makes the WHOLE statement a link (like the Authority citation): no underline at rest,
+      // underline on hover/focus, with the external-link icon at the end; no link, no <a>
+      const href = /^https?:\/\//.test(g('link') || '') ? g('link') : '';
+      if (!who && !body && !href) return '';
+      const text = '<b>' + label + '</b>' + (who ? ' (' + esc(who) + ')' : '') + (body ? ': ' + esc(body) + '.' : '');
+      return href ? '<a class="sf-cite sf-typelink" href="' + esc(href) + '" target="_blank" rel="noopener noreferrer" title="Open the specimen record in a new tab" aria-label="' + esc(label) + ' specimen record (opens in a new tab)">' + text + ICON_EXT + '</a>' : text;
     };
     const noteHtml = t.notes ? esc(t.notes)
       .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
