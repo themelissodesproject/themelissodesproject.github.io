@@ -866,13 +866,13 @@ function openRecordModal(p) {
   document.addEventListener("keydown", onModalKeydown);
 }
 
-// Computer view: size the pop-up to its content. It starts narrow and widens until everything fits
-// without scrolling (up to a cap), so short records get a slim pop-up and long ones a wider one.
+// Computer view: size the pop-up to its content. It starts at the species-index pop-up width (600px) and widens until everything fits
+// without scrolling (up to a cap), so every pop-up is at least that wide and long ones get wider.
 // Species / Associated organisms start collapsed, so opening them afterwards can make it scroll.
 // On phones the width is left to the CSS (full width, single column).
 function fitRecordModal(modal) {
   if (window.innerWidth <= 700) { modal.style.width = ""; modal.style.maxWidth = ""; return; }
-  const MIN = 460, STEP = 20;
+  const MIN = 600, STEP = 20;   // 600px = the species index pop-up width (.sf-modal)
   const max = Math.min(1000, window.innerWidth - 32);
   let w = Math.min(MIN, max);
   modal.style.maxWidth = "none";
