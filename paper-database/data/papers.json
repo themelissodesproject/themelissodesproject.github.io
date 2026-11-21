@@ -1243,8 +1243,9 @@
     ]
   },
   {
-  "id": "latreille-1825",
-  "title": "Macrocère, Macrocera",
+  "id": "latreille-et-al-1825",
+  "record_type": "encyclopedia",
+  "title": "Encyclopédie méthodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustacés, des arachnides et des insectes",
   "authors": [
     "Latreille, P. A.",
     "Le Peletier de Saint-Fargeau, A. L. M.",
@@ -1252,16 +1253,23 @@
     "Guérin, F. E."
   ],
   "year": 1825,
-  "journal": "Encyclopédie méthodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustacés, des arachnides et des insectes",
+  "journal": "",
+  "publisher": "Mme veuve Agasse, Paris",
   "volume": "10",
-  "pages": "527–528",
+  "pages": "",
   "doi": "",
-  "citation": "Latreille, P. A., Le Peletier de Saint-Fargeau, A. L. M., Serville, J. G. A., & Guérin, F. E. (1825). Macrocère, Macrocera. Encyclopédie méthodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustacés, des arachnides et des insectes, 10, 527–528.",
-  "legal_url": "",
+  "citation": "Latreille, P. A., Le Peletier de Saint-Fargeau, A. L. M., Serville, J. G. A., & Guérin, F. E. (1825). Encyclopédie méthodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustacés, des arachnides et des insectes (Vol. 10). Mme veuve Agasse. https://www.biodiversitylibrary.org/item/155986#page/9/mode/1up",
+  "legal_url": "https://www.biodiversitylibrary.org/item/155986#page/9/mode/1up",
   "source_type": "BHL",
   "added_date": "",
   "topics": ["taxonomy", "morphology", "distribution"],
-  "species": ["macrocera-bimaculata"],
+  "species": [
+    "melissodes-bimaculatus",
+    "melissodes-bimaculatus-bimaculatus",
+    "macrocera-bimaculata",
+    "melissodes-bimaculata",
+    "melissodes-bimaculata-bimaculata"
+  ],
   "associated_organisms": [],
   "author_keywords": [],
   "search_keywords": [
@@ -1278,6 +1286,6 @@
     "Macrocera genus characters",
     "Macrocera genus diagnosis Apiaires"
   ],
-  "overview": "Gives the French-language genus account of Macrocera, with a Latin diagnosis and French description of the female of Melissodes bimaculatus (referred to as Macrocera bimaculata), covering its black pubescence, the interrupted white hair band on abdominal segment 4, reddish hairs on the hind tibiae and tarsi, and brownish, slightly violet wings. The specimen is recorded as sent from Philadelphia to the Cabinet du Roi by M. Lesueur."
+  "overview": "Volume 10 of the Encyclopédie méthodique entomology series. It includes the French-language genus account of Macrocera, with a Latin diagnosis and French description of the female of Melissodes bimaculatus (referred to as Macrocera bimaculata), covering its black pubescence, the interrupted white hair band on abdominal segment 4, reddish hairs on the hind tibiae and tarsi, and brownish, slightly violet wings. The specimen is recorded as sent from Philadelphia to the Cabinet du Roi by M. Lesueur."
 }
 ]

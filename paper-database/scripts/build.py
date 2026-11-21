@@ -197,10 +197,18 @@ def build():
 
         catalog.append({
             "id": pid,
+            # "article" (default), "book", "encyclopedia", "chapter", "thesis",
+            # "report", "other". "title" is always the work itself (the
+            # book/encyclopedia/article); "entry_title" names the entry or
+            # chapter inside a larger work, when the record is about one.
+            "record_type": p.get("record_type", "article"),
             "title": p["title"],
+            "entry_title": p.get("entry_title", ""),
             "authors": p.get("authors", []),
+            "editors": p.get("editors", []),
             "year": p.get("year"),
             "journal": p.get("journal", ""),
+            "publisher": p.get("publisher", ""),
             "volume": p.get("volume", ""),
             "pages": p.get("pages", ""),
             "doi": p.get("doi", ""),
@@ -239,7 +247,8 @@ def build():
                 organism_terms.append(org["relationship"])
         # search_keywords go into the index for matching but are never
         # exposed via catalog.json/the UI (see docstring above).
-        metadata_terms = species_names + as_published + topic_labels + search_keywords + author_keywords + organism_terms
+        type_terms = [] if p.get("record_type", "article") == "article" else [p["record_type"], p.get("entry_title", "")]
+        metadata_terms = species_names + as_published + topic_labels + search_keywords + author_keywords + organism_terms + [t for t in type_terms if t]
         metadata_search_text = ", ".join(metadata_terms)
         overview = p.get("overview", "")
 

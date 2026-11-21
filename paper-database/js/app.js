@@ -104,6 +104,33 @@ function textColorForBackground(hex) {
   return whiteContrast >= blackContrast ? "#ffffff" : "#000000";
 }
 
+// Records are not only journal papers. "record_type" (default "article") says what kind of source a
+// record is; "title" is always the work itself, and "entry_title" (optional) is the entry/chapter
+// inside it, e.g. an encyclopedia article. Books and other non-journal sources use "publisher" where
+// articles use "journal".
+const RECORD_TYPE_LABELS = {
+  article: "Journal article",
+  book: "Book",
+  encyclopedia: "Encyclopedia entry",
+  chapter: "Book chapter",
+  thesis: "Thesis",
+  report: "Report",
+  other: "Other source",
+};
+
+function recordTypeLabel(p) {
+  return RECORD_TYPE_LABELS[p.record_type || "article"] || RECORD_TYPE_LABELS.other;
+}
+
+function isArticle(p) {
+  return !p.record_type || p.record_type === "article";
+}
+
+// Where the work appeared: the journal for articles, the publisher for everything else.
+function sourceLine(p) {
+  return (isArticle(p) ? p.journal : (p.publisher || p.journal)) || "";
+}
+
 // Lucide "external-link" icon (box with an arrow) — the same icon the species
 // index uses next to authority links. Marks a link that opens in a new tab.
 const EXT_ICON = '<svg class="ext-icon" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
@@ -672,9 +699,16 @@ function renderCard(p) {
 
   card.appendChild(top);
 
+  if (!isArticle(p)) {
+    const kind = document.createElement("p");
+    kind.className = "card-kind";
+    kind.textContent = p.entry_title ? `${recordTypeLabel(p)}: ${p.entry_title}` : recordTypeLabel(p);
+    card.appendChild(kind);
+  }
+
   const byline = document.createElement("p");
   byline.className = "card-byline";
-  byline.textContent = `${(p.authors || []).join(", ")} (${p.year || "n.d."}) — ${p.journal || ""}`;
+  byline.textContent = `${(p.authors || []).join(", ")} (${p.year || "n.d."}) — ${sourceLine(p)}`;
   card.appendChild(byline);
 
   if (p.topics && p.topics.length) {
@@ -883,10 +917,12 @@ function citationText(p) {
   // a fallback for a record that has no "citation" field.
   if (p.citation && p.citation.trim()) return p.citation.trim();
   const c = citationParts(p);
-  const src = [c.journal, c.volume, c.pages].filter(Boolean).join(", ");
+  const src = [c.journal || p.publisher, c.volume, c.pages].filter(Boolean).join(", ");
+  const inWork = p.entry_title ? `In ${(p.editors || []).length ? (p.editors.join(", ") + ", ") : ""}${c.title}` : "";
   return [
     c.authors ? `${c.authors} (${c.year}).` : `(${c.year}).`,
-    c.title,
+    p.entry_title ? (/[.!?]$/.test(p.entry_title) ? p.entry_title : p.entry_title + ".") : "",
+    p.entry_title ? inWork : c.title,
     src ? `${src}.` : "",
     c.url,
   ].filter(Boolean).join(" ");
@@ -998,6 +1034,13 @@ function buildModalContent(p) {
   h2.textContent = p.title;
   frag.appendChild(h2);
 
+  if (!isArticle(p)) {
+    const kind = document.createElement("p");
+    kind.className = "modal-kind";
+    kind.textContent = p.entry_title ? `${recordTypeLabel(p)}: ${p.entry_title}` : recordTypeLabel(p);
+    frag.appendChild(kind);
+  }
+
   // Overview sits above the details grid.
   if (p.overview) {
     const ov = document.createElement("div");
@@ -1033,7 +1076,7 @@ function buildModalContent(p) {
   const au = p.authors || [];
   grid.appendChild(modalField(au.length > 1 ? "Authors" : "Author", au.join("; ")));
   grid.appendChild(modalField("Year", p.year ? String(p.year) : ""));
-  grid.appendChild(modalField("Journal", c.journal));
+  grid.appendChild(modalField(isArticle(p) ? "Journal" : "Publisher", sourceLine(p)));
   grid.appendChild(modalField("Page range", c.pages));
   grid.appendChild(modalField("Volume", c.volume));
   grid.appendChild(modalField("Source", p.source_type ? (SOURCE_SHORT[p.source_type] || p.source_type) : ""));
