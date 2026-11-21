@@ -182,9 +182,16 @@
       if (t.rank === 'subspecies') { t = parentSpecies(t); if (!t) continue; }
       if (subs && subs.length && !subs.includes(t.subgenus)) continue;
       const prev = hits.get(t.id);
-      if (!prev || s > prev.s) hits.set(t.id, { t, s, syn: (n !== t && !common && !(n.rank === 'subspecies' && n.status === 'valid')) ? n : null });
+      // Keep the best match per species: higher score, then a valid name over a synonym/variant spelling
+      // (so "melissodes lup" shows M. lupinus itself), then the shorter matched name.
+      const v = n.status === 'valid' ? 1 : 0;
+      if (!prev || s > prev.s || (s === prev.s && (v > prev.v || (v === prev.v && n._name.length < prev.m.length))))
+        hits.set(t.id, { t, s, v, m: n._name, syn: (n !== t && !common && !(n.rank === 'subspecies' && n.status === 'valid')) ? n : null });
     }
-    return [...hits.values()].sort((a, b) => b.s - a.s || a.t.name.localeCompare(b.t.name));
+    // Rank by score, then by the matched name itself, so a shorter/variant name (e.g. "melissodes lupina")
+    // sorts ahead of a longer name that begins with it ("melissodes lupina composita"). Without this,
+    // typing "melissodes lupin..." listed M. compositus (via its synonym) before M. lupinus.
+    return [...hits.values()].sort((a, b) => b.s - a.s || b.v - a.v || a.m.localeCompare(b.m) || a.t.name.localeCompare(b.t.name));
   }
   const pageFor = t => t.status === 'valid' ? (t.article || t.gallery || FALLBACK_PAGE) : null;
   const statusLabel = st => st.replace(/_/g, ' ');

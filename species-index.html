@@ -275,7 +275,7 @@
     if (!window.SPECIES_DATA) throw new Error('api/species.js did not load');
     data = window.SPECIES_DATA;
     byId = new Map(data.names.map(n => [n.id, n]));
-    data.names.forEach(n => { n._name = norm(n.name); n._ep = norm(n.epithet); n._cn = norm(n.common_name); n._au = norm(n.author); n._tau = norm(n.transfer_author); n._sub = norm(n.subspecies); });
+    data.names.forEach(n => { n._name = norm(n.name); n._ep = norm(n.epithet); n._cn = norm(n.common_name); n._au = norm(n.author); n._tau = norm([n.transfer_author].concat((n.earlier_synonymy || []).map(e => e.author)).filter(Boolean).join(' ')); n._sub = norm(n.subspecies); });
     const parenStatuses = DISP().authority_parentheses_statuses || ['previous_combination'];
     data.names.forEach(n => { const v = parenStatuses.includes(n.status) && n.valid_id && byId.get(n.valid_id); if (v && v.genus !== n.genus) recombined.add(v.id); });
     // a subspecies belongs to the species-level record with the same genus + epithet (if that record exists)
@@ -285,6 +285,15 @@
     data.names.forEach(n => {
       n._parent = n.subspecies ? (bySp.get(spKey(n)) || null) : null;
       if (n._parent) { if (!kids.has(n._parent.id)) kids.set(n._parent.id, []); kids.get(n._parent.id).push(n); }
+    });
+    // a former subspecies (synonym) whose species-level record is only a variant spelling (e.g. Melissodes lupina composita under
+    // Melissodes lupina) is also listed under the accepted name (Melissodes lupinus)
+    data.names.forEach(n => {
+      const p = n._parent;
+      if (p && p.status === 'variant_spelling' && n.status === 'synonym' && p.valid_id && byId.get(p.valid_id)) {
+        if (!kids.has(p.valid_id)) kids.set(p.valid_id, []);
+        kids.get(p.valid_id).push(n);
+      }
     });
   }
 
@@ -404,22 +413,28 @@
     const out = new Map();
     // pin = reached through a non-valid name that points straight at this taxon (a synonym of the species itself)
     // direct = the name itself matched the search (not reached through another name)
-    const add = (t, s, syn, pin, direct) => {
+    // m = the (normalised) name that matched the search; v = 1 when that name is itself a valid name.
+    // On a score tie a valid name beats a synonym / variant spelling, then the shorter name wins, so
+    // "melissodes lup" gives M. lupinus (valid name, no synonym label) and only once "lupina" is typed does the
+    // variant spelling match; M. lupinus still outranks "melissodes lupina composita" (M. compositus).
+    const add = (t, s, syn, pin, direct, m, v) => {
       const p = out.get(t.id);
-      if (!p) { out.set(t.id, { t, s, syn, pin: !!pin, direct: !!direct }); return; }
+      if (!p) { out.set(t.id, { t, s, syn, pin: !!pin, direct: !!direct, m: m || '', v: v || 0 }); return; }
       if (pin) p.pin = true;
       if (direct) p.direct = true;
-      if (s > p.s) { p.s = s; p.syn = syn; }
+      const better = s > p.s || (s === p.s && ((v || 0) > p.v || ((v || 0) === p.v && m && (!p.m || m.length < p.m.length))));
+      if (better) { p.s = s; p.syn = syn; p.m = m || ''; p.v = v || 0; }
     };
+    const vOf = n => (q && n.status === 'valid') ? 1 : 0;
     for (const n of data.names) {
       const [s, common] = scoreOf(n, q);
       if (!s) continue;
-      if (passes(n, skip)) add(n, s, null, false, true);
+      if (passes(n, skip)) add(n, s, null, false, true, q ? n._name : '', vOf(n));
       if (q) [n.valid_id && byId.get(n.valid_id), n.status === 'valid' ? n._parent : null].forEach((t, i) => {   // only a currently valid subspecies surfaces its species
         if (!t) return;
-        if (passes(t, skip)) add(t, s, common ? null : n, i === 0 && n.status !== 'valid', false);
+        if (passes(t, skip)) add(t, s, common ? null : n, i === 0 && n.status !== 'valid', false, q ? n._name : '', vOf(n));
         // the accepted name is a subspecies that the filters hide (e.g. Rank = Species only): show its species instead
-        else if (i === 0 && t.subspecies && t._parent && passes(t._parent, skip)) add(t._parent, s, common ? null : n, true, false);
+        else if (i === 0 && t.subspecies && t._parent && passes(t._parent, skip)) add(t._parent, s, common ? null : n, true, false, q ? n._name : '', vOf(n));
       });
     }
     // A species with accepted subspecies is made up of them, so while its subspecies are on screen they stand in for it
@@ -431,7 +446,7 @@
         const vis = (kids.get(id) || []).filter(k => k.status === 'valid' && passes(k, null));
         if (!vis.length) continue;
         out.delete(id);
-        if (hit.direct) vis.forEach(k => { if (!out.has(k.id)) add(k, hit.s, t, false, false); });   // the species itself matched (e.g. its common name), so its subspecies stand in for it
+        if (hit.direct) vis.forEach(k => { if (!out.has(k.id)) add(k, hit.s, t, false, false, hit.m, hit.v); });   // the species itself matched (e.g. its common name), so its subspecies stand in for it
       }
     }
     return out;
@@ -440,7 +455,7 @@
   const subKey = n => (n.subspecies && n.subspecies !== n.epithet) ? n.subspecies : '';   // nominotypical subspecies sorts first
   const cmpEp = (a, b) => a.t.epithet.localeCompare(b.t.epithet) || subKey(a.t).localeCompare(subKey(b.t)) || a.t.genus.localeCompare(b.t.genus);
   const SORTS = {
-    relevance: (a, b) => b.s - a.s || cmpEp(a, b),
+    relevance: (a, b) => b.s - a.s || (b.v || 0) - (a.v || 0) || (a.m || '').localeCompare(b.m || '') || cmpEp(a, b),   // m is '' with no search, so that falls through to epithet order
     'ep-asc': cmpEp,
     'ep-desc': (a, b) => cmpEp(b, a),
     subgenus: (a, b) => subLabel(effSub(a.t)).localeCompare(subLabel(effSub(b.t))) || cmpEp(a, b),
@@ -640,8 +655,8 @@
     if (modal.hidden || !box.classList.contains('sf-has-img') || window.innerWidth <= 700 || !curLong.length) return;
     const im = modalImg.querySelector('img');
     if (im && !im.complete) return;                          // photo still loading; its load event calls this again
-    // details no taller than the photo: nothing to wrap, keep the side-by-side layout
-    if (modalRows.closest('.sf-modal-main').offsetHeight <= modalImg.offsetHeight + 8) return;
+    // Long rows (type material, notes, synonyms) always use the flow layout, so every pop-up with a photo reads the same way
+    // whether or not its details happen to be taller than the photo.
     modalRows.innerHTML = curShortHtml;
     modalFlow.innerHTML = curLong.map(r => '<div class="sf-flow"><span class="sf-flow-label">' + esc(r[0]) + '</span> ' + r[1] + '</div><div class="sf-flow-sep"></div>').join('');
     box.classList.add('sf-split');
@@ -695,20 +710,24 @@
   });
   let openSeq = 0;
   const imgDone = new Set();
-  function openDetail(id, trigger) {
+  // Browser history: opening a pop-up pushes one history entry, and opening another name's pop-up from inside it pushes
+  // another, so the browser Back button (and a mouse's back button) steps back through the pop-ups, closing the last one
+  // before leaving the page. Each entry remembers its depth so Close can unwind them all and leave the history clean.
+  let modalDepth = 0, curModalId = null;
+  function openDetail(id, trigger, fromHistory) {
     const t = byId.get(id);
     if (!t) return;
     const url = shownImage(t), seq = ++openSeq;
     if (url && !imgDone.has(url)) {
       Promise.race([preloadImg(url), new Promise(r => setTimeout(r, 2500))]).then(() => {
         imgDone.add(url);
-        if (seq === openSeq) openDetailNow(id, trigger);   // ignore if another pop-up was requested meanwhile
+        if (seq === openSeq) openDetailNow(id, trigger, fromHistory);   // ignore if another pop-up was requested meanwhile
       });
       return;
     }
-    openDetailNow(id, trigger);
+    openDetailNow(id, trigger, fromHistory);
   }
-  function openDetailNow(id, trigger) {
+  function openDetailNow(id, trigger, fromHistory) {
     const t = byId.get(id);
     if (!t) return;
     const isValid = t.status === 'valid';
@@ -729,16 +748,35 @@
     modalImg.hidden = !modalImg.innerHTML;
     modal.querySelector('.sf-modal').classList.toggle('sf-has-img', !modalImg.hidden);
 
-    modalTitle.innerHTML = '<i>' + esc(dispName(t)) + '</i>' + (au ? ' <span class="sf-auth">' + esc(au) + '</span>' : '');
+    modalTitle.innerHTML = '<i>' + esc(t.name) + '</i>' + (au ? ' <span class="sf-auth">' + esc(au) + '</span>' : '');
 
     let rows = mRow(CARD('status', 'Status'), esc(isValid ? statusLabel('valid') : cap(statusName(t.status))));
     rows += mRow('Authority', au ? citeHTML(au, t.author_citation) : '<span class="sf-none">Not yet entered</span>');
     if (t.common_name) rows += mRow('Common name', esc(t.common_name));
     if (acc) rows += mRow(CARD('accepted_name', 'Accepted name'), '<a class="sf-xlink" href="#" data-open="' + esc(acc.id) + '" title="Show this species"><i>' + esc(withAuth(acc)) + '</i></a>');
-    if (xfer) rows += mRow(T[t.status] || T.default || 'Synonymized by', citeHTML(xfer, t.transfer_citation));
+    if (xfer) {
+      // when the transfer was made with a variant spelling of the accepted name (transfer_valid_id), say so beside the transfer author
+      const asTgt = t.transfer_valid_id && byId.get(t.transfer_valid_id);
+      const asTpl = t.status === 'previous_combination'
+        ? (DISP().earlier_combination_text || 'as {name}, before the current placement existed')
+        : (DISP().earlier_synonymy_text || 'as a synonym of {name}');
+      const asTxt = asTgt ? ' <span class="sf-auth">(' + esc(asTpl).replace('{name}', '<a class="sf-xlink" href="#" data-open="' + esc(asTgt.id) + '" title="Show this name"><i>' + esc(dispName(asTgt)) + '</i></a>') + ')</span>' : '';
+      rows += mRow(T[t.status] || T.default || 'Synonymized by', citeHTML(xfer, t.transfer_citation) + asTxt);
+    }
+    // earlier synonymies (made before the current accepted name existed, e.g. before a subspecies was recognised)
+    const earlyRows = !isValid ? (t.earlier_synonymy || []).map(e => {
+      const who = [e.author, e.year].filter(Boolean).join(', ');
+      const tgt = e.valid_id && byId.get(e.valid_id);
+      const tpl = t.status === 'previous_combination'
+        ? (DISP().earlier_combination_text || 'as {name}, before the current placement existed')
+        : (DISP().earlier_synonymy_text || 'as a synonym of {name}');
+      const txt = tgt ? ' <span class="sf-auth">(' + esc(tpl).replace('{name}', '<a class="sf-xlink" href="#" data-open="' + esc(tgt.id) + '" title="Show this name"><i>' + esc(dispName(tgt)) + '</i></a>') + ')</span>' : '';
+      return citeHTML(who, e.citation) + txt;
+    }) : [];
+    if (earlyRows.length) rows += mRow(CARD('earlier_synonymy', 'Earlier synonymy'), earlyRows.join('<br>'));
     if (isValid) rows += mRow(CARD('subgenus', 'Subgenus'), esc(subLabel(effSub(t))));
-    else rows += mRow(CARD('published_subgenus', 'Assigned subgenus'), t.subgenus ? esc(pubSub) : '<span class="sf-none">None</span>');
-    if (parentTxt) rows += mRow(isValid ? CARD('subspecies_of', 'Subspecies of') : CARD('historical_subspecies_of', 'Originally described as a subspecies of'), '<i>' + (t._parent ? nameLink(t._parent) : esc(parentTxt)) + '</i>');
+    else if (t.status !== 'synonym' && t.status !== 'variant_spelling') rows += mRow(CARD('published_subgenus', 'Assigned subgenus'), t.subgenus ? esc(pubSub) : '<span class="sf-none">None</span>');   // not shown for synonyms and variant spellings
+    if (parentTxt) rows += mRow(isValid ? CARD('subspecies_of', 'Subspecies of') : CARD('historical_subspecies_of', 'Originally described as a subspecies of'), '<i>' + (t._parent ? nameLink((t._parent.status === 'variant_spelling' && t._parent.valid_id && byId.get(t._parent.valid_id)) || t._parent) : esc(parentTxt)) + '</i>');   // a parent that is only a variant spelling is shown and linked as its accepted name
     const long = [];   // long-content rows: wrap under the photo when the pop-up would scroll
     const vk = subs.filter(x => x.status === 'valid'), ik = subs.filter(x => x.status !== 'valid');
     // how a former subspecies name was treated, e.g. "Erroneously described as a subspecies of ...; raised to species rank by ... Now a synonym of ..."
@@ -800,6 +838,11 @@
       '<button type="button" class="sf-modal-close">Close</button>';
 
     modalReturnFocus = trigger || null;
+    if (!fromHistory && !(curModalId === id && !modal.hidden)) {
+      modalDepth++;
+      try { history.pushState({ sfModal: id, d: modalDepth }, ''); } catch (err) { modalDepth--; }
+    }
+    curModalId = id;
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
     hintDone = false;
@@ -810,7 +853,16 @@
     modal.querySelector('.sf-modal').scrollTop = 0;                          // always start at the top
     updateHint();
   }
+  // Close button, backdrop click, Escape: unwind every history entry the pop-ups pushed (the popstate handler below
+  // then hides the pop-up), so Back afterwards goes to the page the person was on, not to a pop-up they closed.
   function closeModal() {
+    if (modal.hidden) return;
+    if (modalDepth > 0) { history.go(-modalDepth); return; }
+    hideModal();
+  }
+  function hideModal() {
+    openSeq++;                       // cancel any pop-up still waiting for its photo
+    curModalId = null;
     if (modal.hidden) return;
     modal.hidden = true;
     hint.hidden = true;
@@ -818,6 +870,16 @@
     if (modalReturnFocus && document.contains(modalReturnFocus)) modalReturnFocus.focus();
     modalReturnFocus = null;
   }
+  window.addEventListener('popstate', e => {
+    const st = e.state;
+    if (st && st.sfModal && byId.has(st.sfModal)) {
+      modalDepth = st.d || 1;
+      openDetail(st.sfModal, modalReturnFocus, true);
+    } else {
+      modalDepth = 0;
+      hideModal();
+    }
+  });
   window.addEventListener('resize', () => { if (!modal.hidden) refit(); });
   modal.addEventListener('click', e => {
     if (e.target === modal || e.target.closest('.sf-modal-close')) { closeModal(); return; }
@@ -941,6 +1003,10 @@
     if (l && e.key === 'Enter') { e.preventDefault(); jumpTo(l.dataset.jump); }
   });
   render();
+  // Reloading (or returning to the page) while a pop-up's history entry is current: show that pop-up again.
+  const st0 = history.state;
+  if (st0 && st0.sfModal && byId.has(st0.sfModal)) { modalDepth = st0.d || 1; openDetail(st0.sfModal, null, true); }
+  else if (st0 && st0.sfModal) { try { history.replaceState(null, ''); } catch (err) { /* ignore */ } }
 })();
 </script>
 </body>
