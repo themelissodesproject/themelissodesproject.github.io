@@ -782,8 +782,8 @@ function renderCard(p) {
 let modalReturnFocus = null;
 let recordResizeHandler = null;
 
-// The pop-up follows the same layout as the species index pop-up: title, overview, topics, a label/value
-// grid, the citation box, and a bottom row with View paper / DOI next to the dark Close button.
+// The pop-up follows the same layout as the species index pop-up: title, overview, topics,
+// the citation box, and a bottom row with View paper / DOI next to the dark Close button.
 function openRecordModal(p) {
   closeRecordModal();
   modalReturnFocus = document.activeElement;
@@ -1005,26 +1005,6 @@ function modalCitationBox(p) {
   return box;
 }
 
-// Short source names, so the Source cell never runs longer than a journal name.
-const SOURCE_SHORT = { publisher: "Publisher", BHL: "BHL", JSTOR: "JSTOR", "author-provided": "Author", other: "Other" };
-
-// One cell of the details grid: small label above, value below (muted dash when the paper has none).
-function modalField(label, value) {
-  const d = document.createElement("div");
-  d.className = "m-field";
-  const l = document.createElement("div");
-  l.className = "m-label";
-  l.textContent = label;
-  const v = document.createElement("div");
-  v.className = "m-value";
-  if (value instanceof Node) v.appendChild(value);
-  else if (value) v.textContent = value;
-  else { v.classList.add("m-none"); v.textContent = "—"; }
-  d.appendChild(l);
-  d.appendChild(v);
-  return d;
-}
-
 function buildModalContent(p) {
   const frag = document.createDocumentFragment();
 
@@ -1068,21 +1048,7 @@ function buildModalContent(p) {
   });
   if (topicWrap.childNodes.length) frag.appendChild(topicWrap);
 
-  // Details grid: two columns on a computer (column 1: author, year, journal; column 2: page range,
-  // volume, source), one column on a phone. The cells are in that reading order.
-  const c = citationParts(p);
-  const grid = document.createElement("div");
-  grid.className = "m-grid";
-  const au = p.authors || [];
-  grid.appendChild(modalField(au.length > 1 ? "Authors" : "Author", au.join("; ")));
-  grid.appendChild(modalField("Year", p.year ? String(p.year) : ""));
-  grid.appendChild(modalField(isArticle(p) ? "Journal" : "Publisher", sourceLine(p)));
-  grid.appendChild(modalField("Page range", c.pages));
-  grid.appendChild(modalField("Volume", c.volume));
-  grid.appendChild(modalField("Source", p.source_type ? (SOURCE_SHORT[p.source_type] || p.source_type) : ""));
-  frag.appendChild(grid);
-
-  // Below the grid: free-form sections (no table, no divider lines) that use the full width of the pop-up.
+  // Free-form sections (no table, no divider lines) that use the full width of the pop-up.
   const sections = document.createElement("div");
   sections.className = "m-sections";
 
