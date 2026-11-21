@@ -1320,5 +1320,55 @@
     "macrocera rustica indiana locality"
   ],
   "overview": "In the Melissodes portion of this publication, Say describes Melissodes bimaculatus bimaculatus (referred to as Macrocera binotata) from Indiana: the female is black with short thoracic hair, blackish violaceous wings, a white spot of prostrate hair on each side of the fourth tergal segment and whitish long hairs on the posterior tibiae and tarsi, while the slightly smaller male has a pale yellow nasus and labrum, paler wings and an immaculate tergum. Say notes some specific similarity to the preceding Macrocera species but, with much hesitation, gives it a distinct place. Say also describes Melissodes druriellus (referred to as Macrocera rustica) from Indiana, with white tergal bands (double on the second segment), whitish thoracic hair, a white male nasus and longer male antennae, and compares it with Peponapis pruinosa (referred to as Macrocera pruinosa)."
+},
+{
+  "id": "cockerell-1939",
+  "title": "The Bees of the Southern California Islands",
+  "authors": ["Cockerell, T. D. A."],
+  "year": 1939,
+  "journal": "Proceedings of the California Academy of Sciences, Fourth Series",
+  "volume": "23(28)",
+  "pages": "427-436",
+  "doi": "",
+  "citation": "Cockerell, T. D. A. (1939). The Bees of the Southern California Islands. Proceedings of the California Academy of Sciences, Fourth Series, 23(28), 427–436.",
+  "legal_url": "https://www.biodiversitylibrary.org/page/3188094#page/491/mode/1up",
+  "source_type": "BHL",
+  "added_date": "",
+  "topics": ["taxonomy", "distribution", "morphology", "pollination"],
+  "species": [
+    "melissodes-lupina",
+    "melissodes-catalinensis",
+    "melissodes-scotti",
+    "melissodes-hymenoxidis"
+  ],
+  "associated_organisms": [
+    { "name": "Malacothrix saxatilis", "relationship": "flower visited" },
+    { "name": "Calochortus", "relationship": "flower visited" },
+    { "name": "Sinapis", "relationship": "flower visited" }
+  ],
+  "author_keywords": [],
+  "search_keywords": [
+    "Melissodes lupinus Santa Catalina Island records",
+    "Melissodes lupina Santa Catalina Island records",
+    "Melissodes catalinensis Santa Catalina Island records",
+    "Melissodes lupinus male and female association Timberlake",
+    "Melissodes lupina male and female association Timberlake",
+    "Melissodes catalinensis male and female association Timberlake",
+    "Melissodes catalinensis synonymized with Melissodes lupina",
+    "Melissodes lupinus Malacothrix saxatilis flower visit",
+    "Melissodes lupina Malacothrix saxatilis flower visit",
+    "Melissodes catalinensis Malacothrix saxatilis flower visit",
+    "Melissodes lupinus Calochortus flower visit",
+    "Melissodes lupina Calochortus flower visit",
+    "Melissodes catalinensis Calochortus flower visit",
+    "Melissodes lupinus Sinapis flower visit",
+    "Melissodes lupina Sinapis flower visit",
+    "Melissodes catalinensis Sinapis flower visit",
+    "Melissodes scotti description",
+    "Melissodes scotti Wilson's Cove San Clemente Island",
+    "Melissodes hymenoxidis compared with Melissodes scotti",
+    "Melissodes southern California Channel Islands bee fauna"
+  ],
+  "overview": "Cockerell's survey of the bees of the southern California islands lists Melissodes lupinus (referred to as Melissodes lupina and Melissodes catalinensis) from Santa Catalina Island, with a female taken at Malacothrix saxatilis flowers at Pebbly Beach and both sexes at Fisherman's Cove, where it rested in flowers of Calochortus and was taken on Sinapis. He treats the male-based M. lupinus and the female-based catalinensis as one species, as Timberlake pointed out to him, and the paper also describes Melissodes scotti as a new species from a female collected at Wilson's Cove, San Clemente Island, comparing it with Melissodes hymenoxidis."
 }
 ]
