@@ -20,6 +20,11 @@
     "color": "hsl(178, 46%, 38%)"
   },
   {
+    "id": "melissodes-bimaculatus-bimaculatus",
+    "name": "Melissodes bimaculatus bimaculatus",
+    "color": "hsl(77, 46%, 38%)"
+  },
+  {
     "id": "melissodes-coloradensis",
     "name": "Melissodes coloradensis",
     "color": "hsl(140, 46%, 38%)"
