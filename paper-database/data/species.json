@@ -40,6 +40,11 @@
     "color": "hsl(261, 46%, 38%)"
   },
   {
+    "id": "melissodes-hymenoxidis",
+    "name": "Melissodes hymenoxidis",
+    "color": "hsl(145, 46%, 38%)"
+  },
+  {
     "id": "melissodes-illatus",
     "name": "Melissodes illatus",
     "color": "hsl(256, 46%, 38%)"
