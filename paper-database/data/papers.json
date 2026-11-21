@@ -1281,5 +1281,44 @@
     "Macrocera genus diagnosis Apiaires"
   ],
   "overview": "Volume 10 of the Encyclopédie méthodique entomology series. It includes the French-language genus account of Macrocera, with a Latin diagnosis and French description of the female of Melissodes bimaculatus (referred to as Macrocera bimaculata), covering its black pubescence, the interrupted white hair band on abdominal segment 4, reddish hairs on the hind tibiae and tarsi, and brownish, slightly violet wings. The specimen is recorded as sent from Philadelphia to the Cabinet du Roi by M. Lesueur."
+},
+{
+  "id": "say-1837",
+  "title": "Descriptions of new species of North American Hymenoptera, and observations on some already described",
+  "authors": ["Say, T."],
+  "year": 1837,
+  "journal": "Boston Journal of Natural History",
+  "volume": "1(4)",
+  "pages": "361-416",
+  "doi": "",
+  "citation": "Say, T. (1837). Descriptions of new species of North American Hymenoptera, and observations on some already described. Boston Journal of Natural History, 1(4), 361–416.",
+  "legal_url": "",
+  "source_type": "BHL",
+  "added_date": "",
+  "topics": ["taxonomy", "morphology", "distribution"],
+  "species": ["macrocera-binotata", "macrocera-rustica"],
+  "associated_organisms": [],
+  "author_keywords": [],
+  "search_keywords": [
+    "melissodes bimaculatus bimaculatus species description",
+    "macrocera binotata species description",
+    "melissodes bimaculatus bimaculatus female morphology",
+    "macrocera binotata female morphology",
+    "melissodes bimaculatus bimaculatus male differences from female",
+    "macrocera binotata male differences from female",
+    "melissodes bimaculatus bimaculatus indiana locality",
+    "macrocera binotata indiana locality",
+    "melissodes bimaculatus bimaculatus wing coloration and tergal hair spots",
+    "macrocera binotata wing coloration and tergal hair spots",
+    "melissodes druriellus species description",
+    "macrocera rustica species description",
+    "melissodes druriellus male and female morphology",
+    "macrocera rustica male and female morphology",
+    "melissodes druriellus tergal white bands and thoracic hair",
+    "macrocera rustica tergal white bands and thoracic hair",
+    "melissodes druriellus indiana locality",
+    "macrocera rustica indiana locality"
+  ],
+  "overview": "In the Melissodes portion of this publication, Say describes Melissodes bimaculatus bimaculatus (referred to as Macrocera binotata) from Indiana: the female is black with short thoracic hair, blackish violaceous wings, a white spot of prostrate hair on each side of the fourth tergal segment and whitish long hairs on the posterior tibiae and tarsi, while the slightly smaller male has a pale yellow nasus and labrum, paler wings and an immaculate tergum. Say notes some specific similarity to the preceding Macrocera species but, with much hesitation, gives it a distinct place. Say also describes Melissodes druriellus (referred to as Macrocera rustica) from Indiana, with white tergal bands (double on the second segment), whitish thoracic hair, a white male nasus and longer male antennae, and compares it with Peponapis pruinosa (referred to as Macrocera pruinosa)."
 }
 ]
