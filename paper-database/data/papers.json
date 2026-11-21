@@ -1263,13 +1263,7 @@
   "source_type": "BHL",
   "added_date": "",
   "topics": ["taxonomy", "morphology", "distribution"],
-  "species": [
-    "melissodes-bimaculatus",
-    "melissodes-bimaculatus-bimaculatus",
-    "macrocera-bimaculata",
-    "melissodes-bimaculata",
-    "melissodes-bimaculata-bimaculata"
-  ],
+  "species": ["macrocera-bimaculata"],
   "associated_organisms": [],
   "author_keywords": [],
   "search_keywords": [

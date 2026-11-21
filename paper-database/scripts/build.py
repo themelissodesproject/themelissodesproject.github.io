@@ -139,6 +139,16 @@ def resolve_taxon(tid, taxa):
             return None, ("unknown taxon id (not in species.js)" if not seen
                           else f"valid_id points to missing id {cur}")
         if rec["status"] == "valid":
+            # Only species are listed in the database, never subspecies: a
+            # subspecies is shown as its parent species.
+            if rec.get("rank") == "subspecies":
+                pid = f"{rec['genus']}-{rec['epithet']}".lower()
+                if pid == rec["id"] or taxa.get(pid, {}).get("rank") == "subspecies":
+                    return None, "subspecies with no parent species in species.js"
+                parent, why = resolve_taxon(pid, taxa)
+                if parent is None:
+                    return None, f"subspecies whose parent species cannot be resolved ({why})"
+                return parent, None
             return rec, None
         if cur in seen:
             return None, "valid_id loop"

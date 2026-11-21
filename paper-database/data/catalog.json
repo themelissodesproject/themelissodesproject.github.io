@@ -1,19 +1,15 @@
 [
   {
     "id": "cilla-2012",
-    "record_type": "article",
     "title": "The foraging preferences of two species of Melissodes Latreille (Hymenoptera, Apidae, Eucerini) in farmed sunflower in Argentina",
-    "entry_title": "",
     "authors": [
       "Cilla, G.",
       "Caccavari, M.",
       "Bartoloni, N. J.",
       "Roig-Alsina, A."
     ],
-    "editors": [],
     "year": 2012,
     "journal": "Grana",
-    "publisher": "",
     "volume": "51:1",
     "pages": "63-75",
     "doi": "10.1080/00173134.2011.644324",
@@ -51,16 +47,12 @@
   },
   {
     "id": "parker-1981",
-    "record_type": "article",
     "title": "How Efficient Are Bees in Pollinating Sunflowers?",
-    "entry_title": "",
     "authors": [
       "Parker, F. D."
     ],
-    "editors": [],
     "year": 1981,
     "journal": "Journal of the Kansas Entomological Society",
-    "publisher": "",
     "volume": "54(1)",
     "pages": "61-67",
     "doi": "",
@@ -94,17 +86,13 @@
   },
   {
     "id": "batra-1977",
-    "record_type": "article",
     "title": "Nests of Centris, Melissodes, and Colletes in Guatemala (Hymenoptera: Apoidea)",
-    "entry_title": "",
     "authors": [
       "Batra, S. W. T.",
       "Schuster, J. C."
     ],
-    "editors": [],
     "year": 1977,
     "journal": "Biotropica",
-    "publisher": "",
     "volume": "9(2)",
     "pages": "135-138",
     "doi": "",
@@ -147,16 +135,12 @@
   },
   {
     "id": "laberge-1956",
-    "record_type": "article",
     "title": "A Revision of the Bees of the Genus Melissodes in North and Central America. Part I. (Hymenoptera, Apidae)",
-    "entry_title": "",
     "authors": [
       "LaBerge, Wallace E."
     ],
-    "editors": [],
     "year": 1956,
     "journal": "The University of Kansas Science Bulletin",
-    "publisher": "",
     "volume": "Vol. XXXVII, Pt. II, No. 18",
     "pages": "911-1224",
     "doi": "",
@@ -859,16 +843,12 @@
   },
   {
     "id": "hicks-1926",
-    "record_type": "article",
     "title": "Nesting Habits and Parasites of Certain Bees of Boulder County, Colorado",
-    "entry_title": "",
     "authors": [
       "Hicks, C. H."
     ],
-    "editors": [],
     "year": 1926,
     "journal": "University of Colorado Studies",
-    "publisher": "",
     "volume": "15",
     "pages": "217-252",
     "doi": "",
@@ -907,16 +887,12 @@
   },
   {
     "id": "cockerell-1926",
-    "record_type": "article",
     "title": "SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES",
-    "entry_title": "",
     "authors": [
       "Cockerell, T. D. A."
     ],
-    "editors": [],
     "year": 1926,
     "journal": "The Pan-Pacific Entomologist",
-    "publisher": "",
     "volume": "3(2)",
     "pages": "80-90",
     "doi": "",
@@ -955,16 +931,12 @@
   },
   {
     "id": "turner-1908",
-    "record_type": "article",
     "title": "THE SUN-DANCE OF MELISSODES.",
-    "entry_title": "",
     "authors": [
       "Turner, C. H."
     ],
-    "editors": [],
     "year": 1908,
     "journal": "Psyche",
-    "publisher": "",
     "volume": "15(6)",
     "pages": "122-124",
     "doi": "",
@@ -995,17 +967,13 @@
   },
   {
     "id": "lovell-and-cockerell-1906",
-    "record_type": "article",
     "title": "Notes on the Bees of Southern Maine: Anthophoridae, Halictoididae, Macropidae and Panurgidae",
-    "entry_title": "",
     "authors": [
       "Lovell, J. H.",
       "Cockerell, T. D. A."
     ],
-    "editors": [],
     "year": 1906,
     "journal": "Psyche",
-    "publisher": "",
     "volume": "13",
     "pages": "109-113",
     "doi": "10.1155/1906/82926",
@@ -1086,16 +1054,12 @@
   },
   {
     "id": "cresson-1878",
-    "record_type": "article",
     "title": "DESCRIPTIONS OF NEW SPECIES OF NORTH AMERICAN BEES.",
-    "entry_title": "",
     "authors": [
       "Cresson, E. T."
     ],
-    "editors": [],
     "year": 1878,
     "journal": "Proceedings of the Academy of Natural Sciences of Philadelphia",
-    "publisher": "",
     "volume": "",
     "pages": "181-221",
     "doi": "",
@@ -1132,54 +1096,6 @@
     ],
     "associated_organisms": [],
     "overview": "Gives female and/or male descriptions of 49 Melissodes species, from Melissodes caliginosa through Melissodes bombiformis, each with body length, locality, collector and number of specimens, drawn mainly from Colorado, Georgia, Texas, California and Mexico. Many entries compare the species with similar Melissodes, such as Melissodes californica with Melissodes edwardsii and Melissodes frater and Melissodes lepida with Melissodes honesta. A note after Melissodes australis says that species and those following it look intermediate between Melissodes and Anthophora (flower bees), based on male antennae and forewing venation.",
-    "author_keywords": [],
-    "added_date": ""
-  },
-  {
-    "id": "latreille-et-al-1825",
-    "record_type": "encyclopedia",
-    "title": "Encyclop\u00e9die m\u00e9thodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustac\u00e9s, des arachnides et des insectes",
-    "entry_title": "",
-    "authors": [
-      "Latreille, P. A.",
-      "Le Peletier de Saint-Fargeau, A. L. M.",
-      "Serville, J. G. A.",
-      "Gu\u00e9rin, F. E."
-    ],
-    "editors": [],
-    "year": 1825,
-    "journal": "",
-    "publisher": "Mme veuve Agasse, Paris",
-    "volume": "10",
-    "pages": "",
-    "doi": "",
-    "citation": "Latreille, P. A., Le Peletier de Saint-Fargeau, A. L. M., Serville, J. G. A., & Gu\u00e9rin, F. E. (1825). Encyclop\u00e9die m\u00e9thodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustac\u00e9s, des arachnides et des insectes (Vol. 10). Mme veuve Agasse. https://www.biodiversitylibrary.org/item/155986#page/9/mode/1up",
-    "legal_url": "https://www.biodiversitylibrary.org/item/155986#page/9/mode/1up",
-    "source_type": "BHL",
-    "topics": [
-      {
-        "id": "taxonomy",
-        "percent": 33.3
-      },
-      {
-        "id": "morphology",
-        "percent": 33.3
-      },
-      {
-        "id": "distribution",
-        "percent": 33.3
-      }
-    ],
-    "species": [
-      "Melissodes bimaculatus",
-      "Melissodes bimaculatus bimaculatus"
-    ],
-    "taxon_ids": [
-      "melissodes-bimaculatus",
-      "melissodes-bimaculatus-bimaculatus"
-    ],
-    "associated_organisms": [],
-    "overview": "Volume 10 of the Encyclop\u00e9die m\u00e9thodique entomology series. It includes the French-language genus account of Macrocera, with a Latin diagnosis and French description of the female of Melissodes bimaculatus (referred to as Macrocera bimaculata), covering its black pubescence, the interrupted white hair band on abdominal segment 4, reddish hairs on the hind tibiae and tarsi, and brownish, slightly violet wings. The specimen is recorded as sent from Philadelphia to the Cabinet du Roi by M. Lesueur.",
     "author_keywords": [],
     "added_date": ""
   }
