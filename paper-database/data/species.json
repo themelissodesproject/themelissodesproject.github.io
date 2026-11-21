@@ -45,6 +45,11 @@
     "color": "hsl(256, 46%, 38%)"
   },
   {
+    "id": "melissodes-lupinus",
+    "name": "Melissodes lupinus",
+    "color": "hsl(213, 46%, 38%)"
+  },
+  {
     "id": "melissodes-manipularis",
     "name": "Melissodes manipularis",
     "color": "hsl(286, 46%, 38%)"
