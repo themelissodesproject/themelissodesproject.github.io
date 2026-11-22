@@ -15,6 +15,11 @@
     "color": "hsl(12, 46%, 38%)"
   },
   {
+    "id": "melissodes-baileyi",
+    "name": "Melissodes baileyi",
+    "color": "hsl(357, 46%, 38%)"
+  },
+  {
     "id": "melissodes-bimaculatus",
     "name": "Melissodes bimaculatus",
     "color": "hsl(178, 46%, 38%)"
@@ -30,6 +35,11 @@
     "color": "hsl(291, 46%, 38%)"
   },
   {
+    "id": "melissodes-comptoides",
+    "name": "Melissodes comptoides",
+    "color": "hsl(349, 46%, 38%)"
+  },
+  {
     "id": "melissodes-desponsus",
     "name": "Melissodes desponsus",
     "color": "hsl(46, 46%, 38%)"
@@ -38,6 +48,21 @@
     "id": "melissodes-floris",
     "name": "Melissodes floris",
     "color": "hsl(261, 46%, 38%)"
+  },
+  {
+    "id": "melissodes-gilensis",
+    "name": "Melissodes gilensis",
+    "color": "hsl(309, 46%, 38%)"
+  },
+  {
+    "id": "melissodes-grindeliae",
+    "name": "Melissodes grindeliae",
+    "color": "hsl(178, 46%, 38%)"
+  },
+  {
+    "id": "melissodes-humilior",
+    "name": "Melissodes humilior",
+    "color": "hsl(203, 46%, 38%)"
   },
   {
     "id": "melissodes-hymenoxidis",
@@ -65,9 +90,19 @@
     "color": "hsl(296, 46%, 38%)"
   },
   {
+    "id": "melissodes-rivalis",
+    "name": "Melissodes rivalis",
+    "color": "hsl(132, 46%, 38%)"
+  },
+  {
     "id": "melissodes-snowii",
     "name": "Melissodes snowii",
     "color": "hsl(159, 46%, 38%)"
+  },
+  {
+    "id": "melissodes-sphaeralceae",
+    "name": "Melissodes sphaeralceae",
+    "color": "hsl(326, 46%, 38%)"
   },
   {
     "id": "melissodes-tepaneca",
@@ -83,5 +118,10 @@
     "id": "melissodes-vernoniae",
     "name": "Melissodes vernoniae",
     "color": "hsl(29, 46%, 38%)"
+  },
+  {
+    "id": "melissodes-wheeleri",
+    "name": "Melissodes wheeleri",
+    "color": "hsl(323, 46%, 38%)"
   }
 ]
