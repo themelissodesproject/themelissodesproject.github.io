@@ -1,15 +1,19 @@
 [
   {
     "id": "cilla-2012",
+    "record_type": "article",
     "title": "The foraging preferences of two species of Melissodes Latreille (Hymenoptera, Apidae, Eucerini) in farmed sunflower in Argentina",
+    "entry_title": "",
     "authors": [
       "Cilla, G.",
       "Caccavari, M.",
       "Bartoloni, N. J.",
       "Roig-Alsina, A."
     ],
+    "editors": [],
     "year": 2012,
     "journal": "Grana",
+    "publisher": "",
     "volume": "51:1",
     "pages": "63-75",
     "doi": "10.1080/00173134.2011.644324",
@@ -47,12 +51,16 @@
   },
   {
     "id": "parker-1981",
+    "record_type": "article",
     "title": "How Efficient Are Bees in Pollinating Sunflowers?",
+    "entry_title": "",
     "authors": [
       "Parker, F. D."
     ],
+    "editors": [],
     "year": 1981,
     "journal": "Journal of the Kansas Entomological Society",
+    "publisher": "",
     "volume": "54(1)",
     "pages": "61-67",
     "doi": "",
@@ -86,13 +94,17 @@
   },
   {
     "id": "batra-1977",
+    "record_type": "article",
     "title": "Nests of Centris, Melissodes, and Colletes in Guatemala (Hymenoptera: Apoidea)",
+    "entry_title": "",
     "authors": [
       "Batra, S. W. T.",
       "Schuster, J. C."
     ],
+    "editors": [],
     "year": 1977,
     "journal": "Biotropica",
+    "publisher": "",
     "volume": "9(2)",
     "pages": "135-138",
     "doi": "",
@@ -135,12 +147,16 @@
   },
   {
     "id": "laberge-1956",
+    "record_type": "article",
     "title": "A Revision of the Bees of the Genus Melissodes in North and Central America. Part I. (Hymenoptera, Apidae)",
+    "entry_title": "",
     "authors": [
       "LaBerge, Wallace E."
     ],
+    "editors": [],
     "year": 1956,
     "journal": "The University of Kansas Science Bulletin",
+    "publisher": "",
     "volume": "Vol. XXXVII, Pt. II, No. 18",
     "pages": "911-1224",
     "doi": "",
@@ -842,13 +858,79 @@
     "added_date": ""
   },
   {
+    "id": "cockerell-1939",
+    "record_type": "article",
+    "title": "The Bees of the Southern California Islands",
+    "entry_title": "",
+    "authors": [
+      "Cockerell, T. D. A."
+    ],
+    "editors": [],
+    "year": 1939,
+    "journal": "Proceedings of the California Academy of Sciences, Fourth Series",
+    "publisher": "",
+    "volume": "23(28)",
+    "pages": "427-436",
+    "doi": "",
+    "citation": "Cockerell, T. D. A. (1939). The Bees of the Southern California Islands. Proceedings of the California Academy of Sciences, Fourth Series, 23(28), 427\u2013436.",
+    "legal_url": "https://www.biodiversitylibrary.org/page/3188094#page/491/mode/1up",
+    "source_type": "BHL",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 25.0
+      },
+      {
+        "id": "distribution",
+        "percent": 25.0
+      },
+      {
+        "id": "morphology",
+        "percent": 25.0
+      },
+      {
+        "id": "pollination",
+        "percent": 25.0
+      }
+    ],
+    "species": [
+      "Melissodes lupinus",
+      "Melissodes hymenoxidis"
+    ],
+    "taxon_ids": [
+      "melissodes-lupinus",
+      "melissodes-hymenoxidis"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Malacothrix saxatilis",
+        "relationship": "flower visited"
+      },
+      {
+        "name": "Calochortus",
+        "relationship": "flower visited"
+      },
+      {
+        "name": "Sinapis",
+        "relationship": "flower visited"
+      }
+    ],
+    "overview": "Cockerell's survey of the bees of the southern California islands lists Melissodes lupinus (referred to as Melissodes lupina and Melissodes catalinensis) from Santa Catalina Island, with a female taken at Malacothrix saxatilis flowers at Pebbly Beach and both sexes at Fisherman's Cove, where it rested in flowers of Calochortus and was taken on Sinapis. He treats the male-based M. lupinus and the female-based catalinensis as one species, as Timberlake pointed out to him, and the paper also describes Melissodes scotti as a new species from a female collected at Wilson's Cove, San Clemente Island, comparing it with Melissodes hymenoxidis.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
     "id": "hicks-1926",
+    "record_type": "article",
     "title": "Nesting Habits and Parasites of Certain Bees of Boulder County, Colorado",
+    "entry_title": "",
     "authors": [
       "Hicks, C. H."
     ],
+    "editors": [],
     "year": 1926,
     "journal": "University of Colorado Studies",
+    "publisher": "",
     "volume": "15",
     "pages": "217-252",
     "doi": "",
@@ -887,12 +969,16 @@
   },
   {
     "id": "cockerell-1926",
+    "record_type": "article",
     "title": "SOME BEES IN THE COLLECTION OF THE CALIFORNIA ACADEMY OF SCIENCES",
+    "entry_title": "",
     "authors": [
       "Cockerell, T. D. A."
     ],
+    "editors": [],
     "year": 1926,
     "journal": "The Pan-Pacific Entomologist",
+    "publisher": "",
     "volume": "3(2)",
     "pages": "80-90",
     "doi": "",
@@ -931,12 +1017,16 @@
   },
   {
     "id": "turner-1908",
+    "record_type": "article",
     "title": "THE SUN-DANCE OF MELISSODES.",
+    "entry_title": "",
     "authors": [
       "Turner, C. H."
     ],
+    "editors": [],
     "year": 1908,
     "journal": "Psyche",
+    "publisher": "",
     "volume": "15(6)",
     "pages": "122-124",
     "doi": "",
@@ -966,14 +1056,88 @@
     "added_date": ""
   },
   {
+    "id": "cockerell-1906",
+    "record_type": "article",
+    "title": "Descriptions and Records of Bees.\u2014X",
+    "entry_title": "",
+    "authors": [
+      "Cockerell, T. D. A."
+    ],
+    "editors": [],
+    "year": 1906,
+    "journal": "Annals and Magazine of Natural History, Series 7",
+    "publisher": "",
+    "volume": "17(100)",
+    "pages": "359-369",
+    "doi": "10.1080/00222930608562537",
+    "citation": "Cockerell, T. D. A. (1906). Descriptions and Records of Bees.\u2014X. Annals and Magazine of Natural History, Series 7, 17(100), 359\u2013369. https://doi.org/10.1080/00222930608562537",
+    "legal_url": "https://www.biodiversitylibrary.org/page/19245577#page/373/mode/1up",
+    "source_type": "BHL",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 33.3
+      },
+      {
+        "id": "morphology",
+        "percent": 33.3
+      },
+      {
+        "id": "distribution",
+        "percent": 33.3
+      }
+    ],
+    "species": [
+      "Melissodes baileyi",
+      "Melissodes communis",
+      "Melissodes humilior",
+      "Melissodes lupinus",
+      "Melissodes wheeleri",
+      "Melissodes agilis",
+      "Melissodes sphaeralceae",
+      "Melissodes vernoniae",
+      "Melissodes comptoides",
+      "Melissodes rivalis",
+      "Melissodes gilensis",
+      "Melissodes grindeliae"
+    ],
+    "taxon_ids": [
+      "melissodes-baileyi",
+      "melissodes-communis",
+      "melissodes-humilior",
+      "melissodes-lupinus",
+      "melissodes-wheeleri",
+      "melissodes-agilis",
+      "melissodes-sphaeralceae",
+      "melissodes-vernoniae",
+      "melissodes-comptoides",
+      "melissodes-rivalis",
+      "melissodes-gilensis",
+      "melissodes-grindeliae"
+    ],
+    "associated_organisms": [
+      {
+        "name": "Isocoma wrightii",
+        "relationship": "forage plant"
+      }
+    ],
+    "overview": "Describes Melissodes baileyi, Melissodes communis communis (referred to as Melissodes xanthopteralis and Melissodes hortivagans), Melissodes megacerata, Melissodes pimella, Melissodes agilis semiagilis, Melissodes petulciformis, Melissodes helenae and Melissodes confusiformis, mostly from Fedor, Texas, each separated from similar species by detailed comparative diagnoses. Provides a key to the Melissodes humilior group covering Melissodes helenae, Melissodes humilior (referred to as Melissodes intermediella), Melissodes lupinus (referred to as Melissodes humilior catalinensis and Melissodes intermediella catalinensis), Melissodes pecosella and Melissodes pecosella verbesinarum, with a Las Cruces, New Mexico, record of Melissodes pecosella verbesinarum at flowers of Isocoma wrightii. Also gives Fedor, Texas, notes on Melissodes suffusa, Melissodes grandissima, Melissodes agilis subagilis and Melissodes wheeleri, including a partial gynandromorph of Melissodes communis communis.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
     "id": "lovell-and-cockerell-1906",
+    "record_type": "article",
     "title": "Notes on the Bees of Southern Maine: Anthophoridae, Halictoididae, Macropidae and Panurgidae",
+    "entry_title": "",
     "authors": [
       "Lovell, J. H.",
       "Cockerell, T. D. A."
     ],
+    "editors": [],
     "year": 1906,
     "journal": "Psyche",
+    "publisher": "",
     "volume": "13",
     "pages": "109-113",
     "doi": "10.1155/1906/82926",
@@ -1054,12 +1218,16 @@
   },
   {
     "id": "cresson-1878",
+    "record_type": "article",
     "title": "DESCRIPTIONS OF NEW SPECIES OF NORTH AMERICAN BEES.",
+    "entry_title": "",
     "authors": [
       "Cresson, E. T."
     ],
+    "editors": [],
     "year": 1878,
     "journal": "Proceedings of the Academy of Natural Sciences of Philadelphia",
+    "publisher": "",
     "volume": "",
     "pages": "181-221",
     "doi": "",
@@ -1084,6 +1252,7 @@
       "Melissodes coloradensis",
       "Melissodes agilis",
       "Melissodes communis",
+      "Melissodes lupinus",
       "Melissodes snowii",
       "Melissodes tepaneca"
     ],
@@ -1091,11 +1260,101 @@
       "melissodes-coloradensis",
       "melissodes-agilis",
       "melissodes-communis",
+      "melissodes-lupinus",
       "melissodes-snowii",
       "melissodes-tepaneca"
     ],
     "associated_organisms": [],
     "overview": "Gives female and/or male descriptions of 49 Melissodes species, from Melissodes caliginosa through Melissodes bombiformis, each with body length, locality, collector and number of specimens, drawn mainly from Colorado, Georgia, Texas, California and Mexico. Many entries compare the species with similar Melissodes, such as Melissodes californica with Melissodes edwardsii and Melissodes frater and Melissodes lepida with Melissodes honesta. A note after Melissodes australis says that species and those following it look intermediate between Melissodes and Anthophora (flower bees), based on male antennae and forewing venation.",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "say-1837",
+    "record_type": "article",
+    "title": "Descriptions of new species of North American Hymenoptera, and observations on some already described",
+    "entry_title": "",
+    "authors": [
+      "Say, T."
+    ],
+    "editors": [],
+    "year": 1837,
+    "journal": "Boston Journal of Natural History",
+    "publisher": "",
+    "volume": "1(4)",
+    "pages": "361-416",
+    "doi": "",
+    "citation": "Say, T. (1837). Descriptions of new species of North American Hymenoptera, and observations on some already described. Boston Journal of Natural History, 1(4), 361\u2013416.",
+    "legal_url": "https://www.biodiversitylibrary.org/page/32413859?__cf_chl_tk=9t2lKfjylXAmhsvl4EvIZwD.Sqi7AtQMK79UtHMDe0M-1795287542-1.0.1.1-TUrOHtwaUe.tJQzK4YkgjOvofkbHKh_E5DHOMM169JU#page/364/mode/1up",
+    "source_type": "BHL",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 33.3
+      },
+      {
+        "id": "morphology",
+        "percent": 33.3
+      },
+      {
+        "id": "distribution",
+        "percent": 33.3
+      }
+    ],
+    "species": [
+      "Melissodes bimaculatus"
+    ],
+    "taxon_ids": [
+      "melissodes-bimaculatus"
+    ],
+    "associated_organisms": [],
+    "overview": "In the Melissodes portion of this publication, Say describes Melissodes bimaculatus bimaculatus (referred to as Macrocera binotata) from Indiana: the female is black with short thoracic hair, blackish violaceous wings, a white spot of prostrate hair on each side of the fourth tergal segment and whitish long hairs on the posterior tibiae and tarsi, while the slightly smaller male has a pale yellow nasus and labrum, paler wings and an immaculate tergum. Say notes some specific similarity to the preceding Macrocera species but, with much hesitation, gives it a distinct place. Say also describes Melissodes druriellus (referred to as Macrocera rustica) from Indiana, with white tergal bands (double on the second segment), whitish thoracic hair, a white male nasus and longer male antennae, and compares it with Peponapis pruinosa (referred to as Macrocera pruinosa).",
+    "author_keywords": [],
+    "added_date": ""
+  },
+  {
+    "id": "latreille-et-al-1825",
+    "record_type": "encyclopedia",
+    "title": "Encyclop\u00e9die m\u00e9thodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustac\u00e9s, des arachnides et des insectes",
+    "entry_title": "",
+    "authors": [
+      "Latreille, P. A.",
+      "Le Peletier de Saint-Fargeau, A. L. M.",
+      "Serville, J. G. A.",
+      "Gu\u00e9rin, F. E."
+    ],
+    "editors": [],
+    "year": 1825,
+    "journal": "",
+    "publisher": "Mme veuve Agasse, Paris",
+    "volume": "10",
+    "pages": "",
+    "doi": "",
+    "citation": "Latreille, P. A., Le Peletier de Saint-Fargeau, A. L. M., Serville, J. G. A., & Gu\u00e9rin, F. E. (1825). Encyclop\u00e9die m\u00e9thodique. Histoire naturelle. Entomologie, ou histoire naturelle des crustac\u00e9s, des arachnides et des insectes (Vol. 10). Mme veuve Agasse. https://www.biodiversitylibrary.org/item/155986#page/9/mode/1up",
+    "legal_url": "https://www.biodiversitylibrary.org/item/155986#page/9/mode/1up",
+    "source_type": "BHL",
+    "topics": [
+      {
+        "id": "taxonomy",
+        "percent": 33.3
+      },
+      {
+        "id": "morphology",
+        "percent": 33.3
+      },
+      {
+        "id": "distribution",
+        "percent": 33.3
+      }
+    ],
+    "species": [
+      "Melissodes bimaculatus"
+    ],
+    "taxon_ids": [
+      "melissodes-bimaculatus"
+    ],
+    "associated_organisms": [],
+    "overview": "Volume 10 of the Encyclop\u00e9die m\u00e9thodique entomology series. It includes the French-language genus account of Macrocera, with a Latin diagnosis and French description of the female of Melissodes bimaculatus (referred to as Macrocera bimaculata), covering its black pubescence, the interrupted white hair band on abdominal segment 4, reddish hairs on the hind tibiae and tarsi, and brownish, slightly violet wings. The specimen is recorded as sent from Philadelphia to the Cabinet du Roi by M. Lesueur.",
     "author_keywords": [],
     "added_date": ""
   }
