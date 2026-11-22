@@ -198,14 +198,14 @@
 
   const cardHTML = (t, syn) => {
     const href = pageFor(t);
-    const title = esc(t.name);
+    const title = esc(syn ? syn.name : t.name);   // a synonym hit shows the name that was matched, with the valid name beneath it
     const sub = t.common_name || (t.status === 'valid' ? 'Subgenus ' + subgenusName(t.subgenus) : statusLabel(t.status));
     return '<div class="page">' +
       '<img src="' + esc(t.image || 'img/Media Unavailable.png') + '" alt="' + title + '">' +
       '<div class="p-details">' +
       (href ? '<a href="' + esc(href) + '"><h2>' + title + '</h2></a>' : '<h2>' + title + '</h2>') +
+      (syn ? '<h3>Valid name: ' + esc(t.name) + '</h3>' : '') +
       '<h3>' + esc(sub) + '</h3>' +
-      (syn ? '<h3>Matched synonym: ' + esc(syn.name) + '</h3>' : '') +
       '</div></div>';
   };
 

@@ -86,7 +86,23 @@
 
     .sf-toolbar { margin: 12px 0 14px; font-size: 0.9rem; color: #555; }
     .sf-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; }
-    .sf-sort select { margin-left: 4px; padding: 5px 8px; font-size: 0.9rem; color: #222; background: #fff; border: 1px solid #ccc; border-radius: 6px; }
+    /* "Sort by" dropdown: same look as the Topic dropdown on the paper database page */
+    .sf-sort { display: inline-flex; align-items: center; gap: 8px; margin: 0; }
+    #sortDd { position: relative; }
+    #sortDd .dropdown-toggle { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; min-width: 9.5rem; font-size: 0.85rem; padding: 0.5rem 0.7rem; border: 1px solid #ccc; border-radius: 6px; background: #fff; color: #222; cursor: pointer; text-align: left; }
+    #sortDd .dropdown-toggle:hover { border-color: #aaa; }
+    #sortDd .dropdown-toggle .chevron { width: 0.85rem; height: 0.85rem; flex-shrink: 0; fill: none; stroke: #555; stroke-width: 2; transition: transform 0.15s ease; }
+    #sortDd .dropdown-toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+    #sortDd .dropdown-panel { position: absolute; top: calc(100% + 0.3rem); right: 0; min-width: 100%; z-index: 20; background: #fff; border: 1px solid #ccc; border-radius: 6px; box-shadow: 0 6px 16px rgba(0,0,0,0.14); max-height: 15rem; overflow-y: auto; padding: 0.4rem; white-space: nowrap; }
+    #sortDd .dropdown-panel[hidden] { display: none; }
+    #sortDd .dropdown-option { display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 0.85rem; padding: 0.35rem 0.4rem; border-radius: 4px; cursor: pointer; }
+    #sortDd .dropdown-option:hover { background: #F3F4F5; }
+    #sortDd .dropdown-option:has(input:checked) { background: #F3F4F5; font-weight: 600; }
+    #sortDd .dropdown-option input { margin: 0; }
+    #sortDd .dropdown-panel::-webkit-scrollbar { width: 8px; }
+    #sortDd .dropdown-panel::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+    #sortDd .dropdown-panel::-webkit-scrollbar-track { background: transparent; margin-top: 5px; margin-bottom: 5px; }
+    #sortDd .dropdown-panel::-webkit-scrollbar-thumb { background: #d3d3d3; border-radius: 6px; }
     .sf-chips { display: flex; flex-wrap: wrap; gap: 6px; }
     .sf-chips:not(:empty) { margin-top: 10px; }
     .sf-chip { padding: 3px 10px; font-size: 0.8rem; color: #222; background: #F3F4F5; border: 1px solid #ccc; border-radius: 999px; cursor: pointer; }
@@ -264,6 +280,10 @@
   let data, byId, kids, GROUPS;
   const state = {};          // state[groupKey] = Set of checked option values (empty set = no restriction)
   let sortKey = 'relevance';
+  const SORT_OPTS = [
+    { v: 'relevance', label: 'Best match' }, { v: 'ep-asc', label: 'Epithet A–Z' }, { v: 'ep-desc', label: 'Epithet Z–A' },
+    { v: 'subgenus', label: 'Subgenus' }, { v: 'year', label: 'Year described' }, { v: 'status', label: 'Name status' }
+  ];
   // when subspecies are listed, a species that has accepted subspecies is replaced by them unless this is on
   const PARENT_KEY = 'melissodes-species-index-parents-v2';
   // on by default; only a deliberate untick (stored as '0') turns it off
@@ -492,14 +512,13 @@
       '<div class="sf-bar"><div class="sf-summary" id="sfSummary"></div>' +
       '<div class="sf-controls"><label class="sf-colortoggle" id="parentWrap" title="' + esc(PT().hint || '') + '"><input type="checkbox" id="parentToggle"' + (showParents ? ' checked' : '') + '> ' + esc(PT().label || 'Show parent species') + '</label>' +
       '<label class="sf-colortoggle"><input type="checkbox" id="colorToggle"' + (colorOn() ? ' checked' : '') + '> Color-code by validity</label>' +
-      '<label class="sf-sort">Sort by <select id="sortSel">' +
-      '<option value="relevance">Best match</option>' +
-      '<option value="ep-asc">Epithet A–Z</option>' +
-      '<option value="ep-desc">Epithet Z–A</option>' +
-      '<option value="subgenus">Subgenus</option>' +
-      '<option value="year">Year described</option>' +
-      '<option value="status">Name status</option>' +
-      '</select></label></div></div><div class="sf-chips" id="sfChips"></div>' +
+      '<div class="sf-sort">Sort by <div class="dropdown" id="sortDd">' +
+      '<button type="button" id="sortToggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">' +
+      '<span id="sortLabel">' + esc((SORT_OPTS.find(o => o.v === sortKey) || SORT_OPTS[0]).label) + '</span>' +
+      '<svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+      '<div id="sortPanel" class="dropdown-panel" role="listbox" hidden>' +
+      SORT_OPTS.map(o => '<label class="dropdown-option"><input type="radio" name="sortOpt" value="' + o.v + '"' + (o.v === sortKey ? ' checked' : '') + '>' + esc(o.label) + '</label>').join('') +
+      '</div></div></div></div></div><div class="sf-chips" id="sfChips"></div>' +
       '<div class="sf-legend" id="sfLegend" hidden>' +
       [...new Set(data.names.map(validityOf))].sort((a, b) => Object.keys(VALIDITY).indexOf(a) - Object.keys(VALIDITY).indexOf(b))
         .map(k => '<span><i data-validity="' + k + '"></i>' + esc(validityLabel(k)) + '</span>').join('') + '</div>';
@@ -511,6 +530,7 @@
     filters.querySelectorAll('.sf-dd-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
   }
   function toggleMenu(dd) {
+    closeSort();
     const menu = dd.querySelector('.sf-menu');
     const wasClosed = menu.hidden;
     closeMenus();
@@ -961,13 +981,32 @@
     if (clr) { state[clr.dataset.clear] = new Set(); saveFilters(); render(); }
   });
   document.addEventListener('click', e => { if (!filters.contains(e.target)) closeMenus(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenus(); closeModal(); } });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenus(); closeSort(); closeModal(); } });
+  // "Sort by" dropdown (same look as the Topic dropdown on the paper database)
+  function closeSort() {
+    const p = document.getElementById('sortPanel'), t = document.getElementById('sortToggle');
+    if (p) p.hidden = true;
+    if (t) t.setAttribute('aria-expanded', 'false');
+  }
+  function setSort(v) {
+    sortKey = v;
+    const o = SORT_OPTS.find(x => x.v === v) || SORT_OPTS[0];
+    const l = document.getElementById('sortLabel'); if (l) l.textContent = o.label;
+    toolbar.querySelectorAll('input[name="sortOpt"]').forEach(i => { i.checked = i.value === v; });
+  }
+  document.addEventListener('click', e => { if (!e.target.closest('#sortDd')) closeSort(); });
   toolbar.addEventListener('click', e => {
+    const tg = e.target.closest('#sortToggle');
+    if (tg) {
+      const p = document.getElementById('sortPanel'), open = p.hidden;
+      closeMenus(); p.hidden = !open; tg.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
     const c = e.target.closest('.sf-chip');
     if (c) { state[c.dataset.group].delete(c.dataset.value); saveFilters(); render(); }
   });
   toolbar.addEventListener('change', e => {
-    if (e.target.id === 'sortSel') { sortKey = e.target.value; render(); }
+    if (e.target.name === 'sortOpt') { setSort(e.target.value); closeSort(); render(); }
     if (e.target.id === 'parentToggle') {
       showParents = e.target.checked;
       try { localStorage.setItem(PARENT_KEY, showParents ? '1' : '0'); } catch (err) { /* not remembered */ }
@@ -988,7 +1027,7 @@
     if (!rec) return;
     GROUPS.forEach(g => { if (state[g.key].size && !g.get(rec).some(v => state[g.key].has(v))) state[g.key] = new Set(); });
     searchInput.value = rec.name;
-    sortKey = 'relevance'; const ss = document.getElementById('sortSel'); if (ss) ss.value = 'relevance';
+    setSort('relevance');
     render();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
