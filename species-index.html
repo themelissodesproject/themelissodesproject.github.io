@@ -598,6 +598,7 @@
   }
 
   // "Melissodes bimaculatus" -> "M. bimaculatus" on cards (same genus as the project genus only, so it is never ambiguous)
+  const shortAuth = n => shortName(n) + (authority(n) ? ' ' + authority(n) : '');   // short name + authority, for compact in-text mentions
   const shortName = n => n.subspecies ? dispName(n) : (data.genus && n.genus === data.genus.name) ? n.name.replace(/^(\S)\S*\s/, '$1. ') : n.name;
 
   // what the 'matched' tag on a card says, by the kind of name that was matched
@@ -759,7 +760,9 @@
     const xfer = !isValid ? transferBy(t) : '';
     const shown = isValid ? t : acc;                       // the taxon whose image is displayed
     const subIds = new Set(subs.filter(x => x.status === 'valid').map(x => x.id));
-    const others = isValid ? data.names.filter(n => (n.valid_id === t.id || subIds.has(n.valid_id)) && !subs.includes(n)) : [];
+    // a species lists the names of its subspecies too, except subspecies-rank variant spellings (e.g. M. b. bimaculata): those are listed
+    // only in the pop-up of the subspecies they spell (they still show when they point at this name directly)
+    const others = isValid ? data.names.filter(n => (n.valid_id === t.id || subIds.has(n.valid_id)) && !subs.includes(n) && !(n.subspecies && n.status === 'variant_spelling' && n.valid_id !== t.id)) : [];
     const T = (DISP().transfer_labels || {});
 
     modalImg.innerHTML = (shown && shown.image)
@@ -780,7 +783,7 @@
       const asTpl = t.status === 'previous_combination'
         ? (DISP().earlier_combination_text || 'as {name}, before the current placement existed')
         : (DISP().earlier_synonymy_text || 'as a synonym of {name}');
-      const asTxt = asTgt ? ' <span class="sf-auth">(' + esc(asTpl).replace('{name}', '<a class="sf-xlink" href="#" data-open="' + esc(asTgt.id) + '" title="Show this name"><i>' + esc(dispName(asTgt)) + '</i></a>') + ')</span>' : '';
+      const asTxt = asTgt ? ' <span class="sf-auth">(' + esc(asTpl).replace('{name}', '<a class="sf-xlink" href="#" data-open="' + esc(asTgt.id) + '" title="Show this name"><i>' + esc(withAuth(asTgt)) + '</i></a>') + ')</span>' : '';
       rows += mRow(T[t.status] || T.default || 'Synonymized by', citeHTML(xfer, t.transfer_citation) + asTxt);
     }
     // earlier synonymies (made before the current accepted name existed, e.g. before a subspecies was recognised)
@@ -790,7 +793,7 @@
       const tpl = t.status === 'previous_combination'
         ? (DISP().earlier_combination_text || 'as {name}, before the current placement existed')
         : (DISP().earlier_synonymy_text || 'as a synonym of {name}');
-      const txt = tgt ? ' <span class="sf-auth">(' + esc(tpl).replace('{name}', '<a class="sf-xlink" href="#" data-open="' + esc(tgt.id) + '" title="Show this name"><i>' + esc(dispName(tgt)) + '</i></a>') + ')</span>' : '';
+      const txt = tgt ? ' <span class="sf-auth">(' + esc(tpl).replace('{name}', '<a class="sf-xlink" href="#" data-open="' + esc(tgt.id) + '" title="Show this name"><i>' + esc(withAuth(tgt)) + '</i></a>') + ')</span>' : '';
       return citeHTML(who, e.citation) + txt;
     }) : [];
     if (earlyRows.length) rows += mRow(CARD('earlier_synonymy', 'Earlier synonymy'), earlyRows.join('<br>'));
@@ -802,12 +805,16 @@
     // how a former subspecies name was treated, e.g. "Erroneously described as a subspecies of ...; raised to species rank by ... Now a synonym of ..."
     const histOf = k => {
       const a = k.valid_id ? byId.get(k.valid_id) : null;
-      const h = k.history ? cap(k.history) : 'Described as a subspecies of this species';
-      return esc(h.replace(/\.$/, '') + '.') + (a ? ' Now a ' + esc(statusName(k.status)) + ' of <i>' + esc(dispName(a)) + '</i>.' : '');
+      // default wording names the species it was described under (k._parent, e.g. Melissodes lupina Lepeletier, 1825) with its authority, as a link to that taxon,
+      // even when that is the pop-up already open; a custom history text in species.js is shown as written
+      const par = k._parent;
+      const parHtml = par ? '<i>' + nameLink(par) + '</i>' : esc(k.genus + ' ' + k.epithet);
+      const h = k.history ? esc(cap(k.history).replace(/\.$/, '')) : 'Described as a subspecies of ' + parHtml;
+      return h + '.' + (a ? ' Now a ' + esc(statusName(k.status)) + ' of <i>' + nameLink(a) + '</i>.' : '');
     };
     if (vk.length) long.push([CARD('subspecies', 'Subspecies'), vk.map(x => '<i>' + nameLink(x) + '</i>').join('; ')]);
     if (ik.length) long.push([CARD('historical_subspecies', 'Subspecies names (not currently recognised)'), ik.map(x => '<span class="sf-hist"><i>' + nameLink(x) + '</i> — ' + histOf(x) + '</span>').join('')]);
-    if (others.length) long.push(['Synonyms & other names', others.map(n => '<i>' + nameLink(n) + '</i> <span class="sf-auth">(' + esc(statusName(n.status) + (n.valid_id !== t.id ? ' of ' + shortName(byId.get(n.valid_id)) : '')) + ')</span>').join('; ')]);
+    if (others.length) long.push(['Synonyms & other names', others.map(n => '<i>' + nameLink(n) + '</i> <span class="sf-auth">(' + esc(statusName(n.status) + (n.valid_id !== t.id ? ' of ' : '')) + (n.valid_id !== t.id ? '<i>' + nameLink(byId.get(n.valid_id), shortAuth(byId.get(n.valid_id))) + '</i>' : '') + ')</span>').join('; ')]);
     if (t.history) long.push(['History', esc(cap(t.history).replace(/\.$/, '') + '.')]);
     // Type material: the statements are built from the holotype_* and paratypes_* fields in species.js
     // (sex, count, locality, state, date, collector, repository, link) and are shown in their own Type material row;
