@@ -1098,6 +1098,7 @@
       "Melissodes comptoides",
       "Melissodes rivalis",
       "Melissodes gilensis",
+      "Melissodes confusus",
       "Melissodes grindeliae"
     ],
     "taxon_ids": [
@@ -1111,6 +1112,7 @@
       "melissodes-comptoides",
       "melissodes-rivalis",
       "melissodes-gilensis",
+      "melissodes-confusus",
       "melissodes-grindeliae"
     ],
     "associated_organisms": [
@@ -1250,6 +1252,7 @@
       "Melissodes coloradensis",
       "Melissodes agilis",
       "Melissodes communis",
+      "Melissodes confusus",
       "Melissodes lupinus",
       "Melissodes snowii",
       "Melissodes tepaneca"
@@ -1258,6 +1261,7 @@
       "melissodes-coloradensis",
       "melissodes-agilis",
       "melissodes-communis",
+      "melissodes-confusus",
       "melissodes-lupinus",
       "melissodes-snowii",
       "melissodes-tepaneca"

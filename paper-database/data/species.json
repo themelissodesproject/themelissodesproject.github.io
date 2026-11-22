@@ -40,6 +40,11 @@
     "color": "hsl(349, 46%, 38%)"
   },
   {
+    "id": "melissodes-confusus",
+    "name": "Melissodes confusus",
+    "color": "hsl(327, 46%, 38%)"
+  },
+  {
     "id": "melissodes-desponsus",
     "name": "Melissodes desponsus",
     "color": "hsl(46, 46%, 38%)"
