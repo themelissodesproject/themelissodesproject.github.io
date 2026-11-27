@@ -684,33 +684,43 @@
   .m-btn .ext-icon { margin-left: 4px; vertical-align: -1px; }
   .modal-close { color: #fff; background: #333; border: 1px solid #333; }
 
-  /* Closed-by-default dropdown inside a table cell (species, associated organisms) */
+  /* Closed-by-default dropdown inside a table cell (species, associated organisms).
+     Same look as the synonymy-tree dropdown in the species index: a full-width bordered button with a chevron on the right */
   .m-collapsible > summary {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 0.5rem;
+    width: 100%;
+    padding: 7px 12px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #222;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     cursor: pointer;
-    /* match the field labels (Author, Year, Overview…), not the values */
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: #777;
+    text-align: left;
   }
   .m-collapsible > summary::-webkit-details-marker { display: none; }
-  .m-collapsible > summary::before {
+  .m-collapsible > summary::after {
     content: "";
     flex-shrink: 0;
     width: 0.4rem;
     height: 0.4rem;
-    border-right: 2px solid #777;
-    border-bottom: 2px solid #777;
-    transform: rotate(-45deg);
+    margin: 0 0.15rem 0.2rem 0;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    transform: rotate(45deg);
     transition: transform 0.15s ease;
   }
-  .m-collapsible[open] > summary::before { transform: rotate(45deg); }
-  .m-collapsible > summary:hover { color: #222; }
+  .m-collapsible[open] > summary::after { transform: rotate(-135deg); margin-bottom: 0; margin-top: 0.2rem; }
+  .m-collapsible > summary:hover { background: #F3F4F5; }
+  .m-collapsible > summary:focus-visible { outline: 2px solid #333; outline-offset: 2px; }
   .m-section-label { font-size: 0.78rem; font-weight: 600; color: #777; margin-bottom: 0.5rem; }
-  .m-collapsible[open] > summary { margin-bottom: 0.5rem; }
+  .m-collapsible[open] > summary { margin-bottom: 6px; }
 
   .card-details {
     margin: 0 0 0.85rem;
